@@ -1,26 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&display=swap');
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --red-main: #c4222e;
+  --red-dark: #7a1a1a;
+  --gold: #F0A73E;
+  --dark: #111;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Archivo', sans-serif;
+  background: #0a0a0a;
+  color: #fff;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #111; }
+::-webkit-scrollbar-thumb { background: var(--red-main); border-radius: 4px; }
+
+/* Product card hover effect */
+.product-card .hover-img { opacity: 0; transition: opacity 0.3s ease; }
+.product-card:hover .hover-img { opacity: 1; }
+.product-card .main-img { transition: opacity 0.3s ease; }
+.product-card:hover .main-img { opacity: 0; }
+
+/* Filter checkbox custom styling */
+.filter-checkbox {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #444;
+  border-radius: 4px;
+  background: transparent;
+  cursor: pointer;
+  position: relative;
+  flex-shrink: 0;
+}
+.filter-checkbox:checked {
+  background: var(--red-main);
+  border-color: var(--red-main);
+}
+.filter-checkbox:checked::after {
+  content: '✓';
+  position: absolute;
+  top: -1px;
+  left: 2px;
+  font-size: 12px;
+  color: white;
+  font-weight: bold;
+}
+
+/* Announcement bar scroll */
+@keyframes scroll-left {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.announcement-scroll {
+  animation: scroll-left 30s linear infinite;
+}
+
+/* League card gradient hover */
+.league-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.league-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(196, 34, 46, 0.3);
+}
+
+/* Team card */
+.team-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.team-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.4);
 }
