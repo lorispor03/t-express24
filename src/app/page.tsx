@@ -1,7 +1,8 @@
-import Link from 'next/link';
 import Image from 'next/image';
+import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import FAQ from '@/components/FAQ';
 import { getAllLeagues } from '@/lib/data';
 import { LEAGUE_LOGOS } from '@/lib/leagueLogos';
 
@@ -39,7 +40,7 @@ export default function HomePage() {
       </section>
 
       {/* Leagues Grid */}
-      <section className="max-w-7xl mx-auto px-4 py-16">
+      <section id="ligen" className="max-w-7xl mx-auto px-4 py-16 scroll-mt-20">
         <h2 className="text-2xl md:text-3xl font-black mb-2">Unsere Ligen</h2>
         <p className="text-gray-400 mb-8">Wähle eine Liga und entdecke alle verfügbaren Trikots.</p>
 
@@ -76,7 +77,7 @@ export default function HomePage() {
       </section>
 
       {/* How it works */}
-      <section className="bg-[#111] border-y border-white/10">
+      <section id="so-funktionierts" className="bg-[#111] border-y border-white/10 scroll-mt-20">
         <div className="max-w-7xl mx-auto px-4 py-16">
           <h2 className="text-2xl md:text-3xl font-black mb-10 text-center">So funktioniert&apos;s</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -93,6 +94,11 @@ export default function HomePage() {
             ))}
           </div>
         </div>
+      </section>
+
+      {/* FAQ */}
+      <section id="faq" className="scroll-mt-20">
+        <FAQ />
       </section>
 
       <Footer />
