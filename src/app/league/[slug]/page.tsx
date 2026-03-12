@@ -3,14 +3,21 @@ import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { getLeague, getAllLeagueSlugs } from '@/lib/data';
+import { LEAGUE_LOGOS } from '@/lib/leagueLogos';
+import type { Metadata } from 'next';
 
 export function generateStaticParams() {
   return getAllLeagueSlugs().map(slug => ({ slug }));
 }
 
-export function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {
-  // We'll handle this in the component
-  return {};
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const league = getLeague(slug);
+  if (!league) return {};
+  return {
+    title: `${league.name} Trikots | T-EXPRESS24`,
+    description: `${league.name} Trikots kaufen - ${league.productCount} Trikots von ${league.teamCount} Teams verfügbar.`,
+  };
 }
 
 export default async function LeaguePage({ params }: { params: Promise<{ slug: string }> }) {
@@ -20,6 +27,8 @@ export default async function LeaguePage({ params }: { params: Promise<{ slug: s
   if (!league) {
     notFound();
   }
+
+  const logo = LEAGUE_LOGOS[slug];
 
   return (
     <>
@@ -34,13 +43,20 @@ export default async function LeaguePage({ params }: { params: Promise<{ slug: s
             <span>/</span>
             <span className="text-white">{league.name}</span>
           </div>
-          <h1 className="text-3xl md:text-5xl font-black">{league.name}</h1>
-          {league.country && (
-            <p className="text-gray-400 mt-2">{league.country}</p>
-          )}
-          <div className="flex gap-6 mt-4 text-sm">
-            <span className="text-[var(--gold)] font-bold">{league.teamCount} Teams</span>
-            <span className="text-gray-400">{league.productCount} Trikots</span>
+          <div className="flex items-center gap-5">
+            {logo && (
+              <img src={logo} alt={league.name} className="h-16 w-auto object-contain" />
+            )}
+            <div>
+              <h1 className="text-3xl md:text-5xl font-black">{league.name}</h1>
+              {league.country && (
+                <p className="text-gray-400 mt-1">{league.country}</p>
+              )}
+              <div className="flex gap-6 mt-2 text-sm">
+                <span className="text-[var(--gold)] font-bold">{league.teamCount} Teams</span>
+                <span className="text-gray-400">{league.productCount} Trikots</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>

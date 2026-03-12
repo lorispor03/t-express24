@@ -1,21 +1,9 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { getAllLeagues } from '@/lib/data';
-
-const LEAGUE_FLAGS: Record<string, string> = {
-  'premier-league': '🏴󠁧󠁢󠁥󠁮󠁧󠁿',
-  'la-liga': '🇪🇸',
-  'bundesliga': '🇩🇪',
-  'serie-a': '🇮🇹',
-  'ligue-1': '🇫🇷',
-  'liga-portugal': '🇵🇹',
-  'eredivisie': '🇪🇺',
-  'nationalteams-europe': '🇪🇺',
-  'nationalteams-world': '🌍',
-  'clubs-world': '🌎',
-  'special': '⭐',
-};
+import { LEAGUE_LOGOS } from '@/lib/leagueLogos';
 
 export default function HomePage() {
   const leagues = getAllLeagues();
@@ -29,22 +17,19 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-gradient-to-br from-[#111] via-[var(--red-dark)] to-[#111]" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(196,34,46,0.3),transparent_70%)]" />
         <div className="relative max-w-7xl mx-auto px-4 py-24 md:py-36 text-center">
-          <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm rounded-full px-4 py-1.5 mb-6 text-xs font-medium">
-            <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-            Jetzt verfügbar – über 6500 Trikots
-          </div>
+          <Image src="/logo.png" alt="T-EXPRESS24" width={120} height={120} className="mx-auto mb-6" priority />
           <h1 className="text-5xl md:text-7xl font-black tracking-tight mb-4">
             T-EXPRESS<span className="text-[var(--gold)]">24</span>
           </h1>
           <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-8">
-            Premium Fussball Trikots aus der Schweiz. Jedes Trikot wird von uns persönlich qualitätsgeprüft und versendet.
+            Dein Verein. Deine Leidenschaft. Dein Trikot.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link href="/leagues" className="bg-[var(--red-main)] hover:bg-[var(--red-dark)] text-white font-bold px-8 py-3.5 rounded-xl transition-colors text-sm">
               Alle Ligen entdecken
             </Link>
             <Link href="/league/premier-league" className="bg-white/10 hover:bg-white/20 backdrop-blur text-white font-bold px-8 py-3.5 rounded-xl transition-colors text-sm">
-              Premier League →
+              Premier League
             </Link>
           </div>
         </div>
@@ -54,9 +39,9 @@ export default function HomePage() {
       <section className="border-y border-white/10 bg-[#111]">
         <div className="max-w-7xl mx-auto px-4 py-6 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
           {[
-            ['6500+', 'Trikots'],
-            ['220+', 'Teams'],
-            ['11', 'Ligen'],
+            ['5700+', 'Trikots'],
+            ['210+', 'Teams'],
+            ['10', 'Ligen'],
             ['100%', 'Qualitätsgeprüft'],
           ].map(([num, label]) => (
             <div key={label}>
@@ -80,7 +65,15 @@ export default function HomePage() {
               className="league-card group bg-[#1a1a1a] rounded-xl p-6 border border-white/5 hover:border-[var(--red-main)]/30"
             >
               <div className="flex items-start justify-between mb-4">
-                <span className="text-3xl">{LEAGUE_FLAGS[slug] || '⚽'}</span>
+                {LEAGUE_LOGOS[slug] ? (
+                  <img
+                    src={LEAGUE_LOGOS[slug]}
+                    alt={league.name}
+                    className="h-10 w-auto object-contain"
+                  />
+                ) : (
+                  <span className="text-3xl">&#9917;</span>
+                )}
                 <span className="text-xs bg-white/5 rounded-full px-3 py-1 text-gray-400">
                   {league.productCount} Trikots
                 </span>
@@ -102,8 +95,8 @@ export default function HomePage() {
           <h2 className="text-2xl md:text-3xl font-black mb-10 text-center">So funktioniert&apos;s</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { step: '01', title: 'Trikot wählen', desc: 'Durchsuche unsere Kollektion mit über 6500 Trikots aus allen grossen Ligen.' },
-              { step: '02', title: 'Per WhatsApp bestellen', desc: 'Schreib uns einfach per WhatsApp oder Telegram mit deiner gewünschten Grösse.' },
+              { step: '01', title: 'Trikot wählen', desc: 'Durchsuche unsere Kollektion mit über 5700 Trikots aus allen grossen Ligen.' },
+              { step: '02', title: 'Per Instagram oder Telegram bestellen', desc: 'Schreib uns einfach per Instagram DM oder Telegram mit deiner gewünschten Grösse.' },
               { step: '03', title: 'Geliefert bekommen', desc: 'Wir prüfen jedes Trikot persönlich und versenden es direkt aus der Schweiz.' },
             ].map(({ step, title, desc }) => (
               <div key={step} className="text-center md:text-left">
