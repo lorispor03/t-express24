@@ -9,7 +9,7 @@ interface ProductCardProps {
 
 export default function ProductCard({ product, teamName }: ProductCardProps) {
   const telegramUrl = `https://t.me/BOT_USERNAME?text=${encodeURIComponent(`Hallo, ich möchte bestellen:\n\n${product.t}\nPreis: CHF ${product.p}\n\nBitte um Infos zu Grössen und Verfügbarkeit.`)}`;
-  const instagramUrl = 'https://instagram.com/t_express24';
+  const instagramUrl = 'https://instagram.com/T_express247';
 
   return (
     <div className="product-card group bg-[#1a1a1a] rounded-xl overflow-hidden border border-white/5 hover:border-[var(--red-main)]/30 transition-all">
