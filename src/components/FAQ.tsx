@@ -24,12 +24,12 @@ const faqs = [
     a: 'Ja! Teile uns einfach den gewünschten Namen und die Nummer mit. Beflockungen sind bei den meisten Trikots möglich.',
   },
   {
-    q: 'Sind die Trikots original?',
-    a: 'Unsere Trikots sind hochwertige 1:1 Replicas – optisch und haptisch kaum vom Original zu unterscheiden. Der Unterschied spiegelt sich im Preis wider. Jedes Trikot wird von uns in der Schweiz persönlich auf Qualität geprüft.',
+    q: 'Wie ist die Qualität der Trikots?',
+    a: 'Unsere Trikots sind sehr hochwertig verarbeitet. Jedes einzelne Trikot wird von uns in der Schweiz persönlich auf Qualität geprüft, bevor es versendet wird.',
   },
   {
     q: 'Kann ich ein Trikot zurückgeben oder umtauschen?',
-    a: 'Da jedes Trikot individuell bestellt wird, sind Rückgaben grundsätzlich nicht möglich. Bei Qualitätsmängeln finden wir selbstverständlich eine Lösung – schreib uns einfach.',
+    a: 'Rückgaben sind leider nicht möglich. Bei nachweisbaren Mängeln liefern wir dir selbstverständlich kostenlos ein neues Trikot.',
   },
   {
     q: 'Versendet ihr auch ausserhalb der Schweiz?',
