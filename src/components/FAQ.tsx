@@ -25,7 +25,7 @@ const faqs = [
   },
   {
     q: 'Sind die Trikots original?',
-    a: 'Wir verkaufen hochwertige Trikots, die wir direkt von unserem Lieferanten beziehen. Jedes Trikot wird von uns in der Schweiz einzeln auf Qualität geprüft, bevor es an dich versendet wird.',
+    a: 'Unsere Trikots sind hochwertige 1:1 Replicas – optisch und haptisch kaum vom Original zu unterscheiden. Der Unterschied spiegelt sich im Preis wider. Jedes Trikot wird von uns in der Schweiz persönlich auf Qualität geprüft.',
   },
   {
     q: 'Kann ich ein Trikot zurückgeben oder umtauschen?',
