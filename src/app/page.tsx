@@ -17,7 +17,7 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-gradient-to-br from-[#111] via-[var(--red-dark)] to-[#111]" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(196,34,46,0.3),transparent_70%)]" />
         <div className="relative max-w-7xl mx-auto px-4 py-24 md:py-36 text-center">
-          <Image src="/logo.png" alt="T-EXPRESS24" width={280} height={280} className="mx-auto mb-8" priority />
+          <Image src="/logo.png" alt="T-EXPRESS24" width={400} height={400} className="mx-auto mb-8" priority />
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link href="/leagues" className="bg-[var(--red-main)] hover:bg-[var(--red-dark)] text-white font-bold px-8 py-3.5 rounded-xl transition-colors text-sm">
               Alle Ligen entdecken
