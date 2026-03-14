@@ -97,11 +97,11 @@ export default function HomePage() {
                 <svg className="w-3 h-10" viewBox="0 0 12 40" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M2 4l8 16-8 16" /></svg>
               </span>
             </div>
-            <div className="flex md:hidden items-center justify-center py-1">
-              <span className="flex flex-col -space-y-2 text-[var(--red-main)]">
-                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" /></svg>
-                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" /></svg>
-                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" /></svg>
+            <div className="flex md:hidden items-center justify-center py-2">
+              <span className="flex flex-col -space-y-0.5 text-[var(--red-main)]">
+                <svg className="w-10 h-3" viewBox="0 0 40 12" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M4 2l16 8 16-8" /></svg>
+                <svg className="w-10 h-3" viewBox="0 0 40 12" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M4 2l16 8 16-8" /></svg>
+                <svg className="w-10 h-3" viewBox="0 0 40 12" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M4 2l16 8 16-8" /></svg>
               </span>
             </div>
 
@@ -124,11 +124,11 @@ export default function HomePage() {
                 <svg className="w-3 h-10" viewBox="0 0 12 40" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M2 4l8 16-8 16" /></svg>
               </span>
             </div>
-            <div className="flex md:hidden items-center justify-center py-1">
-              <span className="flex flex-col -space-y-2 text-[var(--red-main)]">
-                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" /></svg>
-                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" /></svg>
-                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" /></svg>
+            <div className="flex md:hidden items-center justify-center py-2">
+              <span className="flex flex-col -space-y-0.5 text-[var(--red-main)]">
+                <svg className="w-10 h-3" viewBox="0 0 40 12" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M4 2l16 8 16-8" /></svg>
+                <svg className="w-10 h-3" viewBox="0 0 40 12" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M4 2l16 8 16-8" /></svg>
+                <svg className="w-10 h-3" viewBox="0 0 40 12" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M4 2l16 8 16-8" /></svg>
               </span>
             </div>
 
