@@ -18,7 +18,7 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-gradient-to-br from-[#111] via-[var(--red-dark)] to-[#111]" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(196,34,46,0.3),transparent_70%)]" />
         <div className="relative max-w-7xl mx-auto px-4 py-6 md:py-8 text-center">
-          <Image src="/logo.png" alt="T-EXPRESS24" width={500} height={500} className="mx-auto max-w-[400px]" priority />
+          <Image src="/logo.png" alt="T-EXPRESS24" width={500} height={500} className="mx-auto max-w-[250px] sm:max-w-[400px] w-full" priority />
         </div>
       </section>
 
@@ -51,7 +51,7 @@ export default function HomePage() {
               href={`/league/${slug}`}
               className="league-card group bg-[#3a3a3a] rounded-xl p-6 border border-white/15 hover:border-[var(--red-main)]/30"
             >
-              <div className="flex items-start justify-between mb-4">
+              <div className="mb-4">
                 {LEAGUE_LOGOS[slug] ? (
                   <img
                     src={LEAGUE_LOGOS[slug]}
@@ -61,9 +61,6 @@ export default function HomePage() {
                 ) : (
                   <span className="text-3xl">&#9917;</span>
                 )}
-                <span className="text-xs bg-white/5 rounded-full px-3 py-1 text-gray-400">
-                  {league.productCount} Trikots
-                </span>
               </div>
               <h3 className="font-bold text-lg group-hover:text-[var(--gold)] transition-colors">
                 {league.name}
