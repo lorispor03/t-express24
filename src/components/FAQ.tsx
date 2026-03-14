@@ -17,7 +17,7 @@ const faqs = [
   },
   {
     q: 'Wie bezahle ich?',
-    a: 'Wir akzeptieren TWINT, Banküberweisung und Barzahlung bei Abholung. Die Zahlung erfolgt nach Bestellbestätigung.',
+    a: 'Wir akzeptieren TWINT, PayPal und Banküberweisung. Die Zahlung erfolgt nach Bestellbestätigung.',
   },
   {
     q: 'Wie ist die Qualität der Trikots?',
