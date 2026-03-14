@@ -4,10 +4,6 @@ import { useState } from 'react';
 
 const faqs = [
   {
-    q: 'Wie bestelle ich ein Trikot?',
-    a: 'Wähle dein gewünschtes Trikot direkt im Shop, entscheide dich für Grösse und optionalen Aufdruck und lege es in den Warenkorb. Den Rest erledigen wir.',
-  },
-  {
     q: 'Wie lange dauert die Lieferung?',
     a: 'Die Lieferzeit beträgt in der Regel 2–3 Wochen. Unsere Trikots werden aus einem internationalen Lager in die Schweiz geliefert, hier von uns persönlich geprüft und anschliessend direkt zu dir nach Hause versendet.',
   },
