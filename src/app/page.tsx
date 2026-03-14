@@ -44,7 +44,7 @@ export default function HomePage() {
         <h2 className="text-2xl md:text-3xl font-black mb-2">Unsere Ligen</h2>
         <p className="text-gray-400 mb-8">Wähle eine Liga und entdecke alle verfügbaren Trikots.</p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
           {Object.entries(leagues).map(([slug, league]) => (
             <Link
               key={slug}
