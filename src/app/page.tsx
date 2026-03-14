@@ -90,11 +90,11 @@ export default function HomePage() {
             </div>
 
             {/* Chevrons 1 */}
-            <div className="hidden md:flex items-center justify-center">
+            <div className="hidden md:flex items-start justify-center mt-3">
               <span className="flex text-[var(--red-main)]">
-                <svg className="w-3 h-24 -mr-1" viewBox="0 0 12 96" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M2 4l8 44-8 44" /></svg>
-                <svg className="w-3 h-24 -mr-1" viewBox="0 0 12 96" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M2 4l8 44-8 44" /></svg>
-                <svg className="w-3 h-24" viewBox="0 0 12 96" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M2 4l8 44-8 44" /></svg>
+                <svg className="w-3 h-10 -mr-0.5" viewBox="0 0 12 40" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M2 4l8 16-8 16" /></svg>
+                <svg className="w-3 h-10 -mr-0.5" viewBox="0 0 12 40" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M2 4l8 16-8 16" /></svg>
+                <svg className="w-3 h-10" viewBox="0 0 12 40" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M2 4l8 16-8 16" /></svg>
               </span>
             </div>
             <div className="flex md:hidden items-center justify-center py-1">
@@ -117,11 +117,11 @@ export default function HomePage() {
             </div>
 
             {/* Chevrons 2 */}
-            <div className="hidden md:flex items-center justify-center">
+            <div className="hidden md:flex items-start justify-center mt-3">
               <span className="flex text-[var(--red-main)]">
-                <svg className="w-3 h-24 -mr-1" viewBox="0 0 12 96" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M2 4l8 44-8 44" /></svg>
-                <svg className="w-3 h-24 -mr-1" viewBox="0 0 12 96" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M2 4l8 44-8 44" /></svg>
-                <svg className="w-3 h-24" viewBox="0 0 12 96" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M2 4l8 44-8 44" /></svg>
+                <svg className="w-3 h-10 -mr-0.5" viewBox="0 0 12 40" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M2 4l8 16-8 16" /></svg>
+                <svg className="w-3 h-10 -mr-0.5" viewBox="0 0 12 40" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M2 4l8 16-8 16" /></svg>
+                <svg className="w-3 h-10" viewBox="0 0 12 40" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M2 4l8 16-8 16" /></svg>
               </span>
             </div>
             <div className="flex md:hidden items-center justify-center py-1">
