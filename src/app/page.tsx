@@ -77,7 +77,7 @@ export default function HomePage() {
       <section id="so-funktionierts" className="bg-[#111] border-y border-white/10 scroll-mt-20">
         <div className="max-w-7xl mx-auto px-4 py-16">
           <h2 className="text-2xl md:text-3xl font-black mb-10 text-center">So funktioniert&apos;s</h2>
-          <div className="grid grid-cols-1 md:grid-cols-[1fr_2rem_1fr_2rem_1fr] gap-6 items-start">
+          <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr_auto_1fr] gap-x-10 gap-y-6 items-start">
             {/* Step 1 */}
             <div className="text-center md:text-left">
               <div className="flex items-center justify-center md:justify-start gap-3 mb-3">
