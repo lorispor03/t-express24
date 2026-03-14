@@ -24,16 +24,16 @@ export default function HomePage() {
 
       {/* Stats */}
       <section className="border-y border-white/10 bg-[#111]">
-        <div className="max-w-7xl mx-auto px-4 py-6 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+        <div className="max-w-7xl mx-auto px-4 py-4 md:py-6 grid grid-cols-4 gap-2 md:gap-4 text-center">
           {[
             ['4800+', 'Trikots'],
             ['210+', 'Teams'],
             ['10', 'Ligen'],
-            ['100%', 'Qualitätsgeprüft'],
+            ['100%', 'Geprüft'],
           ].map(([num, label]) => (
             <div key={label}>
-              <div className="text-2xl md:text-3xl font-black text-[var(--gold)]">{num}</div>
-              <div className="text-xs text-gray-400 uppercase tracking-wider mt-1">{label}</div>
+              <div className="text-base sm:text-2xl md:text-3xl font-black text-[var(--gold)]">{num}</div>
+              <div className="text-[10px] sm:text-xs text-gray-400 uppercase tracking-wider mt-1">{label}</div>
             </div>
           ))}
         </div>
