@@ -26,7 +26,7 @@ export default function HomePage() {
       <section className="border-y border-white/10 bg-[#111]">
         <div className="max-w-7xl mx-auto px-4 py-6 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
           {[
-            ['5700+', 'Trikots'],
+            ['4800+', 'Trikots'],
             ['210+', 'Teams'],
             ['10', 'Ligen'],
             ['100%', 'Qualitätsgeprüft'],
@@ -49,7 +49,7 @@ export default function HomePage() {
             <Link
               key={slug}
               href={`/league/${slug}`}
-              className="league-card group bg-[#2e2e2e] rounded-xl p-6 border border-white/15 hover:border-[var(--red-main)]/30"
+              className="league-card group bg-[#3a3a3a] rounded-xl p-6 border border-white/15 hover:border-[var(--red-main)]/30"
             >
               <div className="flex items-start justify-between mb-4">
                 {LEAGUE_LOGOS[slug] ? (
@@ -80,18 +80,71 @@ export default function HomePage() {
       <section id="so-funktionierts" className="bg-[#111] border-y border-white/10 scroll-mt-20">
         <div className="max-w-7xl mx-auto px-4 py-16">
           <h2 className="text-2xl md:text-3xl font-black mb-10 text-center">So funktioniert&apos;s</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              { step: '01', title: 'Trikot wählen', desc: 'Durchsuche unsere Kollektion mit über 5700 Trikots aus allen grossen Ligen.' },
-              { step: '02', title: 'Per Instagram oder Telegram bestellen', desc: 'Schreib uns einfach per Instagram DM oder Telegram mit deiner gewünschten Grösse.' },
-              { step: '03', title: 'Geliefert bekommen', desc: 'Wir prüfen jedes Trikot persönlich und versenden es direkt aus der Schweiz.' },
-            ].map(({ step, title, desc }) => (
-              <div key={step} className="text-center md:text-left">
-                <div className="text-4xl font-black text-[var(--red-main)]/30 mb-3">{step}</div>
-                <h3 className="font-bold text-lg mb-2">{title}</h3>
-                <p className="text-sm text-gray-400 leading-relaxed">{desc}</p>
+          <div className="grid grid-cols-1 md:grid-cols-[1fr_2rem_1fr_2rem_1fr] gap-6 items-start">
+            {/* Step 1 */}
+            <div className="text-center md:text-left">
+              <div className="flex items-center justify-center md:justify-start gap-3 mb-3">
+                <div className="inline-flex items-center justify-center w-11 h-11 rounded-xl bg-[var(--red-main)]/15 text-[var(--red-main)]">
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+                </div>
+                <h3 className="font-bold text-lg whitespace-nowrap">Dein Trikot auswählen</h3>
               </div>
-            ))}
+              <p className="text-sm text-gray-400 leading-relaxed">Stöbere durch über 4800 Trikots aus den grössten Ligen der Welt — von aktuellen Saisons bis hin zu seltenen Retro-Klassikern.</p>
+            </div>
+
+            {/* Chevrons 1 */}
+            <div className="hidden md:flex items-center justify-center">
+              <span className="flex text-[var(--red-main)]">
+                <svg className="w-3 h-24 -mr-1" viewBox="0 0 12 96" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M2 4l8 44-8 44" /></svg>
+                <svg className="w-3 h-24 -mr-1" viewBox="0 0 12 96" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M2 4l8 44-8 44" /></svg>
+                <svg className="w-3 h-24" viewBox="0 0 12 96" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M2 4l8 44-8 44" /></svg>
+              </span>
+            </div>
+            <div className="flex md:hidden items-center justify-center py-1">
+              <span className="flex flex-col -space-y-2 text-[var(--red-main)]">
+                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" /></svg>
+                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" /></svg>
+                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" /></svg>
+              </span>
+            </div>
+
+            {/* Step 2 */}
+            <div className="text-center md:text-left">
+              <div className="flex items-center justify-center md:justify-start gap-3 mb-3">
+                <div className="inline-flex items-center justify-center w-11 h-11 rounded-xl bg-[var(--red-main)]/15 text-[var(--red-main)]">
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 100 4 2 2 0 000-4z" /></svg>
+                </div>
+                <h3 className="font-bold text-lg whitespace-nowrap">Bestellung aufgeben</h3>
+              </div>
+              <p className="text-sm text-gray-400 leading-relaxed">Wähle Grösse und optionalen Aufdruck direkt im Shop. Dein Trikot wird aus unserem internationalen Lager für dich reserviert und in die Schweiz geliefert.</p>
+            </div>
+
+            {/* Chevrons 2 */}
+            <div className="hidden md:flex items-center justify-center">
+              <span className="flex text-[var(--red-main)]">
+                <svg className="w-3 h-24 -mr-1" viewBox="0 0 12 96" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M2 4l8 44-8 44" /></svg>
+                <svg className="w-3 h-24 -mr-1" viewBox="0 0 12 96" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M2 4l8 44-8 44" /></svg>
+                <svg className="w-3 h-24" viewBox="0 0 12 96" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M2 4l8 44-8 44" /></svg>
+              </span>
+            </div>
+            <div className="flex md:hidden items-center justify-center py-1">
+              <span className="flex flex-col -space-y-2 text-[var(--red-main)]">
+                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" /></svg>
+                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" /></svg>
+                <svg className="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" /></svg>
+              </span>
+            </div>
+
+            {/* Step 3 */}
+            <div className="text-center md:text-left">
+              <div className="flex items-center justify-center md:justify-start gap-3 mb-3">
+                <div className="inline-flex items-center justify-center w-11 h-11 rounded-xl bg-[var(--red-main)]/15 text-[var(--red-main)]">
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+                </div>
+                <h3 className="font-bold text-lg whitespace-nowrap">Qualitätscheck & Lieferung</h3>
+              </div>
+              <p className="text-sm text-gray-400 leading-relaxed">Jedes Trikot wird von uns persönlich auf Qualität, Verarbeitung und Druckbild geprüft — erst dann geht es direkt zu dir nach Hause.</p>
+            </div>
           </div>
         </div>
       </section>

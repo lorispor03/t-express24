@@ -5,35 +5,27 @@ import { useState } from 'react';
 const faqs = [
   {
     q: 'Wie bestelle ich ein Trikot?',
-    a: 'Wähle dein Trikot auf unserer Seite aus und schreib uns per Instagram DM oder Telegram. Teile uns das gewünschte Trikot, die Grösse und optional eine Beflockung mit – wir kümmern uns um den Rest.',
+    a: 'Wähle dein gewünschtes Trikot direkt im Shop, entscheide dich für Grösse und optionalen Aufdruck und lege es in den Warenkorb. Den Rest erledigen wir.',
   },
   {
     q: 'Wie lange dauert die Lieferung?',
-    a: 'Die Lieferzeit beträgt in der Regel 2-3 Wochen. Jedes Trikot wird von uns persönlich qualitätsgeprüft, bevor es versendet wird.',
+    a: 'Die Lieferzeit beträgt in der Regel 2–3 Wochen. Unsere Trikots werden aus einem internationalen Lager in die Schweiz geliefert, hier von uns persönlich geprüft und anschliessend direkt zu dir nach Hause versendet.',
   },
   {
     q: 'Welche Grössen sind verfügbar?',
-    a: 'Wir bieten die Grössen S bis XXL für Erwachsene an. Für Kinder haben wir die Grössen 116, 128, 140, 152 und 164. Schreib uns bei Unsicherheiten – wir beraten dich gerne.',
+    a: 'Für Erwachsene bieten wir S bis XXL an, für Kinder die Grössen 116, 128, 140, 152 und 164. Bei Unsicherheiten beraten wir dich gerne über Instagram.',
   },
   {
     q: 'Wie bezahle ich?',
     a: 'Wir akzeptieren TWINT, Banküberweisung und Barzahlung bei Abholung. Die Zahlung erfolgt nach Bestellbestätigung.',
   },
   {
-    q: 'Kann ich eine Beflockung (Name/Nummer) bestellen?',
-    a: 'Ja! Teile uns einfach den gewünschten Namen und die Nummer mit. Beflockungen sind bei den meisten Trikots möglich.',
-  },
-  {
     q: 'Wie ist die Qualität der Trikots?',
-    a: 'Unsere Trikots sind sehr hochwertig verarbeitet. Jedes einzelne Trikot wird von uns in der Schweiz persönlich auf Qualität geprüft, bevor es versendet wird.',
+    a: 'Jedes einzelne Trikot wird von uns in der Schweiz persönlich auf Qualität, Verarbeitung und Druckbild geprüft, bevor es versendet wird. Sollte etwas nicht unseren Standards entsprechen, versenden wir kostenlos Ersatz.',
   },
   {
-    q: 'Kann ich ein Trikot zurückgeben oder umtauschen?',
+    q: 'Kann ich ein Trikot zurückgeben?',
     a: 'Rückgaben sind leider nicht möglich. Bei nachweisbaren Mängeln liefern wir dir selbstverständlich kostenlos ein neues Trikot.',
-  },
-  {
-    q: 'Versendet ihr auch ausserhalb der Schweiz?',
-    a: 'Aktuell versenden wir hauptsächlich innerhalb der Schweiz. Für Anfragen aus dem Ausland schreib uns gerne – wir schauen, was möglich ist.',
   },
 ];
 

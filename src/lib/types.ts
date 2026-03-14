@@ -44,10 +44,7 @@ export const CATEGORIES: Record<string, string> = {
   kids: 'Kinder',
   'kids-retro': 'Kinder Retro',
   female: 'Damen',
-  hoodie: 'Hoodie',
-  sweater: 'Sweater',
   windbreaker: 'Windbreaker',
   training: 'Training',
-  shorts: 'Shorts',
-  socks: 'Socken',
+  sweater: 'Pullover',
 };

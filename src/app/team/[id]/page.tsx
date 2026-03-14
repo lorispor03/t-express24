@@ -4,6 +4,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import TeamPageClient from '@/components/TeamPageClient';
 import { getTeam, getAllTeamIds } from '@/lib/data';
+import { TEAM_LOGOS } from '@/lib/teamLogos';
 import type { Metadata } from 'next';
 
 export function generateStaticParams() {
@@ -47,9 +48,17 @@ export default async function TeamPage({ params }: { params: Promise<{ id: strin
           </div>
 
           <div className="flex items-center gap-5">
-            <div className="w-20 h-20 bg-[#222] rounded-2xl flex items-center justify-center text-3xl font-black text-[var(--red-main)] border border-white/10">
-              {team.name.charAt(0)}
-            </div>
+            {(() => {
+              const slug = id.split('__')[1];
+              const logo = slug ? TEAM_LOGOS[slug] : undefined;
+              return logo ? (
+                <img src={logo} alt={team.name} className="w-20 h-20 object-contain rounded-2xl bg-[#222] border border-white/10 p-2" />
+              ) : (
+                <div className="w-20 h-20 bg-[#222] rounded-2xl flex items-center justify-center text-3xl font-black text-[var(--red-main)] border border-white/10">
+                  {team.name.charAt(0)}
+                </div>
+              );
+            })()}
             <div>
               <h1 className="text-2xl md:text-4xl font-black">{team.name}</h1>
               <div className="flex items-center gap-4 mt-2">

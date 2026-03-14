@@ -1,5 +1,5 @@
 import productsData from '@/data/products.json';
-import { ProductsData, LeagueData, TeamData } from './types';
+import { ProductsData, LeagueData, TeamData, Product } from './types';
 
 const data = productsData as unknown as ProductsData;
 
@@ -27,6 +27,27 @@ export function getAllTeamIds(): string[] {
 
 export function getAllLeagueSlugs(): string[] {
   return Object.keys(data.leagues);
+}
+
+export function getProductByHandle(handle: string): { product: Product; teamId: string; teamName: string; leagueName: string; leagueSlug: string } | undefined {
+  for (const [teamId, team] of Object.entries(data.teams)) {
+    for (const product of team.products) {
+      if (product.h === handle) {
+        return { product, teamId, teamName: team.name, leagueName: team.leagueName, leagueSlug: team.league };
+      }
+    }
+  }
+  return undefined;
+}
+
+export function getAllProductHandles(): string[] {
+  const handles: string[] = [];
+  for (const team of Object.values(data.teams)) {
+    for (const product of team.products) {
+      handles.push(product.h);
+    }
+  }
+  return handles;
 }
 
 export function searchProducts(query: string, limit = 20) {

@@ -1,6 +1,7 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect, useCallback } from 'react';
+import { useSearchParams, useRouter, usePathname } from 'next/navigation';
 import ProductCard from './ProductCard';
 import FilterSidebar from './FilterSidebar';
 import { Product, CATEGORIES } from '@/lib/types';
@@ -15,10 +16,28 @@ interface TeamPageClientProps {
 type SortOption = 'default' | 'price-asc' | 'price-desc' | 'name-asc' | 'name-desc';
 
 export default function TeamPageClient({ teamName, leagueName, leagueSlug, products }: TeamPageClientProps) {
-  const [activeCategories, setActiveCategories] = useState<Set<string>>(new Set());
-  const [search, setSearch] = useState('');
-  const [sort, setSort] = useState<SortOption>('default');
+  const searchParams = useSearchParams();
+  const router = useRouter();
+  const pathname = usePathname();
+
+  const [activeCategories, setActiveCategories] = useState<Set<string>>(() => {
+    const cats = searchParams.get('filter');
+    return cats ? new Set(cats.split(',')) : new Set<string>();
+  });
+  const [search, setSearch] = useState(() => searchParams.get('q') || '');
+  const [sort, setSort] = useState<SortOption>(() => (searchParams.get('sort') as SortOption) || 'default');
   const [mobileFilterOpen, setMobileFilterOpen] = useState(false);
+  const [visibleCount, setVisibleCount] = useState(20);
+  const PER_PAGE = 20;
+
+  const updateURL = useCallback((cats: Set<string>, q: string, s: string) => {
+    const params = new URLSearchParams();
+    if (cats.size > 0) params.set('filter', Array.from(cats).join(','));
+    if (q) params.set('q', q);
+    if (s !== 'default') params.set('sort', s);
+    const qs = params.toString();
+    router.replace(`${pathname}${qs ? '?' + qs : ''}`, { scroll: false });
+  }, [router, pathname]);
 
   // Get available categories from products
   const availableCategories = useMemo(() => {
@@ -68,14 +87,29 @@ export default function TeamPageClient({ teamName, leagueName, leagueSlug, produ
       const next = new Set(prev);
       if (next.has(cat)) next.delete(cat);
       else next.add(cat);
+      updateURL(next, search, sort);
       return next;
     });
+    setVisibleCount(PER_PAGE);
+  };
+
+  const handleSearch = (q: string) => {
+    setSearch(q);
+    updateURL(activeCategories, q, sort);
+    setVisibleCount(PER_PAGE);
+  };
+
+  const handleSort = (s: SortOption) => {
+    setSort(s);
+    updateURL(activeCategories, search, s);
   };
 
   const resetFilters = () => {
     setActiveCategories(new Set());
     setSearch('');
     setSort('default');
+    updateURL(new Set(), '', 'default');
+    setVisibleCount(PER_PAGE);
   };
 
   return (
@@ -91,23 +125,28 @@ export default function TeamPageClient({ teamName, leagueName, leagueSlug, produ
             type="text"
             placeholder="Trikot suchen..."
             value={search}
-            onChange={e => setSearch(e.target.value)}
+            onChange={e => handleSearch(e.target.value)}
             className="w-full bg-[#1a1a1a] border border-white/10 rounded-lg pl-10 pr-4 py-2.5 text-sm focus:outline-none focus:border-[var(--red-main)] transition-colors"
           />
         </div>
 
         {/* Sort */}
-        <select
-          value={sort}
-          onChange={e => setSort(e.target.value as SortOption)}
-          className="bg-[#1a1a1a] border border-white/10 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-[var(--red-main)] cursor-pointer"
-        >
-          <option value="default">Sortierung</option>
-          <option value="price-asc">Preis: Tief → Hoch</option>
-          <option value="price-desc">Preis: Hoch → Tief</option>
-          <option value="name-asc">Name: A → Z</option>
-          <option value="name-desc">Name: Z → A</option>
-        </select>
+        <div className="relative flex items-center">
+          <svg className="absolute left-3 w-4 h-4 text-gray-500 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 4h13M3 8h9m-9 4h6m4 0l4-4m0 0l4 4m-4-4v12" />
+          </svg>
+          <select
+            value={sort}
+            onChange={e => handleSort(e.target.value as SortOption)}
+            className="bg-[#1a1a1a] border border-white/10 rounded-lg pl-10 pr-4 py-2.5 text-sm focus:outline-none focus:border-[var(--red-main)] cursor-pointer appearance-none"
+          >
+            <option value="default">Sortierung</option>
+            <option value="price-asc">Preis: Tief → Hoch</option>
+            <option value="price-desc">Preis: Hoch → Tief</option>
+            <option value="name-asc">Name: A → Z</option>
+            <option value="name-desc">Name: Z → A</option>
+          </select>
+        </div>
 
         {/* Mobile filter toggle */}
         <button
@@ -199,10 +238,23 @@ export default function TeamPageClient({ teamName, leagueName, leagueSlug, produ
             <>
               <p className="text-xs text-gray-500 mb-4">{filteredProducts.length} Trikots</p>
               <div className="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4">
-                {filteredProducts.map((product, idx) => (
+                {filteredProducts.slice(0, visibleCount).map((product, idx) => (
                   <ProductCard key={`${product.h}-${idx}`} product={product} teamName={teamName} />
                 ))}
               </div>
+              {visibleCount < filteredProducts.length && (
+                <div className="flex flex-col items-center mt-8 gap-2">
+                  <button
+                    onClick={() => setVisibleCount(prev => prev + PER_PAGE)}
+                    className="bg-[var(--red-main)] hover:bg-[#a81d27] text-white text-sm font-semibold px-8 py-3 rounded-xl transition-colors"
+                  >
+                    Mehr anzeigen
+                  </button>
+                  <p className="text-[11px] text-gray-600">
+                    {Math.min(visibleCount, filteredProducts.length)} von {filteredProducts.length}
+                  </p>
+                </div>
+              )}
             </>
           )}
         </div>
