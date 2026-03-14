@@ -1,3 +1,4 @@
+import { Suspense } from 'react';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import Header from '@/components/Header';
@@ -73,12 +74,14 @@ export default async function TeamPage({ params }: { params: Promise<{ id: strin
       </section>
 
       {/* Products with filters */}
-      <TeamPageClient
-        teamName={team.name}
-        leagueName={team.leagueName}
-        leagueSlug={team.league}
-        products={team.products}
-      />
+      <Suspense>
+        <TeamPageClient
+          teamName={team.name}
+          leagueName={team.leagueName}
+          leagueSlug={team.league}
+          products={team.products}
+        />
+      </Suspense>
 
       <Footer />
     </>
