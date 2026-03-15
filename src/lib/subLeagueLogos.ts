@@ -9,6 +9,12 @@ export const SUB_LEAGUE_SLUGS: Record<string, string> = {
   'Superliga': 'superliga',
   'Jupiler Pro League': 'jupiler-pro-league',
   'Super League': 'super-league',
+  'Brasileirão': 'brasileirao',
+  'Liga Profesional': 'liga-argentina',
+  'MLS': 'mls',
+  'Liga MX': 'liga-mx',
+  'Saudi Pro League': 'saudi-pro-league',
+  'Primera División': 'primera-chile',
 };
 
 export const SUB_LEAGUE_LOGOS: Record<string, string> = {
@@ -22,4 +28,10 @@ export const SUB_LEAGUE_LOGOS: Record<string, string> = {
   'superliga': '/leagues/superliga-denmark.png',
   'jupiler-pro-league': '/leagues/jupiler-pro-league.png',
   'super-league': '/leagues/super-league-switzerland.png',
+  'brasileirao': '/leagues/brasileirao.png',
+  'liga-argentina': '/leagues/liga-argentina.png',
+  'mls': '/leagues/mls.png',
+  'liga-mx': '/leagues/liga-mx.png',
+  'saudi-pro-league': '/leagues/saudi-pro-league.png',
+  'primera-chile': '/leagues/primera-chile.png',
 };
