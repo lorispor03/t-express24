@@ -1,6 +1,6 @@
 export const LEAGUE_LOGOS: Record<string, string> = {
   'premier-league': '/leagues/premier-league.svg',
-  'la-liga': '/leagues/la-liga.svg',
+  'la-liga': '/leagues/la-liga.png',
   'bundesliga': '/leagues/bundesliga.svg',
   'serie-a': '/leagues/serie-a.png?v=2',
   'ligue-1': '/leagues/ligue-1.png?v=2',
