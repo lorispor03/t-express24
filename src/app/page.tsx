@@ -27,7 +27,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 py-4 md:py-6 grid grid-cols-4 gap-2 md:gap-4 text-center">
           {[
             ['4800+', 'Trikots'],
-            ['210+', 'Teams'],
+            ['240+', 'Teams'],
             ['11', 'Ligen'],
             ['100%', 'Geprüft'],
           ].map(([num, label]) => (

@@ -646,7 +646,7 @@
           "id": "nationalteams-europe__germany",
           "name": "Deutschland",
           "slug": "germany",
-          "count": 95
+          "count": 96
         },
         {
           "id": "nationalteams-europe__germany2026",
@@ -742,23 +742,125 @@
           "id": "nationalteams-europe__wales",
           "name": "Wales",
           "slug": "wales",
-          "count": 11
+          "count": 12
         },
         {
           "id": "nationalteams-europe__croatia",
           "name": "Kroatien",
           "slug": "croatia",
-          "count": 4
+          "count": 13
         },
         {
           "id": "nationalteams-europe__uk2026",
           "name": "UK WM 2026",
           "slug": "uk2026",
           "count": 14
+        },
+        {
+          "id": "nationalteams-europe__norway",
+          "name": "Norwegen",
+          "slug": "norway",
+          "count": 6
+        },
+        {
+          "id": "nationalteams-europe__ireland",
+          "name": "Irland",
+          "slug": "ireland",
+          "count": 13
+        },
+        {
+          "id": "nationalteams-europe__northern-ireland",
+          "name": "Nordirland",
+          "slug": "northern-ireland",
+          "count": 2
+        },
+        {
+          "id": "nationalteams-europe__switzerland",
+          "name": "Schweiz",
+          "slug": "switzerland",
+          "count": 3
+        },
+        {
+          "id": "nationalteams-europe__czech-republic",
+          "name": "Tschechien",
+          "slug": "czech-republic",
+          "count": 1
+        },
+        {
+          "id": "nationalteams-europe__iceland",
+          "name": "Island",
+          "slug": "iceland",
+          "count": 2
+        },
+        {
+          "id": "nationalteams-europe__romania",
+          "name": "Rumänien",
+          "slug": "romania",
+          "count": 6
+        },
+        {
+          "id": "nationalteams-europe__austria",
+          "name": "Österreich",
+          "slug": "austria",
+          "count": 2
+        },
+        {
+          "id": "nationalteams-europe__poland",
+          "name": "Polen",
+          "slug": "poland",
+          "count": 3
+        },
+        {
+          "id": "nationalteams-europe__sweden",
+          "name": "Schweden",
+          "slug": "sweden",
+          "count": 3
+        },
+        {
+          "id": "nationalteams-europe__greece",
+          "name": "Griechenland",
+          "slug": "greece",
+          "count": 4
+        },
+        {
+          "id": "nationalteams-europe__israel",
+          "name": "Israel",
+          "slug": "israel",
+          "count": 2
+        },
+        {
+          "id": "nationalteams-europe__hungary",
+          "name": "Ungarn",
+          "slug": "hungary",
+          "count": 2
+        },
+        {
+          "id": "nationalteams-europe__finland",
+          "name": "Finnland",
+          "slug": "finland",
+          "count": 3
+        },
+        {
+          "id": "nationalteams-europe__albania",
+          "name": "Albanien",
+          "slug": "albania",
+          "count": 4
+        },
+        {
+          "id": "nationalteams-europe__yugoslavia",
+          "name": "Jugoslawien",
+          "slug": "yugoslavia",
+          "count": 4
+        },
+        {
+          "id": "nationalteams-europe__turkey",
+          "name": "Türkei",
+          "slug": "turkey",
+          "count": 4
         }
       ],
-      "teamCount": 19,
-      "productCount": 605
+      "teamCount": 36,
+      "productCount": 680
     },
     "nationalteams-world": {
       "name": "Nationalteams Welt",
@@ -936,7 +1038,7 @@
           "id": "nationalteams-world__tunisia",
           "name": "Tunesien",
           "slug": "tunisia",
-          "count": 2
+          "count": 4
         },
         {
           "id": "nationalteams-world__southafrica",
@@ -1018,7 +1120,7 @@
         }
       ],
       "teamCount": 42,
-      "productCount": 561
+      "productCount": 563
     },
     "clubs-world": {
       "name": "Weltclubs",
@@ -1231,60 +1333,6 @@
       "country": "Europa",
       "teams": [
         {
-          "id": "eredivisie__allsvenskan",
-          "name": "Allsvenskan",
-          "slug": "allsvenskan",
-          "count": 2
-        },
-        {
-          "id": "eredivisie__austrianliga",
-          "name": "Österreichische Liga",
-          "slug": "austrianliga",
-          "count": 3
-        },
-        {
-          "id": "eredivisie__danishliga",
-          "name": "Dänische Liga",
-          "slug": "danishliga",
-          "count": 4
-        },
-        {
-          "id": "eredivisie__jupiler",
-          "name": "Jupiler Pro League",
-          "slug": "jupiler",
-          "count": 1
-        },
-        {
-          "id": "eredivisie__irelandleague",
-          "name": "Irische Liga",
-          "slug": "irelandleague",
-          "count": 7
-        },
-        {
-          "id": "eredivisie__croatianliga",
-          "name": "Kroatische Liga",
-          "slug": "croatianliga",
-          "count": 4
-        },
-        {
-          "id": "eredivisie__romanianliga",
-          "name": "Rumänische Liga",
-          "slug": "romanianliga",
-          "count": 6
-        },
-        {
-          "id": "eredivisie__swissliga",
-          "name": "Schweizer Super League",
-          "slug": "swissliga",
-          "count": 1
-        },
-        {
-          "id": "eredivisie__euothers",
-          "name": "Europa Andere",
-          "slug": "euothers",
-          "count": 77
-        },
-        {
           "id": "eredivisie__celtic",
           "name": "Celtic Glasgow",
           "slug": "celtic",
@@ -1357,20 +1405,128 @@
           "count": 2
         },
         {
-          "id": "eredivisie__superlig",
-          "name": "Türkische Süper Lig",
-          "slug": "superlig",
-          "count": 30
+          "id": "europa-andere__galatasaray",
+          "name": "Galatasaray",
+          "slug": "galatasaray",
+          "count": 19
         },
         {
-          "id": "eredivisie__greekliga",
-          "name": "Griechische Liga",
-          "slug": "greekliga",
-          "count": 15
+          "id": "europa-andere__fenerbahce",
+          "name": "Fenerbahçe",
+          "slug": "fenerbahce",
+          "count": 6
+        },
+        {
+          "id": "europa-andere__besiktas",
+          "name": "Beşiktaş JK",
+          "slug": "besiktas",
+          "count": 4
+        },
+        {
+          "id": "europa-andere__trabzonspor",
+          "name": "Trabzonspor",
+          "slug": "trabzonspor",
+          "count": 1
+        },
+        {
+          "id": "europa-andere__olympiacos",
+          "name": "Olympiacos",
+          "slug": "olympiacos",
+          "count": 7
+        },
+        {
+          "id": "europa-andere__panathinaikos",
+          "name": "Panathinaikos",
+          "slug": "panathinaikos",
+          "count": 6
+        },
+        {
+          "id": "europa-andere__aek-athens",
+          "name": "AEK Athens",
+          "slug": "aek-athens",
+          "count": 2
+        },
+        {
+          "id": "europa-andere__rb-salzburg",
+          "name": "Red Bull Salzburg",
+          "slug": "rb-salzburg",
+          "count": 2
+        },
+        {
+          "id": "europa-andere__sturm-graz",
+          "name": "Sturm Graz",
+          "slug": "sturm-graz",
+          "count": 1
+        },
+        {
+          "id": "europa-andere__bohemian",
+          "name": "Bohemian FC",
+          "slug": "bohemian",
+          "count": 6
+        },
+        {
+          "id": "europa-andere__cork-city",
+          "name": "Cork City",
+          "slug": "cork-city",
+          "count": 1
+        },
+        {
+          "id": "europa-andere__hajduk-split",
+          "name": "Hajduk Split",
+          "slug": "hajduk-split",
+          "count": 2
+        },
+        {
+          "id": "europa-andere__dinamo-zagreb",
+          "name": "Dinamo Zagreb",
+          "slug": "dinamo-zagreb",
+          "count": 2
+        },
+        {
+          "id": "europa-andere__steaua",
+          "name": "FCSB / Steaua București",
+          "slug": "steaua",
+          "count": 4
+        },
+        {
+          "id": "europa-andere__dinamo-bucuresti",
+          "name": "Dinamo București",
+          "slug": "dinamo-bucuresti",
+          "count": 1
+        },
+        {
+          "id": "europa-andere__universitatea-craiova",
+          "name": "Universitatea Craiova",
+          "slug": "universitatea-craiova",
+          "count": 1
+        },
+        {
+          "id": "europa-andere__aik",
+          "name": "AIK",
+          "slug": "aik",
+          "count": 2
+        },
+        {
+          "id": "europa-andere__fc-copenhagen",
+          "name": "FC Copenhagen",
+          "slug": "fc-copenhagen",
+          "count": 4
+        },
+        {
+          "id": "europa-andere__club-brugge",
+          "name": "Club Brugge KV",
+          "slug": "club-brugge",
+          "count": 1
+        },
+        {
+          "id": "europa-andere__fc-basel",
+          "name": "FC Basel",
+          "slug": "fc-basel",
+          "count": 1
         }
       ],
-      "teamCount": 23,
-      "productCount": 237
+      "teamCount": 32,
+      "productCount": 160
     }
   },
   "teams": {
@@ -31854,1606 +32010,6 @@
       ],
       "productCount": 2
     },
-    "eredivisie__superlig": {
-      "name": "Türkische Süper Lig",
-      "slug": "superlig",
-      "league": "europa-andere",
-      "leagueName": "Europa Andere",
-      "products": [
-        {
-          "t": "BJK 96/97 Away Jersey S-XXL",
-          "h": "bjk-96-97-away-jersey-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260124/48b817a1b8ca9ad90b50bf70abd33148.webp",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260124/48b817a1b8ca9ad90b50bf70abd33148.webp",
-          "p": "13.60",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "BJK 96/97 Home Jersey S-XXL",
-          "h": "bjk-96-97-home-jersey-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260124/4895ed6e4f060d83bbde2f11d664fe51.webp",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260124/4895ed6e4f060d83bbde2f11d664fe51.webp",
-          "p": "13.60",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "BJK 25/26 Away Jersey S-XXL",
-          "h": "bjk-25-26-away-jersey-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251217/e24b6438a7d1d84233d19db551ad3701.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251217/e24b6438a7d1d84233d19db551ad3701.jpg",
-          "p": "11.20",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "BJK 25/26 Home Jersey S-XXL",
-          "h": "bjk-25-26-home-jersey-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251217/c8e6be82723af2ae5de177ac05b32d26.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251217/c8e6be82723af2ae5de177ac05b32d26.jpg",
-          "p": "11.20",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Retro Trabzonspor 10/11 Home Jersey S-XXL",
-          "h": "retro-trabzonspor-10-11-home-jersey-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251103/dc23d92f9d73fcd2b74d9f89a2777a43.webp",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251103/dc23d92f9d73fcd2b74d9f89a2777a43.webp",
-          "p": "13.60",
-          "c": [
-            "retro"
-          ]
-        },
-        {
-          "t": "Galatasaray S.K. 25/26 Third 5 stars with sponsor S-4XL",
-          "h": "galatasaray-s-k-25-26-third-5-stars-with-sponsor-s-4xl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251028/11ad6daa4e735bb92a7daa2a0f7f3e47.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251028/11ad6daa4e735bb92a7daa2a0f7f3e47.jpg",
-          "p": "11.20",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Galatasaray 97/98 Home S-XXL",
-          "h": "galatasaray-97-98-home-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250927/9059a6cba360877b1452114b9074c0ca.png",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250927/9059a6cba360877b1452114b9074c0ca.png",
-          "p": "12.80",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Galatasaray 10/11 Third  S-XXL",
-          "h": "galatasaray-10-11-third-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250821/937cf1bfdafa836ff4885ca9fe3ee025.png",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250821/937cf1bfdafa836ff4885ca9fe3ee025.png",
-          "p": "12.80",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Galatasaray 99/00 Third S-XXL",
-          "h": "galatasaray-99-00-third",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250809/c9625e923be5076b0827dd699ebc8930.png",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250809/c9625e923be5076b0827dd699ebc8930.png",
-          "p": "12.80",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Galatasaray 96/97 Home S-XXL",
-          "h": "galatasaray-96-97-home-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250809/115b99196bab99dc1206f672938c619d.png",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250809/115b99196bab99dc1206f672938c619d.png",
-          "p": "12.80",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Galatasaray 99/00 Away Long Sleeves S-XXL",
-          "h": "galatasaray-99-00-away-long-sleeves-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250809/365a817c78fab6587f80c7e7f4cb524b.png",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250809/365a817c78fab6587f80c7e7f4cb524b.png",
-          "p": "14.40",
-          "c": [
-            "longsleeve"
-          ]
-        },
-        {
-          "t": "Galatasaray 99/00 Away S-XXL",
-          "h": "galatasaray-99-00-away-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250809/9c1aa56b3def309bb318de972db66295.png",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250809/9c1aa56b3def309bb318de972db66295.png",
-          "p": "12.80",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Galatasaray 10/11 Away  S-XXL",
-          "h": "galatasaray-10-11-away-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250802/51bc368eca1e532dc6c2ebc03d1e1ecc.png",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250802/51bc368eca1e532dc6c2ebc03d1e1ecc.png",
-          "p": "12.80",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Fenerbah&ccedil;e 25/26 Third S-XXL",
-          "h": "fenerbahçe-25-26-third-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250720/360e7bb3497b4921c3b507cdfce53a48.png",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250720/360e7bb3497b4921c3b507cdfce53a48.png",
-          "p": "9.60",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Fenerbah&ccedil;e 25/26 Away S-XXL",
-          "h": "fenerbahçe-25-26-home-s-xxl_9dea4e2d",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250720/37c647b7fc688f927e38a9aeb892c3c2.png",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250720/37c647b7fc688f927e38a9aeb892c3c2.png",
-          "p": "9.60",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Fenerbah&ccedil;e 25/26 Home S-XXL",
-          "h": "fenerbahçe-25-26-home-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250716/8539d99359d23948a9557305216088d3.png",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250716/8539d99359d23948a9557305216088d3.png",
-          "p": "9.60",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Retro Fenerbah&ccedil;e 07/08 Away S-XXL",
-          "h": "retro-fenerbahçe-07-08-away-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250716/bb5657f54469dded8997b2324ef29c57.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250716/bb5657f54469dded8997b2324ef29c57.jpg",
-          "p": "12.80",
-          "c": [
-            "retro"
-          ]
-        },
-        {
-          "t": "Retro Fenerbah&ccedil;e 08/09 Home S-XXL",
-          "h": "retro-fenerbahçe-08-09-home-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250716/9c8a939777ac58892d286eeb591cd200.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250716/9c8a939777ac58892d286eeb591cd200.jpg",
-          "p": "12.80",
-          "c": [
-            "retro"
-          ]
-        },
-        {
-          "t": "Retro Fenerbah&ccedil;e 07/08 Home S-XXL",
-          "h": "retro-fenerbahçe-07-08-home-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250716/dd55ab2afb73bd72b0a8eda1ca7c923c.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250716/dd55ab2afb73bd72b0a8eda1ca7c923c.jpg",
-          "p": "12.80",
-          "c": [
-            "retro"
-          ]
-        },
-        {
-          "t": "Galatasaray S.K. 25/26 Away 5 stars with sponsor S-4XL",
-          "h": "galatasaray-s-k-25-26-away-5-stars-with-sponsor-s-4xl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250718/7ece1832937ade1325f619cb3b0df422.png",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250718/7ece1832937ade1325f619cb3b0df422.png",
-          "p": "11.20",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Galatasaray S.K. 25/26 Home 5 stars with sponsor S-4XL",
-          "h": "galatasaray-s-k-25-26-home-5-stars-with-sponsor-s-4xl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250718/953ced9ea1b43818adc0fcda3c3c02d2.png",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250718/953ced9ea1b43818adc0fcda3c3c02d2.png",
-          "p": "11.20",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Player Version Galatasarays 2025/26 Black Special Edition  S-XXL",
-          "h": "player-version-galatasarays-2025-26-black-special-edition-jersey-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250509/C99B8C06-689F-3EBA-C42A-8981B2EF963F.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250509/C99B8C06-689F-3EBA-C42A-8981B2EF963F.jpg",
-          "p": "13.60",
-          "c": [
-            "player"
-          ]
-        },
-        {
-          "t": "Galatasarays 2025/26 Black Special Edition  S-XXL",
-          "h": "galatasarays-2025-26-black-special-edition-jersey-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250509/441FF4A0-712B-21FB-3D10-297BD5F9348E.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250509/441FF4A0-712B-21FB-3D10-297BD5F9348E.jpg",
-          "p": "9.60",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Galatasaray S.K. 25/26 Special Kits 16-XXL",
-          "h": "galatasaray-s-k-25-26-special-kits-16-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250521/99ca5c0720f1b9fb8870af0836b9b8b3.png",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250521/99ca5c0720f1b9fb8870af0836b9b8b3.png",
-          "p": "18.40",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Galatasaray S.K. 25/26 Special Kit S-XXL",
-          "h": "galatasaray-s-k-25-26-special-kit-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250509/7C5EFB99-0516-5240-EF84-457B2A4B956B.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250509/7C5EFB99-0516-5240-EF84-457B2A4B956B.jpg",
-          "p": "10.40",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Galatasaray 98/99 Home  S-XXL",
-          "h": "galatasaray-98-99-home-jersey-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250509/09D9AA1B-7469-73FB-DFF9-190F4AEBF4D9.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250509/09D9AA1B-7469-73FB-DFF9-190F4AEBF4D9.jpg",
-          "p": "12.80",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Galatasaray 98/99 Third  S-XXL",
-          "h": "galatasaray-98-99-third-jersey-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250509/0F8A8D86-CC23-D0A9-06BC-CC3CFB9B179F.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250509/0F8A8D86-CC23-D0A9-06BC-CC3CFB9B179F.jpg",
-          "p": "12.80",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Galatasaray 99/00 Home  Long Sleeves S-XXL",
-          "h": "galatasaray-99-00-home-jersey-long-sleeves-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250509/F53A860E-9F38-5482-9226-6D1F27629111.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250509/F53A860E-9F38-5482-9226-6D1F27629111.jpg",
-          "p": "14.40",
-          "c": [
-            "longsleeve"
-          ]
-        },
-        {
-          "t": "Galatasaray 99/00 Home  S-XXL",
-          "h": "galatasaray-99-00-home-jersey-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250509/9024FACF-D815-9C39-3D51-3C5291EEDBA2.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250509/9024FACF-D815-9C39-3D51-3C5291EEDBA2.jpg",
-          "p": "12.80",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Galatasaray 13/14 Home  S-XXL",
-          "h": "galatasaray-13-14-home-jersey-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250509/FA56BD2E-61A0-EE23-B6AA-CC21ECD7637B.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250509/FA56BD2E-61A0-EE23-B6AA-CC21ECD7637B.jpg",
-          "p": "12.80",
-          "c": [
-            "fan"
-          ]
-        }
-      ],
-      "productCount": 30
-    },
-    "eredivisie__allsvenskan": {
-      "name": "Allsvenskan",
-      "slug": "allsvenskan",
-      "league": "europa-andere",
-      "leagueName": "Europa Andere",
-      "products": [
-        {
-          "t": "Allm&auml;nna Idrottsklubben 25/26 Black  S-XXL",
-          "h": "allmänna-idrottsklubben-25-26-black-jersey-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250508/e2bdb8a3291f06a6c11c109ead9e0576.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250508/e2bdb8a3291f06a6c11c109ead9e0576.jpg",
-          "p": "9.60",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Allm&auml;nna Idrottsklubben 132nd Anniversary Edition S-XXL",
-          "h": "allmänna-idrottsklubben-132nd-anniversary-edition-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20240104/CF0DD512-92EF-5FEE-76C1-D40DBDE1FD8D.jpeg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20240104/CF0DD512-92EF-5FEE-76C1-D40DBDE1FD8D.jpeg",
-          "p": "11.20",
-          "c": [
-            "fan"
-          ]
-        }
-      ],
-      "productCount": 2
-    },
-    "eredivisie__austrianliga": {
-      "name": "Österreichische Liga",
-      "slug": "austrianliga",
-      "league": "europa-andere",
-      "leagueName": "Europa Andere",
-      "products": [
-        {
-          "t": "25-26 Sturm Graz Stop Violence Against Women Special Version Jersey",
-          "h": "sturm-graz-stop-violence-against-women",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260203/355e0ef3ee138c6cfa11a6b23b732097.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260203/355e0ef3ee138c6cfa11a6b23b732097.jpg",
-          "p": "10.40",
-          "c": [
-            "female"
-          ]
-        },
-        {
-          "t": "Red Bull Salzburg 25/26 Home Jersey S-XXL",
-          "h": "red-bull-salzburg-25-26-home-jersey-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260129/a132d37d0ce43e6fdb80d261dd2b490c.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260129/a132d37d0ce43e6fdb80d261dd2b490c.jpg",
-          "p": "10.40",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Red Bull Salzburg 25/26 Away Jersey S-XXL",
-          "h": "red-bull-salzburg-25-26-away-jersey-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260129/926913a71c1308982deb26e132e7e51b.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260129/926913a71c1308982deb26e132e7e51b.jpg",
-          "p": "10.40",
-          "c": [
-            "fan"
-          ]
-        }
-      ],
-      "productCount": 3
-    },
-    "eredivisie__danishliga": {
-      "name": "Dänische Liga",
-      "slug": "danishliga",
-      "league": "europa-andere",
-      "leagueName": "Europa Andere",
-      "products": [
-        {
-          "t": "Copenhagen 25/26 Black Jersey S-XXL",
-          "h": "copenhagen-25-26-black-jersey-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260129/54cd43c5c062b85b7c17b7104e5c03b9.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260129/54cd43c5c062b85b7c17b7104e5c03b9.jpg",
-          "p": "10.40",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Copenhagen 25/26 White Jersey S-XXL",
-          "h": "copenhagen-25-26-white-jersey-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260129/e508d1d14c64903a22807690022209f4.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260129/e508d1d14c64903a22807690022209f4.jpg",
-          "p": "10.40",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Copenhagen CHAMPIONS 2025 S-XXL",
-          "h": "copenhagen-champions-2025-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250615/b323f9d3ba8e31a2f33444a46e187dea.png",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250615/b323f9d3ba8e31a2f33444a46e187dea.png",
-          "p": "10.40",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Copenhagen 25/26 GK Jersey S-XXL",
-          "h": "copenhagen-25-26-gk-jersey-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250615/7e13ec234a571941c3662ca1f9c54369.png",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250615/7e13ec234a571941c3662ca1f9c54369.png",
-          "p": "10.40",
-          "c": [
-            "fan"
-          ]
-        }
-      ],
-      "productCount": 4
-    },
-    "eredivisie__jupiler": {
-      "name": "Jupiler Pro League",
-      "slug": "jupiler",
-      "league": "europa-andere",
-      "leagueName": "Europa Andere",
-      "products": [
-        {
-          "t": "Brugge KV 25/26 Home S-XXL",
-          "h": "brugge-kv-25-26-home-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250929/966f8b9817a5c6cd6021c5166c6ea13a.png",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250929/966f8b9817a5c6cd6021c5166c6ea13a.png",
-          "p": "11.20",
-          "c": [
-            "fan"
-          ]
-        }
-      ],
-      "productCount": 1
-    },
-    "eredivisie__irelandleague": {
-      "name": "Irische Liga",
-      "slug": "irelandleague",
-      "league": "europa-andere",
-      "leagueName": "Europa Andere",
-      "products": [
-        {
-          "t": "Retro Cort City 1988-89 Home Jersey S-XXL",
-          "h": "retro-cort-city-1988-89-home-jersey-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260129/37ef31884f1606cc448ea9d1b21be94c.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260129/37ef31884f1606cc448ea9d1b21be94c.jpg",
-          "p": "13.60",
-          "c": [
-            "retro"
-          ]
-        },
-        {
-          "t": "Bohemian 26/27 White Jersey S-XXL",
-          "h": "bohemian-26-27-white-jersey-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260105/f7d95f4ad5203a8a063398426a9d36c3.png",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260105/f7d95f4ad5203a8a063398426a9d36c3.png",
-          "p": "10.40",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Bohemian 25/26 White Jersey S-XXL",
-          "h": "bohemian-25-26-white-jersey-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251224/0e9bd800e68ae359d596153f84463b6e.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251224/0e9bd800e68ae359d596153f84463b6e.jpg",
-          "p": "10.40",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Bohemian 25/26 Away",
-          "h": "bohemian-25-26-away",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250828/ad161502041772acab85c54eede6f628.webp",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250828/ad161502041772acab85c54eede6f628.webp",
-          "p": "10.40",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "ADULT Bohemian FC x Oasis 2025 Cup Jersey",
-          "h": "adult-bohemian-fc-x-oasis-2025-cup-jersey",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250813/c9a2c5fef7da8078592a737ef5b37bd6.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250813/c9a2c5fef7da8078592a737ef5b37bd6.jpg",
-          "p": "10.40",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Bohemian 25/26 Home",
-          "h": "bohemian-25-26-third_88fd0feb",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250724/6b3a0dc2a65fe3e2ba35da5b3877637d.png",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250724/6b3a0dc2a65fe3e2ba35da5b3877637d.png",
-          "p": "10.40",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Bohemian 25/26 Third",
-          "h": "bohemian-25-26-third",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250724/09063a132beb41584922d20151d09557.png",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250724/09063a132beb41584922d20151d09557.png",
-          "p": "10.40",
-          "c": [
-            "fan"
-          ]
-        }
-      ],
-      "productCount": 7
-    },
-    "eredivisie__croatianliga": {
-      "name": "Kroatische Liga",
-      "slug": "croatianliga",
-      "league": "europa-andere",
-      "leagueName": "Europa Andere",
-      "products": [
-        {
-          "t": "Hajduk Split 25/26  Home Jersey S-XXL",
-          "h": "hajduk-split-25-26-home-jersey-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251202/ff4b70f20543102b2fea540a627bf1a2.png",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251202/ff4b70f20543102b2fea540a627bf1a2.png",
-          "p": "10.40",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Hajduk Split 25/26  Away Jersey S-XXL",
-          "h": "hajduk-split-25-26-away-jersey-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251202/5b1df13af5548f04ae1dccb583f90dcc.png",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251202/5b1df13af5548f04ae1dccb583f90dcc.png",
-          "p": "10.40",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Dinamo Zagreb 25/26 Home S-4XL",
-          "h": "dinamo-zagreb-25-26-home-s-4xl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250719/db9107dec070c70f4ceb056aca1a6a9a.png",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250719/db9107dec070c70f4ceb056aca1a6a9a.png",
-          "p": "10.40",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Dinamo Zagreb 25/26 Away S-4XL",
-          "h": "dinamo-zagreb-25-26-away-s-4xl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250719/7b092380236958e12c27e1d843e644c1.png",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250719/7b092380236958e12c27e1d843e644c1.png",
-          "p": "10.40",
-          "c": [
-            "fan"
-          ]
-        }
-      ],
-      "productCount": 4
-    },
-    "eredivisie__romanianliga": {
-      "name": "Rumänische Liga",
-      "slug": "romanianliga",
-      "league": "europa-andere",
-      "leagueName": "Europa Andere",
-      "products": [
-        {
-          "t": "FCSB 25/26 Third S-XXL",
-          "h": "fcsb-25-26-third-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250718/345d09587a6ff437d3bd475003cbd658.webp",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250718/345d09587a6ff437d3bd475003cbd658.webp",
-          "p": "10.40",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Steaua Bucureşti 24/25 Third S-XXL",
-          "h": "steaua-bucureşti-24-25-third-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250628/5e729d394401315639dbc5cf62c4dc5a.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250628/5e729d394401315639dbc5cf62c4dc5a.jpg",
-          "p": "10.40",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Steaua Bucureşti 24/25 Away S-XXL",
-          "h": "steaua-bucureşti-24-25-away-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250628/db610ac28e32caf08a4d773546c93e92.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250628/db610ac28e32caf08a4d773546c93e92.jpg",
-          "p": "10.40",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Steaua Bucureşti 24/25 Home S-XXL",
-          "h": "steaua-bucureşti-24-25-home-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250628/fcd21d0b0019989e26c52ef4b1a64dc0.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250628/fcd21d0b0019989e26c52ef4b1a64dc0.jpg",
-          "p": "10.40",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Universitatea Craiova 25/26 Jersey S-XXL Fan Version",
-          "h": "universitatea-craiova-25-26-jersey-s-xxl-fan-version",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260124/11247c88e9673964df549aebf4ba8da6.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260124/11247c88e9673964df549aebf4ba8da6.jpg",
-          "p": "10.40",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "FC Dinamo București 25/26 Home  S-XXL Fan Version",
-          "h": "fc-dinamo-bucurești-25-26-home-s-xxl-fan-version",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251103/f34c3ab4c7e1611b70367d1eeca7e259.png",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251103/f34c3ab4c7e1611b70367d1eeca7e259.png",
-          "p": "10.40",
-          "c": [
-            "fan"
-          ]
-        }
-      ],
-      "productCount": 6
-    },
-    "eredivisie__greekliga": {
-      "name": "Griechische Liga",
-      "slug": "greekliga",
-      "league": "europa-andere",
-      "leagueName": "Europa Andere",
-      "products": [
-        {
-          "t": "Olympiacos 100-Year Jersey S-XXL",
-          "h": "olympiacos-100-year-jersey-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251111/06cb15bac3147d024291d7850c3a7ba0.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251111/06cb15bac3147d024291d7850c3a7ba0.jpg",
-          "p": "9.60",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Olympiacos 25/26 Third Jersey S-XXL",
-          "h": "olympiacos-25-26-third-jersey-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251111/ea662d4427145de2c72c8b0f112beebe.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251111/ea662d4427145de2c72c8b0f112beebe.jpg",
-          "p": "9.60",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Retro Panathinaikos F.C. 95/96 Home Jersey S-XXL",
-          "h": "retro-panathinaikos-f-c-95-96-home-jersey-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251104/fbea3db4b25e4364cb3bf709d479dd6b.png",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251104/fbea3db4b25e4364cb3bf709d479dd6b.png",
-          "p": "12.80",
-          "c": [
-            "retro"
-          ]
-        },
-        {
-          "t": "Retro Panathinaikos F.C. 99/00 Home Jersey S-XXL",
-          "h": "retro-panathinaikos-f-c-99-00-home-jersey-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251104/f455a1747f430a500d89174e90cf1104.png",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251104/f455a1747f430a500d89174e90cf1104.png",
-          "p": "12.80",
-          "c": [
-            "retro"
-          ]
-        },
-        {
-          "t": "Retro Panathinaikos F.C. 95/96 Away Jersey S-XXL",
-          "h": "retro-panathinaikos-f-c-95-96-away-jersey-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251104/515530b651b07f24659b5cd8e2eca7aa.png",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251104/515530b651b07f24659b5cd8e2eca7aa.png",
-          "p": "12.80",
-          "c": [
-            "retro"
-          ]
-        },
-        {
-          "t": "Retro Panathinaikos F.C. 00/01 Home Jersey S-XXL",
-          "h": "retro-panathinaikos-f-c-00-01-home-jersey-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251104/c22feb7db4c0aee03b4115e6baa6e4a0.png",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251104/c22feb7db4c0aee03b4115e6baa6e4a0.png",
-          "p": "12.80",
-          "c": [
-            "retro"
-          ]
-        },
-        {
-          "t": "Panathinaikos F.C. 25/26 Away S-XXL Fan Version",
-          "h": "panathinaikos-f-c-25-26-away-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251103/88b57b49f9edd8b0cdba7db68bbda0e7.png",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251103/88b57b49f9edd8b0cdba7db68bbda0e7.png",
-          "p": "10.40",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Panathinaikos F.C. 25/26 Home S-XXL Fan Version",
-          "h": "panathinaikos-f-c-25-26-home-s-xxl-fan-version",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251103/cada28526de993b225773a6201fad1ab.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251103/cada28526de993b225773a6201fad1ab.jpg",
-          "p": "10.40",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Retro Olympiacos 01/02 Home S-XXL",
-          "h": "retro-olympiacos-01-02-home-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250927/a1a3fcd01f21e709279ff0332adcc08b.png",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250927/a1a3fcd01f21e709279ff0332adcc08b.png",
-          "p": "12.80",
-          "c": [
-            "retro"
-          ]
-        },
-        {
-          "t": "Retro Olympiacos 02/03 Home S-XXL",
-          "h": "retro-olympiacos-02-03-home-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250927/75bf67b051506398b74d117abf6d1a87.png",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250927/75bf67b051506398b74d117abf6d1a87.png",
-          "p": "12.80",
-          "c": [
-            "retro"
-          ]
-        },
-        {
-          "t": "Olympiacos 25/26 Third S-4XL",
-          "h": "olympiacos-25-26-away-s-4xl_e3593471",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250906/8352a4665b29243b022814cb6ae559a1.png",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250906/8352a4665b29243b022814cb6ae559a1.png",
-          "p": "10.40",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Olympiacos 25/26 Away S-4XL",
-          "h": "olympiacos-25-26-away-s-4xl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250906/0fb83ff7e3072ceafd10dd6d5c7d6334.png",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250906/0fb83ff7e3072ceafd10dd6d5c7d6334.png",
-          "p": "10.40",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Olympiacos 25/26 Home S-4XL",
-          "h": "olympiacos-25-26-home-s-4xl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250906/0bbdc103a5fe98760fa6d540b0de4429.png",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250906/0bbdc103a5fe98760fa6d540b0de4429.png",
-          "p": "10.40",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "&Alpha;.&Epsilon;.&Kappa;. 25/26 Third S-XXL",
-          "h": "Α-Ε-Κ-25-26-third-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250828/5b9338c38eb8c3543ba97b7426efbde6.png",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250828/5b9338c38eb8c3543ba97b7426efbde6.png",
-          "p": "10.40",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "&Alpha;.&Epsilon;.&Kappa;. 25/26 Home S-4XL",
-          "h": "Α-Ε-Κ-25-26-home-s-4xl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250828/c418ca35a51354740108da66c9142a67.png",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250828/c418ca35a51354740108da66c9142a67.png",
-          "p": "10.40",
-          "c": [
-            "fan"
-          ]
-        }
-      ],
-      "productCount": 15
-    },
-    "eredivisie__swissliga": {
-      "name": "Schweizer Super League",
-      "slug": "swissliga",
-      "league": "europa-andere",
-      "leagueName": "Europa Andere",
-      "products": [
-        {
-          "t": "Basel 2024-25 Carnival Long sleeves S-XXL",
-          "h": "basel-2024-25-carnival-long-sleeves-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250529/6ee876dbc99264a268e06d109071ab6e.jpeg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250529/6ee876dbc99264a268e06d109071ab6e.jpeg",
-          "p": "13.60",
-          "c": [
-            "longsleeve"
-          ]
-        }
-      ],
-      "productCount": 1
-    },
-    "eredivisie__euothers": {
-      "name": "Europa Andere",
-      "slug": "euothers",
-      "league": "europa-andere",
-      "leagueName": "Europa Andere",
-      "products": [
-        {
-          "t": "2026 World Cup Croatia Away Jersey S-4XL Fan Version",
-          "h": "2026-world-cup-croatia-away-jersey",
-          "i": "https://img.wpassets-gamma.com/images/823772f068104f42c8fc9b6c59aba9a4.webp",
-          "hi": "https://img.wpassets-gamma.com/images/823772f068104f42c8fc9b6c59aba9a4.webp",
-          "p": "10.40",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "2026 World Cup Croatia Home Jersey S-4XL Fan Version",
-          "h": "2026-world-cup-croatia-home-jersey",
-          "i": "https://img.wpassets-gamma.com/images/70dafd51729bdae0ff1769d2cc474f9a.webp",
-          "hi": "https://img.wpassets-gamma.com/images/70dafd51729bdae0ff1769d2cc474f9a.webp",
-          "p": "10.40",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Retro 1994/95 Norway  Home Jersey S-XXL",
-          "h": "1994-95-norway-home-jersey",
-          "i": "https://img.wpassets-gamma.com/images/02af5d3a07706b5dc40903dcabd473df.jpg",
-          "hi": "https://img.wpassets-gamma.com/images/02af5d3a07706b5dc40903dcabd473df.jpg",
-          "p": "12.80",
-          "c": [
-            "retro"
-          ]
-        },
-        {
-          "t": "Adults Ireland Replica Stealth Short Sleeve Jersey S-4XL",
-          "h": "adults-ireland-replica-stealth-short-sleeve-jersey",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260201/ed53971fa3157f7bf240a6c54329c580.png",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260201/ed53971fa3157f7bf240a6c54329c580.png",
-          "p": "9.60",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Adults Ireland Away Replica Jersey 2026 S-4XL",
-          "h": "adults-ireland-away-replica-jersey-2026-s-4xl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260201/739a29510c556fb3b92497a4597c91bc.png",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260201/739a29510c556fb3b92497a4597c91bc.png",
-          "p": "9.60",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Adults Ireland Home Replica Jersey 2026 S-4XL",
-          "h": "adults-ireland-home-replica-jersey-2026-s-4xl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260201/7df9bac87093c8ffcf0dd39b0a88234a.png",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260201/7df9bac87093c8ffcf0dd39b0a88234a.png",
-          "p": "9.60",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "2026 Northern Ireland Away Jersey",
-          "h": "2026-northern-ireland-away-jersey",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260121/A4C6D6F1-E24F-F808-D523-7E7DB42A1BAA.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260121/A4C6D6F1-E24F-F808-D523-7E7DB42A1BAA.jpg",
-          "p": "9.60",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Player Version 2026 World Cup Switzerland Away Jersey S-XXL",
-          "h": "player-version-2026-world-cup-switzerland-away-jersey-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260105/65aebdfdcc5e0ce84e974e8613664f96.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260105/65aebdfdcc5e0ce84e974e8613664f96.jpg",
-          "p": "13.60",
-          "c": [
-            "player"
-          ]
-        },
-        {
-          "t": "Czech 26/27 Home kit S-XXL",
-          "h": "czech-26-27-home-kit-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260102/780f7b415f34724f9ba345c63dcce7c6.webp",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260102/780f7b415f34724f9ba345c63dcce7c6.webp",
-          "p": "9.60",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Iceland 2025/26 Home Jersey S-XXL",
-          "h": "iceland-2025-26-home-jersey-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251209/792064363f75899a15f9d51704f99cb6.png",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251209/792064363f75899a15f9d51704f99cb6.png",
-          "p": "9.60",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Player Version 2026 World Cup Croatia Away Jersey S-XXL",
-          "h": "player-version-2026-world-cup-croatia-away-jersey-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251203/ffb1bcc18abf34892cb353642e010c2e.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251203/ffb1bcc18abf34892cb353642e010c2e.jpg",
-          "p": "12.80",
-          "c": [
-            "player"
-          ]
-        },
-        {
-          "t": "Player Version 2026 World Cup Croatia Home Jersey S-XXL",
-          "h": "player-version-2026-world-cup-croatia-home-jersey-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251203/9b367870329d48948d9fb6cdda99f381.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251203/9b367870329d48948d9fb6cdda99f381.jpg",
-          "p": "12.80",
-          "c": [
-            "player"
-          ]
-        },
-        {
-          "t": "Retro Romania 2000 Home Jersey with Arm Patches S-XXL",
-          "h": "retro-romania-2000-home-jersey-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251202/fa55482ac702db10a3c43c10a58317bf.png",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251202/fa55482ac702db10a3c43c10a58317bf.png",
-          "p": "14.40",
-          "c": [
-            "retro"
-          ]
-        },
-        {
-          "t": "2026 World Cup Tunisia Away Jersey S-XXL Fan Version",
-          "h": "2026-world-cup-tunisia-away-jersey-s-xxl-fan-version",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251202/feb55510396add556a2da3d4115ee155.png",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251202/feb55510396add556a2da3d4115ee155.png",
-          "p": "10.40",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "2026 World Cup Austria Home Jersey S-XXL Fan Version",
-          "h": "2026-austria-home-jersey-s-xxl-fan-version",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251202/bb15950ce2f0210bfa93e679da5286f6.png",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251202/bb15950ce2f0210bfa93e679da5286f6.png",
-          "p": "10.40",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "2026 World Cup Tunisia Home Jersey S-XXL Fan Version",
-          "h": "2026-world-cup-tunisia-home-jersey-s-xxl-fan-version",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251202/fcc0c508dc5f73046f3384ba62f7de18.png",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251202/fcc0c508dc5f73046f3384ba62f7de18.png",
-          "p": "10.40",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Player Version 2026 World Cup Switzerland Home Jersey S-XXL",
-          "h": "player-version-2026-world-cup-switzerland-home-jersey-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260105/7593c2958e54862d48eb8c0bc597a179.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260105/7593c2958e54862d48eb8c0bc597a179.jpg",
-          "p": "13.60",
-          "c": [
-            "player"
-          ]
-        },
-        {
-          "t": "Retro Polan 1997 Home Jersey S-XXL",
-          "h": "retro-polan-1997-home-jersey-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251122/d7453435f77cff29e0a6a423eb78324f.png",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251122/d7453435f77cff29e0a6a423eb78324f.png",
-          "p": "12.80",
-          "c": [
-            "retro"
-          ]
-        },
-        {
-          "t": "2026 World Cup Sweden Home Jersey S-4XL Fan Version",
-          "h": "2026-world-cup-sweden-home-jersey-s-4xl-fan-version",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251121/6c78a571edc0d8cbd6abe9caab442e51.png",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251121/6c78a571edc0d8cbd6abe9caab442e51.png",
-          "p": "10.40",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Retro Ireland 1994 Home Jersey S-XXL",
-          "h": "retro-ireland-1994-home-jersey-s-xxl_1bbbf254",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251118/76a1d995b9e8f948570e1d83a9e4c006.png",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251118/76a1d995b9e8f948570e1d83a9e4c006.png",
-          "p": "13.60",
-          "c": [
-            "retro"
-          ]
-        },
-        {
-          "t": "Retro Ireland 1994 Away Jersey S-XXL",
-          "h": "retro-ireland-1994-away-jersey-s-xxl_7b7d8364",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251118/db263b6cd3ccf63b7dbe510026797a50.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251118/db263b6cd3ccf63b7dbe510026797a50.jpg",
-          "p": "13.60",
-          "c": [
-            "retro"
-          ]
-        },
-        {
-          "t": "Retro Ireland 1988/90 Home Jersey S-XXL",
-          "h": "retro-ireland-1988-home-jersey-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251118/02c2d2b92ef4a394ce487ed7a8547f94.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251118/02c2d2b92ef4a394ce487ed7a8547f94.jpg",
-          "p": "12.80",
-          "c": [
-            "retro"
-          ]
-        },
-        {
-          "t": "Retro Ireland 1990/92 Away Jersey S-XXL",
-          "h": "retro-ireland-1990-92-away-jersey-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251118/b6947e9e5429be989cf5fd6f536a97e9.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251118/b6947e9e5429be989cf5fd6f536a97e9.jpg",
-          "p": "12.80",
-          "c": [
-            "retro"
-          ]
-        },
-        {
-          "t": "Retro Ireland 1990/92 Home Jersey S-XXL",
-          "h": "ireland-1990-92-home-jersey",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251118/babd9633601179eec5b4b652582e15ab.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251118/babd9633601179eec5b4b652582e15ab.jpg",
-          "p": "12.80",
-          "c": [
-            "retro"
-          ]
-        },
-        {
-          "t": "Retro Ireland 1992/94 Away Jersey S-XXL",
-          "h": "ireland-1992-94-away-jersey",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251118/f6248c99abaf983a101f0fbfa1ee420b.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251118/f6248c99abaf983a101f0fbfa1ee420b.jpg",
-          "p": "12.80",
-          "c": [
-            "retro"
-          ]
-        },
-        {
-          "t": "Retro Ireland 1992/94 Home Jersey S-XXL",
-          "h": "retro-ireland-1992-home-jersey-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251118/b06ddc211ee991305f9e2fbb567c632f.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251118/b06ddc211ee991305f9e2fbb567c632f.jpg",
-          "p": "12.80",
-          "c": [
-            "retro"
-          ]
-        },
-        {
-          "t": "Retro Ireland 1994 Away Jersey S-XXL",
-          "h": "retro-ireland-1994-away-jersey-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251118/447943845abf35eb0eb0103ab9805409.png",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251118/447943845abf35eb0eb0103ab9805409.png",
-          "p": "12.80",
-          "c": [
-            "retro"
-          ]
-        },
-        {
-          "t": "Retro Ireland 1994 Home Jersey S-XXL",
-          "h": "retro-ireland-1994-home-jersey-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251118/b87ce2133a8ad0f48dd660f0ec8bfab3.png",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251118/b87ce2133a8ad0f48dd660f0ec8bfab3.png",
-          "p": "12.80",
-          "c": [
-            "retro"
-          ]
-        },
-        {
-          "t": "Retro Ireland 1997 Jersey Orange S-XXL",
-          "h": "retro-ireland-1997-jersey-orange-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251118/1136758c44b5f2f07e380a55a0fecf64.png",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251118/1136758c44b5f2f07e380a55a0fecf64.png",
-          "p": "12.80",
-          "c": [
-            "retro"
-          ]
-        },
-        {
-          "t": "Greece 2026 Home Jersey S-4XL",
-          "h": "greece-2026-home-jersey-s-4xl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251115/dd6d7206f27cc85942998f365b252735.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251115/dd6d7206f27cc85942998f365b252735.jpg",
-          "p": "10.40",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "2026 Northern Ireland Home Jersey S-4XL",
-          "h": "2026-northern-ireland-home-jersey-s-4xl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251115/927c4a52884c4ba6ffa3a958ed1a12b6.png",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251115/927c4a52884c4ba6ffa3a958ed1a12b6.png",
-          "p": "9.60",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Israel 25/26 Away Blue Jersey S-XXL",
-          "h": "israel-25-26-away-blue-jersey-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251111/48da0852a43471117719695a611c0e95.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251111/48da0852a43471117719695a611c0e95.jpg",
-          "p": "10.40",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Israel 25/26 Home White Jersey S-XXL",
-          "h": "israel-25-26-white-jersey-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251111/77394b0aefa80c94f5ed48ef119bbc17.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251111/77394b0aefa80c94f5ed48ef119bbc17.jpg",
-          "p": "10.40",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "2026 World Cup Switzerland Home Jersey S-4XL Fan Version",
-          "h": "2026-world-cup-switzerland-home-jersey-s-4xl-fan-version",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251104/b2359f51ed6692136c56e4c605cdf28d.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251104/b2359f51ed6692136c56e4c605cdf28d.jpg",
-          "p": "10.40",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "2026 World Cup Hungary Home Jersey S-4XL Fan Version",
-          "h": "2026-world-cup-hungary-home-jersey-s-4xl-fan-version",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251104/ff355302b8b2451e2b620c31051daae3.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251104/ff355302b8b2451e2b620c31051daae3.jpg",
-          "p": "10.40",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Retro Croatia 2010 Away S-XXL",
-          "h": "retro-croatia-2010-away-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250816/1b551d426aeeb7fb1fa296768022f7bf.png",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250816/1b551d426aeeb7fb1fa296768022f7bf.png",
-          "p": "13.60",
-          "c": [
-            "retro"
-          ]
-        },
-        {
-          "t": "Germany windbreaker",
-          "h": "greece-windbreaker_d54278d1",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250809/83f9351463344e282308f87be0025021.png",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250809/83f9351463344e282308f87be0025021.png",
-          "p": "24.00",
-          "c": [
-            "windbreaker"
-          ]
-        },
-        {
-          "t": "Greece windbreaker",
-          "h": "greece-windbreaker",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250809/5d2cf7ec55327e2fec28d4145ae0a7f4.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250809/5d2cf7ec55327e2fec28d4145ae0a7f4.jpg",
-          "p": "24.00",
-          "c": [
-            "windbreaker"
-          ]
-        },
-        {
-          "t": "Player Version Norway 2025 Home (Women&#039;s Team)",
-          "h": "player-version-norway-2025-home-women-s-team",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250727/3a4b8f30ecbf339108d56ca1716e20c2.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250727/3a4b8f30ecbf339108d56ca1716e20c2.jpg",
-          "p": "12.80",
-          "c": [
-            "player",
-            "female"
-          ]
-        },
-        {
-          "t": "Romania 25/26 Third S-XXL",
-          "h": "romania-25-26-third-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250718/e3db6db518f8602493367784f2ca019d.webp",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250718/e3db6db518f8602493367784f2ca019d.webp",
-          "p": "9.60",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Romania 25/26 Away S-XXL",
-          "h": "romania-25-26-away-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250718/ff68d47ea291ddb2387bc6b70e7f73cc.webp",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250718/ff68d47ea291ddb2387bc6b70e7f73cc.webp",
-          "p": "9.60",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Finl&alpha;nd 25/26 Set Size 16-XXL",
-          "h": "finlαnd-25-26-set-size-16-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250624/4eee50cd9e2aaacfb746460e3be63bc1.png",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250624/4eee50cd9e2aaacfb746460e3be63bc1.png",
-          "p": "18.40",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Finl&alpha;nd 25/26 Away S-XXL",
-          "h": "finlαnd-25-26-away-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250614/1eff4b16e74985fde38df54758565aeb.webp",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250614/1eff4b16e74985fde38df54758565aeb.webp",
-          "p": "10.40",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Finl&alpha;nd 25/26 Home S-XXL",
-          "h": "finlαnd-25-26-home-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250614/3a69d94e70ab84773d24d123cceed375.webp",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250614/3a69d94e70ab84773d24d123cceed375.webp",
-          "p": "10.40",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Albania 25/26 Away White  S-XXL",
-          "h": "albania-25-26-white-jersey-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/4A61446F-E099-0995-2DD9-F243E800645C.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/4A61446F-E099-0995-2DD9-F243E800645C.jpg",
-          "p": "10.40",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Albania 25/26 Home Red  S-XXL",
-          "h": "albania-25-26-home-red-jersey-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/04C99B41-D2B0-610E-BAC0-FBE44C6ACFD4.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/04C99B41-D2B0-610E-BAC0-FBE44C6ACFD4.jpg",
-          "p": "10.40",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Kids Albania 25/26 Home Kit 16-28",
-          "h": "kids-albania-25-26-home-kit-16-28",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/0E125BC3-2328-F186-6644-9F9451DCF984.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/0E125BC3-2328-F186-6644-9F9451DCF984.jpg",
-          "p": "11.20",
-          "c": [
-            "kids"
-          ]
-        },
-        {
-          "t": "Albania 25/26 Home Kit S-XXL",
-          "h": "albania-25-26-home-kit-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/0E125BC3-2328-F186-6644-9F9451DCF984.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/0E125BC3-2328-F186-6644-9F9451DCF984.jpg",
-          "p": "18.40",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Croatia 2024 Home  S-4XL",
-          "h": "croatia-2024-home-jersey-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/65099773-AD95-ABDE-F2AA-EFCCB8A552BE.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/65099773-AD95-ABDE-F2AA-EFCCB8A552BE.jpg",
-          "p": "10.40",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Croatia 2024 Away  S-XXL",
-          "h": "croatia-2024-away-jersey-s-4xl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/45117060-2683-D4C1-9656-8A2785E17971.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/45117060-2683-D4C1-9656-8A2785E17971.jpg",
-          "p": "10.40",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Retro Croatia 1998 Away  S-XXL",
-          "h": "retro-croatia-1998-away-jersey-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/F7D3C312-2597-3D58-C825-6863D03250A0.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/F7D3C312-2597-3D58-C825-6863D03250A0.jpg",
-          "p": "13.60",
-          "c": [
-            "retro"
-          ]
-        },
-        {
-          "t": "Player Version Norway 2024/25 Home S-4XL",
-          "h": "player-version-norway-2024-25-home-s-4xl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/23D0DAB9-52CB-33BA-86A3-D9476A6070C6.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/23D0DAB9-52CB-33BA-86A3-D9476A6070C6.jpg",
-          "p": "13.60",
-          "c": [
-            "player"
-          ]
-        },
-        {
-          "t": "Player Version Norway 2024/25 Away S-4XL",
-          "h": "player-version-norway-2024-25-away-s-4xl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/4BB25043-828D-643C-D825-58A11EF556F2.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/4BB25043-828D-643C-D825-58A11EF556F2.jpg",
-          "p": "13.60",
-          "c": [
-            "player"
-          ]
-        },
-        {
-          "t": "Norway 2024/25 Home  S-XXL",
-          "h": "norway-2024-25-home-jersey-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/0CD10622-8D24-C2A2-F7FF-9E15764D5562.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/0CD10622-8D24-C2A2-F7FF-9E15764D5562.jpg",
-          "p": "9.60",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Retro 98/99 Norway  Size S-XXL",
-          "h": "98-99-norway-jersey",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20240104/5BFC6F07-14D3-3705-3A56-9E295AEBCA4F.jpeg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20240104/5BFC6F07-14D3-3705-3A56-9E295AEBCA4F.jpeg",
-          "p": "12.80",
-          "c": [
-            "retro"
-          ]
-        },
-        {
-          "t": "Retro Polan 1982 Home S-XXL",
-          "h": "retro-polan-1982-home-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/5CD76828-C1E6-65C6-418D-D53338AD46CF.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/5CD76828-C1E6-65C6-418D-D53338AD46CF.jpg",
-          "p": "12.80",
-          "c": [
-            "retro"
-          ]
-        },
-        {
-          "t": "Retro Polan 2012 Home S-XXL",
-          "h": "retro-polan-2012-home-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/F714222E-1BBF-C715-A8D8-FFE8D1C5D7EE.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/F714222E-1BBF-C715-A8D8-FFE8D1C5D7EE.jpg",
-          "p": "12.80",
-          "c": [
-            "retro"
-          ]
-        },
-        {
-          "t": "Hungary Home Shirt 2024 S-XXL",
-          "h": "hungary-home-shirt-2024-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/09771D0E-7AFA-CD3E-E0E4-E9D922D63F8B.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/09771D0E-7AFA-CD3E-E0E4-E9D922D63F8B.jpg",
-          "p": "9.60",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Retro Croatia 1998 Home  S-XXL",
-          "h": "retro-croatia-1998-home-jersey-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/009F0DEC-C579-D98B-A64B-56E9C66E37CC.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/009F0DEC-C579-D98B-A64B-56E9C66E37CC.jpg",
-          "p": "13.60",
-          "c": [
-            "retro"
-          ]
-        },
-        {
-          "t": "Retro Iceland 2016/17 Home S-XXL",
-          "h": "retro-iceland-2016-17-home-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/728E800C-84A7-496A-E20F-0163717DD9D0.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/728E800C-84A7-496A-E20F-0163717DD9D0.jpg",
-          "p": "12.80",
-          "c": [
-            "retro"
-          ]
-        },
-        {
-          "t": "Retro 1990 Yugoslavia Home  Size: S-XXL",
-          "h": "retro-1990-yugoslavia-home-jersey-size-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/F8BE1291-A066-F6DE-FE50-1359935BE20A.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/F8BE1291-A066-F6DE-FE50-1359935BE20A.jpg",
-          "p": "12.80",
-          "c": [
-            "retro"
-          ]
-        },
-        {
-          "t": "Turkey 24/25 Home  S-XXL",
-          "h": "turkey-24-25-home-jersey-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/C130D0FC-E48E-B982-7408-4A9DB292CE3C.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/C130D0FC-E48E-B982-7408-4A9DB292CE3C.jpg",
-          "p": "10.40",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Turkey 24/25 Away  S-XXL",
-          "h": "turkey-24-25-away-jersey-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/048D02E9-AFF5-06CF-0F8C-1B15ED523B94.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/048D02E9-AFF5-06CF-0F8C-1B15ED523B94.jpg",
-          "p": "10.40",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Turkey 1996 Away  S-XXL",
-          "h": "turkey-1996-away-jersey-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/9A8CB49F-59C3-ACA1-AD19-CC3004DC3617.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/9A8CB49F-59C3-ACA1-AD19-CC3004DC3617.jpg",
-          "p": "13.60",
-          "c": [
-            "retro"
-          ]
-        },
-        {
-          "t": "Turkey 1996 Home  S-XXL",
-          "h": "turkey-1996-home-jersey-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/EACC99CD-FBA5-64F6-671D-0872806AA9FD.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/EACC99CD-FBA5-64F6-671D-0872806AA9FD.jpg",
-          "p": "13.60",
-          "c": [
-            "retro"
-          ]
-        },
-        {
-          "t": "Retro Romania 1994 Home Jersey S-XXL",
-          "h": "retro-romania-1994-home-jersey-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/80B3C066-4553-F0D0-95F4-6B85CE476B6D.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/80B3C066-4553-F0D0-95F4-6B85CE476B6D.jpg",
-          "p": "12.80",
-          "c": [
-            "retro"
-          ]
-        },
-        {
-          "t": "Retro Wales 1994/95 away  S-XXL",
-          "h": "retro-wales-1994-95-away-jersey-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/0C6A3826-C7DA-724B-E36F-B3F06D17DE91.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/0C6A3826-C7DA-724B-E36F-B3F06D17DE91.jpg",
-          "p": "13.60",
-          "c": [
-            "retro"
-          ]
-        },
-        {
-          "t": "Austria 50th Years  S-XXL",
-          "h": "austria-50th-years-jersey-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/A6B32676-030C-E3AE-6C32-B36EF9D848A7.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/A6B32676-030C-E3AE-6C32-B36EF9D848A7.jpg",
-          "p": "12.80",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Romania Red",
-          "h": "romania-red-jersey",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/EF995502-BEFC-5241-7A4B-1B1954B8439C.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/EF995502-BEFC-5241-7A4B-1B1954B8439C.jpg",
-          "p": "9.60",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Retro Sweden 1994 Away White",
-          "h": "retro-sweden-1994-away-white",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/78B60B0E-0B88-8776-59C3-AA598689DDF0.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/78B60B0E-0B88-8776-59C3-AA598689DDF0.jpg",
-          "p": "12.80",
-          "c": [
-            "retro"
-          ]
-        },
-        {
-          "t": "Retro Sweden 1994 Home Yellow",
-          "h": "retro-sweden-1994-home-yellow",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/1D4DF949-87D7-6E10-F659-15EAEC5F602C.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/1D4DF949-87D7-6E10-F659-15EAEC5F602C.jpg",
-          "p": "12.80",
-          "c": [
-            "retro"
-          ]
-        },
-        {
-          "t": "Retro 2004 Greece Home  S-XXL",
-          "h": "retro-2004-greece-home-jersey-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/507222C1-4C18-A240-3AF5-57EF380422CA.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/507222C1-4C18-A240-3AF5-57EF380422CA.jpg",
-          "p": "13.60",
-          "c": [
-            "retro"
-          ]
-        },
-        {
-          "t": "Retro 2004 Greece Away  S-XXL",
-          "h": "retro-2004-greece-away-jersey-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/5252EDE2-04A2-C802-AFFF-40D992DC6B8A.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/5252EDE2-04A2-C802-AFFF-40D992DC6B8A.jpg",
-          "p": "13.60",
-          "c": [
-            "retro"
-          ]
-        },
-        {
-          "t": "Retro 1990 Yugoslavia Away  Size: S-XXL",
-          "h": "retro-1990-yugoslavia-away-jersey-size-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/655721DC-7EAE-2D61-15CC-2CAABB36AD0F.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/655721DC-7EAE-2D61-15CC-2CAABB36AD0F.jpg",
-          "p": "12.80",
-          "c": [
-            "retro"
-          ]
-        },
-        {
-          "t": "Retro 1998 Yugoslavia Home  Size: S-XXL",
-          "h": "retro-1998-yugoslavia-home-jersey-size-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/23B6E407-A5B2-DEE6-3725-D2432F368A07.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/23B6E407-A5B2-DEE6-3725-D2432F368A07.jpg",
-          "p": "12.80",
-          "c": [
-            "retro"
-          ]
-        },
-        {
-          "t": "Retro 2000 Yugoslavia Away  with patches Size: S-XXL",
-          "h": "retro-2000-yugoslavia-away-jersey-with-patches-size-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/422626E3-95B3-6A65-684B-39125A6D0A8B.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/422626E3-95B3-6A65-684B-39125A6D0A8B.jpg",
-          "p": "14.40",
-          "c": [
-            "retro"
-          ]
-        },
-        {
-          "t": "Romania 25/26 Home  S-XXL",
-          "h": "romania-25-26-home-jersey-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/189BCD8C-11E4-5C3A-38BD-A5C6DB17996F.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/189BCD8C-11E4-5C3A-38BD-A5C6DB17996F.jpg",
-          "p": "9.60",
-          "c": [
-            "fan"
-          ]
-        }
-      ],
-      "productCount": 77
-    },
     "nationalteams-europe__germany": {
       "name": "Deutschland",
       "slug": "germany",
@@ -34425,9 +32981,19 @@
           "c": [
             "player"
           ]
+        },
+        {
+          "t": "Germany windbreaker",
+          "h": "greece-windbreaker_d54278d1",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250809/83f9351463344e282308f87be0025021.png",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250809/83f9351463344e282308f87be0025021.png",
+          "p": "24.00",
+          "c": [
+            "windbreaker"
+          ]
         }
       ],
-      "productCount": 95
+      "productCount": 96
     },
     "nationalteams-europe__germany2026": {
       "name": "Deutschland WM 2026",
@@ -39564,9 +38130,19 @@
           "c": [
             "fan"
           ]
+        },
+        {
+          "t": "Retro Wales 1994/95 away  S-XXL",
+          "h": "retro-wales-1994-95-away-jersey-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/0C6A3826-C7DA-724B-E36F-B3F06D17DE91.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/0C6A3826-C7DA-724B-E36F-B3F06D17DE91.jpg",
+          "p": "13.60",
+          "c": [
+            "retro"
+          ]
         }
       ],
-      "productCount": 11
+      "productCount": 12
     },
     "nationalteams-europe__croatia": {
       "name": "Kroatien",
@@ -39613,9 +38189,99 @@
           "c": [
             "player"
           ]
+        },
+        {
+          "t": "2026 World Cup Croatia Away Jersey S-4XL Fan Version",
+          "h": "2026-world-cup-croatia-away-jersey",
+          "i": "https://img.wpassets-gamma.com/images/823772f068104f42c8fc9b6c59aba9a4.webp",
+          "hi": "https://img.wpassets-gamma.com/images/823772f068104f42c8fc9b6c59aba9a4.webp",
+          "p": "10.40",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "2026 World Cup Croatia Home Jersey S-4XL Fan Version",
+          "h": "2026-world-cup-croatia-home-jersey",
+          "i": "https://img.wpassets-gamma.com/images/70dafd51729bdae0ff1769d2cc474f9a.webp",
+          "hi": "https://img.wpassets-gamma.com/images/70dafd51729bdae0ff1769d2cc474f9a.webp",
+          "p": "10.40",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "Player Version 2026 World Cup Croatia Away Jersey S-XXL",
+          "h": "player-version-2026-world-cup-croatia-away-jersey-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251203/ffb1bcc18abf34892cb353642e010c2e.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251203/ffb1bcc18abf34892cb353642e010c2e.jpg",
+          "p": "12.80",
+          "c": [
+            "player"
+          ]
+        },
+        {
+          "t": "Player Version 2026 World Cup Croatia Home Jersey S-XXL",
+          "h": "player-version-2026-world-cup-croatia-home-jersey-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251203/9b367870329d48948d9fb6cdda99f381.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251203/9b367870329d48948d9fb6cdda99f381.jpg",
+          "p": "12.80",
+          "c": [
+            "player"
+          ]
+        },
+        {
+          "t": "Retro Croatia 2010 Away S-XXL",
+          "h": "retro-croatia-2010-away-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250816/1b551d426aeeb7fb1fa296768022f7bf.png",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250816/1b551d426aeeb7fb1fa296768022f7bf.png",
+          "p": "13.60",
+          "c": [
+            "retro"
+          ]
+        },
+        {
+          "t": "Croatia 2024 Home  S-4XL",
+          "h": "croatia-2024-home-jersey-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/65099773-AD95-ABDE-F2AA-EFCCB8A552BE.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/65099773-AD95-ABDE-F2AA-EFCCB8A552BE.jpg",
+          "p": "10.40",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "Croatia 2024 Away  S-XXL",
+          "h": "croatia-2024-away-jersey-s-4xl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/45117060-2683-D4C1-9656-8A2785E17971.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/45117060-2683-D4C1-9656-8A2785E17971.jpg",
+          "p": "10.40",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "Retro Croatia 1998 Away  S-XXL",
+          "h": "retro-croatia-1998-away-jersey-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/F7D3C312-2597-3D58-C825-6863D03250A0.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/F7D3C312-2597-3D58-C825-6863D03250A0.jpg",
+          "p": "13.60",
+          "c": [
+            "retro"
+          ]
+        },
+        {
+          "t": "Retro Croatia 1998 Home  S-XXL",
+          "h": "retro-croatia-1998-home-jersey-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/009F0DEC-C579-D98B-A64B-56E9C66E37CC.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/009F0DEC-C579-D98B-A64B-56E9C66E37CC.jpg",
+          "p": "13.60",
+          "c": [
+            "retro"
+          ]
         }
       ],
-      "productCount": 4
+      "productCount": 13
     },
     "nationalteams-europe__uk2026": {
       "name": "UK WM 2026",
@@ -44459,9 +43125,29 @@
           "c": [
             "fan"
           ]
+        },
+        {
+          "t": "2026 World Cup Tunisia Away Jersey S-XXL Fan Version",
+          "h": "2026-world-cup-tunisia-away-jersey-s-xxl-fan-version",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251202/feb55510396add556a2da3d4115ee155.png",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251202/feb55510396add556a2da3d4115ee155.png",
+          "p": "10.40",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "2026 World Cup Tunisia Home Jersey S-XXL Fan Version",
+          "h": "2026-world-cup-tunisia-home-jersey-s-xxl-fan-version",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251202/fcc0c508dc5f73046f3384ba62f7de18.png",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251202/fcc0c508dc5f73046f3384ba62f7de18.png",
+          "p": "10.40",
+          "c": [
+            "fan"
+          ]
         }
       ],
-      "productCount": 2
+      "productCount": 4
     },
     "nationalteams-world__southafrica": {
       "name": "Südafrika",
@@ -52081,6 +50767,1710 @@
         }
       ],
       "productCount": 7
+    },
+    "europa-andere__galatasaray": {
+      "name": "Galatasaray",
+      "slug": "galatasaray",
+      "league": "europa-andere",
+      "leagueName": "Europa Andere",
+      "products": [
+        {
+          "t": "Galatasaray S.K. 25/26 Third 5 stars with sponsor S-4XL",
+          "h": "galatasaray-s-k-25-26-third-5-stars-with-sponsor-s-4xl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251028/11ad6daa4e735bb92a7daa2a0f7f3e47.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251028/11ad6daa4e735bb92a7daa2a0f7f3e47.jpg",
+          "p": "11.20",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "Galatasaray 97/98 Home S-XXL",
+          "h": "galatasaray-97-98-home-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250927/9059a6cba360877b1452114b9074c0ca.png",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250927/9059a6cba360877b1452114b9074c0ca.png",
+          "p": "12.80",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "Galatasaray 10/11 Third  S-XXL",
+          "h": "galatasaray-10-11-third-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250821/937cf1bfdafa836ff4885ca9fe3ee025.png",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250821/937cf1bfdafa836ff4885ca9fe3ee025.png",
+          "p": "12.80",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "Galatasaray 99/00 Third S-XXL",
+          "h": "galatasaray-99-00-third",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250809/c9625e923be5076b0827dd699ebc8930.png",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250809/c9625e923be5076b0827dd699ebc8930.png",
+          "p": "12.80",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "Galatasaray 96/97 Home S-XXL",
+          "h": "galatasaray-96-97-home-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250809/115b99196bab99dc1206f672938c619d.png",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250809/115b99196bab99dc1206f672938c619d.png",
+          "p": "12.80",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "Galatasaray 99/00 Away Long Sleeves S-XXL",
+          "h": "galatasaray-99-00-away-long-sleeves-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250809/365a817c78fab6587f80c7e7f4cb524b.png",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250809/365a817c78fab6587f80c7e7f4cb524b.png",
+          "p": "14.40",
+          "c": [
+            "longsleeve"
+          ]
+        },
+        {
+          "t": "Galatasaray 99/00 Away S-XXL",
+          "h": "galatasaray-99-00-away-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250809/9c1aa56b3def309bb318de972db66295.png",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250809/9c1aa56b3def309bb318de972db66295.png",
+          "p": "12.80",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "Galatasaray 10/11 Away  S-XXL",
+          "h": "galatasaray-10-11-away-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250802/51bc368eca1e532dc6c2ebc03d1e1ecc.png",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250802/51bc368eca1e532dc6c2ebc03d1e1ecc.png",
+          "p": "12.80",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "Galatasaray S.K. 25/26 Away 5 stars with sponsor S-4XL",
+          "h": "galatasaray-s-k-25-26-away-5-stars-with-sponsor-s-4xl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250718/7ece1832937ade1325f619cb3b0df422.png",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250718/7ece1832937ade1325f619cb3b0df422.png",
+          "p": "11.20",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "Galatasaray S.K. 25/26 Home 5 stars with sponsor S-4XL",
+          "h": "galatasaray-s-k-25-26-home-5-stars-with-sponsor-s-4xl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250718/953ced9ea1b43818adc0fcda3c3c02d2.png",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250718/953ced9ea1b43818adc0fcda3c3c02d2.png",
+          "p": "11.20",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "Player Version Galatasarays 2025/26 Black Special Edition  S-XXL",
+          "h": "player-version-galatasarays-2025-26-black-special-edition-jersey-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250509/C99B8C06-689F-3EBA-C42A-8981B2EF963F.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250509/C99B8C06-689F-3EBA-C42A-8981B2EF963F.jpg",
+          "p": "13.60",
+          "c": [
+            "player"
+          ]
+        },
+        {
+          "t": "Galatasarays 2025/26 Black Special Edition  S-XXL",
+          "h": "galatasarays-2025-26-black-special-edition-jersey-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250509/441FF4A0-712B-21FB-3D10-297BD5F9348E.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250509/441FF4A0-712B-21FB-3D10-297BD5F9348E.jpg",
+          "p": "9.60",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "Galatasaray S.K. 25/26 Special Kits 16-XXL",
+          "h": "galatasaray-s-k-25-26-special-kits-16-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250521/99ca5c0720f1b9fb8870af0836b9b8b3.png",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250521/99ca5c0720f1b9fb8870af0836b9b8b3.png",
+          "p": "18.40",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "Galatasaray S.K. 25/26 Special Kit S-XXL",
+          "h": "galatasaray-s-k-25-26-special-kit-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250509/7C5EFB99-0516-5240-EF84-457B2A4B956B.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250509/7C5EFB99-0516-5240-EF84-457B2A4B956B.jpg",
+          "p": "10.40",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "Galatasaray 98/99 Home  S-XXL",
+          "h": "galatasaray-98-99-home-jersey-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250509/09D9AA1B-7469-73FB-DFF9-190F4AEBF4D9.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250509/09D9AA1B-7469-73FB-DFF9-190F4AEBF4D9.jpg",
+          "p": "12.80",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "Galatasaray 98/99 Third  S-XXL",
+          "h": "galatasaray-98-99-third-jersey-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250509/0F8A8D86-CC23-D0A9-06BC-CC3CFB9B179F.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250509/0F8A8D86-CC23-D0A9-06BC-CC3CFB9B179F.jpg",
+          "p": "12.80",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "Galatasaray 99/00 Home  Long Sleeves S-XXL",
+          "h": "galatasaray-99-00-home-jersey-long-sleeves-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250509/F53A860E-9F38-5482-9226-6D1F27629111.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250509/F53A860E-9F38-5482-9226-6D1F27629111.jpg",
+          "p": "14.40",
+          "c": [
+            "longsleeve"
+          ]
+        },
+        {
+          "t": "Galatasaray 99/00 Home  S-XXL",
+          "h": "galatasaray-99-00-home-jersey-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250509/9024FACF-D815-9C39-3D51-3C5291EEDBA2.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250509/9024FACF-D815-9C39-3D51-3C5291EEDBA2.jpg",
+          "p": "12.80",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "Galatasaray 13/14 Home  S-XXL",
+          "h": "galatasaray-13-14-home-jersey-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250509/FA56BD2E-61A0-EE23-B6AA-CC21ECD7637B.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250509/FA56BD2E-61A0-EE23-B6AA-CC21ECD7637B.jpg",
+          "p": "12.80",
+          "c": [
+            "fan"
+          ]
+        }
+      ],
+      "productCount": 19
+    },
+    "europa-andere__fenerbahce": {
+      "name": "Fenerbahçe",
+      "slug": "fenerbahce",
+      "league": "europa-andere",
+      "leagueName": "Europa Andere",
+      "products": [
+        {
+          "t": "Fenerbah&ccedil;e 25/26 Third S-XXL",
+          "h": "fenerbahçe-25-26-third-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250720/360e7bb3497b4921c3b507cdfce53a48.png",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250720/360e7bb3497b4921c3b507cdfce53a48.png",
+          "p": "9.60",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "Fenerbah&ccedil;e 25/26 Away S-XXL",
+          "h": "fenerbahçe-25-26-home-s-xxl_9dea4e2d",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250720/37c647b7fc688f927e38a9aeb892c3c2.png",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250720/37c647b7fc688f927e38a9aeb892c3c2.png",
+          "p": "9.60",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "Fenerbah&ccedil;e 25/26 Home S-XXL",
+          "h": "fenerbahçe-25-26-home-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250716/8539d99359d23948a9557305216088d3.png",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250716/8539d99359d23948a9557305216088d3.png",
+          "p": "9.60",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "Retro Fenerbah&ccedil;e 07/08 Away S-XXL",
+          "h": "retro-fenerbahçe-07-08-away-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250716/bb5657f54469dded8997b2324ef29c57.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250716/bb5657f54469dded8997b2324ef29c57.jpg",
+          "p": "12.80",
+          "c": [
+            "retro"
+          ]
+        },
+        {
+          "t": "Retro Fenerbah&ccedil;e 08/09 Home S-XXL",
+          "h": "retro-fenerbahçe-08-09-home-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250716/9c8a939777ac58892d286eeb591cd200.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250716/9c8a939777ac58892d286eeb591cd200.jpg",
+          "p": "12.80",
+          "c": [
+            "retro"
+          ]
+        },
+        {
+          "t": "Retro Fenerbah&ccedil;e 07/08 Home S-XXL",
+          "h": "retro-fenerbahçe-07-08-home-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250716/dd55ab2afb73bd72b0a8eda1ca7c923c.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250716/dd55ab2afb73bd72b0a8eda1ca7c923c.jpg",
+          "p": "12.80",
+          "c": [
+            "retro"
+          ]
+        }
+      ],
+      "productCount": 6
+    },
+    "europa-andere__besiktas": {
+      "name": "Beşiktaş JK",
+      "slug": "besiktas",
+      "league": "europa-andere",
+      "leagueName": "Europa Andere",
+      "products": [
+        {
+          "t": "BJK 96/97 Away Jersey S-XXL",
+          "h": "bjk-96-97-away-jersey-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260124/48b817a1b8ca9ad90b50bf70abd33148.webp",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260124/48b817a1b8ca9ad90b50bf70abd33148.webp",
+          "p": "13.60",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "BJK 96/97 Home Jersey S-XXL",
+          "h": "bjk-96-97-home-jersey-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260124/4895ed6e4f060d83bbde2f11d664fe51.webp",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260124/4895ed6e4f060d83bbde2f11d664fe51.webp",
+          "p": "13.60",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "BJK 25/26 Away Jersey S-XXL",
+          "h": "bjk-25-26-away-jersey-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251217/e24b6438a7d1d84233d19db551ad3701.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251217/e24b6438a7d1d84233d19db551ad3701.jpg",
+          "p": "11.20",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "BJK 25/26 Home Jersey S-XXL",
+          "h": "bjk-25-26-home-jersey-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251217/c8e6be82723af2ae5de177ac05b32d26.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251217/c8e6be82723af2ae5de177ac05b32d26.jpg",
+          "p": "11.20",
+          "c": [
+            "fan"
+          ]
+        }
+      ],
+      "productCount": 4
+    },
+    "europa-andere__trabzonspor": {
+      "name": "Trabzonspor",
+      "slug": "trabzonspor",
+      "league": "europa-andere",
+      "leagueName": "Europa Andere",
+      "products": [
+        {
+          "t": "Retro Trabzonspor 10/11 Home Jersey S-XXL",
+          "h": "retro-trabzonspor-10-11-home-jersey-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251103/dc23d92f9d73fcd2b74d9f89a2777a43.webp",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251103/dc23d92f9d73fcd2b74d9f89a2777a43.webp",
+          "p": "13.60",
+          "c": [
+            "retro"
+          ]
+        }
+      ],
+      "productCount": 1
+    },
+    "europa-andere__olympiacos": {
+      "name": "Olympiacos",
+      "slug": "olympiacos",
+      "league": "europa-andere",
+      "leagueName": "Europa Andere",
+      "products": [
+        {
+          "t": "Olympiacos 100-Year Jersey S-XXL",
+          "h": "olympiacos-100-year-jersey-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251111/06cb15bac3147d024291d7850c3a7ba0.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251111/06cb15bac3147d024291d7850c3a7ba0.jpg",
+          "p": "9.60",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "Olympiacos 25/26 Third Jersey S-XXL",
+          "h": "olympiacos-25-26-third-jersey-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251111/ea662d4427145de2c72c8b0f112beebe.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251111/ea662d4427145de2c72c8b0f112beebe.jpg",
+          "p": "9.60",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "Retro Olympiacos 01/02 Home S-XXL",
+          "h": "retro-olympiacos-01-02-home-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250927/a1a3fcd01f21e709279ff0332adcc08b.png",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250927/a1a3fcd01f21e709279ff0332adcc08b.png",
+          "p": "12.80",
+          "c": [
+            "retro"
+          ]
+        },
+        {
+          "t": "Retro Olympiacos 02/03 Home S-XXL",
+          "h": "retro-olympiacos-02-03-home-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250927/75bf67b051506398b74d117abf6d1a87.png",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250927/75bf67b051506398b74d117abf6d1a87.png",
+          "p": "12.80",
+          "c": [
+            "retro"
+          ]
+        },
+        {
+          "t": "Olympiacos 25/26 Third S-4XL",
+          "h": "olympiacos-25-26-away-s-4xl_e3593471",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250906/8352a4665b29243b022814cb6ae559a1.png",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250906/8352a4665b29243b022814cb6ae559a1.png",
+          "p": "10.40",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "Olympiacos 25/26 Away S-4XL",
+          "h": "olympiacos-25-26-away-s-4xl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250906/0fb83ff7e3072ceafd10dd6d5c7d6334.png",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250906/0fb83ff7e3072ceafd10dd6d5c7d6334.png",
+          "p": "10.40",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "Olympiacos 25/26 Home S-4XL",
+          "h": "olympiacos-25-26-home-s-4xl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250906/0bbdc103a5fe98760fa6d540b0de4429.png",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250906/0bbdc103a5fe98760fa6d540b0de4429.png",
+          "p": "10.40",
+          "c": [
+            "fan"
+          ]
+        }
+      ],
+      "productCount": 7
+    },
+    "europa-andere__panathinaikos": {
+      "name": "Panathinaikos",
+      "slug": "panathinaikos",
+      "league": "europa-andere",
+      "leagueName": "Europa Andere",
+      "products": [
+        {
+          "t": "Retro Panathinaikos F.C. 95/96 Home Jersey S-XXL",
+          "h": "retro-panathinaikos-f-c-95-96-home-jersey-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251104/fbea3db4b25e4364cb3bf709d479dd6b.png",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251104/fbea3db4b25e4364cb3bf709d479dd6b.png",
+          "p": "12.80",
+          "c": [
+            "retro"
+          ]
+        },
+        {
+          "t": "Retro Panathinaikos F.C. 99/00 Home Jersey S-XXL",
+          "h": "retro-panathinaikos-f-c-99-00-home-jersey-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251104/f455a1747f430a500d89174e90cf1104.png",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251104/f455a1747f430a500d89174e90cf1104.png",
+          "p": "12.80",
+          "c": [
+            "retro"
+          ]
+        },
+        {
+          "t": "Retro Panathinaikos F.C. 95/96 Away Jersey S-XXL",
+          "h": "retro-panathinaikos-f-c-95-96-away-jersey-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251104/515530b651b07f24659b5cd8e2eca7aa.png",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251104/515530b651b07f24659b5cd8e2eca7aa.png",
+          "p": "12.80",
+          "c": [
+            "retro"
+          ]
+        },
+        {
+          "t": "Retro Panathinaikos F.C. 00/01 Home Jersey S-XXL",
+          "h": "retro-panathinaikos-f-c-00-01-home-jersey-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251104/c22feb7db4c0aee03b4115e6baa6e4a0.png",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251104/c22feb7db4c0aee03b4115e6baa6e4a0.png",
+          "p": "12.80",
+          "c": [
+            "retro"
+          ]
+        },
+        {
+          "t": "Panathinaikos F.C. 25/26 Away S-XXL Fan Version",
+          "h": "panathinaikos-f-c-25-26-away-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251103/88b57b49f9edd8b0cdba7db68bbda0e7.png",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251103/88b57b49f9edd8b0cdba7db68bbda0e7.png",
+          "p": "10.40",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "Panathinaikos F.C. 25/26 Home S-XXL Fan Version",
+          "h": "panathinaikos-f-c-25-26-home-s-xxl-fan-version",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251103/cada28526de993b225773a6201fad1ab.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251103/cada28526de993b225773a6201fad1ab.jpg",
+          "p": "10.40",
+          "c": [
+            "fan"
+          ]
+        }
+      ],
+      "productCount": 6
+    },
+    "europa-andere__aek-athens": {
+      "name": "AEK Athens",
+      "slug": "aek-athens",
+      "league": "europa-andere",
+      "leagueName": "Europa Andere",
+      "products": [
+        {
+          "t": "&Alpha;.&Epsilon;.&Kappa;. 25/26 Third S-XXL",
+          "h": "Α-Ε-Κ-25-26-third-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250828/5b9338c38eb8c3543ba97b7426efbde6.png",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250828/5b9338c38eb8c3543ba97b7426efbde6.png",
+          "p": "10.40",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "&Alpha;.&Epsilon;.&Kappa;. 25/26 Home S-4XL",
+          "h": "Α-Ε-Κ-25-26-home-s-4xl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250828/c418ca35a51354740108da66c9142a67.png",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250828/c418ca35a51354740108da66c9142a67.png",
+          "p": "10.40",
+          "c": [
+            "fan"
+          ]
+        }
+      ],
+      "productCount": 2
+    },
+    "europa-andere__rb-salzburg": {
+      "name": "Red Bull Salzburg",
+      "slug": "rb-salzburg",
+      "league": "europa-andere",
+      "leagueName": "Europa Andere",
+      "products": [
+        {
+          "t": "Red Bull Salzburg 25/26 Home Jersey S-XXL",
+          "h": "red-bull-salzburg-25-26-home-jersey-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260129/a132d37d0ce43e6fdb80d261dd2b490c.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260129/a132d37d0ce43e6fdb80d261dd2b490c.jpg",
+          "p": "10.40",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "Red Bull Salzburg 25/26 Away Jersey S-XXL",
+          "h": "red-bull-salzburg-25-26-away-jersey-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260129/926913a71c1308982deb26e132e7e51b.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260129/926913a71c1308982deb26e132e7e51b.jpg",
+          "p": "10.40",
+          "c": [
+            "fan"
+          ]
+        }
+      ],
+      "productCount": 2
+    },
+    "europa-andere__sturm-graz": {
+      "name": "Sturm Graz",
+      "slug": "sturm-graz",
+      "league": "europa-andere",
+      "leagueName": "Europa Andere",
+      "products": [
+        {
+          "t": "25-26 Sturm Graz Stop Violence Against Women Special Version Jersey",
+          "h": "sturm-graz-stop-violence-against-women",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260203/355e0ef3ee138c6cfa11a6b23b732097.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260203/355e0ef3ee138c6cfa11a6b23b732097.jpg",
+          "p": "10.40",
+          "c": [
+            "female"
+          ]
+        }
+      ],
+      "productCount": 1
+    },
+    "europa-andere__bohemian": {
+      "name": "Bohemian FC",
+      "slug": "bohemian",
+      "league": "europa-andere",
+      "leagueName": "Europa Andere",
+      "products": [
+        {
+          "t": "Bohemian 26/27 White Jersey S-XXL",
+          "h": "bohemian-26-27-white-jersey-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260105/f7d95f4ad5203a8a063398426a9d36c3.png",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260105/f7d95f4ad5203a8a063398426a9d36c3.png",
+          "p": "10.40",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "Bohemian 25/26 White Jersey S-XXL",
+          "h": "bohemian-25-26-white-jersey-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251224/0e9bd800e68ae359d596153f84463b6e.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251224/0e9bd800e68ae359d596153f84463b6e.jpg",
+          "p": "10.40",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "Bohemian 25/26 Away",
+          "h": "bohemian-25-26-away",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250828/ad161502041772acab85c54eede6f628.webp",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250828/ad161502041772acab85c54eede6f628.webp",
+          "p": "10.40",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "ADULT Bohemian FC x Oasis 2025 Cup Jersey",
+          "h": "adult-bohemian-fc-x-oasis-2025-cup-jersey",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250813/c9a2c5fef7da8078592a737ef5b37bd6.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250813/c9a2c5fef7da8078592a737ef5b37bd6.jpg",
+          "p": "10.40",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "Bohemian 25/26 Home",
+          "h": "bohemian-25-26-third_88fd0feb",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250724/6b3a0dc2a65fe3e2ba35da5b3877637d.png",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250724/6b3a0dc2a65fe3e2ba35da5b3877637d.png",
+          "p": "10.40",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "Bohemian 25/26 Third",
+          "h": "bohemian-25-26-third",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250724/09063a132beb41584922d20151d09557.png",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250724/09063a132beb41584922d20151d09557.png",
+          "p": "10.40",
+          "c": [
+            "fan"
+          ]
+        }
+      ],
+      "productCount": 6
+    },
+    "europa-andere__cork-city": {
+      "name": "Cork City",
+      "slug": "cork-city",
+      "league": "europa-andere",
+      "leagueName": "Europa Andere",
+      "products": [
+        {
+          "t": "Retro Cort City 1988-89 Home Jersey S-XXL",
+          "h": "retro-cort-city-1988-89-home-jersey-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260129/37ef31884f1606cc448ea9d1b21be94c.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260129/37ef31884f1606cc448ea9d1b21be94c.jpg",
+          "p": "13.60",
+          "c": [
+            "retro"
+          ]
+        }
+      ],
+      "productCount": 1
+    },
+    "europa-andere__hajduk-split": {
+      "name": "Hajduk Split",
+      "slug": "hajduk-split",
+      "league": "europa-andere",
+      "leagueName": "Europa Andere",
+      "products": [
+        {
+          "t": "Hajduk Split 25/26  Home Jersey S-XXL",
+          "h": "hajduk-split-25-26-home-jersey-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251202/ff4b70f20543102b2fea540a627bf1a2.png",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251202/ff4b70f20543102b2fea540a627bf1a2.png",
+          "p": "10.40",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "Hajduk Split 25/26  Away Jersey S-XXL",
+          "h": "hajduk-split-25-26-away-jersey-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251202/5b1df13af5548f04ae1dccb583f90dcc.png",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251202/5b1df13af5548f04ae1dccb583f90dcc.png",
+          "p": "10.40",
+          "c": [
+            "fan"
+          ]
+        }
+      ],
+      "productCount": 2
+    },
+    "europa-andere__dinamo-zagreb": {
+      "name": "Dinamo Zagreb",
+      "slug": "dinamo-zagreb",
+      "league": "europa-andere",
+      "leagueName": "Europa Andere",
+      "products": [
+        {
+          "t": "Dinamo Zagreb 25/26 Home S-4XL",
+          "h": "dinamo-zagreb-25-26-home-s-4xl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250719/db9107dec070c70f4ceb056aca1a6a9a.png",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250719/db9107dec070c70f4ceb056aca1a6a9a.png",
+          "p": "10.40",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "Dinamo Zagreb 25/26 Away S-4XL",
+          "h": "dinamo-zagreb-25-26-away-s-4xl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250719/7b092380236958e12c27e1d843e644c1.png",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250719/7b092380236958e12c27e1d843e644c1.png",
+          "p": "10.40",
+          "c": [
+            "fan"
+          ]
+        }
+      ],
+      "productCount": 2
+    },
+    "europa-andere__steaua": {
+      "name": "FCSB / Steaua București",
+      "slug": "steaua",
+      "league": "europa-andere",
+      "leagueName": "Europa Andere",
+      "products": [
+        {
+          "t": "FCSB 25/26 Third S-XXL",
+          "h": "fcsb-25-26-third-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250718/345d09587a6ff437d3bd475003cbd658.webp",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250718/345d09587a6ff437d3bd475003cbd658.webp",
+          "p": "10.40",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "Steaua Bucureşti 24/25 Third S-XXL",
+          "h": "steaua-bucureşti-24-25-third-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250628/5e729d394401315639dbc5cf62c4dc5a.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250628/5e729d394401315639dbc5cf62c4dc5a.jpg",
+          "p": "10.40",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "Steaua Bucureşti 24/25 Away S-XXL",
+          "h": "steaua-bucureşti-24-25-away-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250628/db610ac28e32caf08a4d773546c93e92.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250628/db610ac28e32caf08a4d773546c93e92.jpg",
+          "p": "10.40",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "Steaua Bucureşti 24/25 Home S-XXL",
+          "h": "steaua-bucureşti-24-25-home-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250628/fcd21d0b0019989e26c52ef4b1a64dc0.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250628/fcd21d0b0019989e26c52ef4b1a64dc0.jpg",
+          "p": "10.40",
+          "c": [
+            "fan"
+          ]
+        }
+      ],
+      "productCount": 4
+    },
+    "europa-andere__dinamo-bucuresti": {
+      "name": "Dinamo București",
+      "slug": "dinamo-bucuresti",
+      "league": "europa-andere",
+      "leagueName": "Europa Andere",
+      "products": [
+        {
+          "t": "FC Dinamo București 25/26 Home  S-XXL Fan Version",
+          "h": "fc-dinamo-bucurești-25-26-home-s-xxl-fan-version",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251103/f34c3ab4c7e1611b70367d1eeca7e259.png",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251103/f34c3ab4c7e1611b70367d1eeca7e259.png",
+          "p": "10.40",
+          "c": [
+            "fan"
+          ]
+        }
+      ],
+      "productCount": 1
+    },
+    "europa-andere__universitatea-craiova": {
+      "name": "Universitatea Craiova",
+      "slug": "universitatea-craiova",
+      "league": "europa-andere",
+      "leagueName": "Europa Andere",
+      "products": [
+        {
+          "t": "Universitatea Craiova 25/26 Jersey S-XXL Fan Version",
+          "h": "universitatea-craiova-25-26-jersey-s-xxl-fan-version",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260124/11247c88e9673964df549aebf4ba8da6.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260124/11247c88e9673964df549aebf4ba8da6.jpg",
+          "p": "10.40",
+          "c": [
+            "fan"
+          ]
+        }
+      ],
+      "productCount": 1
+    },
+    "europa-andere__aik": {
+      "name": "AIK",
+      "slug": "aik",
+      "league": "europa-andere",
+      "leagueName": "Europa Andere",
+      "products": [
+        {
+          "t": "Allm&auml;nna Idrottsklubben 25/26 Black  S-XXL",
+          "h": "allmänna-idrottsklubben-25-26-black-jersey-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250508/e2bdb8a3291f06a6c11c109ead9e0576.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250508/e2bdb8a3291f06a6c11c109ead9e0576.jpg",
+          "p": "9.60",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "Allm&auml;nna Idrottsklubben 132nd Anniversary Edition S-XXL",
+          "h": "allmänna-idrottsklubben-132nd-anniversary-edition-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20240104/CF0DD512-92EF-5FEE-76C1-D40DBDE1FD8D.jpeg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20240104/CF0DD512-92EF-5FEE-76C1-D40DBDE1FD8D.jpeg",
+          "p": "11.20",
+          "c": [
+            "fan"
+          ]
+        }
+      ],
+      "productCount": 2
+    },
+    "europa-andere__fc-copenhagen": {
+      "name": "FC Copenhagen",
+      "slug": "fc-copenhagen",
+      "league": "europa-andere",
+      "leagueName": "Europa Andere",
+      "products": [
+        {
+          "t": "Copenhagen 25/26 Black Jersey S-XXL",
+          "h": "copenhagen-25-26-black-jersey-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260129/54cd43c5c062b85b7c17b7104e5c03b9.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260129/54cd43c5c062b85b7c17b7104e5c03b9.jpg",
+          "p": "10.40",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "Copenhagen 25/26 White Jersey S-XXL",
+          "h": "copenhagen-25-26-white-jersey-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260129/e508d1d14c64903a22807690022209f4.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260129/e508d1d14c64903a22807690022209f4.jpg",
+          "p": "10.40",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "Copenhagen CHAMPIONS 2025 S-XXL",
+          "h": "copenhagen-champions-2025-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250615/b323f9d3ba8e31a2f33444a46e187dea.png",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250615/b323f9d3ba8e31a2f33444a46e187dea.png",
+          "p": "10.40",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "Copenhagen 25/26 GK Jersey S-XXL",
+          "h": "copenhagen-25-26-gk-jersey-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250615/7e13ec234a571941c3662ca1f9c54369.png",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250615/7e13ec234a571941c3662ca1f9c54369.png",
+          "p": "10.40",
+          "c": [
+            "fan"
+          ]
+        }
+      ],
+      "productCount": 4
+    },
+    "europa-andere__club-brugge": {
+      "name": "Club Brugge KV",
+      "slug": "club-brugge",
+      "league": "europa-andere",
+      "leagueName": "Europa Andere",
+      "products": [
+        {
+          "t": "Brugge KV 25/26 Home S-XXL",
+          "h": "brugge-kv-25-26-home-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250929/966f8b9817a5c6cd6021c5166c6ea13a.png",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250929/966f8b9817a5c6cd6021c5166c6ea13a.png",
+          "p": "11.20",
+          "c": [
+            "fan"
+          ]
+        }
+      ],
+      "productCount": 1
+    },
+    "europa-andere__fc-basel": {
+      "name": "FC Basel",
+      "slug": "fc-basel",
+      "league": "europa-andere",
+      "leagueName": "Europa Andere",
+      "products": [
+        {
+          "t": "Basel 2024-25 Carnival Long sleeves S-XXL",
+          "h": "basel-2024-25-carnival-long-sleeves-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250529/6ee876dbc99264a268e06d109071ab6e.jpeg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250529/6ee876dbc99264a268e06d109071ab6e.jpeg",
+          "p": "13.60",
+          "c": [
+            "longsleeve"
+          ]
+        }
+      ],
+      "productCount": 1
+    },
+    "nationalteams-europe__norway": {
+      "name": "Norwegen",
+      "slug": "norway",
+      "league": "nationalteams-europe",
+      "leagueName": "Nationalteams Europa",
+      "products": [
+        {
+          "t": "Retro 1994/95 Norway  Home Jersey S-XXL",
+          "h": "1994-95-norway-home-jersey",
+          "i": "https://img.wpassets-gamma.com/images/02af5d3a07706b5dc40903dcabd473df.jpg",
+          "hi": "https://img.wpassets-gamma.com/images/02af5d3a07706b5dc40903dcabd473df.jpg",
+          "p": "12.80",
+          "c": [
+            "retro"
+          ]
+        },
+        {
+          "t": "Player Version Norway 2025 Home (Women&#039;s Team)",
+          "h": "player-version-norway-2025-home-women-s-team",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250727/3a4b8f30ecbf339108d56ca1716e20c2.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250727/3a4b8f30ecbf339108d56ca1716e20c2.jpg",
+          "p": "12.80",
+          "c": [
+            "player",
+            "female"
+          ]
+        },
+        {
+          "t": "Player Version Norway 2024/25 Home S-4XL",
+          "h": "player-version-norway-2024-25-home-s-4xl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/23D0DAB9-52CB-33BA-86A3-D9476A6070C6.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/23D0DAB9-52CB-33BA-86A3-D9476A6070C6.jpg",
+          "p": "13.60",
+          "c": [
+            "player"
+          ]
+        },
+        {
+          "t": "Player Version Norway 2024/25 Away S-4XL",
+          "h": "player-version-norway-2024-25-away-s-4xl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/4BB25043-828D-643C-D825-58A11EF556F2.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/4BB25043-828D-643C-D825-58A11EF556F2.jpg",
+          "p": "13.60",
+          "c": [
+            "player"
+          ]
+        },
+        {
+          "t": "Norway 2024/25 Home  S-XXL",
+          "h": "norway-2024-25-home-jersey-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/0CD10622-8D24-C2A2-F7FF-9E15764D5562.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/0CD10622-8D24-C2A2-F7FF-9E15764D5562.jpg",
+          "p": "9.60",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "Retro 98/99 Norway  Size S-XXL",
+          "h": "98-99-norway-jersey",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20240104/5BFC6F07-14D3-3705-3A56-9E295AEBCA4F.jpeg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20240104/5BFC6F07-14D3-3705-3A56-9E295AEBCA4F.jpeg",
+          "p": "12.80",
+          "c": [
+            "retro"
+          ]
+        }
+      ],
+      "productCount": 6
+    },
+    "nationalteams-europe__ireland": {
+      "name": "Irland",
+      "slug": "ireland",
+      "league": "nationalteams-europe",
+      "leagueName": "Nationalteams Europa",
+      "products": [
+        {
+          "t": "Adults Ireland Replica Stealth Short Sleeve Jersey S-4XL",
+          "h": "adults-ireland-replica-stealth-short-sleeve-jersey",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260201/ed53971fa3157f7bf240a6c54329c580.png",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260201/ed53971fa3157f7bf240a6c54329c580.png",
+          "p": "9.60",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "Adults Ireland Away Replica Jersey 2026 S-4XL",
+          "h": "adults-ireland-away-replica-jersey-2026-s-4xl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260201/739a29510c556fb3b92497a4597c91bc.png",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260201/739a29510c556fb3b92497a4597c91bc.png",
+          "p": "9.60",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "Adults Ireland Home Replica Jersey 2026 S-4XL",
+          "h": "adults-ireland-home-replica-jersey-2026-s-4xl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260201/7df9bac87093c8ffcf0dd39b0a88234a.png",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260201/7df9bac87093c8ffcf0dd39b0a88234a.png",
+          "p": "9.60",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "Retro Ireland 1994 Home Jersey S-XXL",
+          "h": "retro-ireland-1994-home-jersey-s-xxl_1bbbf254",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251118/76a1d995b9e8f948570e1d83a9e4c006.png",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251118/76a1d995b9e8f948570e1d83a9e4c006.png",
+          "p": "13.60",
+          "c": [
+            "retro"
+          ]
+        },
+        {
+          "t": "Retro Ireland 1994 Away Jersey S-XXL",
+          "h": "retro-ireland-1994-away-jersey-s-xxl_7b7d8364",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251118/db263b6cd3ccf63b7dbe510026797a50.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251118/db263b6cd3ccf63b7dbe510026797a50.jpg",
+          "p": "13.60",
+          "c": [
+            "retro"
+          ]
+        },
+        {
+          "t": "Retro Ireland 1988/90 Home Jersey S-XXL",
+          "h": "retro-ireland-1988-home-jersey-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251118/02c2d2b92ef4a394ce487ed7a8547f94.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251118/02c2d2b92ef4a394ce487ed7a8547f94.jpg",
+          "p": "12.80",
+          "c": [
+            "retro"
+          ]
+        },
+        {
+          "t": "Retro Ireland 1990/92 Away Jersey S-XXL",
+          "h": "retro-ireland-1990-92-away-jersey-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251118/b6947e9e5429be989cf5fd6f536a97e9.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251118/b6947e9e5429be989cf5fd6f536a97e9.jpg",
+          "p": "12.80",
+          "c": [
+            "retro"
+          ]
+        },
+        {
+          "t": "Retro Ireland 1990/92 Home Jersey S-XXL",
+          "h": "ireland-1990-92-home-jersey",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251118/babd9633601179eec5b4b652582e15ab.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251118/babd9633601179eec5b4b652582e15ab.jpg",
+          "p": "12.80",
+          "c": [
+            "retro"
+          ]
+        },
+        {
+          "t": "Retro Ireland 1992/94 Away Jersey S-XXL",
+          "h": "ireland-1992-94-away-jersey",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251118/f6248c99abaf983a101f0fbfa1ee420b.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251118/f6248c99abaf983a101f0fbfa1ee420b.jpg",
+          "p": "12.80",
+          "c": [
+            "retro"
+          ]
+        },
+        {
+          "t": "Retro Ireland 1992/94 Home Jersey S-XXL",
+          "h": "retro-ireland-1992-home-jersey-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251118/b06ddc211ee991305f9e2fbb567c632f.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251118/b06ddc211ee991305f9e2fbb567c632f.jpg",
+          "p": "12.80",
+          "c": [
+            "retro"
+          ]
+        },
+        {
+          "t": "Retro Ireland 1994 Away Jersey S-XXL",
+          "h": "retro-ireland-1994-away-jersey-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251118/447943845abf35eb0eb0103ab9805409.png",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251118/447943845abf35eb0eb0103ab9805409.png",
+          "p": "12.80",
+          "c": [
+            "retro"
+          ]
+        },
+        {
+          "t": "Retro Ireland 1994 Home Jersey S-XXL",
+          "h": "retro-ireland-1994-home-jersey-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251118/b87ce2133a8ad0f48dd660f0ec8bfab3.png",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251118/b87ce2133a8ad0f48dd660f0ec8bfab3.png",
+          "p": "12.80",
+          "c": [
+            "retro"
+          ]
+        },
+        {
+          "t": "Retro Ireland 1997 Jersey Orange S-XXL",
+          "h": "retro-ireland-1997-jersey-orange-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251118/1136758c44b5f2f07e380a55a0fecf64.png",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251118/1136758c44b5f2f07e380a55a0fecf64.png",
+          "p": "12.80",
+          "c": [
+            "retro"
+          ]
+        }
+      ],
+      "productCount": 13
+    },
+    "nationalteams-europe__northern-ireland": {
+      "name": "Nordirland",
+      "slug": "northern-ireland",
+      "league": "nationalteams-europe",
+      "leagueName": "Nationalteams Europa",
+      "products": [
+        {
+          "t": "2026 Northern Ireland Away Jersey",
+          "h": "2026-northern-ireland-away-jersey",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260121/A4C6D6F1-E24F-F808-D523-7E7DB42A1BAA.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260121/A4C6D6F1-E24F-F808-D523-7E7DB42A1BAA.jpg",
+          "p": "9.60",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "2026 Northern Ireland Home Jersey S-4XL",
+          "h": "2026-northern-ireland-home-jersey-s-4xl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251115/927c4a52884c4ba6ffa3a958ed1a12b6.png",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251115/927c4a52884c4ba6ffa3a958ed1a12b6.png",
+          "p": "9.60",
+          "c": [
+            "fan"
+          ]
+        }
+      ],
+      "productCount": 2
+    },
+    "nationalteams-europe__switzerland": {
+      "name": "Schweiz",
+      "slug": "switzerland",
+      "league": "nationalteams-europe",
+      "leagueName": "Nationalteams Europa",
+      "products": [
+        {
+          "t": "Player Version 2026 World Cup Switzerland Away Jersey S-XXL",
+          "h": "player-version-2026-world-cup-switzerland-away-jersey-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260105/65aebdfdcc5e0ce84e974e8613664f96.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260105/65aebdfdcc5e0ce84e974e8613664f96.jpg",
+          "p": "13.60",
+          "c": [
+            "player"
+          ]
+        },
+        {
+          "t": "Player Version 2026 World Cup Switzerland Home Jersey S-XXL",
+          "h": "player-version-2026-world-cup-switzerland-home-jersey-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260105/7593c2958e54862d48eb8c0bc597a179.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260105/7593c2958e54862d48eb8c0bc597a179.jpg",
+          "p": "13.60",
+          "c": [
+            "player"
+          ]
+        },
+        {
+          "t": "2026 World Cup Switzerland Home Jersey S-4XL Fan Version",
+          "h": "2026-world-cup-switzerland-home-jersey-s-4xl-fan-version",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251104/b2359f51ed6692136c56e4c605cdf28d.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251104/b2359f51ed6692136c56e4c605cdf28d.jpg",
+          "p": "10.40",
+          "c": [
+            "fan"
+          ]
+        }
+      ],
+      "productCount": 3
+    },
+    "nationalteams-europe__czech-republic": {
+      "name": "Tschechien",
+      "slug": "czech-republic",
+      "league": "nationalteams-europe",
+      "leagueName": "Nationalteams Europa",
+      "products": [
+        {
+          "t": "Czech 26/27 Home kit S-XXL",
+          "h": "czech-26-27-home-kit-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260102/780f7b415f34724f9ba345c63dcce7c6.webp",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260102/780f7b415f34724f9ba345c63dcce7c6.webp",
+          "p": "9.60",
+          "c": [
+            "fan"
+          ]
+        }
+      ],
+      "productCount": 1
+    },
+    "nationalteams-europe__iceland": {
+      "name": "Island",
+      "slug": "iceland",
+      "league": "nationalteams-europe",
+      "leagueName": "Nationalteams Europa",
+      "products": [
+        {
+          "t": "Iceland 2025/26 Home Jersey S-XXL",
+          "h": "iceland-2025-26-home-jersey-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251209/792064363f75899a15f9d51704f99cb6.png",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251209/792064363f75899a15f9d51704f99cb6.png",
+          "p": "9.60",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "Retro Iceland 2016/17 Home S-XXL",
+          "h": "retro-iceland-2016-17-home-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/728E800C-84A7-496A-E20F-0163717DD9D0.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/728E800C-84A7-496A-E20F-0163717DD9D0.jpg",
+          "p": "12.80",
+          "c": [
+            "retro"
+          ]
+        }
+      ],
+      "productCount": 2
+    },
+    "nationalteams-europe__romania": {
+      "name": "Rumänien",
+      "slug": "romania",
+      "league": "nationalteams-europe",
+      "leagueName": "Nationalteams Europa",
+      "products": [
+        {
+          "t": "Retro Romania 2000 Home Jersey with Arm Patches S-XXL",
+          "h": "retro-romania-2000-home-jersey-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251202/fa55482ac702db10a3c43c10a58317bf.png",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251202/fa55482ac702db10a3c43c10a58317bf.png",
+          "p": "14.40",
+          "c": [
+            "retro"
+          ]
+        },
+        {
+          "t": "Romania 25/26 Third S-XXL",
+          "h": "romania-25-26-third-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250718/e3db6db518f8602493367784f2ca019d.webp",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250718/e3db6db518f8602493367784f2ca019d.webp",
+          "p": "9.60",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "Romania 25/26 Away S-XXL",
+          "h": "romania-25-26-away-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250718/ff68d47ea291ddb2387bc6b70e7f73cc.webp",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250718/ff68d47ea291ddb2387bc6b70e7f73cc.webp",
+          "p": "9.60",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "Retro Romania 1994 Home Jersey S-XXL",
+          "h": "retro-romania-1994-home-jersey-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/80B3C066-4553-F0D0-95F4-6B85CE476B6D.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/80B3C066-4553-F0D0-95F4-6B85CE476B6D.jpg",
+          "p": "12.80",
+          "c": [
+            "retro"
+          ]
+        },
+        {
+          "t": "Romania Red",
+          "h": "romania-red-jersey",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/EF995502-BEFC-5241-7A4B-1B1954B8439C.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/EF995502-BEFC-5241-7A4B-1B1954B8439C.jpg",
+          "p": "9.60",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "Romania 25/26 Home  S-XXL",
+          "h": "romania-25-26-home-jersey-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/189BCD8C-11E4-5C3A-38BD-A5C6DB17996F.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/189BCD8C-11E4-5C3A-38BD-A5C6DB17996F.jpg",
+          "p": "9.60",
+          "c": [
+            "fan"
+          ]
+        }
+      ],
+      "productCount": 6
+    },
+    "nationalteams-europe__austria": {
+      "name": "Österreich",
+      "slug": "austria",
+      "league": "nationalteams-europe",
+      "leagueName": "Nationalteams Europa",
+      "products": [
+        {
+          "t": "2026 World Cup Austria Home Jersey S-XXL Fan Version",
+          "h": "2026-austria-home-jersey-s-xxl-fan-version",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251202/bb15950ce2f0210bfa93e679da5286f6.png",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251202/bb15950ce2f0210bfa93e679da5286f6.png",
+          "p": "10.40",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "Austria 50th Years  S-XXL",
+          "h": "austria-50th-years-jersey-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/A6B32676-030C-E3AE-6C32-B36EF9D848A7.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/A6B32676-030C-E3AE-6C32-B36EF9D848A7.jpg",
+          "p": "12.80",
+          "c": [
+            "fan"
+          ]
+        }
+      ],
+      "productCount": 2
+    },
+    "nationalteams-europe__poland": {
+      "name": "Polen",
+      "slug": "poland",
+      "league": "nationalteams-europe",
+      "leagueName": "Nationalteams Europa",
+      "products": [
+        {
+          "t": "Retro Polan 1997 Home Jersey S-XXL",
+          "h": "retro-polan-1997-home-jersey-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251122/d7453435f77cff29e0a6a423eb78324f.png",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251122/d7453435f77cff29e0a6a423eb78324f.png",
+          "p": "12.80",
+          "c": [
+            "retro"
+          ]
+        },
+        {
+          "t": "Retro Polan 1982 Home S-XXL",
+          "h": "retro-polan-1982-home-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/5CD76828-C1E6-65C6-418D-D53338AD46CF.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/5CD76828-C1E6-65C6-418D-D53338AD46CF.jpg",
+          "p": "12.80",
+          "c": [
+            "retro"
+          ]
+        },
+        {
+          "t": "Retro Polan 2012 Home S-XXL",
+          "h": "retro-polan-2012-home-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/F714222E-1BBF-C715-A8D8-FFE8D1C5D7EE.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/F714222E-1BBF-C715-A8D8-FFE8D1C5D7EE.jpg",
+          "p": "12.80",
+          "c": [
+            "retro"
+          ]
+        }
+      ],
+      "productCount": 3
+    },
+    "nationalteams-europe__sweden": {
+      "name": "Schweden",
+      "slug": "sweden",
+      "league": "nationalteams-europe",
+      "leagueName": "Nationalteams Europa",
+      "products": [
+        {
+          "t": "2026 World Cup Sweden Home Jersey S-4XL Fan Version",
+          "h": "2026-world-cup-sweden-home-jersey-s-4xl-fan-version",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251121/6c78a571edc0d8cbd6abe9caab442e51.png",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251121/6c78a571edc0d8cbd6abe9caab442e51.png",
+          "p": "10.40",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "Retro Sweden 1994 Away White",
+          "h": "retro-sweden-1994-away-white",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/78B60B0E-0B88-8776-59C3-AA598689DDF0.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/78B60B0E-0B88-8776-59C3-AA598689DDF0.jpg",
+          "p": "12.80",
+          "c": [
+            "retro"
+          ]
+        },
+        {
+          "t": "Retro Sweden 1994 Home Yellow",
+          "h": "retro-sweden-1994-home-yellow",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/1D4DF949-87D7-6E10-F659-15EAEC5F602C.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/1D4DF949-87D7-6E10-F659-15EAEC5F602C.jpg",
+          "p": "12.80",
+          "c": [
+            "retro"
+          ]
+        }
+      ],
+      "productCount": 3
+    },
+    "nationalteams-europe__greece": {
+      "name": "Griechenland",
+      "slug": "greece",
+      "league": "nationalteams-europe",
+      "leagueName": "Nationalteams Europa",
+      "products": [
+        {
+          "t": "Greece 2026 Home Jersey S-4XL",
+          "h": "greece-2026-home-jersey-s-4xl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251115/dd6d7206f27cc85942998f365b252735.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251115/dd6d7206f27cc85942998f365b252735.jpg",
+          "p": "10.40",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "Greece windbreaker",
+          "h": "greece-windbreaker",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250809/5d2cf7ec55327e2fec28d4145ae0a7f4.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250809/5d2cf7ec55327e2fec28d4145ae0a7f4.jpg",
+          "p": "24.00",
+          "c": [
+            "windbreaker"
+          ]
+        },
+        {
+          "t": "Retro 2004 Greece Home  S-XXL",
+          "h": "retro-2004-greece-home-jersey-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/507222C1-4C18-A240-3AF5-57EF380422CA.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/507222C1-4C18-A240-3AF5-57EF380422CA.jpg",
+          "p": "13.60",
+          "c": [
+            "retro"
+          ]
+        },
+        {
+          "t": "Retro 2004 Greece Away  S-XXL",
+          "h": "retro-2004-greece-away-jersey-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/5252EDE2-04A2-C802-AFFF-40D992DC6B8A.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/5252EDE2-04A2-C802-AFFF-40D992DC6B8A.jpg",
+          "p": "13.60",
+          "c": [
+            "retro"
+          ]
+        }
+      ],
+      "productCount": 4
+    },
+    "nationalteams-europe__israel": {
+      "name": "Israel",
+      "slug": "israel",
+      "league": "nationalteams-europe",
+      "leagueName": "Nationalteams Europa",
+      "products": [
+        {
+          "t": "Israel 25/26 Away Blue Jersey S-XXL",
+          "h": "israel-25-26-away-blue-jersey-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251111/48da0852a43471117719695a611c0e95.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251111/48da0852a43471117719695a611c0e95.jpg",
+          "p": "10.40",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "Israel 25/26 Home White Jersey S-XXL",
+          "h": "israel-25-26-white-jersey-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251111/77394b0aefa80c94f5ed48ef119bbc17.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251111/77394b0aefa80c94f5ed48ef119bbc17.jpg",
+          "p": "10.40",
+          "c": [
+            "fan"
+          ]
+        }
+      ],
+      "productCount": 2
+    },
+    "nationalteams-europe__hungary": {
+      "name": "Ungarn",
+      "slug": "hungary",
+      "league": "nationalteams-europe",
+      "leagueName": "Nationalteams Europa",
+      "products": [
+        {
+          "t": "2026 World Cup Hungary Home Jersey S-4XL Fan Version",
+          "h": "2026-world-cup-hungary-home-jersey-s-4xl-fan-version",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251104/ff355302b8b2451e2b620c31051daae3.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251104/ff355302b8b2451e2b620c31051daae3.jpg",
+          "p": "10.40",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "Hungary Home Shirt 2024 S-XXL",
+          "h": "hungary-home-shirt-2024-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/09771D0E-7AFA-CD3E-E0E4-E9D922D63F8B.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/09771D0E-7AFA-CD3E-E0E4-E9D922D63F8B.jpg",
+          "p": "9.60",
+          "c": [
+            "fan"
+          ]
+        }
+      ],
+      "productCount": 2
+    },
+    "nationalteams-europe__finland": {
+      "name": "Finnland",
+      "slug": "finland",
+      "league": "nationalteams-europe",
+      "leagueName": "Nationalteams Europa",
+      "products": [
+        {
+          "t": "Finl&alpha;nd 25/26 Set Size 16-XXL",
+          "h": "finlαnd-25-26-set-size-16-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250624/4eee50cd9e2aaacfb746460e3be63bc1.png",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250624/4eee50cd9e2aaacfb746460e3be63bc1.png",
+          "p": "18.40",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "Finl&alpha;nd 25/26 Away S-XXL",
+          "h": "finlαnd-25-26-away-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250614/1eff4b16e74985fde38df54758565aeb.webp",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250614/1eff4b16e74985fde38df54758565aeb.webp",
+          "p": "10.40",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "Finl&alpha;nd 25/26 Home S-XXL",
+          "h": "finlαnd-25-26-home-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250614/3a69d94e70ab84773d24d123cceed375.webp",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250614/3a69d94e70ab84773d24d123cceed375.webp",
+          "p": "10.40",
+          "c": [
+            "fan"
+          ]
+        }
+      ],
+      "productCount": 3
+    },
+    "nationalteams-europe__albania": {
+      "name": "Albanien",
+      "slug": "albania",
+      "league": "nationalteams-europe",
+      "leagueName": "Nationalteams Europa",
+      "products": [
+        {
+          "t": "Albania 25/26 Away White  S-XXL",
+          "h": "albania-25-26-white-jersey-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/4A61446F-E099-0995-2DD9-F243E800645C.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/4A61446F-E099-0995-2DD9-F243E800645C.jpg",
+          "p": "10.40",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "Albania 25/26 Home Red  S-XXL",
+          "h": "albania-25-26-home-red-jersey-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/04C99B41-D2B0-610E-BAC0-FBE44C6ACFD4.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/04C99B41-D2B0-610E-BAC0-FBE44C6ACFD4.jpg",
+          "p": "10.40",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "Kids Albania 25/26 Home Kit 16-28",
+          "h": "kids-albania-25-26-home-kit-16-28",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/0E125BC3-2328-F186-6644-9F9451DCF984.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/0E125BC3-2328-F186-6644-9F9451DCF984.jpg",
+          "p": "11.20",
+          "c": [
+            "kids"
+          ]
+        },
+        {
+          "t": "Albania 25/26 Home Kit S-XXL",
+          "h": "albania-25-26-home-kit-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/0E125BC3-2328-F186-6644-9F9451DCF984.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/0E125BC3-2328-F186-6644-9F9451DCF984.jpg",
+          "p": "18.40",
+          "c": [
+            "fan"
+          ]
+        }
+      ],
+      "productCount": 4
+    },
+    "nationalteams-europe__yugoslavia": {
+      "name": "Jugoslawien",
+      "slug": "yugoslavia",
+      "league": "nationalteams-europe",
+      "leagueName": "Nationalteams Europa",
+      "products": [
+        {
+          "t": "Retro 1990 Yugoslavia Home  Size: S-XXL",
+          "h": "retro-1990-yugoslavia-home-jersey-size-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/F8BE1291-A066-F6DE-FE50-1359935BE20A.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/F8BE1291-A066-F6DE-FE50-1359935BE20A.jpg",
+          "p": "12.80",
+          "c": [
+            "retro"
+          ]
+        },
+        {
+          "t": "Retro 1990 Yugoslavia Away  Size: S-XXL",
+          "h": "retro-1990-yugoslavia-away-jersey-size-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/655721DC-7EAE-2D61-15CC-2CAABB36AD0F.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/655721DC-7EAE-2D61-15CC-2CAABB36AD0F.jpg",
+          "p": "12.80",
+          "c": [
+            "retro"
+          ]
+        },
+        {
+          "t": "Retro 1998 Yugoslavia Home  Size: S-XXL",
+          "h": "retro-1998-yugoslavia-home-jersey-size-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/23B6E407-A5B2-DEE6-3725-D2432F368A07.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/23B6E407-A5B2-DEE6-3725-D2432F368A07.jpg",
+          "p": "12.80",
+          "c": [
+            "retro"
+          ]
+        },
+        {
+          "t": "Retro 2000 Yugoslavia Away  with patches Size: S-XXL",
+          "h": "retro-2000-yugoslavia-away-jersey-with-patches-size-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/422626E3-95B3-6A65-684B-39125A6D0A8B.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/422626E3-95B3-6A65-684B-39125A6D0A8B.jpg",
+          "p": "14.40",
+          "c": [
+            "retro"
+          ]
+        }
+      ],
+      "productCount": 4
+    },
+    "nationalteams-europe__turkey": {
+      "name": "Türkei",
+      "slug": "turkey",
+      "league": "nationalteams-europe",
+      "leagueName": "Nationalteams Europa",
+      "products": [
+        {
+          "t": "Turkey 24/25 Home  S-XXL",
+          "h": "turkey-24-25-home-jersey-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/C130D0FC-E48E-B982-7408-4A9DB292CE3C.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/C130D0FC-E48E-B982-7408-4A9DB292CE3C.jpg",
+          "p": "10.40",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "Turkey 24/25 Away  S-XXL",
+          "h": "turkey-24-25-away-jersey-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/048D02E9-AFF5-06CF-0F8C-1B15ED523B94.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/048D02E9-AFF5-06CF-0F8C-1B15ED523B94.jpg",
+          "p": "10.40",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "Turkey 1996 Away  S-XXL",
+          "h": "turkey-1996-away-jersey-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/9A8CB49F-59C3-ACA1-AD19-CC3004DC3617.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/9A8CB49F-59C3-ACA1-AD19-CC3004DC3617.jpg",
+          "p": "13.60",
+          "c": [
+            "retro"
+          ]
+        },
+        {
+          "t": "Turkey 1996 Home  S-XXL",
+          "h": "turkey-1996-home-jersey-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/EACC99CD-FBA5-64F6-671D-0872806AA9FD.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/EACC99CD-FBA5-64F6-671D-0872806AA9FD.jpg",
+          "p": "13.60",
+          "c": [
+            "retro"
+          ]
+        }
+      ],
+      "productCount": 4
     }
   }
 }
