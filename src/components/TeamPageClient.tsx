@@ -64,7 +64,40 @@ export default function TeamPageClient({ teamName, leagueName, leagueSlug, produ
     }
 
     // Sort
+    const getDefaultScore = (p: Product): number => {
+      const t = p.t.toLowerCase();
+      const cats = p.c;
+
+      // Season: 25/26 first, then 24/25, then rest
+      let season = 2;
+      if (t.includes('25/26') || t.includes('25-26') || t.includes('2526')) season = 0;
+      else if (t.includes('24/25') || t.includes('24-25') || t.includes('2425')) season = 1;
+      if (cats.includes('retro') || cats.includes('kids-retro')) season = 3;
+
+      // Type: home → away → third → special → rest
+      let type = 4;
+      if (t.includes('home')) type = 0;
+      else if (t.includes('away')) type = 1;
+      else if (t.includes('third')) type = 2;
+      else if (t.includes('special')) type = 3;
+
+      // Category: player → fan → longsleeve → female → kids → training/windbreaker → retro
+      let cat = 1;
+      if (cats.includes('player')) cat = 0;
+      else if (cats.includes('female')) cat = 2;
+      else if (cats.includes('kids')) cat = 3;
+      else if (cats.includes('kids-retro')) cat = 4;
+      else if (cats.includes('training') || cats.includes('windbreaker') || cats.includes('sweater')) cat = 5;
+      else if (cats.includes('retro')) cat = 6;
+      else if (cats.includes('longsleeve')) cat = 1;
+
+      return season * 1000 + cat * 100 + type;
+    };
+
     switch (sort) {
+      case 'default':
+        result.sort((a, b) => getDefaultScore(a) - getDefaultScore(b));
+        break;
       case 'price-asc':
         result.sort((a, b) => parseFloat(a.p) - parseFloat(b.p));
         break;

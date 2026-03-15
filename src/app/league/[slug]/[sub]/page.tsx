@@ -50,7 +50,7 @@ export default async function SubLeaguePage({ params }: { params: Promise<{ slug
         <div className="absolute inset-0 bg-gradient-to-br from-[#111] via-[var(--red-dark)] to-[#111]" />
         <div className="relative max-w-7xl mx-auto px-4 py-16 md:py-20">
           <div className="flex items-center gap-2 text-sm text-gray-400 mb-4">
-            <Link href="/" className="hover:text-white transition-colors">Home</Link>
+            <Link href="/#ligen" className="hover:text-white transition-colors">Ligen</Link>
             <span>/</span>
             <Link href={`/league/${slug}`} className="hover:text-white transition-colors">{league.name}</Link>
             <span>/</span>
@@ -65,7 +65,7 @@ export default async function SubLeaguePage({ params }: { params: Promise<{ slug
             <div>
               <h1 className="text-3xl md:text-5xl font-black">{result.subLeagueName}</h1>
               <div className="flex gap-6 mt-2 text-sm">
-                <span className="text-[var(--gold)] font-bold">{result.teams.length} Teams</span>
+                <span className="text-[var(--gold)] font-bold">{result.teams.length} {result.teams.length === 1 ? 'Team' : 'Teams'}</span>
               </div>
             </div>
           </div>

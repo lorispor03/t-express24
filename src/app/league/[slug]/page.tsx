@@ -5,7 +5,7 @@ import Footer from '@/components/Footer';
 import { getLeague, getAllLeagueSlugs, getSubLeaguesForLeague } from '@/lib/data';
 import { LEAGUE_LOGOS } from '@/lib/leagueLogos';
 import { TEAM_LOGOS } from '@/lib/teamLogos';
-import { SUB_LEAGUE_SLUGS, SUB_LEAGUE_LOGOS } from '@/lib/subLeagueLogos';
+import { SUB_LEAGUE_SLUGS, SUB_LEAGUE_LOGOS, SUB_LEAGUE_COUNTRIES } from '@/lib/subLeagueLogos';
 import type { Metadata } from 'next';
 
 export function generateStaticParams() {
@@ -44,7 +44,7 @@ export default async function LeaguePage({ params }: { params: Promise<{ slug: s
         <div className="absolute inset-0 bg-gradient-to-br from-[#111] via-[var(--red-dark)] to-[#111]" />
         <div className="relative max-w-7xl mx-auto px-4 py-16 md:py-20">
           <div className="flex items-center gap-2 text-sm text-gray-400 mb-4">
-            <Link href="/" className="hover:text-white transition-colors">Home</Link>
+            <Link href="/#ligen" className="hover:text-white transition-colors">Ligen</Link>
             <span>/</span>
             <span className="text-white">{league.name}</span>
           </div>
@@ -58,7 +58,7 @@ export default async function LeaguePage({ params }: { params: Promise<{ slug: s
                 <p className="text-gray-400 mt-1">{league.country}</p>
               )}
               <div className="flex gap-6 mt-2 text-sm">
-                <span className="text-[var(--gold)] font-bold">{league.teamCount} Teams</span>
+                <span className="text-[var(--gold)] font-bold">{league.teamCount} {league.teamCount === 1 ? 'Team' : 'Teams'}</span>
                 <span className="text-gray-400">{league.productCount} Trikots</span>
               </div>
             </div>
@@ -74,6 +74,7 @@ export default async function LeaguePage({ params }: { params: Promise<{ slug: s
             {subLeagueKeys.map(subName => {
               const subSlug = SUB_LEAGUE_SLUGS[subName];
               const subLogo = subSlug ? SUB_LEAGUE_LOGOS[subSlug] : undefined;
+              const subCountry = SUB_LEAGUE_COUNTRIES[subName];
               const teamCount = subLeagues[subName].length;
               return (
                 <Link
@@ -96,7 +97,7 @@ export default async function LeaguePage({ params }: { params: Promise<{ slug: s
                     {subName}
                   </h3>
                   <p className="text-sm text-gray-400 mt-1">
-                    {teamCount} Teams
+                    {teamCount} {teamCount === 1 ? 'Team' : 'Teams'}{subCountry && ` · ${subCountry}`}
                   </p>
                 </Link>
               );

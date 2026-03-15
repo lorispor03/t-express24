@@ -66,7 +66,7 @@ export default function HomePage() {
                 {league.name}
               </h3>
               <p className="text-sm text-gray-400 mt-1">
-                {league.teamCount} Teams {league.country && `· ${league.country}`}
+                {league.teamCount} {league.teamCount === 1 ? 'Team' : 'Teams'} {league.country && `· ${league.country}`}
               </p>
             </Link>
           ))}

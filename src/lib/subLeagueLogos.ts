@@ -22,6 +22,35 @@ export const SUB_LEAGUE_SLUGS: Record<string, string> = {
   'Asien': 'asien',
   'EFL Championship': 'efl-championship',
   'Segunda División': 'segunda-division',
+  '2. Bundesliga': '2-bundesliga',
+  'Serie B': 'serie-b',
+  'Ligue 2': 'ligue-2',
+  'Scottish Premiership': 'scottish-premiership',
+};
+
+export const SUB_LEAGUE_COUNTRIES: Record<string, string> = {
+  'Süper Lig': 'Türkei',
+  'Super League Greece': 'Griechenland',
+  'Österreichische Bundesliga': 'Österreich',
+  'League of Ireland': 'Irland',
+  'Hrvatska Nogometna Liga': 'Kroatien',
+  'Liga I': 'Rumänien',
+  'Allsvenskan': 'Schweden',
+  'Superliga': 'Dänemark',
+  'Jupiler Pro League': 'Belgien',
+  'Super League': 'Schweiz',
+  'EFL Championship': 'England',
+  'Segunda División': 'Spanien',
+  '2. Bundesliga': 'Deutschland',
+  'Serie B': 'Italien',
+  'Ligue 2': 'Frankreich',
+  'Scottish Premiership': 'Schottland',
+  'Brasileirão': 'Brasilien',
+  'Liga Profesional': 'Argentinien',
+  'MLS': 'USA / Kanada',
+  'Liga MX': 'Mexiko',
+  'Saudi Pro League': 'Saudi-Arabien',
+  'Primera División': 'Chile',
 };
 
 export const SUB_LEAGUE_LOGOS: Record<string, string> = {
@@ -48,4 +77,8 @@ export const SUB_LEAGUE_LOGOS: Record<string, string> = {
   'asien': '/leagues/continent-asien.svg?v=2',
   'efl-championship': '/leagues/efl-championship.png',
   'segunda-division': '/leagues/segunda-division.png',
+  '2-bundesliga': '/leagues/2-bundesliga.png',
+  'serie-b': '/leagues/serie-b.png',
+  'ligue-2': '/leagues/ligue-2.png',
+  'scottish-premiership': '/leagues/scottish-premiership.png',
 };

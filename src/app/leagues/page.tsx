@@ -13,7 +13,7 @@ export default function LeaguesPage() {
 
       <section className="max-w-7xl mx-auto px-4 py-12">
         <div className="flex items-center gap-2 text-sm text-gray-400 mb-6">
-          <Link href="/" className="hover:text-white transition-colors">Home</Link>
+          <Link href="/#ligen" className="hover:text-white transition-colors">Ligen</Link>
           <span>/</span>
           <span className="text-white">Alle Ligen</span>
         </div>
@@ -46,7 +46,7 @@ export default function LeaguesPage() {
                 {league.name}
               </h3>
               <p className="text-sm text-gray-400 mt-1">
-                {league.teamCount} Teams {league.country && `· ${league.country}`}
+                {league.teamCount} {league.teamCount === 1 ? 'Team' : 'Teams'} {league.country && `· ${league.country}`}
               </p>
               <div className="mt-4 flex flex-wrap gap-1.5">
                 {league.teams.slice(0, 5).map(team => (
