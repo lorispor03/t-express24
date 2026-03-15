@@ -28,7 +28,7 @@ export default function HomePage() {
           {[
             ['4800+', 'Trikots'],
             ['240+', 'Teams'],
-            ['11', 'Ligen'],
+            ['17', 'Ligen'],
             ['100%', 'Geprüft'],
           ].map(([num, label]) => (
             <div key={label}>
