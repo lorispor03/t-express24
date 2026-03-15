@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 240" width="200" height="240">
+  <!-- Option 2: Wappen/Schild mit "II" -->
+  <path d="M100 10 L185 50 L185 150 Q185 200 100 230 Q15 200 15 150 L15 50 Z" fill="#1a1a1a" stroke="#c4222e" stroke-width="5"/>
+  <path d="M100 25 L172 58 L172 148 Q172 190 100 215 Q28 190 28 148 L28 58 Z" fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.2"/>
+  <!-- Römische II -->
+  <text x="100" y="155" font-family="Georgia, serif" font-size="100" font-weight="700" fill="#ffffff" text-anchor="middle">II</text>
+  <!-- Kleiner Stern oben -->
+  <polygon points="100,30 104,42 117,42 107,50 110,62 100,55 90,62 93,50 83,42 96,42" fill="#c4222e"/>
+</svg>

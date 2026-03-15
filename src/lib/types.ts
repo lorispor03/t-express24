@@ -12,6 +12,7 @@ export interface TeamData {
   slug: string;
   league: string;
   leagueName: string;
+  subLeague?: string;
   products: Product[];
   productCount: number;
 }

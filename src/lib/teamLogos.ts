@@ -1,6 +1,7 @@
 export const TEAM_LOGOS: Record<string, string> = {
   'aberdeen': '/teams/aberdeen.png',
   'ajax': '/teams/ajax.png',
+  'alaves': '/teams/alaves.png',
   'albacete': '/teams/albacete.png',
   'algeria': '/teams/algeria.png',
   'alhilal': '/teams/alhilal.png',
@@ -170,6 +171,7 @@ export const TEAM_LOGOS: Record<string, string> = {
   'riverplate': '/teams/riverplate.png',
   'roma': '/teams/roma.png',
   'rosariocentral': '/teams/rosariocentral.png',
+  'sanfernando': '/teams/sanfernando.png',
   'santos': '/teams/santos.png',
   'saopaulo': '/teams/saopaulo.png',
   'saudiarabia': '/teams/saudiarabia.png',
