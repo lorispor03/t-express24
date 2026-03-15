@@ -81,7 +81,7 @@ export default async function LeaguePage({ params }: { params: Promise<{ slug: s
                   href={`/league/${slug}/${subSlug}`}
                   className="league-card group bg-[#3a3a3a] rounded-xl p-6 border border-white/15 hover:border-[var(--red-main)]/30"
                 >
-                  <div className="mb-4">
+                  <div className="mb-2">
                     {subLogo ? (
                       <img
                         src={subLogo}
@@ -123,7 +123,7 @@ export default async function LeaguePage({ params }: { params: Promise<{ slug: s
                   );
                 })()}
                 <h3 className="font-bold text-sm line-clamp-2 mb-1">{team.name}</h3>
-                <p className="text-xs text-gray-500">{team.count} Trikots</p>
+                <p className="text-xs text-gray-500">{team.count} Artikel</p>
               </Link>
             ))}
           </div>

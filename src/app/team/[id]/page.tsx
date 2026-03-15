@@ -18,7 +18,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   if (!team) return {};
   return {
     title: `${team.name} Trikots | T-EXPRESS24`,
-    description: `${team.name} Trikots kaufen - ${team.productCount} Trikots verfügbar. Premium Qualität aus der Schweiz.`,
+    description: `${team.name} Trikots kaufen - ${team.productCount} Artikel verfügbar. Premium Qualität aus der Schweiz.`,
   };
 }
 
@@ -66,7 +66,7 @@ export default async function TeamPage({ params }: { params: Promise<{ id: strin
                 <Link href={`/league/${team.league}`} className="text-sm text-[var(--gold)] hover:underline">
                   {team.leagueName}
                 </Link>
-                <span className="text-sm text-gray-400">{team.productCount} Trikots</span>
+                <span className="text-sm text-gray-400">{team.productCount} Artikel</span>
               </div>
             </div>
           </div>

@@ -93,7 +93,7 @@ export default async function SubLeaguePage({ params }: { params: Promise<{ slug
                 );
               })()}
               <h3 className="font-bold text-sm line-clamp-2 mb-1">{team.name}</h3>
-              <p className="text-xs text-gray-500">{team.count} Trikots</p>
+              <p className="text-xs text-gray-500">{team.count} Artikel</p>
             </Link>
           ))}
         </div>
