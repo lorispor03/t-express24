@@ -15,6 +15,13 @@ export const SUB_LEAGUE_SLUGS: Record<string, string> = {
   'Liga MX': 'liga-mx',
   'Saudi Pro League': 'saudi-pro-league',
   'Primera División': 'primera-chile',
+  'Europa': 'europa',
+  'Südamerika': 'suedamerika',
+  'Nordamerika': 'nordamerika',
+  'Afrika': 'afrika',
+  'Asien': 'asien',
+  'EFL Championship': 'efl-championship',
+  'Segunda División': 'segunda-division',
 };
 
 export const SUB_LEAGUE_LOGOS: Record<string, string> = {
@@ -34,4 +41,11 @@ export const SUB_LEAGUE_LOGOS: Record<string, string> = {
   'liga-mx': '/leagues/liga-mx.png',
   'saudi-pro-league': '/leagues/saudi-pro-league.png',
   'primera-chile': '/leagues/primera-chile.png',
+  'europa': '/leagues/continent-europa.svg?v=2',
+  'suedamerika': '/leagues/continent-suedamerika.svg?v=2',
+  'nordamerika': '/leagues/continent-nordamerika.svg?v=2',
+  'afrika': '/leagues/continent-afrika.svg?v=2',
+  'asien': '/leagues/continent-asien.svg?v=2',
+  'efl-championship': '/leagues/efl-championship.png',
+  'segunda-division': '/leagues/segunda-division.png',
 };

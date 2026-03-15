@@ -14,7 +14,7 @@ export const LEAGUE_LOGOS: Record<string, string> = {
   'liga-mx': '/leagues/liga-mx.png',
   'saudi-pro-league': '/leagues/saudi-pro-league.png',
   'primera-chile': '/leagues/primera-chile.png',
-  'efl-championship': '/leagues/efl-championship.png',
+  'zweitligisten': '/leagues/efl-championship.png',
   'clubs-world': '/leagues/clubs-world.svg',
   'nationalteams-europe': '/leagues/nationalteams-europe.png',
   'nationalteams-world': '/leagues/nationalteams-world.svg',

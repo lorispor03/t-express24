@@ -175,34 +175,10 @@
           "count": 17
         },
         {
-          "id": "la-liga__laspalmas",
-          "name": "UD Las Palmas",
-          "slug": "laspalmas",
-          "count": 5
-        },
-        {
           "id": "la-liga__mallorca",
           "name": "RCD Mallorca",
           "slug": "mallorca",
           "count": 8
-        },
-        {
-          "id": "la-liga__laligaothers",
-          "name": "La Liga Andere",
-          "slug": "laligaothers",
-          "count": 47
-        },
-        {
-          "id": "la-liga__albacete",
-          "name": "Albacete",
-          "slug": "albacete",
-          "count": 5
-        },
-        {
-          "id": "la-liga__cadiz",
-          "name": "Cádiz CF",
-          "slug": "cadiz",
-          "count": 2
         },
         {
           "id": "la-liga__elche",
@@ -217,56 +193,56 @@
           "count": 3
         },
         {
-          "id": "la-liga__malaga",
-          "name": "Málaga CF",
-          "slug": "malaga",
-          "count": 12
-        },
-        {
-          "id": "la-liga__racingsantander",
-          "name": "Racing Santander",
-          "slug": "racingsantander",
-          "count": 2
-        },
-        {
           "id": "la-liga__oviedo",
           "name": "Real Oviedo",
           "slug": "oviedo",
           "count": 5
         },
         {
-          "id": "la-liga__gijon",
-          "name": "Sporting Gijón",
-          "slug": "gijon",
+          "id": "la-liga__villarreal",
+          "name": "Villarreal CF",
+          "slug": "villarreal",
+          "count": 4
+        },
+        {
+          "id": "la-liga__girona",
+          "name": "Girona FC",
+          "slug": "girona",
+          "count": 3
+        },
+        {
+          "id": "la-liga__osasuna",
+          "name": "CA Osasuna",
+          "slug": "osasuna",
+          "count": 7
+        },
+        {
+          "id": "la-liga__rayovallecano",
+          "name": "Rayo Vallecano",
+          "slug": "rayovallecano",
+          "count": 9
+        },
+        {
+          "id": "la-liga__getafe",
+          "name": "Getafe CF",
+          "slug": "getafe",
           "count": 6
         },
         {
-          "id": "la-liga__tenerife",
-          "name": "CD Tenerife",
-          "slug": "tenerife",
+          "id": "la-liga__espanyol",
+          "name": "RCD Espanyol",
+          "slug": "espanyol",
+          "count": 7
+        },
+        {
+          "id": "la-liga__alaves",
+          "name": "Deportivo Alavés",
+          "slug": "alaves",
           "count": 5
-        },
-        {
-          "id": "la-liga__valladolid",
-          "name": "Real Valladolid",
-          "slug": "valladolid",
-          "count": 5
-        },
-        {
-          "id": "la-liga__zaragoza",
-          "name": "Real Zaragoza",
-          "slug": "zaragoza",
-          "count": 8
-        },
-        {
-          "id": "la-liga__coruna",
-          "name": "Deportivo La Coruña",
-          "slug": "coruna",
-          "count": 18
         }
       ],
-      "teamCount": 24,
-      "productCount": 781
+      "teamCount": 20,
+      "productCount": 707
     },
     "bundesliga": {
       "name": "Bundesliga",
@@ -1552,73 +1528,157 @@
       "teamCount": 78,
       "productCount": 1243
     },
-    "efl-championship": {
-      "name": "EFL Championship",
-      "country": "England",
+    "zweitligisten": {
+      "name": "2. Ligisten",
+      "country": "Europa",
       "teams": [
         {
-          "id": "efl-championship__ipswich",
+          "id": "zweitligisten__ipswich",
           "name": "Ipswich Town",
           "slug": "ipswich",
           "count": 2
         },
         {
-          "id": "efl-championship__leicester",
+          "id": "zweitligisten__leicester",
           "name": "Leicester City",
           "slug": "leicester",
           "count": 4
         },
         {
-          "id": "efl-championship__southampton",
+          "id": "zweitligisten__southampton",
           "name": "Southampton FC",
           "slug": "southampton",
           "count": 6
         },
         {
-          "id": "efl-championship__middlesbrough",
+          "id": "zweitligisten__middlesbrough",
           "name": "Middlesbrough FC",
           "slug": "middlesbrough",
           "count": 2
         },
         {
-          "id": "efl-championship__portsmouth",
+          "id": "zweitligisten__portsmouth",
           "name": "Portsmouth FC",
           "slug": "portsmouth",
           "count": 3
         },
         {
-          "id": "efl-championship__watford",
+          "id": "zweitligisten__watford",
           "name": "Watford FC",
           "slug": "watford",
           "count": 1
         },
         {
-          "id": "efl-championship__derbycounty",
+          "id": "zweitligisten__derbycounty",
           "name": "Derby County",
           "slug": "derbycounty",
           "count": 2
         },
         {
-          "id": "efl-championship__hullcity",
+          "id": "zweitligisten__hullcity",
           "name": "Hull City",
           "slug": "hullcity",
           "count": 5
         },
         {
-          "id": "efl-championship__northampton",
+          "id": "zweitligisten__northampton",
           "name": "Northampton Town",
           "slug": "northampton",
           "count": 1
         },
         {
-          "id": "efl-championship__blackburn",
+          "id": "zweitligisten__blackburn",
           "name": "Blackburn Rovers",
           "slug": "blackburn",
           "count": 4
+        },
+        {
+          "id": "zweitligisten__laspalmas",
+          "name": "UD Las Palmas",
+          "slug": "laspalmas",
+          "count": 5
+        },
+        {
+          "id": "zweitligisten__albacete",
+          "name": "Albacete",
+          "slug": "albacete",
+          "count": 5
+        },
+        {
+          "id": "zweitligisten__cadiz",
+          "name": "Cádiz CF",
+          "slug": "cadiz",
+          "count": 2
+        },
+        {
+          "id": "zweitligisten__malaga",
+          "name": "Málaga CF",
+          "slug": "malaga",
+          "count": 12
+        },
+        {
+          "id": "zweitligisten__racingsantander",
+          "name": "Racing Santander",
+          "slug": "racingsantander",
+          "count": 2
+        },
+        {
+          "id": "zweitligisten__gijon",
+          "name": "Sporting Gijón",
+          "slug": "gijon",
+          "count": 6
+        },
+        {
+          "id": "zweitligisten__tenerife",
+          "name": "CD Tenerife",
+          "slug": "tenerife",
+          "count": 5
+        },
+        {
+          "id": "zweitligisten__valladolid",
+          "name": "Real Valladolid",
+          "slug": "valladolid",
+          "count": 5
+        },
+        {
+          "id": "zweitligisten__zaragoza",
+          "name": "Real Zaragoza",
+          "slug": "zaragoza",
+          "count": 8
+        },
+        {
+          "id": "zweitligisten__coruna",
+          "name": "Deportivo La Coruña",
+          "slug": "coruna",
+          "count": 18
+        },
+        {
+          "id": "zweitligisten__granada",
+          "name": "Granada CF",
+          "slug": "granada",
+          "count": 2
+        },
+        {
+          "id": "zweitligisten__sanfernando",
+          "name": "San Fernando",
+          "slug": "sanfernando",
+          "count": 1
+        },
+        {
+          "id": "zweitligisten__hercules",
+          "name": "Hércules CF",
+          "slug": "hercules",
+          "count": 2
+        },
+        {
+          "id": "zweitligisten__leganes",
+          "name": "CD Leganés",
+          "slug": "leganes",
+          "count": 1
         }
       ],
-      "teamCount": 10,
-      "productCount": 30
+      "teamCount": 24,
+      "productCount": 104
     }
   },
   "teams": {
@@ -16502,65 +16562,6 @@
       ],
       "productCount": 17
     },
-    "la-liga__laspalmas": {
-      "name": "UD Las Palmas",
-      "slug": "laspalmas",
-      "league": "la-liga",
-      "leagueName": "La Liga",
-      "products": [
-        {
-          "t": "Las Palmas 25/26 Third with laliga patch S-4XL",
-          "h": "las-palmas-25-26-third-with-laliga-patch-s-4xl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260109/f2d2ceefda1a476eca04c429aaafe8f4.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260109/f2d2ceefda1a476eca04c429aaafe8f4.jpg",
-          "p": "11.20",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Las Palmas 25/26 Away with laliga patch S-4XL",
-          "h": "las-palmas-25-26-away-with-laliga-patch-s-4xl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250802/93224ffbbe7c49f384506777b7fda32a.png",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250802/93224ffbbe7c49f384506777b7fda32a.png",
-          "p": "11.20",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Las Palmas 25/26 Home with laliga patch S-4XL",
-          "h": "las-palmas-25-26-home-with-laliga-patch-s-4xl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250802/6ba9af49caca8f0eac864dd3fdc07661.png",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250802/6ba9af49caca8f0eac864dd3fdc07661.png",
-          "p": "11.20",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Retro 97/98 Las Palmas Away S-XXL",
-          "h": "retro-97-98-las-palmas-away-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250802/e92eae6255722e95f2dd83078d2a7267.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250802/e92eae6255722e95f2dd83078d2a7267.jpg",
-          "p": "13.60",
-          "c": [
-            "retro"
-          ]
-        },
-        {
-          "t": "Retro 97/98 Las Palmas Home S-XXL",
-          "h": "retro-97-98-las-palmas-home-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250802/7bdf942b9bc580b3dfd9636b770810d2.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250802/7bdf942b9bc580b3dfd9636b770810d2.jpg",
-          "p": "13.60",
-          "c": [
-            "retro"
-          ]
-        }
-      ],
-      "productCount": 5
-    },
     "la-liga__mallorca": {
       "name": "RCD Mallorca",
       "slug": "mallorca",
@@ -16650,576 +16651,6 @@
       ],
       "productCount": 8
     },
-    "la-liga__laligaothers": {
-      "name": "La Liga Andere",
-      "slug": "laligaothers",
-      "league": "la-liga",
-      "leagueName": "La Liga",
-      "products": [
-        {
-          "t": "Villarreal 25/26 Home With Patch S-4XL",
-          "h": "villarreal-25-26-home-with-patch-s-4xl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250625/bf0150653a290e40d704a4780e13f65a.png",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250625/bf0150653a290e40d704a4780e13f65a.png",
-          "p": "11.20",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Girona25/26 Away S-XXL",
-          "h": "gironα-25-26-away-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250612/24648fe42c85c033d9e4e2015f912752.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250612/24648fe42c85c033d9e4e2015f912752.jpg",
-          "p": "9.60",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Girona25/26 Home S-XXL",
-          "h": "gironα-25-26-home-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250612/50099721ea4980fec2d9bd5b1591b009.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250612/50099721ea4980fec2d9bd5b1591b009.jpg",
-          "p": "9.60",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Girona25/26 Third S-XXL",
-          "h": "gironα-25-26-third-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250612/fc7f5eea1278f4ea03b06f4fb1457951.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250612/fc7f5eea1278f4ea03b06f4fb1457951.jpg",
-          "p": "9.60",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "H&eacute;rcules CF Camiseta 2&ordm; Equipaci&oacute;n 24/25 S-XXL",
-          "h": "h-rcules-25-26-away-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250504/57A02C06-CA61-2513-0F96-44B5E4EDD5A4.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250504/57A02C06-CA61-2513-0F96-44B5E4EDD5A4.jpg",
-          "p": "11.20",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "H&eacute;rcules CF Camiseta 1&ordm; Equipaci&oacute;n 24/25 S-XXL",
-          "h": "hércules-cf-camiseta-1º-equipación-24-25-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250504/0C2F7F7F-F852-279C-5C92-02AE13441BC0.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250504/0C2F7F7F-F852-279C-5C92-02AE13441BC0.jpg",
-          "p": "11.20",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Retro 96/97 Osasuna Home Jersey S-XXL",
-          "h": "retro-96-97-osasuna-home-jersey-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250504/E8D43301-E8C5-61C0-A2B6-CC154DB4A62F.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250504/E8D43301-E8C5-61C0-A2B6-CC154DB4A62F.jpg",
-          "p": "13.60",
-          "c": [
-            "retro"
-          ]
-        },
-        {
-          "t": "Rayo Vallecano de Madrid 2001/02 Home S-XXL",
-          "h": "rayo-vallecano-de-madrid-2001-02-home-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250709/836482d4e0ed0e23498015fb89d363ee.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250709/836482d4e0ed0e23498015fb89d363ee.jpg",
-          "p": "13.60",
-          "c": [
-            "retro"
-          ]
-        },
-        {
-          "t": "Retro Granada CF 97/98 Home S-XXL",
-          "h": "retro-granada-cf-97-98-home-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250504/E1332B3C-38FB-B3C7-32DB-678935481F55.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250504/E1332B3C-38FB-B3C7-32DB-678935481F55.jpg",
-          "p": "13.60",
-          "c": [
-            "retro"
-          ]
-        },
-        {
-          "t": "Retro San Fernando 93/94 Away S-XXL",
-          "h": "retro-san-fernando-93-94-away-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250504/79300493-A78D-ADCA-056F-A8E7EE8C37EC.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250504/79300493-A78D-ADCA-056F-A8E7EE8C37EC.jpg",
-          "p": "13.60",
-          "c": [
-            "retro"
-          ]
-        },
-        {
-          "t": "Retro Getafe 98/99 Home Jersey S-XXL",
-          "h": "retro-getafe-98-99-home-jersey-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251212/c98a6aa7c45abb99c0f88ab680a097f2.webp",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251212/c98a6aa7c45abb99c0f88ab680a097f2.webp",
-          "p": "13.60",
-          "c": [
-            "retro"
-          ]
-        },
-        {
-          "t": "Retro Villarreal CF 05/06 Home S-XXL",
-          "h": "retro-villarreal-cf-05-06-home-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250504/A2E3C780-8C9B-0C72-CE4B-BA299FE9280A.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250504/A2E3C780-8C9B-0C72-CE4B-BA299FE9280A.jpg",
-          "p": "12.80",
-          "c": [
-            "retro"
-          ]
-        },
-        {
-          "t": "Retro 94/95 Getafe Home Jersey S-XXL",
-          "h": "retro-94-95-getafe-home-jersey-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250504/7FD612A3-6E3B-5728-1F79-2EFEBA5487AC.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250504/7FD612A3-6E3B-5728-1F79-2EFEBA5487AC.jpg",
-          "p": "12.80",
-          "c": [
-            "retro"
-          ]
-        },
-        {
-          "t": "RCD Espanyol 1996/97 Third S-XXL",
-          "h": "rcd-espanyol-1996-97-third-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251106/266ea9e6cbec561afad3985ddbda91e1.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251106/266ea9e6cbec561afad3985ddbda91e1.jpg",
-          "p": "12.80",
-          "c": [
-            "retro"
-          ]
-        },
-        {
-          "t": "RCD Espanyol 84/89 Home S-XXL",
-          "h": "rcd-espanyol-84-89-home-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250504/B162EC43-0333-F7EA-39CE-7CD56B07EF86.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250504/B162EC43-0333-F7EA-39CE-7CD56B07EF86.jpg",
-          "p": "12.80",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Retro CD Legan&eacute;s 98/00 Home S-XXL",
-          "h": "retro-cd-leganés-98-00-home-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250504/1508B49E-74E6-E649-0C34-4F909E5E85F7.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250504/1508B49E-74E6-E649-0C34-4F909E5E85F7.jpg",
-          "p": "12.80",
-          "c": [
-            "retro"
-          ]
-        },
-        {
-          "t": "Rayo Vallecano 94/95 Home S-XXL",
-          "h": "rayo-vallecano-94-95-home-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250709/69c6fa15fe1afbaae7dfa5f64d4854d6.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250709/69c6fa15fe1afbaae7dfa5f64d4854d6.jpg",
-          "p": "13.60",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Retro Granada CF 05/06 Home S-XXL",
-          "h": "retro-granada-cf-05-06-home-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250612/2ae26f3ad925cecc8a1dee5f87c431e9.png",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250612/2ae26f3ad925cecc8a1dee5f87c431e9.png",
-          "p": "13.60",
-          "c": [
-            "retro"
-          ]
-        },
-        {
-          "t": "Espanyol 99/00 Home S-XXL",
-          "h": "espanyol-99-00-home-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250614/3e47d23e81fa7613d0da92d03b05306a.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250614/3e47d23e81fa7613d0da92d03b05306a.jpg",
-          "p": "12.80",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Rayo Vallecano 97/98 Home S-XXL",
-          "h": "rayo-vallecano-97-98-home-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250709/18b438380d27ee3367757af3538d0c86.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250709/18b438380d27ee3367757af3538d0c86.jpg",
-          "p": "13.60",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Osasuna 25/26 Home S-XXL",
-          "h": "osasuna-25-26-home-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250820/f527e6b8f10cabbb11382d2bb91c427a.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250820/f527e6b8f10cabbb11382d2bb91c427a.jpg",
-          "p": "9.60",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Getafe 25/26 Home S-XXL",
-          "h": "getafe-25-26-home-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250814/c100b441d3ab1b26d645133266ccc1fd.jpeg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250814/c100b441d3ab1b26d645133266ccc1fd.jpeg",
-          "p": "9.60",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Getafe 25/26 Away S-XXL",
-          "h": "getafe-25-26-away-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250814/f18bcacd57ac092fb503966d05c9646e.jpeg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250814/f18bcacd57ac092fb503966d05c9646e.jpeg",
-          "p": "9.60",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Osasuna 25/26 Away S-XXL",
-          "h": "osasuna-25-26-away-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250820/5b468ff7a712e34c676e2a639aefaaba.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250820/5b468ff7a712e34c676e2a639aefaaba.jpg",
-          "p": "9.60",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Osasuna 25/26 Third S-XXL",
-          "h": "osasuna-25-26-third-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250820/1c4d877772069155322ed5c3d9dd52f8.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250820/1c4d877772069155322ed5c3d9dd52f8.jpg",
-          "p": "9.60",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "RCD Espanyol 125th Anniversary Jersey S-XXL",
-          "h": "rcd-espanyol-125th-anniversary-jersey-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251031/c6c8e432995ff5b519df65131d2ab294.png",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251031/c6c8e432995ff5b519df65131d2ab294.png",
-          "p": "9.60",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Espanyol 25-26 Third Jersey S-XXL Fan Version",
-          "h": "espanyol-25-26-third-jersey-s-xxl-fan-version",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251106/d76860121c0b47d1308d43d6b262363f.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251106/d76860121c0b47d1308d43d6b262363f.jpg",
-          "p": "9.60",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Espanyol 25-26 Away Jersey S-XXL Fan Version",
-          "h": "espanyol-25-26-away-jersey-s-xxl-fan-version",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251106/be4b26a1e3aff9b8379baa74f9489732.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251106/be4b26a1e3aff9b8379baa74f9489732.jpg",
-          "p": "9.60",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Espanyol 25-26 Home Jersey S-XXL Fan Version",
-          "h": "espanyol-25-26-home-jersey-s-xxl-fan-version",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251106/c8b4de2db38a1b26e7c0e20e9449ad43.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251106/c8b4de2db38a1b26e7c0e20e9449ad43.jpg",
-          "p": "9.60",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Rayo Vallecano 25/26 Home Jersey S-XXL Fan Version",
-          "h": "rayo-vallecano-25-26-home-jersey-s-xxl-fan-version",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251112/7da3b2edce3015bbe89fca6cd21c1d13.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251112/7da3b2edce3015bbe89fca6cd21c1d13.jpg",
-          "p": "9.60",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Rayo Vallecano 25/26 Away Jersey S-XXL Fan Version",
-          "h": "rayo-vallecano-25-26-away-jersey-s-xxl-fan-version",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251112/2855d88f0962f34c3c16d514e87e1a1a.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251112/2855d88f0962f34c3c16d514e87e1a1a.jpg",
-          "p": "9.60",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Rayo Vallecano 25/26 Third Jersey S-XXL Fan Version",
-          "h": "rayo-vallecano-25-26-third-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251112/12fadb3033e47a6ca52019566ac95c72.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251112/12fadb3033e47a6ca52019566ac95c72.jpg",
-          "p": "9.60",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Kids Kit Rayo Vallecano 25/26 Third",
-          "h": "kids-kit-rayo-vallecano-25-26-third",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251112/39b2dffadac5d7ec897359c6fc190e15.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251112/39b2dffadac5d7ec897359c6fc190e15.jpg",
-          "p": "11.20",
-          "c": [
-            "kids"
-          ]
-        },
-        {
-          "t": "Kids Kit Rayo Vallecano 25/26 Away",
-          "h": "kids-kit-rayo-vallecano-25-26-away",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251112/4128b7400f6ef47f92062ce2f668eec1.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251112/4128b7400f6ef47f92062ce2f668eec1.jpg",
-          "p": "11.20",
-          "c": [
-            "kids"
-          ]
-        },
-        {
-          "t": "Kids Kit Rayo Vallecano 25/26 Home",
-          "h": "kids-kit-rayo-vallecano-25-26-home",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251112/bb12caafc982e9b4a0179cf636482f68.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251112/bb12caafc982e9b4a0179cf636482f68.jpg",
-          "p": "11.20",
-          "c": [
-            "kids"
-          ]
-        },
-        {
-          "t": "Retro Alav&eacute;s 2011/12 Home Jersey S-XXL",
-          "h": "retro-alavés-2011-12-home-jersey-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251205/135bf9736bf589637436f831c63a5f7b.webp",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251205/135bf9736bf589637436f831c63a5f7b.webp",
-          "p": "12.80",
-          "c": [
-            "retro"
-          ]
-        },
-        {
-          "t": "Retro Alav&eacute;s 2001/02 Jersey S-XXL",
-          "h": "retro-alavés-2001-02-jersey-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251205/26d7fa4cb57a4dcaa5b8f6abceba0b2e.webp",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251205/26d7fa4cb57a4dcaa5b8f6abceba0b2e.webp",
-          "p": "12.80",
-          "c": [
-            "retro"
-          ]
-        },
-        {
-          "t": "Retro Alav&eacute;s 1999/00 Home Jersey S-XXL",
-          "h": "retro-alavés-1999-00-home-jersey-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251205/32e8749178218fa3078c1a0e051c24d1.webp",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251205/32e8749178218fa3078c1a0e051c24d1.webp",
-          "p": "12.80",
-          "c": [
-            "retro"
-          ]
-        },
-        {
-          "t": "Retro Alav&eacute;s 1998/99 Home Jersey S-XXL",
-          "h": "retro-alavés-1998-99-home-jersey-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251205/cb818120b757948a7159bf5fd6799d41.webp",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251205/cb818120b757948a7159bf5fd6799d41.webp",
-          "p": "12.80",
-          "c": [
-            "retro"
-          ]
-        },
-        {
-          "t": "Retro Alav&eacute;s 1998/99 Home Jersey Long Sleeves S-XXL",
-          "h": "retro-alavés-1998-99-home-jersey-long-sleeves-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251205/4f7a153810b4e42e81db85aae4b03276.webp",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251205/4f7a153810b4e42e81db85aae4b03276.webp",
-          "p": "14.40",
-          "c": [
-            "longsleeve",
-            "retro"
-          ]
-        },
-        {
-          "t": "Retro 95/96 Osasuna Home Jersey S-XXL",
-          "h": "retro-95-96-osasuna-home-jersey-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251205/84bd3ae6b45dc4711713546ae7893305.webp",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251205/84bd3ae6b45dc4711713546ae7893305.webp",
-          "p": "13.60",
-          "c": [
-            "retro"
-          ]
-        },
-        {
-          "t": "Retro Getafe 98/99 Home Jersey Long Sleeves S-XXL",
-          "h": "retro-getafe-98-99-home-jersey-long-sleeves-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251212/4ab388f7c636cc6988ec432ceb8643b1.webp",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251212/4ab388f7c636cc6988ec432ceb8643b1.webp",
-          "p": "15.20",
-          "c": [
-            "longsleeve",
-            "retro"
-          ]
-        },
-        {
-          "t": "Retro Villarreal CF 08/09 Home Jersey S-XXL",
-          "h": "retro-villarreal-cf-08-09-home-jersey-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260124/c1d1d7d12b09d2d9285e167c767bc1ab.webp",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260124/c1d1d7d12b09d2d9285e167c767bc1ab.webp",
-          "p": "12.80",
-          "c": [
-            "retro"
-          ]
-        },
-        {
-          "t": "Retro Villarreal CF 08/09 Home Jersey Long Sleeves S-XXL",
-          "h": "retro-villarreal-cf-08-09-home-jersey-long-sleeves-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260124/c3a5d890630a61bfadc87ffed588c37c.webp",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260124/c3a5d890630a61bfadc87ffed588c37c.webp",
-          "p": "14.40",
-          "c": [
-            "longsleeve",
-            "retro"
-          ]
-        },
-        {
-          "t": "Retro 00/01 Osasuna Home Jersey S-XXL",
-          "h": "00-01-osasuna-home-jersey",
-          "i": "https://img.wpassets-gamma.com/images/17bc0f39060db7f68f9b38c5bbfe810d.jpg",
-          "hi": "https://img.wpassets-gamma.com/images/17bc0f39060db7f68f9b38c5bbfe810d.jpg",
-          "p": "13.60",
-          "c": [
-            "retro"
-          ]
-        },
-        {
-          "t": "Retro 10/12 Osasuna Away Jersey S-XXL",
-          "h": "10-12-osasuna-away-jersey",
-          "i": "https://img.wpassets-gamma.com/images/26c768fa67fd9a9afe86a73b470c15ff.jpg",
-          "hi": "https://img.wpassets-gamma.com/images/26c768fa67fd9a9afe86a73b470c15ff.jpg",
-          "p": "13.60",
-          "c": [
-            "retro"
-          ]
-        },
-        {
-          "t": "Retro Getafe 09/10 Home Jersey S-XXL",
-          "h": "getafe-09-10-home-jersey",
-          "i": "https://img.wpassets-gamma.com/images/c97272a3bfbbd9aa6e95f697478c844f.webp",
-          "hi": "https://img.wpassets-gamma.com/images/c97272a3bfbbd9aa6e95f697478c844f.webp",
-          "p": "13.60",
-          "c": [
-            "retro"
-          ]
-        }
-      ],
-      "productCount": 47
-    },
-    "la-liga__albacete": {
-      "name": "Albacete",
-      "slug": "albacete",
-      "league": "la-liga",
-      "leagueName": "La Liga",
-      "products": [
-        {
-          "t": "Albacete 2025/26 Third Jersey S-4XL Fan Version",
-          "h": "albacete-2025-26-third-jersey-s-4xl-fan-version",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251128/4449820397814fb77c27141645c03ea8.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251128/4449820397814fb77c27141645c03ea8.jpg",
-          "p": "9.60",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Albacete 2025/26 Away Jersey S-4XL Fan Version",
-          "h": "albacete-2025-26-away-jersey-s-4xl-fan-version",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250925/e9d45a38cc79cd49530254a1416ac4d9.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250925/e9d45a38cc79cd49530254a1416ac4d9.jpg",
-          "p": "9.60",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Albacete 2025/26 Home Jersey S-4XL Fan Version",
-          "h": "albacete-2025-26-home-jersey-s-4xl-fan-version",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250925/451b14f7d7df1bd6aa879187c40ec8ad.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250925/451b14f7d7df1bd6aa879187c40ec8ad.jpg",
-          "p": "9.60",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Retro 94/95 Albacete Balompie  Away S-XXL",
-          "h": "retro-94-95-albacete-balompie-away-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250523/51B5407E-55BC-C91B-D994-8E0F56DF1511.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250523/51B5407E-55BC-C91B-D994-8E0F56DF1511.jpg",
-          "p": "12.80",
-          "c": [
-            "retro"
-          ]
-        },
-        {
-          "t": "Retro 95/96 Albacete Balompie Home S-XXL",
-          "h": "retro-95-96-albacete-balompie-home-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250523/D9C6C615-9D1C-47CA-9B87-AA14D96CA01C.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250523/D9C6C615-9D1C-47CA-9B87-AA14D96CA01C.jpg",
-          "p": "12.80",
-          "c": [
-            "retro"
-          ]
-        }
-      ],
-      "productCount": 5
-    },
-    "la-liga__cadiz": {
-      "name": "Cádiz CF",
-      "slug": "cadiz",
-      "league": "la-liga",
-      "leagueName": "La Liga",
-      "products": [
-        {
-          "t": "Cadiz CF 25/26 Home with Patch S-4XL",
-          "h": "cadiz-cf-25-26-home-with-patch-s-4xl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250721/116f1435445f828f0e001ffda4c2bbc0.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250721/116f1435445f828f0e001ffda4c2bbc0.jpg",
-          "p": "11.20",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Retro Cadiz CF 1991-92 Home S-XXL",
-          "h": "retro-cadiz-cf-1991-92-home-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250523/511F5222-4917-4B27-145D-CBA75D143A58.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250523/511F5222-4917-4B27-145D-CBA75D143A58.jpg",
-          "p": "13.60",
-          "c": [
-            "retro"
-          ]
-        }
-      ],
-      "productCount": 2
-    },
     "la-liga__elche": {
       "name": "Elche CF",
       "slug": "elche",
@@ -17277,164 +16708,6 @@
         }
       ],
       "productCount": 3
-    },
-    "la-liga__malaga": {
-      "name": "Málaga CF",
-      "slug": "malaga",
-      "league": "la-liga",
-      "leagueName": "La Liga",
-      "products": [
-        {
-          "t": "Retro 2013  M&aacute;laga CF Third",
-          "h": "retro-2013-málaga-cf-third",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260104/1a75d9e65acde27f10d800ce0a93ed8b.png",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260104/1a75d9e65acde27f10d800ce0a93ed8b.png",
-          "p": "13.60",
-          "c": [
-            "retro"
-          ]
-        },
-        {
-          "t": "25/26  M&aacute;laga CF Third with laliga patch S-4XL",
-          "h": "25-26-málaga-cf-third-with-laliga-patch-s-4xl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251224/af33abebd06a53e3d1e35530ccedc540.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251224/af33abebd06a53e3d1e35530ccedc540.jpg",
-          "p": "11.20",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "MALAGA CF SPECIAL EDITION MALAGAVERSE T-SHIRT",
-          "h": "malaga-cf-special-edition-malagaverse-t-shirt",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251029/8f7691ca8959512a698cd04b91335b00.png",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251029/8f7691ca8959512a698cd04b91335b00.png",
-          "p": "9.60",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "25/26  M&aacute;laga CF Away with laliga patch S-4XL",
-          "h": "25-26-málaga-cf-away-with-laliga-patch",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250802/11efe64d18c9a9d67aa638ed62380a2f.png",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250802/11efe64d18c9a9d67aa638ed62380a2f.png",
-          "p": "11.20",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Kids M&aacute;laga 25/26 Home 16-28",
-          "h": "kids-málaga-25-26-home-16-28",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250718/6b23d1bb8727b1542f9fd90ba69647cf.png",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250718/6b23d1bb8727b1542f9fd90ba69647cf.png",
-          "p": "11.20",
-          "c": [
-            "kids"
-          ]
-        },
-        {
-          "t": "25/26  M&aacute;laga CF Home with laliga patch S-4XL",
-          "h": "25-26-málaga-cf-home-with-laliga-patch-s-4xl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250714/eb612b8a75528b7a3f4e291660fb6337.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250714/eb612b8a75528b7a3f4e291660fb6337.jpg",
-          "p": "11.20",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "25/26  M&aacute;laga CF 25th Anniversary Edition",
-          "h": "25-26-málaga-cf-25th-anniversary-edition-jersey",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250504/E1DBC395-83BD-6208-F3FE-A33773AFCEB6.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250504/E1DBC395-83BD-6208-F3FE-A33773AFCEB6.jpg",
-          "p": "10.40",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "M&aacute;laga 97/98 Away",
-          "h": "málaga-97-98-away-jersey",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250504/D3E56429-1175-AA2A-D5CB-51AC7CD5D29E.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250504/D3E56429-1175-AA2A-D5CB-51AC7CD5D29E.jpg",
-          "p": "13.60",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Retro 1998 M&aacute;laga CF Home",
-          "h": "retro-1998-málaga-cf-home-jersey",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250504/7F09B8E9-E7C4-F9F5-CDD2-34FB3D8F2FE7.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250504/7F09B8E9-E7C4-F9F5-CDD2-34FB3D8F2FE7.jpg",
-          "p": "14.40",
-          "c": [
-            "retro"
-          ]
-        },
-        {
-          "t": "Retro 05/06  M&aacute;laga CF Home",
-          "h": "retro-05-06-málaga-cf-home-jersey",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250504/D294B9C6-86AB-889E-106C-D3D99D3FA776.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250504/D294B9C6-86AB-889E-106C-D3D99D3FA776.jpg",
-          "p": "14.40",
-          "c": [
-            "retro"
-          ]
-        },
-        {
-          "t": "Retro 2013 M&aacute;laga Away",
-          "h": "retro-2013-málaga-away-jersey",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250504/9A3E10B9-A54A-948B-27FD-994F3895E631.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250504/9A3E10B9-A54A-948B-27FD-994F3895E631.jpg",
-          "p": "14.40",
-          "c": [
-            "retro"
-          ]
-        },
-        {
-          "t": "Retro 2013  M&aacute;laga CF Home",
-          "h": "2013-m-laga-cf-home-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250504/3155BFAC-161B-48B5-9B6B-905D82AF78F2.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250504/3155BFAC-161B-48B5-9B6B-905D82AF78F2.jpg",
-          "p": "13.60",
-          "c": [
-            "retro"
-          ]
-        }
-      ],
-      "productCount": 12
-    },
-    "la-liga__racingsantander": {
-      "name": "Racing Santander",
-      "slug": "racingsantander",
-      "league": "la-liga",
-      "leagueName": "La Liga",
-      "products": [
-        {
-          "t": "Santander Camiseta 113 aniversario S-XXL",
-          "h": "santander-113th-anniversary-jersey",
-          "i": "https://img.wpassets-gamma.com/images/5bc7536cc80decad5e50ae6d78182449.jpg",
-          "hi": "https://img.wpassets-gamma.com/images/5bc7536cc80decad5e50ae6d78182449.jpg",
-          "p": "10.40",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Retro Santander 98/00 White S-XXL",
-          "h": "retro-santander-98-00-white-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250823/5b0f668216d01e9c29b50bfceeed3785.webp",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250823/5b0f668216d01e9c29b50bfceeed3785.webp",
-          "p": "12.80",
-          "c": [
-            "retro"
-          ]
-        }
-      ],
-      "productCount": 2
     },
     "la-liga__oviedo": {
       "name": "Real Oviedo",
@@ -17494,473 +16767,6 @@
         }
       ],
       "productCount": 5
-    },
-    "la-liga__gijon": {
-      "name": "Sporting Gijón",
-      "slug": "gijon",
-      "league": "la-liga",
-      "leagueName": "La Liga",
-      "products": [
-        {
-          "t": "Retro Gijon 95/96 Home S-XXL",
-          "h": "retro-gijon-95-96-home-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260104/4a3f9f9182dc5184c3de1af9b24f16e9.png",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260104/4a3f9f9182dc5184c3de1af9b24f16e9.png",
-          "p": "12.80",
-          "c": [
-            "retro"
-          ]
-        },
-        {
-          "t": "Retro Gijon 94/95 Home S-XXL",
-          "h": "retro-gijon-94-95-home-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250612/c17187e1fd8d0405ef89c291219543cb.png",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250612/c17187e1fd8d0405ef89c291219543cb.png",
-          "p": "12.80",
-          "c": [
-            "retro"
-          ]
-        },
-        {
-          "t": "Retro Gijon 86/87 Home S-XXL",
-          "h": "retro-gijon-86-87-home-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250504/3D809BB7-A98A-436B-C124-5F95AEEB1722.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250504/3D809BB7-A98A-436B-C124-5F95AEEB1722.jpg",
-          "p": "12.80",
-          "c": [
-            "retro"
-          ]
-        },
-        {
-          "t": "Retro Gijon 2002/03 Third with La liga Patch S-XXL",
-          "h": "retro-gijon-2002-03-third-with-la-liga-patch-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250920/0e86815cfeabdd66615ecd747475b57a.jpeg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250920/0e86815cfeabdd66615ecd747475b57a.jpeg",
-          "p": "13.60",
-          "c": [
-            "retro"
-          ]
-        },
-        {
-          "t": "Retro Gijon 2001/02 Home S-XXL",
-          "h": "retro-gijon-2001-02-home-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250504/A2F9DCC7-B001-005C-CC7A-E037FFA3F57E.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250504/A2F9DCC7-B001-005C-CC7A-E037FFA3F57E.jpg",
-          "p": "12.80",
-          "c": [
-            "retro"
-          ]
-        },
-        {
-          "t": "Retro Gijon 15/16 Away S-XXL",
-          "h": "retro-gijon-15-16-away-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250504/7CB0760A-7C6C-79A9-99F3-D68FC07A5893.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250504/7CB0760A-7C6C-79A9-99F3-D68FC07A5893.jpg",
-          "p": "12.80",
-          "c": [
-            "retro"
-          ]
-        }
-      ],
-      "productCount": 6
-    },
-    "la-liga__tenerife": {
-      "name": "CD Tenerife",
-      "slug": "tenerife",
-      "league": "la-liga",
-      "leagueName": "La Liga",
-      "products": [
-        {
-          "t": "Tenerife 25/26 Home S-4XL",
-          "h": "tenerife-25-26-home-s-4xl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250814/7a38917b8d7532193035c4c215803d8a.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250814/7a38917b8d7532193035c4c215803d8a.jpg",
-          "p": "10.40",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Tenerife 25/26 Away S-4XL",
-          "h": "tenerife-25-26-away",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250814/4fab89b97e1129c455d8b84a3cf0dbe2.jpeg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250814/4fab89b97e1129c455d8b84a3cf0dbe2.jpeg",
-          "p": "10.40",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Tenerife 1998/99 Away S-XXL",
-          "h": "tenerife-1998-99-away-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250612/6810ac818e661898d0faee24d5a341f0.png",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250612/6810ac818e661898d0faee24d5a341f0.png",
-          "p": "13.60",
-          "c": [
-            "retro"
-          ]
-        },
-        {
-          "t": "CD Tenerife 75th anniversary edition  S-XXL",
-          "h": "cd-tenerife-75th-anniversary-edition-jersey-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250504/D1B9133E-2E56-60F6-18FB-12B0F7C87557.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250504/D1B9133E-2E56-60F6-18FB-12B0F7C87557.jpg",
-          "p": "13.60",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "CD Tenerife 1997/98 Away (75th anniversary edition）S-XXL",
-          "h": "cd-tenerife-1997-98-away-75th-anniversary-edition-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250504/743A897D-AF37-866C-5EE7-4A877D656AC9.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250504/743A897D-AF37-866C-5EE7-4A877D656AC9.jpg",
-          "p": "13.60",
-          "c": [
-            "retro"
-          ]
-        }
-      ],
-      "productCount": 5
-    },
-    "la-liga__valladolid": {
-      "name": "Real Valladolid",
-      "slug": "valladolid",
-      "league": "la-liga",
-      "leagueName": "La Liga",
-      "products": [
-        {
-          "t": "Real Valladolid CF 1984 Home S-XXL",
-          "h": "real-valladolid-cf-1984-home-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250727/29a4c086369658502cbabc754b32cac4.jpeg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250727/29a4c086369658502cbabc754b32cac4.jpeg",
-          "p": "13.60",
-          "c": [
-            "retro"
-          ]
-        },
-        {
-          "t": "Real Valladolid CF 1995/96 Home S-XXL",
-          "h": "real-valladolid-cf-1995-96-home-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250727/5bfb3181505204af73a20280e5a6a64b.jpeg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250727/5bfb3181505204af73a20280e5a6a64b.jpeg",
-          "p": "13.60",
-          "c": [
-            "retro"
-          ]
-        },
-        {
-          "t": "25/26 Real Valladolid Home with laliga patch S-4XL",
-          "h": "25-26-real-valladolid-home-with-laliga-patch-s-4xl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250814/a97d9f068d6723a5dbe266638749ee07.jpeg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250814/a97d9f068d6723a5dbe266638749ee07.jpeg",
-          "p": "11.20",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "25/26 Real Valladolid Away with laliga patch S-4XL",
-          "h": "25-26-real-valladolid-away-with-laliga-patch-s-4xl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250814/846212d6109665007ea0ce3845cd6226.jpeg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250814/846212d6109665007ea0ce3845cd6226.jpeg",
-          "p": "11.20",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Real Valladolid CF 1992/93 Home Jersey S-XXL",
-          "h": "real-valladolid-cf-1992-93-home-jersey-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260124/04d95d27f0f4408336f225cffb41e0ad.webp",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260124/04d95d27f0f4408336f225cffb41e0ad.webp",
-          "p": "13.60",
-          "c": [
-            "retro"
-          ]
-        }
-      ],
-      "productCount": 5
-    },
-    "la-liga__zaragoza": {
-      "name": "Real Zaragoza",
-      "slug": "zaragoza",
-      "league": "la-liga",
-      "leagueName": "La Liga",
-      "products": [
-        {
-          "t": "Retro Real Zaragoza 99/00 Home Jersey S-XXL",
-          "h": "real-zaragoza-99-00-home-jersey",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260203/b0d5d69bb43205e5a48ccad7de6e4829.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260203/b0d5d69bb43205e5a48ccad7de6e4829.jpg",
-          "p": "13.60",
-          "c": [
-            "retro"
-          ]
-        },
-        {
-          "t": "Real Zaragoza 25/26 Home Jersey S-XXL",
-          "h": "real-zaragoza-25-26-home-jersey-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251111/77074b3787c37abe7f7b2c8147ff2923.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251111/77074b3787c37abe7f7b2c8147ff2923.jpg",
-          "p": "10.40",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Retro Real Zaragoza 92/93 Jersey S-XXL",
-          "h": "retro-real-zaragoza-92-93-jersey-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250523/20B04035-FD63-C048-8C69-96DBE9BE7DA3.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250523/20B04035-FD63-C048-8C69-96DBE9BE7DA3.jpg",
-          "p": "13.60",
-          "c": [
-            "retro"
-          ]
-        },
-        {
-          "t": "Retro Real Zaragoza 95/96 Jersey S-4XL",
-          "h": "retro-real-zaragoza-95-96-jersey-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250523/52AA7672-FF21-2AB5-43B8-68CD3D0D3362.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250523/52AA7672-FF21-2AB5-43B8-68CD3D0D3362.jpg",
-          "p": "13.60",
-          "c": [
-            "retro"
-          ]
-        },
-        {
-          "t": "Retro Real Zaragoza 95/96 Home Jersey S-4XL",
-          "h": "retro-real-zaragoza-95-96-home-jersey-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250523/43B6708F-E17D-9318-24E9-D8CF6E334D08.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250523/43B6708F-E17D-9318-24E9-D8CF6E334D08.jpg",
-          "p": "13.60",
-          "c": [
-            "retro"
-          ]
-        },
-        {
-          "t": "Retro Real Zaragoza 95/96 third Jersey S-XXL",
-          "h": "retro-real-zaragoza-95-96-third-jersey-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250523/A1D1AB7D-2B41-4405-5630-C4E8F0B162CB.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250523/A1D1AB7D-2B41-4405-5630-C4E8F0B162CB.jpg",
-          "p": "13.60",
-          "c": [
-            "retro"
-          ]
-        },
-        {
-          "t": "Retro Real Zaragoza 2000/01 Home Jersey S-XXL",
-          "h": "retro-real-zaragoza-2000-01-home-jersey-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250523/D5D93169-43B5-29FB-0985-D64D16A4F1A1.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250523/D5D93169-43B5-29FB-0985-D64D16A4F1A1.jpg",
-          "p": "13.60",
-          "c": [
-            "retro"
-          ]
-        },
-        {
-          "t": "Retro Real Zaragoza 2000/01 Away Jersey S-XXL",
-          "h": "retro-real-zaragoza-2000-01-away-jersey-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250523/43FCFCA5-A55C-13CF-8EFE-88D9C044ED82.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250523/43FCFCA5-A55C-13CF-8EFE-88D9C044ED82.jpg",
-          "p": "13.60",
-          "c": [
-            "retro"
-          ]
-        }
-      ],
-      "productCount": 8
-    },
-    "la-liga__coruna": {
-      "name": "Deportivo La Coruña",
-      "slug": "coruna",
-      "league": "la-liga",
-      "leagueName": "La Liga",
-      "products": [
-        {
-          "t": "Kids La Coruna 25/26 Third 16-28",
-          "h": "kids-la-coruna-25-26-third-16-28",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250906/00a02f308013193d0d3d2df1bb72520c.png",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250906/00a02f308013193d0d3d2df1bb72520c.png",
-          "p": "11.20",
-          "c": [
-            "kids"
-          ]
-        },
-        {
-          "t": "Kids La Coruna 25/26 Home 16-28",
-          "h": "kids-la-coruna-25-26-home-16-28",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250906/100af1fd7eaa26d10cada94b4c8708e3.png",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250906/100af1fd7eaa26d10cada94b4c8708e3.png",
-          "p": "11.20",
-          "c": [
-            "kids"
-          ]
-        },
-        {
-          "t": "La Coruna 25/26 Third with laliga patch S-4XL",
-          "h": "la-coruna-25-26-third-with-laliga-patch-s-4xl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250814/6726217079c21079c65c38eda6a6fde0.jpeg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250814/6726217079c21079c65c38eda6a6fde0.jpeg",
-          "p": "11.20",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "La Coruna 25/26 Away with laliga patch S-4XL",
-          "h": "la-coruna-24-25-home-with-laliga-patch-s-4xl_2d044e04",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250917/071dba25bfd83cd4f6aaa33d2038f30c.webp",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250917/071dba25bfd83cd4f6aaa33d2038f30c.webp",
-          "p": "11.20",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "La Coruna 25/26 Home with laliga patch S-4XL",
-          "h": "la-coruna-25-26-home-with-laliga-patch-s-4xl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250814/64303176be65c4e19f25bc0a143ecee0.jpeg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250814/64303176be65c4e19f25bc0a143ecee0.jpeg",
-          "p": "11.20",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "La Coruna 25TH Year Long Sleeves S-XXL",
-          "h": "la-coruna-25th-year-long-sleeves-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250608/d744fd5f69662e17f81072356d3b2e23.jpeg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250608/d744fd5f69662e17f81072356d3b2e23.jpeg",
-          "p": "11.20",
-          "c": [
-            "longsleeve"
-          ]
-        },
-        {
-          "t": "La Coruna 25TH Year S-4XL",
-          "h": "la-coruna-25th-year-s-4xl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250524/6B152757-2A8B-EB52-A952-77589E284CCE.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250524/6B152757-2A8B-EB52-A952-77589E284CCE.jpg",
-          "p": "10.40",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Retro Deportivo La Coruna 1994/95 Home",
-          "h": "retro-deportivo-la-coruna-1994-95-home",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250515/8884969f306f8bead5e91eaf49cbba90.png",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250515/8884969f306f8bead5e91eaf49cbba90.png",
-          "p": "14.40",
-          "c": [
-            "retro"
-          ]
-        },
-        {
-          "t": "Retro Deportivo La Coruna 1999/2000 Home Long Sleeves",
-          "h": "retro-deportivo-la-coruna-1999-2000-home_f3e91cb1",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250514/2f768b8af7f5b58ffaec34ee741863bd.png",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250514/2f768b8af7f5b58ffaec34ee741863bd.png",
-          "p": "16.00",
-          "c": [
-            "longsleeve",
-            "retro"
-          ]
-        },
-        {
-          "t": "Retro Deportivo La Coruna 2003/04 Home",
-          "h": "retro-deportivo-la-coruna-2003-04-home",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250503/27e225b5dfee1e7a4f24b2bd97e08d3e.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250503/27e225b5dfee1e7a4f24b2bd97e08d3e.jpg",
-          "p": "13.60",
-          "c": [
-            "retro"
-          ]
-        },
-        {
-          "t": "Retro Deportivo La Coruna 1999/2000 Home",
-          "h": "retro-deportivo-la-coruna-1999-2000-home",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250503/09a305d5ac33fbb3836e1bd5798ae4fb.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250503/09a305d5ac33fbb3836e1bd5798ae4fb.jpg",
-          "p": "14.40",
-          "c": [
-            "retro"
-          ]
-        },
-        {
-          "t": "Retro Deportivo La Coruna 1999/2000 Away Long Sleeves",
-          "h": "retro-deportivo-la-coruna-1999-2000-away-long-sleeves",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250503/fb74d25cee72093717bc7041e502b679.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250503/fb74d25cee72093717bc7041e502b679.jpg",
-          "p": "15.20",
-          "c": [
-            "longsleeve",
-            "retro"
-          ]
-        },
-        {
-          "t": "Retro Deportivo La Coruna 1999/2000 Away",
-          "h": "retro-deportivo-la-coruna-1999-2000-away",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250503/6c1365387bdfd37828933f6b47dcbd09.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250503/6c1365387bdfd37828933f6b47dcbd09.jpg",
-          "p": "12.80",
-          "c": [
-            "retro"
-          ]
-        },
-        {
-          "t": "Retro Deportivo La Coruna 1999/2000 Third",
-          "h": "retro-deportivo-la-coruna-1999-2000-third",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250514/2bb022273a3592943597d32eb3bd4041.png",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250514/2bb022273a3592943597d32eb3bd4041.png",
-          "p": "12.80",
-          "c": [
-            "retro"
-          ]
-        },
-        {
-          "t": "Retro Deportivo La Coruna 1999/2000 Away",
-          "h": "retro-deportivo-la-coruna-1999-2000-away-jersey-1",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250503/02f85fac7f95c54090bfabfaaadece19.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250503/02f85fac7f95c54090bfabfaaadece19.jpg",
-          "p": "13.60",
-          "c": [
-            "retro"
-          ]
-        },
-        {
-          "t": "Retro Deportivo La Coruna 1998/99 Third",
-          "h": "retro-deportivo-la-coruna-1998-99-third",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250503/fd6b245912b50d2d3bb5cbbbb42bcb60.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250503/fd6b245912b50d2d3bb5cbbbb42bcb60.jpg",
-          "p": "12.80",
-          "c": [
-            "retro"
-          ]
-        },
-        {
-          "t": "Retro Deportivo La Coruna 1997/98 Home",
-          "h": "retro-deportivo-la-coruna-1997-98-home",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250503/0ae21e2d4990c5a652e99d088f9fcb6c.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250503/0ae21e2d4990c5a652e99d088f9fcb6c.jpg",
-          "p": "14.40",
-          "c": [
-            "retro"
-          ]
-        },
-        {
-          "t": "Retro Deportivo La Coruna 1997/98 Away",
-          "h": "retro-deportivo-la-coruna-1997-98-away",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250503/1f383296b7a0dbfd9613c98ef3d19d05.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250503/1f383296b7a0dbfd9613c98ef3d19d05.jpg",
-          "p": "14.40",
-          "c": [
-            "retro"
-          ]
-        }
-      ],
-      "productCount": 18
     },
     "bundesliga__bayern": {
       "name": "Bayern München",
@@ -52393,11 +51199,427 @@
       ],
       "productCount": 4
     },
-    "efl-championship__ipswich": {
+    "la-liga__villarreal": {
+      "name": "Villarreal CF",
+      "slug": "villarreal",
+      "league": "la-liga",
+      "leagueName": "La Liga",
+      "products": [
+        {
+          "t": "Villarreal 25/26 Home With Patch S-4XL",
+          "h": "villarreal-25-26-home-with-patch-s-4xl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250625/bf0150653a290e40d704a4780e13f65a.png",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250625/bf0150653a290e40d704a4780e13f65a.png",
+          "p": "11.20",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "Retro Villarreal CF 05/06 Home S-XXL",
+          "h": "retro-villarreal-cf-05-06-home-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250504/A2E3C780-8C9B-0C72-CE4B-BA299FE9280A.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250504/A2E3C780-8C9B-0C72-CE4B-BA299FE9280A.jpg",
+          "p": "12.80",
+          "c": [
+            "retro"
+          ]
+        },
+        {
+          "t": "Retro Villarreal CF 08/09 Home Jersey S-XXL",
+          "h": "retro-villarreal-cf-08-09-home-jersey-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260124/c1d1d7d12b09d2d9285e167c767bc1ab.webp",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260124/c1d1d7d12b09d2d9285e167c767bc1ab.webp",
+          "p": "12.80",
+          "c": [
+            "retro"
+          ]
+        },
+        {
+          "t": "Retro Villarreal CF 08/09 Home Jersey Long Sleeves S-XXL",
+          "h": "retro-villarreal-cf-08-09-home-jersey-long-sleeves-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260124/c3a5d890630a61bfadc87ffed588c37c.webp",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260124/c3a5d890630a61bfadc87ffed588c37c.webp",
+          "p": "14.40",
+          "c": [
+            "longsleeve",
+            "retro"
+          ]
+        }
+      ],
+      "productCount": 4
+    },
+    "la-liga__girona": {
+      "name": "Girona FC",
+      "slug": "girona",
+      "league": "la-liga",
+      "leagueName": "La Liga",
+      "products": [
+        {
+          "t": "Girona25/26 Away S-XXL",
+          "h": "gironα-25-26-away-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250612/24648fe42c85c033d9e4e2015f912752.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250612/24648fe42c85c033d9e4e2015f912752.jpg",
+          "p": "9.60",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "Girona25/26 Home S-XXL",
+          "h": "gironα-25-26-home-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250612/50099721ea4980fec2d9bd5b1591b009.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250612/50099721ea4980fec2d9bd5b1591b009.jpg",
+          "p": "9.60",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "Girona25/26 Third S-XXL",
+          "h": "gironα-25-26-third-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250612/fc7f5eea1278f4ea03b06f4fb1457951.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250612/fc7f5eea1278f4ea03b06f4fb1457951.jpg",
+          "p": "9.60",
+          "c": [
+            "fan"
+          ]
+        }
+      ],
+      "productCount": 3
+    },
+    "la-liga__osasuna": {
+      "name": "CA Osasuna",
+      "slug": "osasuna",
+      "league": "la-liga",
+      "leagueName": "La Liga",
+      "products": [
+        {
+          "t": "Retro 96/97 Osasuna Home Jersey S-XXL",
+          "h": "retro-96-97-osasuna-home-jersey-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250504/E8D43301-E8C5-61C0-A2B6-CC154DB4A62F.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250504/E8D43301-E8C5-61C0-A2B6-CC154DB4A62F.jpg",
+          "p": "13.60",
+          "c": [
+            "retro"
+          ]
+        },
+        {
+          "t": "Osasuna 25/26 Home S-XXL",
+          "h": "osasuna-25-26-home-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250820/f527e6b8f10cabbb11382d2bb91c427a.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250820/f527e6b8f10cabbb11382d2bb91c427a.jpg",
+          "p": "9.60",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "Osasuna 25/26 Away S-XXL",
+          "h": "osasuna-25-26-away-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250820/5b468ff7a712e34c676e2a639aefaaba.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250820/5b468ff7a712e34c676e2a639aefaaba.jpg",
+          "p": "9.60",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "Osasuna 25/26 Third S-XXL",
+          "h": "osasuna-25-26-third-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250820/1c4d877772069155322ed5c3d9dd52f8.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250820/1c4d877772069155322ed5c3d9dd52f8.jpg",
+          "p": "9.60",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "Retro 95/96 Osasuna Home Jersey S-XXL",
+          "h": "retro-95-96-osasuna-home-jersey-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251205/84bd3ae6b45dc4711713546ae7893305.webp",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251205/84bd3ae6b45dc4711713546ae7893305.webp",
+          "p": "13.60",
+          "c": [
+            "retro"
+          ]
+        },
+        {
+          "t": "Retro 00/01 Osasuna Home Jersey S-XXL",
+          "h": "00-01-osasuna-home-jersey",
+          "i": "https://img.wpassets-gamma.com/images/17bc0f39060db7f68f9b38c5bbfe810d.jpg",
+          "hi": "https://img.wpassets-gamma.com/images/17bc0f39060db7f68f9b38c5bbfe810d.jpg",
+          "p": "13.60",
+          "c": [
+            "retro"
+          ]
+        },
+        {
+          "t": "Retro 10/12 Osasuna Away Jersey S-XXL",
+          "h": "10-12-osasuna-away-jersey",
+          "i": "https://img.wpassets-gamma.com/images/26c768fa67fd9a9afe86a73b470c15ff.jpg",
+          "hi": "https://img.wpassets-gamma.com/images/26c768fa67fd9a9afe86a73b470c15ff.jpg",
+          "p": "13.60",
+          "c": [
+            "retro"
+          ]
+        }
+      ],
+      "productCount": 7
+    },
+    "la-liga__rayovallecano": {
+      "name": "Rayo Vallecano",
+      "slug": "rayovallecano",
+      "league": "la-liga",
+      "leagueName": "La Liga",
+      "products": [
+        {
+          "t": "Rayo Vallecano de Madrid 2001/02 Home S-XXL",
+          "h": "rayo-vallecano-de-madrid-2001-02-home-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250709/836482d4e0ed0e23498015fb89d363ee.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250709/836482d4e0ed0e23498015fb89d363ee.jpg",
+          "p": "13.60",
+          "c": [
+            "retro"
+          ]
+        },
+        {
+          "t": "Rayo Vallecano 94/95 Home S-XXL",
+          "h": "rayo-vallecano-94-95-home-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250709/69c6fa15fe1afbaae7dfa5f64d4854d6.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250709/69c6fa15fe1afbaae7dfa5f64d4854d6.jpg",
+          "p": "13.60",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "Rayo Vallecano 97/98 Home S-XXL",
+          "h": "rayo-vallecano-97-98-home-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250709/18b438380d27ee3367757af3538d0c86.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250709/18b438380d27ee3367757af3538d0c86.jpg",
+          "p": "13.60",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "Rayo Vallecano 25/26 Home Jersey S-XXL Fan Version",
+          "h": "rayo-vallecano-25-26-home-jersey-s-xxl-fan-version",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251112/7da3b2edce3015bbe89fca6cd21c1d13.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251112/7da3b2edce3015bbe89fca6cd21c1d13.jpg",
+          "p": "9.60",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "Rayo Vallecano 25/26 Away Jersey S-XXL Fan Version",
+          "h": "rayo-vallecano-25-26-away-jersey-s-xxl-fan-version",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251112/2855d88f0962f34c3c16d514e87e1a1a.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251112/2855d88f0962f34c3c16d514e87e1a1a.jpg",
+          "p": "9.60",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "Rayo Vallecano 25/26 Third Jersey S-XXL Fan Version",
+          "h": "rayo-vallecano-25-26-third-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251112/12fadb3033e47a6ca52019566ac95c72.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251112/12fadb3033e47a6ca52019566ac95c72.jpg",
+          "p": "9.60",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "Kids Kit Rayo Vallecano 25/26 Third",
+          "h": "kids-kit-rayo-vallecano-25-26-third",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251112/39b2dffadac5d7ec897359c6fc190e15.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251112/39b2dffadac5d7ec897359c6fc190e15.jpg",
+          "p": "11.20",
+          "c": [
+            "kids"
+          ]
+        },
+        {
+          "t": "Kids Kit Rayo Vallecano 25/26 Away",
+          "h": "kids-kit-rayo-vallecano-25-26-away",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251112/4128b7400f6ef47f92062ce2f668eec1.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251112/4128b7400f6ef47f92062ce2f668eec1.jpg",
+          "p": "11.20",
+          "c": [
+            "kids"
+          ]
+        },
+        {
+          "t": "Kids Kit Rayo Vallecano 25/26 Home",
+          "h": "kids-kit-rayo-vallecano-25-26-home",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251112/bb12caafc982e9b4a0179cf636482f68.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251112/bb12caafc982e9b4a0179cf636482f68.jpg",
+          "p": "11.20",
+          "c": [
+            "kids"
+          ]
+        }
+      ],
+      "productCount": 9
+    },
+    "la-liga__getafe": {
+      "name": "Getafe CF",
+      "slug": "getafe",
+      "league": "la-liga",
+      "leagueName": "La Liga",
+      "products": [
+        {
+          "t": "Retro Getafe 98/99 Home Jersey S-XXL",
+          "h": "retro-getafe-98-99-home-jersey-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251212/c98a6aa7c45abb99c0f88ab680a097f2.webp",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251212/c98a6aa7c45abb99c0f88ab680a097f2.webp",
+          "p": "13.60",
+          "c": [
+            "retro"
+          ]
+        },
+        {
+          "t": "Retro 94/95 Getafe Home Jersey S-XXL",
+          "h": "retro-94-95-getafe-home-jersey-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250504/7FD612A3-6E3B-5728-1F79-2EFEBA5487AC.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250504/7FD612A3-6E3B-5728-1F79-2EFEBA5487AC.jpg",
+          "p": "12.80",
+          "c": [
+            "retro"
+          ]
+        },
+        {
+          "t": "Getafe 25/26 Home S-XXL",
+          "h": "getafe-25-26-home-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250814/c100b441d3ab1b26d645133266ccc1fd.jpeg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250814/c100b441d3ab1b26d645133266ccc1fd.jpeg",
+          "p": "9.60",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "Getafe 25/26 Away S-XXL",
+          "h": "getafe-25-26-away-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250814/f18bcacd57ac092fb503966d05c9646e.jpeg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250814/f18bcacd57ac092fb503966d05c9646e.jpeg",
+          "p": "9.60",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "Retro Getafe 98/99 Home Jersey Long Sleeves S-XXL",
+          "h": "retro-getafe-98-99-home-jersey-long-sleeves-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251212/4ab388f7c636cc6988ec432ceb8643b1.webp",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251212/4ab388f7c636cc6988ec432ceb8643b1.webp",
+          "p": "15.20",
+          "c": [
+            "longsleeve",
+            "retro"
+          ]
+        },
+        {
+          "t": "Retro Getafe 09/10 Home Jersey S-XXL",
+          "h": "getafe-09-10-home-jersey",
+          "i": "https://img.wpassets-gamma.com/images/c97272a3bfbbd9aa6e95f697478c844f.webp",
+          "hi": "https://img.wpassets-gamma.com/images/c97272a3bfbbd9aa6e95f697478c844f.webp",
+          "p": "13.60",
+          "c": [
+            "retro"
+          ]
+        }
+      ],
+      "productCount": 6
+    },
+    "la-liga__espanyol": {
+      "name": "RCD Espanyol",
+      "slug": "espanyol",
+      "league": "la-liga",
+      "leagueName": "La Liga",
+      "products": [
+        {
+          "t": "RCD Espanyol 1996/97 Third S-XXL",
+          "h": "rcd-espanyol-1996-97-third-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251106/266ea9e6cbec561afad3985ddbda91e1.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251106/266ea9e6cbec561afad3985ddbda91e1.jpg",
+          "p": "12.80",
+          "c": [
+            "retro"
+          ]
+        },
+        {
+          "t": "RCD Espanyol 84/89 Home S-XXL",
+          "h": "rcd-espanyol-84-89-home-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250504/B162EC43-0333-F7EA-39CE-7CD56B07EF86.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250504/B162EC43-0333-F7EA-39CE-7CD56B07EF86.jpg",
+          "p": "12.80",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "Espanyol 99/00 Home S-XXL",
+          "h": "espanyol-99-00-home-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250614/3e47d23e81fa7613d0da92d03b05306a.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250614/3e47d23e81fa7613d0da92d03b05306a.jpg",
+          "p": "12.80",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "RCD Espanyol 125th Anniversary Jersey S-XXL",
+          "h": "rcd-espanyol-125th-anniversary-jersey-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251031/c6c8e432995ff5b519df65131d2ab294.png",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251031/c6c8e432995ff5b519df65131d2ab294.png",
+          "p": "9.60",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "Espanyol 25-26 Third Jersey S-XXL Fan Version",
+          "h": "espanyol-25-26-third-jersey-s-xxl-fan-version",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251106/d76860121c0b47d1308d43d6b262363f.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251106/d76860121c0b47d1308d43d6b262363f.jpg",
+          "p": "9.60",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "Espanyol 25-26 Away Jersey S-XXL Fan Version",
+          "h": "espanyol-25-26-away-jersey-s-xxl-fan-version",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251106/be4b26a1e3aff9b8379baa74f9489732.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251106/be4b26a1e3aff9b8379baa74f9489732.jpg",
+          "p": "9.60",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "Espanyol 25-26 Home Jersey S-XXL Fan Version",
+          "h": "espanyol-25-26-home-jersey-s-xxl-fan-version",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251106/c8b4de2db38a1b26e7c0e20e9449ad43.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251106/c8b4de2db38a1b26e7c0e20e9449ad43.jpg",
+          "p": "9.60",
+          "c": [
+            "fan"
+          ]
+        }
+      ],
+      "productCount": 7
+    },
+    "zweitligisten__ipswich": {
       "name": "Ipswich Town",
       "slug": "ipswich",
-      "league": "efl-championship",
-      "leagueName": "EFL Championship",
+      "league": "zweitligisten",
+      "leagueName": "2. Ligisten",
       "products": [
         {
           "t": "Ipswich 25/26 Home S-4XL",
@@ -52420,13 +51642,14 @@
           ]
         }
       ],
-      "productCount": 2
+      "productCount": 2,
+      "subLeague": "EFL Championship"
     },
-    "efl-championship__leicester": {
+    "zweitligisten__leicester": {
       "name": "Leicester City",
       "slug": "leicester",
-      "league": "efl-championship",
-      "leagueName": "EFL Championship",
+      "league": "zweitligisten",
+      "leagueName": "2. Ligisten",
       "products": [
         {
           "t": "Retro Leicester City 15/16 Away S-XXL",
@@ -52469,13 +51692,14 @@
           ]
         }
       ],
-      "productCount": 4
+      "productCount": 4,
+      "subLeague": "EFL Championship"
     },
-    "efl-championship__southampton": {
+    "zweitligisten__southampton": {
       "name": "Southampton FC",
       "slug": "southampton",
-      "league": "efl-championship",
-      "leagueName": "EFL Championship",
+      "league": "zweitligisten",
+      "leagueName": "2. Ligisten",
       "products": [
         {
           "t": "Southampton 50 Year Anniversary Shirt",
@@ -52538,13 +51762,14 @@
           ]
         }
       ],
-      "productCount": 6
+      "productCount": 6,
+      "subLeague": "EFL Championship"
     },
-    "efl-championship__middlesbrough": {
+    "zweitligisten__middlesbrough": {
       "name": "Middlesbrough FC",
       "slug": "middlesbrough",
-      "league": "efl-championship",
-      "leagueName": "EFL Championship",
+      "league": "zweitligisten",
+      "leagueName": "2. Ligisten",
       "products": [
         {
           "t": "Middlesbrough 25/26 Home S-4XL",
@@ -52567,13 +51792,14 @@
           ]
         }
       ],
-      "productCount": 2
+      "productCount": 2,
+      "subLeague": "EFL Championship"
     },
-    "efl-championship__portsmouth": {
+    "zweitligisten__portsmouth": {
       "name": "Portsmouth FC",
       "slug": "portsmouth",
-      "league": "efl-championship",
-      "leagueName": "EFL Championship",
+      "league": "zweitligisten",
+      "leagueName": "2. Ligisten",
       "products": [
         {
           "t": "Portsmouth 25/26 Home S-4XL",
@@ -52606,13 +51832,14 @@
           ]
         }
       ],
-      "productCount": 3
+      "productCount": 3,
+      "subLeague": "EFL Championship"
     },
-    "efl-championship__watford": {
+    "zweitligisten__watford": {
       "name": "Watford FC",
       "slug": "watford",
-      "league": "efl-championship",
-      "leagueName": "EFL Championship",
+      "league": "zweitligisten",
+      "leagueName": "2. Ligisten",
       "products": [
         {
           "t": "Watford 25/26 Home S-XXL",
@@ -52625,13 +51852,14 @@
           ]
         }
       ],
-      "productCount": 1
+      "productCount": 1,
+      "subLeague": "EFL Championship"
     },
-    "efl-championship__derbycounty": {
+    "zweitligisten__derbycounty": {
       "name": "Derby County",
       "slug": "derbycounty",
-      "league": "efl-championship",
-      "leagueName": "EFL Championship",
+      "league": "zweitligisten",
+      "leagueName": "2. Ligisten",
       "products": [
         {
           "t": "Derby County F.C. 25/26 Home S-4XL Fan Version",
@@ -52654,13 +51882,14 @@
           ]
         }
       ],
-      "productCount": 2
+      "productCount": 2,
+      "subLeague": "EFL Championship"
     },
-    "efl-championship__hullcity": {
+    "zweitligisten__hullcity": {
       "name": "Hull City",
       "slug": "hullcity",
-      "league": "efl-championship",
-      "leagueName": "EFL Championship",
+      "league": "zweitligisten",
+      "leagueName": "2. Ligisten",
       "products": [
         {
           "t": "Hull City 25/26 Home Jersey S-4XL",
@@ -52714,13 +51943,14 @@
           ]
         }
       ],
-      "productCount": 5
+      "productCount": 5,
+      "subLeague": "EFL Championship"
     },
-    "efl-championship__northampton": {
+    "zweitligisten__northampton": {
       "name": "Northampton Town",
       "slug": "northampton",
-      "league": "efl-championship",
-      "leagueName": "EFL Championship",
+      "league": "zweitligisten",
+      "leagueName": "2. Ligisten",
       "products": [
         {
           "t": "Northampton 25/26 Home S-4XL",
@@ -52733,13 +51963,14 @@
           ]
         }
       ],
-      "productCount": 1
+      "productCount": 1,
+      "subLeague": "EFL Championship"
     },
-    "efl-championship__blackburn": {
+    "zweitligisten__blackburn": {
       "name": "Blackburn Rovers",
       "slug": "blackburn",
-      "league": "efl-championship",
-      "leagueName": "EFL Championship",
+      "league": "zweitligisten",
+      "leagueName": "2. Ligisten",
       "products": [
         {
           "t": "Blackburn Rovers Home 2025/26 - Mens",
@@ -52783,7 +52014,950 @@
           ]
         }
       ],
-      "productCount": 4
+      "productCount": 4,
+      "subLeague": "EFL Championship"
+    },
+    "zweitligisten__laspalmas": {
+      "name": "UD Las Palmas",
+      "slug": "laspalmas",
+      "league": "zweitligisten",
+      "leagueName": "2. Ligisten",
+      "products": [
+        {
+          "t": "Las Palmas 25/26 Third with laliga patch S-4XL",
+          "h": "las-palmas-25-26-third-with-laliga-patch-s-4xl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260109/f2d2ceefda1a476eca04c429aaafe8f4.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260109/f2d2ceefda1a476eca04c429aaafe8f4.jpg",
+          "p": "11.20",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "Las Palmas 25/26 Away with laliga patch S-4XL",
+          "h": "las-palmas-25-26-away-with-laliga-patch-s-4xl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250802/93224ffbbe7c49f384506777b7fda32a.png",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250802/93224ffbbe7c49f384506777b7fda32a.png",
+          "p": "11.20",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "Las Palmas 25/26 Home with laliga patch S-4XL",
+          "h": "las-palmas-25-26-home-with-laliga-patch-s-4xl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250802/6ba9af49caca8f0eac864dd3fdc07661.png",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250802/6ba9af49caca8f0eac864dd3fdc07661.png",
+          "p": "11.20",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "Retro 97/98 Las Palmas Away S-XXL",
+          "h": "retro-97-98-las-palmas-away-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250802/e92eae6255722e95f2dd83078d2a7267.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250802/e92eae6255722e95f2dd83078d2a7267.jpg",
+          "p": "13.60",
+          "c": [
+            "retro"
+          ]
+        },
+        {
+          "t": "Retro 97/98 Las Palmas Home S-XXL",
+          "h": "retro-97-98-las-palmas-home-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250802/7bdf942b9bc580b3dfd9636b770810d2.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250802/7bdf942b9bc580b3dfd9636b770810d2.jpg",
+          "p": "13.60",
+          "c": [
+            "retro"
+          ]
+        }
+      ],
+      "productCount": 5,
+      "subLeague": "Segunda División"
+    },
+    "zweitligisten__albacete": {
+      "name": "Albacete",
+      "slug": "albacete",
+      "league": "zweitligisten",
+      "leagueName": "2. Ligisten",
+      "products": [
+        {
+          "t": "Albacete 2025/26 Third Jersey S-4XL Fan Version",
+          "h": "albacete-2025-26-third-jersey-s-4xl-fan-version",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251128/4449820397814fb77c27141645c03ea8.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251128/4449820397814fb77c27141645c03ea8.jpg",
+          "p": "9.60",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "Albacete 2025/26 Away Jersey S-4XL Fan Version",
+          "h": "albacete-2025-26-away-jersey-s-4xl-fan-version",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250925/e9d45a38cc79cd49530254a1416ac4d9.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250925/e9d45a38cc79cd49530254a1416ac4d9.jpg",
+          "p": "9.60",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "Albacete 2025/26 Home Jersey S-4XL Fan Version",
+          "h": "albacete-2025-26-home-jersey-s-4xl-fan-version",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250925/451b14f7d7df1bd6aa879187c40ec8ad.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250925/451b14f7d7df1bd6aa879187c40ec8ad.jpg",
+          "p": "9.60",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "Retro 94/95 Albacete Balompie  Away S-XXL",
+          "h": "retro-94-95-albacete-balompie-away-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250523/51B5407E-55BC-C91B-D994-8E0F56DF1511.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250523/51B5407E-55BC-C91B-D994-8E0F56DF1511.jpg",
+          "p": "12.80",
+          "c": [
+            "retro"
+          ]
+        },
+        {
+          "t": "Retro 95/96 Albacete Balompie Home S-XXL",
+          "h": "retro-95-96-albacete-balompie-home-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250523/D9C6C615-9D1C-47CA-9B87-AA14D96CA01C.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250523/D9C6C615-9D1C-47CA-9B87-AA14D96CA01C.jpg",
+          "p": "12.80",
+          "c": [
+            "retro"
+          ]
+        }
+      ],
+      "productCount": 5,
+      "subLeague": "Segunda División"
+    },
+    "zweitligisten__cadiz": {
+      "name": "Cádiz CF",
+      "slug": "cadiz",
+      "league": "zweitligisten",
+      "leagueName": "2. Ligisten",
+      "products": [
+        {
+          "t": "Cadiz CF 25/26 Home with Patch S-4XL",
+          "h": "cadiz-cf-25-26-home-with-patch-s-4xl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250721/116f1435445f828f0e001ffda4c2bbc0.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250721/116f1435445f828f0e001ffda4c2bbc0.jpg",
+          "p": "11.20",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "Retro Cadiz CF 1991-92 Home S-XXL",
+          "h": "retro-cadiz-cf-1991-92-home-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250523/511F5222-4917-4B27-145D-CBA75D143A58.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250523/511F5222-4917-4B27-145D-CBA75D143A58.jpg",
+          "p": "13.60",
+          "c": [
+            "retro"
+          ]
+        }
+      ],
+      "productCount": 2,
+      "subLeague": "Segunda División"
+    },
+    "zweitligisten__malaga": {
+      "name": "Málaga CF",
+      "slug": "malaga",
+      "league": "zweitligisten",
+      "leagueName": "2. Ligisten",
+      "products": [
+        {
+          "t": "Retro 2013  M&aacute;laga CF Third",
+          "h": "retro-2013-málaga-cf-third",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260104/1a75d9e65acde27f10d800ce0a93ed8b.png",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260104/1a75d9e65acde27f10d800ce0a93ed8b.png",
+          "p": "13.60",
+          "c": [
+            "retro"
+          ]
+        },
+        {
+          "t": "25/26  M&aacute;laga CF Third with laliga patch S-4XL",
+          "h": "25-26-málaga-cf-third-with-laliga-patch-s-4xl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251224/af33abebd06a53e3d1e35530ccedc540.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251224/af33abebd06a53e3d1e35530ccedc540.jpg",
+          "p": "11.20",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "MALAGA CF SPECIAL EDITION MALAGAVERSE T-SHIRT",
+          "h": "malaga-cf-special-edition-malagaverse-t-shirt",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251029/8f7691ca8959512a698cd04b91335b00.png",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251029/8f7691ca8959512a698cd04b91335b00.png",
+          "p": "9.60",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "25/26  M&aacute;laga CF Away with laliga patch S-4XL",
+          "h": "25-26-málaga-cf-away-with-laliga-patch",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250802/11efe64d18c9a9d67aa638ed62380a2f.png",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250802/11efe64d18c9a9d67aa638ed62380a2f.png",
+          "p": "11.20",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "Kids M&aacute;laga 25/26 Home 16-28",
+          "h": "kids-málaga-25-26-home-16-28",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250718/6b23d1bb8727b1542f9fd90ba69647cf.png",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250718/6b23d1bb8727b1542f9fd90ba69647cf.png",
+          "p": "11.20",
+          "c": [
+            "kids"
+          ]
+        },
+        {
+          "t": "25/26  M&aacute;laga CF Home with laliga patch S-4XL",
+          "h": "25-26-málaga-cf-home-with-laliga-patch-s-4xl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250714/eb612b8a75528b7a3f4e291660fb6337.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250714/eb612b8a75528b7a3f4e291660fb6337.jpg",
+          "p": "11.20",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "25/26  M&aacute;laga CF 25th Anniversary Edition",
+          "h": "25-26-málaga-cf-25th-anniversary-edition-jersey",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250504/E1DBC395-83BD-6208-F3FE-A33773AFCEB6.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250504/E1DBC395-83BD-6208-F3FE-A33773AFCEB6.jpg",
+          "p": "10.40",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "M&aacute;laga 97/98 Away",
+          "h": "málaga-97-98-away-jersey",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250504/D3E56429-1175-AA2A-D5CB-51AC7CD5D29E.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250504/D3E56429-1175-AA2A-D5CB-51AC7CD5D29E.jpg",
+          "p": "13.60",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "Retro 1998 M&aacute;laga CF Home",
+          "h": "retro-1998-málaga-cf-home-jersey",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250504/7F09B8E9-E7C4-F9F5-CDD2-34FB3D8F2FE7.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250504/7F09B8E9-E7C4-F9F5-CDD2-34FB3D8F2FE7.jpg",
+          "p": "14.40",
+          "c": [
+            "retro"
+          ]
+        },
+        {
+          "t": "Retro 05/06  M&aacute;laga CF Home",
+          "h": "retro-05-06-málaga-cf-home-jersey",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250504/D294B9C6-86AB-889E-106C-D3D99D3FA776.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250504/D294B9C6-86AB-889E-106C-D3D99D3FA776.jpg",
+          "p": "14.40",
+          "c": [
+            "retro"
+          ]
+        },
+        {
+          "t": "Retro 2013 M&aacute;laga Away",
+          "h": "retro-2013-málaga-away-jersey",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250504/9A3E10B9-A54A-948B-27FD-994F3895E631.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250504/9A3E10B9-A54A-948B-27FD-994F3895E631.jpg",
+          "p": "14.40",
+          "c": [
+            "retro"
+          ]
+        },
+        {
+          "t": "Retro 2013  M&aacute;laga CF Home",
+          "h": "2013-m-laga-cf-home-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250504/3155BFAC-161B-48B5-9B6B-905D82AF78F2.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250504/3155BFAC-161B-48B5-9B6B-905D82AF78F2.jpg",
+          "p": "13.60",
+          "c": [
+            "retro"
+          ]
+        }
+      ],
+      "productCount": 12,
+      "subLeague": "Segunda División"
+    },
+    "zweitligisten__racingsantander": {
+      "name": "Racing Santander",
+      "slug": "racingsantander",
+      "league": "zweitligisten",
+      "leagueName": "2. Ligisten",
+      "products": [
+        {
+          "t": "Santander Camiseta 113 aniversario S-XXL",
+          "h": "santander-113th-anniversary-jersey",
+          "i": "https://img.wpassets-gamma.com/images/5bc7536cc80decad5e50ae6d78182449.jpg",
+          "hi": "https://img.wpassets-gamma.com/images/5bc7536cc80decad5e50ae6d78182449.jpg",
+          "p": "10.40",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "Retro Santander 98/00 White S-XXL",
+          "h": "retro-santander-98-00-white-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250823/5b0f668216d01e9c29b50bfceeed3785.webp",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250823/5b0f668216d01e9c29b50bfceeed3785.webp",
+          "p": "12.80",
+          "c": [
+            "retro"
+          ]
+        }
+      ],
+      "productCount": 2,
+      "subLeague": "Segunda División"
+    },
+    "zweitligisten__gijon": {
+      "name": "Sporting Gijón",
+      "slug": "gijon",
+      "league": "zweitligisten",
+      "leagueName": "2. Ligisten",
+      "products": [
+        {
+          "t": "Retro Gijon 95/96 Home S-XXL",
+          "h": "retro-gijon-95-96-home-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260104/4a3f9f9182dc5184c3de1af9b24f16e9.png",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260104/4a3f9f9182dc5184c3de1af9b24f16e9.png",
+          "p": "12.80",
+          "c": [
+            "retro"
+          ]
+        },
+        {
+          "t": "Retro Gijon 94/95 Home S-XXL",
+          "h": "retro-gijon-94-95-home-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250612/c17187e1fd8d0405ef89c291219543cb.png",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250612/c17187e1fd8d0405ef89c291219543cb.png",
+          "p": "12.80",
+          "c": [
+            "retro"
+          ]
+        },
+        {
+          "t": "Retro Gijon 86/87 Home S-XXL",
+          "h": "retro-gijon-86-87-home-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250504/3D809BB7-A98A-436B-C124-5F95AEEB1722.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250504/3D809BB7-A98A-436B-C124-5F95AEEB1722.jpg",
+          "p": "12.80",
+          "c": [
+            "retro"
+          ]
+        },
+        {
+          "t": "Retro Gijon 2002/03 Third with La liga Patch S-XXL",
+          "h": "retro-gijon-2002-03-third-with-la-liga-patch-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250920/0e86815cfeabdd66615ecd747475b57a.jpeg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250920/0e86815cfeabdd66615ecd747475b57a.jpeg",
+          "p": "13.60",
+          "c": [
+            "retro"
+          ]
+        },
+        {
+          "t": "Retro Gijon 2001/02 Home S-XXL",
+          "h": "retro-gijon-2001-02-home-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250504/A2F9DCC7-B001-005C-CC7A-E037FFA3F57E.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250504/A2F9DCC7-B001-005C-CC7A-E037FFA3F57E.jpg",
+          "p": "12.80",
+          "c": [
+            "retro"
+          ]
+        },
+        {
+          "t": "Retro Gijon 15/16 Away S-XXL",
+          "h": "retro-gijon-15-16-away-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250504/7CB0760A-7C6C-79A9-99F3-D68FC07A5893.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250504/7CB0760A-7C6C-79A9-99F3-D68FC07A5893.jpg",
+          "p": "12.80",
+          "c": [
+            "retro"
+          ]
+        }
+      ],
+      "productCount": 6,
+      "subLeague": "Segunda División"
+    },
+    "zweitligisten__tenerife": {
+      "name": "CD Tenerife",
+      "slug": "tenerife",
+      "league": "zweitligisten",
+      "leagueName": "2. Ligisten",
+      "products": [
+        {
+          "t": "Tenerife 25/26 Home S-4XL",
+          "h": "tenerife-25-26-home-s-4xl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250814/7a38917b8d7532193035c4c215803d8a.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250814/7a38917b8d7532193035c4c215803d8a.jpg",
+          "p": "10.40",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "Tenerife 25/26 Away S-4XL",
+          "h": "tenerife-25-26-away",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250814/4fab89b97e1129c455d8b84a3cf0dbe2.jpeg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250814/4fab89b97e1129c455d8b84a3cf0dbe2.jpeg",
+          "p": "10.40",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "Tenerife 1998/99 Away S-XXL",
+          "h": "tenerife-1998-99-away-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250612/6810ac818e661898d0faee24d5a341f0.png",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250612/6810ac818e661898d0faee24d5a341f0.png",
+          "p": "13.60",
+          "c": [
+            "retro"
+          ]
+        },
+        {
+          "t": "CD Tenerife 75th anniversary edition  S-XXL",
+          "h": "cd-tenerife-75th-anniversary-edition-jersey-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250504/D1B9133E-2E56-60F6-18FB-12B0F7C87557.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250504/D1B9133E-2E56-60F6-18FB-12B0F7C87557.jpg",
+          "p": "13.60",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "CD Tenerife 1997/98 Away (75th anniversary edition）S-XXL",
+          "h": "cd-tenerife-1997-98-away-75th-anniversary-edition-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250504/743A897D-AF37-866C-5EE7-4A877D656AC9.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250504/743A897D-AF37-866C-5EE7-4A877D656AC9.jpg",
+          "p": "13.60",
+          "c": [
+            "retro"
+          ]
+        }
+      ],
+      "productCount": 5,
+      "subLeague": "Segunda División"
+    },
+    "zweitligisten__valladolid": {
+      "name": "Real Valladolid",
+      "slug": "valladolid",
+      "league": "zweitligisten",
+      "leagueName": "2. Ligisten",
+      "products": [
+        {
+          "t": "Real Valladolid CF 1984 Home S-XXL",
+          "h": "real-valladolid-cf-1984-home-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250727/29a4c086369658502cbabc754b32cac4.jpeg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250727/29a4c086369658502cbabc754b32cac4.jpeg",
+          "p": "13.60",
+          "c": [
+            "retro"
+          ]
+        },
+        {
+          "t": "Real Valladolid CF 1995/96 Home S-XXL",
+          "h": "real-valladolid-cf-1995-96-home-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250727/5bfb3181505204af73a20280e5a6a64b.jpeg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250727/5bfb3181505204af73a20280e5a6a64b.jpeg",
+          "p": "13.60",
+          "c": [
+            "retro"
+          ]
+        },
+        {
+          "t": "25/26 Real Valladolid Home with laliga patch S-4XL",
+          "h": "25-26-real-valladolid-home-with-laliga-patch-s-4xl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250814/a97d9f068d6723a5dbe266638749ee07.jpeg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250814/a97d9f068d6723a5dbe266638749ee07.jpeg",
+          "p": "11.20",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "25/26 Real Valladolid Away with laliga patch S-4XL",
+          "h": "25-26-real-valladolid-away-with-laliga-patch-s-4xl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250814/846212d6109665007ea0ce3845cd6226.jpeg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250814/846212d6109665007ea0ce3845cd6226.jpeg",
+          "p": "11.20",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "Real Valladolid CF 1992/93 Home Jersey S-XXL",
+          "h": "real-valladolid-cf-1992-93-home-jersey-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260124/04d95d27f0f4408336f225cffb41e0ad.webp",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260124/04d95d27f0f4408336f225cffb41e0ad.webp",
+          "p": "13.60",
+          "c": [
+            "retro"
+          ]
+        }
+      ],
+      "productCount": 5,
+      "subLeague": "Segunda División"
+    },
+    "zweitligisten__zaragoza": {
+      "name": "Real Zaragoza",
+      "slug": "zaragoza",
+      "league": "zweitligisten",
+      "leagueName": "2. Ligisten",
+      "products": [
+        {
+          "t": "Retro Real Zaragoza 99/00 Home Jersey S-XXL",
+          "h": "real-zaragoza-99-00-home-jersey",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260203/b0d5d69bb43205e5a48ccad7de6e4829.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260203/b0d5d69bb43205e5a48ccad7de6e4829.jpg",
+          "p": "13.60",
+          "c": [
+            "retro"
+          ]
+        },
+        {
+          "t": "Real Zaragoza 25/26 Home Jersey S-XXL",
+          "h": "real-zaragoza-25-26-home-jersey-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251111/77074b3787c37abe7f7b2c8147ff2923.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251111/77074b3787c37abe7f7b2c8147ff2923.jpg",
+          "p": "10.40",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "Retro Real Zaragoza 92/93 Jersey S-XXL",
+          "h": "retro-real-zaragoza-92-93-jersey-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250523/20B04035-FD63-C048-8C69-96DBE9BE7DA3.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250523/20B04035-FD63-C048-8C69-96DBE9BE7DA3.jpg",
+          "p": "13.60",
+          "c": [
+            "retro"
+          ]
+        },
+        {
+          "t": "Retro Real Zaragoza 95/96 Jersey S-4XL",
+          "h": "retro-real-zaragoza-95-96-jersey-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250523/52AA7672-FF21-2AB5-43B8-68CD3D0D3362.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250523/52AA7672-FF21-2AB5-43B8-68CD3D0D3362.jpg",
+          "p": "13.60",
+          "c": [
+            "retro"
+          ]
+        },
+        {
+          "t": "Retro Real Zaragoza 95/96 Home Jersey S-4XL",
+          "h": "retro-real-zaragoza-95-96-home-jersey-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250523/43B6708F-E17D-9318-24E9-D8CF6E334D08.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250523/43B6708F-E17D-9318-24E9-D8CF6E334D08.jpg",
+          "p": "13.60",
+          "c": [
+            "retro"
+          ]
+        },
+        {
+          "t": "Retro Real Zaragoza 95/96 third Jersey S-XXL",
+          "h": "retro-real-zaragoza-95-96-third-jersey-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250523/A1D1AB7D-2B41-4405-5630-C4E8F0B162CB.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250523/A1D1AB7D-2B41-4405-5630-C4E8F0B162CB.jpg",
+          "p": "13.60",
+          "c": [
+            "retro"
+          ]
+        },
+        {
+          "t": "Retro Real Zaragoza 2000/01 Home Jersey S-XXL",
+          "h": "retro-real-zaragoza-2000-01-home-jersey-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250523/D5D93169-43B5-29FB-0985-D64D16A4F1A1.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250523/D5D93169-43B5-29FB-0985-D64D16A4F1A1.jpg",
+          "p": "13.60",
+          "c": [
+            "retro"
+          ]
+        },
+        {
+          "t": "Retro Real Zaragoza 2000/01 Away Jersey S-XXL",
+          "h": "retro-real-zaragoza-2000-01-away-jersey-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250523/43FCFCA5-A55C-13CF-8EFE-88D9C044ED82.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250523/43FCFCA5-A55C-13CF-8EFE-88D9C044ED82.jpg",
+          "p": "13.60",
+          "c": [
+            "retro"
+          ]
+        }
+      ],
+      "productCount": 8,
+      "subLeague": "Segunda División"
+    },
+    "zweitligisten__coruna": {
+      "name": "Deportivo La Coruña",
+      "slug": "coruna",
+      "league": "zweitligisten",
+      "leagueName": "2. Ligisten",
+      "products": [
+        {
+          "t": "Kids La Coruna 25/26 Third 16-28",
+          "h": "kids-la-coruna-25-26-third-16-28",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250906/00a02f308013193d0d3d2df1bb72520c.png",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250906/00a02f308013193d0d3d2df1bb72520c.png",
+          "p": "11.20",
+          "c": [
+            "kids"
+          ]
+        },
+        {
+          "t": "Kids La Coruna 25/26 Home 16-28",
+          "h": "kids-la-coruna-25-26-home-16-28",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250906/100af1fd7eaa26d10cada94b4c8708e3.png",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250906/100af1fd7eaa26d10cada94b4c8708e3.png",
+          "p": "11.20",
+          "c": [
+            "kids"
+          ]
+        },
+        {
+          "t": "La Coruna 25/26 Third with laliga patch S-4XL",
+          "h": "la-coruna-25-26-third-with-laliga-patch-s-4xl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250814/6726217079c21079c65c38eda6a6fde0.jpeg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250814/6726217079c21079c65c38eda6a6fde0.jpeg",
+          "p": "11.20",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "La Coruna 25/26 Away with laliga patch S-4XL",
+          "h": "la-coruna-24-25-home-with-laliga-patch-s-4xl_2d044e04",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250917/071dba25bfd83cd4f6aaa33d2038f30c.webp",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250917/071dba25bfd83cd4f6aaa33d2038f30c.webp",
+          "p": "11.20",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "La Coruna 25/26 Home with laliga patch S-4XL",
+          "h": "la-coruna-25-26-home-with-laliga-patch-s-4xl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250814/64303176be65c4e19f25bc0a143ecee0.jpeg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250814/64303176be65c4e19f25bc0a143ecee0.jpeg",
+          "p": "11.20",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "La Coruna 25TH Year Long Sleeves S-XXL",
+          "h": "la-coruna-25th-year-long-sleeves-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250608/d744fd5f69662e17f81072356d3b2e23.jpeg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250608/d744fd5f69662e17f81072356d3b2e23.jpeg",
+          "p": "11.20",
+          "c": [
+            "longsleeve"
+          ]
+        },
+        {
+          "t": "La Coruna 25TH Year S-4XL",
+          "h": "la-coruna-25th-year-s-4xl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250524/6B152757-2A8B-EB52-A952-77589E284CCE.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250524/6B152757-2A8B-EB52-A952-77589E284CCE.jpg",
+          "p": "10.40",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "Retro Deportivo La Coruna 1994/95 Home",
+          "h": "retro-deportivo-la-coruna-1994-95-home",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250515/8884969f306f8bead5e91eaf49cbba90.png",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250515/8884969f306f8bead5e91eaf49cbba90.png",
+          "p": "14.40",
+          "c": [
+            "retro"
+          ]
+        },
+        {
+          "t": "Retro Deportivo La Coruna 1999/2000 Home Long Sleeves",
+          "h": "retro-deportivo-la-coruna-1999-2000-home_f3e91cb1",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250514/2f768b8af7f5b58ffaec34ee741863bd.png",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250514/2f768b8af7f5b58ffaec34ee741863bd.png",
+          "p": "16.00",
+          "c": [
+            "longsleeve",
+            "retro"
+          ]
+        },
+        {
+          "t": "Retro Deportivo La Coruna 2003/04 Home",
+          "h": "retro-deportivo-la-coruna-2003-04-home",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250503/27e225b5dfee1e7a4f24b2bd97e08d3e.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250503/27e225b5dfee1e7a4f24b2bd97e08d3e.jpg",
+          "p": "13.60",
+          "c": [
+            "retro"
+          ]
+        },
+        {
+          "t": "Retro Deportivo La Coruna 1999/2000 Home",
+          "h": "retro-deportivo-la-coruna-1999-2000-home",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250503/09a305d5ac33fbb3836e1bd5798ae4fb.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250503/09a305d5ac33fbb3836e1bd5798ae4fb.jpg",
+          "p": "14.40",
+          "c": [
+            "retro"
+          ]
+        },
+        {
+          "t": "Retro Deportivo La Coruna 1999/2000 Away Long Sleeves",
+          "h": "retro-deportivo-la-coruna-1999-2000-away-long-sleeves",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250503/fb74d25cee72093717bc7041e502b679.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250503/fb74d25cee72093717bc7041e502b679.jpg",
+          "p": "15.20",
+          "c": [
+            "longsleeve",
+            "retro"
+          ]
+        },
+        {
+          "t": "Retro Deportivo La Coruna 1999/2000 Away",
+          "h": "retro-deportivo-la-coruna-1999-2000-away",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250503/6c1365387bdfd37828933f6b47dcbd09.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250503/6c1365387bdfd37828933f6b47dcbd09.jpg",
+          "p": "12.80",
+          "c": [
+            "retro"
+          ]
+        },
+        {
+          "t": "Retro Deportivo La Coruna 1999/2000 Third",
+          "h": "retro-deportivo-la-coruna-1999-2000-third",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250514/2bb022273a3592943597d32eb3bd4041.png",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250514/2bb022273a3592943597d32eb3bd4041.png",
+          "p": "12.80",
+          "c": [
+            "retro"
+          ]
+        },
+        {
+          "t": "Retro Deportivo La Coruna 1999/2000 Away",
+          "h": "retro-deportivo-la-coruna-1999-2000-away-jersey-1",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250503/02f85fac7f95c54090bfabfaaadece19.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250503/02f85fac7f95c54090bfabfaaadece19.jpg",
+          "p": "13.60",
+          "c": [
+            "retro"
+          ]
+        },
+        {
+          "t": "Retro Deportivo La Coruna 1998/99 Third",
+          "h": "retro-deportivo-la-coruna-1998-99-third",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250503/fd6b245912b50d2d3bb5cbbbb42bcb60.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250503/fd6b245912b50d2d3bb5cbbbb42bcb60.jpg",
+          "p": "12.80",
+          "c": [
+            "retro"
+          ]
+        },
+        {
+          "t": "Retro Deportivo La Coruna 1997/98 Home",
+          "h": "retro-deportivo-la-coruna-1997-98-home",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250503/0ae21e2d4990c5a652e99d088f9fcb6c.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250503/0ae21e2d4990c5a652e99d088f9fcb6c.jpg",
+          "p": "14.40",
+          "c": [
+            "retro"
+          ]
+        },
+        {
+          "t": "Retro Deportivo La Coruna 1997/98 Away",
+          "h": "retro-deportivo-la-coruna-1997-98-away",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250503/1f383296b7a0dbfd9613c98ef3d19d05.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250503/1f383296b7a0dbfd9613c98ef3d19d05.jpg",
+          "p": "14.40",
+          "c": [
+            "retro"
+          ]
+        }
+      ],
+      "productCount": 18,
+      "subLeague": "Segunda División"
+    },
+    "zweitligisten__granada": {
+      "name": "Granada CF",
+      "slug": "granada",
+      "league": "zweitligisten",
+      "leagueName": "2. Ligisten",
+      "products": [
+        {
+          "t": "Retro Granada CF 97/98 Home S-XXL",
+          "h": "retro-granada-cf-97-98-home-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250504/E1332B3C-38FB-B3C7-32DB-678935481F55.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250504/E1332B3C-38FB-B3C7-32DB-678935481F55.jpg",
+          "p": "13.60",
+          "c": [
+            "retro"
+          ]
+        },
+        {
+          "t": "Retro Granada CF 05/06 Home S-XXL",
+          "h": "retro-granada-cf-05-06-home-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250612/2ae26f3ad925cecc8a1dee5f87c431e9.png",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250612/2ae26f3ad925cecc8a1dee5f87c431e9.png",
+          "p": "13.60",
+          "c": [
+            "retro"
+          ]
+        }
+      ],
+      "productCount": 2,
+      "subLeague": "Segunda División"
+    },
+    "zweitligisten__sanfernando": {
+      "name": "San Fernando",
+      "slug": "sanfernando",
+      "league": "zweitligisten",
+      "leagueName": "2. Ligisten",
+      "products": [
+        {
+          "t": "Retro San Fernando 93/94 Away S-XXL",
+          "h": "retro-san-fernando-93-94-away-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250504/79300493-A78D-ADCA-056F-A8E7EE8C37EC.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250504/79300493-A78D-ADCA-056F-A8E7EE8C37EC.jpg",
+          "p": "13.60",
+          "c": [
+            "retro"
+          ]
+        }
+      ],
+      "productCount": 1,
+      "subLeague": "Segunda División"
+    },
+    "la-liga__alaves": {
+      "name": "Deportivo Alavés",
+      "slug": "alaves",
+      "league": "la-liga",
+      "leagueName": "La Liga",
+      "products": [
+        {
+          "t": "Retro Alav&eacute;s 2011/12 Home Jersey S-XXL",
+          "h": "retro-alavés-2011-12-home-jersey-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251205/135bf9736bf589637436f831c63a5f7b.webp",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251205/135bf9736bf589637436f831c63a5f7b.webp",
+          "p": "12.80",
+          "c": [
+            "retro"
+          ]
+        },
+        {
+          "t": "Retro Alav&eacute;s 2001/02 Jersey S-XXL",
+          "h": "retro-alavés-2001-02-jersey-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251205/26d7fa4cb57a4dcaa5b8f6abceba0b2e.webp",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251205/26d7fa4cb57a4dcaa5b8f6abceba0b2e.webp",
+          "p": "12.80",
+          "c": [
+            "retro"
+          ]
+        },
+        {
+          "t": "Retro Alav&eacute;s 1999/00 Home Jersey S-XXL",
+          "h": "retro-alavés-1999-00-home-jersey-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251205/32e8749178218fa3078c1a0e051c24d1.webp",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251205/32e8749178218fa3078c1a0e051c24d1.webp",
+          "p": "12.80",
+          "c": [
+            "retro"
+          ]
+        },
+        {
+          "t": "Retro Alav&eacute;s 1998/99 Home Jersey S-XXL",
+          "h": "retro-alavés-1998-99-home-jersey-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251205/cb818120b757948a7159bf5fd6799d41.webp",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251205/cb818120b757948a7159bf5fd6799d41.webp",
+          "p": "12.80",
+          "c": [
+            "retro"
+          ]
+        },
+        {
+          "t": "Retro Alav&eacute;s 1998/99 Home Jersey Long Sleeves S-XXL",
+          "h": "retro-alavés-1998-99-home-jersey-long-sleeves-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251205/4f7a153810b4e42e81db85aae4b03276.webp",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251205/4f7a153810b4e42e81db85aae4b03276.webp",
+          "p": "14.40",
+          "c": [
+            "longsleeve",
+            "retro"
+          ]
+        }
+      ],
+      "productCount": 5
+    },
+    "zweitligisten__hercules": {
+      "name": "Hércules CF",
+      "slug": "hercules",
+      "league": "zweitligisten",
+      "leagueName": "2. Ligisten",
+      "subLeague": "Segunda División",
+      "products": [
+        {
+          "t": "H&eacute;rcules CF Camiseta 2&ordm; Equipaci&oacute;n 24/25 S-XXL",
+          "h": "h-rcules-25-26-away-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250504/57A02C06-CA61-2513-0F96-44B5E4EDD5A4.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250504/57A02C06-CA61-2513-0F96-44B5E4EDD5A4.jpg",
+          "p": "11.20",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "H&eacute;rcules CF Camiseta 1&ordm; Equipaci&oacute;n 24/25 S-XXL",
+          "h": "hércules-cf-camiseta-1º-equipación-24-25-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250504/0C2F7F7F-F852-279C-5C92-02AE13441BC0.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250504/0C2F7F7F-F852-279C-5C92-02AE13441BC0.jpg",
+          "p": "11.20",
+          "c": [
+            "fan"
+          ]
+        }
+      ],
+      "productCount": 2
+    },
+    "zweitligisten__leganes": {
+      "name": "CD Leganés",
+      "slug": "leganes",
+      "league": "zweitligisten",
+      "leagueName": "2. Ligisten",
+      "subLeague": "Segunda División",
+      "products": [
+        {
+          "t": "Retro CD Legan&eacute;s 98/00 Home S-XXL",
+          "h": "retro-cd-leganés-98-00-home-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250504/1508B49E-74E6-E649-0C34-4F909E5E85F7.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250504/1508B49E-74E6-E649-0C34-4F909E5E85F7.jpg",
+          "p": "12.80",
+          "c": [
+            "retro"
+          ]
+        }
+      ],
+      "productCount": 1
     }
   }
 }
