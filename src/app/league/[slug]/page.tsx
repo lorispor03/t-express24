@@ -5,6 +5,7 @@ import Footer from '@/components/Footer';
 import { getLeague, getAllLeagueSlugs, getSubLeaguesForLeague } from '@/lib/data';
 import { LEAGUE_LOGOS } from '@/lib/leagueLogos';
 import { TEAM_LOGOS } from '@/lib/teamLogos';
+import { SUB_LEAGUE_SLUGS, SUB_LEAGUE_LOGOS } from '@/lib/subLeagueLogos';
 import type { Metadata } from 'next';
 
 export function generateStaticParams() {
@@ -30,6 +31,9 @@ export default async function LeaguePage({ params }: { params: Promise<{ slug: s
   }
 
   const logo = LEAGUE_LOGOS[slug];
+  const subLeagues = getSubLeaguesForLeague(slug);
+  const subLeagueKeys = Object.keys(subLeagues);
+  const hasSubLeagues = subLeagueKeys.length > 1;
 
   return (
     <>
@@ -62,70 +66,68 @@ export default async function LeaguePage({ params }: { params: Promise<{ slug: s
         </div>
       </section>
 
-      {/* Teams Grid */}
+      {/* Content */}
       <section className="max-w-7xl mx-auto px-4 py-12">
-        {(() => {
-          const subLeagues = getSubLeaguesForLeague(slug);
-          const subLeagueKeys = Object.keys(subLeagues);
-          const hasSubLeagues = subLeagueKeys.length > 1;
-
-          if (hasSubLeagues) {
-            return subLeagueKeys.map(subName => (
-              <div key={subName} className="mb-10">
-                <h2 className="text-xl font-bold text-[var(--gold)] mb-4 border-b border-white/10 pb-2">{subName}</h2>
-                <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
-                  {subLeagues[subName].map(team => (
-                    <Link
-                      key={team.id}
-                      href={`/team/${team.id}`}
-                      className="team-card bg-[#1a1a1a] rounded-xl p-5 border border-white/5 hover:border-[var(--red-main)]/30 text-center"
-                    >
-                      {(() => {
-                        const teamSlug = team.id.split('__')[1];
-                        const teamLogo = teamSlug ? TEAM_LOGOS[teamSlug] : undefined;
-                        return teamLogo ? (
-                          <img src={teamLogo} alt={team.name} className="w-16 h-16 mx-auto mb-3 object-contain" />
-                        ) : (
-                          <div className="w-16 h-16 mx-auto mb-3 bg-[#222] rounded-full flex items-center justify-center text-2xl font-black text-[var(--red-main)]">
-                            {team.name.charAt(0)}
-                          </div>
-                        );
-                      })()}
-                      <h3 className="font-bold text-sm line-clamp-2 mb-1">{team.name}</h3>
-                      <p className="text-xs text-gray-500">{team.count} Trikots</p>
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            ));
-          }
-
-          return (
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
-              {league.teams.map(team => (
+        {hasSubLeagues ? (
+          /* Sub-League Cards - same style as homepage league cards */
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
+            {subLeagueKeys.map(subName => {
+              const subSlug = SUB_LEAGUE_SLUGS[subName];
+              const subLogo = subSlug ? SUB_LEAGUE_LOGOS[subSlug] : undefined;
+              const teamCount = subLeagues[subName].length;
+              return (
                 <Link
-                  key={team.id}
-                  href={`/team/${team.id}`}
-                  className="team-card bg-[#1a1a1a] rounded-xl p-5 border border-white/5 hover:border-[var(--red-main)]/30 text-center"
+                  key={subName}
+                  href={`/league/${slug}/${subSlug}`}
+                  className="league-card group bg-[#3a3a3a] rounded-xl p-6 border border-white/15 hover:border-[var(--red-main)]/30"
                 >
-                  {(() => {
-                    const teamSlug = team.id.split('__')[1];
-                    const teamLogo = teamSlug ? TEAM_LOGOS[teamSlug] : undefined;
-                    return teamLogo ? (
-                      <img src={teamLogo} alt={team.name} className="w-16 h-16 mx-auto mb-3 object-contain" />
+                  <div className="mb-4">
+                    {subLogo ? (
+                      <img
+                        src={subLogo}
+                        alt={subName}
+                        className="h-14 w-auto object-contain"
+                      />
                     ) : (
-                      <div className="w-16 h-16 mx-auto mb-3 bg-[#222] rounded-full flex items-center justify-center text-2xl font-black text-[var(--red-main)]">
-                        {team.name.charAt(0)}
-                      </div>
-                    );
-                  })()}
-                  <h3 className="font-bold text-sm line-clamp-2 mb-1">{team.name}</h3>
-                  <p className="text-xs text-gray-500">{team.count} Trikots</p>
+                      <span className="text-3xl">&#9917;</span>
+                    )}
+                  </div>
+                  <h3 className="font-bold text-lg group-hover:text-[var(--gold)] transition-colors">
+                    {subName}
+                  </h3>
+                  <p className="text-sm text-gray-400 mt-1">
+                    {teamCount} Teams
+                  </p>
                 </Link>
-              ))}
-            </div>
-          );
-        })()}
+              );
+            })}
+          </div>
+        ) : (
+          /* Normal team grid */
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+            {league.teams.map(team => (
+              <Link
+                key={team.id}
+                href={`/team/${team.id}`}
+                className="team-card bg-[#1a1a1a] rounded-xl p-5 border border-white/5 hover:border-[var(--red-main)]/30 text-center"
+              >
+                {(() => {
+                  const teamSlug = team.id.split('__')[1];
+                  const teamLogo = teamSlug ? TEAM_LOGOS[teamSlug] : undefined;
+                  return teamLogo ? (
+                    <img src={teamLogo} alt={team.name} className="w-16 h-16 mx-auto mb-3 object-contain" />
+                  ) : (
+                    <div className="w-16 h-16 mx-auto mb-3 bg-[#222] rounded-full flex items-center justify-center text-2xl font-black text-[var(--red-main)]">
+                      {team.name.charAt(0)}
+                    </div>
+                  );
+                })()}
+                <h3 className="font-bold text-sm line-clamp-2 mb-1">{team.name}</h3>
+                <p className="text-xs text-gray-500">{team.count} Trikots</p>
+              </Link>
+            ))}
+          </div>
+        )}
       </section>
 
       <Footer />
