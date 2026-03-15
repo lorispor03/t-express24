@@ -36,6 +36,7 @@ export default function CartDrawer() {
             team: i.teamName,
             groesse: i.size,
             beflockung: i.flocking,
+            patches: (i.patches || []).map(p => ({ name: p.name, preis: p.price })),
             menge: i.quantity,
           })),
         }),
@@ -105,9 +106,14 @@ export default function CartDrawer() {
                       <p className="text-[10px] text-gray-500">
                         {item.size}{item.flocking && ` · ${item.flocking}`} · {item.quantity}x
                       </p>
+                      {item.patches && item.patches.length > 0 && (
+                        <p className="text-[10px] text-gray-500">
+                          Patches: {item.patches.map(p => p.name).join(', ')}
+                        </p>
+                      )}
                     </div>
                     <span className="text-xs text-[var(--gold)] whitespace-nowrap">
-                      CHF {(parseFloat(item.product.p) * item.quantity).toFixed(2)}
+                      CHF {((parseFloat(item.product.p) + (item.patches || []).reduce((s, p) => s + p.price, 0)) * item.quantity).toFixed(2)}
                     </span>
                   </div>
                 ))}
@@ -201,6 +207,16 @@ export default function CartDrawer() {
                             Grösse: {item.size}{item.flocking && ` · Aufdruck: ${item.flocking}`}
                           </p>
                           <p className="text-[10px] text-gray-500">{item.teamName}</p>
+                          {item.patches && item.patches.length > 0 && (
+                            <div className="flex flex-wrap gap-1 mt-1">
+                              {item.patches.map(p => (
+                                <span key={p.id} className="inline-flex items-center gap-1 text-[9px] bg-white/5 text-gray-400 px-1.5 py-0.5 rounded">
+                                  <img src={p.image} alt={p.name} className="w-3 h-3 object-contain" />
+                                  {p.name}
+                                </span>
+                              ))}
+                            </div>
+                          )}
                         </div>
                         <button onClick={() => removeItem(item.id)} className="text-gray-600 hover:text-red-400 p-1 self-start">
                           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -221,7 +237,7 @@ export default function CartDrawer() {
                           >+</button>
                         </div>
                         <span className="text-sm font-bold text-[var(--gold)]">
-                          CHF {(parseFloat(item.product.p) * item.quantity).toFixed(2)}
+                          CHF {((parseFloat(item.product.p) + (item.patches || []).reduce((s, p) => s + p.price, 0)) * item.quantity).toFixed(2)}
                         </span>
                       </div>
                     </div>

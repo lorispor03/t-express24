@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <circle cx="60" cy="60" r="58" fill="#1a1a1a" stroke="#cc2936" stroke-width="3"/>
+  <path d="M60 20l8 24h26l-21 15 8 25-21-15-21 15 8-25-21-15h26z" fill="#cc2936"/>
+  <text x="60" y="105" text-anchor="middle" font-family="Arial,sans-serif" font-size="8" font-weight="bold" fill="#cc2936">SUDAMERICANA</text>
+</svg>

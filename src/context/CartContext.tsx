@@ -2,6 +2,7 @@
 
 import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 import { Product } from '@/lib/types';
+import { PatchOption } from '@/lib/patches';
 
 export interface CartItem {
   id: string;
@@ -9,12 +10,13 @@ export interface CartItem {
   teamName: string;
   size: string;
   flocking: string;
+  patches: PatchOption[];
   quantity: number;
 }
 
 interface CartContextType {
   items: CartItem[];
-  addItem: (product: Product, teamName: string, size: string, flocking: string) => void;
+  addItem: (product: Product, teamName: string, size: string, flocking: string, patches?: PatchOption[]) => void;
   removeItem: (id: string) => void;
   updateQuantity: (id: string, quantity: number) => void;
   clearCart: () => void;
@@ -53,14 +55,15 @@ export function CartProvider({ children }: { children: ReactNode }) {
     }
   }, [items, loaded]);
 
-  const addItem = (product: Product, teamName: string, size: string, flocking: string) => {
-    const id = `${product.h}_${size}_${flocking}`;
+  const addItem = (product: Product, teamName: string, size: string, flocking: string, patches: PatchOption[] = []) => {
+    const patchKey = patches.map(p => p.id).sort().join('+');
+    const id = `${product.h}_${size}_${flocking}_${patchKey}`;
     setItems(prev => {
       const existing = prev.find(i => i.id === id);
       if (existing) {
         return prev.map(i => i.id === id ? { ...i, quantity: i.quantity + 1 } : i);
       }
-      return [...prev, { id, product, teamName, size, flocking, quantity: 1 }];
+      return [...prev, { id, product, teamName, size, flocking, patches, quantity: 1 }];
     });
     setCartOpen(true);
   };
@@ -77,7 +80,10 @@ export function CartProvider({ children }: { children: ReactNode }) {
   const clearCart = () => setItems([]);
 
   const totalItems = items.reduce((sum, i) => sum + i.quantity, 0);
-  const totalPrice = items.reduce((sum, i) => sum + parseFloat(i.product.p) * i.quantity, 0);
+  const totalPrice = items.reduce((sum, i) => {
+    const patchTotal = (i.patches || []).reduce((ps, p) => ps + p.price, 0);
+    return sum + (parseFloat(i.product.p) + patchTotal) * i.quantity;
+  }, 0);
 
   return (
     <CartContext.Provider value={{ items, addItem, removeItem, updateQuantity, clearCart, totalItems, totalPrice, isCartOpen, setCartOpen }}>

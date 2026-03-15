@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <circle cx="60" cy="60" r="58" fill="#002d62" stroke="#1a4080" stroke-width="2"/>
+  <path d="M48 30h24v10h-6v30h-12V40h-6z" fill="#c1a136"/>
+  <circle cx="60" cy="80" r="14" fill="none" stroke="#c1a136" stroke-width="3"/>
+  <path d="M52 78l4 4 8-8" stroke="#c1a136" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="60" y="110" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" font-weight="bold" fill="#c1a136">FIFA WC</text>
+</svg>

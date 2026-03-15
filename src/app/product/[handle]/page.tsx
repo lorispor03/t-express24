@@ -13,7 +13,7 @@ export default async function ProductPage({ params }: Props) {
   const result = getProductByHandle(handle);
   if (!result) return notFound();
 
-  const { product, teamId, teamName, leagueName, leagueSlug } = result;
+  const { product, teamId, teamName, leagueName, leagueSlug, subLeague } = result;
 
   return (
     <>
@@ -24,6 +24,7 @@ export default async function ProductPage({ params }: Props) {
         teamName={teamName}
         leagueName={leagueName}
         leagueSlug={leagueSlug}
+        subLeague={subLeague}
       />
       <Footer />
     </>

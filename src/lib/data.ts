@@ -43,11 +43,11 @@ export function getAllLeagueSlugs(): string[] {
   return Object.keys(data.leagues);
 }
 
-export function getProductByHandle(handle: string): { product: Product; teamId: string; teamName: string; leagueName: string; leagueSlug: string } | undefined {
+export function getProductByHandle(handle: string): { product: Product; teamId: string; teamName: string; leagueName: string; leagueSlug: string; subLeague?: string } | undefined {
   for (const [teamId, team] of Object.entries(data.teams)) {
     for (const product of team.products) {
       if (product.h === handle) {
-        return { product, teamId, teamName: team.name, leagueName: team.leagueName, leagueSlug: team.league };
+        return { product, teamId, teamName: team.name, leagueName: team.leagueName, leagueSlug: team.league, subLeague: team.subLeague };
       }
     }
   }
