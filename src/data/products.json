@@ -41,18 +41,6 @@
           "count": 7
         },
         {
-          "id": "premier-league__ipswich",
-          "name": "Ipswich Town",
-          "slug": "ipswich",
-          "count": 2
-        },
-        {
-          "id": "premier-league__leicester",
-          "name": "Leicester City",
-          "slug": "leicester",
-          "count": 4
-        },
-        {
           "id": "premier-league__liverpool",
           "name": "Liverpool",
           "slug": "liverpool",
@@ -119,62 +107,14 @@
           "count": 5
         },
         {
-          "id": "premier-league__middlesbrough",
-          "name": "Middlesbrough FC",
-          "slug": "middlesbrough",
-          "count": 2
-        },
-        {
           "id": "premier-league__crystalpalace",
           "name": "Crystal Palace",
           "slug": "crystalpalace",
           "count": 4
-        },
-        {
-          "id": "premier-league__portsmouth",
-          "name": "Portsmouth FC",
-          "slug": "portsmouth",
-          "count": 3
-        },
-        {
-          "id": "premier-league__watford",
-          "name": "Watford FC",
-          "slug": "watford",
-          "count": 1
-        },
-        {
-          "id": "premier-league__derbycounty",
-          "name": "Derby County",
-          "slug": "derbycounty",
-          "count": 2
-        },
-        {
-          "id": "premier-league__hullcity",
-          "name": "Hull City",
-          "slug": "hullcity",
-          "count": 5
-        },
-        {
-          "id": "premier-league__southampton",
-          "name": "Southampton FC",
-          "slug": "southampton",
-          "count": 6
-        },
-        {
-          "id": "premier-league__northampton",
-          "name": "Northampton Town",
-          "slug": "northampton",
-          "count": 1
-        },
-        {
-          "id": "premier-league__blackburn",
-          "name": "Blackburn Rovers",
-          "slug": "blackburn",
-          "count": 4
         }
       ],
-      "teamCount": 28,
-      "productCount": 824
+      "teamCount": 18,
+      "productCount": 794
     },
     "la-liga": {
       "name": "La Liga",
@@ -1611,6 +1551,74 @@
       ],
       "teamCount": 78,
       "productCount": 1243
+    },
+    "efl-championship": {
+      "name": "EFL Championship",
+      "country": "England",
+      "teams": [
+        {
+          "id": "efl-championship__ipswich",
+          "name": "Ipswich Town",
+          "slug": "ipswich",
+          "count": 2
+        },
+        {
+          "id": "efl-championship__leicester",
+          "name": "Leicester City",
+          "slug": "leicester",
+          "count": 4
+        },
+        {
+          "id": "efl-championship__southampton",
+          "name": "Southampton FC",
+          "slug": "southampton",
+          "count": 6
+        },
+        {
+          "id": "efl-championship__middlesbrough",
+          "name": "Middlesbrough FC",
+          "slug": "middlesbrough",
+          "count": 2
+        },
+        {
+          "id": "efl-championship__portsmouth",
+          "name": "Portsmouth FC",
+          "slug": "portsmouth",
+          "count": 3
+        },
+        {
+          "id": "efl-championship__watford",
+          "name": "Watford FC",
+          "slug": "watford",
+          "count": 1
+        },
+        {
+          "id": "efl-championship__derbycounty",
+          "name": "Derby County",
+          "slug": "derbycounty",
+          "count": 2
+        },
+        {
+          "id": "efl-championship__hullcity",
+          "name": "Hull City",
+          "slug": "hullcity",
+          "count": 5
+        },
+        {
+          "id": "efl-championship__northampton",
+          "name": "Northampton Town",
+          "slug": "northampton",
+          "count": 1
+        },
+        {
+          "id": "efl-championship__blackburn",
+          "name": "Blackburn Rovers",
+          "slug": "blackburn",
+          "count": 4
+        }
+      ],
+      "teamCount": 10,
+      "productCount": 30
     }
   },
   "teams": {
@@ -4237,84 +4245,6 @@
         }
       ],
       "productCount": 7
-    },
-    "premier-league__ipswich": {
-      "name": "Ipswich Town",
-      "slug": "ipswich",
-      "league": "premier-league",
-      "leagueName": "Premier League",
-      "products": [
-        {
-          "t": "Ipswich 25/26 Home S-4XL",
-          "h": "ipswich-25-26-home-s-4xl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260130/2ceb530065a454b1c4e4a3f20854eae5.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260130/2ceb530065a454b1c4e4a3f20854eae5.jpg",
-          "p": "10.40",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Ipswich 25/26 Away Jersey S-4XL",
-          "h": "ipswich-25-26-home-s-4xl_d192c4f7",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260130/943aede100bfb6348a937f263fe03172.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260130/943aede100bfb6348a937f263fe03172.jpg",
-          "p": "10.40",
-          "c": [
-            "fan"
-          ]
-        }
-      ],
-      "productCount": 2
-    },
-    "premier-league__leicester": {
-      "name": "Leicester City",
-      "slug": "leicester",
-      "league": "premier-league",
-      "leagueName": "Premier League",
-      "products": [
-        {
-          "t": "Retro Leicester City 15/16 Away S-XXL",
-          "h": "retro-leicester-city-15-16-away-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250911/a180abe784fac80e5a5180dfa63accbe.png",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250911/a180abe784fac80e5a5180dfa63accbe.png",
-          "p": "13.60",
-          "c": [
-            "retro"
-          ]
-        },
-        {
-          "t": "Retro Leicester City 15/16 Home S-XXL",
-          "h": "retro-leicester-city-15-16-home-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250911/df1367d1150e3cf29f93575eda2563ab.png",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250911/df1367d1150e3cf29f93575eda2563ab.png",
-          "p": "13.60",
-          "c": [
-            "retro"
-          ]
-        },
-        {
-          "t": "Leicester City 2025/26 Third S-4XL",
-          "h": "leicester-city-2025-26-third-s-4xl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250911/5ab6fd3a3ff92f9cba46bda777f814d7.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250911/5ab6fd3a3ff92f9cba46bda777f814d7.jpg",
-          "p": "9.60",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Leicester City 2025/26 Home S-4XL",
-          "h": "leicester-city-2025-26-home-s-4xl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250911/80c005e5e0e64069e042fc3d7c1884f7.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250911/80c005e5e0e64069e042fc3d7c1884f7.jpg",
-          "p": "9.60",
-          "c": [
-            "fan"
-          ]
-        }
-      ],
-      "productCount": 4
     },
     "premier-league__liverpool": {
       "name": "Liverpool",
@@ -52414,35 +52344,6 @@
       ],
       "productCount": 5
     },
-    "premier-league__middlesbrough": {
-      "name": "Middlesbrough FC",
-      "slug": "middlesbrough",
-      "league": "premier-league",
-      "leagueName": "Premier League",
-      "products": [
-        {
-          "t": "Middlesbrough 25/26 Home S-4XL",
-          "h": "middlesbrough-25-26-home-s-4xl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250812/ed594751d28c607665f2ced534cef245.png",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250812/ed594751d28c607665f2ced534cef245.png",
-          "p": "9.60",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Middlesbrough 25/26 Away S-4XL",
-          "h": "middlesbrough-25-26-away-s-4xl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250812/91141a76feacc2d7542c3398839d9612.png",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250812/91141a76feacc2d7542c3398839d9612.png",
-          "p": "9.60",
-          "c": [
-            "fan"
-          ]
-        }
-      ],
-      "productCount": 2
-    },
     "premier-league__crystalpalace": {
       "name": "Crystal Palace",
       "slug": "crystalpalace",
@@ -52492,85 +52393,27 @@
       ],
       "productCount": 4
     },
-    "premier-league__portsmouth": {
-      "name": "Portsmouth FC",
-      "slug": "portsmouth",
-      "league": "premier-league",
-      "leagueName": "Premier League",
+    "efl-championship__ipswich": {
+      "name": "Ipswich Town",
+      "slug": "ipswich",
+      "league": "efl-championship",
+      "leagueName": "EFL Championship",
       "products": [
         {
-          "t": "Portsmouth 25/26 Home S-4XL",
-          "h": "portsmouth-25-26-home-s-4xl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250828/c24bfeb188999c72856590d5665fcc1f.png",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250828/c24bfeb188999c72856590d5665fcc1f.png",
-          "p": "9.60",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Portsmouth 25/26 Away S-4XL",
-          "h": "portsmouth-25-26-home-s-4xl_60837edc",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250828/2b92063d10818a303c9794ce14e1a1ab.png",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250828/2b92063d10818a303c9794ce14e1a1ab.png",
-          "p": "9.60",
-          "c": [
-            "fan"
-          ]
-        },
-        {
-          "t": "Portsmouth 25/26 Third S-4XL",
-          "h": "portsmouth-25-26-third-s-4xl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250828/033763e82755f538c837ee61ad25d1a7.png",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250828/033763e82755f538c837ee61ad25d1a7.png",
-          "p": "9.60",
-          "c": [
-            "fan"
-          ]
-        }
-      ],
-      "productCount": 3
-    },
-    "premier-league__watford": {
-      "name": "Watford FC",
-      "slug": "watford",
-      "league": "premier-league",
-      "leagueName": "Premier League",
-      "products": [
-        {
-          "t": "Watford 25/26 Home S-XXL",
-          "h": "watford-25-26-home-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250828/ea2273982d87a94c98e0cb55c42eef17.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250828/ea2273982d87a94c98e0cb55c42eef17.jpg",
-          "p": "10.40",
-          "c": [
-            "fan"
-          ]
-        }
-      ],
-      "productCount": 1
-    },
-    "premier-league__derbycounty": {
-      "name": "Derby County",
-      "slug": "derbycounty",
-      "league": "premier-league",
-      "leagueName": "Premier League",
-      "products": [
-        {
-          "t": "Derby County F.C. 25/26 Home S-4XL Fan Version",
-          "h": "derby-county-f-c-25-26-home-s-4xl-fan-version",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251029/d39a4458d8c7821f7190e15f1871eb4d.png",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251029/d39a4458d8c7821f7190e15f1871eb4d.png",
+          "t": "Ipswich 25/26 Home S-4XL",
+          "h": "ipswich-25-26-home-s-4xl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260130/2ceb530065a454b1c4e4a3f20854eae5.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260130/2ceb530065a454b1c4e4a3f20854eae5.jpg",
           "p": "10.40",
           "c": [
             "fan"
           ]
         },
         {
-          "t": "Derby County F.C. 25/26 Away S-4XL Fan Version",
-          "h": "derby-county-f-c-25-26-away-s-4xl-fan-version",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251029/31fced1f62b6bbd44ffe9ead79ff2ae5.png",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251029/31fced1f62b6bbd44ffe9ead79ff2ae5.png",
+          "t": "Ipswich 25/26 Away Jersey S-4XL",
+          "h": "ipswich-25-26-home-s-4xl_d192c4f7",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260130/943aede100bfb6348a937f263fe03172.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260130/943aede100bfb6348a937f263fe03172.jpg",
           "p": "10.40",
           "c": [
             "fan"
@@ -52579,71 +52422,60 @@
       ],
       "productCount": 2
     },
-    "premier-league__hullcity": {
-      "name": "Hull City",
-      "slug": "hullcity",
-      "league": "premier-league",
-      "leagueName": "Premier League",
+    "efl-championship__leicester": {
+      "name": "Leicester City",
+      "slug": "leicester",
+      "league": "efl-championship",
+      "leagueName": "EFL Championship",
       "products": [
         {
-          "t": "Hull City 25/26 Home Jersey S-4XL",
-          "h": "hull-city-25-26-home-jersey-s-4xl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251125/94a80cb75adc67920a99923efdf1c639.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251125/94a80cb75adc67920a99923efdf1c639.jpg",
+          "t": "Retro Leicester City 15/16 Away S-XXL",
+          "h": "retro-leicester-city-15-16-away-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250911/a180abe784fac80e5a5180dfa63accbe.png",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250911/a180abe784fac80e5a5180dfa63accbe.png",
+          "p": "13.60",
+          "c": [
+            "retro"
+          ]
+        },
+        {
+          "t": "Retro Leicester City 15/16 Home S-XXL",
+          "h": "retro-leicester-city-15-16-home-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250911/df1367d1150e3cf29f93575eda2563ab.png",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250911/df1367d1150e3cf29f93575eda2563ab.png",
+          "p": "13.60",
+          "c": [
+            "retro"
+          ]
+        },
+        {
+          "t": "Leicester City 2025/26 Third S-4XL",
+          "h": "leicester-city-2025-26-third-s-4xl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250911/5ab6fd3a3ff92f9cba46bda777f814d7.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250911/5ab6fd3a3ff92f9cba46bda777f814d7.jpg",
           "p": "9.60",
           "c": [
             "fan"
           ]
         },
         {
-          "t": "Hull City 25/26 Away Jersey S-4XL",
-          "h": "hull-city-25-26-away-jersey-s-4xl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251125/d9a684d99b6af491aba473ac2074a6f6.jpg",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251125/d9a684d99b6af491aba473ac2074a6f6.jpg",
+          "t": "Leicester City 2025/26 Home S-4XL",
+          "h": "leicester-city-2025-26-home-s-4xl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250911/80c005e5e0e64069e042fc3d7c1884f7.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250911/80c005e5e0e64069e042fc3d7c1884f7.jpg",
           "p": "9.60",
           "c": [
             "fan"
-          ]
-        },
-        {
-          "t": "Retro Hull City 1997/98 Home Jersey S-XXL",
-          "h": "retro-hull-city-1997-98-home-jersey-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251205/adb9c087da861440942ad9beb10d8570.webp",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251205/adb9c087da861440942ad9beb10d8570.webp",
-          "p": "12.80",
-          "c": [
-            "retro"
-          ]
-        },
-        {
-          "t": "Retro Hull City 1981/82 Home Jersey S-XXL",
-          "h": "retro-hull-city-1981-82-home-jersey-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260104/242ec671af12c7700b26c03f5a0c3101.webp",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260104/242ec671af12c7700b26c03f5a0c3101.webp",
-          "p": "12.80",
-          "c": [
-            "retro"
-          ]
-        },
-        {
-          "t": "Retro Hull City 1981/82 Home Jersey Long Sleeves S-XXL",
-          "h": "retro-hull-city-1981-82-home-jersey-long-sleeves-s-xxl",
-          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260104/0185fee69a196d17aa46dc679074cf84.webp",
-          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260104/0185fee69a196d17aa46dc679074cf84.webp",
-          "p": "12.80",
-          "c": [
-            "longsleeve",
-            "retro"
           ]
         }
       ],
-      "productCount": 5
+      "productCount": 4
     },
-    "premier-league__southampton": {
+    "efl-championship__southampton": {
       "name": "Southampton FC",
       "slug": "southampton",
-      "league": "premier-league",
-      "leagueName": "Premier League",
+      "league": "efl-championship",
+      "leagueName": "EFL Championship",
       "products": [
         {
           "t": "Southampton 50 Year Anniversary Shirt",
@@ -52708,11 +52540,187 @@
       ],
       "productCount": 6
     },
-    "premier-league__northampton": {
+    "efl-championship__middlesbrough": {
+      "name": "Middlesbrough FC",
+      "slug": "middlesbrough",
+      "league": "efl-championship",
+      "leagueName": "EFL Championship",
+      "products": [
+        {
+          "t": "Middlesbrough 25/26 Home S-4XL",
+          "h": "middlesbrough-25-26-home-s-4xl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250812/ed594751d28c607665f2ced534cef245.png",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250812/ed594751d28c607665f2ced534cef245.png",
+          "p": "9.60",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "Middlesbrough 25/26 Away S-4XL",
+          "h": "middlesbrough-25-26-away-s-4xl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250812/91141a76feacc2d7542c3398839d9612.png",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250812/91141a76feacc2d7542c3398839d9612.png",
+          "p": "9.60",
+          "c": [
+            "fan"
+          ]
+        }
+      ],
+      "productCount": 2
+    },
+    "efl-championship__portsmouth": {
+      "name": "Portsmouth FC",
+      "slug": "portsmouth",
+      "league": "efl-championship",
+      "leagueName": "EFL Championship",
+      "products": [
+        {
+          "t": "Portsmouth 25/26 Home S-4XL",
+          "h": "portsmouth-25-26-home-s-4xl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250828/c24bfeb188999c72856590d5665fcc1f.png",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250828/c24bfeb188999c72856590d5665fcc1f.png",
+          "p": "9.60",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "Portsmouth 25/26 Away S-4XL",
+          "h": "portsmouth-25-26-home-s-4xl_60837edc",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250828/2b92063d10818a303c9794ce14e1a1ab.png",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250828/2b92063d10818a303c9794ce14e1a1ab.png",
+          "p": "9.60",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "Portsmouth 25/26 Third S-4XL",
+          "h": "portsmouth-25-26-third-s-4xl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250828/033763e82755f538c837ee61ad25d1a7.png",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250828/033763e82755f538c837ee61ad25d1a7.png",
+          "p": "9.60",
+          "c": [
+            "fan"
+          ]
+        }
+      ],
+      "productCount": 3
+    },
+    "efl-championship__watford": {
+      "name": "Watford FC",
+      "slug": "watford",
+      "league": "efl-championship",
+      "leagueName": "EFL Championship",
+      "products": [
+        {
+          "t": "Watford 25/26 Home S-XXL",
+          "h": "watford-25-26-home-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250828/ea2273982d87a94c98e0cb55c42eef17.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250828/ea2273982d87a94c98e0cb55c42eef17.jpg",
+          "p": "10.40",
+          "c": [
+            "fan"
+          ]
+        }
+      ],
+      "productCount": 1
+    },
+    "efl-championship__derbycounty": {
+      "name": "Derby County",
+      "slug": "derbycounty",
+      "league": "efl-championship",
+      "leagueName": "EFL Championship",
+      "products": [
+        {
+          "t": "Derby County F.C. 25/26 Home S-4XL Fan Version",
+          "h": "derby-county-f-c-25-26-home-s-4xl-fan-version",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251029/d39a4458d8c7821f7190e15f1871eb4d.png",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251029/d39a4458d8c7821f7190e15f1871eb4d.png",
+          "p": "10.40",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "Derby County F.C. 25/26 Away S-4XL Fan Version",
+          "h": "derby-county-f-c-25-26-away-s-4xl-fan-version",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251029/31fced1f62b6bbd44ffe9ead79ff2ae5.png",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251029/31fced1f62b6bbd44ffe9ead79ff2ae5.png",
+          "p": "10.40",
+          "c": [
+            "fan"
+          ]
+        }
+      ],
+      "productCount": 2
+    },
+    "efl-championship__hullcity": {
+      "name": "Hull City",
+      "slug": "hullcity",
+      "league": "efl-championship",
+      "leagueName": "EFL Championship",
+      "products": [
+        {
+          "t": "Hull City 25/26 Home Jersey S-4XL",
+          "h": "hull-city-25-26-home-jersey-s-4xl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251125/94a80cb75adc67920a99923efdf1c639.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251125/94a80cb75adc67920a99923efdf1c639.jpg",
+          "p": "9.60",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "Hull City 25/26 Away Jersey S-4XL",
+          "h": "hull-city-25-26-away-jersey-s-4xl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251125/d9a684d99b6af491aba473ac2074a6f6.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251125/d9a684d99b6af491aba473ac2074a6f6.jpg",
+          "p": "9.60",
+          "c": [
+            "fan"
+          ]
+        },
+        {
+          "t": "Retro Hull City 1997/98 Home Jersey S-XXL",
+          "h": "retro-hull-city-1997-98-home-jersey-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251205/adb9c087da861440942ad9beb10d8570.webp",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251205/adb9c087da861440942ad9beb10d8570.webp",
+          "p": "12.80",
+          "c": [
+            "retro"
+          ]
+        },
+        {
+          "t": "Retro Hull City 1981/82 Home Jersey S-XXL",
+          "h": "retro-hull-city-1981-82-home-jersey-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260104/242ec671af12c7700b26c03f5a0c3101.webp",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260104/242ec671af12c7700b26c03f5a0c3101.webp",
+          "p": "12.80",
+          "c": [
+            "retro"
+          ]
+        },
+        {
+          "t": "Retro Hull City 1981/82 Home Jersey Long Sleeves S-XXL",
+          "h": "retro-hull-city-1981-82-home-jersey-long-sleeves-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260104/0185fee69a196d17aa46dc679074cf84.webp",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260104/0185fee69a196d17aa46dc679074cf84.webp",
+          "p": "12.80",
+          "c": [
+            "longsleeve",
+            "retro"
+          ]
+        }
+      ],
+      "productCount": 5
+    },
+    "efl-championship__northampton": {
       "name": "Northampton Town",
       "slug": "northampton",
-      "league": "premier-league",
-      "leagueName": "Premier League",
+      "league": "efl-championship",
+      "leagueName": "EFL Championship",
       "products": [
         {
           "t": "Northampton 25/26 Home S-4XL",
@@ -52727,11 +52735,11 @@
       ],
       "productCount": 1
     },
-    "premier-league__blackburn": {
+    "efl-championship__blackburn": {
       "name": "Blackburn Rovers",
       "slug": "blackburn",
-      "league": "premier-league",
-      "leagueName": "Premier League",
+      "league": "efl-championship",
+      "leagueName": "EFL Championship",
       "products": [
         {
           "t": "Blackburn Rovers Home 2025/26 - Mens",
