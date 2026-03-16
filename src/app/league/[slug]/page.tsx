@@ -123,7 +123,7 @@ export default async function LeaguePage({ params }: { params: Promise<{ slug: s
                     </div>
                   );
                 })()}
-                <h3 className="font-bold text-xs sm:text-sm line-clamp-2 mb-1">{team.name}</h3>
+                <h3 className="font-bold text-xs sm:text-sm line-clamp-2 mb-1 min-h-[2lh]">{team.name}</h3>
                 <p className="text-[10px] sm:text-xs text-gray-500">{team.count} Artikel</p>
               </Link>
             ))}
