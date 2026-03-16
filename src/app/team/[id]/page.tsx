@@ -6,6 +6,7 @@ import Footer from '@/components/Footer';
 import TeamPageClient from '@/components/TeamPageClient';
 import { getTeam, getAllTeamIds } from '@/lib/data';
 import { TEAM_LOGOS } from '@/lib/teamLogos';
+import teamDescriptions from '@/data/team-descriptions.json';
 import type { Metadata } from 'next';
 
 export function generateStaticParams() {
@@ -68,6 +69,11 @@ export default async function TeamPage({ params }: { params: Promise<{ id: strin
                 </Link>
                 <span className="text-sm text-gray-400">{team.productCount} Artikel</span>
               </div>
+              {(teamDescriptions as Record<string, string>)[id] && (
+                <p className="text-sm text-gray-400 mt-3 max-w-2xl leading-relaxed">
+                  {(teamDescriptions as Record<string, string>)[id]}
+                </p>
+              )}
             </div>
           </div>
         </div>
