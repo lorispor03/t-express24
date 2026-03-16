@@ -69,15 +69,21 @@ export default async function TeamPage({ params }: { params: Promise<{ id: strin
                 </Link>
                 <span className="text-sm text-gray-400">{team.productCount} Artikel</span>
               </div>
-              {(teamDescriptions as Record<string, string>)[id] && (
-                <p className="text-sm text-gray-400 mt-3 max-w-2xl leading-relaxed">
-                  {(teamDescriptions as Record<string, string>)[id]}
-                </p>
-              )}
             </div>
           </div>
         </div>
       </section>
+
+      {/* Club Description */}
+      {(teamDescriptions as Record<string, string>)[id] && (
+        <section className="border-b border-white/10 bg-[#111]">
+          <div className="max-w-7xl mx-auto px-4 py-5">
+            <p className="text-sm text-gray-400 leading-relaxed max-w-3xl">
+              {(teamDescriptions as Record<string, string>)[id]}
+            </p>
+          </div>
+        </section>
+      )}
 
       {/* Products with filters */}
       <Suspense>
