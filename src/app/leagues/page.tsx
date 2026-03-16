@@ -39,7 +39,7 @@ export default function LeaguesPage() {
                   <span className="text-3xl">&#9917;</span>
                 )}
                 <span className="text-xs bg-white/5 rounded-full px-3 py-1 text-gray-400">
-                  {league.productCount} Trikots
+                  {league.productCount} Artikel
                 </span>
               </div>
               <h3 className="font-bold text-lg group-hover:text-[var(--gold)] transition-colors">

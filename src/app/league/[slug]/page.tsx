@@ -59,7 +59,7 @@ export default async function LeaguePage({ params }: { params: Promise<{ slug: s
               )}
               <div className="flex gap-6 mt-2 text-sm">
                 <span className="text-[var(--gold)] font-bold">{league.teamCount} {league.teamCount === 1 ? 'Team' : 'Teams'}</span>
-                <span className="text-gray-400">{league.productCount} Trikots</span>
+                <span className="text-gray-400">{league.productCount} Artikel</span>
               </div>
             </div>
           </div>
