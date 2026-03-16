@@ -79,21 +79,21 @@ export default async function SubLeaguePage({ params }: { params: Promise<{ slug
             <Link
               key={team.id}
               href={`/team/${team.id}`}
-              className="team-card bg-[#1a1a1a] rounded-xl p-5 border border-white/5 hover:border-[var(--red-main)]/30 text-center"
+              className="team-card bg-[#1a1a1a] rounded-xl p-3 sm:p-5 border border-white/5 hover:border-[var(--red-main)]/30 text-center"
             >
               {(() => {
                 const teamSlug = team.id.split('__')[1];
                 const teamLogo = teamSlug ? TEAM_LOGOS[teamSlug] : undefined;
                 return teamLogo ? (
-                  <img src={teamLogo} alt={team.name} className="w-16 h-16 mx-auto mb-3 object-contain" />
+                  <img src={teamLogo} alt={team.name} className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-2 sm:mb-3 object-contain" />
                 ) : (
-                  <div className="w-16 h-16 mx-auto mb-3 bg-[#222] rounded-full flex items-center justify-center text-2xl font-black text-[var(--red-main)]">
+                  <div className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-2 sm:mb-3 bg-[#222] rounded-full flex items-center justify-center text-xl sm:text-2xl font-black text-[var(--red-main)]">
                     {team.name.charAt(0)}
                   </div>
                 );
               })()}
-              <h3 className="font-bold text-sm line-clamp-2 mb-1">{team.name}</h3>
-              <p className="text-xs text-gray-500">{team.count} Artikel</p>
+              <h3 className="font-bold text-xs sm:text-sm line-clamp-2 mb-1">{team.name}</h3>
+              <p className="text-[10px] sm:text-xs text-gray-500">{team.count} Artikel</p>
             </Link>
           ))}
         </div>
