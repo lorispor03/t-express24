@@ -51,18 +51,18 @@ export default function HomePage() {
               href={`/league/${slug}`}
               className="league-card group bg-[#3a3a3a] rounded-xl p-6 border border-white/15 hover:border-[var(--red-main)]/30"
             >
-              <div className="mb-4">
+              <div className="mb-4 h-14 flex items-end">
                 {LEAGUE_LOGOS[slug] ? (
                   <img
                     src={LEAGUE_LOGOS[slug]}
                     alt={league.name}
-                    className={`w-auto object-contain h-14 ${slug === 'la-liga' ? 'max-w-[100px]' : ''}`}
+                    className={`w-auto object-contain max-h-14 ${slug === 'la-liga' ? 'max-w-[100px]' : ''}`}
                   />
                 ) : (
                   <span className="text-3xl">&#9917;</span>
                 )}
               </div>
-              <h3 className="font-bold text-lg group-hover:text-[var(--gold)] transition-colors">
+              <h3 className="font-bold text-base sm:text-lg group-hover:text-[var(--gold)] transition-colors line-clamp-1">
                 {league.name}
               </h3>
               <p className="text-sm text-gray-400 mt-1">
