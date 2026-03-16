@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { Product, CATEGORIES } from '@/lib/types';
 import { useCart } from '@/context/CartContext';
-import { getPatchesForTeam, PatchOption } from '@/lib/patches';
+import { getPatchSetsForProduct, PatchSetOption } from '@/lib/patches';
 
 interface Props {
   product: Product;
@@ -24,37 +24,30 @@ export default function ProductDetailClient({ product, teamId, teamName, leagueN
   const { addItem } = useCart();
   const [size, setSize] = useState('');
   const [flocking, setFlocking] = useState('');
-  const [selectedPatches, setSelectedPatches] = useState<Set<string>>(new Set());
+  const [selectedPatchId, setSelectedPatchId] = useState<string | null>(null);
   const [added, setAdded] = useState(false);
 
   const isKids = product.c.includes('kids') || product.c.includes('kids-retro');
   const sizes = isKids ? SIZES_KIDS : SIZES_ADULT;
 
-  const availablePatches = useMemo(
-    () => getPatchesForTeam(leagueSlug, subLeague),
-    [leagueSlug, subLeague]
+  const isJersey = !product.c.some(c => ['training', 'windbreaker', 'sweater'].includes(c));
+
+  const availablePatchSets = useMemo(
+    () => isJersey ? getPatchSetsForProduct(product.h) : [],
+    [product.h, isJersey]
   );
 
-  const togglePatch = (patchId: string) => {
-    setSelectedPatches(prev => {
-      const next = new Set(prev);
-      if (next.has(patchId)) next.delete(patchId);
-      else next.add(patchId);
-      return next;
-    });
+  const selectedPatch = availablePatchSets.find(p => p.id === selectedPatchId) || null;
+  const patchPrice = selectedPatch?.price || 0;
+  const totalPrice = parseFloat(product.p) + patchPrice;
+
+  const handleSelectPatch = (patchId: string) => {
+    setSelectedPatchId(prev => prev === patchId ? null : patchId);
   };
-
-  const patchTotal = useMemo(() => {
-    return availablePatches
-      .filter(p => selectedPatches.has(p.id))
-      .reduce((sum, p) => sum + p.price, 0);
-  }, [availablePatches, selectedPatches]);
-
-  const totalPrice = parseFloat(product.p) + patchTotal;
 
   const handleAdd = () => {
     if (!size) return;
-    const patches = availablePatches.filter(p => selectedPatches.has(p.id));
+    const patches = selectedPatch ? [selectedPatch] : [];
     addItem(product, teamName, size, flocking.trim(), patches);
     setAdded(true);
     setTimeout(() => setAdded(false), 2000);
@@ -107,9 +100,9 @@ export default function ProductDetailClient({ product, teamId, teamName, leagueN
           <p className="text-sm text-gray-500 mb-4">{teamName}</p>
           <p className="text-2xl font-bold text-[var(--gold)] mb-6">
             CHF {totalPrice.toFixed(2)}
-            {patchTotal > 0 && (
+            {patchPrice > 0 && (
               <span className="text-sm text-gray-500 font-normal ml-2">
-                (inkl. {selectedPatches.size} {selectedPatches.size === 1 ? 'Patch' : 'Patches'})
+                (inkl. Patch-Set)
               </span>
             )}
           </p>
@@ -136,49 +129,42 @@ export default function ProductDetailClient({ product, teamId, teamName, leagueN
             </div>
           </div>
 
-          {/* Patches */}
-          {availablePatches.length > 0 && (
+          {/* Patch Sets */}
+          {availablePatchSets.length > 0 && (
             <div className="mb-5">
               <label className="block text-sm font-medium mb-3">
-                Patches <span className="text-gray-500 font-normal">(optional)</span>
+                Patch-Set wählen <span className="text-gray-500 font-normal">(optional, zum Abwählen erneut klicken)</span>
               </label>
-              <div className="grid grid-cols-2 gap-2">
-                {availablePatches.map(patch => {
-                  const isSelected = selectedPatches.has(patch.id);
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+                {availablePatchSets.map(patchSet => {
+                  const isSelected = selectedPatchId === patchSet.id;
                   return (
                     <button
-                      key={patch.id}
-                      onClick={() => togglePatch(patch.id)}
-                      className={`flex items-center gap-3 p-3 rounded-lg border transition-all text-left ${
+                      key={patchSet.id}
+                      onClick={() => handleSelectPatch(patchSet.id)}
+                      className={`relative flex flex-col items-center p-2 rounded-lg border transition-all ${
                         isSelected
-                          ? 'bg-[var(--red-main)]/10 border-[var(--red-main)]/50'
+                          ? 'bg-[var(--red-main)]/10 border-[var(--red-main)] ring-1 ring-[var(--red-main)]'
                           : 'bg-white/5 border-white/10 hover:border-white/20'
                       }`}
                     >
-                      <div className="w-8 h-8 flex-shrink-0 flex items-center justify-center">
+                      <div className="w-full aspect-square rounded overflow-hidden mb-2 bg-white/5">
                         <img
-                          src={patch.image}
-                          alt={patch.name}
-                          className="w-full h-full object-contain"
+                          src={patchSet.image}
+                          alt={patchSet.name}
+                          className="w-full h-full object-contain p-1"
                         />
                       </div>
-                      <div className="flex-1 min-w-0">
-                        <p className={`text-xs font-medium truncate ${isSelected ? 'text-white' : 'text-gray-300'}`}>
-                          {patch.name}
-                        </p>
-                        <p className="text-[10px] text-gray-500">+CHF {patch.price.toFixed(2)}</p>
-                      </div>
-                      <div className={`w-4 h-4 rounded border flex items-center justify-center flex-shrink-0 ${
-                        isSelected
-                          ? 'bg-[var(--red-main)] border-[var(--red-main)]'
-                          : 'border-white/20'
-                      }`}>
-                        {isSelected && (
+                      <p className={`text-[10px] font-medium text-center ${isSelected ? 'text-[var(--red-main)]' : 'text-gray-400'}`}>
+                        +CHF {patchSet.price.toFixed(2)}
+                      </p>
+                      {isSelected && (
+                        <div className="absolute top-1 right-1 w-5 h-5 rounded-full bg-[var(--red-main)] flex items-center justify-center">
                           <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
                           </svg>
-                        )}
-                      </div>
+                        </div>
+                      )}
                     </button>
                   );
                 })}
