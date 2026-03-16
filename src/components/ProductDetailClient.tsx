@@ -172,8 +172,8 @@ export default function ProductDetailClient({ product, teamId, teamName, leagueN
             </div>
           )}
 
-          {/* Flocking */}
-          <div className="mb-6">
+          {/* Flocking - only for jerseys */}
+          {isJersey && <div className="mb-6">
             <label className="block text-sm font-medium mb-2">Aufdruck (optional)</label>
             <input
               type="text"
@@ -183,7 +183,7 @@ export default function ProductDetailClient({ product, teamId, teamName, leagueN
               className="w-full bg-[#111] border border-white/10 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-[var(--red-main)] transition-colors"
             />
             <p className="text-[11px] text-gray-600 mt-1">Name und/oder Nummer für den Aufdruck</p>
-          </div>
+          </div>}
 
           {/* Add to Cart */}
           <button
