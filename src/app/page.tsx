@@ -49,9 +49,9 @@ export default function HomePage() {
             <Link
               key={slug}
               href={`/league/${slug}`}
-              className="league-card group bg-[#3a3a3a] rounded-xl p-6 border border-white/15 hover:border-[var(--red-main)]/30"
+              className="league-card group bg-[#3a3a3a] rounded-xl p-4 sm:p-6 border border-white/15 hover:border-[var(--red-main)]/30 aspect-[4/3]  flex flex-col"
             >
-              <div className="mb-4 h-14 flex items-end">
+              <div className="mb-4 h-14 flex items-end flex-shrink-0">
                 {LEAGUE_LOGOS[slug] ? (
                   <img
                     src={LEAGUE_LOGOS[slug]}
@@ -62,12 +62,14 @@ export default function HomePage() {
                   <span className="text-3xl">&#9917;</span>
                 )}
               </div>
-              <h3 className="font-bold text-base sm:text-lg group-hover:text-[var(--gold)] transition-colors line-clamp-1">
-                {league.name}
-              </h3>
-              <p className="text-sm text-gray-400 mt-1">
-                {league.teamCount} {league.teamCount === 1 ? 'Team' : 'Teams'} {league.country && `· ${league.country}`}
-              </p>
+              <div className="mt-auto">
+                <h3 className="font-bold text-base sm:text-lg group-hover:text-[var(--gold)] transition-colors line-clamp-1">
+                  {league.name}
+                </h3>
+                <p className="text-sm text-gray-400 mt-1 line-clamp-1">
+                  {league.teamCount} {league.teamCount === 1 ? 'Team' : 'Teams'} {league.country && `· ${league.country}`}
+                </p>
+              </div>
             </Link>
           ))}
         </div>
