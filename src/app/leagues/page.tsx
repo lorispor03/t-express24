@@ -33,7 +33,7 @@ export default function LeaguesPage() {
                   <img
                     src={LEAGUE_LOGOS[slug]}
                     alt={league.name}
-                    className="h-10 w-auto object-contain"
+                    className="h-10 md:h-14 w-auto object-contain"
                   />
                 ) : (
                   <span className="text-3xl">&#9917;</span>
