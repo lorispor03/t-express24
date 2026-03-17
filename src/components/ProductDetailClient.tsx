@@ -68,11 +68,11 @@ export default function ProductDetailClient({ product, teamId, teamName, leagueN
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {/* Image */}
-        <div className="bg-[#1a1a1a] rounded-xl overflow-hidden border border-white/5">
+        <div className="bg-[#1a1a1a] rounded-xl overflow-hidden border border-white/5 aspect-square">
           <img
             src={product.i}
             alt={product.t}
-            className="w-full aspect-square object-cover"
+            className="w-full h-full object-cover"
           />
         </div>
 
