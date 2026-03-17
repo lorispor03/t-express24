@@ -148,7 +148,7 @@ export default function ProductDetailClient({ product, teamId, teamName, leagueN
                           : 'bg-white/5 border-white/10 hover:border-white/20'
                       }`}
                     >
-                      <div className="w-full aspect-square rounded overflow-hidden mb-2 bg-white/5">
+                      <div className="w-full aspect-square rounded overflow-hidden mb-2 bg-white">
                         <img
                           src={patchSet.image}
                           alt={patchSet.name}
