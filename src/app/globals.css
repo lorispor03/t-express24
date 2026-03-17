@@ -63,7 +63,13 @@ body {
 .league-card {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
-.league-card:hover {
+@media (hover: hover) {
+  .league-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 30px rgba(196, 34, 46, 0.3);
+  }
+}
+.league-card:active {
   transform: translateY(-4px);
   box-shadow: 0 8px 30px rgba(196, 34, 46, 0.3);
 }
@@ -72,7 +78,13 @@ body {
 .team-card {
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
-.team-card:hover {
+@media (hover: hover) {
+  .team-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+  }
+}
+.team-card:active {
   transform: translateY(-3px);
   box-shadow: 0 6px 20px rgba(0,0,0,0.4);
 }
