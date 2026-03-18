@@ -87,7 +87,7 @@ export default async function LeaguePage({ params }: { params: Promise<{ slug: s
                       <img
                         src={subLogo}
                         alt={subName}
-                        className="h-14 w-auto object-contain"
+                        className={`w-auto object-contain ${subSlug === 'mls' ? 'h-20' : 'h-14'}`}
                       />
                     ) : (
                       <span className="text-3xl">&#9917;</span>
