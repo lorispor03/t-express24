@@ -20,8 +20,11 @@ body {
 ::-webkit-scrollbar-thumb { background: var(--red-main); border-radius: 4px; }
 
 /* Product card hover */
-.product-card { transition: transform 0.2s ease; }
+.product-card { transition: transform 0.2s ease, border-color 0.2s ease; }
 .product-card:hover { transform: scale(1.02); }
+.product-card:active {
+  border-color: rgba(196, 34, 46, 0.3);
+}
 
 
 /* Filter checkbox custom styling */
