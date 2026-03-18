@@ -135,7 +135,7 @@ export default function ProductDetailClient({ product, teamId, teamName, leagueN
               <label className="block text-sm font-medium mb-3">
                 Patch-Set wählen <span className="text-gray-500 font-normal">(optional, zum Abwählen erneut klicken)</span>
               </label>
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+              <div className="grid grid-cols-3 gap-2">
                 {availablePatchSets.map(patchSet => {
                   const isSelected = selectedPatchId === patchSet.id;
                   return (
