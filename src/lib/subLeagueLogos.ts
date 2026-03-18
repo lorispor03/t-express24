@@ -66,7 +66,7 @@ export const SUB_LEAGUE_LOGOS: Record<string, string> = {
   'super-league': '/leagues/super-league-switzerland.png',
   'brasileirao': '/leagues/brasileirao.png',
   'liga-argentina': '/leagues/liga-argentina.png',
-  'mls': '/leagues/mls.png',
+  'mls': '/leagues/mls.svg',
   'liga-mx': '/leagues/liga-mx.png',
   'saudi-pro-league': '/leagues/saudi-pro-league.png',
   'primera-chile': '/leagues/primera-chile.png',
