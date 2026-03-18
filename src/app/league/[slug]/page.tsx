@@ -82,12 +82,12 @@ export default async function LeaguePage({ params }: { params: Promise<{ slug: s
                   href={`/league/${slug}/${subSlug}`}
                   className="league-card group bg-[#3a3a3a] rounded-xl p-6 border border-white/15 hover:border-[var(--red-main)]/30"
                 >
-                  <div className="mb-2">
+                  <div className="mb-4 h-14 flex items-end">
                     {subLogo ? (
                       <img
                         src={subLogo}
                         alt={subName}
-                        className={`w-auto object-contain ${subSlug === 'mls' ? 'h-20' : 'h-14'}`}
+                        className="h-14 w-auto object-contain"
                       />
                     ) : (
                       <span className="text-3xl">&#9917;</span>
