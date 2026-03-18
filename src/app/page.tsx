@@ -56,7 +56,7 @@ export default function HomePage() {
                   <img
                     src={LEAGUE_LOGOS[slug]}
                     alt={league.name}
-                    className={`w-auto object-contain h-14 ${slug === 'la-liga' ? 'max-h-10' : ''} ${slug === 'eredivisie' ? 'h-16' : ''}`}
+                    className={`w-auto object-contain ${slug === 'la-liga' ? 'h-14 max-h-10' : slug === 'eredivisie' ? 'h-16' : 'h-14'}`}
                   />
                 ) : (
                   <span className="text-3xl">&#9917;</span>
