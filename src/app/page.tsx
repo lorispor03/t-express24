@@ -49,7 +49,7 @@ export default function HomePage() {
             <Link
               key={slug}
               href={`/league/${slug}`}
-              className="league-card group bg-[#3a3a3a] rounded-xl p-6 border border-white/15 hover:border-[var(--red-main)]/30"
+              className="league-card group bg-[#3a3a3a] rounded-xl p-6 border border-white/15 hover:border-[var(--red-main)]/30 text-left"
             >
               <div className="mb-4">
                 {LEAGUE_LOGOS[slug] ? (
