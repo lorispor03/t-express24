@@ -51,7 +51,7 @@ export default function HomePage() {
               href={`/league/${slug}`}
               className="league-card group bg-[#3a3a3a] rounded-xl p-6 border border-white/15 hover:border-[var(--red-main)]/30 text-left"
             >
-              <div className="mb-4">
+              <div className="mb-4 h-14 flex items-end">
                 {LEAGUE_LOGOS[slug] ? (
                   <img
                     src={LEAGUE_LOGOS[slug]}
