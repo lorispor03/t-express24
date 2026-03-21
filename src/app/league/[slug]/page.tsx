@@ -50,7 +50,7 @@ export default async function LeaguePage({ params }: { params: Promise<{ slug: s
           </div>
           <div className="flex items-center gap-5">
             {logo && (
-              <img src={logo} alt={league.name} className={`w-auto object-contain ${['la-liga', 'premier-league'].includes(slug) ? 'h-10 sm:h-16' : 'h-32 sm:h-36'}`} />
+              <img src={logo} alt={league.name} className={`w-auto object-contain ${slug === 'la-liga' ? 'h-10 sm:h-16' : ['premier-league'].includes(slug) ? 'h-16 sm:h-24' : 'h-32 sm:h-36'}`} />
             )}
             <div>
               <h1 className="text-3xl md:text-5xl font-black">{league.name}</h1>
