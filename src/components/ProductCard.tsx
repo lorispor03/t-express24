@@ -10,7 +10,7 @@ interface ProductCardProps {
 
 export default function ProductCard({ product, teamName }: ProductCardProps) {
   return (
-    <Link href={`/product/${product.h}`} className="product-card group bg-[#1a1a1a] rounded-xl overflow-hidden border border-white/5 hover:border-[var(--red-main)]/30 transition-all block">
+    <Link href={`/product/${product.h}`} className="product-card group bg-[#1a1a1a] rounded-xl overflow-hidden border border-white/5 transition-all block">
       {/* Image */}
       <div className="relative aspect-square overflow-hidden bg-[#1a1a1a]">
         <img src={product.i} alt={product.t} className="absolute inset-0 w-full h-full object-cover" loading="lazy" />
