@@ -163,34 +163,36 @@ export default function TeamPageClient({ teamName, leagueName, leagueSlug, produ
           />
         </div>
 
-        {/* Sort */}
-        <div className="relative flex items-center">
-          <svg className="absolute left-3 w-4 h-4 text-gray-500 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 4h13M3 8h9m-9 4h6m4 0l4-4m0 0l4 4m-4-4v12" />
-          </svg>
-          <select
-            value={sort}
-            onChange={e => handleSort(e.target.value as SortOption)}
-            className="bg-[#1a1a1a] border border-white/10 rounded-lg pl-10 pr-4 py-2.5 text-sm focus:outline-none focus:border-[var(--red-main)] cursor-pointer appearance-none"
-          >
-            <option value="default">Sortierung</option>
-            <option value="price-asc">Preis: Tief → Hoch</option>
-            <option value="price-desc">Preis: Hoch → Tief</option>
-            <option value="name-asc">Name: A → Z</option>
-            <option value="name-desc">Name: Z → A</option>
-          </select>
-        </div>
+        {/* Sort + Mobile Filter (side by side on mobile) */}
+        <div className="flex items-center gap-3 w-full sm:w-auto">
+          <div className="relative flex items-center flex-1 sm:flex-none">
+            <svg className="absolute left-3 w-4 h-4 text-gray-500 pointer-events-none" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 4h13M3 8h9m-9 4h6m4 0l4-4m0 0l4 4m-4-4v12" />
+            </svg>
+            <select
+              value={sort}
+              onChange={e => handleSort(e.target.value as SortOption)}
+              className="w-full sm:w-auto bg-[#1a1a1a] border border-white/10 rounded-lg pl-10 pr-4 py-2.5 text-sm focus:outline-none focus:border-[var(--red-main)] cursor-pointer appearance-none"
+            >
+              <option value="default">Sortierung</option>
+              <option value="price-asc">Preis: Tief → Hoch</option>
+              <option value="price-desc">Preis: Hoch → Tief</option>
+              <option value="name-asc">Name: A → Z</option>
+              <option value="name-desc">Name: Z → A</option>
+            </select>
+          </div>
 
-        {/* Mobile filter toggle */}
-        <button
-          onClick={() => setMobileFilterOpen(!mobileFilterOpen)}
-          className="lg:hidden flex items-center gap-2 bg-[#1a1a1a] border border-white/10 rounded-lg px-4 py-2.5 text-sm"
-        >
-          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" />
-          </svg>
-          Filter {activeCategories.size > 0 && `(${activeCategories.size})`}
-        </button>
+          {/* Mobile filter toggle */}
+          <button
+            onClick={() => setMobileFilterOpen(!mobileFilterOpen)}
+            className="lg:hidden flex items-center gap-2 bg-[#1a1a1a] border border-white/10 rounded-lg px-4 py-2.5 text-sm whitespace-nowrap"
+          >
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" />
+            </svg>
+            Filter {activeCategories.size > 0 && `(${activeCategories.size})`}
+          </button>
+        </div>
       </div>
 
       {/* Active filter tags */}
