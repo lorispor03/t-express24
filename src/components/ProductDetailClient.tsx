@@ -73,12 +73,32 @@ export default function ProductDetailClient({ product, teamId, teamName, leagueN
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {/* Image Gallery */}
         <div>
-          <div className="bg-[#1a1a1a] rounded-xl overflow-hidden border border-white/5 aspect-square">
+          <div className="relative bg-[#1a1a1a] rounded-xl overflow-hidden border border-white/5 aspect-square">
             <img
               src={allImages[selectedImg]}
               alt={product.t}
               className="w-full h-full object-cover"
             />
+            {allImages.length > 1 && (
+              <>
+                <button
+                  onClick={() => setSelectedImg(prev => prev === 0 ? allImages.length - 1 : prev - 1)}
+                  className="absolute left-2 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-black/50 flex items-center justify-center text-[var(--red-main)] hover:bg-black/70 transition-colors"
+                >
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+                  </svg>
+                </button>
+                <button
+                  onClick={() => setSelectedImg(prev => prev === allImages.length - 1 ? 0 : prev + 1)}
+                  className="absolute right-2 top-1/2 -translate-y-1/2 w-9 h-9 rounded-full bg-black/50 flex items-center justify-center text-[var(--red-main)] hover:bg-black/70 transition-colors"
+                >
+                  <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                  </svg>
+                </button>
+              </>
+            )}
           </div>
           {allImages.length > 1 && (
             <div className="flex gap-2 mt-3 overflow-x-auto pb-2">
