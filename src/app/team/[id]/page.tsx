@@ -77,10 +77,14 @@ export default async function TeamPage({ params }: { params: Promise<{ id: strin
       {/* Club Description */}
       {(teamDescriptions as Record<string, string>)[id] && (
         <section className="border-b border-white/10 bg-[#111]">
-          <div className="max-w-7xl mx-auto px-4 py-5">
-            <p className="text-sm text-gray-400 leading-relaxed max-w-3xl">
-              {(teamDescriptions as Record<string, string>)[id]}
-            </p>
+          <div className="max-w-7xl mx-auto px-4 py-6">
+            <div className="relative max-w-3xl pl-6 border-l-2 border-[var(--gold)]/40">
+              <span className="absolute -left-1 -top-2 text-4xl text-[var(--gold)]/30 font-serif leading-none">&ldquo;</span>
+              <p className="text-sm text-gray-400 leading-relaxed italic">
+                {(teamDescriptions as Record<string, string>)[id]}
+              </p>
+              <span className="text-4xl text-[var(--gold)]/30 font-serif leading-none">&rdquo;</span>
+            </div>
           </div>
         </section>
       )}
