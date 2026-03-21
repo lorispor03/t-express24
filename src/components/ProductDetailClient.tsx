@@ -82,7 +82,7 @@ export default function ProductDetailClient({ product, teamId, teamName, leagueN
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {/* Image Gallery */}
         <div>
-          <div className="relative flex items-center -mx-2 md:-mx-12">
+          <div className="relative flex items-center md:-mx-12">
             {allImages.length > 1 && (
               <button
                 onClick={() => setSelectedImg(prev => prev === 0 ? allImages.length - 1 : prev - 1)}
