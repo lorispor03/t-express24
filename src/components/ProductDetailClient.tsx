@@ -67,7 +67,7 @@ export default function ProductDetailClient({ product, teamId, teamName, leagueN
   };
 
   return (
-    <div className="max-w-5xl mx-auto px-4 py-6">
+    <div className="max-w-6xl mx-auto px-4 py-6">
       {/* Back Button */}
       <button
         onClick={() => router.back()}
@@ -82,56 +82,33 @@ export default function ProductDetailClient({ product, teamId, teamName, leagueN
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {/* Image Gallery */}
         <div>
-          <div className="relative">
-            <div className="md:flex md:items-center md:-mx-12">
-              {allImages.length > 1 && (
-                <button
-                  onClick={() => setSelectedImg(prev => prev === 0 ? allImages.length - 1 : prev - 1)}
-                  className="hidden md:flex flex-shrink-0 w-9 h-9 rounded-full bg-white/5 items-center justify-center text-[var(--red-main)] hover:bg-white/10 transition-colors mr-2"
-                >
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
-                  </svg>
-                </button>
-              )}
-              <div className="bg-[#1a1a1a] rounded-xl overflow-hidden border border-white/5 aspect-square flex-1 min-w-0">
-                <img
-                  src={allImages[selectedImg]}
-                  alt={product.t}
-                  className="w-full h-full object-cover"
-                />
-              </div>
-              {allImages.length > 1 && (
-                <button
-                  onClick={() => setSelectedImg(prev => prev === allImages.length - 1 ? 0 : prev + 1)}
-                  className="hidden md:flex flex-shrink-0 w-9 h-9 rounded-full bg-white/5 items-center justify-center text-[var(--red-main)] hover:bg-white/10 transition-colors ml-2"
-                >
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-                  </svg>
-                </button>
-              )}
-            </div>
-            {/* Mobile arrows */}
+          <div className="relative flex items-center">
             {allImages.length > 1 && (
-              <>
-                <button
-                  onClick={() => setSelectedImg(prev => prev === 0 ? allImages.length - 1 : prev - 1)}
-                  className="md:hidden absolute left-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/50 flex items-center justify-center text-[var(--red-main)] active:bg-black/70"
-                >
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
-                  </svg>
-                </button>
-                <button
-                  onClick={() => setSelectedImg(prev => prev === allImages.length - 1 ? 0 : prev + 1)}
-                  className="md:hidden absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-black/50 flex items-center justify-center text-[var(--red-main)] active:bg-black/70"
-                >
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-                  </svg>
-                </button>
-              </>
+              <button
+                onClick={() => setSelectedImg(prev => prev === 0 ? allImages.length - 1 : prev - 1)}
+                className="flex-shrink-0 w-7 h-7 md:w-9 md:h-9 rounded-full bg-white/5 flex items-center justify-center text-[var(--red-main)] hover:bg-white/10 active:bg-white/10 transition-colors mr-1.5 md:mr-3"
+              >
+                <svg className="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+                </svg>
+              </button>
+            )}
+            <div className="bg-[#1a1a1a] rounded-xl overflow-hidden border border-white/5 aspect-square flex-1 min-w-0">
+              <img
+                src={allImages[selectedImg]}
+                alt={product.t}
+                className="w-full h-full object-cover"
+              />
+            </div>
+            {allImages.length > 1 && (
+              <button
+                onClick={() => setSelectedImg(prev => prev === allImages.length - 1 ? 0 : prev + 1)}
+                className="flex-shrink-0 w-7 h-7 md:w-9 md:h-9 rounded-full bg-white/5 flex items-center justify-center text-[var(--red-main)] hover:bg-white/10 active:bg-white/10 transition-colors ml-1.5 md:ml-3"
+              >
+                <svg className="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
             )}
           </div>
           {allImages.length > 1 && (
