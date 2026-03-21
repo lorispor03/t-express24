@@ -58,9 +58,9 @@ export default async function SubLeaguePage({ params }: { params: Promise<{ slug
           </div>
           <div className="flex items-center gap-5">
             {subLogo ? (
-              <img src={subLogo} alt={result.subLeagueName} className="h-16 w-auto object-contain" />
+              <img src={subLogo} alt={result.subLeagueName} className="h-32 sm:h-36 w-auto object-contain" />
             ) : leagueLogo ? (
-              <img src={leagueLogo} alt={league.name} className="h-16 w-auto object-contain" />
+              <img src={leagueLogo} alt={league.name} className="h-32 sm:h-36 w-auto object-contain" />
             ) : null}
             <div>
               <h1 className="text-3xl md:text-5xl font-black">{result.subLeagueName}</h1>
