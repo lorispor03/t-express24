@@ -94,13 +94,25 @@ export function getAllProductHandles(): string[] {
 
 export function searchProducts(query: string, limit = 20) {
   const q = query.toLowerCase();
-  const results: Array<{ teamId: string; teamName: string; product: any }> = [];
+  const results: Array<{ teamId: string; teamName: string; product: Product }> = [];
   for (const [teamId, team] of Object.entries(data.teams)) {
     for (const product of team.products) {
-      if (product.t.toLowerCase().includes(q)) {
+      if (product.t.toLowerCase().includes(q) || team.name.toLowerCase().includes(q)) {
         results.push({ teamId, teamName: team.name, product });
         if (results.length >= limit) return results;
       }
+    }
+  }
+  return results;
+}
+
+export function searchTeams(query: string, limit = 10) {
+  const q = query.toLowerCase();
+  const results: Array<{ id: string; name: string; league: string; leagueName: string; productCount: number }> = [];
+  for (const [id, team] of Object.entries(data.teams)) {
+    if (team.name.toLowerCase().includes(q)) {
+      results.push({ id, name: team.name, league: team.league, leagueName: team.leagueName, productCount: team.productCount });
+      if (results.length >= limit) return results;
     }
   }
   return results;
