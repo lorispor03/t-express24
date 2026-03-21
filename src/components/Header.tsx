@@ -40,17 +40,17 @@ export default function Header() {
 
       {/* Main Header */}
       <header className="sticky top-0 z-50 bg-[#111]/95 backdrop-blur-md border-b border-white/10">
-        <div className="max-w-7xl mx-auto px-4 h-16 flex items-center gap-4">
+        <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between relative">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 flex-shrink-0">
             <Image src="/logo.png" alt="T-EXPRESS24" width={40} height={40} className="rounded-lg" />
             <span className="font-extrabold text-lg tracking-tight hidden sm:inline">T-EXPRESS<span className="text-[var(--gold)]">24</span></span>
           </Link>
 
-          {/* Search bar - Desktop: visible in center */}
+          {/* Search bar - Desktop: centered absolutely */}
           <button
             onClick={() => setSearchOpen(true)}
-            className="hidden md:flex items-center gap-2 flex-1 max-w-md mx-auto bg-white/5 border border-white/10 rounded-lg px-4 py-2 text-sm text-gray-400 hover:border-white/20 hover:bg-white/[0.07] transition-colors cursor-text"
+            className="hidden md:flex items-center gap-2 absolute left-1/2 -translate-x-1/2 w-full max-w-md bg-white/5 border border-white/10 rounded-lg px-4 py-2 text-sm text-gray-400 hover:border-white/20 hover:bg-white/[0.07] transition-colors cursor-text"
           >
             <svg className="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
