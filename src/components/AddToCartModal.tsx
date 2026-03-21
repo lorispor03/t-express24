@@ -16,7 +16,8 @@ const SIZES_KIDS = ['116', '128', '140', '152', '164'];
 export default function AddToCartModal({ product, teamName, onClose }: AddToCartModalProps) {
   const { addItem } = useCart();
   const [size, setSize] = useState('');
-  const [flocking, setFlocking] = useState('');
+  const [flockingName, setFlockingName] = useState('');
+  const [flockingNumber, setFlockingNumber] = useState('');
   const [showFlocking, setShowFlocking] = useState(false);
 
   const isKids = product.c.includes('kids') || product.c.includes('kids-retro');
@@ -24,7 +25,7 @@ export default function AddToCartModal({ product, teamName, onClose }: AddToCart
 
   const handleAdd = () => {
     if (!size) return;
-    addItem(product, teamName, size, flocking.trim());
+    addItem(product, teamName, size, flockingName.trim(), flockingNumber.trim());
     onClose();
   };
 
@@ -75,13 +76,22 @@ export default function AddToCartModal({ product, teamName, onClose }: AddToCart
               Aufdruck (Name/Nummer)
             </button>
             {showFlocking && (
-              <input
-                type="text"
-                value={flocking}
-                onChange={e => setFlocking(e.target.value)}
-                placeholder="z.B. Ronaldo 7"
-                className="mt-2 w-full bg-[#111] border border-white/10 rounded-lg px-4 py-2 text-sm focus:outline-none focus:border-[var(--red-main)]"
-              />
+              <div className="mt-2 flex gap-2">
+                <input
+                  type="text"
+                  value={flockingName}
+                  onChange={e => setFlockingName(e.target.value)}
+                  placeholder="z.B. Ronaldo"
+                  className="flex-1 bg-[#111] border border-white/10 rounded-lg px-4 py-2 text-sm focus:outline-none focus:border-[var(--red-main)]"
+                />
+                <input
+                  type="text"
+                  value={flockingNumber}
+                  onChange={e => setFlockingNumber(e.target.value)}
+                  placeholder="z.B. 7"
+                  className="w-20 bg-[#111] border border-white/10 rounded-lg px-4 py-2 text-sm focus:outline-none focus:border-[var(--red-main)] text-center"
+                />
+              </div>
             )}
           </div>
         </div>

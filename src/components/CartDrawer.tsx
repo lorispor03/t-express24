@@ -35,7 +35,8 @@ export default function CartDrawer() {
             produkt_preis: i.product.p,
             team: i.teamName,
             groesse: i.size,
-            beflockung: i.flocking,
+            beflockung_name: i.flockingName,
+            beflockung_nummer: i.flockingNumber,
             patches: (i.patches || []).map(p => ({ name: p.name, preis: p.price })),
             menge: i.quantity,
           })),
@@ -104,7 +105,7 @@ export default function CartDrawer() {
                     <div className="flex-1 min-w-0 pr-3">
                       <p className="text-xs text-gray-300 truncate">{item.product.t}</p>
                       <p className="text-[10px] text-gray-500">
-                        {item.size}{item.flocking && ` · ${item.flocking}`} · {item.quantity}x
+                        {item.size}{(item.flockingName || item.flockingNumber) && ` · ${[item.flockingName, item.flockingNumber].filter(Boolean).join(' ')}`} · {item.quantity}x
                       </p>
                       {item.patches && item.patches.length > 0 && (
                         <p className="text-[10px] text-gray-500">
@@ -204,7 +205,7 @@ export default function CartDrawer() {
                         <div className="flex-1 min-w-0">
                           <p className="text-xs font-medium text-gray-300 line-clamp-2 leading-tight">{item.product.t}</p>
                           <p className="text-[10px] text-gray-500 mt-1">
-                            Grösse: {item.size}{item.flocking && ` · Aufdruck: ${item.flocking}`}
+                            Grösse: {item.size}{(item.flockingName || item.flockingNumber) && ` · Aufdruck: ${[item.flockingName, item.flockingNumber].filter(Boolean).join(' ')}`}
                           </p>
                           <p className="text-[10px] text-gray-500">{item.teamName}</p>
                           {item.patches && item.patches.length > 0 && (

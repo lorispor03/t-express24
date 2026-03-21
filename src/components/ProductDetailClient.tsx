@@ -23,7 +23,8 @@ export default function ProductDetailClient({ product, teamId, teamName, leagueN
   const router = useRouter();
   const { addItem } = useCart();
   const [size, setSize] = useState('');
-  const [flocking, setFlocking] = useState('');
+  const [flockingName, setFlockingName] = useState('');
+  const [flockingNumber, setFlockingNumber] = useState('');
   const [selectedPatchId, setSelectedPatchId] = useState<string | null>(null);
   const [added, setAdded] = useState(false);
 
@@ -48,7 +49,7 @@ export default function ProductDetailClient({ product, teamId, teamName, leagueN
   const handleAdd = () => {
     if (!size) return;
     const patches = selectedPatch ? [selectedPatch] : [];
-    addItem(product, teamName, size, flocking.trim(), patches);
+    addItem(product, teamName, size, flockingName.trim(), flockingNumber.trim(), patches);
     setAdded(true);
     setTimeout(() => setAdded(false), 2000);
   };
@@ -175,14 +176,23 @@ export default function ProductDetailClient({ product, teamId, teamName, leagueN
           {/* Flocking - only for jerseys */}
           {isJersey && <div className="mb-6">
             <label className="block text-sm font-medium mb-2">Aufdruck (optional)</label>
-            <input
-              type="text"
-              value={flocking}
-              onChange={e => setFlocking(e.target.value)}
-              placeholder="z.B. Ronaldo 7"
-              className="w-full bg-[#111] border border-white/10 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-[var(--red-main)] transition-colors"
-            />
-            <p className="text-[11px] text-gray-600 mt-1">Name und/oder Nummer für den Aufdruck</p>
+            <div className="flex gap-2">
+              <input
+                type="text"
+                value={flockingName}
+                onChange={e => setFlockingName(e.target.value)}
+                placeholder="z.B. Ronaldo"
+                className="flex-1 bg-[#111] border border-white/10 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-[var(--red-main)] transition-colors"
+              />
+              <input
+                type="text"
+                value={flockingNumber}
+                onChange={e => setFlockingNumber(e.target.value)}
+                placeholder="z.B. 7"
+                className="w-20 bg-[#111] border border-white/10 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-[var(--red-main)] transition-colors text-center"
+              />
+            </div>
+            <p className="text-[11px] text-gray-600 mt-1">Name und Nummer für den Aufdruck</p>
           </div>}
 
           {/* Add to Cart */}
