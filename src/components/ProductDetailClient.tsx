@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useRef, useEffect, useCallback } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { Product, CATEGORIES } from '@/lib/types';
@@ -30,6 +30,15 @@ export default function ProductDetailClient({ product, teamId, teamName, leagueN
   const [selectedImg, setSelectedImg] = useState(0);
 
   const allImages = product.imgs && product.imgs.length > 1 ? product.imgs : [product.i];
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const [scrollProgress, setScrollProgress] = useState(0);
+
+  const handleScroll = useCallback(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+    const max = el.scrollWidth - el.clientWidth;
+    setScrollProgress(max > 0 ? el.scrollLeft / max : 0);
+  }, []);
 
   const isKids = product.c.includes('kids') || product.c.includes('kids-retro');
   const sizes = isKids ? SIZES_KIDS : SIZES_ADULT;
@@ -103,20 +112,33 @@ export default function ProductDetailClient({ product, teamId, teamName, leagueN
             )}
           </div>
           {allImages.length > 1 && (
-            <div className="flex gap-2 mt-3 overflow-x-auto pb-2 thumbnail-scroll">
-              {allImages.map((img, idx) => (
-                <button
-                  key={idx}
-                  onClick={() => setSelectedImg(idx)}
-                  className={`flex-shrink-0 w-16 h-16 rounded-lg overflow-hidden border-2 transition-all ${
-                    selectedImg === idx
-                      ? 'border-[var(--red-main)]'
-                      : 'border-white/10 hover:border-white/30'
-                  }`}
-                >
-                  <img src={img} alt={`${product.t} ${idx + 1}`} className="w-full h-full object-cover" />
-                </button>
-              ))}
+            <div className="mt-3">
+              <div
+                ref={scrollRef}
+                onScroll={handleScroll}
+                className="flex gap-2 overflow-x-auto pb-1"
+                style={{ scrollbarWidth: 'none', WebkitOverflowScrolling: 'touch' }}
+              >
+                {allImages.map((img, idx) => (
+                  <button
+                    key={idx}
+                    onClick={() => setSelectedImg(idx)}
+                    className={`flex-shrink-0 w-16 h-16 rounded-lg overflow-hidden border-2 transition-all ${
+                      selectedImg === idx
+                        ? 'border-[var(--red-main)]'
+                        : 'border-white/10 hover:border-white/30'
+                    }`}
+                  >
+                    <img src={img} alt={`${product.t} ${idx + 1}`} className="w-full h-full object-cover" />
+                  </button>
+                ))}
+              </div>
+              <div className="mt-2 h-1 bg-white/10 rounded-full overflow-hidden">
+                <div
+                  className="h-full bg-[var(--red-main)] rounded-full transition-all duration-150"
+                  style={{ width: `${Math.max(20, 100 / allImages.length)}%`, marginLeft: `${scrollProgress * (100 - Math.max(20, 100 / allImages.length))}%` }}
+                />
+              </div>
             </div>
           )}
         </div>
