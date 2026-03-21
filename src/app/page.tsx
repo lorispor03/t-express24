@@ -62,8 +62,8 @@ export default function HomePage() {
                   <span className="text-3xl">&#9917;</span>
                 )}
               </div>
-              <h3 className="font-bold text-lg group-hover:text-[var(--gold)] transition-colors break-words hyphens-auto">
-                {league.name}
+              <h3 className="font-bold text-lg group-hover:text-[var(--gold)] transition-colors">
+                {slug === 'nationalmannschaften' ? <><span className="sm:hidden">National-<br/>mannschaften</span><span className="hidden sm:inline">{league.name}</span></> : league.name}
               </h3>
               <p className="text-sm text-gray-400 mt-1">
                 {league.teamCount} {league.teamCount === 1 ? 'Team' : 'Teams'} {league.country && `· ${league.country}`}
