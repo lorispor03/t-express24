@@ -62,7 +62,7 @@ export default function HomePage() {
                   <span className="text-3xl">&#9917;</span>
                 )}
               </div>
-              <h3 className="font-bold text-lg group-hover:text-[var(--gold)] transition-colors">
+              <h3 className="font-bold text-lg group-hover:text-[var(--gold)] transition-colors break-words hyphens-auto">
                 {league.name}
               </h3>
               <p className="text-sm text-gray-400 mt-1">
