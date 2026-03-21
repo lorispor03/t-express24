@@ -73,11 +73,11 @@ export default function ProductDetailClient({ product, teamId, teamName, leagueN
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {/* Image Gallery */}
         <div>
-          <div className="relative flex items-center">
+          <div className="relative flex items-center -mx-2 md:-mx-12">
             {allImages.length > 1 && (
               <button
                 onClick={() => setSelectedImg(prev => prev === 0 ? allImages.length - 1 : prev - 1)}
-                className="flex-shrink-0 w-7 h-7 md:w-9 md:h-9 rounded-full bg-white/5 flex items-center justify-center text-[var(--red-main)] hover:bg-white/10 active:bg-white/10 transition-colors mr-1.5 md:mr-3"
+                className="flex-shrink-0 w-7 h-7 md:w-9 md:h-9 rounded-full bg-white/5 flex items-center justify-center text-[var(--red-main)] hover:bg-white/10 active:bg-white/10 transition-colors mr-1 md:mr-2"
               >
                 <svg className="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
@@ -94,7 +94,7 @@ export default function ProductDetailClient({ product, teamId, teamName, leagueN
             {allImages.length > 1 && (
               <button
                 onClick={() => setSelectedImg(prev => prev === allImages.length - 1 ? 0 : prev + 1)}
-                className="flex-shrink-0 w-7 h-7 md:w-9 md:h-9 rounded-full bg-white/5 flex items-center justify-center text-[var(--red-main)] hover:bg-white/10 active:bg-white/10 transition-colors ml-1.5 md:ml-3"
+                className="flex-shrink-0 w-7 h-7 md:w-9 md:h-9 rounded-full bg-white/5 flex items-center justify-center text-[var(--red-main)] hover:bg-white/10 active:bg-white/10 transition-colors ml-1 md:ml-2"
               >
                 <svg className="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
