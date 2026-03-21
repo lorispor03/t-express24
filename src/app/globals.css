@@ -20,11 +20,8 @@ body {
 ::-webkit-scrollbar-thumb { background: var(--red-main); border-radius: 4px; }
 * { scrollbar-color: var(--red-main) #111; scrollbar-width: thin; }
 
-/* Thumbnail scrollbar */
-.thumbnail-scroll::-webkit-scrollbar { height: 4px; }
-.thumbnail-scroll::-webkit-scrollbar-track { background: #222; border-radius: 4px; }
-.thumbnail-scroll::-webkit-scrollbar-thumb { background: var(--red-main); border-radius: 4px; }
-.thumbnail-scroll { scrollbar-color: var(--red-main) #222; scrollbar-width: thin; }
+/* Hide native scrollbar */
+.hide-sb::-webkit-scrollbar { display: none; }
 
 /* Product card hover */
 .product-card { transition: transform 0.2s ease, border-color 0.2s ease; }
