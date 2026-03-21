@@ -14,10 +14,11 @@ body {
   color: #fff;
 }
 
-/* Scrollbar */
-::-webkit-scrollbar { width: 4px; }
+/* Scrollbar (global) */
+::-webkit-scrollbar { width: 4px; height: 4px; }
 ::-webkit-scrollbar-track { background: #111; }
 ::-webkit-scrollbar-thumb { background: var(--red-main); border-radius: 4px; }
+* { scrollbar-color: var(--red-main) #111; scrollbar-width: thin; }
 
 /* Thumbnail scrollbar */
 .thumbnail-scroll::-webkit-scrollbar { height: 4px; }
