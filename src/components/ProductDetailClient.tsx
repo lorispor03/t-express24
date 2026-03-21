@@ -103,7 +103,7 @@ export default function ProductDetailClient({ product, teamId, teamName, leagueN
             )}
           </div>
           {allImages.length > 1 && (
-            <div className="flex gap-2 mt-3 overflow-x-auto pb-2">
+            <div className="flex gap-2 mt-3 overflow-x-auto pb-2 thumbnail-scroll">
               {allImages.map((img, idx) => (
                 <button
                   key={idx}
