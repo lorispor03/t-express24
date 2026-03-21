@@ -5,7 +5,7 @@ import Footer from '@/components/Footer';
 import { getLeague, getAllLeagueSlugs, getTeamsBySubLeague, getAllSubLeagueSlugs } from '@/lib/data';
 import { LEAGUE_LOGOS } from '@/lib/leagueLogos';
 import { TEAM_LOGOS } from '@/lib/teamLogos';
-import { SUB_LEAGUE_LOGOS } from '@/lib/subLeagueLogos';
+import { SUB_LEAGUE_LOGOS, SUB_LEAGUE_COUNTRIES, SUB_LEAGUE_SLUGS } from '@/lib/subLeagueLogos';
 import type { Metadata } from 'next';
 
 export function generateStaticParams() {
@@ -64,8 +64,14 @@ export default async function SubLeaguePage({ params }: { params: Promise<{ slug
             ) : null}
             <div>
               <h1 className="text-3xl md:text-5xl font-black">{result.subLeagueName}</h1>
+              {(() => {
+                const country = Object.entries(SUB_LEAGUE_SLUGS).find(([, s]) => s === sub)?.[0];
+                const countryName = country ? SUB_LEAGUE_COUNTRIES[country] : undefined;
+                return countryName ? <p className="text-gray-400 mt-1">{countryName}</p> : null;
+              })()}
               <div className="flex gap-6 mt-2 text-sm">
                 <span className="text-[var(--gold)] font-bold">{result.teams.length} {result.teams.length === 1 ? 'Team' : 'Teams'}</span>
+                <span className="text-gray-400">{result.teams.reduce((sum, t) => sum + t.count, 0)} Artikel</span>
               </div>
             </div>
           </div>
