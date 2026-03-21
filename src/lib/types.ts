@@ -5,6 +5,7 @@ export interface Product {
   hi: string; // hover image
   p: string;  // price
   c: string[]; // categories
+  imgs?: string[]; // all product images (gallery)
 }
 
 export interface TeamData {

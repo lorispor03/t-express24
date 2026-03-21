@@ -27,6 +27,9 @@ export default function ProductDetailClient({ product, teamId, teamName, leagueN
   const [flockingNumber, setFlockingNumber] = useState('');
   const [selectedPatchId, setSelectedPatchId] = useState<string | null>(null);
   const [added, setAdded] = useState(false);
+  const [selectedImg, setSelectedImg] = useState(0);
+
+  const allImages = product.imgs && product.imgs.length > 1 ? product.imgs : [product.i];
 
   const isKids = product.c.includes('kids') || product.c.includes('kids-retro');
   const sizes = isKids ? SIZES_KIDS : SIZES_ADULT;
@@ -68,13 +71,32 @@ export default function ProductDetailClient({ product, teamId, teamName, leagueN
       </button>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {/* Image */}
-        <div className="bg-[#1a1a1a] rounded-xl overflow-hidden border border-white/5 aspect-square">
-          <img
-            src={product.i}
-            alt={product.t}
-            className="w-full h-full object-cover"
-          />
+        {/* Image Gallery */}
+        <div>
+          <div className="bg-[#1a1a1a] rounded-xl overflow-hidden border border-white/5 aspect-square">
+            <img
+              src={allImages[selectedImg]}
+              alt={product.t}
+              className="w-full h-full object-cover"
+            />
+          </div>
+          {allImages.length > 1 && (
+            <div className="flex gap-2 mt-3 overflow-x-auto pb-2">
+              {allImages.map((img, idx) => (
+                <button
+                  key={idx}
+                  onClick={() => setSelectedImg(idx)}
+                  className={`flex-shrink-0 w-16 h-16 rounded-lg overflow-hidden border-2 transition-all ${
+                    selectedImg === idx
+                      ? 'border-[var(--red-main)]'
+                      : 'border-white/10 hover:border-white/30'
+                  }`}
+                >
+                  <img src={img} alt={`${product.t} ${idx + 1}`} className="w-full h-full object-cover" />
+                </button>
+              ))}
+            </div>
+          )}
         </div>
 
         {/* Info */}
