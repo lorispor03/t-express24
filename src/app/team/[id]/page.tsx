@@ -69,21 +69,54 @@ export default async function TeamPage({ params }: { params: Promise<{ id: strin
                 </Link>
                 <span className="text-sm text-gray-400">{team.productCount} Artikel</span>
               </div>
+              {/* Variante 4: In Hero integriert (Man City) */}
+              {id === 'premier-league__mancity' && (teamDescriptions as Record<string, string>)[id] && (
+                <p className="text-sm text-gray-400/80 leading-relaxed mt-3 max-w-xl">
+                  {(teamDescriptions as Record<string, string>)[id]}
+                </p>
+              )}
             </div>
           </div>
         </div>
       </section>
 
       {/* Club Description */}
-      {(teamDescriptions as Record<string, string>)[id] && (
+      {(teamDescriptions as Record<string, string>)[id] && id !== 'premier-league__mancity' && (
         <section className="border-b border-white/10 bg-[#111]">
           <div className="max-w-7xl mx-auto px-4 py-6">
-            <div className="relative max-w-3xl pl-8 border-l-2 border-[var(--gold)]/40">
-              <span className="absolute left-1.5 top-0 text-5xl text-[var(--gold)]/30 font-serif leading-none select-none">&ldquo;</span>
-              <p className="text-sm text-gray-400 leading-relaxed italic">
+            {id === 'serie-a__inter' ? (
+              /* Variante 1: Zitat-Style mit Gold-Akzent */
+              <div className="relative max-w-3xl pl-8 border-l-2 border-[var(--gold)]/40">
+                <span className="absolute left-1.5 top-0 text-5xl text-[var(--gold)]/30 font-serif leading-none select-none">&ldquo;</span>
+                <p className="text-sm text-gray-400 leading-relaxed italic">
+                  {(teamDescriptions as Record<string, string>)[id]}
+                </p>
+              </div>
+            ) : id === 'la-liga__realmadrid' ? (
+              /* Variante 2: Mit Icon */
+              <div className="flex gap-4 max-w-3xl items-start">
+                <div className="flex-shrink-0 w-10 h-10 rounded-lg bg-[var(--red-main)]/10 flex items-center justify-center mt-0.5">
+                  <svg className="w-5 h-5 text-[var(--red-main)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                </div>
+                <p className="text-sm text-gray-400 leading-relaxed">
+                  {(teamDescriptions as Record<string, string>)[id]}
+                </p>
+              </div>
+            ) : id === 'bundesliga__bayern' ? (
+              /* Variante 3: Gradient-Hintergrund */
+              <div className="max-w-3xl bg-gradient-to-r from-[var(--red-main)]/10 to-transparent rounded-xl px-5 py-4 border border-[var(--red-main)]/10">
+                <p className="text-sm text-gray-300 leading-relaxed">
+                  {(teamDescriptions as Record<string, string>)[id]}
+                </p>
+              </div>
+            ) : (
+              /* Standard */
+              <p className="text-sm text-gray-400 leading-relaxed max-w-3xl">
                 {(teamDescriptions as Record<string, string>)[id]}
               </p>
-            </div>
+            )}
           </div>
         </section>
       )}
