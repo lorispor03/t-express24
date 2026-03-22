@@ -124,22 +124,28 @@ export default async function TeamPage({ params }: { params: Promise<{ id: strin
             )}
           </div>
 
-          {/* Palmares - Mobile kompakte Zeile */}
+          {/* Palmares - Mobile 3x2 Grid */}
           {id === 'serie-a__inter' && (
-            <div className="flex items-center gap-3 mt-4 md:hidden">
-              {[
-                ['/trophies/serie-a.png', '20'],
-                ['/trophies/coppa-italia.png', '9'],
-                ['/trophies/champions-league.png', '3'],
-                ['/trophies/europa-league.png', '3'],
-                ['/trophies/supercoppa.png?v=2', '8'],
-                ['/trophies/intercontinental.png?v=3', '2'],
-              ].map(([src, count]) => (
-                <div key={src} className="flex items-center gap-1">
-                  <img src={src} alt="" className="w-4 h-4 object-contain" />
-                  <span className="text-xs font-bold text-white">{count}</span>
-                </div>
-              ))}
+            <div className="md:hidden bg-white/5 backdrop-blur-md rounded-xl px-4 py-3 border border-white/10 mt-4">
+              <h4 className="text-[10px] font-bold text-[var(--gold)] uppercase tracking-wider mb-2">Palmares</h4>
+              <div className="grid grid-cols-3 gap-2">
+                {[
+                  ['/trophies/serie-a.png', '20', 'Serie A'],
+                  ['/trophies/coppa-italia.png', '9', 'Coppa Italia'],
+                  ['/trophies/champions-league.png', '3', 'Champions League'],
+                  ['/trophies/europa-league.png', '3', 'Europa League'],
+                  ['/trophies/supercoppa.png?v=2', '8', 'Supercoppa'],
+                  ['/trophies/intercontinental.png?v=3', '2', 'Intercontinentale'],
+                ].map(([src, count, name]) => (
+                  <div key={src} className="flex items-center gap-1.5">
+                    <img src={src} alt={name} className="w-5 h-5 object-contain flex-shrink-0" />
+                    <div>
+                      <span className="text-white font-bold text-xs">{count}x</span>
+                      <p className="text-[9px] text-gray-500 leading-tight">{name}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
           )}
         </div>
