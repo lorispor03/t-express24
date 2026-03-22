@@ -70,24 +70,6 @@ export default async function TeamPage({ params }: { params: Promise<{ id: strin
                   </Link>
                   <span className="text-sm text-gray-400">{team.productCount} Artikel</span>
                 </div>
-                {/* Palmares - Mobile kompakte Zeile */}
-                {id === 'serie-a__inter' && (
-                  <div className="flex items-center gap-3 mt-3 md:hidden">
-                    {[
-                      ['/trophies/serie-a.png', '20'],
-                      ['/trophies/coppa-italia.png', '9'],
-                      ['/trophies/champions-league.png', '3'],
-                      ['/trophies/europa-league.png', '3'],
-                      ['/trophies/supercoppa.png?v=2', '8'],
-                      ['/trophies/intercontinental.png?v=3', '2'],
-                    ].map(([src, count]) => (
-                      <div key={src} className="flex items-center gap-1">
-                        <img src={src} alt="" className="w-4 h-4 object-contain" />
-                        <span className="text-xs font-bold text-white">{count}</span>
-                      </div>
-                    ))}
-                  </div>
-                )}
                 {/* Variante 4: In Hero integriert (Man City) */}
                 {id === 'premier-league__mancity' && (teamDescriptions as Record<string, string>)[id] && (
                   <p className="text-sm text-gray-400/80 leading-relaxed mt-3 max-w-xl">
@@ -140,6 +122,24 @@ export default async function TeamPage({ params }: { params: Promise<{ id: strin
                 </div>
               </div>
             )}
+          {/* Palmares - Mobile kompakte Zeile */}
+          {id === 'serie-a__inter' && (
+            <div className="flex items-center gap-3 mt-4 md:hidden">
+              {[
+                ['/trophies/serie-a.png', '20'],
+                ['/trophies/coppa-italia.png', '9'],
+                ['/trophies/champions-league.png', '3'],
+                ['/trophies/europa-league.png', '3'],
+                ['/trophies/supercoppa.png?v=2', '8'],
+                ['/trophies/intercontinental.png?v=3', '2'],
+              ].map(([src, count]) => (
+                <div key={src} className="flex items-center gap-1">
+                  <img src={src} alt="" className="w-4 h-4 object-contain" />
+                  <span className="text-xs font-bold text-white">{count}</span>
+                </div>
+              ))}
+            </div>
+          )}
           </div>
         </div>
       </section>
