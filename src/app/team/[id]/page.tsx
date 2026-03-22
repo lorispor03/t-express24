@@ -55,9 +55,9 @@ export default async function TeamPage({ params }: { params: Promise<{ id: strin
                 const slug = id.split('__')[1];
                 const logo = slug ? TEAM_LOGOS[slug] : undefined;
                 return logo ? (
-                  <img src={logo} alt={team.name} className="w-20 h-20 object-contain rounded-2xl bg-[#222] border border-white/10 p-2" />
+                  <img src={logo} alt={team.name} className="w-20 h-20 md:w-36 md:h-36 object-contain rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 p-2" />
                 ) : (
-                  <div className="w-20 h-20 bg-[#222] rounded-2xl flex items-center justify-center text-3xl font-black text-[var(--red-main)] border border-white/10">
+                  <div className="w-20 h-20 md:w-36 md:h-36 bg-white/5 backdrop-blur-md rounded-2xl flex items-center justify-center text-3xl md:text-5xl font-black text-[var(--red-main)] border border-white/10">
                     {team.name.charAt(0)}
                   </div>
                 );
@@ -151,11 +151,11 @@ export default async function TeamPage({ params }: { params: Promise<{ id: strin
 
       {/* Club Description */}
       {(teamDescriptions as Record<string, string>)[id] && id !== 'premier-league__mancity' && (
-        <section className="border-b border-white/10 bg-[#111]">
+        <section className="border-b border-white/10 bg-[var(--red-main)]/5 md:bg-[#111]">
           <div className="max-w-7xl mx-auto px-4 py-6">
             {id === 'serie-a__inter' ? (
-              /* Zitat-Style */
-              <div className="max-w-3xl bg-[var(--red-main)]/5 backdrop-blur-md rounded-xl px-5 py-4 border border-[var(--red-main)]/10">
+              /* Zitat-Style: auf Mobile gefüllter Block, auf Desktop Kästchen */
+              <div className="max-w-3xl md:bg-[var(--red-main)]/5 md:backdrop-blur-md md:rounded-xl md:px-5 md:py-4 md:border md:border-[var(--red-main)]/10">
                 <div className="relative pl-6 border-l-2 border-[var(--gold)]/40">
                   <span className="absolute left-0.5 -top-1 text-4xl text-[var(--gold)]/30 font-serif leading-none select-none">&ldquo;</span>
                   <p className="text-[13px] sm:text-sm text-gray-300 leading-relaxed italic">
