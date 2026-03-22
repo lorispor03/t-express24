@@ -39,7 +39,7 @@ export default async function TeamPage({ params }: { params: Promise<{ id: strin
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[#111] via-[var(--red-dark)] to-[#111]" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(196,34,46,0.15),transparent_60%)]" />
-        <div className="relative max-w-7xl mx-auto px-4 py-12 md:py-16">
+        <div className="relative max-w-7xl mx-auto px-4 py-6 md:py-16">
           {/* Breadcrumb */}
           <div className="flex items-center gap-2 text-sm text-gray-400 mb-4">
             <Link href="/#ligen" className="hover:text-white transition-colors">Ligen</Link>
@@ -139,10 +139,8 @@ export default async function TeamPage({ params }: { params: Promise<{ id: strin
                 ].map(([src, count, name]) => (
                   <div key={src} className="flex items-center gap-1.5">
                     <img src={src} alt={name} className="w-5 h-5 object-contain flex-shrink-0" />
-                    <div>
-                      <span className="text-white font-bold text-xs">{count}x</span>
-                      <p className="text-[9px] text-gray-500 leading-tight">{name}</p>
-                    </div>
+                    <span className="text-white font-bold text-xs">{count}x</span>
+                    <span className="text-[9px] text-gray-500">{name}</span>
                   </div>
                 ))}
               </div>
