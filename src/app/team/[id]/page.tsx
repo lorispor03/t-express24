@@ -85,12 +85,14 @@ export default async function TeamPage({ params }: { params: Promise<{ id: strin
         <section className="border-b border-white/10 bg-[#111]">
           <div className="max-w-7xl mx-auto px-4 py-6">
             {id === 'serie-a__inter' ? (
-              /* Variante 1: Zitat-Style mit Gold-Akzent */
-              <div className="relative max-w-3xl pl-8 border-l-2 border-[var(--gold)]/40">
-                <span className="absolute left-1.5 top-0 text-5xl text-[var(--gold)]/30 font-serif leading-none select-none">&ldquo;</span>
-                <p className="text-sm text-gray-400 leading-relaxed italic">
-                  {(teamDescriptions as Record<string, string>)[id]}
-                </p>
+              /* Variante: Zitat + Gradient kombiniert */
+              <div className="max-w-3xl bg-gradient-to-r from-[var(--red-main)]/10 via-[var(--red-main)]/5 to-transparent rounded-xl px-5 py-4 border border-[var(--red-main)]/10">
+                <div className="relative pl-6 border-l-2 border-[var(--gold)]/40">
+                  <span className="absolute left-0.5 -top-1 text-4xl text-[var(--gold)]/30 font-serif leading-none select-none">&ldquo;</span>
+                  <p className="text-sm text-gray-300 leading-relaxed italic">
+                    {(teamDescriptions as Record<string, string>)[id]}
+                  </p>
+                </div>
               </div>
             ) : id === 'la-liga__realmadrid' ? (
               /* Variante 2: Mit Icon */
