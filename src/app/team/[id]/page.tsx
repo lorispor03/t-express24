@@ -152,7 +152,7 @@ export default async function TeamPage({ params }: { params: Promise<{ id: strin
       {/* Club Description */}
       {(teamDescriptions as Record<string, string>)[id] && id !== 'premier-league__mancity' && (
         <section className="border-b border-white/10 bg-[var(--red-main)]/5 md:bg-[#111]">
-          <div className="max-w-7xl mx-auto px-4 py-6">
+          <div className="max-w-7xl mx-auto px-4 py-3 md:py-6">
             {id === 'serie-a__inter' ? (
               /* Zitat-Style: auf Mobile gefüllter Block, auf Desktop Kästchen */
               <div className="max-w-3xl md:bg-[var(--red-main)]/5 md:backdrop-blur-md md:rounded-xl md:px-5 md:py-4 md:border md:border-[var(--red-main)]/10">
