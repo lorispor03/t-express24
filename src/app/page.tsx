@@ -26,7 +26,7 @@ export default function HomePage() {
       <section className="border-y border-white/10 bg-[#111]">
         <div className="max-w-7xl mx-auto px-4 py-4 md:py-3 grid grid-cols-4 gap-2 md:gap-4 text-center">
           {[
-            ['4800+', 'Trikots'],
+            ['4700+', 'Artikel'],
             ['250+', 'Teams'],
             ['20+', 'Ligen'],
             ['100%', 'Geprüft'],
@@ -42,7 +42,7 @@ export default function HomePage() {
       {/* Leagues Grid */}
       <section id="ligen" className="max-w-7xl mx-auto px-4 py-16 scroll-mt-20">
         <h2 className="text-2xl md:text-3xl font-black mb-2">Unsere Ligen</h2>
-        <p className="text-gray-400 mb-8">Wähle eine Liga und entdecke alle verfügbaren Trikots.</p>
+        <p className="text-gray-400 mb-8">Wähle eine Liga und entdecke alle verfügbaren Artikel.</p>
 
         <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
           {Object.entries(leagues).map(([slug, league]) => (
@@ -86,7 +86,7 @@ export default function HomePage() {
                 </div>
                 <h3 className="font-bold text-lg whitespace-nowrap">Dein Trikot auswählen</h3>
               </div>
-              <p className="text-sm text-gray-400 leading-relaxed">Stöbere durch über 4800 Trikots aus den grössten Ligen der Welt — von aktuellen Saisons bis hin zu seltenen Retro-Klassikern.</p>
+              <p className="text-sm text-gray-400 leading-relaxed">Stöbere durch über 4700 Artikel aus den grössten Ligen der Welt — von aktuellen Saisons bis hin zu seltenen Retro-Klassikern.</p>
             </div>
 
             {/* Chevrons 1 */}
