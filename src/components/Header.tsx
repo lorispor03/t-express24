@@ -32,7 +32,7 @@ export default function Header() {
               <span>Qualitätsgeprüft in der Schweiz</span>
               <span>Preise in CHF</span>
               <span>Jedes Trikot einzeln geprüft</span>
-              <span>Über 5700 Trikots verfügbar</span>
+              <span>Über 4700 Artikel verfügbar</span>
             </span>
           ))}
         </div>
