@@ -122,6 +122,8 @@ export default async function TeamPage({ params }: { params: Promise<{ id: strin
                 </div>
               </div>
             )}
+          </div>
+
           {/* Palmares - Mobile kompakte Zeile */}
           {id === 'serie-a__inter' && (
             <div className="flex items-center gap-3 mt-4 md:hidden">
@@ -140,7 +142,6 @@ export default async function TeamPage({ params }: { params: Promise<{ id: strin
               ))}
             </div>
           )}
-          </div>
         </div>
       </section>
 
