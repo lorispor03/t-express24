@@ -41,7 +41,7 @@ export default function HomePage() {
 
       {/* Leagues Grid */}
       <section id="ligen" className="max-w-7xl mx-auto px-4 py-16 scroll-mt-20">
-        <h2 className="text-2xl md:text-3xl font-black mb-2">Unsere Ligen</h2>
+        <h2 className="text-3xl md:text-5xl uppercase tracking-wide mb-2" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>Unsere Ligen</h2>
         <p className="text-gray-400 mb-8">Wähle eine Liga und entdecke alle verfügbaren Artikel.</p>
 
         <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
@@ -62,7 +62,7 @@ export default function HomePage() {
                   <span className="text-3xl">&#9917;</span>
                 )}
               </div>
-              <h3 className="font-bold text-lg group-hover:text-[var(--gold)] transition-colors">
+              <h3 className="text-xl md:text-2xl uppercase tracking-wide group-hover:text-[var(--gold)] transition-colors" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
                 {slug === 'nationalmannschaften' ? <><span className="sm:hidden">National-<br/>mannschaften</span><span className="hidden sm:inline">{league.name}</span></> : league.name}
               </h3>
               <p className="text-sm text-gray-400 mt-1">
