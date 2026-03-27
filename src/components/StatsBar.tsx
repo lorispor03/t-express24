@@ -69,10 +69,10 @@ export default function StatsBar() {
         {STATS.map((stat, i) => (
           <div key={stat.label} className="flex flex-col items-center gap-1">
             <div className="flex items-center gap-1.5 sm:gap-2">
-              <div className="text-xl sm:text-3xl md:text-4xl text-[var(--gold)]" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
+              <div className="text-xl sm:text-3xl md:text-4xl text-[var(--gold)] tabular-nums text-right min-w-[3ch] sm:min-w-[4ch]" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
                 {counts[i].toLocaleString('de-CH')}{stat.suffix}
               </div>
-              <div className="text-[var(--red-main)]">{stat.icon}</div>
+              <div className="text-[var(--red-main)] flex-shrink-0">{stat.icon}</div>
             </div>
             <div className="text-[9px] sm:text-xs text-gray-400 uppercase tracking-wider">{stat.label}</div>
           </div>
