@@ -48,7 +48,7 @@ export default async function SubLeaguePage({ params }: { params: Promise<{ slug
       {/* Hero */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[#111] via-[var(--red-dark)] to-[#111]" />
-        <div className="relative max-w-7xl mx-auto px-4 py-16 md:py-20">
+        <div className="relative max-w-7xl mx-auto px-4 py-10 md:py-12">
           <div className="flex items-center gap-2 text-sm text-gray-400 mb-4">
             <Link href="/#ligen" className="hover:text-white transition-colors">Ligen</Link>
             <span>/</span>
@@ -56,7 +56,7 @@ export default async function SubLeaguePage({ params }: { params: Promise<{ slug
             <span>/</span>
             <span className="text-white">{result.subLeagueName}</span>
           </div>
-          <div className="flex items-center gap-5">
+          <div className="flex items-center gap-5 min-h-[120px] sm:min-h-[144px]">
             {subLogo ? (
               <img src={subLogo} alt={result.subLeagueName} className={`w-auto object-contain ${['primera-chile', 'super-lig', 'hrvatska-nogometna-liga'].includes(sub) ? 'h-16 sm:h-24' : 'h-32 sm:h-36'}`} />
             ) : leagueLogo ? (

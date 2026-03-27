@@ -39,7 +39,7 @@ export default async function TeamPage({ params }: { params: Promise<{ id: strin
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[#111] via-[var(--red-dark)] to-[#111]" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(196,34,46,0.15),transparent_60%)]" />
-        <div className="relative max-w-7xl mx-auto px-4 py-6 md:py-16">
+        <div className="relative max-w-7xl mx-auto px-4 py-10 md:py-12">
           {/* Breadcrumb */}
           <div className="flex items-center gap-2 text-sm text-gray-400 mb-4">
             <Link href="/#ligen" className="hover:text-white transition-colors">Ligen</Link>
@@ -49,7 +49,7 @@ export default async function TeamPage({ params }: { params: Promise<{ id: strin
             <span className="text-white">{team.name}</span>
           </div>
 
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-between min-h-[120px] sm:min-h-[144px]">
             <div className="flex items-center gap-5">
               {(() => {
                 const slug = id.split('__')[1];
