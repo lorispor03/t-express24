@@ -57,6 +57,8 @@ export default function Footer() {
         </div>
 
         <div className="mt-10 pt-6 border-t border-white/10 text-center text-xs text-gray-500">
+          <a href="/agb" className="hover:text-white transition-colors">Geschäftsbedingungen</a>
+          <span className="mx-2">·</span>
           &copy; {new Date().getFullYear()} T-EXPRESS24. Alle Rechte vorbehalten.
         </div>
       </div>

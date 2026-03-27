@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { CartProvider } from "@/context/CartContext";
 import CartDrawer from "@/components/CartDrawer";
+import ConsentBanner from "@/components/ConsentBanner";
 
 export const metadata: Metadata = {
   title: "T-EXPRESS24 | Premium Fussball Trikots",
@@ -19,6 +20,7 @@ export default function RootLayout({
         <CartProvider>
           {children}
           <CartDrawer />
+          <ConsentBanner />
         </CartProvider>
       </body>
     </html>

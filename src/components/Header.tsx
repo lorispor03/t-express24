@@ -28,7 +28,6 @@ export default function Header() {
         <div className="announcement-scroll inline-flex gap-16">
           {[...Array(2)].map((_, i) => (
             <span key={i} className="inline-flex gap-16">
-              <span>Lieferzeit: 2-3 Wochen</span>
               <span>Qualitätsgeprüft in der Schweiz</span>
               <span>Preise in CHF</span>
               <span>Jedes Trikot einzeln geprüft</span>
