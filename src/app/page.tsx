@@ -53,8 +53,14 @@ export default function HomePage() {
                 {slug === 'nationalmannschaften' ? <><span className="sm:hidden">National-<br/>mannschaften</span><span className="hidden sm:inline">{league.name}</span></> : league.name}
               </h3>
               <p className="text-sm text-gray-400 mt-1">
-                {league.teamCount} {league.teamCount === 1 ? 'Team' : 'Teams'} {league.country && `· ${league.country}`}
+                {league.teamCount} {league.teamCount === 1 ? 'Team' : 'Teams'}
               </p>
+              {league.country && (
+                <p className="text-sm text-gray-500 mt-0.5 flex items-center gap-1">
+                  <svg className="w-3 h-3 flex-shrink-0" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" /><path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" /></svg>
+                  {league.country}
+                </p>
+              )}
             </Link>
           ))}
         </div>
