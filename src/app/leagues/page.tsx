@@ -18,7 +18,7 @@ export default function LeaguesPage() {
           <span className="text-white">Alle Ligen</span>
         </div>
 
-        <h1 className="text-3xl md:text-4xl font-black mb-2">Alle Ligen</h1>
+        <h1 className="text-3xl md:text-5xl uppercase tracking-wide mb-2" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>Alle Ligen</h1>
         <p className="text-gray-400 mb-10">Entdecke Trikots aus 10 Ligen weltweit.</p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
@@ -42,7 +42,7 @@ export default function LeaguesPage() {
                   {league.productCount} Artikel
                 </span>
               </div>
-              <h3 className="font-bold text-lg group-hover:text-[var(--gold)] transition-colors">
+              <h3 className="text-xl md:text-2xl uppercase tracking-wide group-hover:text-[var(--gold)] transition-colors" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
                 {league.name}
               </h3>
               <p className="text-sm text-gray-400 mt-1">

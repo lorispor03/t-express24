@@ -25,11 +25,7 @@ const STATS = [
   )},
 ];
 
-function easeOutCubic(t: number) {
-  return 1 - Math.pow(1 - t, 3);
-}
-
-function useCountUp(target: number, duration = 2000, visible = false) {
+function useCountUp(target: number, duration = 1800, visible = false) {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
@@ -41,10 +37,8 @@ function useCountUp(target: number, duration = 2000, visible = false) {
     const tick = (now: number) => {
       const elapsed = now - startTime;
       const progress = Math.min(elapsed / duration, 1);
-      const eased = easeOutCubic(progress);
-      setCount(Math.floor(eased * target));
+      setCount(Math.round(progress * target));
       if (progress < 1) requestAnimationFrame(tick);
-      else setCount(target);
     };
     requestAnimationFrame(tick);
   }, [visible, target, duration]);
@@ -67,7 +61,7 @@ export default function StatsBar() {
     return () => observer.disconnect();
   }, []);
 
-  const counts = STATS.map(s => useCountUp(s.num, 2000, visible));
+  const counts = STATS.map(s => useCountUp(s.num, 1800, visible));
 
   return (
     <section className="border-y border-white/10 bg-[#111]">

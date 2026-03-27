@@ -53,7 +53,7 @@ export default async function LeaguePage({ params }: { params: Promise<{ slug: s
               <img src={logo} alt={league.name} className={`w-auto object-contain ${slug === 'la-liga' ? 'h-10 sm:h-16' : ['premier-league'].includes(slug) ? 'h-16 sm:h-24' : 'h-32 sm:h-36'}`} />
             )}
             <div>
-              <h1 className="text-3xl md:text-5xl font-black">{league.name}</h1>
+              <h1 className="text-3xl md:text-5xl uppercase tracking-wide" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>{league.name}</h1>
               {league.country && (
                 <p className="text-gray-400 mt-1">{league.country}</p>
               )}
@@ -93,7 +93,7 @@ export default async function LeaguePage({ params }: { params: Promise<{ slug: s
                       <span className="text-3xl">&#9917;</span>
                     )}
                   </div>
-                  <h3 className="font-bold text-lg group-hover:text-[var(--gold)] transition-colors">
+                  <h3 className="text-xl md:text-2xl uppercase tracking-wide group-hover:text-[var(--gold)] transition-colors" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
                     {subName}
                   </h3>
                   <p className="text-sm text-gray-400 mt-1">
@@ -123,7 +123,7 @@ export default async function LeaguePage({ params }: { params: Promise<{ slug: s
                     </div>
                   );
                 })()}
-                <h3 className="font-bold text-xs sm:text-sm line-clamp-2 mb-1 min-h-[2lh]">{team.name}</h3>
+                <h3 className="text-xs sm:text-sm uppercase line-clamp-2 mb-1" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>{team.name}</h3>
                 <p className="text-[10px] sm:text-xs text-gray-500">{team.count} Artikel</p>
               </Link>
             ))}

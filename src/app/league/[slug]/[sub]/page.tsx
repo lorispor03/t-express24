@@ -63,7 +63,7 @@ export default async function SubLeaguePage({ params }: { params: Promise<{ slug
               <img src={leagueLogo} alt={league.name} className="h-32 sm:h-36 w-auto object-contain" />
             ) : null}
             <div>
-              <h1 className="text-3xl md:text-5xl font-black">{result.subLeagueName}</h1>
+              <h1 className="text-3xl md:text-5xl uppercase tracking-wide" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>{result.subLeagueName}</h1>
               {(() => {
                 const country = Object.entries(SUB_LEAGUE_SLUGS).find(([, s]) => s === sub)?.[0];
                 const countryName = country ? SUB_LEAGUE_COUNTRIES[country] : undefined;
@@ -98,7 +98,7 @@ export default async function SubLeaguePage({ params }: { params: Promise<{ slug
                   </div>
                 );
               })()}
-              <h3 className="font-bold text-xs sm:text-sm line-clamp-2 mb-1 min-h-[2lh]">{team.name}</h3>
+              <h3 className="text-xs sm:text-sm uppercase line-clamp-2 mb-1" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>{team.name}</h3>
               <p className="text-[10px] sm:text-xs text-gray-500">{team.count} Artikel</p>
             </Link>
           ))}

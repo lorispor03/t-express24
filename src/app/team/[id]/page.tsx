@@ -63,7 +63,7 @@ export default async function TeamPage({ params }: { params: Promise<{ id: strin
                 );
               })()}
               <div>
-                <h1 className="text-2xl md:text-4xl font-black">{team.name}</h1>
+                <h1 className="text-2xl md:text-4xl uppercase tracking-wide" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>{team.name}</h1>
                 <div className="flex items-center gap-4 mt-2">
                   <Link href={`/league/${team.league}`} className="text-sm text-[var(--gold)] hover:underline">
                     {team.leagueName}
