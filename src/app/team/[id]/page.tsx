@@ -7,7 +7,11 @@ import TeamPageClient from '@/components/TeamPageClient';
 import { getTeam, getAllTeamIds } from '@/lib/data';
 import { TEAM_LOGOS } from '@/lib/teamLogos';
 import teamDescriptions from '@/data/team-descriptions.json';
+import palmaresData from '@/data/palmares.json';
 import type { Metadata } from 'next';
+
+type PalmaresEntry = { trophies: { name: string; count: number; icon: string }[] };
+const palmares = palmaresData as Record<string, PalmaresEntry>;
 
 export function generateStaticParams() {
   return getAllTeamIds().map(id => ({ id }));
@@ -30,6 +34,9 @@ export default async function TeamPage({ params }: { params: Promise<{ id: strin
   if (!team) {
     notFound();
   }
+
+  const teamPalmares = palmares[id]?.trophies;
+  const hasPalmares = teamPalmares && teamPalmares.length > 0;
 
   return (
     <>
@@ -79,43 +86,17 @@ export default async function TeamPage({ params }: { params: Promise<{ id: strin
               </div>
             </div>
 
-            {/* Palmares - rechts im Hero (nur Inter vorerst) */}
-            {id === 'serie-a__inter' && (
-              <div className="hidden md:block bg-white/5 backdrop-blur-md rounded-xl px-5 py-4 border border-white/10">
+            {/* Palmares - Desktop */}
+            {hasPalmares && (
+              <div className={`hidden md:block bg-white/5 backdrop-blur-md rounded-xl px-5 py-4 border border-white/10 ${teamPalmares.length > 4 ? 'min-w-[320px]' : 'min-w-[260px]'}`}>
                 <h4 className="text-xs font-bold text-[var(--gold)] uppercase tracking-wider mb-3">Palmares</h4>
-                <div className="grid grid-cols-2 gap-3">
-                  {[
-                    ['league', '20', 'Serie A'],
-                    ['cup', '9', 'Coppa Italia'],
-                    ['cl', '3', 'Champions League'],
-                    ['el', '3', 'Europa League'],
-                    ['supercup', '8', 'Supercoppa'],
-                    ['world', '2', 'Intercontinentale'],
-                  ].map(([type, count, name]) => (
-                    <div key={name} className="flex items-center gap-2">
-                      <div className="w-6 h-6 flex-shrink-0">
-                        {type === 'league' && (
-                          <img src="/trophies/serie-a.png" alt="Serie A" className="w-6 h-6 object-contain" />
-                        )}
-                        {type === 'cup' && (
-                          <img src="/trophies/coppa-italia.png" alt="Coppa Italia" className="w-6 h-6 object-contain" />
-                        )}
-                        {type === 'cl' && (
-                          <img src="/trophies/champions-league.png" alt="Champions League" className="w-6 h-6 object-contain" />
-                        )}
-                        {type === 'el' && (
-                          <img src="/trophies/europa-league.png" alt="Europa League" className="w-6 h-6 object-contain" />
-                        )}
-                        {type === 'supercup' && (
-                          <img src="/trophies/supercoppa.png?v=2" alt="Supercoppa" className="w-6 h-6 object-contain" />
-                        )}
-                        {type === 'world' && (
-                          <img src="/trophies/intercontinental.png?v=3" alt="Intercontinentale" className="w-6 h-6 object-contain" />
-                        )}
-                      </div>
+                <div className={`grid ${teamPalmares.length > 2 ? 'grid-cols-2' : 'grid-cols-1'} gap-3`}>
+                  {teamPalmares.map((trophy) => (
+                    <div key={trophy.name} className="flex items-center gap-2">
+                      <img src={trophy.icon} alt={trophy.name} className="w-6 h-6 object-contain flex-shrink-0" />
                       <div>
-                        <span className="text-white font-bold text-sm">{count}x</span>
-                        <p className="text-[10px] text-gray-500 leading-tight">{name}</p>
+                        <span className="text-white font-bold text-sm">{trophy.count}x</span>
+                        <p className="text-[10px] text-gray-500 leading-tight">{trophy.name}</p>
                       </div>
                     </div>
                   ))}
@@ -125,22 +106,15 @@ export default async function TeamPage({ params }: { params: Promise<{ id: strin
           </div>
 
           {/* Palmares - Mobile 3x2 Grid */}
-          {id === 'serie-a__inter' && (
+          {hasPalmares && (
             <div className="md:hidden bg-white/5 backdrop-blur-md rounded-xl px-4 py-3 border border-white/10 mt-4">
               <h4 className="text-[10px] font-bold text-[var(--gold)] uppercase tracking-wider mb-2">Palmares</h4>
               <div className="grid grid-cols-3 gap-2">
-                {[
-                  ['/trophies/serie-a.png', '20', 'Serie A'],
-                  ['/trophies/coppa-italia.png', '9', 'Coppa Italia'],
-                  ['/trophies/champions-league.png', '3', 'Champions League'],
-                  ['/trophies/europa-league.png', '3', 'Europa League'],
-                  ['/trophies/supercoppa.png?v=2', '8', 'Supercoppa'],
-                  ['/trophies/intercontinental.png?v=3', '2', 'Intercontinentale'],
-                ].map(([src, count, name]) => (
-                  <div key={src} className="flex items-center gap-1.5">
-                    <img src={src} alt={name} className="w-5 h-5 object-contain flex-shrink-0" />
-                    <span className="text-white font-bold text-xs">{count}x</span>
-                    <span className="text-[9px] text-gray-500">{name}</span>
+                {teamPalmares.map((trophy) => (
+                  <div key={trophy.name} className="flex items-center gap-1.5">
+                    <img src={trophy.icon} alt={trophy.name} className="w-5 h-5 object-contain flex-shrink-0" />
+                    <span className="text-white font-bold text-xs">{trophy.count}x</span>
+                    <span className="text-[9px] text-gray-500">{trophy.name}</span>
                   </div>
                 ))}
               </div>

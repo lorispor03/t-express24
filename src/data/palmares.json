@@ -1,0 +1,751 @@
+{
+  "premier-league__arsenal": {
+    "trophies": [
+      { "name": "Premier League", "count": 13, "icon": "/trophies/premier-league.png" },
+      { "name": "FA Cup", "count": 14, "icon": "/trophies/fa-cup.png" },
+      { "name": "League Cup", "count": 2, "icon": "/trophies/league-cup.png" },
+      { "name": "Community Shield", "count": 16, "icon": "/trophies/community-shield.png" },
+      { "name": "UEFA Cup Winners' Cup", "count": 1, "icon": "/trophies/europa-league.png" },
+      { "name": "Inter-Cities Fairs Cup", "count": 1, "icon": "/trophies/europa-league.png" }
+    ]
+  },
+  "premier-league__astonvilla": {
+    "trophies": [
+      { "name": "Premier League", "count": 7, "icon": "/trophies/premier-league.png" },
+      { "name": "FA Cup", "count": 7, "icon": "/trophies/fa-cup.png" },
+      { "name": "League Cup", "count": 5, "icon": "/trophies/league-cup.png" },
+      { "name": "Champions League", "count": 1, "icon": "/trophies/champions-league.png" },
+      { "name": "UEFA Super Cup", "count": 1, "icon": "/trophies/uefa-supercup.png" }
+    ]
+  },
+  "premier-league__chelsea": {
+    "trophies": [
+      { "name": "Premier League", "count": 6, "icon": "/trophies/premier-league.png" },
+      { "name": "FA Cup", "count": 8, "icon": "/trophies/fa-cup.png" },
+      { "name": "League Cup", "count": 5, "icon": "/trophies/league-cup.png" },
+      { "name": "Champions League", "count": 2, "icon": "/trophies/champions-league.png" },
+      { "name": "Europa League", "count": 2, "icon": "/trophies/europa-league.png" },
+      { "name": "Club World Cup", "count": 1, "icon": "/trophies/intercontinental.png" }
+    ]
+  },
+  "premier-league__everton": {
+    "trophies": [
+      { "name": "Premier League", "count": 9, "icon": "/trophies/premier-league.png" },
+      { "name": "FA Cup", "count": 5, "icon": "/trophies/fa-cup.png" },
+      { "name": "UEFA Cup Winners' Cup", "count": 1, "icon": "/trophies/europa-league.png" }
+    ]
+  },
+  "premier-league__liverpool": {
+    "trophies": [
+      { "name": "Premier League", "count": 19, "icon": "/trophies/premier-league.png" },
+      { "name": "FA Cup", "count": 8, "icon": "/trophies/fa-cup.png" },
+      { "name": "League Cup", "count": 10, "icon": "/trophies/league-cup.png" },
+      { "name": "Champions League", "count": 6, "icon": "/trophies/champions-league.png" },
+      { "name": "UEFA Super Cup", "count": 4, "icon": "/trophies/uefa-supercup.png" },
+      { "name": "Club World Cup", "count": 1, "icon": "/trophies/intercontinental.png" }
+    ]
+  },
+  "premier-league__mancity": {
+    "trophies": [
+      { "name": "Premier League", "count": 10, "icon": "/trophies/premier-league.png" },
+      { "name": "FA Cup", "count": 7, "icon": "/trophies/fa-cup.png" },
+      { "name": "League Cup", "count": 9, "icon": "/trophies/league-cup.png" },
+      { "name": "Champions League", "count": 1, "icon": "/trophies/champions-league.png" },
+      { "name": "Club World Cup", "count": 1, "icon": "/trophies/intercontinental.png" },
+      { "name": "UEFA Super Cup", "count": 1, "icon": "/trophies/uefa-supercup.png" }
+    ]
+  },
+  "premier-league__manutd": {
+    "trophies": [
+      { "name": "Premier League", "count": 20, "icon": "/trophies/premier-league.png" },
+      { "name": "FA Cup", "count": 12, "icon": "/trophies/fa-cup.png" },
+      { "name": "League Cup", "count": 6, "icon": "/trophies/league-cup.png" },
+      { "name": "Champions League", "count": 3, "icon": "/trophies/champions-league.png" },
+      { "name": "Europa League", "count": 1, "icon": "/trophies/europa-league.png" },
+      { "name": "Club World Cup", "count": 1, "icon": "/trophies/intercontinental.png" }
+    ]
+  },
+  "premier-league__newcastle": {
+    "trophies": [
+      { "name": "Premier League", "count": 4, "icon": "/trophies/premier-league.png" },
+      { "name": "FA Cup", "count": 6, "icon": "/trophies/fa-cup.png" }
+    ]
+  },
+  "premier-league__nottingham": {
+    "trophies": [
+      { "name": "Premier League", "count": 1, "icon": "/trophies/premier-league.png" },
+      { "name": "League Cup", "count": 4, "icon": "/trophies/league-cup.png" },
+      { "name": "Champions League", "count": 2, "icon": "/trophies/champions-league.png" },
+      { "name": "UEFA Super Cup", "count": 1, "icon": "/trophies/uefa-supercup.png" }
+    ]
+  },
+  "premier-league__tottenham": {
+    "trophies": [
+      { "name": "Premier League", "count": 2, "icon": "/trophies/premier-league.png" },
+      { "name": "FA Cup", "count": 8, "icon": "/trophies/fa-cup.png" },
+      { "name": "League Cup", "count": 4, "icon": "/trophies/league-cup.png" },
+      { "name": "UEFA Cup", "count": 2, "icon": "/trophies/europa-league.png" },
+      { "name": "UEFA Cup Winners' Cup", "count": 1, "icon": "/trophies/europa-league.png" }
+    ]
+  },
+  "premier-league__westham": {
+    "trophies": [
+      { "name": "FA Cup", "count": 3, "icon": "/trophies/fa-cup.png" },
+      { "name": "UEFA Cup Winners' Cup", "count": 1, "icon": "/trophies/europa-league.png" },
+      { "name": "Conference League", "count": 1, "icon": "/trophies/conference-league.png" }
+    ]
+  },
+  "premier-league__wolves": {
+    "trophies": [
+      { "name": "Premier League", "count": 3, "icon": "/trophies/premier-league.png" },
+      { "name": "FA Cup", "count": 4, "icon": "/trophies/fa-cup.png" },
+      { "name": "League Cup", "count": 2, "icon": "/trophies/league-cup.png" }
+    ]
+  },
+  "premier-league__leeds": {
+    "trophies": [
+      { "name": "Premier League", "count": 3, "icon": "/trophies/premier-league.png" },
+      { "name": "FA Cup", "count": 1, "icon": "/trophies/fa-cup.png" },
+      { "name": "League Cup", "count": 1, "icon": "/trophies/league-cup.png" },
+      { "name": "UEFA Cup Winners' Cup", "count": 1, "icon": "/trophies/europa-league.png" },
+      { "name": "Inter-Cities Fairs Cup", "count": 2, "icon": "/trophies/europa-league.png" }
+    ]
+  },
+  "la-liga__barcelona": {
+    "trophies": [
+      { "name": "La Liga", "count": 27, "icon": "/trophies/la-liga.png" },
+      { "name": "Copa del Rey", "count": 31, "icon": "/trophies/copa-del-rey.png" },
+      { "name": "Supercopa de España", "count": 14, "icon": "/trophies/supercopa-espana.png" },
+      { "name": "Champions League", "count": 5, "icon": "/trophies/champions-league.png" },
+      { "name": "Europa League / UEFA Cup", "count": 4, "icon": "/trophies/europa-league.png" },
+      { "name": "Club World Cup", "count": 3, "icon": "/trophies/intercontinental.png" }
+    ]
+  },
+  "la-liga__realmadrid": {
+    "trophies": [
+      { "name": "La Liga", "count": 36, "icon": "/trophies/la-liga.png" },
+      { "name": "Copa del Rey", "count": 20, "icon": "/trophies/copa-del-rey.png" },
+      { "name": "Supercopa de España", "count": 13, "icon": "/trophies/supercopa-espana.png" },
+      { "name": "Champions League", "count": 15, "icon": "/trophies/champions-league.png" },
+      { "name": "UEFA Super Cup", "count": 5, "icon": "/trophies/uefa-supercup.png" },
+      { "name": "Club World Cup", "count": 8, "icon": "/trophies/intercontinental.png" }
+    ]
+  },
+  "la-liga__atletico": {
+    "trophies": [
+      { "name": "La Liga", "count": 11, "icon": "/trophies/la-liga.png" },
+      { "name": "Copa del Rey", "count": 10, "icon": "/trophies/copa-del-rey.png" },
+      { "name": "Supercopa de España", "count": 2, "icon": "/trophies/supercopa-espana.png" },
+      { "name": "Europa League", "count": 3, "icon": "/trophies/europa-league.png" },
+      { "name": "UEFA Super Cup", "count": 1, "icon": "/trophies/uefa-supercup.png" }
+    ]
+  },
+  "la-liga__bilbao": {
+    "trophies": [
+      { "name": "La Liga", "count": 8, "icon": "/trophies/la-liga.png" },
+      { "name": "Copa del Rey", "count": 23, "icon": "/trophies/copa-del-rey.png" },
+      { "name": "Supercopa de España", "count": 2, "icon": "/trophies/supercopa-espana.png" }
+    ]
+  },
+  "la-liga__sevilla": {
+    "trophies": [
+      { "name": "La Liga", "count": 1, "icon": "/trophies/la-liga.png" },
+      { "name": "Copa del Rey", "count": 5, "icon": "/trophies/copa-del-rey.png" },
+      { "name": "Europa League", "count": 7, "icon": "/trophies/europa-league.png" },
+      { "name": "UEFA Super Cup", "count": 1, "icon": "/trophies/uefa-supercup.png" }
+    ]
+  },
+  "la-liga__betis": {
+    "trophies": [
+      { "name": "La Liga", "count": 1, "icon": "/trophies/la-liga.png" },
+      { "name": "Copa del Rey", "count": 3, "icon": "/trophies/copa-del-rey.png" }
+    ]
+  },
+  "la-liga__valencia": {
+    "trophies": [
+      { "name": "La Liga", "count": 6, "icon": "/trophies/la-liga.png" },
+      { "name": "Copa del Rey", "count": 8, "icon": "/trophies/copa-del-rey.png" },
+      { "name": "Supercopa de España", "count": 1, "icon": "/trophies/supercopa-espana.png" },
+      { "name": "UEFA Cup / Europa League", "count": 1, "icon": "/trophies/europa-league.png" },
+      { "name": "UEFA Cup Winners' Cup", "count": 1, "icon": "/trophies/europa-league.png" }
+    ]
+  },
+  "la-liga__sociedad": {
+    "trophies": [
+      { "name": "La Liga", "count": 2, "icon": "/trophies/la-liga.png" },
+      { "name": "Copa del Rey", "count": 3, "icon": "/trophies/copa-del-rey.png" }
+    ]
+  },
+  "la-liga__villarreal": {
+    "trophies": [
+      { "name": "Copa del Rey", "count": 1, "icon": "/trophies/copa-del-rey.png" },
+      { "name": "Europa League", "count": 1, "icon": "/trophies/europa-league.png" }
+    ]
+  },
+  "bundesliga__bayern": {
+    "trophies": [
+      { "name": "Bundesliga", "count": 33, "icon": "/trophies/bundesliga.png" },
+      { "name": "DFB-Pokal", "count": 20, "icon": "/trophies/dfb-pokal.png" },
+      { "name": "DFL-Supercup", "count": 10, "icon": "/trophies/dfl-supercup.png" },
+      { "name": "Champions League", "count": 6, "icon": "/trophies/champions-league.png" },
+      { "name": "UEFA Super Cup", "count": 2, "icon": "/trophies/uefa-supercup.png" },
+      { "name": "Club World Cup", "count": 2, "icon": "/trophies/intercontinental.png" }
+    ]
+  },
+  "bundesliga__dortmund": {
+    "trophies": [
+      { "name": "Bundesliga", "count": 8, "icon": "/trophies/bundesliga.png" },
+      { "name": "DFB-Pokal", "count": 5, "icon": "/trophies/dfb-pokal.png" },
+      { "name": "Champions League", "count": 1, "icon": "/trophies/champions-league.png" },
+      { "name": "UEFA Cup Winners' Cup", "count": 1, "icon": "/trophies/europa-league.png" },
+      { "name": "Intercontinental Cup", "count": 1, "icon": "/trophies/intercontinental.png" }
+    ]
+  },
+  "bundesliga__leverkusen": {
+    "trophies": [
+      { "name": "Bundesliga", "count": 1, "icon": "/trophies/bundesliga.png" },
+      { "name": "DFB-Pokal", "count": 1, "icon": "/trophies/dfb-pokal.png" },
+      { "name": "UEFA Cup", "count": 1, "icon": "/trophies/europa-league.png" }
+    ]
+  },
+  "bundesliga__wolfsburg": {
+    "trophies": [
+      { "name": "Bundesliga", "count": 1, "icon": "/trophies/bundesliga.png" },
+      { "name": "DFB-Pokal", "count": 1, "icon": "/trophies/dfb-pokal.png" },
+      { "name": "UEFA Cup", "count": 1, "icon": "/trophies/europa-league.png" }
+    ]
+  },
+  "bundesliga__werder": {
+    "trophies": [
+      { "name": "Bundesliga", "count": 4, "icon": "/trophies/bundesliga.png" },
+      { "name": "DFB-Pokal", "count": 6, "icon": "/trophies/dfb-pokal.png" },
+      { "name": "UEFA Cup Winners' Cup", "count": 1, "icon": "/trophies/europa-league.png" }
+    ]
+  },
+  "bundesliga__fsvfrankfurt": {
+    "trophies": [
+      { "name": "Bundesliga", "count": 1, "icon": "/trophies/bundesliga.png" },
+      { "name": "DFB-Pokal", "count": 5, "icon": "/trophies/dfb-pokal.png" },
+      { "name": "UEFA Cup", "count": 1, "icon": "/trophies/europa-league.png" }
+    ]
+  },
+  "bundesliga__gladbach": {
+    "trophies": [
+      { "name": "Bundesliga", "count": 5, "icon": "/trophies/bundesliga.png" },
+      { "name": "DFB-Pokal", "count": 3, "icon": "/trophies/dfb-pokal.png" },
+      { "name": "UEFA Cup", "count": 2, "icon": "/trophies/europa-league.png" }
+    ]
+  },
+  "bundesliga__stuttgart": {
+    "trophies": [
+      { "name": "Bundesliga", "count": 5, "icon": "/trophies/bundesliga.png" },
+      { "name": "DFB-Pokal", "count": 3, "icon": "/trophies/dfb-pokal.png" }
+    ]
+  },
+  "bundesliga__koeln": {
+    "trophies": [
+      { "name": "Bundesliga", "count": 2, "icon": "/trophies/bundesliga.png" },
+      { "name": "DFB-Pokal", "count": 4, "icon": "/trophies/dfb-pokal.png" }
+    ]
+  },
+  "bundesliga__hsv": {
+    "trophies": [
+      { "name": "Bundesliga", "count": 6, "icon": "/trophies/bundesliga.png" },
+      { "name": "DFB-Pokal", "count": 3, "icon": "/trophies/dfb-pokal.png" },
+      { "name": "Champions League", "count": 1, "icon": "/trophies/champions-league.png" },
+      { "name": "UEFA Cup Winners' Cup", "count": 1, "icon": "/trophies/europa-league.png" },
+      { "name": "Intercontinental Cup", "count": 1, "icon": "/trophies/intercontinental.png" }
+    ]
+  },
+  "serie-a__milan": {
+    "trophies": [
+      { "name": "Serie A", "count": 19, "icon": "/trophies/serie-a.png" },
+      { "name": "Coppa Italia", "count": 5, "icon": "/trophies/coppa-italia.png" },
+      { "name": "Supercoppa", "count": 7, "icon": "/trophies/supercoppa.png?v=2" },
+      { "name": "Champions League", "count": 7, "icon": "/trophies/champions-league.png" },
+      { "name": "UEFA Super Cup", "count": 5, "icon": "/trophies/uefa-supercup.png" },
+      { "name": "Club World Cup", "count": 4, "icon": "/trophies/intercontinental.png?v=3" }
+    ]
+  },
+  "serie-a__inter": {
+    "trophies": [
+      { "name": "Serie A", "count": 20, "icon": "/trophies/serie-a.png" },
+      { "name": "Coppa Italia", "count": 8, "icon": "/trophies/coppa-italia.png" },
+      { "name": "Supercoppa", "count": 7, "icon": "/trophies/supercoppa.png?v=2" },
+      { "name": "Champions League", "count": 3, "icon": "/trophies/champions-league.png" },
+      { "name": "UEFA Cup", "count": 3, "icon": "/trophies/europa-league.png" },
+      { "name": "Club World Cup", "count": 2, "icon": "/trophies/intercontinental.png?v=3" }
+    ]
+  },
+  "serie-a__juventus": {
+    "trophies": [
+      { "name": "Serie A", "count": 36, "icon": "/trophies/serie-a.png" },
+      { "name": "Coppa Italia", "count": 15, "icon": "/trophies/coppa-italia.png" },
+      { "name": "Supercoppa", "count": 9, "icon": "/trophies/supercoppa.png?v=2" },
+      { "name": "Champions League", "count": 2, "icon": "/trophies/champions-league.png" },
+      { "name": "Europa League / UEFA Cup", "count": 3, "icon": "/trophies/europa-league.png" },
+      { "name": "Club World Cup", "count": 2, "icon": "/trophies/intercontinental.png?v=3" }
+    ]
+  },
+  "serie-a__roma": {
+    "trophies": [
+      { "name": "Serie A", "count": 3, "icon": "/trophies/serie-a.png" },
+      { "name": "Coppa Italia", "count": 9, "icon": "/trophies/coppa-italia.png" },
+      { "name": "Supercoppa", "count": 2, "icon": "/trophies/supercoppa.png?v=2" },
+      { "name": "Conference League", "count": 1, "icon": "/trophies/conference-league.png" },
+      { "name": "UEFA Fairs Cup", "count": 1, "icon": "/trophies/europa-league.png" }
+    ]
+  },
+  "serie-a__napoli": {
+    "trophies": [
+      { "name": "Serie A", "count": 3, "icon": "/trophies/serie-a.png" },
+      { "name": "Coppa Italia", "count": 6, "icon": "/trophies/coppa-italia.png" },
+      { "name": "Supercoppa", "count": 2, "icon": "/trophies/supercoppa.png?v=2" },
+      { "name": "UEFA Cup", "count": 1, "icon": "/trophies/europa-league.png" }
+    ]
+  },
+  "serie-a__lazio": {
+    "trophies": [
+      { "name": "Serie A", "count": 2, "icon": "/trophies/serie-a.png" },
+      { "name": "Coppa Italia", "count": 7, "icon": "/trophies/coppa-italia.png" },
+      { "name": "Supercoppa", "count": 5, "icon": "/trophies/supercoppa.png?v=2" },
+      { "name": "UEFA Cup Winners' Cup", "count": 1, "icon": "/trophies/europa-league.png" },
+      { "name": "UEFA Super Cup", "count": 1, "icon": "/trophies/uefa-supercup.png" }
+    ]
+  },
+  "serie-a__fiorentina": {
+    "trophies": [
+      { "name": "Serie A", "count": 2, "icon": "/trophies/serie-a.png" },
+      { "name": "Coppa Italia", "count": 6, "icon": "/trophies/coppa-italia.png" },
+      { "name": "Supercoppa", "count": 1, "icon": "/trophies/supercoppa.png?v=2" },
+      { "name": "UEFA Cup Winners' Cup", "count": 1, "icon": "/trophies/europa-league.png" },
+      { "name": "Conference League", "count": 1, "icon": "/trophies/conference-league.png" }
+    ]
+  },
+  "serie-a__parma": {
+    "trophies": [
+      { "name": "Coppa Italia", "count": 3, "icon": "/trophies/coppa-italia.png" },
+      { "name": "Supercoppa", "count": 1, "icon": "/trophies/supercoppa.png?v=2" },
+      { "name": "UEFA Cup", "count": 2, "icon": "/trophies/europa-league.png" },
+      { "name": "UEFA Cup Winners' Cup", "count": 1, "icon": "/trophies/europa-league.png" },
+      { "name": "UEFA Super Cup", "count": 1, "icon": "/trophies/uefa-supercup.png" }
+    ]
+  },
+  "serie-a__bologna": {
+    "trophies": [
+      { "name": "Serie A", "count": 7, "icon": "/trophies/serie-a.png" },
+      { "name": "Coppa Italia", "count": 2, "icon": "/trophies/coppa-italia.png" }
+    ]
+  },
+  "serie-a__torino": {
+    "trophies": [
+      { "name": "Serie A", "count": 7, "icon": "/trophies/serie-a.png" },
+      { "name": "Coppa Italia", "count": 5, "icon": "/trophies/coppa-italia.png" }
+    ]
+  },
+  "serie-a__genoa": {
+    "trophies": [
+      { "name": "Serie A", "count": 9, "icon": "/trophies/serie-a.png" },
+      { "name": "Coppa Italia", "count": 1, "icon": "/trophies/coppa-italia.png" }
+    ]
+  },
+  "ligue-1__psg": {
+    "trophies": [
+      { "name": "Ligue 1", "count": 13, "icon": "/trophies/ligue-1.png" },
+      { "name": "Coupe de France", "count": 15, "icon": "/trophies/coupe-de-france.png" },
+      { "name": "Trophée des Champions", "count": 13, "icon": "/trophies/trophee-des-champions.png" },
+      { "name": "Champions League", "count": 1, "icon": "/trophies/champions-league.png" },
+      { "name": "UEFA Cup Winners' Cup", "count": 1, "icon": "/trophies/europa-league.png" }
+    ]
+  },
+  "ligue-1__marseille": {
+    "trophies": [
+      { "name": "Ligue 1", "count": 9, "icon": "/trophies/ligue-1.png" },
+      { "name": "Coupe de France", "count": 10, "icon": "/trophies/coupe-de-france.png" },
+      { "name": "Trophée des Champions", "count": 3, "icon": "/trophies/trophee-des-champions.png" },
+      { "name": "Champions League", "count": 1, "icon": "/trophies/champions-league.png" },
+      { "name": "Europa League", "count": 1, "icon": "/trophies/europa-league.png" }
+    ]
+  },
+  "ligue-1__lyon": {
+    "trophies": [
+      { "name": "Ligue 1", "count": 7, "icon": "/trophies/ligue-1.png" },
+      { "name": "Coupe de France", "count": 5, "icon": "/trophies/coupe-de-france.png" },
+      { "name": "Trophée des Champions", "count": 8, "icon": "/trophies/trophee-des-champions.png" },
+      { "name": "Europa League", "count": 1, "icon": "/trophies/europa-league.png" }
+    ]
+  },
+  "ligue-1__monaco": {
+    "trophies": [
+      { "name": "Ligue 1", "count": 8, "icon": "/trophies/ligue-1.png" },
+      { "name": "Coupe de France", "count": 5, "icon": "/trophies/coupe-de-france.png" },
+      { "name": "Trophée des Champions", "count": 1, "icon": "/trophies/trophee-des-champions.png" }
+    ]
+  },
+  "ligue-1__lille": {
+    "trophies": [
+      { "name": "Ligue 1", "count": 4, "icon": "/trophies/ligue-1.png" },
+      { "name": "Coupe de France", "count": 6, "icon": "/trophies/coupe-de-france.png" }
+    ]
+  },
+  "ligue-1__lens": {
+    "trophies": [
+      { "name": "Ligue 1", "count": 1, "icon": "/trophies/ligue-1.png" },
+      { "name": "Coupe de France", "count": 1, "icon": "/trophies/coupe-de-france.png" }
+    ]
+  },
+  "ligue-1__auxerre": {
+    "trophies": [
+      { "name": "Ligue 1", "count": 1, "icon": "/trophies/ligue-1.png" },
+      { "name": "Coupe de France", "count": 4, "icon": "/trophies/coupe-de-france.png" }
+    ]
+  },
+  "ligue-1__strasbourg": {
+    "trophies": [
+      { "name": "Ligue 1", "count": 1, "icon": "/trophies/ligue-1.png" },
+      { "name": "Coupe de France", "count": 3, "icon": "/trophies/coupe-de-france.png" }
+    ]
+  },
+  "liga-portugal__benfica": {
+    "trophies": [
+      { "name": "Liga Portugal", "count": 38, "icon": "/trophies/liga-portugal.png" },
+      { "name": "Taça de Portugal", "count": 27, "icon": "/trophies/taca-portugal.png" },
+      { "name": "Supertaça", "count": 9, "icon": "/trophies/supertaca.png" },
+      { "name": "Champions League", "count": 2, "icon": "/trophies/champions-league.png" }
+    ]
+  },
+  "liga-portugal__porto": {
+    "trophies": [
+      { "name": "Liga Portugal", "count": 30, "icon": "/trophies/liga-portugal.png" },
+      { "name": "Taça de Portugal", "count": 19, "icon": "/trophies/taca-portugal.png" },
+      { "name": "Supertaça", "count": 22, "icon": "/trophies/supertaca.png" },
+      { "name": "Champions League", "count": 2, "icon": "/trophies/champions-league.png" },
+      { "name": "UEFA Cup", "count": 1, "icon": "/trophies/europa-league.png" },
+      { "name": "Club World Cup", "count": 2, "icon": "/trophies/intercontinental.png" }
+    ]
+  },
+  "liga-portugal__sporting": {
+    "trophies": [
+      { "name": "Liga Portugal", "count": 19, "icon": "/trophies/liga-portugal.png" },
+      { "name": "Taça de Portugal", "count": 17, "icon": "/trophies/taca-portugal.png" },
+      { "name": "Supertaça", "count": 9, "icon": "/trophies/supertaca.png" },
+      { "name": "UEFA Cup Winners' Cup", "count": 1, "icon": "/trophies/europa-league.png" }
+    ]
+  },
+  "liga-portugal__braga": {
+    "trophies": [
+      { "name": "Taça de Portugal", "count": 3, "icon": "/trophies/taca-portugal.png" },
+      { "name": "Supertaça", "count": 1, "icon": "/trophies/supertaca.png" }
+    ]
+  },
+  "eredivisie__ajax": {
+    "trophies": [
+      { "name": "Eredivisie", "count": 36, "icon": "/trophies/eredivisie.png" },
+      { "name": "KNVB Beker", "count": 20, "icon": "/trophies/knvb-beker.png" },
+      { "name": "Johan Cruijff Schaal", "count": 9, "icon": "/trophies/johan-cruijff-schaal.png" },
+      { "name": "Champions League", "count": 4, "icon": "/trophies/champions-league.png" },
+      { "name": "UEFA Cup Winners' Cup", "count": 1, "icon": "/trophies/europa-league.png" },
+      { "name": "Club World Cup", "count": 2, "icon": "/trophies/intercontinental.png" }
+    ]
+  },
+  "eredivisie__feyenoord": {
+    "trophies": [
+      { "name": "Eredivisie", "count": 16, "icon": "/trophies/eredivisie.png" },
+      { "name": "KNVB Beker", "count": 14, "icon": "/trophies/knvb-beker.png" },
+      { "name": "Johan Cruijff Schaal", "count": 2, "icon": "/trophies/johan-cruijff-schaal.png" },
+      { "name": "Champions League", "count": 1, "icon": "/trophies/champions-league.png" },
+      { "name": "UEFA Cup", "count": 2, "icon": "/trophies/europa-league.png" }
+    ]
+  },
+  "eredivisie__eindhoven": {
+    "trophies": [
+      { "name": "Eredivisie", "count": 24, "icon": "/trophies/eredivisie.png" },
+      { "name": "KNVB Beker", "count": 9, "icon": "/trophies/knvb-beker.png" },
+      { "name": "Johan Cruijff Schaal", "count": 12, "icon": "/trophies/johan-cruijff-schaal.png" },
+      { "name": "Champions League", "count": 1, "icon": "/trophies/champions-league.png" },
+      { "name": "UEFA Cup", "count": 1, "icon": "/trophies/europa-league.png" }
+    ]
+  },
+  "eredivisie__celtic": {
+    "trophies": [
+      { "name": "Scottish Premiership", "count": 54, "icon": "/trophies/scottish-premiership.png" },
+      { "name": "Scottish Cup", "count": 42, "icon": "/trophies/scottish-cup.png" },
+      { "name": "Scottish League Cup", "count": 21, "icon": "/trophies/scottish-league-cup.png" },
+      { "name": "Champions League", "count": 1, "icon": "/trophies/champions-league.png" }
+    ]
+  },
+  "eredivisie__rangers": {
+    "trophies": [
+      { "name": "Scottish Premiership", "count": 55, "icon": "/trophies/scottish-premiership.png" },
+      { "name": "Scottish Cup", "count": 34, "icon": "/trophies/scottish-cup.png" },
+      { "name": "Scottish League Cup", "count": 27, "icon": "/trophies/scottish-league-cup.png" },
+      { "name": "UEFA Cup Winners' Cup", "count": 1, "icon": "/trophies/europa-league.png" }
+    ]
+  },
+  "europa-andere__galatasaray": {
+    "trophies": [
+      { "name": "Süper Lig", "count": 24, "icon": "/trophies/super-lig.png" },
+      { "name": "Türkiye Kupası", "count": 18, "icon": "/trophies/turkiye-kupasi.png" },
+      { "name": "Süper Kupa", "count": 16, "icon": "/trophies/super-kupa.png" },
+      { "name": "UEFA Cup", "count": 1, "icon": "/trophies/europa-league.png" },
+      { "name": "UEFA Super Cup", "count": 1, "icon": "/trophies/uefa-supercup.png" }
+    ]
+  },
+  "europa-andere__fenerbahce": {
+    "trophies": [
+      { "name": "Süper Lig", "count": 19, "icon": "/trophies/super-lig.png" },
+      { "name": "Türkiye Kupası", "count": 6, "icon": "/trophies/turkiye-kupasi.png" },
+      { "name": "Süper Kupa", "count": 9, "icon": "/trophies/super-kupa.png" }
+    ]
+  },
+  "europa-andere__besiktas": {
+    "trophies": [
+      { "name": "Süper Lig", "count": 16, "icon": "/trophies/super-lig.png" },
+      { "name": "Türkiye Kupası", "count": 9, "icon": "/trophies/turkiye-kupasi.png" },
+      { "name": "Süper Kupa", "count": 8, "icon": "/trophies/super-kupa.png" }
+    ]
+  },
+  "europa-andere__olympiacos": {
+    "trophies": [
+      { "name": "Super League", "count": 47, "icon": "/trophies/super-league-greece.png" },
+      { "name": "Κύπελλο Ελλάδος", "count": 27, "icon": "/trophies/greek-cup.png" },
+      { "name": "Conference League", "count": 1, "icon": "/trophies/conference-league.png" }
+    ]
+  },
+  "europa-andere__steaua": {
+    "trophies": [
+      { "name": "Liga 1", "count": 27, "icon": "/trophies/liga-1-romania.png" },
+      { "name": "Cupa României", "count": 23, "icon": "/trophies/cupa-romaniei.png" },
+      { "name": "Champions League", "count": 1, "icon": "/trophies/champions-league.png" },
+      { "name": "UEFA Super Cup", "count": 1, "icon": "/trophies/uefa-supercup.png" }
+    ]
+  },
+  "europa-andere__dinamo-zagreb": {
+    "trophies": [
+      { "name": "HNL", "count": 22, "icon": "/trophies/hnl.png" },
+      { "name": "Hrvatski Kup", "count": 16, "icon": "/trophies/hrvatski-kup.png" },
+      { "name": "UEFA Cup Winners' Cup", "count": 1, "icon": "/trophies/europa-league.png" },
+      { "name": "UEFA Fairs Cup", "count": 1, "icon": "/trophies/europa-league.png" }
+    ]
+  },
+  "europa-andere__club-brugge": {
+    "trophies": [
+      { "name": "First Division A", "count": 19, "icon": "/trophies/jupiler-pro.png" },
+      { "name": "Belgian Cup", "count": 11, "icon": "/trophies/belgian-cup.png" },
+      { "name": "UEFA Cup Winners' Cup", "count": 1, "icon": "/trophies/europa-league.png" }
+    ]
+  },
+  "europa-andere__fc-basel": {
+    "trophies": [
+      { "name": "Swiss Super League", "count": 21, "icon": "/trophies/swiss-super-league.png" },
+      { "name": "Swiss Cup", "count": 13, "icon": "/trophies/swiss-cup.png" }
+    ]
+  },
+  "europa-andere__rb-salzburg": {
+    "trophies": [
+      { "name": "Bundesliga", "count": 16, "icon": "/trophies/bundesliga-austria.png" },
+      { "name": "ÖFB-Cup", "count": 9, "icon": "/trophies/oefb-cup.png" },
+      { "name": "Europa League", "count": 1, "icon": "/trophies/europa-league.png" }
+    ]
+  },
+  "europa-andere__fc-copenhagen": {
+    "trophies": [
+      { "name": "Superliga", "count": 16, "icon": "/trophies/danish-superliga.png" },
+      { "name": "DBU Pokalen", "count": 9, "icon": "/trophies/dbu-pokalen.png" }
+    ]
+  },
+  "clubs-world__flamengo": {
+    "trophies": [
+      { "name": "Brasileirão", "count": 8, "icon": "/trophies/brasileirao.png" },
+      { "name": "Copa do Brasil", "count": 4, "icon": "/trophies/copa-do-brasil.png" },
+      { "name": "Copa Libertadores", "count": 3, "icon": "/trophies/copa-libertadores.png" },
+      { "name": "Club World Cup", "count": 1, "icon": "/trophies/intercontinental.png" }
+    ]
+  },
+  "clubs-world__palmeiras": {
+    "trophies": [
+      { "name": "Brasileirão", "count": 12, "icon": "/trophies/brasileirao.png" },
+      { "name": "Copa do Brasil", "count": 4, "icon": "/trophies/copa-do-brasil.png" },
+      { "name": "Copa Libertadores", "count": 3, "icon": "/trophies/copa-libertadores.png" }
+    ]
+  },
+  "clubs-world__corinthians": {
+    "trophies": [
+      { "name": "Brasileirão", "count": 7, "icon": "/trophies/brasileirao.png" },
+      { "name": "Copa do Brasil", "count": 3, "icon": "/trophies/copa-do-brasil.png" },
+      { "name": "Copa Libertadores", "count": 1, "icon": "/trophies/copa-libertadores.png" },
+      { "name": "Club World Cup", "count": 2, "icon": "/trophies/intercontinental.png" }
+    ]
+  },
+  "clubs-world__saopaulo": {
+    "trophies": [
+      { "name": "Brasileirão", "count": 6, "icon": "/trophies/brasileirao.png" },
+      { "name": "Copa do Brasil", "count": 1, "icon": "/trophies/copa-do-brasil.png" },
+      { "name": "Copa Libertadores", "count": 3, "icon": "/trophies/copa-libertadores.png" },
+      { "name": "Club World Cup", "count": 3, "icon": "/trophies/intercontinental.png" }
+    ]
+  },
+  "clubs-world__santos": {
+    "trophies": [
+      { "name": "Brasileirão", "count": 8, "icon": "/trophies/brasileirao.png" },
+      { "name": "Copa Libertadores", "count": 2, "icon": "/trophies/copa-libertadores.png" },
+      { "name": "Club World Cup", "count": 2, "icon": "/trophies/intercontinental.png" }
+    ]
+  },
+  "clubs-world__bocajuniors": {
+    "trophies": [
+      { "name": "Primera División", "count": 35, "icon": "/trophies/primera-argentina.png" },
+      { "name": "Copa Argentina", "count": 3, "icon": "/trophies/copa-argentina.png" },
+      { "name": "Copa Libertadores", "count": 6, "icon": "/trophies/copa-libertadores.png" },
+      { "name": "Club World Cup", "count": 1, "icon": "/trophies/intercontinental.png" },
+      { "name": "UEFA-Conmebol Cup", "count": 2, "icon": "/trophies/europa-league.png" }
+    ]
+  },
+  "clubs-world__riverplate": {
+    "trophies": [
+      { "name": "Primera División", "count": 38, "icon": "/trophies/primera-argentina.png" },
+      { "name": "Copa Argentina", "count": 3, "icon": "/trophies/copa-argentina.png" },
+      { "name": "Copa Libertadores", "count": 4, "icon": "/trophies/copa-libertadores.png" },
+      { "name": "Club World Cup", "count": 1, "icon": "/trophies/intercontinental.png" }
+    ]
+  },
+  "clubs-world__independiente": {
+    "trophies": [
+      { "name": "Primera División", "count": 16, "icon": "/trophies/primera-argentina.png" },
+      { "name": "Copa Libertadores", "count": 7, "icon": "/trophies/copa-libertadores.png" },
+      { "name": "Club World Cup", "count": 2, "icon": "/trophies/intercontinental.png" }
+    ]
+  },
+  "clubs-world__racingavellaneda": {
+    "trophies": [
+      { "name": "Primera División", "count": 10, "icon": "/trophies/primera-argentina.png" },
+      { "name": "Copa Libertadores", "count": 1, "icon": "/trophies/copa-libertadores.png" },
+      { "name": "Club World Cup", "count": 1, "icon": "/trophies/intercontinental.png" }
+    ]
+  },
+  "clubs-world__colocolo": {
+    "trophies": [
+      { "name": "Primera División", "count": 33, "icon": "/trophies/primera-chile.png" },
+      { "name": "Copa Chile", "count": 10, "icon": "/trophies/copa-chile.png" },
+      { "name": "Copa Libertadores", "count": 1, "icon": "/trophies/copa-libertadores.png" }
+    ]
+  },
+  "clubs-world__udechile": {
+    "trophies": [
+      { "name": "Primera División", "count": 17, "icon": "/trophies/primera-chile.png" },
+      { "name": "Copa Chile", "count": 9, "icon": "/trophies/copa-chile.png" },
+      { "name": "Copa Sudamericana", "count": 1, "icon": "/trophies/copa-libertadores.png" }
+    ]
+  },
+  "clubs-world__lagalaxy": {
+    "trophies": [
+      { "name": "MLS Cup", "count": 5, "icon": "/trophies/mls-cup.png" },
+      { "name": "Supporters' Shield", "count": 3, "icon": "/trophies/supporters-shield.png" }
+    ]
+  },
+  "clubs-world__chivas": {
+    "trophies": [
+      { "name": "Liga MX", "count": 12, "icon": "/trophies/liga-mx.png" },
+      { "name": "Copa MX", "count": 2, "icon": "/trophies/copa-mx.png" }
+    ]
+  },
+  "clubs-world__tigres": {
+    "trophies": [
+      { "name": "Liga MX", "count": 8, "icon": "/trophies/liga-mx.png" },
+      { "name": "Copa MX", "count": 1, "icon": "/trophies/copa-mx.png" }
+    ]
+  },
+  "clubs-world__monterrey": {
+    "trophies": [
+      { "name": "Liga MX", "count": 5, "icon": "/trophies/liga-mx.png" },
+      { "name": "Copa MX", "count": 3, "icon": "/trophies/copa-mx.png" },
+      { "name": "CONCACAF Champions Cup", "count": 5, "icon": "/trophies/concacaf.png" }
+    ]
+  },
+  "clubs-world__alhilal": {
+    "trophies": [
+      { "name": "Saudi Pro League", "count": 19, "icon": "/trophies/saudi-pro-league.png" },
+      { "name": "King Cup", "count": 14, "icon": "/trophies/king-cup.png" },
+      { "name": "AFC Champions League", "count": 4, "icon": "/trophies/afc-champions.png" },
+      { "name": "Club World Cup", "count": 1, "icon": "/trophies/intercontinental.png" }
+    ]
+  },
+  "clubs-world__columbus": {
+    "trophies": [
+      { "name": "MLS Cup", "count": 3, "icon": "/trophies/mls-cup.png" },
+      { "name": "Supporters' Shield", "count": 2, "icon": "/trophies/supporters-shield.png" }
+    ]
+  },
+  "clubs-world__atlantautd": {
+    "trophies": [
+      { "name": "MLS Cup", "count": 1, "icon": "/trophies/mls-cup.png" },
+      { "name": "US Open Cup", "count": 1, "icon": "/trophies/us-open-cup.png" }
+    ]
+  },
+  "zweitligisten__leicester": {
+    "trophies": [
+      { "name": "Premier League", "count": 1, "icon": "/trophies/premier-league.png" },
+      { "name": "FA Cup", "count": 1, "icon": "/trophies/fa-cup.png" },
+      { "name": "League Cup", "count": 3, "icon": "/trophies/league-cup.png" }
+    ]
+  },
+  "zweitligisten__southampton": {
+    "trophies": [
+      { "name": "FA Cup", "count": 1, "icon": "/trophies/fa-cup.png" }
+    ]
+  },
+  "zweitligisten__blackburn": {
+    "trophies": [
+      { "name": "Premier League", "count": 1, "icon": "/trophies/premier-league.png" },
+      { "name": "FA Cup", "count": 6, "icon": "/trophies/fa-cup.png" },
+      { "name": "League Cup", "count": 1, "icon": "/trophies/league-cup.png" }
+    ]
+  },
+  "zweitligisten__sampdoria": {
+    "trophies": [
+      { "name": "Serie A", "count": 1, "icon": "/trophies/serie-a.png" },
+      { "name": "Coppa Italia", "count": 4, "icon": "/trophies/coppa-italia.png" },
+      { "name": "Supercoppa", "count": 1, "icon": "/trophies/supercoppa.png?v=2" },
+      { "name": "UEFA Cup Winners' Cup", "count": 1, "icon": "/trophies/europa-league.png" }
+    ]
+  },
+  "zweitligisten__kaiserslautern": {
+    "trophies": [
+      { "name": "Bundesliga", "count": 4, "icon": "/trophies/bundesliga.png" },
+      { "name": "DFB-Pokal", "count": 2, "icon": "/trophies/dfb-pokal.png" }
+    ]
+  },
+  "zweitligisten__schalke": {
+    "trophies": [
+      { "name": "Bundesliga", "count": 7, "icon": "/trophies/bundesliga.png" },
+      { "name": "DFB-Pokal", "count": 5, "icon": "/trophies/dfb-pokal.png" },
+      { "name": "UEFA Cup", "count": 1, "icon": "/trophies/europa-league.png" }
+    ]
+  },
+  "zweitligisten__nuernberg": {
+    "trophies": [
+      { "name": "Bundesliga", "count": 9, "icon": "/trophies/bundesliga.png" },
+      { "name": "DFB-Pokal", "count": 4, "icon": "/trophies/dfb-pokal.png" }
+    ]
+  },
+  "zweitligisten__bordeaux": {
+    "trophies": [
+      { "name": "Ligue 1", "count": 6, "icon": "/trophies/ligue-1.png" },
+      { "name": "Coupe de France", "count": 4, "icon": "/trophies/coupe-de-france.png" },
+      { "name": "UEFA Cup", "count": 1, "icon": "/trophies/europa-league.png" }
+    ]
+  },
+  "zweitligisten__zaragoza": {
+    "trophies": [
+      { "name": "La Liga", "count": 1, "icon": "/trophies/la-liga.png" },
+      { "name": "Copa del Rey", "count": 6, "icon": "/trophies/copa-del-rey.png" },
+      { "name": "UEFA Cup Winners' Cup", "count": 1, "icon": "/trophies/europa-league.png" }
+    ]
+  },
+  "zweitligisten__coruna": {
+    "trophies": [
+      { "name": "Copa del Rey", "count": 2, "icon": "/trophies/copa-del-rey.png" },
+      { "name": "UEFA Cup Winners' Cup", "count": 1, "icon": "/trophies/europa-league.png" }
+    ]
+  }
+}
