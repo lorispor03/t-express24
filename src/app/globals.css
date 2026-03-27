@@ -63,7 +63,7 @@ body {
 }
 
 :root {
-  --anim-state: running;
+  --anim-state: paused;
 }
 
 /* Announcement bar scroll */

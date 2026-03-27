@@ -8,10 +8,11 @@ export default function ConsentBanner() {
 
   useEffect(() => {
     const accepted = localStorage.getItem('agb-accepted');
-    if (!accepted) {
+    if (accepted) {
+      document.documentElement.style.setProperty('--anim-state', 'running');
+    } else {
       setVisible(true);
       document.body.style.overflow = 'hidden';
-      document.documentElement.style.setProperty('--anim-state', 'paused');
     }
   }, []);
 
