@@ -69,8 +69,9 @@ export default function StatsBar() {
         {STATS.map((stat, i) => (
           <div key={stat.label} className="flex items-center justify-center gap-2 sm:gap-3">
             <div className="flex flex-col">
-              <div className="text-xl sm:text-3xl md:text-4xl text-[var(--gold)] leading-none" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
-                {counts[i].toLocaleString('de-CH')}{stat.suffix}
+              <div className="relative text-xl sm:text-3xl md:text-4xl text-[var(--gold)] leading-none text-right" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
+                <span className="invisible">{stat.num.toLocaleString('de-CH')}{stat.suffix}</span>
+                <span className="absolute inset-0 text-right">{counts[i].toLocaleString('de-CH')}{stat.suffix}</span>
               </div>
               <div className="text-[9px] sm:text-xs text-gray-400 uppercase tracking-wider">{stat.label}</div>
             </div>
