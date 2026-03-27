@@ -10,12 +10,16 @@ export default function ConsentBanner() {
     const accepted = localStorage.getItem('agb-accepted');
     if (!accepted) {
       setVisible(true);
+      document.body.style.overflow = 'hidden';
+      document.documentElement.style.setProperty('--anim-state', 'paused');
     }
   }, []);
 
   const handleAccept = () => {
     localStorage.setItem('agb-accepted', 'true');
     setVisible(false);
+    document.body.style.overflow = '';
+    document.documentElement.style.setProperty('--anim-state', 'running');
   };
 
   if (!visible) return null;

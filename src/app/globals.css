@@ -62,6 +62,10 @@ body {
   font-weight: bold;
 }
 
+:root {
+  --anim-state: running;
+}
+
 /* Announcement bar scroll */
 @keyframes scroll-left {
   0% { transform: translateX(0); }
@@ -69,6 +73,7 @@ body {
 }
 .announcement-scroll {
   animation: scroll-left 25s linear infinite;
+  animation-play-state: var(--anim-state);
 }
 
 @keyframes shimmer {
@@ -78,6 +83,7 @@ body {
 .announcement-shimmer {
   background: linear-gradient(90deg, transparent 20%, rgba(255,255,255,0.2) 50%, transparent 80%);
   animation: shimmer 3s ease-in-out infinite;
+  animation-play-state: var(--anim-state);
 }
 
 /* League card gradient hover */
