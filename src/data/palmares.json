@@ -747,5 +747,163 @@
       { "name": "Copa del Rey", "count": 2, "icon": "/trophies/copa-del-rey.png" },
       { "name": "UEFA Cup Winners' Cup", "count": 1, "icon": "/trophies/europa-league.png" }
     ]
+  },
+  "nationalmannschaften__brazil": {
+    "trophies": [
+      { "name": "WM", "count": 5, "icon": "/trophies/world-cup.png" },
+      { "name": "Copa América", "count": 9, "icon": "/trophies/copa-america.png" },
+      { "name": "Confed Cup", "count": 4, "icon": "/trophies/confed-cup.png" }
+    ]
+  },
+  "nationalmannschaften__germany": {
+    "trophies": [
+      { "name": "WM", "count": 4, "icon": "/trophies/world-cup.png" },
+      { "name": "EM", "count": 3, "icon": "/trophies/euro.png" },
+      { "name": "Confed Cup", "count": 1, "icon": "/trophies/confed-cup.png" }
+    ]
+  },
+  "nationalmannschaften__italy": {
+    "trophies": [
+      { "name": "WM", "count": 4, "icon": "/trophies/world-cup.png" },
+      { "name": "EM", "count": 2, "icon": "/trophies/euro.png" }
+    ]
+  },
+  "nationalmannschaften__argentina": {
+    "trophies": [
+      { "name": "WM", "count": 3, "icon": "/trophies/world-cup.png" },
+      { "name": "Copa América", "count": 16, "icon": "/trophies/copa-america.png" },
+      { "name": "Confed Cup", "count": 1, "icon": "/trophies/confed-cup.png" }
+    ]
+  },
+  "nationalmannschaften__france": {
+    "trophies": [
+      { "name": "WM", "count": 2, "icon": "/trophies/world-cup.png" },
+      { "name": "EM", "count": 2, "icon": "/trophies/euro.png" },
+      { "name": "Confed Cup", "count": 2, "icon": "/trophies/confed-cup.png" }
+    ]
+  },
+  "nationalmannschaften__spain": {
+    "trophies": [
+      { "name": "WM", "count": 1, "icon": "/trophies/world-cup.png" },
+      { "name": "EM", "count": 4, "icon": "/trophies/euro.png" }
+    ]
+  },
+  "nationalmannschaften__england": {
+    "trophies": [
+      { "name": "WM", "count": 1, "icon": "/trophies/world-cup.png" }
+    ]
+  },
+  "nationalmannschaften__portugal": {
+    "trophies": [
+      { "name": "EM", "count": 1, "icon": "/trophies/euro.png" },
+      { "name": "Nations League", "count": 1, "icon": "/trophies/nations-league.png" }
+    ]
+  },
+  "nationalmannschaften__mexico": {
+    "trophies": [
+      { "name": "Gold Cup", "count": 8, "icon": "/trophies/gold-cup.png" },
+      { "name": "Confed Cup", "count": 1, "icon": "/trophies/confed-cup.png" }
+    ]
+  },
+  "nationalmannschaften__usa": {
+    "trophies": [
+      { "name": "Gold Cup", "count": 7, "icon": "/trophies/gold-cup.png" }
+    ]
+  },
+  "nationalmannschaften__colombia": {
+    "trophies": [
+      { "name": "Copa América", "count": 2, "icon": "/trophies/copa-america.png" }
+    ]
+  },
+  "nationalmannschaften__chile": {
+    "trophies": [
+      { "name": "Copa América", "count": 2, "icon": "/trophies/copa-america.png" }
+    ]
+  },
+  "nationalmannschaften__peru": {
+    "trophies": [
+      { "name": "Copa América", "count": 2, "icon": "/trophies/copa-america.png" }
+    ]
+  },
+  "nationalmannschaften__morocco": {
+    "trophies": [
+      { "name": "AFCON", "count": 1, "icon": "/trophies/afcon.png" }
+    ]
+  },
+  "nationalmannschaften__nigeria": {
+    "trophies": [
+      { "name": "AFCON", "count": 3, "icon": "/trophies/afcon.png" }
+    ]
+  },
+  "nationalmannschaften__egypt": {
+    "trophies": [
+      { "name": "AFCON", "count": 7, "icon": "/trophies/afcon.png" }
+    ]
+  },
+  "nationalmannschaften__cameroon": {
+    "trophies": [
+      { "name": "AFCON", "count": 5, "icon": "/trophies/afcon.png" }
+    ]
+  },
+  "nationalmannschaften__algeria": {
+    "trophies": [
+      { "name": "AFCON", "count": 2, "icon": "/trophies/afcon.png" }
+    ]
+  },
+  "nationalmannschaften__senegal": {
+    "trophies": [
+      { "name": "AFCON", "count": 1, "icon": "/trophies/afcon.png" }
+    ]
+  },
+  "nationalmannschaften__tunisia": {
+    "trophies": [
+      { "name": "AFCON", "count": 1, "icon": "/trophies/afcon.png" }
+    ]
+  },
+  "nationalmannschaften__southafrica": {
+    "trophies": [
+      { "name": "AFCON", "count": 1, "icon": "/trophies/afcon.png" }
+    ]
+  },
+  "nationalmannschaften__japan": {
+    "trophies": [
+      { "name": "Asian Cup", "count": 4, "icon": "/trophies/asian-cup.png" }
+    ]
+  },
+  "nationalmannschaften__korea": {
+    "trophies": [
+      { "name": "Asian Cup", "count": 2, "icon": "/trophies/asian-cup.png" }
+    ]
+  },
+  "nationalmannschaften__saudiarabia": {
+    "trophies": [
+      { "name": "Asian Cup", "count": 3, "icon": "/trophies/asian-cup.png" }
+    ]
+  },
+  "nationalmannschaften__australia": {
+    "trophies": [
+      { "name": "Asian Cup", "count": 1, "icon": "/trophies/asian-cup.png" }
+    ]
+  },
+  "nationalmannschaften__greece": {
+    "trophies": [
+      { "name": "EM", "count": 1, "icon": "/trophies/euro.png" }
+    ]
+  },
+  "nationalmannschaften__sweden": {
+    "trophies": [
+      { "name": "Olympics", "count": 1, "icon": "/trophies/olympics.png" }
+    ]
+  },
+  "nationalmannschaften__hungary": {
+    "trophies": [
+      { "name": "Olympics", "count": 3, "icon": "/trophies/olympics.png" }
+    ]
+  },
+  "nationalmannschaften__uruguay": {
+    "trophies": [
+      { "name": "WM", "count": 2, "icon": "/trophies/world-cup.png" },
+      { "name": "Copa América", "count": 15, "icon": "/trophies/copa-america.png" }
+    ]
   }
 }
