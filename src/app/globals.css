@@ -68,7 +68,16 @@ body {
   100% { transform: translateX(-50%); }
 }
 .announcement-scroll {
-  animation: scroll-left 30s linear infinite;
+  animation: scroll-left 25s linear infinite;
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+.announcement-shimmer {
+  background: linear-gradient(90deg, transparent 20%, rgba(255,255,255,0.2) 50%, transparent 80%);
+  animation: shimmer 3s ease-in-out infinite;
 }
 
 /* League card gradient hover */

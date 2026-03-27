@@ -24,17 +24,26 @@ export default function Header() {
   return (
     <>
       {/* Announcement Bar */}
-      <div className="bg-[var(--red-main)] text-white text-xs py-1.5 overflow-hidden whitespace-nowrap">
-        <div className="announcement-scroll inline-flex gap-16">
+      <div className="relative bg-gradient-to-r from-[#a11b24] via-[var(--red-main)] to-[#a11b24] text-white text-xs py-1.5 overflow-hidden whitespace-nowrap">
+        <div className="absolute inset-y-0 left-0 w-12 bg-gradient-to-r from-[#a11b24] to-transparent z-10 pointer-events-none" />
+        <div className="absolute inset-y-0 right-0 w-12 bg-gradient-to-l from-[#a11b24] to-transparent z-10 pointer-events-none" />
+        <div className="announcement-scroll inline-flex">
           {[...Array(2)].map((_, i) => (
-            <span key={i} className="inline-flex gap-16">
-              <span>Qualitätsgeprüft in der Schweiz</span>
-              <span>Preise in CHF</span>
-              <span>Jedes Trikot einzeln geprüft</span>
-              <span>Über 4700 Artikel verfügbar</span>
+            <span key={i} className="inline-flex items-center">
+              <span className="px-6">Qualitätsgeprüft in der Schweiz</span>
+              <span className="text-white/50 text-2xl leading-none">•</span>
+              <span className="px-6">Preise in CHF</span>
+              <span className="text-white/50 text-2xl leading-none">•</span>
+              <span className="px-6">Ständig neue Angebote</span>
+              <span className="text-white/50 text-2xl leading-none">•</span>
+              <span className="px-6">Jedes Trikot einzeln geprüft</span>
+              <span className="text-white/50 text-2xl leading-none">•</span>
+              <span className="px-6">Über 4700 Artikel verfügbar</span>
+              <span className="text-white/50 text-2xl leading-none">•</span>
             </span>
           ))}
         </div>
+        <div className="announcement-shimmer absolute inset-0 pointer-events-none" />
       </div>
 
       {/* Main Header */}
