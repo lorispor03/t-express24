@@ -13,11 +13,11 @@ const faqs = [
   },
   {
     q: 'Wie bezahle ich?',
-    a: 'Wir akzeptieren TWINT, PayPal und Banküberweisung. Die Zahlung erfolgt nach Bestellbestätigung.',
+    a: 'Wir akzeptieren TWINT und PayPal. Die Zahlung erfolgt nach Bestellbestätigung.',
   },
   {
     q: 'Wie ist die Qualität der Trikots?',
-    a: 'Jedes einzelne Trikot wird von uns in der Schweiz persönlich auf Qualität, Verarbeitung und Druckbild geprüft, bevor es versendet wird. Sollte etwas nicht unseren Standards entsprechen, versenden wir kostenlos Ersatz.',
+    a: 'Unsere Trikots überzeugen durch hochwertige Verarbeitung, langlebige Stoffe und saubere Druckbilder. Jedes Stück wird von uns in der Schweiz persönlich auf Material, Nähte und Bedruckung geprüft — erst dann geht es zu dir nach Hause.',
   },
   {
     q: 'Kann ich ein Trikot zurückgeben?',

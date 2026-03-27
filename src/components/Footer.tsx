@@ -17,15 +17,18 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Ligen */}
+          {/* Zahlungsarten */}
           <div>
-            <h3 className="font-bold text-sm uppercase tracking-wider mb-4 text-[var(--gold)]">Ligen</h3>
-            <div className="space-y-2 text-sm text-gray-400">
-              <Link href="/league/premier-league" className="block hover:text-white transition-colors">Premier League</Link>
-              <Link href="/league/la-liga" className="block hover:text-white transition-colors">La Liga</Link>
-              <Link href="/league/bundesliga" className="block hover:text-white transition-colors">Bundesliga</Link>
-              <Link href="/league/serie-a" className="block hover:text-white transition-colors">Serie A</Link>
-              <Link href="/#ligen" className="block hover:text-white transition-colors">Alle Ligen &rarr;</Link>
+            <h3 className="font-bold text-sm uppercase tracking-wider mb-4 text-[var(--gold)]">Zahlungsarten</h3>
+            <div className="space-y-3 text-sm text-gray-400">
+              <div className="flex items-center gap-2 md:justify-center">
+                <img src="/twint-logo.png" alt="TWINT" className="h-6 w-auto flex-shrink-0" />
+                <span>TWINT</span>
+              </div>
+              <div className="flex items-center gap-2 md:justify-center">
+                <img src="/paypal-logo.png" alt="PayPal" className="h-6 w-6 flex-shrink-0 rounded" />
+                <span>PayPal</span>
+              </div>
             </div>
           </div>
 
@@ -33,7 +36,6 @@ export default function Footer() {
           <div>
             <h3 className="font-bold text-sm uppercase tracking-wider mb-4 text-[var(--gold)]">Info</h3>
             <div className="space-y-2 text-sm text-gray-400">
-              <p>Lieferzeit: 2-3 Wochen</p>
               <p>Qualitätskontrolle in CH</p>
               <p>Preise in CHF</p>
               <p>Versand aus der Schweiz</p>
