@@ -38,6 +38,8 @@ export default function CartDrawer() {
             beflockung_name: i.flockingName,
             beflockung_nummer: i.flockingNumber,
             patches: (i.patches || []).map(p => ({ name: p.name, preis: p.price })),
+            extras: i.extraOption || 'none',
+            extras_preis: i.extraPrice || 0,
             menge: i.quantity,
           })),
         }),
@@ -107,14 +109,14 @@ export default function CartDrawer() {
                       <p className="text-[10px] text-gray-500">
                         {item.size}{(item.flockingName || item.flockingNumber) && ` · ${[item.flockingName, item.flockingNumber].filter(Boolean).join(' ')}`} · {item.quantity}x
                       </p>
-                      {item.patches && item.patches.length > 0 && (
-                        <p className="text-[10px] text-gray-500">
-                          Patches: {item.patches.map(p => p.name).join(', ')}
+                      {item.extraOption && item.extraOption !== 'none' && (
+                        <p className="text-[10px] text-[var(--gold)]">
+                          {item.extraOption === 'komplett' ? 'Komplett-Paket' : item.extraOption === 'aufdruck' ? 'Aufdruck' : 'Patches'}
                         </p>
                       )}
                     </div>
                     <span className="text-xs text-[var(--gold)] whitespace-nowrap">
-                      CHF {((parseFloat(item.product.p) + (item.patches || []).reduce((s, p) => s + p.price, 0)) * item.quantity).toFixed(2)}
+                      CHF {((parseFloat(item.product.p) + (item.extraPrice || 0)) * item.quantity).toFixed(2)}
                     </span>
                   </div>
                 ))}
@@ -208,6 +210,11 @@ export default function CartDrawer() {
                             Grösse: {item.size}{(item.flockingName || item.flockingNumber) && ` · Aufdruck: ${[item.flockingName, item.flockingNumber].filter(Boolean).join(' ')}`}
                           </p>
                           <p className="text-[10px] text-gray-500">{item.teamName}</p>
+                          {item.extraOption && item.extraOption !== 'none' && (
+                            <p className="text-[10px] text-[var(--gold)] mt-0.5">
+                              {item.extraOption === 'komplett' ? 'Komplett-Paket' : item.extraOption === 'aufdruck' ? 'Aufdruck' : 'Patches'} +CHF {(item.extraPrice || 0).toFixed(2)}
+                            </p>
+                          )}
                           {item.patches && item.patches.length > 0 && (
                             <div className="flex flex-wrap gap-1 mt-1">
                               {item.patches.map(p => (
@@ -238,7 +245,7 @@ export default function CartDrawer() {
                           >+</button>
                         </div>
                         <span className="text-sm font-bold text-[var(--gold)]">
-                          CHF {((parseFloat(item.product.p) + (item.patches || []).reduce((s, p) => s + p.price, 0)) * item.quantity).toFixed(2)}
+                          CHF {((parseFloat(item.product.p) + (item.extraPrice || 0)) * item.quantity).toFixed(2)}
                         </span>
                       </div>
                     </div>

@@ -4,7 +4,7 @@ import { useState, useMemo, useRef, useCallback } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { Product, CATEGORIES } from '@/lib/types';
-import { useCart } from '@/context/CartContext';
+import { useCart, ExtraOption, EXTRA_PRICES } from '@/context/CartContext';
 import { getPatchSetsForProduct, PatchSetOption } from '@/lib/patches';
 
 interface Props {
@@ -26,6 +26,7 @@ export default function ProductDetailClient({ product, teamId, teamName, leagueN
   const [flockingName, setFlockingName] = useState('');
   const [flockingNumber, setFlockingNumber] = useState('');
   const [selectedPatchId, setSelectedPatchId] = useState<string | null>(null);
+  const [extraOption, setExtraOption] = useState<ExtraOption>('none');
   const [added, setAdded] = useState(false);
   const [selectedImg, setSelectedImg] = useState(0);
 
@@ -56,17 +57,33 @@ export default function ProductDetailClient({ product, teamId, teamName, leagueN
   );
 
   const selectedPatch = availablePatchSets.find(p => p.id === selectedPatchId) || null;
-  const patchPrice = selectedPatch?.price || 0;
-  const totalPrice = parseFloat(product.p) + patchPrice;
+  const extraPrice = EXTRA_PRICES[extraOption];
+  const totalPrice = parseFloat(product.p) + extraPrice;
+
+  const hasAufdruck = extraOption === 'aufdruck' || extraOption === 'komplett';
+  const hasPatches = extraOption === 'patches' || extraOption === 'komplett';
 
   const handleSelectPatch = (patchId: string) => {
     setSelectedPatchId(prev => prev === patchId ? null : patchId);
   };
 
+  const handleExtraChange = (option: ExtraOption) => {
+    setExtraOption(option);
+    if (option === 'none' || option === 'patches') {
+      setFlockingName('');
+      setFlockingNumber('');
+    }
+    if (option === 'none' || option === 'aufdruck') {
+      setSelectedPatchId(null);
+    }
+  };
+
   const handleAdd = () => {
     if (!size) return;
-    const patches = selectedPatch ? [selectedPatch] : [];
-    addItem(product, teamName, size, flockingName.trim(), flockingNumber.trim(), patches);
+    const patches = (hasPatches && selectedPatch) ? [selectedPatch] : [];
+    const aufdruckName = hasAufdruck ? flockingName.trim() : '';
+    const aufdruckNumber = hasAufdruck ? flockingNumber.trim() : '';
+    addItem(product, teamName, size, aufdruckName, aufdruckNumber, patches, extraOption, extraPrice);
     setAdded(true);
     setTimeout(() => setAdded(false), 2000);
   };
@@ -172,14 +189,20 @@ export default function ProductDetailClient({ product, teamId, teamName, leagueN
 
           <h1 className="text-xl sm:text-2xl font-bold text-white leading-tight mb-2">{product.t}</h1>
           <p className="text-sm text-gray-500 mb-4">{teamName}</p>
-          <p className="text-2xl font-bold text-[var(--gold)] mb-6">
-            CHF {totalPrice.toFixed(2)}
-            {patchPrice > 0 && (
-              <span className="text-sm text-gray-500 font-normal ml-2">
-                (inkl. Patch-Set)
+          <div className="mb-6">
+            <div className="flex items-center gap-3">
+              <span className="text-2xl font-bold text-[var(--gold)]">CHF {parseFloat(product.p).toFixed(2)}</span>
+              <span className="text-2xl font-bold text-gray-500/60 line-through">CHF 69.90</span>
+              <span className="text-xs font-bold bg-green-500/20 text-green-400 px-2 py-1 rounded-full">
+                -{Math.round((1 - parseFloat(product.p) / 69.90) * 100)}%
               </span>
+            </div>
+            {extraPrice > 0 && (
+              <p className="text-sm text-gray-500 mt-1">
+                inkl. {extraOption === 'komplett' ? 'Komplett-Paket' : extraOption === 'aufdruck' ? 'Aufdruck' : 'Patches'}
+              </p>
             )}
-          </p>
+          </div>
 
           {/* Size Selection */}
           <div className="mb-5">
@@ -203,70 +226,130 @@ export default function ProductDetailClient({ product, teamId, teamName, leagueN
             </div>
           </div>
 
-          {/* Patch Sets */}
-          {availablePatchSets.length > 0 && (
-            <div className="mb-5">
-              <label className="block text-sm font-medium mb-3">
-                Patch-Set wählen <span className="text-gray-500 font-normal">(optional, zum Abwählen erneut klicken)</span>
-              </label>
-              <div className="grid grid-cols-4 gap-2">
-                {availablePatchSets.map(patchSet => {
-                  const isSelected = selectedPatchId === patchSet.id;
-                  return (
-                    <button
-                      key={patchSet.id}
-                      onClick={() => handleSelectPatch(patchSet.id)}
-                      className={`relative flex flex-col items-center p-2 rounded-lg border transition-all ${
-                        isSelected
-                          ? 'bg-[var(--red-main)]/10 border-[var(--red-main)] ring-1 ring-[var(--red-main)]'
-                          : 'bg-white/5 border-white/10 hover:border-white/20'
-                      }`}
-                    >
-                      <div className="w-full aspect-square rounded overflow-hidden mb-2 bg-white">
-                        <img
-                          src={patchSet.image}
-                          alt={patchSet.name}
-                          className="w-full h-full object-contain p-1"
-                        />
-                      </div>
-                      <p className={`text-[10px] font-medium text-center ${isSelected ? 'text-[var(--red-main)]' : 'text-gray-400'}`}>
-                        +CHF {patchSet.price.toFixed(2)}
-                      </p>
-                      {isSelected && (
-                        <div className="absolute top-1 right-1 w-5 h-5 rounded-full bg-[var(--red-main)] flex items-center justify-center">
-                          <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                          </svg>
-                        </div>
-                      )}
-                    </button>
-                  );
-                })}
+          {/* Extras */}
+          {isJersey && (
+            <div className="mb-6">
+              <label className="block text-sm font-medium mb-3">Extras (optional)</label>
+              <div className={`grid gap-2 ${availablePatchSets.length > 0 ? 'grid-cols-4' : 'grid-cols-2'}`}>
+                <button
+                  onClick={() => handleExtraChange('none')}
+                  className={`flex flex-col items-center justify-center p-2.5 rounded-lg border transition-all text-center ${
+                    extraOption === 'none'
+                      ? 'border-[var(--red-main)] bg-[var(--red-main)]/10'
+                      : 'border-white/10 bg-white/5 hover:border-white/20'
+                  }`}
+                >
+                  <span className="text-xs text-gray-300">Ohne</span>
+                </button>
+
+                <button
+                  onClick={() => handleExtraChange('aufdruck')}
+                  className={`flex flex-col items-center justify-center p-2.5 rounded-lg border transition-all text-center ${
+                    extraOption === 'aufdruck'
+                      ? 'border-[var(--red-main)] bg-[var(--red-main)]/10'
+                      : 'border-white/10 bg-white/5 hover:border-white/20'
+                  }`}
+                >
+                  <span className="text-xs text-gray-300">Aufdruck</span>
+                  <span className="text-[10px] text-[var(--gold)]">+CHF {EXTRA_PRICES.aufdruck.toFixed(0)}</span>
+                </button>
+
+                {availablePatchSets.length > 0 && (
+                  <button
+                    onClick={() => handleExtraChange('patches')}
+                    className={`flex flex-col items-center justify-center p-2.5 rounded-lg border transition-all text-center ${
+                      extraOption === 'patches'
+                        ? 'border-[var(--red-main)] bg-[var(--red-main)]/10'
+                        : 'border-white/10 bg-white/5 hover:border-white/20'
+                    }`}
+                  >
+                    <span className="text-xs text-gray-300">Patches</span>
+                    <span className="text-[10px] text-[var(--gold)]">+CHF {EXTRA_PRICES.patches.toFixed(0)}</span>
+                  </button>
+                )}
+
+                {availablePatchSets.length > 0 && (
+                  <button
+                    onClick={() => handleExtraChange('komplett')}
+                    className={`relative flex flex-col items-center justify-center p-2.5 rounded-lg border-2 transition-all text-center ${
+                      extraOption === 'komplett'
+                        ? 'border-[var(--gold)] bg-[var(--gold)]/10'
+                        : 'border-[var(--gold)]/30 bg-white/5 hover:border-[var(--gold)]/60'
+                    }`}
+                  >
+                    <span className="absolute -top-2 left-1/2 -translate-x-1/2 bg-[var(--gold)] text-black text-[8px] font-bold px-1.5 py-0.5 rounded-full whitespace-nowrap">SPAR-PAKET</span>
+                    <span className="text-xs text-white font-medium">Komplett</span>
+                    <span className="text-[10px] text-[var(--gold)]">+CHF {EXTRA_PRICES.komplett.toFixed(0)}</span>
+                    <span className="text-[9px] text-gray-500 line-through">CHF {EXTRA_PRICES.aufdruck + EXTRA_PRICES.patches}</span>
+                  </button>
+                )}
               </div>
+
+              {/* Aufdruck-Felder */}
+              {hasAufdruck && (
+                <div className="mt-3">
+                  <div className="flex gap-2">
+                    <input
+                      type="text"
+                      value={flockingName}
+                      onChange={e => setFlockingName(e.target.value)}
+                      placeholder="z.B. Ronaldo"
+                      className="flex-1 bg-[#111] border border-white/10 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-[var(--red-main)] transition-colors"
+                    />
+                    <input
+                      type="text"
+                      inputMode="numeric"
+                      pattern="[0-9]*"
+                      maxLength={3}
+                      value={flockingNumber}
+                      onChange={e => { const v = e.target.value.replace(/\D/g, '').slice(0, 3); setFlockingNumber(v); }}
+                      placeholder="Nr."
+                      className="w-16 bg-[#111] border border-white/10 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-[var(--red-main)] transition-colors text-center"
+                    />
+                  </div>
+                  <p className="text-[11px] text-gray-600 mt-1">Name und Nummer für den Aufdruck</p>
+                </div>
+              )}
+
+              {/* Patch-Auswahl */}
+              {hasPatches && availablePatchSets.length > 0 && (
+                <div className="mt-3 pl-7">
+                  <p className="text-xs text-gray-500 mb-2">Patch-Set wählen:</p>
+                  <div className="grid grid-cols-4 md:grid-cols-5 gap-2">
+                    {availablePatchSets.map(patchSet => {
+                      const isSelected = selectedPatchId === patchSet.id;
+                      return (
+                        <button
+                          key={patchSet.id}
+                          onClick={() => handleSelectPatch(patchSet.id)}
+                          className={`relative flex flex-col items-center p-2 rounded-lg border transition-all ${
+                            isSelected
+                              ? 'bg-[var(--red-main)]/10 border-[var(--red-main)] ring-1 ring-[var(--red-main)]'
+                              : 'bg-white/5 border-white/10 hover:border-white/20'
+                          }`}
+                        >
+                          <div className="w-full aspect-square rounded overflow-hidden mb-1 bg-white">
+                            <img
+                              src={patchSet.image}
+                              alt={patchSet.name}
+                              className="w-full h-full object-contain p-1"
+                            />
+                          </div>
+                          {isSelected && (
+                            <div className="absolute top-1 right-1 w-4 h-4 rounded-full bg-[var(--red-main)] flex items-center justify-center">
+                              <svg className="w-2.5 h-2.5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                              </svg>
+                            </div>
+                          )}
+                        </button>
+                      );
+                    })}
+                  </div>
+                </div>
+              )}
             </div>
           )}
-
-          {/* Flocking - only for jerseys */}
-          {isJersey && <div className="mb-6">
-            <label className="block text-sm font-medium mb-2">Aufdruck (optional)</label>
-            <div className="flex gap-2">
-              <input
-                type="text"
-                value={flockingName}
-                onChange={e => setFlockingName(e.target.value)}
-                placeholder="z.B. Ronaldo"
-                className="flex-1 bg-[#111] border border-white/10 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-[var(--red-main)] transition-colors"
-              />
-              <input
-                type="text"
-                value={flockingNumber}
-                onChange={e => setFlockingNumber(e.target.value)}
-                placeholder="z.B. 7"
-                className="w-20 bg-[#111] border border-white/10 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-[var(--red-main)] transition-colors text-center"
-              />
-            </div>
-            <p className="text-[11px] text-gray-600 mt-1">Name und Nummer für den Aufdruck</p>
-          </div>}
 
           {/* Add to Cart */}
           <button

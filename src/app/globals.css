@@ -73,6 +73,7 @@ body {
 }
 .announcement-scroll {
   animation: scroll-left 25s linear infinite;
+  animation-play-state: var(--anim-state);
 }
 
 @keyframes shimmer {

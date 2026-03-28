@@ -10,6 +10,7 @@ export default function ConsentBanner() {
     const accepted = localStorage.getItem('agb-accepted');
     if (accepted) {
       document.documentElement.style.setProperty('--anim-state', 'running');
+      window.dispatchEvent(new Event('agb-accepted'));
     } else {
       setVisible(true);
       document.body.style.overflow = 'hidden';
@@ -21,6 +22,7 @@ export default function ConsentBanner() {
     setVisible(false);
     document.body.style.overflow = '';
     document.documentElement.style.setProperty('--anim-state', 'running');
+    window.dispatchEvent(new Event('agb-accepted'));
   };
 
   if (!visible) return null;

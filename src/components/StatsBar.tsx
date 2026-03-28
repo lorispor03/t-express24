@@ -49,6 +49,14 @@ function useCountUp(target: number, duration = 1800, visible = false) {
 export default function StatsBar() {
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
+  const [agbAccepted, setAgbAccepted] = useState(false);
+
+  useEffect(() => {
+    if (localStorage.getItem('agb-accepted')) setAgbAccepted(true);
+    const handler = () => setAgbAccepted(true);
+    window.addEventListener('agb-accepted', handler);
+    return () => window.removeEventListener('agb-accepted', handler);
+  }, []);
 
   useEffect(() => {
     const el = ref.current;
@@ -61,7 +69,8 @@ export default function StatsBar() {
     return () => observer.disconnect();
   }, []);
 
-  const counts = STATS.map(s => useCountUp(s.num, 1800, visible));
+  const canAnimate = visible && agbAccepted;
+  const counts = STATS.map(s => useCountUp(s.num, 1800, canAnimate));
 
   return (
     <section className="border-y border-white/10 bg-[#111]">
