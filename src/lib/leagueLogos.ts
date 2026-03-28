@@ -7,7 +7,7 @@ export const LEAGUE_LOGOS: Record<string, string> = {
   'liga-portugal': '/leagues/liga-portugal.png?v=2',
   'eredivisie': '/leagues/eredivisie.png?v=5',
   'europa-andere': '/leagues/europa-andere.svg',
-  'nationalmannschaften': '/leagues/nationalteams-europe.png',
+  'nationalmannschaften': '/leagues/nationalteams-world.svg',
   'brasileirao': '/leagues/brasileirao.png',
   'liga-argentina': '/leagues/liga-argentina.png',
   'mls': '/leagues/mls.png',
