@@ -56,7 +56,7 @@ export default async function SubLeaguePage({ params }: { params: Promise<{ slug
             <span>/</span>
             <span className="text-white">{result.subLeagueName}</span>
           </div>
-          <div className="flex items-center gap-5 min-h-[120px] sm:min-h-[144px]">
+          <div className="flex items-center gap-5 min-h-[180px] sm:min-h-[200px]">
             {subLogo ? (
               <img src={subLogo} alt={result.subLeagueName} className={`w-auto object-contain ${['primera-chile', 'super-lig', 'hrvatska-nogometna-liga'].includes(sub) ? 'h-16 sm:h-24' : 'h-32 sm:h-36'}`} />
             ) : leagueLogo ? (
