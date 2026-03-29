@@ -35,12 +35,12 @@ export default function DealsSection() {
       <div className="flex items-center justify-between mb-6">
         <div>
           <h2 className="text-3xl md:text-5xl uppercase tracking-wide" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
-            Angebote
+            Top Seller
           </h2>
-          <p className="text-gray-400 text-sm mt-1">Ausgewählte Trikots zum Sonderpreis</p>
+          <p className="text-gray-400 text-sm mt-1">Die beliebtesten Trikots unserer Kunden</p>
         </div>
         <span className="text-xs font-bold bg-[var(--red-main)]/20 text-[var(--red-main)] px-3 py-1.5 rounded-full uppercase tracking-wider">
-          Sale
+          Hot
         </span>
       </div>
 
@@ -90,6 +90,7 @@ export default function DealsSection() {
           />
         </div>
       )}
+
     </section>
   );
 }

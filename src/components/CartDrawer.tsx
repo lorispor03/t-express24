@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { useCart } from '@/context/CartContext';
 
 export default function CartDrawer() {
-  const { items, removeItem, updateQuantity, clearCart, totalItems, totalPrice, isCartOpen, setCartOpen } = useCart();
+  const { items, removeItem, updateQuantity, clearCart, totalItems, totalPrice, bundleDiscount, finalPrice, isCartOpen, setCartOpen, activeBundle, bundleProgress } = useCart();
   const [showCheckout, setShowCheckout] = useState(false);
   const [name, setName] = useState('');
   const [contact, setContact] = useState('');
@@ -122,7 +122,7 @@ export default function CartDrawer() {
                 ))}
                 <div className="flex justify-between font-bold text-sm mt-3 pt-2 border-t border-white/10">
                   <span>Total</span>
-                  <span className="text-[var(--gold)]">CHF {totalPrice.toFixed(2)}</span>
+                  <span className="text-[var(--gold)]">CHF {finalPrice.toFixed(2)}</span>
                 </div>
               </div>
 
@@ -174,7 +174,7 @@ export default function CartDrawer() {
                 disabled={submitting || !name.trim() || !contact.trim()}
                 className="w-full bg-[var(--red-main)] hover:bg-[#a81d27] disabled:opacity-50 disabled:cursor-not-allowed text-white font-bold py-3 rounded-lg text-sm transition-colors"
               >
-                {submitting ? 'Wird gesendet...' : `Bestellung absenden (CHF ${totalPrice.toFixed(2)})`}
+                {submitting ? 'Wird gesendet...' : `Bestellung absenden (CHF ${finalPrice.toFixed(2)})`}
               </button>
               <button
                 type="button"
@@ -257,9 +257,43 @@ export default function CartDrawer() {
             {/* Footer */}
             {items.length > 0 && (
               <div className="p-5 border-t border-white/10 space-y-3">
-                <div className="flex justify-between font-bold">
+                {/* Bundle progress */}
+                {activeBundle && !bundleProgress.reached && (
+                  <div className="bg-[var(--gold)]/10 rounded-lg px-3 py-2 text-xs">
+                    <div className="flex items-center justify-between text-[var(--gold)] font-semibold mb-1">
+                      <span>Bundle {activeBundle === '3plus' ? '15%' : '20%'}</span>
+                      <span>{bundleProgress.current}/{bundleProgress.target} Trikots</span>
+                    </div>
+                    <div className="h-1 bg-white/10 rounded-full overflow-hidden">
+                      <div className="h-full bg-[var(--gold)] rounded-full transition-all" style={{ width: `${Math.min(100, (bundleProgress.current / bundleProgress.target) * 100)}%` }} />
+                    </div>
+                    <p className="text-gray-400 mt-1">Noch {bundleProgress.remaining} {bundleProgress.remaining === 1 ? 'Trikot' : 'Trikots'} bis zum Rabatt</p>
+                  </div>
+                )}
+                {bundleDiscount > 0 && (
+                  <div className="bg-green-500/10 rounded-lg px-3 py-2 text-xs">
+                    <div className="flex items-center justify-between">
+                      <span className="text-green-400 font-semibold flex items-center gap-1">
+                        <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                        Bundle-Rabatt aktiv
+                      </span>
+                      <span className="text-green-400 font-bold">-CHF {bundleDiscount.toFixed(2)}</span>
+                    </div>
+                  </div>
+                )}
+                <div className="flex justify-between text-sm text-gray-400">
+                  <span>Zwischensumme</span>
+                  <span>CHF {totalPrice.toFixed(2)}</span>
+                </div>
+                {bundleDiscount > 0 && (
+                  <div className="flex justify-between text-sm text-green-400">
+                    <span>Bundle-Rabatt</span>
+                    <span>-CHF {bundleDiscount.toFixed(2)}</span>
+                  </div>
+                )}
+                <div className="flex justify-between font-bold pt-1 border-t border-white/10">
                   <span>Total</span>
-                  <span className="text-[var(--gold)]">CHF {totalPrice.toFixed(2)}</span>
+                  <span className="text-[var(--gold)]">CHF {finalPrice.toFixed(2)}</span>
                 </div>
                 <button
                   onClick={() => setShowCheckout(true)}

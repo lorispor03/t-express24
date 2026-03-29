@@ -5,6 +5,7 @@ import { Product } from '@/lib/types';
 import { PatchOption } from '@/lib/patches';
 
 export type ExtraOption = 'none' | 'aufdruck' | 'patches' | 'komplett';
+export type BundleType = null | '3plus' | '6plus';
 
 export const EXTRA_PRICES: Record<ExtraOption, number> = {
   none: 0,
@@ -12,6 +13,11 @@ export const EXTRA_PRICES: Record<ExtraOption, number> = {
   patches: 3,
   komplett: 4,
 };
+
+export const BUNDLE_CONFIG = {
+  '3plus': { min: 3, discount: 0.15, label: '15%' },
+  '6plus': { min: 6, discount: 0.20, label: '20%' },
+} as const;
 
 export interface CartItem {
   id: string;
@@ -34,8 +40,13 @@ interface CartContextType {
   clearCart: () => void;
   totalItems: number;
   totalPrice: number;
+  bundleDiscount: number;
+  finalPrice: number;
   isCartOpen: boolean;
   setCartOpen: (open: boolean) => void;
+  activeBundle: BundleType;
+  setActiveBundle: (bundle: BundleType) => void;
+  bundleProgress: { current: number; target: number; remaining: number; active: boolean; reached: boolean };
 }
 
 const CartContext = createContext<CartContextType | null>(null);
@@ -49,6 +60,7 @@ export function useCart() {
 export function CartProvider({ children }: { children: ReactNode }) {
   const [items, setItems] = useState<CartItem[]>([]);
   const [isCartOpen, setCartOpen] = useState(false);
+  const [activeBundle, setActiveBundleState] = useState<BundleType>(null);
   const [loaded, setLoaded] = useState(false);
 
   // Load from localStorage
@@ -56,6 +68,8 @@ export function CartProvider({ children }: { children: ReactNode }) {
     try {
       const saved = localStorage.getItem('t24_cart');
       if (saved) setItems(JSON.parse(saved));
+      const savedBundle = localStorage.getItem('t24_bundle');
+      if (savedBundle) setActiveBundleState(savedBundle as BundleType);
     } catch {}
     setLoaded(true);
   }, []);
@@ -66,6 +80,20 @@ export function CartProvider({ children }: { children: ReactNode }) {
       localStorage.setItem('t24_cart', JSON.stringify(items));
     }
   }, [items, loaded]);
+
+  useEffect(() => {
+    if (loaded) {
+      if (activeBundle) {
+        localStorage.setItem('t24_bundle', activeBundle);
+      } else {
+        localStorage.removeItem('t24_bundle');
+      }
+    }
+  }, [activeBundle, loaded]);
+
+  const setActiveBundle = (bundle: BundleType) => {
+    setActiveBundleState(bundle);
+  };
 
   const addItem = (product: Product, teamName: string, size: string, flockingName: string, flockingNumber: string, patches: PatchOption[] = [], extraOption: ExtraOption = 'none', extraPrice: number = 0) => {
     const patchKey = patches.map(p => p.id).sort().join('+');
@@ -90,7 +118,10 @@ export function CartProvider({ children }: { children: ReactNode }) {
     setItems(prev => prev.map(i => i.id === id ? { ...i, quantity } : i));
   };
 
-  const clearCart = () => setItems([]);
+  const clearCart = () => {
+    setItems([]);
+    setActiveBundleState(null);
+  };
 
   const totalItems = items.reduce((sum, i) => sum + i.quantity, 0);
   const totalPrice = items.reduce((sum, i) => {
@@ -98,8 +129,23 @@ export function CartProvider({ children }: { children: ReactNode }) {
     return sum + (parseFloat(i.product.p) + extra) * i.quantity;
   }, 0);
 
+  // Bundle calculations
+  const config = activeBundle ? BUNDLE_CONFIG[activeBundle] : null;
+  const bundleProgress = {
+    current: totalItems,
+    target: config?.min ?? 0,
+    remaining: config ? Math.max(0, config.min - totalItems) : 0,
+    active: activeBundle !== null,
+    reached: config ? totalItems >= config.min : false,
+  };
+
+  // Only discount the jersey prices, not extras
+  const jerseyTotal = items.reduce((sum, i) => sum + parseFloat(i.product.p) * i.quantity, 0);
+  const bundleDiscount = bundleProgress.reached && config ? jerseyTotal * config.discount : 0;
+  const finalPrice = totalPrice - bundleDiscount;
+
   return (
-    <CartContext.Provider value={{ items, addItem, removeItem, updateQuantity, clearCart, totalItems, totalPrice, isCartOpen, setCartOpen }}>
+    <CartContext.Provider value={{ items, addItem, removeItem, updateQuantity, clearCart, totalItems, totalPrice, bundleDiscount, finalPrice, isCartOpen, setCartOpen, activeBundle, setActiveBundle, bundleProgress }}>
       {children}
     </CartContext.Provider>
   );

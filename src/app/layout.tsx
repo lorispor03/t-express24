@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { CartProvider } from "@/context/CartContext";
 import CartDrawer from "@/components/CartDrawer";
+import BundleBar from "@/components/BundleBar";
 import ConsentBanner from "@/components/ConsentBanner";
 
 export const metadata: Metadata = {
@@ -20,6 +21,7 @@ export default function RootLayout({
         <CartProvider>
           {children}
           <CartDrawer />
+          <BundleBar />
           <ConsentBanner />
         </CartProvider>
       </body>

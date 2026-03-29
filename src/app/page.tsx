@@ -30,7 +30,44 @@ export default function HomePage() {
       {/* Deals */}
       <DealsSection />
 
-      <div className="max-w-7xl mx-auto px-4"><div className="border-t border-white/10" /></div>
+      {/* Bundles */}
+      <section className="relative">
+        <div className="absolute inset-0 bg-[var(--red-dark)]/30" />
+        <div className="absolute left-0 right-0 -top-16 h-16 bg-gradient-to-b from-transparent to-[var(--red-dark)]/30" />
+        <div className="absolute left-0 right-0 -bottom-24 h-24 bg-gradient-to-b from-[var(--red-dark)]/30 to-transparent" />
+        <div className="relative max-w-7xl mx-auto px-4 py-4">
+          <h2 className="text-3xl md:text-5xl uppercase tracking-wide mb-2" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
+            Bundles
+          </h2>
+          <p className="text-gray-400 text-sm mb-6">Mehr Trikots, weniger zahlen</p>
+          <Link href="/bundles" className="block group">
+            <div className="relative overflow-hidden rounded-xl border border-[var(--gold)]/30 bg-gradient-to-r from-[#1a1a1a] via-[#1f1510] to-[#1a1a1a] p-5 md:p-6 animate-pulse-slow hover:border-[var(--gold)]/60 transition-all">
+              <div className="absolute top-0 right-0 w-40 h-full bg-gradient-to-l from-[var(--gold)]/10 to-transparent" />
+              <div className="relative flex items-center justify-between gap-4">
+                <div className="flex items-center gap-4 md:gap-6">
+                  <div className="flex items-center gap-1.5 flex-shrink-0">
+                    <span className="text-4xl md:text-5xl font-black text-white leading-none" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>3+</span>
+                    <span className="text-lg md:text-xl font-black text-[var(--gold)] leading-none pb-0.5" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>-15%</span>
+                  </div>
+                  <div className="hidden sm:block w-px h-10 bg-white/10" />
+                  <div className="flex items-center gap-1.5 flex-shrink-0">
+                    <span className="text-4xl md:text-5xl font-black text-white leading-none" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>6+</span>
+                    <span className="text-lg md:text-xl font-black text-[var(--gold)] leading-none pb-0.5" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>-20%</span>
+                  </div>
+                  <div className="hidden md:block ml-2">
+                    <p className="text-sm font-bold text-white">Trikot Bundles</p>
+                    <p className="text-xs text-gray-400">Mehr kaufen, mehr sparen</p>
+                  </div>
+                </div>
+                <div className="flex items-center gap-2 flex-shrink-0 bg-[var(--gold)] text-black text-xs font-bold px-4 py-2 rounded-full group-hover:scale-105 transition-transform">
+                  Jetzt sparen
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" /></svg>
+                </div>
+              </div>
+            </div>
+          </Link>
+        </div>
+      </section>
 
       {/* Leagues Grid */}
       <section id="ligen" className="max-w-7xl mx-auto px-4 pt-6 pb-16 scroll-mt-20">
