@@ -16,7 +16,7 @@ export default function Footer() {
         </div>
 
         {/* Desktop: 3-column grid */}
-        <div className="hidden sm:grid grid-cols-3 gap-6 text-center">
+        <div className="hidden md:grid grid-cols-3 gap-6 text-center">
           {/* Zahlungsarten */}
           <div>
             <h3 className="font-bold text-sm uppercase tracking-wider mb-4 text-[var(--gold)]">Zahlungsarten</h3>
@@ -65,7 +65,7 @@ export default function Footer() {
         </div>
 
         {/* Mobile: stacked layout */}
-        <div className="sm:hidden space-y-6">
+        <div className="md:hidden space-y-6">
           {/* Zahlungsarten - horizontal */}
           <div className="text-center">
             <h3 className="font-bold text-sm uppercase tracking-wider mb-3 text-[var(--gold)]">Zahlungsarten</h3>
