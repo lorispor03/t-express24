@@ -30,6 +30,11 @@ export default function ProductDetailClient({ product, teamId, teamName, leagueN
   const [added, setAdded] = useState(false);
   const [selectedImg, setSelectedImg] = useState(0);
   const [lightbox, setLightbox] = useState(false);
+  const [zoom, setZoom] = useState(1);
+  const [pan, setPan] = useState({ x: 0, y: 0 });
+  const zoomRef = useRef(1);
+  const panRef = useRef({ x: 0, y: 0 });
+  const imgContainerRef = useRef<HTMLDivElement>(null);
 
   const allImages = product.imgs && product.imgs.length > 1 ? product.imgs : [product.i];
   const thumbRef = useRef<HTMLDivElement>(null);
@@ -47,18 +52,81 @@ export default function ProductDetailClient({ product, teamId, teamName, leagueN
     scrollTimer.current = setTimeout(() => setIsScrolling(false), 1200);
   }, []);
 
+  const doSetZoom = useCallback((z: number) => { zoomRef.current = z; setZoom(z); }, []);
+  const doSetPan = useCallback((p: { x: number; y: number }) => { panRef.current = p; setPan(p); }, []);
+  const resetZoom = useCallback(() => { doSetZoom(1); doSetPan({ x: 0, y: 0 }); }, [doSetZoom, doSetPan]);
+
+  // Reset zoom when changing image
+  useEffect(() => { resetZoom(); }, [selectedImg, resetZoom]);
+
   // Lightbox keyboard navigation
   useEffect(() => {
     if (!lightbox) return;
     const handleKey = (e: KeyboardEvent) => {
       if (e.key === 'Escape') setLightbox(false);
-      if (e.key === 'ArrowRight') setSelectedImg(prev => prev === allImages.length - 1 ? 0 : prev + 1);
-      if (e.key === 'ArrowLeft') setSelectedImg(prev => prev === 0 ? allImages.length - 1 : prev - 1);
+      if (e.key === 'ArrowRight' && zoomRef.current === 1) setSelectedImg(prev => prev === allImages.length - 1 ? 0 : prev + 1);
+      if (e.key === 'ArrowLeft' && zoomRef.current === 1) setSelectedImg(prev => prev === 0 ? allImages.length - 1 : prev - 1);
     };
     document.body.style.overflow = 'hidden';
     window.addEventListener('keydown', handleKey);
     return () => { window.removeEventListener('keydown', handleKey); document.body.style.overflow = ''; };
   }, [lightbox, allImages.length]);
+
+  // Pinch-to-zoom & pan touch handlers — stable listener, reads refs
+  useEffect(() => {
+    if (!lightbox) return;
+    const el = imgContainerRef.current;
+    if (!el) return;
+
+    let lastDist = 0;
+    let startZoom = 1;
+    let isPanning = false;
+    let panStartX = 0, panStartY = 0, panOriginX = 0, panOriginY = 0;
+
+    const getDist = (t: TouchList) => {
+      const dx = t[1].clientX - t[0].clientX;
+      const dy = t[1].clientY - t[0].clientY;
+      return Math.sqrt(dx * dx + dy * dy);
+    };
+
+    const onTouchStart = (e: TouchEvent) => {
+      if (e.touches.length === 2) {
+        e.preventDefault();
+        lastDist = getDist(e.touches);
+        startZoom = zoomRef.current;
+      } else if (e.touches.length === 1 && zoomRef.current > 1) {
+        isPanning = true;
+        panStartX = e.touches[0].clientX;
+        panStartY = e.touches[0].clientY;
+        panOriginX = panRef.current.x;
+        panOriginY = panRef.current.y;
+      }
+    };
+
+    const onTouchMove = (e: TouchEvent) => {
+      if (e.touches.length === 2) {
+        e.preventDefault();
+        const dist = getDist(e.touches);
+        const newZoom = Math.min(4, Math.max(1, startZoom * (dist / lastDist)));
+        doSetZoom(newZoom);
+        if (newZoom === 1) doSetPan({ x: 0, y: 0 });
+      } else if (e.touches.length === 1 && isPanning) {
+        e.preventDefault();
+        doSetPan({ x: panOriginX + (e.touches[0].clientX - panStartX), y: panOriginY + (e.touches[0].clientY - panStartY) });
+      }
+    };
+
+    const onTouchEnd = () => { isPanning = false; };
+
+    el.addEventListener('touchstart', onTouchStart, { passive: false });
+    el.addEventListener('touchmove', onTouchMove, { passive: false });
+    el.addEventListener('touchend', onTouchEnd);
+    return () => {
+      el.removeEventListener('touchstart', onTouchStart);
+      el.removeEventListener('touchmove', onTouchMove);
+      el.removeEventListener('touchend', onTouchEnd);
+    };
+  }, [lightbox, doSetZoom, doSetPan]);
 
   const isKids = product.c.includes('kids') || product.c.includes('kids-retro');
   const sizes = isKids ? SIZES_KIDS : SIZES_ADULT;
@@ -425,9 +493,9 @@ export default function ProductDetailClient({ product, teamId, teamName, leagueN
 
       {/* Lightbox */}
       {lightbox && (
-        <div className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center" onClick={() => setLightbox(false)}>
+        <div className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center" onClick={() => { resetZoom(); setLightbox(false); }}>
           {/* Close */}
-          <button onClick={() => setLightbox(false)} className="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-white/20 transition-colors z-10">
+          <button onClick={e => { e.stopPropagation(); resetZoom(); setLightbox(false); }} className="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-white/20 transition-colors z-10">
             <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
             </svg>
@@ -441,7 +509,7 @@ export default function ProductDetailClient({ product, teamId, teamName, leagueN
           )}
 
           {/* Prev */}
-          {allImages.length > 1 && (
+          {allImages.length > 1 && zoom === 1 && (
             <button
               onClick={e => { e.stopPropagation(); setSelectedImg(prev => prev === 0 ? allImages.length - 1 : prev - 1); }}
               className="absolute left-3 md:left-6 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-white/20 transition-colors z-10"
@@ -452,16 +520,25 @@ export default function ProductDetailClient({ product, teamId, teamName, leagueN
             </button>
           )}
 
-          {/* Image */}
-          <img
-            src={allImages[selectedImg]}
-            alt={product.t}
+          {/* Image with pinch-zoom */}
+          <div
+            ref={imgContainerRef}
             onClick={e => e.stopPropagation()}
-            className="max-w-[90vw] max-h-[85vh] object-contain"
-          />
+            onDoubleClick={e => { e.stopPropagation(); if (zoom > 1) { resetZoom(); } else { doSetZoom(2.5); } }}
+            className="max-w-[90vw] max-h-[85vh] overflow-hidden"
+            style={{ touchAction: 'none' }}
+          >
+            <img
+              src={allImages[selectedImg]}
+              alt={product.t}
+              draggable={false}
+              className="max-w-[90vw] max-h-[85vh] object-contain select-none"
+              style={{ transform: `scale(${zoom}) translate(${pan.x / zoom}px, ${pan.y / zoom}px)`, transition: zoom === 1 ? 'transform 0.15s' : 'none' }}
+            />
+          </div>
 
           {/* Next */}
-          {allImages.length > 1 && (
+          {allImages.length > 1 && zoom === 1 && (
             <button
               onClick={e => { e.stopPropagation(); setSelectedImg(prev => prev === allImages.length - 1 ? 0 : prev + 1); }}
               className="absolute right-3 md:right-6 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-white/20 transition-colors z-10"
@@ -473,7 +550,7 @@ export default function ProductDetailClient({ product, teamId, teamName, leagueN
           )}
 
           {/* Thumbnails */}
-          {allImages.length > 1 && (
+          {allImages.length > 1 && zoom === 1 && (
             <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 max-w-[90vw] overflow-x-auto hide-sb px-2">
               {allImages.map((img, idx) => (
                 <button
