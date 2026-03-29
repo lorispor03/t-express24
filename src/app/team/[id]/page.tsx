@@ -87,7 +87,7 @@ export default async function TeamPage({ params }: { params: Promise<{ id: strin
                 <div className={`grid ${teamPalmares.length > 2 ? 'grid-cols-2' : 'grid-cols-1'} gap-3`}>
                   {teamPalmares.map((trophy) => (
                     <div key={trophy.name} className="flex items-center gap-2">
-                      <img src={trophy.icon} alt={trophy.name} className="w-6 h-6 object-contain flex-shrink-0" />
+                      <img src={`${trophy.icon.split('?')[0]}?v=5`} alt={trophy.name} className="w-6 h-6 object-contain flex-shrink-0" />
                       <div>
                         <span className="text-white font-bold text-sm">{trophy.count}x</span>
                         <p className="text-[10px] text-gray-500 leading-tight">{trophy.name}</p>
@@ -106,7 +106,7 @@ export default async function TeamPage({ params }: { params: Promise<{ id: strin
               <div className="grid grid-cols-3 gap-2">
                 {teamPalmares.map((trophy) => (
                   <div key={trophy.name} className="flex items-center gap-1.5">
-                    <img src={trophy.icon} alt={trophy.name} className="w-5 h-5 object-contain flex-shrink-0" />
+                    <img src={`${trophy.icon.split('?')[0]}?v=5`} alt={trophy.name} className="w-5 h-5 object-contain flex-shrink-0" />
                     <span className="text-white font-bold text-xs">{trophy.count}x</span>
                     <span className="text-[9px] text-gray-500">{trophy.name}</span>
                   </div>
