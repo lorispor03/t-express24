@@ -4,6 +4,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import FAQ from '@/components/FAQ';
 import StatsBar from '@/components/StatsBar';
+import DealsSection from '@/components/DealsSection';
 import { getAllLeagues } from '@/lib/data';
 import { LEAGUE_LOGOS } from '@/lib/leagueLogos';
 
@@ -26,8 +27,13 @@ export default function HomePage() {
       {/* Stats */}
       <StatsBar />
 
+      {/* Deals */}
+      <DealsSection />
+
+      <div className="max-w-7xl mx-auto px-4"><div className="border-t border-white/10" /></div>
+
       {/* Leagues Grid */}
-      <section id="ligen" className="max-w-7xl mx-auto px-4 py-16 scroll-mt-20">
+      <section id="ligen" className="max-w-7xl mx-auto px-4 pt-8 pb-16 scroll-mt-20">
         <h2 className="text-3xl md:text-5xl uppercase tracking-wide mb-2" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>Unsere Ligen</h2>
         <p className="text-gray-400 mb-8">Wähle eine Liga und entdecke alle verfügbaren Artikel.</p>
 

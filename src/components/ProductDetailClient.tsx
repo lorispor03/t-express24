@@ -92,8 +92,12 @@ export default function ProductDetailClient({ product, teamId, teamName, leagueN
     }
   };
 
+  const aufdruckMissing = hasAufdruck && (!flockingName.trim() || !flockingNumber.trim());
+  const patchMissing = hasPatches && !selectedPatchId;
+  const extrasIncomplete = aufdruckMissing || patchMissing;
+
   const handleAdd = () => {
-    if (!size) return;
+    if (!size || extrasIncomplete) return;
     const patches = (hasPatches && selectedPatch) ? [selectedPatch] : [];
     const aufdruckName = hasAufdruck ? flockingName.trim() : '';
     const aufdruckNumber = hasAufdruck ? flockingNumber.trim() : '';
@@ -209,14 +213,14 @@ export default function ProductDetailClient({ product, teamId, teamName, leagueN
           <div className="mb-6">
             <div className="flex items-center gap-3">
               <span className="text-2xl font-bold text-[var(--gold)]">CHF {parseFloat(product.p).toFixed(2)}</span>
-              <span className="text-2xl font-bold text-gray-500/60 line-through">CHF 69.90</span>
+              <span className="text-2xl font-bold text-gray-500/60 line-through">CHF {(Math.floor(parseFloat(product.p) / 0.79) + 0.90).toFixed(2)}</span>
               <span className="text-xs font-bold bg-green-500/20 text-green-400 px-2 py-1 rounded-full">
-                -{Math.round((1 - parseFloat(product.p) / 69.90) * 100)}%
+                -21%
               </span>
             </div>
             {extraPrice > 0 && (
               <p className="text-sm text-gray-500 mt-1">
-                inkl. {extraOption === 'komplett' ? 'Komplett-Paket' : extraOption === 'aufdruck' ? 'Aufdruck' : 'Patches'}
+                + {extraOption === 'komplett' ? 'Komplett-Paket' : extraOption === 'aufdruck' ? 'Aufdruck' : 'Patches'} (CHF {extraPrice.toFixed(2)})
               </p>
             )}
           </div>
@@ -305,6 +309,7 @@ export default function ProductDetailClient({ product, teamId, teamName, leagueN
               {/* Aufdruck-Felder */}
               {hasAufdruck && (
                 <div className="mt-3">
+                  <label className="block text-sm font-medium mb-2">Name und Nummer für den Aufdruck</label>
                   <div className="flex gap-2">
                     <input
                       type="text"
@@ -324,14 +329,13 @@ export default function ProductDetailClient({ product, teamId, teamName, leagueN
                       className="w-16 bg-[#111] border border-white/10 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-[var(--red-main)] transition-colors text-center"
                     />
                   </div>
-                  <p className="text-[11px] text-gray-600 mt-1">Name und Nummer für den Aufdruck</p>
                 </div>
               )}
 
               {/* Patch-Auswahl */}
               {hasPatches && availablePatchSets.length > 0 && (
-                <div className="mt-3 pl-7">
-                  <p className="text-xs text-gray-500 mb-2">Patch-Set wählen:</p>
+                <div className="mt-3">
+                  <label className="block text-sm font-medium mb-2">Patch-Set wählen</label>
                   <div className="grid grid-cols-4 md:grid-cols-5 gap-2">
                     {availablePatchSets.map(patchSet => {
                       const isSelected = selectedPatchId === patchSet.id;
@@ -371,7 +375,7 @@ export default function ProductDetailClient({ product, teamId, teamName, leagueN
           {/* Add to Cart */}
           <button
             onClick={handleAdd}
-            disabled={!size}
+            disabled={!size || extrasIncomplete}
             className={`w-full flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-sm font-bold transition-all ${
               added
                 ? 'bg-green-600 text-white'
@@ -395,8 +399,10 @@ export default function ProductDetailClient({ product, teamId, teamName, leagueN
             )}
           </button>
 
-          {!size && (
-            <p className="text-xs text-gray-500 mt-2 text-center">Bitte wähle zuerst eine Grösse</p>
+          {(!size || extrasIncomplete) && (
+            <p className="text-xs text-gray-500 mt-2 text-center">
+              {!size ? 'Bitte wähle zuerst eine Grösse' : aufdruckMissing && patchMissing ? 'Bitte Aufdruck und Patch-Set ausfüllen' : aufdruckMissing ? 'Bitte Name und Nummer eingeben' : 'Bitte Patch-Set wählen'}
+            </p>
           )}
 
           {/* Trust badges */}

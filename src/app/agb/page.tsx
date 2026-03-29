@@ -48,8 +48,9 @@ export default function AGBPage() {
                 Folgende Zahlungsmethoden stehen zur Verfügung:
               </p>
               <ul className="list-disc list-inside mt-2 space-y-1">
+                <li>Kreditkarte</li>
+                <li>TWINT</li>
                 <li>PayPal</li>
-                <li>Twint</li>
               </ul>
               <p className="mt-2">
                 Die Zahlung erfolgt vor dem Versand der Ware.

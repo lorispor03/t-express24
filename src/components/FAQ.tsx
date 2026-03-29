@@ -13,7 +13,7 @@ const faqs = [
   },
   {
     q: 'Wie bezahle ich?',
-    a: 'Wir akzeptieren TWINT und PayPal. Die Zahlung erfolgt nach Bestellbestätigung.',
+    a: 'Wir akzeptieren Kreditkarte, TWINT und PayPal. Die Zahlung erfolgt nach Bestellbestätigung.',
   },
   {
     q: 'Wie ist die Qualität der Trikots?',
