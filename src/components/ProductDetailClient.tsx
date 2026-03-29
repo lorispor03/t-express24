@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useMemo, useRef, useCallback } from 'react';
+import { useState, useMemo, useRef, useCallback, useEffect } from 'react';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { Product, CATEGORIES } from '@/lib/types';
@@ -29,6 +29,7 @@ export default function ProductDetailClient({ product, teamId, teamName, leagueN
   const [extraOption, setExtraOption] = useState<ExtraOption>('none');
   const [added, setAdded] = useState(false);
   const [selectedImg, setSelectedImg] = useState(0);
+  const [lightbox, setLightbox] = useState(false);
 
   const allImages = product.imgs && product.imgs.length > 1 ? product.imgs : [product.i];
   const thumbRef = useRef<HTMLDivElement>(null);
@@ -45,6 +46,19 @@ export default function ProductDetailClient({ product, teamId, teamName, leagueN
     if (scrollTimer.current) clearTimeout(scrollTimer.current);
     scrollTimer.current = setTimeout(() => setIsScrolling(false), 1200);
   }, []);
+
+  // Lightbox keyboard navigation
+  useEffect(() => {
+    if (!lightbox) return;
+    const handleKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') setLightbox(false);
+      if (e.key === 'ArrowRight') setSelectedImg(prev => prev === allImages.length - 1 ? 0 : prev + 1);
+      if (e.key === 'ArrowLeft') setSelectedImg(prev => prev === 0 ? allImages.length - 1 : prev - 1);
+    };
+    document.body.style.overflow = 'hidden';
+    window.addEventListener('keydown', handleKey);
+    return () => { window.removeEventListener('keydown', handleKey); document.body.style.overflow = ''; };
+  }, [lightbox, allImages.length]);
 
   const isKids = product.c.includes('kids') || product.c.includes('kids-retro');
   const sizes = isKids ? SIZES_KIDS : SIZES_ADULT;
@@ -115,7 +129,10 @@ export default function ProductDetailClient({ product, teamId, teamName, leagueN
                 </svg>
               </button>
             )}
-            <div className="bg-[#1a1a1a] rounded-xl overflow-hidden border border-white/5 aspect-square flex-1 min-w-0">
+            <div
+              onClick={() => setLightbox(true)}
+              className="bg-[#1a1a1a] rounded-xl overflow-hidden border border-white/5 aspect-square flex-1 min-w-0 cursor-zoom-in"
+            >
               <img
                 src={allImages[selectedImg]}
                 alt={product.t}
@@ -399,6 +416,74 @@ export default function ProductDetailClient({ product, teamId, teamName, leagueN
           </div>
         </div>
       </div>
+
+      {/* Lightbox */}
+      {lightbox && (
+        <div className="fixed inset-0 z-50 bg-black/95 flex items-center justify-center" onClick={() => setLightbox(false)}>
+          {/* Close */}
+          <button onClick={() => setLightbox(false)} className="absolute top-4 right-4 w-10 h-10 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-white/20 transition-colors z-10">
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
+
+          {/* Counter */}
+          {allImages.length > 1 && (
+            <div className="absolute top-5 left-1/2 -translate-x-1/2 text-sm text-gray-400 z-10">
+              {selectedImg + 1} / {allImages.length}
+            </div>
+          )}
+
+          {/* Prev */}
+          {allImages.length > 1 && (
+            <button
+              onClick={e => { e.stopPropagation(); setSelectedImg(prev => prev === 0 ? allImages.length - 1 : prev - 1); }}
+              className="absolute left-3 md:left-6 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-white/20 transition-colors z-10"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+          )}
+
+          {/* Image */}
+          <img
+            src={allImages[selectedImg]}
+            alt={product.t}
+            onClick={e => e.stopPropagation()}
+            className="max-w-[90vw] max-h-[85vh] object-contain"
+          />
+
+          {/* Next */}
+          {allImages.length > 1 && (
+            <button
+              onClick={e => { e.stopPropagation(); setSelectedImg(prev => prev === allImages.length - 1 ? 0 : prev + 1); }}
+              className="absolute right-3 md:right-6 w-10 h-10 md:w-12 md:h-12 rounded-full bg-white/10 flex items-center justify-center text-white hover:bg-white/20 transition-colors z-10"
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+          )}
+
+          {/* Thumbnails */}
+          {allImages.length > 1 && (
+            <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 max-w-[90vw] overflow-x-auto hide-sb px-2">
+              {allImages.map((img, idx) => (
+                <button
+                  key={idx}
+                  onClick={e => { e.stopPropagation(); setSelectedImg(idx); }}
+                  className={`flex-shrink-0 w-14 h-14 rounded-lg overflow-hidden border-2 transition-all ${
+                    selectedImg === idx ? 'border-[var(--red-main)]' : 'border-white/20 hover:border-white/40'
+                  }`}
+                >
+                  <img src={img} alt="" className="w-full h-full object-cover" />
+                </button>
+              ))}
+            </div>
+          )}
+        </div>
+      )}
     </div>
   );
 }
