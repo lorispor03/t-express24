@@ -9,8 +9,8 @@ const DEALS = [
   { title: 'Bayern München 25/26 Home', team: 'Bayern München', handle: 'bayern-muenchen-25-26-home-s-4xl', price: 49.90, image: 'https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250507/39105d8bb9f7990605218538d6c11426.png' },
   { title: 'Liverpool 25/26 Home', team: 'Liverpool', handle: 'lvp-25-26-home-red-s-4xl', price: 49.90, image: 'https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250811/a0b4b860a99ad452798cbedb6fb3554c.png' },
   { title: 'PSG 25/26 Home', team: 'Paris Saint-Germain', handle: 'psg-25-26-home-special-s-4xl', price: 49.90, image: 'https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250708/ca5d433b503f20fd0655b36fcc52197b.png' },
-  { title: 'Man City EA Sports 25/26', team: 'Manchester City', handle: 'manchester-city-ea-sports-fc-jersey-2025-26-s-4xl', price: 49.90, image: 'https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251103/b0a1ec3770e133b77004d43536f12067.png' },
-  { title: 'Dortmund 25/26 Special', team: 'Borussia Dortmund', handle: 'borussia-dortmund-25-26-special-shirt-s-xxl', price: 49.90, image: 'https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251109/6ad8118e1e4f2bfc552ebebcb964bdb1.png' },
+  { title: 'Real Madrid 25/26 Home', team: 'Real Madrid', handle: 'player-version-real-madrid-25-26-home-jersey-s-4xl', price: 49.90, image: 'https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250502/C252DC64-0C66-495C-8DAE-5D346185D601.jpg' },
+  { title: 'Tottenham 25/26 Home', team: 'Tottenham Hotspur', handle: 'tottenham-hotspur-25-26-home-size-s-xxl', price: 49.90, image: 'https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250612/bac7f223da2277f473261faa09e25189.png' },
 ];
 
 export default function DealsSection() {
