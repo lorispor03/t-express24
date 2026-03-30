@@ -311,7 +311,7 @@ export default function BundlesPage() {
                       <div className="bg-[#1a1a1a] rounded-xl border border-white/5 p-4 flex-1 z-10">
                         <h4 className="font-bold text-white mb-1 text-sm">Rabatt kassieren</h4>
                         <p className="text-sm text-gray-400 leading-relaxed">Der Rabatt wird automatisch im Warenkorb angewendet.</p>
-                        <img src="/bundle-step3.png" alt="Rabatt im Warenkorb" onClick={() => setLightbox('/bundle-step3.png')} className="mt-3 rounded-lg border border-white/10 w-full cursor-zoom-in hover:border-white/30 transition-colors" />
+                        <img src="/bundle-step3.png?v=2" alt="Rabatt im Warenkorb" onClick={() => setLightbox('/bundle-step3.png?v=2')} className="mt-3 rounded-lg border border-white/10 w-full cursor-zoom-in hover:border-white/30 transition-colors" />
                       </div>
                     </div>
                   </div>
