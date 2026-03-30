@@ -36,7 +36,7 @@ export default function HomePage() {
         <div className="absolute left-0 right-0 -top-16 h-16 bg-gradient-to-b from-transparent to-[var(--red-dark)]/30" />
         <div className="absolute left-0 right-0 -bottom-24 h-24 bg-gradient-to-b from-[var(--red-dark)]/30 to-transparent" />
         <div className="relative max-w-7xl mx-auto px-4 py-4">
-          <h2 className="text-3xl md:text-5xl uppercase tracking-wide mb-2" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
+          <h2 className="text-3xl md:text-5xl uppercase tracking-wide mb-2 text-[var(--red-main)]" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
             Bundles
           </h2>
           <p className="text-gray-400 text-sm mb-6">Mehr Trikots, weniger zahlen</p>
