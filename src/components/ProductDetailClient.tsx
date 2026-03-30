@@ -411,7 +411,7 @@ export default function ProductDetailClient({ product, teamId, teamName, leagueN
                         <button
                           key={patchSet.id}
                           onClick={() => handleSelectPatch(patchSet.id)}
-                          className={`relative flex flex-col items-center p-2 rounded-lg border transition-all ${
+                          className={`group relative flex flex-col items-center p-2 rounded-lg border transition-all ${
                             isSelected
                               ? 'bg-[var(--red-main)]/10 border-[var(--red-main)] ring-1 ring-[var(--red-main)]'
                               : 'bg-white/5 border-white/10 hover:border-white/20'
@@ -423,6 +423,10 @@ export default function ProductDetailClient({ product, teamId, teamName, leagueN
                               alt={patchSet.name}
                               className="w-full h-full object-contain p-1"
                             />
+                          </div>
+                          {/* Tooltip on hover/long-press */}
+                          <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 bg-black/90 text-white text-[10px] px-2 py-1 rounded whitespace-nowrap opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity z-20 max-w-[160px] truncate">
+                            {patchSet.name}
                           </div>
                           {isSelected && (
                             <div className="absolute top-1 right-1 w-4 h-4 rounded-full bg-[var(--red-main)] flex items-center justify-center">
