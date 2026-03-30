@@ -4,6 +4,15 @@ import Link from 'next/link';
 import { useRef, useState, useCallback } from 'react';
 
 const DEALS = [
+  // Retro zuerst — Ligen durchmischt
+  { title: 'Retro Real Madrid 11/12 Away', team: 'Real Madrid', handle: 'retro-real-madrid-11-12-away-s-xxl', price: 49.90, image: 'https://img.wpassets-gamma.com/uploads/71478/cart/resources/20241225/5A1A70E0-1E05-322D-6889-46F420004B1A.jpg' },
+  { title: 'Retro Bayern 14/15 Home', team: 'Bayern München', handle: '1415-baiyun-home', price: 49.90, image: 'https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250519/aa014cc34e9ab021876bd62e059b27f0.png' },
+  { title: 'Retro AC Milan 06/07 Home', team: 'AC Milan', handle: 'retro-camisa-ac-milan-2006-07-home-long-sleeve', price: 59.90, image: 'https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250103/615648b458576cd9cd576cb6cd46a235.jpg' },
+  { title: 'Retro Brazil 2002 Home', team: 'Brasilien', handle: 'retro-camisa-brazil-2002-world-cup-home-masculina-yellow', price: 49.90, image: 'https://img.wpassets-gamma.com/uploads/71478/cart/resources/20241225/7C9EFFFC-7838-3187-57E8-E9B2947CC105.jpg' },
+  { title: 'Retro Barcelona 14/15 Home', team: 'FC Barcelona', handle: 'retro-14-15-barcelona-home-s-xxl', price: 49.90, image: 'https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250502/EE9F57DE-454A-A6DF-ED08-333BD091929D.jpg' },
+  { title: 'Retro Juventus 15/16 Away Pink', team: 'Juventus Turin', handle: 'retro-camisa-juventus-2015-16-away-pink', price: 49.90, image: 'https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250103/f517d6c574c20d18715c0177915ef7f1.jpg' },
+  { title: 'Retro Portugal 2006 Away', team: 'Portugal', handle: 'portugal-2006-away', price: 59.90, image: 'https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260203/d1c444d9731d0170789631bcc578c418.png' },
+  // 25/26 danach
   { title: 'Arsenal 25/26 Home', team: 'Arsenal', handle: 'arsenal-25-26-home-s-4xl', price: 49.90, image: 'https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250524/60236145aba5045a7b5af2359d72bde2.png' },
   { title: 'Barcelona 25/26 Home', team: 'FC Barcelona', handle: 'barcelona-x-ed-sheeran-25-26-home-s-4xl-fan-verison8', price: 49.90, image: 'https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251029/c0b88cb03ad9c3c984cee2f5d48fe37b.png' },
   { title: 'Bayern München 25/26 Home', team: 'Bayern München', handle: 'bayern-muenchen-25-26-home-s-4xl', price: 49.90, image: 'https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250507/39105d8bb9f7990605218538d6c11426.png' },
