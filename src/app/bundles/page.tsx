@@ -298,7 +298,7 @@ export default function BundlesPage() {
                       <div className="bg-[#1a1a1a] rounded-xl border border-white/5 p-4 flex-1 z-10">
                         <h4 className="font-bold text-white mb-1 text-sm">Trikots in den Warenkorb</h4>
                         <p className="text-sm text-gray-400 leading-relaxed">Stöbere durch den Shop und lege deine Lieblings-Trikots in den Warenkorb.</p>
-                        <img src="/bundle-step2.png?v=5" alt="Trikot auswählen & Warenkorb" onClick={() => setLightbox('/bundle-step2.png?v=5')} className="mt-3 rounded-lg border border-white/10 w-full cursor-zoom-in hover:border-white/30 transition-colors" />
+                        <img src="/bundle-step2.png?v=6" alt="Trikot auswählen & Warenkorb" onClick={() => setLightbox('/bundle-step2.png?v=6')} className="mt-3 rounded-lg border border-white/10 w-full cursor-zoom-in hover:border-white/30 transition-colors" />
                       </div>
                     </div>
                   </div>
