@@ -227,7 +227,7 @@ export default function ProductDetailClient({ product, teamId, teamName, leagueN
               <div
                 ref={thumbRef}
                 onScroll={onThumbScroll}
-                className="flex gap-2 mt-3 overflow-x-auto hide-sb"
+                className="flex gap-2 mt-3 overflow-x-auto hide-sb justify-center"
                 style={{ scrollbarWidth: 'none', msOverflowStyle: 'none', WebkitOverflowScrolling: 'touch' }}
               >
                 {allImages.map((img, idx) => (
