@@ -17,10 +17,13 @@ export default function HomePage() {
 
       {/* Hero */}
       <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#111] via-[var(--red-dark)] to-[#111]" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(196,34,46,0.3),transparent_70%)]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#111] via-[var(--red-dark)] to-[#111] hero-bg" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(196,34,46,0.3),transparent_70%)] hero-bg" />
         <div className="relative max-w-7xl mx-auto px-4 py-6 md:py-8 text-center">
-          <Image src="/logo.png" alt="T-EXPRESS24" width={500} height={500} className="mx-auto max-w-[250px] sm:max-w-[400px] w-full" priority />
+          <div className="relative inline-block">
+            <Image src="/logo.png" alt="T-EXPRESS24" width={500} height={500} className="mx-auto max-w-[340px] sm:max-w-[450px] w-full hero-logo" priority />
+            <div className="hero-scanline" />
+          </div>
         </div>
       </section>
 

@@ -2,8 +2,10 @@ import Image from 'next/image';
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0d0d0d] border-t border-white/10 mt-10">
-      <div className="max-w-7xl mx-auto px-4 py-12">
+    <footer className="relative overflow-hidden border-t border-white/10 mt-10">
+      <div className="absolute inset-0 bg-gradient-to-br from-[#111] via-[var(--red-dark)] to-[#111]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(196,34,46,0.3),transparent_70%)]" />
+      <div className="relative max-w-7xl mx-auto px-4 py-12">
         {/* Brand */}
         <div className="text-center mb-8">
           <div className="flex items-center gap-3 mb-3 justify-center">
