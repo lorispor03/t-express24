@@ -239,7 +239,75 @@ export default function BundlesPage() {
           {/* Right: How it works (2 cols) */}
           <div className="lg:col-span-2">
             <h3 className="text-2xl md:text-3xl font-bold uppercase tracking-wide mb-6" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>So funktioniert&apos;s</h3>
-            <div>
+
+            {/* === MOBILE Timeline === */}
+            <div className="lg:hidden flex flex-col items-center">
+              {/* U-Branch */}
+              <div className="flex justify-center gap-16 mb-0">
+                <div className="flex flex-col items-center">
+                  <div className="w-14 h-14 rounded-full bg-[var(--gold)]/15 border-2 border-[var(--gold)]/40 flex flex-col items-center justify-center">
+                    <span className="text-[var(--gold)] font-black text-3xl leading-none" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>3+</span>
+                    <span className="text-[var(--gold)]/60 text-[11px] font-bold leading-none">15%</span>
+                  </div>
+                  <div className="w-0.5 h-5 bg-white/10 -mt-[1px]" />
+                </div>
+                <div className="flex flex-col items-center">
+                  <div className="w-14 h-14 rounded-full bg-[var(--gold)]/25 border-2 border-[var(--gold)] flex flex-col items-center justify-center">
+                    <span className="text-[var(--gold)] font-black text-3xl leading-none" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>6+</span>
+                    <span className="text-[var(--gold)]/60 text-[11px] font-bold leading-none">20%</span>
+                  </div>
+                  <div className="w-0.5 h-5 bg-white/10 -mt-[1px]" />
+                </div>
+              </div>
+              <div className="h-0.5 bg-white/10 -mt-[1px]" style={{ width: 'calc(4rem + 56px)' }} />
+              <div className="w-0.5 h-3 bg-white/10 -mt-[1px]" />
+              <div className="w-9 h-9 rounded-full bg-[var(--red-main)] text-white flex items-center justify-center font-bold text-base" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>1</div>
+              <div className="w-0.5 h-3 bg-white/10" />
+
+              {/* Step 1 card */}
+              <div className="bg-[#1a1a1a] rounded-xl border border-white/5 p-4 w-full">
+                <h4 className="font-bold text-white mb-1 text-sm">Bundle wählen</h4>
+                <p className="text-sm text-gray-400 leading-relaxed">Erhalte 15% Rabatt ab 3 Trikots oder 20% ab 6 Trikots.</p>
+              </div>
+
+              {/* Circle 2 */}
+              <div className="w-0.5 h-4 bg-white/10" />
+              <div className="w-9 h-9 rounded-full bg-[var(--red-main)] text-white flex items-center justify-center font-bold text-base" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>2</div>
+              <div className="w-0.5 h-4 bg-white/10" />
+
+              {/* Step 2 card */}
+              <div className="bg-[#1a1a1a] rounded-xl border border-white/5 p-4 w-full">
+                <h4 className="font-bold text-white mb-1 text-sm">Trikots in den Warenkorb</h4>
+                <p className="text-sm text-gray-400 leading-relaxed">Stöbere durch den Shop und lege deine Lieblings-Trikots in den Warenkorb.</p>
+                <img src="/bundle-step2.png?v=6" alt="Trikot auswählen & Warenkorb" onClick={() => setLightbox('/bundle-step2.png?v=6')} className="mt-3 rounded-lg border border-white/10 w-full cursor-zoom-in hover:border-white/30 transition-colors" />
+              </div>
+
+              {/* Circle % */}
+              <div className="w-0.5 h-4 bg-white/10" />
+              <div className="w-9 h-9 rounded-full bg-green-500 text-white flex items-center justify-center font-bold text-sm">%</div>
+              <div className="w-0.5 h-4 bg-white/10" />
+
+              {/* Step 3 card */}
+              <div className="bg-[#1a1a1a] rounded-xl border border-white/5 p-4 w-full">
+                <h4 className="font-bold text-white mb-1 text-sm">Rabatt kassieren</h4>
+                <p className="text-sm text-gray-400 leading-relaxed">Der Rabatt wird automatisch im Warenkorb angewendet.</p>
+                <img src="/bundle-step3.png?v=3" alt="Rabatt im Warenkorb" onClick={() => setLightbox('/bundle-step3.png?v=3')} className="mt-3 rounded-lg border border-white/10 w-full cursor-zoom-in hover:border-white/30 transition-colors" />
+              </div>
+
+              {/* Circle 3 */}
+              <div className="w-0.5 h-4 bg-white/10" />
+              <div className="w-9 h-9 rounded-full bg-[var(--red-main)] text-white flex items-center justify-center font-bold text-base" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>3</div>
+              <div className="w-0.5 h-4 bg-white/10" />
+
+              {/* Step 4 card */}
+              <div className="bg-[#1a1a1a] rounded-xl border border-white/5 p-4 w-full">
+                <h4 className="font-bold text-white mb-1 text-sm">Bestellung absenden</h4>
+                <p className="text-sm text-gray-400 leading-relaxed">Gib deinen Namen und Kontakt an und sende die Bestellung ab. Du erhältst in Kürze deine Bestellbestätigung.</p>
+              </div>
+            </div>
+
+            {/* === DESKTOP Timeline === */}
+            <div className="hidden lg:block">
               {/* U-Branch: 3x and 6x centered over the Step 1 card area (starts at 52px from left) */}
               <div className="pl-[52px]">
                 <div className="flex justify-center gap-36 mb-0">
