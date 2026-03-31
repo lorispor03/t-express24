@@ -238,7 +238,7 @@ export default function BundlesPage() {
 
           {/* Right: How it works (2 cols) */}
           <div className="lg:col-span-2">
-            <h3 className="text-2xl md:text-3xl font-bold uppercase tracking-wide mb-6" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>So funktioniert&apos;s</h3>
+            <h3 className="text-3xl md:text-3xl font-bold uppercase tracking-wide mb-6 text-center lg:text-left" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>So funktioniert&apos;s</h3>
 
             {/* === MOBILE Timeline === */}
             <div className="lg:hidden flex flex-col items-center">
