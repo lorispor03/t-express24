@@ -205,11 +205,17 @@ body {
   100% { text-shadow: 0 0 transparent; }
 }
 .hero-logo {
+  opacity: 0;
+  -webkit-animation: neon-flicker 1.8s ease-out both, hero-scale 1.8s ease-out both, hero-blur 1.8s ease-out both;
   animation: neon-flicker 1.8s ease-out both, hero-scale 1.8s ease-out both, hero-blur 1.8s ease-out both;
+  -webkit-animation-play-state: var(--anim-state);
   animation-play-state: var(--anim-state);
 }
 .hero-bg {
+  opacity: 0;
+  -webkit-animation: hero-bg-fade 1.8s ease-out both;
   animation: hero-bg-fade 1.8s ease-out both;
+  -webkit-animation-play-state: var(--anim-state);
   animation-play-state: var(--anim-state);
 }
 .hero-scanline {
@@ -218,12 +224,12 @@ body {
   right: 0;
   height: 2px;
   background: linear-gradient(90deg, transparent, rgba(196,34,46,0.5), rgba(255,255,255,0.3), rgba(196,34,46,0.5), transparent);
+  -webkit-animation: hero-scanline 1.8s ease-out both;
   animation: hero-scanline 1.8s ease-out both;
+  -webkit-animation-play-state: var(--anim-state);
   animation-play-state: var(--anim-state);
   pointer-events: none;
   z-index: 10;
-  overflow: hidden;
-  clip-path: inset(0);
 }
 .hero-glitch {
   animation: neon-flicker 1.8s ease-out both, hero-glitch 1.5s steps(1) both;
