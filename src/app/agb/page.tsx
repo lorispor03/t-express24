@@ -109,7 +109,7 @@ export default function AGBPage() {
           </div>
         </div>
       </section>
-      <Footer />
+      <Footer dark />
     </>
   );
 }

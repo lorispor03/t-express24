@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 80">
+  <!-- Main brush body - curved arc -->
+  <path d="M0 55 L5 50 L8 53 L12 46 L16 49 L20 42 L25 45 L30 38 L35 41 L40 34 L46 37 L52 30 L58 33 L65 27 L72 30 L80 24 L88 27 L96 22 L105 25 L114 20 L123 23 L132 19 L142 22 L152 18 L162 21 L172 17 L183 20 L193 17 L204 19 L215 16 L226 18 L237 16 L248 18 L260 16 L272 18 L284 17 L296 19 L308 18 L320 20 L332 19 L344 22 L356 20 L368 23 L380 22 L392 25 L404 24 L416 28 L428 26 L438 30 L448 28 L456 32 L464 30 L472 35 L478 33 L484 38 L489 36 L494 40 L498 38 L500 42
+  L500 58 L498 55 L494 58 L489 54 L484 57 L478 52 L472 55 L464 50 L456 53 L448 48 L438 51 L428 47 L416 50 L404 46 L392 48 L380 45 L368 47 L356 44 L344 46 L332 43 L320 45 L308 43 L296 44 L284 42 L272 44 L260 42 L248 43 L237 42 L226 43 L215 42 L204 44 L193 43 L183 45 L172 43 L162 46 L152 44 L142 47 L132 45 L123 48 L114 46 L105 50 L96 48 L88 52 L80 50 L72 54 L65 52 L58 56 L52 54 L46 58 L40 56 L35 60 L30 58 L25 62 L20 60 L16 64 L12 62 L8 66 L5 64 L0 68 Z" fill="black"/>
+  <!-- Rough spikes top -->
+  <path d="M20 43 L22 37 L24 42 M55 31 L57 25 L59 30 M95 23 L97 17 L99 22 M140 20 L142 14 L144 19 M190 18 L192 12 L194 17 M245 17 L247 11 L249 16 M300 18 L302 12 L304 17 M355 21 L357 15 L359 20 M410 25 L412 19 L414 24 M460 31 L462 25 L464 30 M490 37 L492 31 L494 36" stroke="black" stroke-width="3" fill="black" stroke-linecap="round"/>
+  <!-- Rough spikes bottom -->
+  <path d="M15 64 L17 70 L19 65 M50 57 L52 63 L54 56 M90 51 L92 57 L94 50 M135 47 L137 53 L139 46 M185 44 L187 50 L189 43 M240 43 L242 49 L244 42 M295 44 L297 50 L299 43 M350 45 L352 51 L354 44 M405 47 L407 53 L409 46 M455 50 L457 56 L459 49 M485 55 L487 61 L489 54" stroke="black" stroke-width="3" fill="black" stroke-linecap="round"/>
+  <!-- Dry brush gaps -->
+  <rect x="80" y="30" width="5" height="8" rx="2" fill="white" opacity="0.3" transform="rotate(-12 82 34)"/>
+  <rect x="170" y="24" width="4" height="7" rx="2" fill="white" opacity="0.35" transform="rotate(-12 172 27)"/>
+  <rect x="280" y="22" width="6" height="6" rx="2" fill="white" opacity="0.25"/>
+  <rect x="380" y="28" width="5" height="7" rx="2" fill="white" opacity="0.3"/>
+  <!-- Bristle streaks -->
+  <line x1="5" y1="52" x2="498" y2="38" stroke="white" stroke-width="0.5" opacity="0.15"/>
+  <line x1="5" y1="57" x2="498" y2="43" stroke="white" stroke-width="0.6" opacity="0.12"/>
+  <line x1="5" y1="62" x2="498" y2="48" stroke="white" stroke-width="0.5" opacity="0.18"/>
+</svg>

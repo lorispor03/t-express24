@@ -281,7 +281,7 @@ export default function ProductDetailClient({ product, teamId, teamName, leagueN
           <div className="mb-6">
             <div className="flex items-center gap-3">
               <span className="text-2xl font-bold text-[var(--gold)]">CHF {parseFloat(product.p).toFixed(2)}</span>
-              <span className="text-2xl font-bold text-gray-500/60 line-through">CHF {(Math.floor(parseFloat(product.p) / 0.79) + 0.90).toFixed(2)}</span>
+              <span className="text-2xl font-bold text-gray-300 line-through">CHF {(Math.floor(parseFloat(product.p) / 0.79) + 0.90).toFixed(2)}</span>
               <span className="text-xs font-bold bg-green-500/20 text-green-400 px-2 py-1 rounded-full">
                 -21%
               </span>

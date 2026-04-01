@@ -23,6 +23,11 @@ body {
 /* Hide native scrollbar */
 .hide-sb::-webkit-scrollbar { display: none; }
 
+
+/* Strikethrough brush style */
+.line-through { text-decoration: none; position: relative; }
+.line-through::after { content: ''; position: absolute; left: -1%; right: -1%; top: 20%; height: 60%; pointer-events: none; transform: rotate(-6deg); background: var(--red-main); opacity: 0.8; -webkit-mask-image: url('/brush-stroke.svg'); -webkit-mask-size: 100% 100%; -webkit-mask-repeat: no-repeat; mask-image: url('/brush-stroke.svg'); mask-size: 100% 100%; mask-repeat: no-repeat; }
+
 /* Product card hover */
 .product-card { transition: transform 0.2s ease, border-color 0.2s ease; }
 @media (hover: hover) {
@@ -231,6 +236,22 @@ body {
   pointer-events: none;
   z-index: 10;
 }
+@keyframes chevron-flow {
+  0% { opacity: 0.2; }
+  50% { opacity: 1; }
+  100% { opacity: 0.2; }
+}
+@keyframes glow-pulse {
+  0%, 100% { box-shadow: 0 0 15px rgba(196,34,46,0.6), 0 0 30px rgba(196,34,46,0.3); }
+  50% { box-shadow: 0 0 25px rgba(196,34,46,0.9), 0 0 50px rgba(196,34,46,0.5), 0 0 80px rgba(196,34,46,0.2); }
+}
+.animate-glow-pulse { animation: glow-pulse 1.5s ease-in-out infinite; }
+
+.chevron-pulse { transform: rotate(90deg); }
+.chevron-1 { animation: chevron-flow 1.2s ease-in-out infinite; }
+.chevron-2 { animation: chevron-flow 1.2s ease-in-out 0.2s infinite; }
+.chevron-3 { animation: chevron-flow 1.2s ease-in-out 0.4s infinite; }
+
 .hero-glitch {
   animation: neon-flicker 1.8s ease-out both, hero-glitch 1.5s steps(1) both;
 }

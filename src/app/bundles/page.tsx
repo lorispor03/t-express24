@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -11,10 +11,15 @@ export default function BundlesPage() {
   const { activeBundle, setActiveBundle } = useCart();
   const router = useRouter();
   const [lightbox, setLightbox] = useState<string | null>(null);
+  const [lbZoom, setLbZoom] = useState(false);
+  const openLightbox = (src: string) => { setLightbox(src); setLbZoom(false); };
 
-  const activateBundle = (type: '3plus' | '6plus') => {
-    setActiveBundle(type);
-    router.push('/#ligen');
+  const toggleBundle = (type: '3plus' | '6plus') => {
+    if (activeBundle === type) {
+      setActiveBundle(null);
+    } else {
+      setActiveBundle(type);
+    }
   };
 
   return (
@@ -89,11 +94,10 @@ export default function BundlesPage() {
                   <span className="text-[var(--gold)] font-bold">CHF 127.25</span> <span className="text-gray-500 line-through ml-1">149.70</span>
                 </div>
                 <button
-                  onClick={() => activateBundle('3plus')}
-                  disabled={activeBundle === '3plus'}
-                  className={`w-full font-bold py-2 rounded-xl text-[11px] transition-all mt-auto ${activeBundle === '3plus' ? 'bg-green-500/20 text-green-400 cursor-default' : 'bg-[#3a3020] text-[#b89a50] border border-[#b89a50]/30 hover:scale-[1.02]'}`}
+                  onClick={() => toggleBundle('3plus')}
+                                    className={`w-full font-bold py-2 rounded-xl text-[11px] transition-all mt-auto ${activeBundle === '3plus' ? 'bg-red-500/15 text-red-400 border border-red-500/30' : 'bg-[#3a3020] text-[#b89a50] border border-[#b89a50]/30 hover:scale-[1.02]'}`}
                 >
-                  {activeBundle === '3plus' ? 'Aktiv' : 'Aktivieren'}
+                  {activeBundle === '3plus' ? 'Deaktivieren' : 'Aktivieren'}
                 </button>
               </div>
               {/* Desktop content */}
@@ -128,11 +132,10 @@ export default function BundlesPage() {
                   3× à CHF 49.90 = <span className="text-[var(--gold)] font-bold">CHF 127.25</span> <span className="text-gray-500 line-through ml-1">149.70</span>
                 </div>
                 <button
-                  onClick={() => activateBundle('3plus')}
-                  disabled={activeBundle === '3plus'}
-                  className={`w-full font-bold py-3 rounded-xl text-sm transition-all mt-auto ${activeBundle === '3plus' ? 'bg-green-500/20 text-green-400 cursor-default' : 'bg-[#3a3020] text-[#b89a50] border border-[#b89a50]/30 hover:scale-[1.02]'}`}
+                  onClick={() => toggleBundle('3plus')}
+                                    className={`w-full font-bold py-3 rounded-xl text-sm transition-all mt-auto ${activeBundle === '3plus' ? 'bg-red-500/15 text-red-400 border border-red-500/30' : 'bg-[#3a3020] text-[#b89a50] border border-[#b89a50]/30 hover:scale-[1.02]'}`}
                 >
-                  {activeBundle === '3plus' ? 'Bundle ist aktiv' : 'Bundle aktivieren & Trikots wählen'}
+                  {activeBundle === '3plus' ? 'Bundle deaktivieren' : 'Bundle aktivieren & Trikots wählen'}
                 </button>
               </div>
             </div>
@@ -179,11 +182,10 @@ export default function BundlesPage() {
                   <span className="text-[var(--gold)] font-bold">CHF 239.50</span> <span className="text-gray-500 line-through ml-1">299.40</span>
                 </div>
                 <button
-                  onClick={() => activateBundle('6plus')}
-                  disabled={activeBundle === '6plus'}
-                  className={`w-full font-bold py-2 rounded-xl text-[11px] transition-all mt-auto ${activeBundle === '6plus' ? 'bg-green-500/20 text-green-400 cursor-default' : 'bg-[var(--gold)] text-black hover:scale-[1.02]'}`}
+                  onClick={() => toggleBundle('6plus')}
+                                    className={`w-full font-bold py-2 rounded-xl text-[11px] transition-all mt-auto ${activeBundle === '6plus' ? 'bg-red-500/15 text-red-400 border border-red-500/30' : 'bg-[var(--gold)] text-black hover:scale-[1.02]'}`}
                 >
-                  {activeBundle === '6plus' ? 'Aktiv' : 'Aktivieren'}
+                  {activeBundle === '6plus' ? 'Deaktivieren' : 'Aktivieren'}
                 </button>
               </div>
               {/* Desktop content */}
@@ -226,11 +228,10 @@ export default function BundlesPage() {
                   6× à CHF 49.90 = <span className="text-[var(--gold)] font-bold">CHF 239.50</span> <span className="text-gray-500 line-through ml-1">299.40</span>
                 </div>
                 <button
-                  onClick={() => activateBundle('6plus')}
-                  disabled={activeBundle === '6plus'}
-                  className={`w-full font-bold py-3 rounded-xl text-sm transition-all mt-auto ${activeBundle === '6plus' ? 'bg-green-500/20 text-green-400 cursor-default' : 'bg-[var(--gold)] text-black hover:scale-[1.02]'}`}
+                  onClick={() => toggleBundle('6plus')}
+                                    className={`w-full font-bold py-3 rounded-xl text-sm transition-all mt-auto ${activeBundle === '6plus' ? 'bg-red-500/15 text-red-400 border border-red-500/30' : 'bg-[var(--gold)] text-black hover:scale-[1.02]'}`}
                 >
-                  {activeBundle === '6plus' ? 'Bundle ist aktiv' : 'Bundle aktivieren & Trikots wählen'}
+                  {activeBundle === '6plus' ? 'Bundle deaktivieren' : 'Bundle aktivieren & Trikots wählen'}
                 </button>
               </div>
             </div>
@@ -238,7 +239,7 @@ export default function BundlesPage() {
 
           {/* Right: How it works (2 cols) */}
           <div className="lg:col-span-2">
-            <h3 className="text-3xl md:text-3xl font-bold uppercase tracking-wide mb-6 text-center lg:text-left" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>So funktioniert&apos;s</h3>
+            <h3 className="text-3xl md:text-3xl font-bold uppercase tracking-wide mb-6 text-center" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>Wie funktioniert&apos;s?</h3>
 
             {/* === MOBILE Timeline === */}
             <div className="lg:hidden flex flex-col items-center">
@@ -279,7 +280,7 @@ export default function BundlesPage() {
               <div className="bg-[#1a1a1a] rounded-xl border border-white/5 p-4 w-full">
                 <h4 className="font-bold text-white mb-1 text-sm">Trikots in den Warenkorb</h4>
                 <p className="text-sm text-gray-400 leading-relaxed">Stöbere durch den Shop und lege deine Lieblings-Trikots in den Warenkorb.</p>
-                <img src="/bundle-step2.png?v=6" alt="Trikot auswählen & Warenkorb" onClick={() => setLightbox('/bundle-step2.png?v=6')} className="mt-3 rounded-lg border border-white/10 w-full cursor-zoom-in hover:border-white/30 transition-colors" />
+                <img src="/bundle-step2.png?v=6" alt="Trikot auswählen & Warenkorb" onClick={() => openLightbox('/bundle-step2.png?v=6')} className="mt-3 rounded-lg border border-white/10 w-full cursor-zoom-in hover:border-white/30 transition-colors" />
               </div>
 
               {/* Circle % */}
@@ -291,7 +292,7 @@ export default function BundlesPage() {
               <div className="bg-[#1a1a1a] rounded-xl border border-white/5 p-4 w-full">
                 <h4 className="font-bold text-white mb-1 text-sm">Rabatt kassieren</h4>
                 <p className="text-sm text-gray-400 leading-relaxed">Der Rabatt wird automatisch im Warenkorb angewendet.</p>
-                <img src="/bundle-step3.png?v=3" alt="Rabatt im Warenkorb" onClick={() => setLightbox('/bundle-step3.png?v=3')} className="mt-3 rounded-lg border border-white/10 w-full cursor-zoom-in hover:border-white/30 transition-colors" />
+                <img src="/bundle-step3.png?v=3" alt="Rabatt im Warenkorb" onClick={() => openLightbox('/bundle-step3.png?v=3')} className="mt-3 rounded-lg border border-white/10 w-full cursor-zoom-in hover:border-white/30 transition-colors" />
               </div>
 
               {/* Circle 3 */}
@@ -366,7 +367,7 @@ export default function BundlesPage() {
                       <div className="bg-[#1a1a1a] rounded-xl border border-white/5 p-4 flex-1 z-10">
                         <h4 className="font-bold text-white mb-1 text-sm">Trikots in den Warenkorb</h4>
                         <p className="text-sm text-gray-400 leading-relaxed">Stöbere durch den Shop und lege deine Lieblings-Trikots in den Warenkorb.</p>
-                        <img src="/bundle-step2.png?v=6" alt="Trikot auswählen & Warenkorb" onClick={() => setLightbox('/bundle-step2.png?v=6')} className="mt-3 rounded-lg border border-white/10 w-full cursor-zoom-in hover:border-white/30 transition-colors" />
+                        <img src="/bundle-step2.png?v=6" alt="Trikot auswählen & Warenkorb" onClick={() => openLightbox('/bundle-step2.png?v=6')} className="mt-3 rounded-lg border border-white/10 w-full cursor-zoom-in hover:border-white/30 transition-colors" />
                       </div>
                     </div>
                   </div>
@@ -379,7 +380,7 @@ export default function BundlesPage() {
                       <div className="bg-[#1a1a1a] rounded-xl border border-white/5 p-4 flex-1 z-10">
                         <h4 className="font-bold text-white mb-1 text-sm">Rabatt kassieren</h4>
                         <p className="text-sm text-gray-400 leading-relaxed">Der Rabatt wird automatisch im Warenkorb angewendet.</p>
-                        <img src="/bundle-step3.png?v=3" alt="Rabatt im Warenkorb" onClick={() => setLightbox('/bundle-step3.png?v=3')} className="mt-3 rounded-lg border border-white/10 w-full cursor-zoom-in hover:border-white/30 transition-colors" />
+                        <img src="/bundle-step3.png?v=3" alt="Rabatt im Warenkorb" onClick={() => openLightbox('/bundle-step3.png?v=3')} className="mt-3 rounded-lg border border-white/10 w-full cursor-zoom-in hover:border-white/30 transition-colors" />
                       </div>
                     </div>
                   </div>
@@ -403,15 +404,29 @@ export default function BundlesPage() {
         </div>
       </section>
 
+
       <Footer />
 
       {/* Lightbox */}
       {lightbox && (
-        <div className="fixed inset-0 z-[70] bg-black/90 flex items-center justify-center p-4" onClick={() => setLightbox(null)}>
-          <button onClick={() => setLightbox(null)} className="absolute top-4 right-4 text-white/70 hover:text-white p-2">
+        <div className="fixed inset-0 z-[70] bg-black/90 flex items-center justify-center" onClick={() => setLightbox(null)}>
+          <button onClick={() => setLightbox(null)} className="absolute top-4 right-4 text-white/70 hover:text-white p-2 z-10">
             <svg className="w-8 h-8" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" /></svg>
           </button>
-          <img src={lightbox} alt="" className="max-w-full max-h-[90vh] object-contain rounded-lg" onClick={e => e.stopPropagation()} />
+          <div
+            className={`${lbZoom ? 'overflow-scroll overscroll-contain w-full h-full' : 'flex items-center justify-center p-4'}`}
+            style={lbZoom ? { WebkitOverflowScrolling: 'touch', touchAction: 'pan-x pan-y' } : undefined}
+            onClick={e => { e.stopPropagation(); if (lbZoom) setLbZoom(false); }}
+          >
+            <img
+              src={lightbox}
+              alt=""
+              className={`rounded-lg select-none ${lbZoom ? 'min-w-[200vw] h-auto' : 'max-w-[95vw] max-h-[85vh] object-contain cursor-zoom-in'}`}
+              style={lbZoom ? { touchAction: 'pan-x pan-y', pointerEvents: 'none' } : undefined}
+              onClick={() => !lbZoom && setLbZoom(true)}
+              draggable={false}
+            />
+          </div>
         </div>
       )}
     </>
