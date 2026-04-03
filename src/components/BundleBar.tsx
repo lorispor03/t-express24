@@ -23,7 +23,7 @@ export default function BundleBar() {
   const isShopPage = pathname.startsWith('/league/') || pathname.startsWith('/team/') || pathname.startsWith('/product/');
   const showShopButton = isBundles && !dismissedShopBtn;
 
-  if (!activeBundle || pathname === '/agb') return null;
+  if (!activeBundle || pathname === '/agb' || pathname === '/checkout') return null;
 
   const config = BUNDLE_CONFIG[activeBundle];
   const progressPercent = Math.min(100, (bundleProgress.current / bundleProgress.target) * 100);

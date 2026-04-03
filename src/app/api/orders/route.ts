@@ -28,7 +28,7 @@ export async function GET() {
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
-    const { kunde_name, kunde_kontakt, nachricht, items } = body;
+    const { kunde_name, kunde_kontakt, lieferadresse, nachricht, items } = body;
 
     if (!kunde_name || !kunde_kontakt || !items?.length) {
       return NextResponse.json({ error: 'Fehlende Daten' }, { status: 400, headers: corsHeaders });
@@ -50,6 +50,7 @@ export async function POST(req: NextRequest) {
       kunde_name,
       kunde_telefon,
       kunde_kontakt: kunde_kontakt,
+      lieferadresse: lieferadresse || null,
       nachricht: [kontaktInfo, nachricht].filter(Boolean).join(' | '),
       quelle: 'website',
       status: 'neu',

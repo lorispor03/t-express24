@@ -47,6 +47,7 @@ interface CartContextType {
   activeBundle: BundleType;
   setActiveBundle: (bundle: BundleType) => void;
   bundleProgress: { current: number; target: number; remaining: number; active: boolean; reached: boolean };
+  loaded: boolean;
 }
 
 const CartContext = createContext<CartContextType | null>(null);
@@ -91,8 +92,25 @@ export function CartProvider({ children }: { children: ReactNode }) {
     }
   }, [activeBundle, loaded]);
 
+  const [confirmCancel, setConfirmCancel] = useState(false);
+  const [pendingBundle, setPendingBundle] = useState<BundleType>(null);
+
   const setActiveBundle = (bundle: BundleType) => {
+    // Wenn Bundle aufgelöst wird und Artikel im Warenkorb sind → Bestätigung
+    if (bundle === null && activeBundle !== null && items.length > 0) {
+      setConfirmCancel(true);
+      return;
+    }
     setActiveBundleState(bundle);
+  };
+
+  const confirmCancelBundle = () => {
+    setActiveBundleState(null);
+    setConfirmCancel(false);
+  };
+
+  const dismissCancelBundle = () => {
+    setConfirmCancel(false);
   };
 
   const addItem = (product: Product, teamName: string, size: string, flockingName: string, flockingNumber: string, patches: PatchOption[] = [], extraOption: ExtraOption = 'none', extraPrice: number = 0) => {
@@ -145,8 +163,42 @@ export function CartProvider({ children }: { children: ReactNode }) {
   const finalPrice = totalPrice - bundleDiscount;
 
   return (
-    <CartContext.Provider value={{ items, addItem, removeItem, updateQuantity, clearCart, totalItems, totalPrice, bundleDiscount, finalPrice, isCartOpen, setCartOpen, activeBundle, setActiveBundle, bundleProgress }}>
+    <CartContext.Provider value={{ items, addItem, removeItem, updateQuantity, clearCart, totalItems, totalPrice, bundleDiscount, finalPrice, isCartOpen, setCartOpen, activeBundle, setActiveBundle, bundleProgress, loaded }}>
       {children}
+
+      {/* Bundle-Auflösen Bestätigung */}
+      {confirmCancel && (
+        <>
+          <div className="fixed inset-0 bg-black/60 z-[9998]" />
+          <div className="fixed inset-0 z-[9999] flex items-center justify-center px-4">
+            <div className="bg-[#1a1a1a] border border-white/10 rounded-2xl px-6 py-8 max-w-sm w-full text-center shadow-2xl">
+              <div className="w-14 h-14 bg-[var(--gold)]/15 rounded-full flex items-center justify-center mx-auto mb-4">
+                <span className="text-2xl font-black text-[var(--gold)]" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
+                  {activeBundle === '3plus' ? '15%' : '20%'}
+                </span>
+              </div>
+              <h2 className="text-lg font-bold text-white mb-2">Bundle auflösen?</h2>
+              <p className="text-sm text-gray-300 mb-6">
+                Du hast bereits {totalItems} {totalItems === 1 ? 'Trikot' : 'Trikots'} im Warenkorb. Wenn du das Bundle auflöst, verlierst du den Rabatt.
+              </p>
+              <div className="flex gap-3">
+                <button
+                  onClick={dismissCancelBundle}
+                  className="flex-1 bg-white/5 hover:bg-white/10 text-gray-300 text-sm font-bold px-4 py-3 rounded-lg transition-colors border border-white/10"
+                >
+                  Behalten
+                </button>
+                <button
+                  onClick={confirmCancelBundle}
+                  className="flex-1 bg-[var(--red-main)] hover:bg-[var(--red-dark)] text-white text-sm font-bold px-4 py-3 rounded-lg transition-colors"
+                >
+                  Auflösen
+                </button>
+              </div>
+            </div>
+          </div>
+        </>
+      )}
     </CartContext.Provider>
   );
 }
