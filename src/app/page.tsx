@@ -38,11 +38,11 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-[var(--red-dark)]/30" />
         <div className="absolute left-0 right-0 -top-16 h-16 bg-gradient-to-b from-transparent to-[var(--red-dark)]/30" />
         <div className="absolute left-0 right-0 -bottom-24 h-24 bg-gradient-to-b from-[var(--red-dark)]/30 to-transparent" />
-        <div className="relative max-w-7xl mx-auto px-4 py-4">
+        <div className="relative max-w-7xl mx-auto px-4 py-3 md:py-4">
           <h2 className="text-4xl md:text-5xl uppercase tracking-wide mb-1 text-[var(--red-main)]" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
             Bundles
           </h2>
-          <p className="text-gray-400 text-sm mb-4">Mehr Trikots, weniger zahlen</p>
+          <p className="text-gray-400 text-sm mb-3 md:mb-4">Mehr Trikots, weniger zahlen</p>
           <Link href="/bundles" className="block group">
             <div className="relative overflow-hidden rounded-xl border border-[var(--gold)]/30 bg-gradient-to-r from-[#1a1a1a] via-[#1f1510] to-[#1a1a1a] p-5 md:p-6 animate-pulse-slow hover:border-[var(--gold)]/60 transition-all">
               <div className="absolute top-0 right-0 w-40 h-full bg-gradient-to-l from-[var(--gold)]/10 to-transparent" />
@@ -73,9 +73,9 @@ export default function HomePage() {
       </section>
 
       {/* Leagues Grid */}
-      <section id="ligen" className="max-w-7xl mx-auto px-4 pt-5 pb-6 md:pb-16 scroll-mt-20">
+      <section id="ligen" className="max-w-7xl mx-auto px-4 pt-4 md:pt-5 pb-3 md:pb-5 scroll-mt-20">
         <h2 className="text-4xl md:text-5xl uppercase tracking-wide mb-1" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>Unsere Ligen</h2>
-        <p className="text-gray-400 mb-5">Wähle eine Liga und entdecke alle verfügbaren Artikel deiner Lieblings-Clubs.</p>
+        <p className="text-gray-400 mb-3 md:mb-5">Wähle eine Liga und entdecke alle verfügbaren Artikel deiner Lieblings-Clubs.</p>
 
         <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
           {Object.entries(leagues).map(([slug, league]) => (

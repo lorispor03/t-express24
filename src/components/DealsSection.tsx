@@ -93,8 +93,8 @@ export default function DealsSection() {
   const items = [...DEALS, ...DEALS];
 
   return (
-    <section className="max-w-7xl mx-auto px-4 py-6">
-      <div className="flex items-center justify-between mb-6">
+    <section className="max-w-7xl mx-auto px-4 py-4 md:py-6">
+      <div className="flex items-center justify-between mb-4 md:mb-6">
         <div>
           <h2 className="text-4xl md:text-5xl uppercase tracking-wide" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
             Top Seller
