@@ -46,9 +46,9 @@ export default async function TeamPage({ params }: { params: Promise<{ id: strin
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[#111] via-[var(--red-dark)] to-[#111]" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(196,34,46,0.15),transparent_60%)]" />
-        <div className="relative max-w-7xl mx-auto px-4 py-10 md:py-12">
+        <div className="relative max-w-7xl mx-auto px-4 py-5 md:py-12">
           {/* Breadcrumb */}
-          <div className="flex items-center gap-2 text-sm text-gray-400 mb-4">
+          <div className="flex items-center gap-2 text-sm text-gray-400 mb-2 md:mb-4">
             <Link href="/#ligen" className="hover:text-white transition-colors">Ligen</Link>
             <span>/</span>
             <Link href={`/league/${team.league}`} className="hover:text-white transition-colors">{team.leagueName}</Link>
@@ -56,7 +56,7 @@ export default async function TeamPage({ params }: { params: Promise<{ id: strin
             <span className="text-white">{team.name}</span>
           </div>
 
-          <div className="flex items-center justify-between min-h-[180px] sm:min-h-[200px]">
+          <div className="flex items-center justify-between min-h-0 sm:min-h-[200px]">
             <div className="flex items-center gap-5">
               {(() => {
                 const slug = id.split('__')[1];
@@ -101,7 +101,7 @@ export default async function TeamPage({ params }: { params: Promise<{ id: strin
 
           {/* Palmares - Mobile 3x2 Grid */}
           {hasPalmares && (
-            <div className="md:hidden bg-white/5 backdrop-blur-md rounded-xl px-4 py-3 border border-white/10 mt-4">
+            <div className="md:hidden bg-white/5 backdrop-blur-md rounded-xl px-4 py-3 border border-white/10 mt-2">
               <h4 className="text-[10px] font-bold text-[var(--gold)] uppercase tracking-wider mb-2">Palmares</h4>
               <div className="grid grid-cols-3 gap-2">
                 {teamPalmares.map((trophy) => (

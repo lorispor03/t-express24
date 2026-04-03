@@ -75,7 +75,7 @@ export default function HomePage() {
       {/* Leagues Grid */}
       <section id="ligen" className="max-w-7xl mx-auto px-4 pt-6 pb-16 scroll-mt-20">
         <h2 className="text-3xl md:text-5xl uppercase tracking-wide mb-2" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>Unsere Ligen</h2>
-        <p className="text-gray-400 mb-8">Wähle eine Liga und entdecke alle verfügbaren Artikel.</p>
+        <p className="text-gray-400 mb-8">Wähle eine Liga und entdecke alle verfügbaren Artikel deiner Lieblings-Clubs.</p>
 
         <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
           {Object.entries(leagues).map(([slug, league]) => (

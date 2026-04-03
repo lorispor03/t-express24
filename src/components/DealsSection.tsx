@@ -40,7 +40,7 @@ function DealCard({ deal }: { deal: typeof DEALS[number] }) {
           <p className="text-xs font-medium text-gray-200 leading-tight mt-0.5 line-clamp-1">{deal.title}</p>
           <div className="flex items-center gap-2 mt-auto pt-2">
             <span className="text-sm font-bold text-[var(--gold)]">CHF {deal.price.toFixed(2)}</span>
-            <span className="text-xs text-gray-500 line-through">CHF {(Math.floor(deal.price / 0.79) + 0.90).toFixed(2)}</span>
+            <span className="text-sm text-gray-300 line-through">CHF {(Math.floor(deal.price / 0.79) + 0.90).toFixed(2)}</span>
           </div>
         </div>
       </div>
