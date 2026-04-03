@@ -106,40 +106,108 @@ export function searchProducts(query: string, limit = 20) {
   return results;
 }
 
-export function getLeagueTopSeller(leagueSlug: string, limit = 10): Array<{ title: string; handle: string; image: string; price: number; team: string }> {
-  const league = data.leagues[leagueSlug];
-  if (!league) return [];
-  const jerseyCategories = ['fan', 'player', 'retro', 'kids', 'kids-retro', 'female', 'longsleeve'];
-  const excludeCategories = ['training', 'sweater', 'windbreaker'];
-  const results: Array<{ title: string; handle: string; image: string; price: number; team: string }> = [];
-  for (const teamRef of league.teams) {
-    const team = data.teams[teamRef.id];
-    if (!team) continue;
-    for (const product of team.products) {
-      const hasJersey = product.c.some(c => jerseyCategories.includes(c));
-      const hasExcluded = product.c.some(c => excludeCategories.includes(c));
-      if (hasJersey && !hasExcluded) {
-        results.push({ title: product.t, handle: product.h, image: product.i, price: parseFloat(product.p), team: team.name });
+const CURATED_TOP_SELLER: Record<string, string[]> = {
+  'premier-league': [
+    'retro-camisa-manchester-united-1998-99-home-red', // Man Utd 98/99 Treble
+    'retro-manchester-united-1999-final-home-long-sleeves', // Man Utd 99 CL Final
+    'retro-2002-04-arsenal-home-s-xxl', // Arsenal 03/04 Invincibles
+    'retro-2005-06-arsenal-home-s-xxl', // Arsenal 05/06 CL Final
+    'retro-camisa-chelsea-champions-league-2008-09-home', // Chelsea CL 08/09
+    'retro-2012-13-chelsea-home-s-2xl', // Chelsea 12/13 CL Titelverteidiger
+    'retro-04-05-liverpool-home-final-kit-size-s-xxl', // Liverpool 04/05 Istanbul
+    'retro-lvp-2018-19-home', // Liverpool 18/19 CL Gewinn
+    'retro-manchester-city-11-12-home', // Man City 11/12 Aguero Moment
+    'retro-newcastle-1995-97-home', // Newcastle Entertainers
+  ],
+  'la-liga': [
+    'retro-08-09-barcelona-ucl-final-home-size-s-xxl', // Barca 08/09 Pep Treble
+    'retro-14-15-barcelona-home-s-xxl', // Barca 14/15 MSN Treble
+    'retro-camisa-real-madrid-13-14-home-white', // Real Madrid 13/14 La Decima
+    'retro-camisa-real-madrid-16-17-home-white', // Real Madrid 16/17 CL
+    'atletico-de-madrid-1995-96-home-s-xxl', // Atletico 95/96 Liga+Copa
+    'retro-atletico-de-madrid-13-14-away-s-xxl', // Atletico 13/14 La Liga
+    'retro-real-madrid-11-12-away-s-xxl', // Real Madrid 11/12 La Liga
+    'retro-05-06-ucl-barcelona-home-s-xxl', // Barca 05/06 CL
+    'retro-v-lenci-2000-01-home-jersey-s-xxl', // Valencia 00/01 La Liga
+    'retro-sevilla-fc-15-16-home-jersey-s-xxl', // Sevilla 15/16 Europa League
+  ],
+  'bundesliga': [
+    'retro-bayern-munich-12-13-home-s-xxl', // Bayern 12/13 Treble
+    'retro-2000-01-bayern-munich-home-kit-s-xxl', // Bayern 00/01 CL
+    'retro-borussia-dortmund-1997-home-shirt-s-xxl', // BVB 96/97 CL
+    'retro-borussia-dortmund-1995-96-home-shirt-s-xxl', // BVB 95/96 Bundesliga
+    'retro-leverkusen-2001-02-home-jersey-s-xxl', // Leverkusen 01/02 CL Final
+    'retro-vfb-stuttgart-06-07-home-s-xxl', // Stuttgart 06/07 Meister
+    'retro-werder-bremen-04-05-home-s-xxl', // Bremen 04/05 Double
+    'retro-frankfurt-95-96-home-jersey-s-xxl', // Frankfurt 95/96
+    'retro-borussia-moenchengladbach-1996-home-jersey-s-xxl', // Gladbach
+    'retro-hamburger-1984-home-kit-s-xxl', // HSV 83 Europapokal
+  ],
+  'serie-a': [
+    'retro-camisa-ac-milan-06-07-home', // Milan 06/07 CL
+    'retro-camisa-2002-03-ac-milan-home-red-black', // Milan 02/03 CL
+    'retro-camisa-inter-milan-09-10-home', // Inter 09/10 Treble
+    'retro-camisa-inter-milan-07-08-centennial', // Inter 07/08 Centenario
+    'retro-juventus-95-96-jersey-s-xxl', // Juve 95/96 CL
+    'retro-camisa-juventus-2014-15-home-kit-s-xxl', // Juve 14/15 CL Final
+    'roma-00-01-home-jersey', // Roma 00/01 Scudetto
+    'retro-naples-1987-88-home-jersey-s-xxl', // Napoli 87/88 Maradona
+    'retro-1999-00-lazio-home-kit-s-xxl', // Lazio 99/00 Scudetto
+    'retro-98-99-parma-yellow-jersey-s-xxl', // Parma 98/99 UEFA Cup
+  ],
+  'nationalmannschaften': [
+    'retro-camisa-brazil-2002-world-cup-home-masculina-yellow', // Brasilien 2002 WM
+    'retro-brasil-1998-home-kit-s-xxl', // Brasilien 1998 WM
+    'retro-germany-2014-home-s-xxl', // Deutschland 2014 WM
+    'retro-camisa-1996-germany-home-white', // Deutschland 1996 EM
+    'retro-camisa-italy-2006-home-blue', // Italien 2006 WM
+    'retro-camisa-france-2006-home-blue', // Frankreich 2006 WM
+    'retro-camisa-argentina-2006-home', // Argentinien 2006
+    'retro-camisa-spain-2010-home-red', // Spanien 2010 WM
+    'retro-camisa-england-1996-home-white', // England 1996 EM
+    'retro-camisa-portugal-2006-home-red', // Portugal 2006 CR7
+  ],
+};
+
+export function getLeagueTopSeller(leagueSlug: string): Array<{ title: string; handle: string; image: string; price: number; team: string }> {
+  const curated = CURATED_TOP_SELLER[leagueSlug];
+  if (!curated) {
+    // Fallback: auto-select for leagues without curated list
+    const league = data.leagues[leagueSlug];
+    if (!league) return [];
+    const jerseyCategories = ['fan', 'player', 'retro', 'longsleeve'];
+    const excludeCategories = ['training', 'sweater', 'windbreaker'];
+    const results: Array<{ title: string; handle: string; image: string; price: number; team: string }> = [];
+    for (const teamRef of league.teams) {
+      const team = data.teams[teamRef.id];
+      if (!team) continue;
+      for (const product of team.products) {
+        if (product.c.some(c => jerseyCategories.includes(c)) && !product.c.some(c => excludeCategories.includes(c))) {
+          results.push({ title: product.t, handle: product.h, image: product.i, price: parseFloat(product.p), team: team.name });
+        }
       }
     }
+    for (let i = results.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [results[i], results[j]] = [results[j], results[i]];
+    }
+    const teamCount: Record<string, number> = {};
+    const filtered: typeof results = [];
+    for (const item of results) {
+      const count = teamCount[item.team] || 0;
+      if (count < 2) { filtered.push(item); teamCount[item.team] = count + 1; if (filtered.length >= 10) break; }
+    }
+    return filtered;
   }
-  // Shuffle
-  for (let i = results.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [results[i], results[j]] = [results[j], results[i]];
-  }
-  // Max 2 per team
-  const teamCount: Record<string, number> = {};
-  const filtered: typeof results = [];
-  for (const item of results) {
-    const count = teamCount[item.team] || 0;
-    if (count < 2) {
-      filtered.push(item);
-      teamCount[item.team] = count + 1;
-      if (filtered.length >= limit) break;
+  // Curated: find products by handle
+  const results: Array<{ title: string; handle: string; image: string; price: number; team: string }> = [];
+  for (const handle of curated) {
+    const found = getProductByHandle(handle);
+    if (found) {
+      results.push({ title: found.product.t, handle: found.product.h, image: found.product.i, price: parseFloat(found.product.p), team: found.teamName });
     }
   }
-  return filtered;
+  return results;
 }
 
 export function searchTeams(query: string, limit = 10) {
