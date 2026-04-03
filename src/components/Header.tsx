@@ -24,7 +24,7 @@ export default function Header() {
   return (
     <>
       {/* Announcement Bar */}
-      <div className="relative bg-gradient-to-r from-[#a11b24] via-[var(--red-main)] to-[#a11b24] text-white text-xs py-1.5 overflow-hidden whitespace-nowrap">
+      <div className="relative bg-gradient-to-r from-[#a11b24] via-[var(--red-main)] to-[#a11b24] text-white text-xs py-1 md:py-1.5 overflow-hidden whitespace-nowrap">
         <div className="absolute inset-y-0 left-0 w-12 bg-gradient-to-r from-[#a11b24] to-transparent z-10 pointer-events-none" />
         <div className="absolute inset-y-0 right-0 w-12 bg-gradient-to-l from-[#a11b24] to-transparent z-10 pointer-events-none" />
         <div className="announcement-scroll inline-flex">
@@ -48,7 +48,7 @@ export default function Header() {
 
       {/* Main Header */}
       <header className="sticky top-0 z-50 bg-[#111]/95 backdrop-blur-md border-b border-white/10">
-        <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between relative">
+        <div className="max-w-7xl mx-auto px-4 h-12 md:h-16 flex items-center justify-between relative">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 flex-shrink-0">
             <Image src="/logo.png" alt="T-EXPRESS24" width={40} height={40} className="rounded-lg" />
@@ -123,7 +123,7 @@ export default function Header() {
         </div>
 
         {/* Mobile search bar */}
-        <div className="md:hidden px-4 pb-3">
+        <div className="md:hidden px-4 pb-2">
           <button
             onClick={() => setSearchOpen(true)}
             className="flex items-center gap-2 w-full bg-white/5 border border-white/10 rounded-lg px-3 py-2 text-sm text-gray-400 active:bg-white/10 transition-colors"
