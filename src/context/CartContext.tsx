@@ -96,7 +96,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
   const [pendingBundle, setPendingBundle] = useState<BundleType>(null);
 
   const setActiveBundle = (bundle: BundleType) => {
-    // Wenn Bundle aufgelöst wird und Artikel im Warenkorb sind → Bestätigung
+    // Bestätigung wenn Bundle aufgelöst wird und Artikel im Warenkorb sind
     if (bundle === null && activeBundle !== null && items.length > 0) {
       setConfirmCancel(true);
       return;
@@ -179,7 +179,10 @@ export function CartProvider({ children }: { children: ReactNode }) {
               </div>
               <h2 className="text-lg font-bold text-white mb-2">Bundle auflösen?</h2>
               <p className="text-sm text-gray-300 mb-6">
-                Du hast bereits {totalItems} {totalItems === 1 ? 'Trikot' : 'Trikots'} im Warenkorb. Wenn du das Bundle auflöst, verlierst du den Rabatt.
+                {bundleProgress.reached
+                  ? `Du hast ${totalItems} Trikots im Warenkorb. Wenn du das Bundle auflöst, verlierst du den Rabatt.`
+                  : `Du hast ${totalItems}/${bundleProgress.target} Trikots bis zum Rabatt. Bundle wirklich auflösen?`
+                }
               </p>
               <div className="flex gap-3">
                 <button
