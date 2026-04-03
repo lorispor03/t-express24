@@ -2,7 +2,8 @@ import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { getLeague, getAllLeagueSlugs, getSubLeaguesForLeague } from '@/lib/data';
+import { getLeague, getAllLeagueSlugs, getSubLeaguesForLeague, getLeagueTopSeller } from '@/lib/data';
+import LeagueTopSeller from '@/components/LeagueTopSeller';
 import { LEAGUE_LOGOS } from '@/lib/leagueLogos';
 import { TEAM_LOGOS } from '@/lib/teamLogos';
 import { SUB_LEAGUE_SLUGS, SUB_LEAGUE_LOGOS, SUB_LEAGUE_COUNTRIES } from '@/lib/subLeagueLogos';
@@ -34,6 +35,7 @@ export default async function LeaguePage({ params }: { params: Promise<{ slug: s
   const subLeagues = getSubLeaguesForLeague(slug);
   const subLeagueKeys = Object.keys(subLeagues);
   const hasSubLeagues = subLeagueKeys.length > 1;
+  const topSeller = getLeagueTopSeller(slug);
 
   return (
     <>
@@ -65,6 +67,9 @@ export default async function LeaguePage({ params }: { params: Promise<{ slug: s
           </div>
         </div>
       </section>
+
+      {/* Top Seller */}
+      {topSeller.length > 0 && <LeagueTopSeller deals={topSeller} />}
 
       {/* Content */}
       <section className="max-w-7xl mx-auto px-4 py-12">

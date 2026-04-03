@@ -106,6 +106,31 @@ export function searchProducts(query: string, limit = 20) {
   return results;
 }
 
+export function getLeagueTopSeller(leagueSlug: string, limit = 10): Array<{ title: string; handle: string; image: string; price: number; team: string }> {
+  const league = data.leagues[leagueSlug];
+  if (!league) return [];
+  const jerseyCategories = ['fan', 'player', 'retro', 'kids', 'kids-retro', 'female', 'longsleeve'];
+  const excludeCategories = ['training', 'sweater', 'windbreaker'];
+  const results: Array<{ title: string; handle: string; image: string; price: number; team: string }> = [];
+  for (const teamRef of league.teams) {
+    const team = data.teams[teamRef.id];
+    if (!team) continue;
+    for (const product of team.products) {
+      const hasJersey = product.c.some(c => jerseyCategories.includes(c));
+      const hasExcluded = product.c.some(c => excludeCategories.includes(c));
+      if (hasJersey && !hasExcluded) {
+        results.push({ title: product.t, handle: product.h, image: product.i, price: parseFloat(product.p), team: team.name });
+      }
+    }
+  }
+  // Shuffle and limit
+  for (let i = results.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [results[i], results[j]] = [results[j], results[i]];
+  }
+  return results.slice(0, limit);
+}
+
 export function searchTeams(query: string, limit = 10) {
   const q = query.toLowerCase();
   const results: Array<{ id: string; name: string; league: string; leagueName: string; productCount: number }> = [];
