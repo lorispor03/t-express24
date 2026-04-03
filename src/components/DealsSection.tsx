@@ -26,7 +26,7 @@ function DealCard({ deal }: { deal: typeof DEALS[number] }) {
   return (
     <Link
       href={`/product/${deal.handle}`}
-      className="flex-shrink-0 w-[160px] sm:w-[200px] group"
+      className="flex-shrink-0 w-[180px] sm:w-[200px] group"
     >
       <div className="relative bg-[#1a1a1a] rounded-xl border border-white/5 overflow-hidden transition-all group-hover:border-[var(--red-main)]/30 group-hover:shadow-lg group-hover:shadow-[var(--red-main)]/10 h-full flex flex-col">
         <div className="absolute top-2 left-2 z-10 bg-[var(--red-main)] text-white text-[10px] font-bold px-2 py-0.5 rounded-full">
