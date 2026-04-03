@@ -35,7 +35,8 @@ export default async function LeaguePage({ params }: { params: Promise<{ slug: s
   const subLeagues = getSubLeaguesForLeague(slug);
   const subLeagueKeys = Object.keys(subLeagues);
   const hasSubLeagues = subLeagueKeys.length > 1;
-  const topSeller = getLeagueTopSeller(slug);
+  const topSellerLeagues = ['premier-league', 'la-liga', 'bundesliga', 'serie-a', 'ligue-1', 'liga-portugal', 'eredivisie', 'nationalmannschaften'];
+  const topSeller = topSellerLeagues.includes(slug) ? getLeagueTopSeller(slug) : [];
 
   return (
     <>

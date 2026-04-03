@@ -123,12 +123,23 @@ export function getLeagueTopSeller(leagueSlug: string, limit = 10): Array<{ titl
       }
     }
   }
-  // Shuffle and limit
+  // Shuffle
   for (let i = results.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [results[i], results[j]] = [results[j], results[i]];
   }
-  return results.slice(0, limit);
+  // Max 2 per team
+  const teamCount: Record<string, number> = {};
+  const filtered: typeof results = [];
+  for (const item of results) {
+    const count = teamCount[item.team] || 0;
+    if (count < 2) {
+      filtered.push(item);
+      teamCount[item.team] = count + 1;
+      if (filtered.length >= limit) break;
+    }
+  }
+  return filtered;
 }
 
 export function searchTeams(query: string, limit = 10) {
