@@ -96,7 +96,7 @@ export default function DealsSection() {
     <section className="max-w-7xl mx-auto px-4 py-6">
       <div className="flex items-center justify-between mb-6">
         <div>
-          <h2 className="text-3xl md:text-5xl uppercase tracking-wide" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
+          <h2 className="text-4xl md:text-5xl uppercase tracking-wide" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
             Top Seller
           </h2>
           <p className="text-gray-400 text-sm mt-1">Die beliebtesten Trikots unserer Kunden</p>
