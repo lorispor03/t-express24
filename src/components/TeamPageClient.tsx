@@ -146,9 +146,9 @@ export default function TeamPageClient({ teamName, leagueName, leagueSlug, produ
   };
 
   return (
-    <div className="max-w-7xl mx-auto px-4 py-8">
+    <div className="max-w-7xl mx-auto px-4 py-3 md:py-8">
       {/* Toolbar */}
-      <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 mb-6">
+      <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3 mb-3 md:mb-6">
         {/* Search */}
         <div className="relative flex-1 w-full sm:max-w-xs">
           <svg className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">

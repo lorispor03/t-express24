@@ -26,7 +26,7 @@ body {
 
 /* Strikethrough brush style */
 .line-through { text-decoration: none; position: relative; }
-.line-through::after { content: ''; position: absolute; left: -1%; right: -1%; top: 20%; height: 60%; pointer-events: none; transform: rotate(-6deg); background: var(--red-main); opacity: 0.8; -webkit-mask-image: url('/brush-stroke.svg'); -webkit-mask-size: 100% 100%; -webkit-mask-repeat: no-repeat; mask-image: url('/brush-stroke.svg'); mask-size: 100% 100%; mask-repeat: no-repeat; }
+.line-through::after { content: ''; position: absolute; left: -2%; right: -2%; top: 15%; height: 70%; pointer-events: none; transform: rotate(-4deg); background: var(--red-main); opacity: 0.8; -webkit-mask-image: url('/brush-stroke.svg'); -webkit-mask-size: 100% 100%; -webkit-mask-repeat: no-repeat; mask-image: url('/brush-stroke.svg'); mask-size: 100% 100%; mask-repeat: no-repeat; }
 
 /* Product card hover */
 .product-card { transition: transform 0.2s ease, border-color 0.2s ease; }
