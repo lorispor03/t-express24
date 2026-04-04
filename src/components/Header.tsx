@@ -3,6 +3,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { useState, useEffect, useRef } from 'react';
+import { usePathname } from 'next/navigation';
 import { useCart } from '@/context/CartContext';
 import SearchOverlay from './SearchOverlay';
 
@@ -11,6 +12,8 @@ export default function Header() {
   const [searchOpen, setSearchOpen] = useState(false);
   const [bounce, setBounce] = useState(false);
   const prevItems = useRef(0);
+  const pathname = usePathname();
+  const isCheckout = pathname.startsWith('/checkout');
   const { totalItems, setCartOpen } = useCart();
 
   useEffect(() => {
@@ -20,6 +23,20 @@ export default function Header() {
     }
     prevItems.current = totalItems;
   }, [totalItems]);
+
+  // Checkout: minimaler Header
+  if (isCheckout) {
+    return (
+      <header className="sticky top-0 z-50 bg-[#111]/95 backdrop-blur-md border-b border-white/10">
+        <div className="max-w-7xl mx-auto px-4 h-12 md:h-16 flex items-center justify-between">
+          <Link href="/" className="flex items-center gap-3">
+            <Image src="/logo.png" alt="T-EXPRESS24" width={40} height={40} className="rounded-lg" />
+            <span className="font-extrabold text-lg tracking-tight hidden sm:inline">T-EXPRESS<span className="text-[var(--gold)]">24</span></span>
+          </Link>
+        </div>
+      </header>
+    );
+  }
 
   return (
     <>

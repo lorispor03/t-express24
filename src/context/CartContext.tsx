@@ -1,6 +1,6 @@
 'use client';
 
-import { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import { createContext, useContext, useState, useEffect, useRef, ReactNode } from 'react';
 import { Product } from '@/lib/types';
 import { PatchOption } from '@/lib/patches';
 
@@ -92,11 +92,15 @@ export function CartProvider({ children }: { children: ReactNode }) {
     }
   }, [activeBundle, loaded]);
 
-  // Punkt 4: Bundle automatisch deaktivieren wenn Warenkorb leer
+  // Punkt 4: Bundle automatisch deaktivieren wenn Warenkorb leer WIRD (nicht wenn er schon leer ist)
+  const prevItemCount = useRef<number | null>(null);
   useEffect(() => {
-    if (loaded && items.length === 0 && activeBundle) {
+    if (!loaded) return;
+    // Nur deaktivieren wenn Items von >0 auf 0 gehen (Warenkorb geleert)
+    if (prevItemCount.current !== null && prevItemCount.current > 0 && items.length === 0 && activeBundle) {
       setActiveBundleState(null);
     }
+    prevItemCount.current = items.length;
   }, [items.length, loaded, activeBundle]);
 
   const [confirmCancel, setConfirmCancel] = useState(false);

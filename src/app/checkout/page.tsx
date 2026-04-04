@@ -1,27 +1,25 @@
 'use client';
 
 import { useState } from 'react';
-import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { useCart } from '@/context/CartContext';
 
 export default function CheckoutPage() {
-  const router = useRouter();
-  const { items, totalItems, totalPrice, bundleDiscount, finalPrice, activeBundle, bundleProgress, clearCart, setCartOpen, loaded } = useCart();
+  const { items, totalItems, totalPrice, bundleDiscount, finalPrice, activeBundle, bundleProgress, loaded } = useCart();
 
-  const [vorname, setVorname] = useState('');
-  const [nachname, setNachname] = useState('');
-  const [email, setEmail] = useState('');
-  const [telefon, setTelefon] = useState('');
-  const [strasse, setStrasse] = useState('');
-  const [plz, setPlz] = useState('');
-  const [ort, setOrt] = useState('');
+  const [vorname, setVorname] = useState('Max');
+  const [nachname, setNachname] = useState('Muster');
+  const [email, setEmail] = useState('max@test.ch');
+  const [telefon, setTelefon] = useState('+41 79 123 45 67');
+  const [strasse, setStrasse] = useState('Bahnhofstrasse 10');
+  const [plz, setPlz] = useState('8001');
+  const [ort, setOrt] = useState('Zürich');
   const [land, setLand] = useState('Schweiz');
   const [nachricht, setNachricht] = useState('');
+  const [zahlungsart, setZahlungsart] = useState('');
   const [submitting, setSubmitting] = useState(false);
-  const [success, setSuccess] = useState(false);
   const [error, setError] = useState('');
 
   if (!loaded) {
@@ -36,7 +34,7 @@ export default function CheckoutPage() {
     );
   }
 
-  if (!success && items.length === 0) {
+  if (items.length === 0) {
     return (
       <>
         <Header />
@@ -57,27 +55,32 @@ export default function CheckoutPage() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!vorname.trim() || !nachname.trim() || !email.trim() || !telefon.trim() || !strasse.trim() || !plz.trim() || !ort.trim()) return;
+    if (!vorname.trim() || !nachname.trim() || !email.trim() || !telefon.trim() || !strasse.trim() || !plz.trim() || !ort.trim() || !zahlungsart) return;
 
     setSubmitting(true);
     setError('');
 
     try {
-      const res = await fetch('/api/orders', {
+      const res = await fetch('/api/checkout-session', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          kunde_name: `${vorname.trim()} ${nachname.trim()}`,
-          kunde_email: email.trim(),
-          kunde_telefon: telefon.trim(),
-          kunde_kontakt: email.trim(),
+          kunde: {
+            vorname: vorname.trim(),
+            nachname: nachname.trim(),
+            email: email.trim(),
+            telefon: telefon.trim(),
+          },
           lieferadresse: {
             strasse: strasse.trim(),
             plz: plz.trim(),
             ort: ort.trim(),
             land: land,
           },
+          zahlungsart,
           nachricht: nachricht.trim(),
+          bundle: activeBundle,
+          bundleDiscount,
           items: items.map(i => ({
             produkt_name: i.product.t,
             produkt_preis: i.product.p,
@@ -93,55 +96,36 @@ export default function CheckoutPage() {
         }),
       });
 
-      if (!res.ok) throw new Error('Fehler beim Senden');
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || 'Fehler beim Erstellen der Zahlung');
 
-      setSuccess(true);
-      clearCart();
-    } catch {
-      setError('Bestellung konnte nicht gesendet werden. Bitte versuche es erneut.');
-    } finally {
+      // Redirect to Stripe Checkout
+      window.location.href = data.url;
+    } catch (err: any) {
+      setError(err.message || 'Zahlung konnte nicht gestartet werden. Bitte versuche es erneut.');
       setSubmitting(false);
     }
   };
-
-  if (success) {
-    return (
-      <>
-        <Header />
-        <section className="max-w-3xl mx-auto px-4 py-20 text-center">
-          <div className="w-20 h-20 bg-green-500/20 rounded-full flex items-center justify-center mx-auto mb-6">
-            <svg className="w-10 h-10 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-            </svg>
-          </div>
-          <h1 className="text-3xl font-bold mb-3" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>Bestellung eingegangen!</h1>
-          <p className="text-gray-400 mb-8">Vielen Dank für deine Bestellung. Wir melden uns in Kürze bei dir.</p>
-          <Link href="/" className="inline-block bg-[var(--red-main)] hover:bg-[#a81d27] text-white font-bold py-3 px-8 rounded-lg text-sm transition-colors">
-            Zurück zum Shop
-          </Link>
-        </section>
-        <Footer />
-      </>
-    );
-  }
 
   return (
     <>
       <Header />
 
-      {/* Breadcrumb */}
+      {/* Hero */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[#111] via-[var(--red-dark)] to-[#111]" />
         <div className="relative max-w-7xl mx-auto px-4 py-6 md:py-8">
-          <div className="flex items-center gap-2 text-sm text-gray-400 mb-2">
-            <Link href="/" className="hover:text-white transition-colors">Shop</Link>
-            <span>/</span>
-            <span className="text-white">Kasse</span>
-          </div>
-          <h1 className="text-3xl md:text-4xl uppercase tracking-wide" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
+          <Link href="/" className="flex items-center gap-2 text-sm text-gray-400 hover:text-white transition-colors mb-3">
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+            </svg>
+            Zurück zum Shop
+          </Link>
+          <h1 className="text-4xl md:text-6xl font-black uppercase tracking-wide" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
             Bestellung abschliessen
           </h1>
           <p className="text-gray-400 mt-1 text-sm">{totalItems} {totalItems === 1 ? 'Artikel' : 'Artikel'} im Warenkorb</p>
+          <img src="/logo.png" alt="T-EXPRESS24" className="absolute right-8 top-1/2 -translate-y-[45%] h-[110%] object-contain" />
         </div>
       </section>
 
@@ -212,15 +196,6 @@ export default function CheckoutPage() {
               </div>
             ))}
 
-            <button
-              onClick={() => { setCartOpen(true); router.back(); }}
-              className="text-sm text-gray-400 hover:text-white transition-colors mt-4 inline-flex items-center gap-1"
-            >
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-              </svg>
-              Zurück zum Warenkorb
-            </button>
           </div>
 
           {/* Right: Form + Summary */}
@@ -335,6 +310,37 @@ export default function CheckoutPage() {
                 </div>
               </div>
 
+              {/* Zahlungsart */}
+              <div className="bg-[#1a1a1a] rounded-xl p-5 border border-white/5 space-y-4">
+                <h2 className="text-lg font-bold uppercase tracking-wide" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>Zahlungsart</h2>
+                <div className="grid grid-cols-3 gap-3">
+                  <button
+                    type="button"
+                    onClick={() => setZahlungsart('kreditkarte')}
+                    className={`flex flex-col items-center justify-center gap-2 p-4 rounded-lg border transition-all ${zahlungsart === 'kreditkarte' ? 'border-[var(--red-main)] bg-[var(--red-main)]/10' : 'border-white/10 bg-white/5 hover:border-white/20'}`}
+                  >
+                    <svg className="w-7 h-7 text-gray-300" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5z" /></svg>
+                    <span className="text-xs text-gray-300 font-medium">Kreditkarte</span>
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setZahlungsart('twint')}
+                    className={`flex flex-col items-center justify-center gap-2 p-4 rounded-lg border transition-all ${zahlungsart === 'twint' ? 'border-[var(--red-main)] bg-[var(--red-main)]/10' : 'border-white/10 bg-white/5 hover:border-white/20'}`}
+                  >
+                    <img src="/twint-logo.png" alt="TWINT" className="h-7 w-auto" />
+                    <span className="text-xs text-gray-300 font-medium">TWINT</span>
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setZahlungsart('paypal')}
+                    className={`flex flex-col items-center justify-center gap-2 p-4 rounded-lg border transition-all ${zahlungsart === 'paypal' ? 'border-[var(--red-main)] bg-[var(--red-main)]/10' : 'border-white/10 bg-white/5 hover:border-white/20'}`}
+                  >
+                    <img src="/paypal-logo.png" alt="PayPal" className="h-7 w-7 rounded" />
+                    <span className="text-xs text-gray-300 font-medium">PayPal</span>
+                  </button>
+                </div>
+              </div>
+
               {/* Nachricht */}
               <div className="bg-[#1a1a1a] rounded-xl p-5 border border-white/5 space-y-4">
                 <h2 className="text-lg font-bold uppercase tracking-wide" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>Anmerkungen</h2>
@@ -401,10 +407,10 @@ export default function CheckoutPage() {
 
               <button
                 type="submit"
-                disabled={submitting || !vorname.trim() || !nachname.trim() || !email.trim() || !telefon.trim() || !strasse.trim() || !plz.trim() || !ort.trim()}
+                disabled={submitting || !vorname.trim() || !nachname.trim() || !email.trim() || !telefon.trim() || !strasse.trim() || !plz.trim() || !ort.trim() || !zahlungsart}
                 className="w-full bg-[var(--red-main)] hover:bg-[#a81d27] disabled:opacity-50 disabled:cursor-not-allowed text-white font-bold py-3.5 rounded-lg text-sm transition-colors"
               >
-                {submitting ? 'Wird gesendet...' : `Bestellung absenden (CHF ${finalPrice.toFixed(2)})`}
+                {submitting ? 'Weiterleitung zur Zahlung...' : `Jetzt bezahlen — CHF ${finalPrice.toFixed(2)}`}
               </button>
             </form>
           </div>

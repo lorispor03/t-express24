@@ -1,12 +1,19 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { useRouter } from 'next/navigation';
+import { useRouter, usePathname } from 'next/navigation';
 import { useCart, BUNDLE_CONFIG } from '@/context/CartContext';
 
 export default function CartDrawer() {
   const router = useRouter();
+  const pathname = usePathname();
+  const isCheckout = pathname.startsWith('/checkout');
   const { items, removeItem, updateQuantity, clearCart, totalItems, totalPrice, bundleDiscount, finalPrice, isCartOpen, setCartOpen, activeBundle, setActiveBundle, bundleProgress } = useCart();
+
+  // Block cart drawer on checkout page
+  useEffect(() => {
+    if (isCheckout && isCartOpen) setCartOpen(false);
+  }, [isCheckout, isCartOpen, setCartOpen]);
   const [visible, setVisible] = useState(false);
   const [animating, setAnimating] = useState(false);
   const [hintType, setHintType] = useState<null | 'no-bundle' | 'upgrade' | 'downgrade' | 'not-reached'>(null);
