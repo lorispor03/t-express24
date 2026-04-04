@@ -21,7 +21,7 @@ export async function POST(req: NextRequest) {
     const paymentMethods = paymentMethodMap[zahlungsart] || ['card'];
 
     // Build line items for Stripe
-    const lineItems: Stripe.Checkout.SessionCreateParams.LineItem[] = items.map((item: any) => {
+    const lineItems: any[] = items.map((item: any) => {
       const basePrice = parseFloat(item.produkt_preis);
       const extraPrice = item.extras_preis || 0;
       const unitPrice = basePrice + extraPrice;
@@ -55,7 +55,7 @@ export async function POST(req: NextRequest) {
     });
 
     // Create Stripe coupon for bundle discount
-    let discounts: Stripe.Checkout.SessionCreateParams.Discount[] = [];
+    let discounts: any[] = [];
     if (bundleDiscount && bundleDiscount > 0) {
       const coupon = await stripe.coupons.create({
         amount_off: Math.round(bundleDiscount * 100),
@@ -81,7 +81,7 @@ export async function POST(req: NextRequest) {
     const origin = req.headers.get('origin') || 'https://t-express24.vercel.app';
 
     const session = await stripe.checkout.sessions.create({
-      payment_method_types: paymentMethods as Stripe.Checkout.SessionCreateParams.PaymentMethodType[],
+      payment_method_types: paymentMethods as any[],
       mode: 'payment',
       line_items: lineItems,
       ...(discounts.length > 0 ? { discounts } : {}),
