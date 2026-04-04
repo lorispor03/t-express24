@@ -247,6 +247,14 @@ body {
 }
 .animate-glow-pulse { animation: glow-pulse 1.5s ease-in-out infinite; }
 
+@keyframes overlay-fade {
+  0% { opacity: 0; }
+  15% { opacity: 1; }
+  75% { opacity: 1; }
+  100% { opacity: 0; }
+}
+.animate-overlay-fade { animation: overlay-fade 3s ease-in-out forwards; }
+
 .chevron-pulse { transform: rotate(90deg); }
 .chevron-1 { animation: chevron-flow 1.2s ease-in-out infinite; }
 .chevron-2 { animation: chevron-flow 1.2s ease-in-out 0.2s infinite; }

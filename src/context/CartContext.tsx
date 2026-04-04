@@ -92,6 +92,13 @@ export function CartProvider({ children }: { children: ReactNode }) {
     }
   }, [activeBundle, loaded]);
 
+  // Punkt 4: Bundle automatisch deaktivieren wenn Warenkorb leer
+  useEffect(() => {
+    if (loaded && items.length === 0 && activeBundle) {
+      setActiveBundleState(null);
+    }
+  }, [items.length, loaded, activeBundle]);
+
   const [confirmCancel, setConfirmCancel] = useState(false);
   const [pendingBundle, setPendingBundle] = useState<BundleType>(null);
 

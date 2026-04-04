@@ -6,20 +6,33 @@ import { usePathname } from 'next/navigation';
 import { useState, useEffect, useRef } from 'react';
 
 export default function BundleBar() {
-  const { activeBundle, setActiveBundle, bundleProgress, setCartOpen } = useCart();
+  const { activeBundle, setActiveBundle, bundleProgress, setCartOpen, loaded } = useCart();
   const pathname = usePathname();
   const isBundles = pathname === '/bundles';
-  const [dismissedOverlay, setDismissedOverlay] = useState(false);
-  const [dismissedShopBtn, setDismissedShopBtn] = useState(false);
+  const [dismissedOverlay, setDismissedOverlay] = useState(true);
+  const [dismissedShopBtn, setDismissedShopBtn] = useState(true);
   const prevBundle = useRef(activeBundle);
+  const initialLoadDone = useRef(false);
 
   useEffect(() => {
+    if (!loaded) return;
+    // Skip initial load from localStorage — don't show overlay for already-saved bundles
+    if (!initialLoadDone.current) {
+      initialLoadDone.current = true;
+      prevBundle.current = activeBundle;
+      return;
+    }
+    // Only show overlay when user freshly activates a bundle (null → value)
     if (activeBundle && !prevBundle.current) {
       setDismissedOverlay(false);
       setDismissedShopBtn(false);
+      // Auto-dismiss overlay after 3 seconds
+      const timer = setTimeout(() => setDismissedOverlay(true), 3000);
+      prevBundle.current = activeBundle;
+      return () => clearTimeout(timer);
     }
     prevBundle.current = activeBundle;
-  }, [activeBundle]);
+  }, [activeBundle, loaded]);
   const isShopPage = pathname.startsWith('/league/') || pathname.startsWith('/team/') || pathname.startsWith('/product/');
   const showShopButton = isBundles && !dismissedShopBtn;
 
@@ -32,7 +45,7 @@ export default function BundleBar() {
     <>
     <div className="h-24" />
     {isBundles && !dismissedOverlay && (
-      <div className="fixed inset-0 z-40 bg-black/80 pointer-events-auto" onClick={() => setDismissedOverlay(true)} />
+      <div className="fixed inset-0 z-40 bg-black/80 pointer-events-auto animate-overlay-fade" onClick={() => setDismissedOverlay(true)} />
     )}
     <div className={`fixed bottom-0 left-0 right-0 z-50 safe-area-bottom ${bundleProgress.reached ? 'bg-gradient-to-r from-green-900/90 via-green-800/90 to-green-900/90 border-t-2 border-green-400/50' : 'bg-gradient-to-r from-[#1a1000]/95 via-[#1a1500]/95 to-[#1a1000]/95 border-t-2 border-[var(--gold)]/50'}`} style={{ backdropFilter: 'blur(12px)' }}>
       <div className="max-w-7xl mx-auto px-4 py-3.5">
