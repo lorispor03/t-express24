@@ -2,13 +2,20 @@ import { NextRequest, NextResponse } from 'next/server';
 import Stripe from 'stripe';
 import { Redis } from '@upstash/redis';
 
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY!);
-const redis = new Redis({
-  url: process.env.KV_REST_API_URL!,
-  token: process.env.KV_REST_API_TOKEN!,
-});
+function getStripe() {
+  return new Stripe(process.env.STRIPE_SECRET_KEY!);
+}
+
+function getRedis() {
+  return new Redis({
+    url: process.env.KV_REST_API_URL!,
+    token: process.env.KV_REST_API_TOKEN!,
+  });
+}
 
 export async function POST(req: NextRequest) {
+  const stripe = getStripe();
+  const redis = getRedis();
   const body = await req.text();
   const sig = req.headers.get('stripe-signature');
 
