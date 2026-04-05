@@ -38,7 +38,14 @@ export async function POST(req: NextRequest) {
     const metadata = session.metadata || {};
 
     try {
-      const items = metadata.items_json ? JSON.parse(metadata.items_json) : [];
+      // Items aus aufgeteilten Metadata-Keys zusammensetzen
+      const itemChunkCount = parseInt(metadata.items_count || '0');
+      let compactItems: any[] = [];
+      for (let i = 0; i < itemChunkCount; i++) {
+        const chunk = metadata[`items_${i}`];
+        if (chunk) compactItems.push(...JSON.parse(chunk));
+      }
+
       const lieferadresse = metadata.lieferadresse ? JSON.parse(metadata.lieferadresse) : null;
 
       const id = await redis.incr('order_id_counter');
@@ -60,17 +67,17 @@ export async function POST(req: NextRequest) {
         status: 'neu',
         bezahlt: true,
         lieferant_bestellt: false,
-        items: items.map((item: any) => ({
-          produkt_name: item.produkt_name,
-          produkt_preis: item.produkt_preis,
-          team: item.team || '',
-          groesse: item.groesse || '',
-          beflockung_name: item.beflockung_name || '',
-          beflockung_nummer: item.beflockung_nummer || '',
-          patches: item.patches || [],
-          extras: item.extras || 'none',
-          extras_preis: item.extras_preis || 0,
-          menge: item.menge || 1,
+        items: compactItems.map((item: any) => ({
+          produkt_name: item.n,
+          produkt_preis: item.p,
+          team: item.t || '',
+          groesse: item.g || '',
+          beflockung_name: item.bn || '',
+          beflockung_nummer: item.bx || '',
+          patches: (item.pa || []).map((name: string) => ({ name })),
+          extras: item.e || 'none',
+          extras_preis: item.ep || 0,
+          menge: item.m || 1,
         })),
         gesamtpreis: (session.amount_total || 0) / 100,
       };

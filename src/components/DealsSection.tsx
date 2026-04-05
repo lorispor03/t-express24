@@ -4,22 +4,24 @@ import Link from 'next/link';
 import { useRef, useEffect, useState } from 'react';
 
 const DEALS = [
-  // Retro zuerst — Ligen durchmischt
-  { title: 'Retro Real Madrid 11/12 Away', team: 'Real Madrid', handle: 'retro-real-madrid-11-12-away-s-xxl', price: 49.90, image: 'https://img.wpassets-gamma.com/uploads/71478/cart/resources/20241225/5A1A70E0-1E05-322D-6889-46F420004B1A.jpg' },
-  { title: 'Retro Bayern 14/15 Home', team: 'Bayern München', handle: '1415-baiyun-home', price: 49.90, image: 'https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250519/aa014cc34e9ab021876bd62e059b27f0.png' },
-  { title: 'Retro AC Milan 06/07 Home', team: 'AC Milan', handle: 'retro-camisa-ac-milan-2006-07-home-long-sleeve', price: 59.90, image: 'https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250103/615648b458576cd9cd576cb6cd46a235.jpg' },
-  { title: 'Retro Brazil 2002 Home', team: 'Brasilien', handle: 'retro-camisa-brazil-2002-world-cup-home-masculina-yellow', price: 49.90, image: 'https://img.wpassets-gamma.com/uploads/71478/cart/resources/20241225/7C9EFFFC-7838-3187-57E8-E9B2947CC105.jpg' },
-  { title: 'Retro Barcelona 14/15 Home', team: 'FC Barcelona', handle: 'retro-14-15-barcelona-home-s-xxl', price: 49.90, image: 'https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250502/EE9F57DE-454A-A6DF-ED08-333BD091929D.jpg' },
-  { title: 'Retro Juventus 15/16 Away Pink', team: 'Juventus Turin', handle: 'retro-camisa-juventus-2015-16-away-pink', price: 49.90, image: 'https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250103/f517d6c574c20d18715c0177915ef7f1.jpg' },
-  { title: 'Retro Portugal 2006 Away', team: 'Portugal', handle: 'portugal-2006-away', price: 59.90, image: 'https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260203/d1c444d9731d0170789631bcc578c418.png' },
-  // 25/26 danach
-  { title: 'Arsenal 25/26 Home', team: 'Arsenal', handle: 'arsenal-25-26-home-s-4xl', price: 49.90, image: 'https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250524/60236145aba5045a7b5af2359d72bde2.png' },
-  { title: 'Barcelona 25/26 Home', team: 'FC Barcelona', handle: 'barcelona-x-ed-sheeran-25-26-home-s-4xl-fan-verison8', price: 49.90, image: 'https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251029/c0b88cb03ad9c3c984cee2f5d48fe37b.png' },
-  { title: 'Bayern München 25/26 Home', team: 'Bayern München', handle: 'bayern-muenchen-25-26-home-s-4xl', price: 49.90, image: 'https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250507/39105d8bb9f7990605218538d6c11426.png' },
-  { title: 'Liverpool 25/26 Home', team: 'Liverpool', handle: 'lvp-25-26-home-red-s-4xl', price: 49.90, image: 'https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250811/a0b4b860a99ad452798cbedb6fb3554c.png' },
-  { title: 'PSG 25/26 Home', team: 'Paris Saint-Germain', handle: 'psg-25-26-home-special-s-4xl', price: 49.90, image: 'https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250708/ca5d433b503f20fd0655b36fcc52197b.png' },
-  { title: 'Napoli 25/26 Home', team: 'SSC Neapel', handle: 'ssc-napoli-25-26-home-s-4xl', price: 49.90, image: 'https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250814/48fc415af683dac16a59ead0489d6e0a.png' },
-  { title: 'Real Madrid Marvel', team: 'Real Madrid', handle: 'real-madrid-marvel-jersey-s-xxl_2c3e2a34', price: 49.90, image: 'https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251206/bb76c42d8815bea2c24092411620aa07.png' },
+  // Legendäre Trikots — durchmischt, keine Mannschaft doppelt hintereinander
+  { title: 'Man United 98/99 – Treble', team: 'Manchester United', handle: 'retro-camisa-manchester-united-1998-99-home-red', price: 49.90, image: 'https://img.wpassets-gamma.com/uploads/71478/cart/resources/20241225/6B70A3B2-5CDC-B368-67E8-C3352719EAC6.jpg' },
+  { title: 'Brasilien 2002 – WM Sieger', team: 'Brasilien', handle: 'retro-camisa-brazil-2002-world-cup-home-masculina-yellow', price: 49.90, image: 'https://img.wpassets-gamma.com/uploads/71478/cart/resources/20241225/7C9EFFFC-7838-3187-57E8-E9B2947CC105.jpg' },
+  { title: 'Barcelona 08/09 – Sextuple', team: 'FC Barcelona', handle: 'retro-08-09-barcelona-ucl-final-home-size-s-xxl', price: 49.90, image: 'https://img.wpassets-gamma.com/uploads/71478/cart/resources/20240104/42615987-C07A-648C-B8E8-010DD3F03D62.jpeg' },
+  { title: 'Italien 2006 – WM Sieger', team: 'Italien', handle: 'retro-camisa-italy-2006-home-blue', price: 49.90, image: 'https://img.wpassets-gamma.com/uploads/71478/cart/resources/20241225/A5F1472C-9EDC-7DBD-64BF-513DD30619DA.jpg' },
+  { title: 'AC Milan 06/07 – CL Sieger', team: 'AC Milan', handle: 'retro-camisa-ac-milan-2006-07-home-long-sleeve', price: 59.90, image: 'https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250103/615648b458576cd9cd576cb6cd46a235.jpg' },
+  { title: 'Argentinien 1986 – Maradona', team: 'Argentinien', handle: 'argentina-1986-home-jersey-s-xxl', price: 49.90, image: 'https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250511/dfcb25c0544f11ed9bab7674b1da10fc.png' },
+  { title: 'Real Madrid 13/14 – La Décima', team: 'Real Madrid', handle: 'retro-camisa-real-madrid-13-14-home-white', price: 49.90, image: 'https://img.wpassets-gamma.com/uploads/71478/cart/resources/20241225/8270347B-3E84-6D42-53F2-7B97FDD2776D.jpg' },
+  { title: 'Frankreich 1998 – WM Sieger', team: 'Frankreich', handle: '1998-france-home-jersey-size-s-xxl', price: 49.90, image: 'https://img.wpassets-gamma.com/uploads/71478/cart/resources/20241226/aefde889a987d6a133f4f1c4bc880820.png' },
+  { title: 'Inter Mailand 09/10 – Treble', team: 'Inter Mailand', handle: 'retro-inter-milan-09-10-home-s-xxl', price: 49.90, image: 'https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250808/01c78857e0a4549fd0a1ac9685565836.png' },
+  { title: 'Deutschland 2014 – WM Sieger', team: 'Deutschland', handle: 'retro-germany-2014-home-s-xxl', price: 49.90, image: 'https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/837ccf9c3e353b935860966ae4089d10.jpg' },
+  { title: 'Bayern 12/13 – Treble', team: 'Bayern München', handle: 'retro-bayern-munich-12-13-home-s-xxl', price: 49.90, image: 'https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250519/81f69d61b0a5d8d5659fc96631fd47e1.png' },
+  { title: 'Spanien 2010 – WM Sieger', team: 'Spanien', handle: 'retro-camisa-spain-2010-home-red', price: 49.90, image: 'https://img.wpassets-gamma.com/uploads/71478/cart/resources/20241225/7373C3A4-308E-3EC1-208F-21481E50AA14.jpg' },
+  { title: 'Liverpool 04/05 – Istanbul', team: 'Liverpool', handle: 'retro-04-05-liverpool-home-final-kit-size-s-xxl', price: 49.90, image: 'https://img.wpassets-gamma.com/uploads/71478/cart/resources/20241225/F8784069-41B7-395A-D305-8D81E7C5548F.jpg' },
+  { title: 'Man United 07/08 – CL Sieger', team: 'Manchester United', handle: 'retro-camisa-manchester-united-07-08-home-red', price: 49.90, image: 'https://img.wpassets-gamma.com/uploads/71478/cart/resources/20241225/0B191980-B650-7ECE-C21C-BE85DB9D0339.jpg' },
+  { title: 'Chelsea 11/12 – CL Sieger', team: 'Chelsea', handle: 'retro-chelsea-2011-12-home-champions-league-long-sleeves', price: 49.90, image: 'https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250515/c24ca94be624294bd6cdde1889f20e52.jpg' },
+  { title: 'Arsenal 03/04 – Invincibles', team: 'Arsenal', handle: 'retro-2002-04-arsenal-home-s-xxl', price: 49.90, image: 'https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250504/2F722E61-3592-AAF7-1F9B-CFD408F8F7CE.jpg' },
+  { title: 'Juventus 95/96 – CL Sieger', team: 'Juventus Turin', handle: 'retro-juventus-1995-97-home-s-xxl', price: 49.90, image: 'https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250518/13db2286c2c06a1fbea82e589f1e4a5b.jpg' },
 ];
 
 function DealCard({ deal }: { deal: typeof DEALS[number] }) {

@@ -69,17 +69,46 @@ export async function POST(req: NextRequest) {
       discounts = [{ coupon: coupon.id }];
     }
 
-    // Build metadata for order processing
+    // Build metadata for order processing (Stripe max 500 chars per value)
+    // Kompakte Items: nur nötige Felder
+    const compactItems = items.map((item: any) => ({
+      n: item.produkt_name,
+      p: item.produkt_preis,
+      t: item.team || '',
+      g: item.groesse || '',
+      bn: item.beflockung_name || '',
+      bx: item.beflockung_nummer || '',
+      pa: (item.patches || []).map((p: any) => p.name),
+      e: item.extras || 'none',
+      ep: item.extras_preis || 0,
+      m: item.menge || 1,
+    }));
+
+    // Items auf mehrere Keys aufteilen (max 500 Zeichen pro Wert)
+    const itemChunks: string[] = [];
+    let currentChunk: any[] = [];
+    for (const item of compactItems) {
+      const test = JSON.stringify([...currentChunk, item]);
+      if (test.length > 490 && currentChunk.length > 0) {
+        itemChunks.push(JSON.stringify(currentChunk));
+        currentChunk = [item];
+      } else {
+        currentChunk.push(item);
+      }
+    }
+    if (currentChunk.length > 0) itemChunks.push(JSON.stringify(currentChunk));
+
     const metadata: Record<string, string> = {
       kunde_name: `${kunde.vorname} ${kunde.nachname}`,
       kunde_email: kunde.email,
       kunde_telefon: kunde.telefon || '',
-      lieferadresse: JSON.stringify(lieferadresse),
-      nachricht: nachricht || '',
+      lieferadresse: JSON.stringify(lieferadresse).slice(0, 500),
+      nachricht: (nachricht || '').slice(0, 500),
       zahlungsart,
       bundle: bundle || '',
-      items_json: JSON.stringify(items),
+      items_count: String(itemChunks.length),
     };
+    itemChunks.forEach((chunk, i) => { metadata[`items_${i}`] = chunk; });
 
     const origin = req.headers.get('origin') || 'https://t-express24.vercel.app';
 
