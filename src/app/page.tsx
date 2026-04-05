@@ -19,9 +19,9 @@ export default function HomePage() {
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[#111] via-[var(--red-dark)] to-[#111] hero-bg" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(196,34,46,0.3),transparent_70%)] hero-bg" />
-        <div className="relative max-w-7xl mx-auto px-4 py-3 md:pt-12 md:pb-8 text-center">
+        <div className="relative max-w-7xl mx-auto px-4 py-2 md:pt-6 md:pb-4 text-center">
           <div className="relative inline-block">
-            <Image src="/logo.png" alt="T-EXPRESS24" width={500} height={500} className="mx-auto max-w-[340px] sm:max-w-[450px] w-full hero-logo" priority />
+            <Image src="/logo.png" alt="T-EXPRESS24" width={500} height={500} className="mx-auto max-w-[280px] sm:max-w-[380px] md:max-w-[480px] w-full hero-logo" priority />
             <div className="hero-scanline" />
           </div>
         </div>

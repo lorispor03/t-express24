@@ -197,7 +197,15 @@ export function getLeagueTopSeller(leagueSlug: string): Array<{ title: string; h
       const count = teamCount[item.team] || 0;
       if (count < 2) { filtered.push(item); teamCount[item.team] = count + 1; if (filtered.length >= 10) break; }
     }
-    return filtered;
+    // Durchmischen: keine zwei Trikots derselben Mannschaft hintereinander
+    const spread: typeof filtered = [filtered[0]];
+    const rem = filtered.slice(1);
+    while (rem.length > 0) {
+      const idx = rem.findIndex(r => r.team !== spread[spread.length - 1].team);
+      if (idx === -1) { spread.push(...rem); break; }
+      spread.push(rem.splice(idx, 1)[0]);
+    }
+    return spread;
   }
   // Curated: find products by handle
   const results: Array<{ title: string; handle: string; image: string; price: number; team: string }> = [];
@@ -207,7 +215,19 @@ export function getLeagueTopSeller(leagueSlug: string): Array<{ title: string; h
       results.push({ title: found.product.t, handle: found.product.h, image: found.product.i, price: parseFloat(found.product.p), team: found.teamName });
     }
   }
-  return results;
+  // Durchmischen: keine zwei Trikots derselben Mannschaft hintereinander
+  for (let i = results.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [results[i], results[j]] = [results[j], results[i]];
+  }
+  const spread: typeof results = [results[0]];
+  const remaining = results.slice(1);
+  while (remaining.length > 0) {
+    const idx = remaining.findIndex(r => r.team !== spread[spread.length - 1].team);
+    if (idx === -1) { spread.push(...remaining); break; }
+    spread.push(remaining.splice(idx, 1)[0]);
+  }
+  return spread;
 }
 
 export function searchTeams(query: string, limit = 10) {
