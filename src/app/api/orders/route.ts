@@ -1,10 +1,12 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { Redis } from '@upstash/redis';
 
-const redis = new Redis({
-  url: process.env.KV_REST_API_URL!,
-  token: process.env.KV_REST_API_TOKEN!,
-});
+function getRedis() {
+  return new Redis({
+    url: process.env.KV_REST_API_URL!,
+    token: process.env.KV_REST_API_TOKEN!,
+  });
+}
 
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
@@ -18,7 +20,7 @@ export async function OPTIONS() {
 
 export async function GET() {
   try {
-    const orders = await redis.lrange('orders', 0, -1);
+    const orders = await getRedis().lrange('orders', 0, -1);
     return NextResponse.json(orders, { headers: corsHeaders });
   } catch {
     return NextResponse.json({ error: 'Serverfehler' }, { status: 500, headers: corsHeaders });
@@ -40,7 +42,7 @@ export async function POST(req: NextRequest) {
     const kontaktInfo = isPhone ? '' : `Instagram: ${kunde_kontakt}`;
 
     // Generate one order ID and bestell_nr per checkout
-    const id = await redis.incr('order_id_counter');
+    const id = await getRedis().incr('order_id_counter');
     const bestell_nr = 'B-' + String(id).padStart(4, '0');
 
     const orderData = {
@@ -66,7 +68,7 @@ export async function POST(req: NextRequest) {
       gesamtpreis: items.reduce((sum: number, item: any) => sum + (parseFloat(item.produkt_preis) * (item.menge || 1)), 0),
     };
 
-    await redis.lpush('orders', JSON.stringify(orderData));
+    await getRedis().lpush('orders', JSON.stringify(orderData));
 
     return NextResponse.json(
       { status: 'ok', message: 'Bestellung eingegangen', bestell_nr, id },
@@ -86,7 +88,7 @@ export async function PUT(req: NextRequest) {
       return NextResponse.json({ error: 'ID fehlt' }, { status: 400, headers: corsHeaders });
     }
 
-    const rawOrders = await redis.lrange('orders', 0, -1);
+    const rawOrders = await getRedis().lrange('orders', 0, -1);
     const orders = rawOrders.map((o) =>
       typeof o === 'string' ? JSON.parse(o) : o
     );
@@ -104,7 +106,7 @@ export async function PUT(req: NextRequest) {
     }
 
     // Rewrite the entire list atomically
-    const pipeline = redis.pipeline();
+    const pipeline = getRedis().pipeline();
     pipeline.del('orders');
     for (let i = orders.length - 1; i >= 0; i--) {
       pipeline.lpush('orders', JSON.stringify(orders[i]));
@@ -129,7 +131,7 @@ export async function DELETE(req: NextRequest) {
       return NextResponse.json({ error: 'ID fehlt' }, { status: 400, headers: corsHeaders });
     }
 
-    const rawOrders = await redis.lrange('orders', 0, -1);
+    const rawOrders = await getRedis().lrange('orders', 0, -1);
     const orders = rawOrders.map((o) =>
       typeof o === 'string' ? JSON.parse(o) : o
     );
@@ -141,7 +143,7 @@ export async function DELETE(req: NextRequest) {
     }
 
     // Rewrite the list without the deleted order
-    const pipeline = redis.pipeline();
+    const pipeline = getRedis().pipeline();
     pipeline.del('orders');
     for (let i = filtered.length - 1; i >= 0; i--) {
       pipeline.lpush('orders', JSON.stringify(filtered[i]));
