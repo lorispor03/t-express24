@@ -15,7 +15,9 @@ const STATS = [
   )},
   { num: 20, suffix: '+', label: 'Ligen', icon: (
     <svg className="w-5 h-5 sm:w-10 sm:h-10 md:w-12 md:h-12" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" d="M3 3v1.5M3 21v-6m0 0l2.77-.693a9 9 0 016.208.682l.108.054a9 9 0 006.086.71l3.114-.732a48.524 48.524 0 01-.005-10.499l-3.11.732a9 9 0 01-6.085-.711l-.108-.054a9 9 0 00-6.208-.682L3 4.5M3 15V4.5" />
+      <path strokeLinecap="round" strokeLinejoin="round" d="M6 3h12v1c0 3.5-1.5 6.5-4 8h-4C7.5 10.5 6 7.5 6 4V3z" />
+      <path strokeLinecap="round" strokeLinejoin="round" d="M6 4H4a1 1 0 00-1 1v1a4 4 0 004 4M18 4h2a1 1 0 011 1v1a4 4 0 01-4 4" />
+      <path strokeLinecap="round" strokeLinejoin="round" d="M10 12h4v3h-4zM8 18h8M9 15h6v3H9z" />
     </svg>
   )},
   { num: 100, suffix: '%', label: 'Geprüft', icon: (

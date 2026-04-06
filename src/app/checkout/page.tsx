@@ -115,17 +115,17 @@ export default function CheckoutPage() {
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[#111] via-[var(--red-dark)] to-[#111]" />
         <div className="relative max-w-7xl mx-auto px-4 py-6 md:py-8">
-          <Link href="/" className="flex items-center gap-2 text-sm text-gray-400 hover:text-white transition-colors mb-3">
+          <Link href="/" className="flex items-center gap-2 text-base md:text-sm text-gray-400 hover:text-white transition-colors mb-3 py-1">
             <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
             </svg>
             Zurück zum Shop
           </Link>
-          <h1 className="text-4xl md:text-6xl font-black uppercase tracking-wide" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
+          <h1 className="text-2xl md:text-6xl font-black uppercase tracking-wide" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
             Bestellung abschliessen
           </h1>
           <p className="text-gray-400 mt-1 text-sm">{totalItems} {totalItems === 1 ? 'Artikel' : 'Artikel'} im Warenkorb</p>
-          <img src="/logo.png" alt="T-EXPRESS24" className="absolute right-8 top-1/2 -translate-y-[45%] h-[110%] object-contain" />
+          <img src="/logo.png" alt="T-EXPRESS24" className="absolute right-4 md:right-8 top-1/2 -translate-y-[45%] h-[50%] md:h-[110%] object-contain" />
         </div>
       </section>
 

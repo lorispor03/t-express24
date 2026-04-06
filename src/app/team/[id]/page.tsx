@@ -48,10 +48,10 @@ export default async function TeamPage({ params }: { params: Promise<{ id: strin
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(196,34,46,0.15),transparent_60%)]" />
         <div className="relative max-w-7xl mx-auto px-4 py-4 md:py-8">
           {/* Breadcrumb */}
-          <div className="flex items-center gap-2 text-sm text-gray-400 mb-3 md:mb-4">
-            <Link href="/#ligen" className="hover:text-white transition-colors">Ligen</Link>
+          <div className="flex items-center gap-2 text-base md:text-sm text-gray-400 mb-3 md:mb-4 py-1">
+            <Link href="/#ligen" className="hover:text-white transition-colors py-1">Ligen</Link>
             <span>/</span>
-            <Link href={`/league/${team.league}`} className="hover:text-white transition-colors">{team.leagueName}</Link>
+            <Link href={`/league/${team.league}`} className="hover:text-white transition-colors py-1">{team.leagueName}</Link>
             <span>/</span>
             <span className="text-white">{team.name}</span>
           </div>

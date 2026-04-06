@@ -46,8 +46,8 @@ export default async function LeaguePage({ params }: { params: Promise<{ slug: s
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[#111] via-[var(--red-dark)] to-[#111]" />
         <div className="relative max-w-7xl mx-auto px-4 py-5 md:py-8">
-          <div className="flex items-center gap-2 text-sm text-gray-400 mb-2 md:mb-4">
-            <Link href="/#ligen" className="hover:text-white transition-colors">Ligen</Link>
+          <div className="flex items-center gap-2 text-base md:text-sm text-gray-400 mb-2 md:mb-4 py-1">
+            <Link href="/#ligen" className="hover:text-white transition-colors py-1">Ligen</Link>
             <span>/</span>
             <span className="text-white">{league.name}</span>
           </div>

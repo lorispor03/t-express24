@@ -12,8 +12,8 @@ export default function LeaguesPage() {
       <Header />
 
       <section className="max-w-7xl mx-auto px-4 py-12">
-        <div className="flex items-center gap-2 text-sm text-gray-400 mb-6">
-          <Link href="/#ligen" className="hover:text-white transition-colors">Ligen</Link>
+        <div className="flex items-center gap-2 text-base md:text-sm text-gray-400 mb-6 py-1">
+          <Link href="/#ligen" className="hover:text-white transition-colors py-1">Ligen</Link>
           <span>/</span>
           <span className="text-white">Alle Ligen</span>
         </div>
