@@ -179,7 +179,7 @@ export default function ProductDetailClient({ product, teamId, teamName, leagueN
       {/* Back Button */}
       <button
         onClick={() => router.back()}
-        className="flex items-center gap-2 text-base md:text-sm text-gray-400 hover:text-white transition-colors mb-8 py-2 group"
+        className="flex items-center gap-2 text-base md:text-sm text-gray-400 hover:text-white transition-colors mb-8 py-1 group"
       >
         <svg className="w-5 h-5 group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />

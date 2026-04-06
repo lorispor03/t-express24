@@ -32,8 +32,8 @@ export default function BundlesPage() {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(196,34,46,0.3),transparent_70%)]" />
         <div className="relative max-w-7xl mx-auto px-4 min-h-[180px] sm:min-h-[200px] flex items-center">
           <div>
-            <nav className="flex items-center gap-2 text-[11px] text-gray-600 mb-3">
-              <Link href="/" className="hover:text-white transition-colors">Home</Link>
+            <nav className="flex items-center gap-2 text-base md:text-sm text-gray-400 mb-3 py-1">
+              <Link href="/" className="hover:text-white transition-colors py-1 flex items-center gap-1"><svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" /></svg>Home</Link>
               <span>/</span>
               <span className="text-white">Bundles</span>
             </nav>
@@ -49,59 +49,69 @@ export default function BundlesPage() {
 
       {/* Bundles + How it works */}
       <section className="max-w-7xl mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-12">
+        {/* Desktop: Beide Titel + Bubbles + Step1 Circle über dem Grid */}
+        <div className="hidden lg:grid lg:grid-cols-5 gap-12 mb-0">
+          <div className="lg:col-span-3 flex items-start justify-center">
+            <h3 className="text-4xl font-bold uppercase tracking-wide mb-6 text-center" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>Wähle dein Bundle</h3>
+          </div>
+          <div className="lg:col-span-2 flex flex-col items-center">
+            <h3 className="text-4xl font-bold uppercase tracking-wide mb-6 text-center" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>Wie funktioniert&apos;s?</h3>
+            <div className="w-full">
+              <div className="flex justify-center gap-36 mb-0">
+                <div className="flex flex-col items-center">
+                  <div className="w-14 h-14 rounded-full bg-[var(--gold)]/15 border-2 border-[var(--gold)]/40 flex flex-col items-center justify-center z-10">
+                    <span className="text-[var(--gold)] font-black text-3xl leading-none" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>3+</span>
+                    <span className="text-[var(--gold)]/60 text-[11px] font-bold leading-none">15%</span>
+                  </div>
+                  <div className="w-0.5 h-6 bg-white/10 -mt-[1px]" />
+                </div>
+                <div className="flex flex-col items-center">
+                  <div className="w-14 h-14 rounded-full bg-[var(--gold)]/25 border-2 border-[var(--gold)] flex flex-col items-center justify-center z-10">
+                    <span className="text-[var(--gold)] font-black text-3xl leading-none" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>6+</span>
+                    <span className="text-[var(--gold)]/60 text-[11px] font-bold leading-none">20%</span>
+                  </div>
+                  <div className="w-0.5 h-6 bg-white/10 -mt-[1px]" />
+                </div>
+              </div>
+              <div className="flex justify-center -mt-[1px]">
+                <div className="h-0.5 bg-white/10" style={{ width: 'calc(9rem + 56px)' }} />
+              </div>
+              <div className="flex justify-center -mt-[1px]">
+                <div className="flex flex-col items-center">
+                  <div className="w-0.5 h-3 bg-white/10" />
+                  <div className="w-9 h-9 rounded-full bg-[var(--red-main)] text-white flex items-center justify-center font-bold text-base z-10" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>1</div>
+                  <div className="w-0.5 h-3 bg-white/10 -mb-[1px]" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:items-start">
 
           {/* Left: Bundle Cards (3 cols) */}
-          <div className="lg:col-span-3 grid grid-cols-2 lg:grid-cols-1 gap-3 lg:gap-6">
+          <div className="lg:col-span-3 grid grid-cols-1 gap-4 lg:gap-6 lg:self-start">
             {/* 3+ Trikots = 15% */}
             <div className={`relative bg-[#1a1a1a] rounded-2xl border overflow-hidden flex flex-col ${activeBundle === '3plus' ? 'border-green-400/50' : 'border-white/15'}`}>
               {activeBundle === '3plus' ? (
-                <div className="absolute top-0 left-0 right-0 bg-green-500 text-white text-center text-[9px] lg:text-xs font-bold py-1 lg:py-1.5 uppercase tracking-widest z-10">
+                <div className="absolute top-0 left-0 right-0 bg-green-500 text-white text-center text-xs font-bold py-1.5 uppercase tracking-widest z-10">
                   Aktiv
                 </div>
               ) : (
-                <div className="absolute top-0 left-0 right-0 bg-[#3a3020] text-[#b89a50] text-center text-[9px] lg:text-xs font-bold py-1 lg:py-1.5 uppercase tracking-widest z-10">
+                <div className="absolute top-0 left-0 right-0 bg-[#3a3020] text-[#b89a50] text-center text-xs font-bold py-1.5 uppercase tracking-widest z-10">
                   Starter Bundle
                 </div>
               )}
-              <div className="relative bg-gradient-to-br from-[var(--red-dark)]/60 to-transparent px-3 lg:px-6 py-3 lg:py-5 pt-8 lg:pt-10">
-                <div className="flex items-center gap-2 lg:gap-4">
-                  <span className="text-4xl lg:text-6xl font-black text-white leading-none" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>3+</span>
+              <div className="relative bg-gradient-to-br from-[var(--red-dark)]/60 to-transparent px-6 py-5 pt-10">
+                <div className="flex items-center gap-4">
+                  <span className="text-6xl font-black text-white leading-none" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>3+</span>
                   <div>
-                    <p className="text-[10px] lg:text-sm font-bold text-white">Ab 3 Trikots</p>
-                    <p className="text-base lg:text-xl font-black text-[var(--gold)]">15% Rabatt</p>
+                    <p className="text-sm font-bold text-white">Ab 3 Trikots</p>
+                    <p className="text-xl font-black text-[var(--gold)]">15% Rabatt</p>
                   </div>
-                  <span className="ml-auto bg-[var(--red-main)] text-white text-[11px] font-bold px-3 py-1 rounded-full hidden lg:inline">-15%</span>
+                  <span className="ml-auto bg-[var(--red-main)] text-white text-[11px] font-bold px-3 py-1 rounded-full">-15%</span>
                 </div>
               </div>
-              {/* Mobile content */}
-              <div className="p-3 pt-2 flex-1 flex flex-col lg:hidden">
-                <div className="space-y-1.5 mb-3">
-                  <div className="flex items-center gap-1.5">
-                    <svg className="w-3 h-3 text-[var(--gold)] flex-shrink-0" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
-                    <span className="text-[11px] text-gray-300">15% auf jedes Trikot</span>
-                  </div>
-                  <div className="flex items-center gap-1.5">
-                    <svg className="w-3 h-3 text-[var(--gold)] flex-shrink-0" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
-                    <span className="text-[11px] text-gray-300">Alle Ligen mischbar</span>
-                  </div>
-                  <div className="flex items-center gap-1.5">
-                    <svg className="w-3 h-3 text-[var(--gold)] flex-shrink-0" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
-                    <span className="text-[11px] text-gray-300">Verschiedene Grössen</span>
-                  </div>
-                </div>
-                <div className="bg-white/5 rounded-lg px-2 py-1.5 text-[10px] text-gray-400 mb-3">
-                  <span className="text-[var(--gold)] font-bold">CHF 127.25</span> <span className="text-gray-500 line-through ml-1">149.70</span>
-                </div>
-                <button
-                  onClick={() => toggleBundle('3plus')}
-                                    className={`w-full font-bold py-2 rounded-xl text-[11px] transition-all mt-auto ${activeBundle === '3plus' ? 'bg-red-500/15 text-red-400 border border-red-500/30' : 'bg-[#3a3020] text-[#b89a50] border border-[#b89a50]/30 hover:scale-[1.02]'}`}
-                >
-                  {activeBundle === '3plus' ? 'Deaktivieren' : 'Aktivieren'}
-                </button>
-              </div>
-              {/* Desktop content */}
-              <div className="hidden lg:flex p-5 pt-3 flex-1 flex-col">
+              <div className="flex p-4 lg:p-5 pt-2 lg:pt-3 flex-1 flex-col">
                 <div className="grid grid-cols-2 gap-x-4 gap-y-2.5 mb-5">
                   <div className="flex items-center gap-2">
                     <svg className="w-4 h-4 text-[var(--gold)] flex-shrink-0" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
@@ -133,7 +143,7 @@ export default function BundlesPage() {
                 </div>
                 <button
                   onClick={() => toggleBundle('3plus')}
-                                    className={`w-full font-bold py-3 rounded-xl text-sm transition-all mt-auto ${activeBundle === '3plus' ? 'bg-red-500/15 text-red-400 border border-red-500/30' : 'bg-[#3a3020] text-[#b89a50] border border-[#b89a50]/30 hover:scale-[1.02]'}`}
+                                    className={`w-full font-bold py-3 rounded-xl text-sm transition-all mt-auto ${activeBundle === '3plus' ? 'bg-red-500/15 text-red-400 border border-red-500/30' : 'bg-[#3a3020] text-[#b89a50] border border-[#b89a50]/30 hover:scale-[1.02] animate-pulse-slow'}`}
                 >
                   {activeBundle === '3plus' ? 'Bundle deaktivieren' : 'Bundle aktivieren & Trikots wählen'}
                 </button>
@@ -141,55 +151,27 @@ export default function BundlesPage() {
             </div>
 
             {/* 6+ Trikots = 20% */}
-            <div className={`relative bg-[#1a1a1a] rounded-2xl border-2 overflow-hidden flex flex-col ${activeBundle === '6plus' ? 'border-green-400/50' : 'border-[var(--gold)]/40 animate-pulse-slow'}`}>
+            <div className={`relative bg-[#1a1a1a] rounded-2xl border-2 overflow-hidden flex flex-col ${activeBundle === '6plus' ? 'border-green-400/50' : 'border-[var(--gold)]/40'}`}>
               {activeBundle === '6plus' ? (
-                <div className="absolute top-0 left-0 right-0 bg-green-500 text-white text-center text-[9px] lg:text-xs font-bold py-1 lg:py-1.5 uppercase tracking-widest z-10">
+                <div className="absolute top-0 left-0 right-0 bg-green-500 text-white text-center text-xs font-bold py-1.5 uppercase tracking-widest z-10">
                   Aktiv
                 </div>
               ) : (
-                <div className="absolute top-0 left-0 right-0 bg-[var(--gold)] text-black text-center text-[9px] lg:text-xs font-bold py-1 lg:py-1.5 uppercase tracking-widest z-10">
-                  <span className="lg:hidden">Beste Wahl</span>
-                  <span className="hidden lg:inline">Bestes Preis-Leistungs-Verhältnis</span>
+                <div className="absolute top-0 left-0 right-0 bg-[var(--gold)] text-black text-center text-xs font-bold py-1.5 uppercase tracking-widest z-10">
+                  Bestes Preis-Leistungs-Verhältnis
                 </div>
               )}
-              <div className="relative bg-gradient-to-br from-[var(--red-dark)]/60 to-transparent px-3 lg:px-6 py-3 lg:py-5 pt-8 lg:pt-10">
-                <div className="flex items-center gap-2 lg:gap-4">
-                  <span className="text-4xl lg:text-6xl font-black text-white leading-none" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>6+</span>
+              <div className="relative bg-gradient-to-br from-[var(--red-dark)]/60 to-transparent px-6 py-5 pt-10">
+                <div className="flex items-center gap-4">
+                  <span className="text-6xl font-black text-white leading-none" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>6+</span>
                   <div>
-                    <p className="text-[10px] lg:text-sm font-bold text-white">Ab 6 Trikots</p>
-                    <p className="text-base lg:text-xl font-black text-[var(--gold)]">20% Rabatt</p>
+                    <p className="text-sm font-bold text-white">Ab 6 Trikots</p>
+                    <p className="text-xl font-black text-[var(--gold)]">20% Rabatt</p>
                   </div>
-                  <span className="ml-auto bg-[var(--red-main)] text-white text-[11px] font-bold px-3 py-1 rounded-full hidden lg:inline">-20%</span>
+                  <span className="ml-auto bg-[var(--red-main)] text-white text-[11px] font-bold px-3 py-1 rounded-full">-20%</span>
                 </div>
               </div>
-              {/* Mobile content */}
-              <div className="p-3 pt-2 flex-1 flex flex-col lg:hidden">
-                <div className="space-y-1.5 mb-3">
-                  <div className="flex items-center gap-1.5">
-                    <svg className="w-3 h-3 text-[var(--gold)] flex-shrink-0" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
-                    <span className="text-[11px] text-gray-300">20% auf jedes Trikot</span>
-                  </div>
-                  <div className="flex items-center gap-1.5">
-                    <svg className="w-3 h-3 text-[var(--gold)] flex-shrink-0" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
-                    <span className="text-[11px] text-gray-300">Ideal für Mannschaften</span>
-                  </div>
-                  <div className="flex items-center gap-1.5">
-                    <svg className="w-3 h-3 text-[var(--gold)] flex-shrink-0" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
-                    <span className="text-[11px] text-gray-300">Höchste Ersparnis</span>
-                  </div>
-                </div>
-                <div className="bg-white/5 rounded-lg px-2 py-1.5 text-[10px] text-gray-400 mb-3">
-                  <span className="text-[var(--gold)] font-bold">CHF 239.50</span> <span className="text-gray-500 line-through ml-1">299.40</span>
-                </div>
-                <button
-                  onClick={() => toggleBundle('6plus')}
-                                    className={`w-full font-bold py-2 rounded-xl text-[11px] transition-all mt-auto ${activeBundle === '6plus' ? 'bg-red-500/15 text-red-400 border border-red-500/30' : 'bg-[var(--gold)] text-black hover:scale-[1.02]'}`}
-                >
-                  {activeBundle === '6plus' ? 'Deaktivieren' : 'Aktivieren'}
-                </button>
-              </div>
-              {/* Desktop content */}
-              <div className="hidden lg:flex p-5 pt-3 flex-1 flex-col">
+              <div className="flex p-4 lg:p-5 pt-2 lg:pt-3 flex-1 flex-col">
                 <div className="grid grid-cols-2 gap-x-4 gap-y-2.5 mb-5">
                   <div className="flex items-center gap-2">
                     <svg className="w-4 h-4 text-[var(--gold)] flex-shrink-0" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
@@ -229,7 +211,7 @@ export default function BundlesPage() {
                 </div>
                 <button
                   onClick={() => toggleBundle('6plus')}
-                                    className={`w-full font-bold py-3 rounded-xl text-sm transition-all mt-auto ${activeBundle === '6plus' ? 'bg-red-500/15 text-red-400 border border-red-500/30' : 'bg-[var(--gold)] text-black hover:scale-[1.02]'}`}
+                                    className={`w-full font-bold py-3 rounded-xl text-sm transition-all mt-auto ${activeBundle === '6plus' ? 'bg-red-500/15 text-red-400 border border-red-500/30' : 'bg-[var(--gold)] text-black hover:scale-[1.02] animate-pulse-slow'}`}
                 >
                   {activeBundle === '6plus' ? 'Bundle deaktivieren' : 'Bundle aktivieren & Trikots wählen'}
                 </button>
@@ -239,9 +221,8 @@ export default function BundlesPage() {
 
           {/* Right: How it works (2 cols) */}
           <div className="lg:col-span-2">
-            <h3 className="text-3xl md:text-3xl font-bold uppercase tracking-wide mb-6 text-center" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>Wie funktioniert&apos;s?</h3>
-
-            {/* === MOBILE Timeline === */}
+            {/* === MOBILE: Title + Timeline === */}
+            <h3 className="text-3xl md:text-3xl font-bold uppercase tracking-wide mb-6 text-center lg:hidden" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>Wie funktioniert&apos;s?</h3>
             <div className="lg:hidden flex flex-col items-center">
               {/* U-Branch */}
               <div className="flex justify-center gap-16 mb-0">
@@ -309,38 +290,6 @@ export default function BundlesPage() {
 
             {/* === DESKTOP Timeline === */}
             <div className="hidden lg:block">
-              {/* U-Branch: 3x and 6x centered over the Step 1 card area (starts at 52px from left) */}
-              <div className="pl-[52px]">
-                <div className="flex justify-center gap-36 mb-0">
-                  <div className="flex flex-col items-center">
-                    <div className="w-14 h-14 rounded-full bg-[var(--gold)]/15 border-2 border-[var(--gold)]/40 flex flex-col items-center justify-center z-10">
-                      <span className="text-[var(--gold)] font-black text-3xl leading-none" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>3+</span>
-                      <span className="text-[var(--gold)]/60 text-[11px] font-bold leading-none">15%</span>
-                    </div>
-                    <div className="w-0.5 h-6 bg-white/10 -mt-[1px]" />
-                  </div>
-                  <div className="flex flex-col items-center">
-                    <div className="w-14 h-14 rounded-full bg-[var(--gold)]/25 border-2 border-[var(--gold)] flex flex-col items-center justify-center z-10">
-                      <span className="text-[var(--gold)] font-black text-3xl leading-none" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>6+</span>
-                      <span className="text-[var(--gold)]/60 text-[11px] font-bold leading-none">20%</span>
-                    </div>
-                    <div className="w-0.5 h-6 bg-white/10 -mt-[1px]" />
-                  </div>
-                </div>
-                {/* Horizontal bar — connected to vertical lines */}
-                <div className="flex justify-center -mt-[1px]">
-                  <div className="h-0.5 bg-white/10" style={{ width: 'calc(9rem + 56px)' }} />
-                </div>
-                {/* Step 1 circle at merge point */}
-                <div className="flex justify-center -mt-[1px]">
-                  <div className="flex flex-col items-center">
-                    <div className="w-0.5 h-3 bg-white/10" />
-                    <div className="w-9 h-9 rounded-full bg-[var(--red-main)] text-white flex items-center justify-center font-bold text-base z-10" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>1</div>
-                    <div className="w-0.5 h-3 bg-white/10 -mb-[1px]" />
-                  </div>
-                </div>
-              </div>
-
               {/* Timeline from Step 1 downward — original full-size cards */}
               <div className="relative">
                 {/* Vertical line from Step 1 card horizontal connector down to bottom */}
