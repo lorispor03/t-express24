@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -13,6 +13,11 @@ export default function BundlesPage() {
   const [lightbox, setLightbox] = useState<string | null>(null);
   const [lbZoom, setLbZoom] = useState(false);
   const openLightbox = (src: string) => { setLightbox(src); setLbZoom(false); };
+  const [glowOn, setGlowOn] = useState(true);
+  useEffect(() => {
+    const id = setInterval(() => setGlowOn(v => !v), 800);
+    return () => clearInterval(id);
+  }, []);
 
   const toggleBundle = (type: '3plus' | '6plus') => {
     if (activeBundle === type) {
@@ -97,7 +102,7 @@ export default function BundlesPage() {
                   Aktiv
                 </div>
               ) : (
-                <div className="absolute top-0 left-0 right-0 bg-[#3a3020] text-[#b89a50] text-center text-xs font-bold py-1.5 uppercase tracking-widest z-10">
+                <div className="absolute top-0 left-0 right-0 bg-[#2a2d30] text-[#a8b0b8] text-center text-xs font-bold py-1.5 uppercase tracking-widest z-10">
                   Starter Bundle
                 </div>
               )}
@@ -106,7 +111,7 @@ export default function BundlesPage() {
                   <span className="text-6xl font-black text-white leading-none" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>3+</span>
                   <div>
                     <p className="text-sm font-bold text-white">Ab 3 Trikots</p>
-                    <p className="text-xl font-black text-[var(--gold)]">15% Rabatt</p>
+                    <p className="text-xl font-black text-[#a8b0b8]">15% Rabatt</p>
                   </div>
                   <span className="ml-auto bg-[var(--red-main)] text-white text-[11px] font-bold px-3 py-1 rounded-full">-15%</span>
                 </div>
@@ -114,36 +119,37 @@ export default function BundlesPage() {
               <div className="flex p-4 lg:p-5 pt-2 lg:pt-3 flex-1 flex-col">
                 <div className="grid grid-cols-2 gap-x-4 gap-y-2.5 mb-5">
                   <div className="flex items-center gap-2">
-                    <svg className="w-4 h-4 text-[var(--gold)] flex-shrink-0" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                    <svg className="w-4 h-4 text-[#a8b0b8] flex-shrink-0" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
                     <span className="text-sm text-gray-300">15% auf jedes Trikot</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <svg className="w-4 h-4 text-[var(--gold)] flex-shrink-0" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                    <svg className="w-4 h-4 text-[#a8b0b8] flex-shrink-0" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
                     <span className="text-sm text-gray-300">Alle Ligen frei mischbar</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <svg className="w-4 h-4 text-[var(--gold)] flex-shrink-0" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                    <svg className="w-4 h-4 text-[#a8b0b8] flex-shrink-0" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
                     <span className="text-sm text-gray-300">Heim- & Auswärts mixen</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <svg className="w-4 h-4 text-[var(--gold)] flex-shrink-0" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                    <svg className="w-4 h-4 text-[#a8b0b8] flex-shrink-0" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
                     <span className="text-sm text-gray-300">Verschiedene Grössen</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <svg className="w-4 h-4 text-[var(--gold)] flex-shrink-0" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                    <svg className="w-4 h-4 text-[#a8b0b8] flex-shrink-0" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
                     <span className="text-sm text-gray-300">Rabatt automatisch berechnet</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <svg className="w-4 h-4 text-[var(--gold)] flex-shrink-0" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                    <svg className="w-4 h-4 text-[#a8b0b8] flex-shrink-0" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
                     <span className="text-sm text-gray-300">Bereits ab 3 Trikots</span>
                   </div>
                 </div>
                 <div className="bg-white/5 rounded-lg px-3 py-2 text-xs text-gray-400 mb-4">
-                  3× à CHF 49.90 = <span className="text-[var(--gold)] font-bold">CHF 127.25</span> <span className="text-gray-500 line-through ml-1">149.70</span>
+                  3× à CHF 49.90 = <span className="text-[#a8b0b8] font-bold">CHF 127.25</span> <span className="text-gray-500 line-through ml-1">149.70</span>
                 </div>
                 <button
                   onClick={() => toggleBundle('3plus')}
-                                    className={`w-full font-bold py-3 rounded-xl text-sm transition-all mt-auto ${activeBundle === '3plus' ? 'bg-red-500/15 text-red-400 border border-red-500/30' : 'bg-[#3a3020] text-[#b89a50] border border-[#b89a50]/30 hover:scale-[1.02] animate-pulse-slow'}`}
+                                    style={activeBundle !== '3plus' ? { transition: 'box-shadow 0.4s ease-in-out, opacity 0.4s ease-in-out', boxShadow: glowOn ? '0 0 12px rgba(168,176,184,0.4), 0 0 24px rgba(168,176,184,0.15)' : '0 0 4px rgba(168,176,184,0.1)', opacity: glowOn ? 1 : 0.85 } : {}}
+                                    className={`w-full font-bold py-3 rounded-xl text-sm transition-all mt-auto ${activeBundle === '3plus' ? 'bg-red-500/15 text-red-400 border border-red-500/30' : 'bg-[#a8b0b8] text-black hover:scale-[1.02]'}`}
                 >
                   {activeBundle === '3plus' ? 'Bundle deaktivieren' : 'Bundle aktivieren & Trikots wählen'}
                 </button>
@@ -151,13 +157,13 @@ export default function BundlesPage() {
             </div>
 
             {/* 6+ Trikots = 20% */}
-            <div className={`relative bg-[#1a1a1a] rounded-2xl border-2 overflow-hidden flex flex-col ${activeBundle === '6plus' ? 'border-green-400/50' : 'border-[var(--gold)]/40'}`}>
+            <div className={`relative bg-[#1a1a1a] rounded-2xl border-2 overflow-hidden flex flex-col ${activeBundle === '6plus' ? 'border-green-400/50' : 'border-[#b89a50]/40'}`}>
               {activeBundle === '6plus' ? (
                 <div className="absolute top-0 left-0 right-0 bg-green-500 text-white text-center text-xs font-bold py-1.5 uppercase tracking-widest z-10">
                   Aktiv
                 </div>
               ) : (
-                <div className="absolute top-0 left-0 right-0 bg-[var(--gold)] text-black text-center text-xs font-bold py-1.5 uppercase tracking-widest z-10">
+                <div className="absolute top-0 left-0 right-0 bg-[#3a3020] text-[#b89a50] text-center text-xs font-bold py-1.5 uppercase tracking-widest z-10">
                   Bestes Preis-Leistungs-Verhältnis
                 </div>
               )}
@@ -166,7 +172,7 @@ export default function BundlesPage() {
                   <span className="text-6xl font-black text-white leading-none" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>6+</span>
                   <div>
                     <p className="text-sm font-bold text-white">Ab 6 Trikots</p>
-                    <p className="text-xl font-black text-[var(--gold)]">20% Rabatt</p>
+                    <p className="text-xl font-black text-[#b89a50]">20% Rabatt</p>
                   </div>
                   <span className="ml-auto bg-[var(--red-main)] text-white text-[11px] font-bold px-3 py-1 rounded-full">-20%</span>
                 </div>
@@ -174,44 +180,45 @@ export default function BundlesPage() {
               <div className="flex p-4 lg:p-5 pt-2 lg:pt-3 flex-1 flex-col">
                 <div className="grid grid-cols-2 gap-x-4 gap-y-2.5 mb-5">
                   <div className="flex items-center gap-2">
-                    <svg className="w-4 h-4 text-[var(--gold)] flex-shrink-0" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                    <svg className="w-4 h-4 text-[#b89a50] flex-shrink-0" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
                     <span className="text-sm text-gray-300">20% auf jedes Trikot</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <svg className="w-4 h-4 text-[var(--gold)] flex-shrink-0" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                    <svg className="w-4 h-4 text-[#b89a50] flex-shrink-0" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
                     <span className="text-sm text-gray-300">Alle Ligen frei mischbar</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <svg className="w-4 h-4 text-[var(--gold)] flex-shrink-0" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                    <svg className="w-4 h-4 text-[#b89a50] flex-shrink-0" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
                     <span className="text-sm text-gray-300">Heim- & Auswärts mixen</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <svg className="w-4 h-4 text-[var(--gold)] flex-shrink-0" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                    <svg className="w-4 h-4 text-[#b89a50] flex-shrink-0" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
                     <span className="text-sm text-gray-300">Verschiedene Grössen</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <svg className="w-4 h-4 text-[var(--gold)] flex-shrink-0" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                    <svg className="w-4 h-4 text-[#b89a50] flex-shrink-0" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
                     <span className="text-sm text-gray-300">Ideal für Mannschaften</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <svg className="w-4 h-4 text-[var(--gold)] flex-shrink-0" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                    <svg className="w-4 h-4 text-[#b89a50] flex-shrink-0" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
                     <span className="text-sm text-gray-300">Höchste Ersparnis pro Trikot</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <svg className="w-4 h-4 text-[var(--gold)] flex-shrink-0" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                    <svg className="w-4 h-4 text-[#b89a50] flex-shrink-0" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
                     <span className="text-sm text-gray-300">Rabatt automatisch berechnet</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <svg className="w-4 h-4 text-[var(--gold)] flex-shrink-0" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                    <svg className="w-4 h-4 text-[#b89a50] flex-shrink-0" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
                     <span className="text-sm text-gray-300">Einzeln personalisierbar</span>
                   </div>
                 </div>
                 <div className="bg-white/5 rounded-lg px-3 py-2 text-xs text-gray-400 mb-4">
-                  6× à CHF 49.90 = <span className="text-[var(--gold)] font-bold">CHF 239.50</span> <span className="text-gray-500 line-through ml-1">299.40</span>
+                  6× à CHF 49.90 = <span className="text-[#b89a50] font-bold">CHF 239.50</span> <span className="text-gray-500 line-through ml-1">299.40</span>
                 </div>
                 <button
                   onClick={() => toggleBundle('6plus')}
-                                    className={`w-full font-bold py-3 rounded-xl text-sm transition-all mt-auto ${activeBundle === '6plus' ? 'bg-red-500/15 text-red-400 border border-red-500/30' : 'bg-[var(--gold)] text-black hover:scale-[1.02] animate-pulse-slow'}`}
+                                    style={activeBundle !== '6plus' ? { transition: 'box-shadow 0.4s ease-in-out, opacity 0.4s ease-in-out', boxShadow: glowOn ? '0 0 12px rgba(240,167,62,0.4), 0 0 24px rgba(240,167,62,0.15)' : '0 0 4px rgba(240,167,62,0.1)', opacity: glowOn ? 1 : 0.85 } : {}}
+                                    className={`w-full font-bold py-3 rounded-xl text-sm transition-all mt-auto ${activeBundle === '6plus' ? 'bg-red-500/15 text-red-400 border border-red-500/30' : 'bg-[var(--gold)] text-black hover:scale-[1.02]'}`}
                 >
                   {activeBundle === '6plus' ? 'Bundle deaktivieren' : 'Bundle aktivieren & Trikots wählen'}
                 </button>

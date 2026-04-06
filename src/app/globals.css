@@ -92,8 +92,8 @@ body {
 }
 
 @keyframes pulse-slow {
-  0%, 100% { box-shadow: 0 0 8px rgba(240, 167, 62, 0.3); }
-  50% { box-shadow: 0 0 18px rgba(240, 167, 62, 0.6); }
+  0%, 100% { opacity: 1; box-shadow: 0 0 8px rgba(255,255,255,0.2); }
+  50% { opacity: 0.8; box-shadow: 0 0 20px rgba(255,255,255,0.5), 0 0 40px rgba(255,255,255,0.2); }
 }
 .animate-pulse-slow { animation: pulse-slow 2s ease-in-out infinite; }
 
