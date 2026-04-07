@@ -194,21 +194,6 @@ body {
   80% { opacity: 1; }
   100% { top: 80%; opacity: 0; }
 }
-@keyframes hero-glitch {
-  0% { clip-path: inset(0 0 100% 0); opacity: 0; }
-  15% { clip-path: inset(40% 0 30% 0); opacity: 1; }
-  20% { clip-path: inset(10% 0 60% 0); opacity: 0.8; }
-  25% { clip-path: inset(70% 0 5% 0); opacity: 1; }
-  30% { clip-path: inset(0 0 80% 0); opacity: 0.6; }
-  40% { clip-path: inset(20% 0 20% 0); opacity: 1; }
-  50% { clip-path: inset(0 0 0 0); opacity: 1; }
-  100% { clip-path: inset(0 0 0 0); opacity: 1; }
-}
-@keyframes hero-rgb-shift {
-  0%, 34% { text-shadow: -2px 0 #ff0000, 2px 0 #00ffff; }
-  35% { text-shadow: 0 0 transparent; }
-  100% { text-shadow: 0 0 transparent; }
-}
 .hero-logo {
   opacity: 0;
   -webkit-animation: neon-flicker 1.8s ease-out both, hero-scale 1.8s ease-out both, hero-blur 1.8s ease-out both;

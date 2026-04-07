@@ -5,6 +5,7 @@ import Footer from '@/components/Footer';
 import FAQ from '@/components/FAQ';
 import StatsBar from '@/components/StatsBar';
 import DealsSection from '@/components/DealsSection';
+import ScrollReveal from '@/components/ScrollReveal';
 import { getAllLeagues } from '@/lib/data';
 import { LEAGUE_LOGOS } from '@/lib/leagueLogos';
 
@@ -78,36 +79,37 @@ export default function HomePage() {
         <p className="text-gray-400 mb-3 md:mb-5">Wähle eine Liga und entdecke alle verfügbaren Artikel deiner Lieblings-Clubs.</p>
 
         <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
-          {Object.entries(leagues).map(([slug, league]) => (
-            <Link
-              key={slug}
-              href={`/league/${slug}`}
-              className="league-card group bg-[#3a3a3a] rounded-xl p-6 border border-white/15 hover:border-[var(--red-main)]/30 text-left"
-            >
-              <div className="mb-4 h-14 flex items-end">
-                {LEAGUE_LOGOS[slug] ? (
-                  <img
-                    src={LEAGUE_LOGOS[slug]}
-                    alt={league.name}
-                    className={`w-auto object-contain ${slug === 'la-liga' ? 'h-8 sm:h-14 sm:max-h-10' : slug === 'eredivisie' ? 'h-24 translate-y-5' : 'h-14'}`}
-                  />
-                ) : (
-                  <span className="text-3xl">&#9917;</span>
-                )}
-              </div>
-              <h3 className="text-xl md:text-2xl uppercase tracking-wide group-hover:text-[var(--gold)] transition-colors" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
-                {slug === 'nationalmannschaften' ? <><span className="sm:hidden">National-<br/>mannschaften</span><span className="hidden sm:inline">{league.name}</span></> : league.name}
-              </h3>
-              <p className="text-sm text-gray-400 mt-1">
-                {league.teamCount} {league.teamCount === 1 ? 'Team' : 'Teams'}
-              </p>
-              {league.country && (
-                <p className="text-sm text-gray-500 mt-0.5 flex items-center gap-1">
-                  <svg className="w-3 h-3 flex-shrink-0" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" /><path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" /></svg>
-                  {league.country}
+          {Object.entries(leagues).map(([slug, league], i) => (
+            <ScrollReveal key={slug} delay={i * 80}>
+              <Link
+                href={`/league/${slug}`}
+                className="league-card group bg-[#3a3a3a] rounded-xl p-6 border border-white/15 hover:border-[var(--red-main)]/30 text-left block h-full"
+              >
+                <div className="mb-4 h-14 flex items-end">
+                  {LEAGUE_LOGOS[slug] ? (
+                    <img
+                      src={LEAGUE_LOGOS[slug]}
+                      alt={league.name}
+                      className={`w-auto object-contain ${slug === 'la-liga' ? 'h-8 sm:h-14 sm:max-h-10' : slug === 'eredivisie' ? 'h-24 translate-y-5' : 'h-14'}`}
+                    />
+                  ) : (
+                    <span className="text-3xl">&#9917;</span>
+                  )}
+                </div>
+                <h3 className="text-xl md:text-2xl uppercase tracking-wide group-hover:text-[var(--gold)] transition-colors" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
+                  {slug === 'nationalmannschaften' ? <><span className="sm:hidden">National-<br/>mannschaften</span><span className="hidden sm:inline">{league.name}</span></> : league.name}
+                </h3>
+                <p className="text-sm text-gray-400 mt-1">
+                  {league.teamCount} {league.teamCount === 1 ? 'Team' : 'Teams'}
                 </p>
-              )}
-            </Link>
+                {league.country && (
+                  <p className="text-sm text-gray-500 mt-0.5 flex items-center gap-1">
+                    <svg className="w-3 h-3 flex-shrink-0" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" /><path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" /></svg>
+                    {league.country}
+                  </p>
+                )}
+              </Link>
+            </ScrollReveal>
           ))}
         </div>
       </section>
