@@ -45,7 +45,7 @@ export default function Header() {
         <div className="absolute inset-y-0 left-0 w-12 bg-gradient-to-r from-[#a11b24] to-transparent z-10 pointer-events-none" />
         <div className="absolute inset-y-0 right-0 w-12 bg-gradient-to-l from-[#a11b24] to-transparent z-10 pointer-events-none" />
         <div className="announcement-scroll inline-flex">
-          {[...Array(2)].map((_, i) => (
+          {[...Array(4)].map((_, i) => (
             <span key={i} className="inline-flex items-center">
               <span className="px-6">Qualitätsgeprüft in der Schweiz</span>
               <span className="text-white/50 text-2xl leading-none">•</span>

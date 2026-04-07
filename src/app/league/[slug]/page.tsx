@@ -69,8 +69,6 @@ export default async function LeaguePage({ params }: { params: Promise<{ slug: s
         </div>
       </section>
 
-      {/* Top Seller */}
-      {topSeller.length > 0 && <LeagueTopSeller deals={topSeller} />}
 
       {/* Content */}
       <section className="max-w-7xl mx-auto px-4 py-12">

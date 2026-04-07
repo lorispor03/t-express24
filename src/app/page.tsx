@@ -38,7 +38,7 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-[var(--red-dark)]/30" />
         <div className="absolute left-0 right-0 -top-16 h-16 bg-gradient-to-b from-transparent to-[var(--red-dark)]/30" />
         <div className="absolute left-0 right-0 -bottom-24 h-24 bg-gradient-to-b from-[var(--red-dark)]/30 to-transparent" />
-        <div className="relative max-w-7xl mx-auto px-4 py-3 md:py-4">
+        <div className="relative max-w-7xl mx-auto px-4 pt-2 md:pt-3 pb-4 md:pb-5">
           <h2 className="text-4xl md:text-5xl uppercase tracking-wide mb-1 text-[var(--red-main)]" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
             Bundles
           </h2>
@@ -73,7 +73,7 @@ export default function HomePage() {
       </section>
 
       {/* Leagues Grid */}
-      <section id="ligen" className="max-w-7xl mx-auto px-4 pt-4 md:pt-5 pb-3 md:pb-5 scroll-mt-20">
+      <section id="ligen" className="max-w-7xl mx-auto px-4 pt-2 md:pt-3 pb-6 md:pb-10 scroll-mt-20">
         <h2 className="text-4xl md:text-5xl uppercase tracking-wide mb-1" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>Unsere Ligen</h2>
         <p className="text-gray-400 mb-3 md:mb-5">Wähle eine Liga und entdecke alle verfügbaren Artikel deiner Lieblings-Clubs.</p>
 

@@ -176,16 +176,14 @@ export default function ProductDetailClient({ product, teamId, teamName, leagueN
 
   return (
     <div className="max-w-6xl mx-auto px-4 py-6">
-      {/* Back Button */}
-      <button
-        onClick={() => router.back()}
-        className="flex items-center gap-2 text-base md:text-sm text-gray-400 hover:text-white transition-colors mb-8 py-1 group"
-      >
-        <svg className="w-5 h-5 group-hover:-translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-        </svg>
-        Zurück
-      </button>
+      {/* Breadcrumb */}
+      <div className="flex items-center gap-2 text-base md:text-sm text-gray-400 mb-8 py-1">
+        <Link href={`/league/${leagueSlug}`} className="hover:text-white transition-colors py-1 flex items-center gap-1"><svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" /></svg>{leagueName}</Link>
+        <span>/</span>
+        <Link href={`/team/${teamId}`} className="hover:text-white transition-colors py-1">{teamName}</Link>
+        <span>/</span>
+        <span className="text-white truncate">{product.t}</span>
+      </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
         {/* Image Gallery */}
@@ -266,15 +264,6 @@ export default function ProductDetailClient({ product, teamId, teamName, leagueN
               </span>
             ))}
           </div>
-
-          {/* Breadcrumb */}
-          <nav className="flex items-center gap-2 text-[11px] text-gray-600 mb-3">
-            <Link href="/" className="hover:text-white transition-colors">Home</Link>
-            <span>/</span>
-            <Link href={`/league/${leagueSlug}`} className="hover:text-white transition-colors">{leagueName}</Link>
-            <span>/</span>
-            <Link href={`/team/${teamId}`} className="hover:text-white transition-colors">{teamName}</Link>
-          </nav>
 
           <h1 className="text-xl sm:text-2xl font-bold text-white leading-tight mb-2">{product.t}</h1>
           <p className="text-sm text-gray-500 mb-4">{teamName}</p>

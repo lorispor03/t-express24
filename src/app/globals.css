@@ -74,10 +74,10 @@ body {
 /* Announcement bar scroll */
 @keyframes scroll-left {
   0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  100% { transform: translateX(-25%); }
 }
 .announcement-scroll {
-  animation: scroll-left 25s linear infinite;
+  animation: scroll-left 20s linear infinite;
   animation-play-state: var(--anim-state);
 }
 
@@ -92,8 +92,8 @@ body {
 }
 
 @keyframes pulse-slow {
-  0%, 100% { opacity: 1; box-shadow: 0 0 8px rgba(255,255,255,0.2); }
-  50% { opacity: 0.8; box-shadow: 0 0 20px rgba(255,255,255,0.5), 0 0 40px rgba(255,255,255,0.2); }
+  0%, 100% { opacity: 1; box-shadow: 0 0 8px rgba(240,167,62,0.3); }
+  50% { opacity: 0.85; box-shadow: 0 0 15px rgba(240,167,62,0.5), 0 0 30px rgba(240,167,62,0.2); }
 }
 .animate-pulse-slow { animation: pulse-slow 2s ease-in-out infinite; }
 
