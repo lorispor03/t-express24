@@ -4,10 +4,25 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { getLeague, getAllLeagueSlugs, getSubLeaguesForLeague, getLeagueTopSeller } from '@/lib/data';
 import LeagueTopSeller from '@/components/LeagueTopSeller';
+import ScrollReveal from '@/components/ScrollReveal';
 import { LEAGUE_LOGOS } from '@/lib/leagueLogos';
 import { TEAM_LOGOS } from '@/lib/teamLogos';
 import { SUB_LEAGUE_SLUGS, SUB_LEAGUE_LOGOS, SUB_LEAGUE_COUNTRIES } from '@/lib/subLeagueLogos';
 import type { Metadata } from 'next';
+
+const LEAGUE_DESCRIPTIONS: Record<string, string> = {
+  'premier-league': 'Die Premier League ist die höchste Spielklasse im englischen Fußball und gilt als die umsatzstärkste und meistgesehene Liga der Welt. Mit 20 Mannschaften bietet sie Woche für Woche hochklassigen, intensiven Fußball. Legendäre Vereine wie Manchester United, Liverpool und Arsenal prägen die über 130-jährige Geschichte des englischen Spitzenfußballs.',
+  'la-liga': 'La Liga ist die höchste Spielklasse im spanischen Vereinsfußball und Heimat von Weltklubs wie Real Madrid und FC Barcelona. Die Liga ist bekannt für ihr technisch anspruchsvolles, ballbesitzorientiertes Spiel und hat zahlreiche Ballon-d\'Or-Gewinner hervorgebracht. Spanische Vereine zählen zu den erfolgreichsten Teilnehmern in der Geschichte der UEFA Champions League.',
+  'bundesliga': 'Die Bundesliga ist die höchste Spielklasse im deutschen Fußball und weltweit bekannt für ihre vollen Stadien und leidenschaftliche Fankultur. Mit dem höchsten Zuschauerschnitt aller Fußballligen weltweit steht sie für emotionale Atmosphäre und attraktiven Offensivfußball. Der FC Bayern München ist mit Abstand der erfolgreichste Verein, doch Klubs wie Borussia Dortmund und Bayer Leverkusen sorgen für spannenden Wettbewerb.',
+  'serie-a': 'Die Serie A ist die höchste italienische Fußballliga und war besonders in den 1980er- und 1990er-Jahren die stärkste Liga der Welt. Italienischer Fußball ist traditionell für seine taktische Raffinesse und defensive Stabilität bekannt. Rekordmeister Juventus Turin, AC Mailand und Inter Mailand gehören zu den erfolgreichsten Vereinen Europas.',
+  'ligue-1': 'Die Ligue 1 ist die höchste Spielklasse im französischen Profifußball und bekannt als Sprungbrett für junge Talente aus aller Welt. Paris Saint-Germain dominiert das nationale Geschehen seit über einem Jahrzehnt, doch Vereine wie Olympique Marseille und AS Monaco sorgen regelmäßig für Überraschungen. Die Liga hat einige der besten Spieler der Fußballgeschichte hervorgebracht und weiterentwickelt.',
+  'liga-portugal': 'Die Liga Portugal ist die höchste Spielklasse im portugiesischen Fußball und wird traditionell von den drei Großen dominiert: Benfica, FC Porto und Sporting Lissabon. Portugal gilt als eines der besten Ausbildungsländer für junge Fußballtalente in Europa. Die Liga hat Weltstars wie Cristiano Ronaldo, Eusébio und Luis Figo hervorgebracht.',
+  'eredivisie': 'Die Eredivisie ist die höchste Spielklasse im niederländischen Fußball und weltweit für ihre herausragende Nachwuchsarbeit und offensive Spielphilosophie bekannt. Ajax Amsterdam, PSV Eindhoven und Feyenoord Rotterdam bilden die traditionelle Spitze der Liga. Der niederländische „Totaalvoetbal" hat den modernen Fußball maßgeblich beeinflusst und Generationen von Weltklassespielern hervorgebracht.',
+  'nationalmannschaften': 'Nationalmannschaftstrikots stehen für den Stolz eines ganzen Landes und die größten Momente des internationalen Fußballs. Von der Weltmeisterschaft über die Europameisterschaft bis hin zur Copa América vereinen sie Millionen von Fans hinter ihren Teams. Jedes Trikot erzählt die Geschichte einer Nation und ihrer Fußballtradition.',
+  'europa-andere': 'Neben den großen europäischen Top-Ligen bieten Wettbewerbe wie die türkische Süper Lig, die belgische Pro League oder die schottische Premiership erstklassigen Fußball mit eigener Identität. Auch Ligen aus Südamerika, Nordamerika und Asien begeistern mit leidenschaftlichen Fans und aufstrebenden Talenten. Hier findest du Trikots von Vereinen und Ligen abseits des Mainstreams.',
+  'clubs-world': 'Weltclubs vereinen die spannendsten Vereine aus Südamerika, Nordamerika, Asien und Afrika unter einem Dach. Von Brasiliens Flamengo über Mexikos Club América bis hin zu Japans Vissel Kobe – hier triffst du auf Fußballkultur aus allen Ecken der Welt. Entdecke Trikots von Vereinen, die in ihren Heimatländern Legenden sind.',
+  'zweitligisten': 'Die zweiten Ligen Europas sind das Rückgrat des professionellen Fußballs und oft die Heimat von Traditionsklubs mit leidenschaftlicher Fanbase. Von der englischen Championship über die 2. Bundesliga bis hin zur Serie B bieten sie spannende Aufstiegskämpfe und packende Derbys. Hier findest du Trikots von Vereinen mit Geschichte und Charakter.',
+};
 
 export function generateStaticParams() {
   return getAllLeagueSlugs().map(slug => ({ slug }));
@@ -70,6 +85,22 @@ export default async function LeaguePage({ params }: { params: Promise<{ slug: s
       </section>
 
 
+      {/* League Description */}
+      {LEAGUE_DESCRIPTIONS[slug] && (
+        <section className="border-b border-white/10 bg-[var(--red-main)]/5 md:bg-[#111]">
+          <div className="max-w-7xl mx-auto px-4 py-3 md:py-6">
+            <div className="md:bg-[var(--red-main)]/5 md:backdrop-blur-md md:rounded-xl md:px-5 md:py-4 md:border md:border-[var(--red-main)]/10 min-h-[60px] flex items-center">
+              <div className="relative pl-6 border-l-2 border-[var(--gold)]/40">
+                <span className="absolute left-0.5 -top-1 text-4xl text-[var(--gold)]/30 font-serif leading-none select-none">&ldquo;</span>
+                <p className="text-[13px] sm:text-sm text-gray-300 leading-relaxed italic">
+                  {LEAGUE_DESCRIPTIONS[slug]}
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Content */}
       <section className="max-w-7xl mx-auto px-4 py-12">
         {hasSubLeagues ? (
@@ -110,11 +141,11 @@ export default async function LeaguePage({ params }: { params: Promise<{ slug: s
         ) : (
           /* Normal team grid */
           <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 sm:gap-4">
-            {league.teams.map(team => (
+            {league.teams.map((team, i) => (
+              <ScrollReveal key={team.id} delay={i * 30} mobileOnly>
               <Link
-                key={team.id}
                 href={`/team/${team.id}`}
-                className="team-card bg-[#1a1a1a] rounded-xl p-3 sm:p-5 border border-white/5 hover:border-[var(--red-main)]/30 text-center"
+                className="team-card bg-[#1a1a1a] rounded-xl p-3 sm:p-5 border border-white/5 hover:border-[var(--red-main)]/30 text-center block h-full"
               >
                 {(() => {
                   const teamSlug = team.id.split('__')[1];
@@ -130,6 +161,7 @@ export default async function LeaguePage({ params }: { params: Promise<{ slug: s
                 <h3 className="text-xs sm:text-sm uppercase line-clamp-2 mb-1" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>{team.name}</h3>
                 <p className="text-[10px] sm:text-xs text-gray-500">{team.count} Artikel</p>
               </Link>
+              </ScrollReveal>
             ))}
           </div>
         )}

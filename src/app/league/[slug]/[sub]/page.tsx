@@ -5,6 +5,7 @@ import Footer from '@/components/Footer';
 import { getLeague, getAllLeagueSlugs, getTeamsBySubLeague, getAllSubLeagueSlugs } from '@/lib/data';
 import { LEAGUE_LOGOS } from '@/lib/leagueLogos';
 import { TEAM_LOGOS } from '@/lib/teamLogos';
+import ScrollReveal from '@/components/ScrollReveal';
 import { SUB_LEAGUE_LOGOS, SUB_LEAGUE_COUNTRIES, SUB_LEAGUE_SLUGS } from '@/lib/subLeagueLogos';
 import type { Metadata } from 'next';
 
@@ -81,11 +82,11 @@ export default async function SubLeaguePage({ params }: { params: Promise<{ slug
       {/* Teams Grid */}
       <section className="max-w-7xl mx-auto px-4 py-12">
         <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 sm:gap-4">
-          {result.teams.map(team => (
+          {result.teams.map((team, i) => (
+            <ScrollReveal key={team.id} delay={i * 30} mobileOnly>
             <Link
-              key={team.id}
               href={`/team/${team.id}`}
-              className="team-card bg-[#1a1a1a] rounded-xl p-3 sm:p-5 border border-white/5 hover:border-[var(--red-main)]/30 text-center"
+              className="team-card bg-[#1a1a1a] rounded-xl p-3 sm:p-5 border border-white/5 hover:border-[var(--red-main)]/30 text-center block h-full"
             >
               {(() => {
                 const teamSlug = team.id.split('__')[1];
@@ -101,6 +102,7 @@ export default async function SubLeaguePage({ params }: { params: Promise<{ slug
               <h3 className="text-xs sm:text-sm uppercase line-clamp-2 mb-1" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>{team.name}</h3>
               <p className="text-[10px] sm:text-xs text-gray-500">{team.count} Artikel</p>
             </Link>
+            </ScrollReveal>
           ))}
         </div>
       </section>

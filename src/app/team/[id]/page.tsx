@@ -46,9 +46,9 @@ export default async function TeamPage({ params }: { params: Promise<{ id: strin
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[#111] via-[var(--red-dark)] to-[#111]" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(196,34,46,0.15),transparent_60%)]" />
-        <div className="relative max-w-7xl mx-auto px-4 py-4 md:py-8">
+        <div className="relative max-w-7xl mx-auto px-4 py-4 md:py-6">
           {/* Breadcrumb */}
-          <div className="flex items-center gap-2 text-base md:text-sm text-gray-400 mb-3 md:mb-4 py-1">
+          <div className="flex items-center gap-2 text-base md:text-sm text-gray-400 mb-3 md:mb-3 py-1">
             <Link href="/#ligen" className="hover:text-white transition-colors py-1 flex items-center gap-1"><svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" /></svg>Ligen</Link>
             <span>/</span>
             <Link href={`/league/${team.league}`} className="hover:text-white transition-colors py-1">{team.leagueName}</Link>
@@ -56,15 +56,15 @@ export default async function TeamPage({ params }: { params: Promise<{ id: strin
             <span className="text-white">{team.name}</span>
           </div>
 
-          <div className="flex items-end justify-between md:min-h-[200px]">
+          <div className="flex items-end md:items-start justify-between md:min-h-[200px]">
             <div className="flex items-center gap-5">
               {(() => {
                 const slug = id.split('__')[1];
                 const logo = slug ? TEAM_LOGOS[slug] : undefined;
                 return logo ? (
-                  <img src={logo} alt={team.name} className="w-20 h-20 md:w-36 md:h-36 object-contain rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 p-2" />
+                  <img src={logo} alt={team.name} className="w-20 h-20 md:w-48 md:h-48 object-contain rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 p-3" />
                 ) : (
-                  <div className="w-20 h-20 md:w-36 md:h-36 bg-white/5 backdrop-blur-md rounded-2xl flex items-center justify-center text-3xl md:text-5xl font-black text-[var(--red-main)] border border-white/10">
+                  <div className="w-20 h-20 md:w-48 md:h-48 bg-white/5 backdrop-blur-md rounded-2xl flex items-center justify-center text-3xl md:text-6xl font-black text-[var(--red-main)] border border-white/10">
                     {team.name.charAt(0)}
                   </div>
                 );
@@ -116,22 +116,6 @@ export default async function TeamPage({ params }: { params: Promise<{ id: strin
           )}
         </div>
       </section>
-
-      {/* Club Description */}
-      {(teamDescriptions as Record<string, string>)[id] && (
-        <section className="border-b border-white/10 bg-[var(--red-main)]/5 md:bg-[#111]">
-          <div className="max-w-7xl mx-auto px-4 py-3 md:py-6">
-            <div className="max-w-3xl md:bg-[var(--red-main)]/5 md:backdrop-blur-md md:rounded-xl md:px-5 md:py-4 md:border md:border-[var(--red-main)]/10 min-h-[60px] flex items-center">
-              <div className="relative pl-6 border-l-2 border-[var(--gold)]/40">
-                <span className="absolute left-0.5 -top-1 text-4xl text-[var(--gold)]/30 font-serif leading-none select-none">&ldquo;</span>
-                <p className="text-[13px] sm:text-sm text-gray-300 leading-relaxed italic">
-                  {(teamDescriptions as Record<string, string>)[id]}
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-      )}
 
       {/* Products with filters */}
       <Suspense>

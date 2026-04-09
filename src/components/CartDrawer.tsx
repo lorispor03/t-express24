@@ -142,7 +142,7 @@ export default function CartDrawer() {
             {activeBundle && !bundleProgress.reached && (
               <div className="bg-[var(--gold)]/10 rounded-lg px-3 py-2 text-xs">
                 <div className="flex items-center justify-between text-[var(--gold)] font-semibold mb-1">
-                  <span>Bundle {activeBundle === '3plus' ? '15%' : '20%'}</span>
+                  <span>Bundle {activeBundle === '3plus' ? '15%' : activeBundle === '6plus' ? '20%' : '30%'}</span>
                   <span>{bundleProgress.current}/{bundleProgress.target} Trikots</span>
                 </div>
                 <div className="h-1 bg-white/10 rounded-full overflow-hidden">

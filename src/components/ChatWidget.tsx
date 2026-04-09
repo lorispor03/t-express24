@@ -1,0 +1,228 @@
+'use client';
+
+import { useState, useRef, useEffect } from 'react';
+
+interface Message {
+  role: 'user' | 'assistant';
+  content: string;
+}
+
+export default function ChatWidget() {
+  const [open, setOpen] = useState(false);
+  const [messages, setMessages] = useState<Message[]>([]);
+  const [input, setInput] = useState('');
+  const [loading, setLoading] = useState(false);
+  const messagesEndRef = useRef<HTMLDivElement>(null);
+  const inputRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+  }, [messages, loading]);
+
+  useEffect(() => {
+    if (open && inputRef.current) {
+      inputRef.current.focus();
+    }
+  }, [open]);
+
+  const sendMessage = async () => {
+    const text = input.trim();
+    if (!text || loading) return;
+
+    const newMessages: Message[] = [...messages, { role: 'user', content: text }];
+    setMessages(newMessages);
+    setInput('');
+    setLoading(true);
+
+    try {
+      const res = await fetch('/api/chat', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ messages: newMessages }),
+      });
+
+      const data = await res.json();
+
+      if (data.error) {
+        setMessages([...newMessages, { role: 'assistant', content: data.error }]);
+      } else {
+        setMessages([...newMessages, { role: 'assistant', content: data.message }]);
+      }
+    } catch {
+      setMessages([...newMessages, {
+        role: 'assistant',
+        content: 'Verbindungsfehler. Bitte versuche es erneut.',
+      }]);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  return (
+    <>
+      {/* Chat Button */}
+      <button
+        onClick={() => setOpen(!open)}
+        className="fixed bottom-20 right-4 md:bottom-6 md:right-6 z-[9999] w-14 h-14 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 hover:scale-110"
+        style={{
+          background: 'linear-gradient(135deg, var(--red-main), var(--red-dark))',
+          boxShadow: '0 4px 20px rgba(196, 34, 46, 0.4)',
+        }}
+        aria-label="Kundensupport öffnen"
+      >
+        {open ? (
+          <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+          </svg>
+        ) : (
+          <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+          </svg>
+        )}
+      </button>
+
+      {/* Chat Window */}
+      {open && (
+        <div
+          className="fixed bottom-36 right-4 md:bottom-20 md:right-6 z-[9999] w-[calc(100vw-2rem)] max-w-[380px] rounded-2xl overflow-hidden shadow-2xl flex flex-col"
+          style={{
+            height: 'min(500px, calc(100vh - 12rem))',
+            background: '#111',
+            border: '1px solid rgba(255,255,255,0.1)',
+            boxShadow: '0 8px 40px rgba(0,0,0,0.6), 0 0 30px rgba(196, 34, 46, 0.15)',
+          }}
+        >
+          {/* Header */}
+          <div
+            className="px-4 py-3 flex items-center gap-3 flex-shrink-0"
+            style={{ background: 'linear-gradient(135deg, var(--red-main), var(--red-dark))' }}
+          >
+            <div className="w-9 h-9 rounded-full bg-white/20 flex items-center justify-center text-lg">
+              ⚽
+            </div>
+            <div className="flex-1 min-w-0">
+              <div className="font-bold text-sm text-white">T-EXPRESS24 Support</div>
+              <div className="text-[11px] text-white/70 flex items-center gap-1">
+                <span className="w-1.5 h-1.5 rounded-full bg-green-400 inline-block" />
+                Online
+              </div>
+            </div>
+            <button
+              onClick={() => setOpen(false)}
+              className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors"
+            >
+              <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          </div>
+
+          {/* Messages */}
+          <div className="flex-1 overflow-y-auto p-4 space-y-3" style={{ scrollbarWidth: 'thin' }}>
+            {messages.length === 0 && (
+              <div className="text-center py-8">
+                <div className="text-3xl mb-3">👋</div>
+                <p className="text-sm text-gray-400 mb-4">
+                  Hallo! Wie kann ich dir helfen?
+                </p>
+                <div className="space-y-2">
+                  {[
+                    'Wie lange dauert die Lieferung?',
+                    'Welche Grössen gibt es?',
+                    'Wie funktionieren die Bundle-Rabatte?',
+                  ].map((q) => (
+                    <button
+                      key={q}
+                      onClick={() => {
+                        setInput(q);
+                        setTimeout(() => {
+                          setInput('');
+                          const msgs: Message[] = [{ role: 'user', content: q }];
+                          setMessages(msgs);
+                          setLoading(true);
+                          fetch('/api/chat', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({ messages: msgs }),
+                          })
+                            .then((r) => r.json())
+                            .then((data) => {
+                              setMessages([...msgs, { role: 'assistant', content: data.message || data.error }]);
+                            })
+                            .catch(() => {
+                              setMessages([...msgs, { role: 'assistant', content: 'Verbindungsfehler.' }]);
+                            })
+                            .finally(() => setLoading(false));
+                        }, 0);
+                      }}
+                      className="block w-full text-left px-3 py-2 text-xs rounded-lg border border-white/10 text-gray-300 hover:bg-white/5 hover:border-[var(--red-main)] transition-colors"
+                    >
+                      {q}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {messages.map((msg, i) => (
+              <div key={i} className={`flex ${msg.role === 'user' ? 'justify-end' : 'justify-start'}`}>
+                <div
+                  className={`max-w-[85%] px-3.5 py-2.5 rounded-2xl text-sm leading-relaxed ${
+                    msg.role === 'user'
+                      ? 'bg-[var(--red-main)] text-white rounded-br-md'
+                      : 'bg-[#1a1a1a] text-gray-200 border border-white/5 rounded-bl-md'
+                  }`}
+                >
+                  {msg.content}
+                </div>
+              </div>
+            ))}
+
+            {loading && (
+              <div className="flex justify-start">
+                <div className="bg-[#1a1a1a] border border-white/5 rounded-2xl rounded-bl-md px-4 py-3 flex gap-1.5">
+                  <span className="w-2 h-2 bg-gray-500 rounded-full animate-bounce" style={{ animationDelay: '0ms' }} />
+                  <span className="w-2 h-2 bg-gray-500 rounded-full animate-bounce" style={{ animationDelay: '150ms' }} />
+                  <span className="w-2 h-2 bg-gray-500 rounded-full animate-bounce" style={{ animationDelay: '300ms' }} />
+                </div>
+              </div>
+            )}
+
+            <div ref={messagesEndRef} />
+          </div>
+
+          {/* Input */}
+          <div className="p-3 border-t border-white/10 flex-shrink-0" style={{ background: '#0d0d0d' }}>
+            <form
+              onSubmit={(e) => {
+                e.preventDefault();
+                sendMessage();
+              }}
+              className="flex gap-2"
+            >
+              <input
+                ref={inputRef}
+                type="text"
+                value={input}
+                onChange={(e) => setInput(e.target.value)}
+                placeholder="Schreib deine Frage..."
+                className="flex-1 bg-[#1a1a1a] border border-white/10 rounded-xl px-3.5 py-2.5 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-[var(--red-main)] transition-colors"
+                disabled={loading}
+              />
+              <button
+                type="submit"
+                disabled={loading || !input.trim()}
+                className="w-10 h-10 rounded-xl flex items-center justify-center flex-shrink-0 transition-all disabled:opacity-30"
+                style={{ background: 'var(--red-main)' }}
+              >
+                <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19V5m0 0l-7 7m7-7l7 7" />
+                </svg>
+              </button>
+            </form>
+          </div>
+        </div>
+      )}
+    </>
+  );
+}

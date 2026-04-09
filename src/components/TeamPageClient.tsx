@@ -52,10 +52,36 @@ export default function TeamPageClient({ teamName, leagueName, leagueSlug, produ
   const filteredProducts = useMemo(() => {
     let result = [...products];
 
-    // Search filter
+    // Search filter — Titel, Handle, Keywords, Jahreszahlen
     if (search.trim()) {
-      const q = search.toLowerCase();
-      result = result.filter(p => p.t.toLowerCase().includes(q));
+      const KMAP: Record<string, string[]> = {
+        'heim': ['home'], 'zuhause': ['home'], 'auswaerts': ['away'], 'auswarts': ['away'],
+        'langarm': ['long sleeve', 'longsleeve', 'long sleeves'], 'kinder': ['kids'],
+        'damen': ['female', 'women'], 'frauen': ['female', 'women'],
+        'spieler': ['player'], 'retro': ['retro'], 'torwart': ['goalkeeper'], 'spezial': ['special'],
+      };
+      const norm = (s: string) => s.toLowerCase()
+        .replace(/ä/g, 'ae').replace(/ö/g, 'oe').replace(/ü/g, 'ue').replace(/ß/g, 'ss')
+        .replace(/[^a-z0-9\s]/g, '');
+      const words = norm(search).split(/\s+/).filter(Boolean);
+      const expandedWords = words.map(w => {
+        const variants = [w];
+        if (KMAP[w]) variants.push(...KMAP[w].map(k => k.toLowerCase()));
+        // Jahreszahl: 2008 → 07 08, 08 09
+        const ym = w.match(/^(19|20)(\d{2})$/);
+        if (ym) {
+          const yy = parseInt(ym[2]);
+          variants.push(`${String(yy - 1).padStart(2, '0')} ${ym[2]}`, `${ym[2]} ${String(yy + 1).padStart(2, '0')}`);
+        }
+        if (/^\d{4}$/.test(w) && !w.startsWith('19') && !w.startsWith('20')) {
+          variants.push(w.slice(0, 2) + ' ' + w.slice(2));
+        }
+        return variants;
+      });
+      result = result.filter(p => {
+        const haystack = norm(p.t) + ' ' + p.h.replace(/-/g, ' ').toLowerCase() + ' ' + p.c.join(' ');
+        return expandedWords.every(variants => variants.some(v => haystack.includes(v)));
+      });
     }
 
     // Category filter
@@ -159,8 +185,18 @@ export default function TeamPageClient({ teamName, leagueName, leagueSlug, produ
             placeholder="Trikot suchen..."
             value={search}
             onChange={e => handleSearch(e.target.value)}
-            className="w-full bg-[#1a1a1a] border border-white/10 rounded-lg pl-10 pr-4 py-2.5 text-sm focus:outline-none focus:border-[var(--red-main)] transition-colors"
+            className="w-full bg-[#1a1a1a] border border-white/10 rounded-lg pl-10 pr-9 py-2.5 text-sm focus:outline-none focus:border-[var(--red-main)] transition-colors"
           />
+          {search && (
+            <button
+              onClick={() => handleSearch('')}
+              className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 hover:text-white transition-colors"
+            >
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+              </svg>
+            </button>
+          )}
         </div>
 
         {/* Sort + Mobile Filter (side by side on mobile) */}

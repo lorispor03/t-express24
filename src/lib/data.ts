@@ -92,18 +92,137 @@ export function getAllProductHandles(): string[] {
   return handles;
 }
 
-export function searchProducts(query: string, limit = 20) {
-  const q = query.toLowerCase();
-  const results: Array<{ teamId: string; teamName: string; product: Product }> = [];
-  for (const [teamId, team] of Object.entries(data.teams)) {
-    for (const product of team.products) {
-      if (product.t.toLowerCase().includes(q) || team.name.toLowerCase().includes(q)) {
-        results.push({ teamId, teamName: team.name, product });
-        if (results.length >= limit) return results;
-      }
+function normalize(str: string): string {
+  return str.toLowerCase()
+    .replace(/ä/g, 'ae').replace(/ö/g, 'oe').replace(/ü/g, 'ue').replace(/ß/g, 'ss')
+    .replace(/é|è|ê/g, 'e').replace(/á|à|â/g, 'a').replace(/ó|ò|ô/g, 'o').replace(/ú|ù|û/g, 'u').replace(/í|ì|î/g, 'i')
+    .replace(/[^a-z0-9\s]/g, '');
+}
+
+// Aliase: Spitznamen → offizielle Namen
+const ALIASES: Record<string, string[]> = {
+  'barca': ['barcelona'], 'fcb': ['barcelona', 'bayern'], 'manu': ['manchester united'], 'man utd': ['manchester united'],
+  'man united': ['manchester united'], 'man city': ['manchester city'], 'city': ['manchester city'],
+  'bvb': ['borussia dortmund', 'dortmund'], 'juve': ['juventus'], 'inter': ['inter milan', 'inter mailand'],
+  'milan': ['ac milan'], 'psg': ['paris saint germain', 'paris'], 'liverpool': ['liverpool', 'lvp'],
+  'pool': ['liverpool'], 'lfc': ['liverpool'], 'gunners': ['arsenal'], 'blues': ['chelsea'],
+  'spurs': ['tottenham'], 'wolves': ['wolverhampton'], 'gladbach': ['moenchengladbach', 'borussia monchengladbach'],
+  'bayern': ['bayern munich', 'bayern muenchen', 'bayern munchen'], 'real': ['real madrid'],
+  'atletico': ['atletico de madrid', 'atletico madrid'], 'roma': ['as roma'],
+  'lazio': ['ss lazio', 'lazio'], 'napoli': ['naples', 'napoli', 'neapel', 'ssc napoli'],
+  'benfica': ['sl benfica', 'benfica'], 'porto': ['fc porto', 'porto'],
+  'ajax': ['ajax amsterdam'], 'galatasaray': ['galatasaray'], 'fener': ['fenerbahce'],
+  'besiktas': ['besiktas'], 'celtic': ['celtic glasgow'], 'rangers': ['rangers glasgow'],
+  'selecao': ['brazil', 'brasilien'], 'azzurri': ['italy', 'italien'],
+  'dfb': ['germany', 'deutschland'], 'les bleus': ['france', 'frankreich'],
+  'albiceleste': ['argentina', 'argentinien'], 'la roja': ['spain', 'spanien'],
+  'oranje': ['netherlands', 'niederlande', 'holland'],
+  'nati': ['switzerland', 'schweiz'],
+};
+
+// Deutsche Keywords → englische Begriffe in Titeln/Handles
+const KEYWORD_MAP: Record<string, string[]> = {
+  'heim': ['home'], 'zuhause': ['home'], 'auswaerts': ['away'], 'auswarts': ['away'],
+  'langarm': ['long sleeve', 'longsleeve', 'long sleeves'], 'kinder': ['kids'],
+  'damen': ['female', 'women'], 'frauen': ['female', 'women'],
+  'spieler': ['player'], 'training': ['training'], 'retro': ['retro'],
+  'torwart': ['goalkeeper'], 'sondertrikot': ['special'], 'spezial': ['special'],
+};
+
+// Flexible Jahreszahl-Erkennung: "2008" → auch "07-08", "08-09" etc.
+function expandYearQuery(word: string): string[] {
+  const variants = [word];
+  // 4-stellige Jahreszahl: 2008 → 07-08, 08-09, 2007-08, 2008
+  const yearMatch = word.match(/^(19|20)(\d{2})$/);
+  if (yearMatch) {
+    const yy = parseInt(yearMatch[2]);
+    const prev = String(yy - 1).padStart(2, '0');
+    const next = String(yy + 1).padStart(2, '0');
+    variants.push(`${prev}${yearMatch[2]}`, `${prev} ${yearMatch[2]}`, `${yearMatch[2]}${next}`);
+  }
+  // "0708" → "07 08"
+  if (/^\d{4}$/.test(word) && !word.startsWith('19') && !word.startsWith('20')) {
+    variants.push(word.slice(0, 2) + ' ' + word.slice(2));
+  }
+  return variants;
+}
+
+// Fuzzy: Levenshtein-Distanz für Tippfehler
+function levenshtein(a: string, b: string): number {
+  if (a.length === 0) return b.length;
+  if (b.length === 0) return a.length;
+  const matrix: number[][] = [];
+  for (let i = 0; i <= b.length; i++) matrix[i] = [i];
+  for (let j = 0; j <= a.length; j++) matrix[0][j] = j;
+  for (let i = 1; i <= b.length; i++) {
+    for (let j = 1; j <= a.length; j++) {
+      matrix[i][j] = Math.min(
+        matrix[i - 1][j] + 1,
+        matrix[i][j - 1] + 1,
+        matrix[i - 1][j - 1] + (b[i - 1] === a[j - 1] ? 0 : 1)
+      );
     }
   }
-  return results;
+  return matrix[b.length][a.length];
+}
+
+function fuzzyIncludes(haystack: string, needle: string): boolean {
+  if (haystack.includes(needle)) return true;
+  if (needle.length < 4) return false; // Fuzzy nur bei längeren Wörtern
+  const words = haystack.split(/\s+/);
+  const maxDist = needle.length <= 5 ? 1 : 2;
+  return words.some(w => levenshtein(w, needle) <= maxDist);
+}
+
+// Query expandieren mit Aliases und Keywords
+function expandQuery(words: string[]): string[][] {
+  return words.map(w => {
+    const nw = normalize(w);
+    const expanded = [nw];
+    // Alias-Check
+    if (ALIASES[nw]) expanded.push(...ALIASES[nw].map(normalize));
+    // Keyword-Check
+    if (KEYWORD_MAP[nw]) expanded.push(...KEYWORD_MAP[nw].map(normalize));
+    // Jahreszahl-Varianten
+    expanded.push(...expandYearQuery(nw));
+    return [...new Set(expanded)];
+  });
+}
+
+export function searchProducts(query: string, limit = 20) {
+  const q = normalize(query);
+  const words = q.split(/\s+/).filter(Boolean);
+  const expandedWords = expandQuery(words);
+  const results: Array<{ teamId: string; teamName: string; product: Product; score: number }> = [];
+  for (const [teamId, team] of Object.entries(data.teams)) {
+    const teamNorm = normalize(team.name);
+    const handleNorm = normalize(team.name); // team level
+    for (const product of team.products) {
+      const titleNorm = normalize(product.t);
+      const prodHandle = product.h.replace(/-/g, ' ').toLowerCase();
+      const combined = titleNorm + ' ' + teamNorm + ' ' + prodHandle;
+
+      // Jedes Wort muss in mindestens einer Variante matchen
+      let allMatch = true;
+      let score = 0;
+      for (const variants of expandedWords) {
+        const exactMatch = variants.some(v => combined.includes(v));
+        const fuzzyMatch = !exactMatch && variants.some(v => fuzzyIncludes(combined, v));
+        if (!exactMatch && !fuzzyMatch) { allMatch = false; break; }
+        if (exactMatch) score += 3;
+        if (fuzzyMatch) score += 1;
+      }
+      if (!allMatch) continue;
+
+      // Bonus-Score
+      if (teamNorm.includes(q)) score += 10;
+      if (titleNorm.startsWith(q)) score += 5;
+      if (titleNorm.includes(q)) score += 2;
+      results.push({ teamId, teamName: team.name, product, score });
+    }
+  }
+  results.sort((a, b) => b.score - a.score);
+  return results.slice(0, limit).map(({ teamId, teamName, product }) => ({ teamId, teamName, product }));
 }
 
 const CURATED_TOP_SELLER: Record<string, string[]> = {
@@ -231,13 +350,28 @@ export function getLeagueTopSeller(leagueSlug: string): Array<{ title: string; h
 }
 
 export function searchTeams(query: string, limit = 10) {
-  const q = query.toLowerCase();
-  const results: Array<{ id: string; name: string; league: string; leagueName: string; productCount: number }> = [];
+  const q = normalize(query);
+  // Alias-Expansion für Team-Suche
+  const aliasTargets = ALIASES[q] ? ALIASES[q].map(normalize) : [];
+  const allQueries = [q, ...aliasTargets];
+
+  const results: Array<{ id: string; name: string; league: string; leagueName: string; productCount: number; score: number }> = [];
   for (const [id, team] of Object.entries(data.teams)) {
-    if (team.name.toLowerCase().includes(q)) {
-      results.push({ id, name: team.name, league: team.league, leagueName: team.leagueName, productCount: team.productCount });
-      if (results.length >= limit) return results;
+    const nameNorm = normalize(team.name);
+    let score = 0;
+    for (const query of allQueries) {
+      if (nameNorm === query) score = Math.max(score, 20);
+      else if (nameNorm.startsWith(query)) score = Math.max(score, 10);
+      else if (nameNorm.includes(query)) score = Math.max(score, 5);
+    }
+    // Fuzzy fallback
+    if (score === 0 && q.length >= 4) {
+      if (fuzzyIncludes(nameNorm, q)) score = 1;
+    }
+    if (score > 0) {
+      results.push({ id, name: team.name, league: team.league, leagueName: team.leagueName, productCount: team.productCount, score });
     }
   }
-  return results;
+  results.sort((a, b) => b.score - a.score || b.productCount - a.productCount);
+  return results.slice(0, limit).map(({ score, ...rest }) => rest);
 }

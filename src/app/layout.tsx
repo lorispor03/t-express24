@@ -4,6 +4,7 @@ import { CartProvider } from "@/context/CartContext";
 import CartDrawer from "@/components/CartDrawer";
 import BundleBar from "@/components/BundleBar";
 import ConsentBanner from "@/components/ConsentBanner";
+import ChatWidget from "@/components/ChatWidget";
 
 export const metadata: Metadata = {
   title: "T-EXPRESS24 | Premium Fussball Trikots",
@@ -23,6 +24,7 @@ export default function RootLayout({
           <CartDrawer />
           <BundleBar />
           <ConsentBanner />
+          <ChatWidget />
         </CartProvider>
       </body>
     </html>

@@ -6,6 +6,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { useCart } from '@/context/CartContext';
 import { useRouter } from 'next/navigation';
+import ScrollReveal from '@/components/ScrollReveal';
 
 export default function BundlesPage() {
   const { activeBundle, setActiveBundle } = useCart();
@@ -62,48 +63,48 @@ export default function BundlesPage() {
       <div className="border-b border-white/10 bg-[var(--red-main)]/5 lg:bg-[#111]">
         <div className="max-w-7xl mx-auto px-4 py-4 lg:py-6">
           <div className="flex flex-col gap-4 lg:grid lg:grid-cols-5 lg:gap-6">
-            {/* Container 1: Wähle dein Bundle */}
-            <div className="lg:col-span-3 lg:bg-[var(--red-main)]/5 lg:backdrop-blur-md lg:rounded-xl lg:px-5 lg:py-5 lg:border lg:border-[var(--red-main)]/10 flex flex-col items-center py-3">
+            {/* Container 1: Wähle dein Bundle — Mobile: volle Breite, Desktop: col-span-3 */}
+            <div className="lg:col-span-3 lg:bg-[var(--red-main)]/5 lg:backdrop-blur-md lg:rounded-xl lg:px-5 lg:py-5 lg:border lg:border-[var(--red-main)]/10 flex flex-col items-center py-3 lg:py-5">
               <h3 className="text-3xl lg:text-4xl font-bold uppercase tracking-wide text-center mb-4" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>Wähle dein Bundle</h3>
-              <div className="flex items-center gap-5 lg:gap-8">
-                <div className="flex flex-col items-center gap-2">
-                  <svg className="w-11 h-11 text-white/25" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z" /></svg>
-                  <span className="text-xs text-white/30 uppercase tracking-wider">Sparen</span>
+              <div className="flex items-center gap-5 lg:gap-6">
+                <div className="flex flex-col items-center gap-1.5">
+                  <svg className="w-9 h-9 text-white/25" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z" /></svg>
+                  <span className="text-[10px] text-white/30 uppercase tracking-wider">Sparen</span>
                 </div>
-                <div className="flex flex-col items-center gap-2">
-                  <svg className="w-11 h-11 text-white/25" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M13.5 10V5.5a1.5 1.5 0 00-3 0L8 14v6h11.5a2 2 0 002-1.7l1.1-7.3a2 2 0 00-2-2.3h-7.1zM8 14H5v6h3" /></svg>
-                  <span className="text-xs text-white/30 uppercase tracking-wider">Empfohlen</span>
+                <div className="flex flex-col items-center gap-1.5">
+                  <svg className="w-9 h-9 text-white/25" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M13.5 10V5.5a1.5 1.5 0 00-3 0L8 14v6h11.5a2 2 0 002-1.7l1.1-7.3a2 2 0 00-2-2.3h-7.1zM8 14H5v6h3" /></svg>
+                  <span className="text-[10px] text-white/30 uppercase tracking-wider">Empfohlen</span>
                 </div>
-                <div className="flex flex-col items-center gap-2">
-                  <svg className="w-11 h-11 text-white/25" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24"><circle cx="8.25" cy="8.25" r="2.25" /><circle cx="15.75" cy="15.75" r="2.25" /><path strokeLinecap="round" strokeLinejoin="round" d="M19.5 4.5L4.5 19.5" /></svg>
-                  <span className="text-xs text-white/30 uppercase tracking-wider">Rabatt</span>
+                <div className="flex flex-col items-center gap-1.5">
+                  <svg className="w-9 h-9 text-white/25" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24"><circle cx="8.25" cy="8.25" r="2.25" /><circle cx="15.75" cy="15.75" r="2.25" /><path strokeLinecap="round" strokeLinejoin="round" d="M19.5 4.5L4.5 19.5" /></svg>
+                  <span className="text-[10px] text-white/30 uppercase tracking-wider">Rabatt</span>
                 </div>
-                <div className="flex flex-col items-center gap-2">
-                  <svg className="w-11 h-11 text-white/25" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M21 11.25v8.25a1.5 1.5 0 01-1.5 1.5H5.25a1.5 1.5 0 01-1.5-1.5v-8.25M12 4.875A2.625 2.625 0 109.375 7.5H12m0-2.625V7.5m0-2.625A2.625 2.625 0 1114.625 7.5H12m0 0V21m-8.625-9.75h18c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125h-18c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z" /></svg>
-                  <span className="text-xs text-white/30 uppercase tracking-wider">Geschenk</span>
+                <div className="flex flex-col items-center gap-1.5">
+                  <svg className="w-9 h-9 text-white/25" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M21 11.25v8.25a1.5 1.5 0 01-1.5 1.5H5.25a1.5 1.5 0 01-1.5-1.5v-8.25M12 4.875A2.625 2.625 0 109.375 7.5H12m0-2.625V7.5m0-2.625A2.625 2.625 0 1114.625 7.5H12m0 0V21m-8.625-9.75h18c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125h-18c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z" /></svg>
+                  <span className="text-[10px] text-white/30 uppercase tracking-wider">Geschenk</span>
                 </div>
-                <div className="flex flex-col items-center gap-2">
-                  <svg className="w-11 h-11 text-white/25" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M15.362 5.214A8.252 8.252 0 0112 21 8.25 8.25 0 016.038 7.048 8.287 8.287 0 009 9.6a8.983 8.983 0 013.361-6.867 8.21 8.21 0 003 2.48z" /><path strokeLinecap="round" strokeLinejoin="round" d="M12 18a3.75 3.75 0 00.495-7.467 5.99 5.99 0 00-1.925 3.546 5.974 5.974 0 01-2.133-1.001A3.75 3.75 0 0012 18z" /></svg>
-                  <span className="text-xs text-white/30 uppercase tracking-wider">Hot Deal</span>
+                <div className="flex flex-col items-center gap-1.5">
+                  <svg className="w-9 h-9 text-white/25" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M15.362 5.214A8.252 8.252 0 0112 21 8.25 8.25 0 016.038 7.048 8.287 8.287 0 009 9.6a8.983 8.983 0 013.361-6.867 8.21 8.21 0 003 2.48z" /><path strokeLinecap="round" strokeLinejoin="round" d="M12 18a3.75 3.75 0 00.495-7.467 5.99 5.99 0 00-1.925 3.546 5.974 5.974 0 01-2.133-1.001A3.75 3.75 0 0012 18z" /></svg>
+                  <span className="text-[10px] text-white/30 uppercase tracking-wider">Hot Deal</span>
                 </div>
               </div>
             </div>
 
-            {/* Container 2: Wie funktioniert's? */}
-            <div className="lg:col-span-2 lg:bg-[var(--red-main)]/5 lg:backdrop-blur-md lg:rounded-xl lg:px-5 lg:py-5 lg:border lg:border-[var(--red-main)]/10 flex flex-col items-center py-3 border-t border-white/10 lg:border-t-0">
+            {/* Container 2: Wie funktioniert's? — nur Desktop */}
+            <div className="hidden lg:flex lg:col-span-2 lg:bg-[var(--red-main)]/5 lg:backdrop-blur-md lg:rounded-xl lg:px-5 lg:py-5 lg:border lg:border-[var(--red-main)]/10 flex-col items-center">
               <h3 className="text-3xl lg:text-4xl font-bold uppercase tracking-wide text-center mb-4" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>Wie funktioniert&apos;s?</h3>
               <div className="flex items-center gap-6">
-                <div className="flex flex-col items-center gap-2">
-                  <svg className="w-11 h-11 text-white/25" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M15.042 21.672L13.684 16.6m0 0l-2.51 2.225.569-9.47 5.227 7.917-3.286-.672zM12 2.25V4.5m5.834.166l-1.591 1.591M20.25 10.5H18M7.757 14.743l-1.59 1.59M6 10.5H3.75m4.007-4.243l-1.59-1.59" /></svg>
-                  <span className="text-xs text-white/30 uppercase tracking-wider">Wählen</span>
+                <div className="flex flex-col items-center gap-1.5">
+                  <svg className="w-9 h-9 text-white/25" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M15.042 21.672L13.684 16.6m0 0l-2.51 2.225.569-9.47 5.227 7.917-3.286-.672zM12 2.25V4.5m5.834.166l-1.591 1.591M20.25 10.5H18M7.757 14.743l-1.59 1.59M6 10.5H3.75m4.007-4.243l-1.59-1.59" /></svg>
+                  <span className="text-[10px] text-white/30 uppercase tracking-wider">Wählen</span>
                 </div>
-                <div className="flex flex-col items-center gap-2">
-                  <svg className="w-11 h-11 text-white/25" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" /></svg>
-                  <span className="text-xs text-white/30 uppercase tracking-wider">Sammeln</span>
+                <div className="flex flex-col items-center gap-1.5">
+                  <svg className="w-9 h-9 text-white/25" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" /></svg>
+                  <span className="text-[10px] text-white/30 uppercase tracking-wider">Sammeln</span>
                 </div>
-                <div className="flex flex-col items-center gap-2">
-                  <svg className="w-11 h-11 text-white/25" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                  <span className="text-xs text-white/30 uppercase tracking-wider">Sparen</span>
+                <div className="flex flex-col items-center gap-1.5">
+                  <svg className="w-9 h-9 text-white/25" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                  <span className="text-[10px] text-white/30 uppercase tracking-wider">Sparen</span>
                 </div>
               </div>
             </div>
@@ -321,10 +322,29 @@ export default function BundlesPage() {
 
           {/* Right: How it works */}
           <div className="lg:col-span-2 relative z-10 lg:pb-4">
-            {/* === MOBILE: Title + Timeline === */}
-            <h3 className="text-3xl md:text-3xl font-bold uppercase tracking-wide mb-6 text-center lg:hidden" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>Wie funktioniert&apos;s?</h3>
+            {/* === MOBILE: Wie funktioniert's Container === */}
+            <ScrollReveal mobileOnly>
+            <div className="lg:hidden bg-[var(--red-main)]/5 rounded-xl px-4 py-4 border border-[var(--red-main)]/10 mb-6 flex flex-col items-center">
+              <h3 className="text-3xl font-bold uppercase tracking-wide text-center mb-3" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>Wie funktioniert&apos;s?</h3>
+              <div className="flex items-center gap-5">
+                <div className="flex flex-col items-center gap-1.5">
+                  <svg className="w-8 h-8 text-white/25" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M15.042 21.672L13.684 16.6m0 0l-2.51 2.225.569-9.47 5.227 7.917-3.286-.672zM12 2.25V4.5m5.834.166l-1.591 1.591M20.25 10.5H18M7.757 14.743l-1.59 1.59M6 10.5H3.75m4.007-4.243l-1.59-1.59" /></svg>
+                  <span className="text-[10px] text-white/30 uppercase tracking-wider">Wählen</span>
+                </div>
+                <div className="flex flex-col items-center gap-1.5">
+                  <svg className="w-8 h-8 text-white/25" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" /></svg>
+                  <span className="text-[10px] text-white/30 uppercase tracking-wider">Sammeln</span>
+                </div>
+                <div className="flex flex-col items-center gap-1.5">
+                  <svg className="w-8 h-8 text-white/25" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                  <span className="text-[10px] text-white/30 uppercase tracking-wider">Sparen</span>
+                </div>
+              </div>
+            </div>
+            </ScrollReveal>
             <div className="lg:hidden flex flex-col items-center">
               {/* U-Branch – same border approach as desktop */}
+              <ScrollReveal mobileOnly>
               <div className="flex justify-center gap-8 mb-0">
                 <div className="flex flex-col items-center">
                   <div className="w-14 h-14 rounded-full bg-[#a8b0b8]/15 border-2 border-[#a8b0b8]/40 flex flex-col items-center justify-center z-10">
@@ -353,49 +373,48 @@ export default function BundlesPage() {
               <div className="flex justify-center">
                 <div className="w-0.5 h-3 bg-white/10" />
               </div>
+              </ScrollReveal>
+
+              <ScrollReveal mobileOnly delay={100} className="flex flex-col items-center w-full">
               <div className="w-9 h-9 rounded-full bg-[var(--red-main)] text-white flex items-center justify-center font-bold text-base" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>1</div>
               <div className="w-0.5 h-3 bg-white/10" />
-
-              {/* Step 1 card */}
               <div className="bg-[#1a1a1a] rounded-xl border border-white/5 p-4 w-full">
                 <h4 className="font-bold text-white mb-1 text-sm">Bundle wählen</h4>
                 <p className="text-sm text-gray-400 leading-relaxed">Erhalte 15% ab 3, 20% ab 6 oder 30% ab 10 Trikots.</p>
               </div>
+              </ScrollReveal>
 
-              {/* Circle 2 */}
+              <ScrollReveal mobileOnly delay={100} className="flex flex-col items-center w-full">
               <div className="w-0.5 h-4 bg-white/10" />
               <div className="w-9 h-9 rounded-full bg-[var(--red-main)] text-white flex items-center justify-center font-bold text-base" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>2</div>
               <div className="w-0.5 h-4 bg-white/10" />
-
-              {/* Step 2 card */}
               <div className="bg-[#1a1a1a] rounded-xl border border-white/5 p-4 w-full">
                 <h4 className="font-bold text-white mb-1 text-sm">Trikots in den Warenkorb</h4>
                 <p className="text-sm text-gray-400 leading-relaxed">Stöbere durch den Shop und lege deine Lieblings-Trikots in den Warenkorb.</p>
                 <img src="/bundle-step2.png?v=6" alt="Trikot auswählen & Warenkorb" onClick={() => openLightbox('/bundle-step2.png?v=6')} className="mt-3 rounded-lg border border-white/10 w-full cursor-zoom-in hover:border-white/30 transition-colors" />
               </div>
+              </ScrollReveal>
 
-              {/* Circle % */}
+              <ScrollReveal mobileOnly delay={100} className="flex flex-col items-center w-full">
               <div className="w-0.5 h-4 bg-white/10" />
               <div className="w-9 h-9 rounded-full bg-green-500 text-white flex items-center justify-center font-bold text-sm">%</div>
               <div className="w-0.5 h-4 bg-white/10" />
-
-              {/* Step 3 card */}
               <div className="bg-[#1a1a1a] rounded-xl border border-white/5 p-4 w-full">
                 <h4 className="font-bold text-white mb-1 text-sm">Rabatt kassieren</h4>
                 <p className="text-sm text-gray-400 leading-relaxed">Der Rabatt wird automatisch im Warenkorb angewendet.</p>
                 <img src="/bundle-step3.png?v=3" alt="Rabatt im Warenkorb" onClick={() => openLightbox('/bundle-step3.png?v=3')} className="mt-3 rounded-lg border border-white/10 w-full cursor-zoom-in hover:border-white/30 transition-colors" />
               </div>
+              </ScrollReveal>
 
-              {/* Circle 3 */}
+              <ScrollReveal mobileOnly delay={100} className="flex flex-col items-center w-full">
               <div className="w-0.5 h-4 bg-white/10" />
               <div className="w-9 h-9 rounded-full bg-[var(--red-main)] text-white flex items-center justify-center font-bold text-base" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>3</div>
               <div className="w-0.5 h-4 bg-white/10" />
-
-              {/* Step 4 card */}
               <div className="bg-[#1a1a1a] rounded-xl border border-white/5 p-4 w-full">
                 <h4 className="font-bold text-white mb-1 text-sm">Bestellung absenden</h4>
                 <p className="text-sm text-gray-400 leading-relaxed">Gib deinen Namen und Kontakt an und sende die Bestellung ab. Du erhältst in Kürze deine Bestellbestätigung.</p>
               </div>
+              </ScrollReveal>
             </div>
 
             {/* === DESKTOP: Rabatt-Kreise + U-Branch === */}

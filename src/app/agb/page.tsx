@@ -92,8 +92,8 @@ export default function AGBPage() {
                 <a href="https://instagram.com/T_express247" target="_blank" rel="noopener noreferrer" className="text-[var(--gold)] hover:underline">
                   Instagram: @T_express247
                 </a>
-                <a href="https://t.me/T24Express_bot?start=1" target="_blank" rel="noopener noreferrer" className="text-[var(--gold)] hover:underline">
-                  Telegram Bot
+                <a href="mailto:support@t-express24.ch" className="text-[var(--gold)] hover:underline">
+                  E-Mail: support@t-express24.ch
                 </a>
               </div>
             </div>

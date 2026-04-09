@@ -5,7 +5,7 @@ import { Product } from '@/lib/types';
 import { PatchOption } from '@/lib/patches';
 
 export type ExtraOption = 'none' | 'aufdruck' | 'patches' | 'komplett';
-export type BundleType = null | '3plus' | '6plus';
+export type BundleType = null | '3plus' | '6plus' | '10plus';
 
 export const EXTRA_PRICES: Record<ExtraOption, number> = {
   none: 0,
@@ -17,6 +17,7 @@ export const EXTRA_PRICES: Record<ExtraOption, number> = {
 export const BUNDLE_CONFIG = {
   '3plus': { min: 3, discount: 0.15, label: '15%' },
   '6plus': { min: 6, discount: 0.20, label: '20%' },
+  '10plus': { min: 10, discount: 0.30, label: '30%' },
 } as const;
 
 export interface CartItem {
@@ -185,7 +186,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
             <div className="bg-[#1a1a1a] border border-white/10 rounded-2xl px-6 py-8 max-w-sm w-full text-center shadow-2xl">
               <div className="w-14 h-14 bg-[var(--gold)]/15 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-black text-[var(--gold)]" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
-                  {activeBundle === '3plus' ? '15%' : '20%'}
+                  {activeBundle === '3plus' ? '15%' : activeBundle === '6plus' ? '20%' : '30%'}
                 </span>
               </div>
               <h2 className="text-lg font-bold text-white mb-2">Bundle auflösen?</h2>
