@@ -324,13 +324,11 @@ export default function BundlesPage() {
           <div className="lg:col-span-2 relative z-10 lg:pb-4">
             {/* === MOBILE: Wie funktioniert's — Startseiten-Style === */}
             <div className="lg:hidden flex flex-col items-center">
-              {/* Obertitel */}
-              <ScrollReveal mobileOnly>
-                <h3 className="text-3xl font-bold uppercase tracking-wide text-center mb-6" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>Wie funktioniert&apos;s?</h3>
-              </ScrollReveal>
+              {/* Obertitel — immer sichtbar */}
+              <h3 className="text-3xl font-bold uppercase tracking-wide text-center mb-6" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>Wie funktioniert&apos;s?</h3>
 
-              {/* Step 1: Icon + Titel */}
-              <ScrollReveal mobileOnly className="w-full">
+              {/* Step 1 */}
+              <ScrollReveal delay={0} className="w-full">
                 <div className="text-center">
                   <div className="flex items-center justify-center gap-3 mb-3">
                     <div className="inline-flex items-center justify-center w-11 h-11 rounded-xl bg-[var(--red-main)]/15 text-[var(--red-main)]">
@@ -343,7 +341,7 @@ export default function BundlesPage() {
               </ScrollReveal>
 
               {/* Chevrons 1 */}
-              <ScrollReveal mobileOnly delay={100}>
+              <ScrollReveal delay={150}>
                 <div className="flex items-center justify-center py-3">
                   <span className="flex flex-col -space-y-0.5 text-[var(--red-main)]">
                     <svg className="w-10 h-3 chevron-1" viewBox="0 0 40 12" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M4 2l16 8 16-8" /></svg>
@@ -353,8 +351,8 @@ export default function BundlesPage() {
                 </div>
               </ScrollReveal>
 
-              {/* Step 2: Icon + Titel */}
-              <ScrollReveal mobileOnly className="w-full">
+              {/* Step 2 */}
+              <ScrollReveal delay={0} className="w-full">
                 <div className="text-center">
                   <div className="flex items-center justify-center gap-3 mb-3">
                     <div className="inline-flex items-center justify-center w-11 h-11 rounded-xl bg-[var(--red-main)]/15 text-[var(--red-main)]">
@@ -368,7 +366,7 @@ export default function BundlesPage() {
               </ScrollReveal>
 
               {/* Chevrons 2 */}
-              <ScrollReveal mobileOnly delay={100}>
+              <ScrollReveal delay={150}>
                 <div className="flex items-center justify-center py-3">
                   <span className="flex flex-col -space-y-0.5 text-[var(--red-main)]">
                     <svg className="w-10 h-3 chevron-1" viewBox="0 0 40 12" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M4 2l16 8 16-8" /></svg>
@@ -378,8 +376,8 @@ export default function BundlesPage() {
                 </div>
               </ScrollReveal>
 
-              {/* Step 3: Icon + Titel */}
-              <ScrollReveal mobileOnly className="w-full">
+              {/* Step 3 */}
+              <ScrollReveal delay={0} className="w-full">
                 <div className="text-center">
                   <div className="flex items-center justify-center gap-3 mb-3">
                     <div className="inline-flex items-center justify-center w-11 h-11 rounded-xl bg-green-500/15 text-green-500">
@@ -393,7 +391,7 @@ export default function BundlesPage() {
               </ScrollReveal>
 
               {/* Chevrons 3 */}
-              <ScrollReveal mobileOnly delay={100}>
+              <ScrollReveal delay={150}>
                 <div className="flex items-center justify-center py-3">
                   <span className="flex flex-col -space-y-0.5 text-[var(--red-main)]">
                     <svg className="w-10 h-3 chevron-1" viewBox="0 0 40 12" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M4 2l16 8 16-8" /></svg>
@@ -403,8 +401,8 @@ export default function BundlesPage() {
                 </div>
               </ScrollReveal>
 
-              {/* Step 4: Icon + Titel */}
-              <ScrollReveal mobileOnly className="w-full">
+              {/* Step 4 */}
+              <ScrollReveal delay={0} className="w-full">
                 <div className="text-center">
                   <div className="flex items-center justify-center gap-3 mb-3">
                     <div className="inline-flex items-center justify-center w-11 h-11 rounded-xl bg-[var(--red-main)]/15 text-[var(--red-main)]">

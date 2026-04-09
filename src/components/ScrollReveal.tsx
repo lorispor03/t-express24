@@ -38,7 +38,7 @@ export default function ScrollReveal({ children, delay = 0, className = '', mobi
     );
     observer.observe(el);
     return () => observer.disconnect();
-  }, [delay]);
+  }, [delay, mobileOnly, isDesktop]);
 
   return (
     <div
@@ -46,8 +46,8 @@ export default function ScrollReveal({ children, delay = 0, className = '', mobi
       className={className}
       style={{
         opacity: visible ? 1 : 0,
-        transform: visible ? 'translateY(0)' : 'translateY(10px)',
-        transition: 'opacity 0.3s ease-out, transform 0.3s ease-out',
+        transform: visible ? 'translateY(0)' : 'translateY(20px)',
+        transition: 'opacity 0.5s ease-out, transform 0.5s ease-out',
       }}
     >
       {children}
