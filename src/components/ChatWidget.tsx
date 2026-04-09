@@ -7,6 +7,45 @@ interface Message {
   content: string;
 }
 
+function renderMarkdown(text: string) {
+  // Markdown-Links [text](url) und **bold** parsen
+  const parts: (string | JSX.Element)[] = [];
+  let remaining = text;
+  let key = 0;
+
+  while (remaining.length > 0) {
+    // Bold **text**
+    const boldMatch = remaining.match(/\*\*(.+?)\*\*/);
+    // Links [text](url)
+    const linkMatch = remaining.match(/\[([^\]]+)\]\(([^)]+)\)/);
+
+    // Finde den frühesten Match
+    const boldIdx = boldMatch ? remaining.indexOf(boldMatch[0]) : Infinity;
+    const linkIdx = linkMatch ? remaining.indexOf(linkMatch[0]) : Infinity;
+
+    if (boldIdx === Infinity && linkIdx === Infinity) {
+      parts.push(remaining);
+      break;
+    }
+
+    if (linkIdx <= boldIdx && linkMatch) {
+      parts.push(remaining.slice(0, linkIdx));
+      parts.push(
+        <a key={key++} href={linkMatch[2]} className="text-[var(--gold)] underline hover:text-white transition-colors" onClick={(e) => { e.stopPropagation(); }}>
+          {linkMatch[1]}
+        </a>
+      );
+      remaining = remaining.slice(linkIdx + linkMatch[0].length);
+    } else if (boldMatch) {
+      parts.push(remaining.slice(0, boldIdx));
+      parts.push(<strong key={key++} className="font-semibold text-white">{boldMatch[1]}</strong>);
+      remaining = remaining.slice(boldIdx + boldMatch[0].length);
+    }
+  }
+
+  return parts;
+}
+
 export default function ChatWidget() {
   const [open, setOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([]);
@@ -127,9 +166,10 @@ export default function ChatWidget() {
                 </p>
                 <div className="space-y-2">
                   {[
-                    'Wie lange dauert die Lieferung?',
-                    'Welche Grössen gibt es?',
+                    'Habt ihr Trikots von Real Madrid?',
+                    'Welche Retro-Trikots gibt es?',
                     'Wie funktionieren die Bundle-Rabatte?',
+                    'Wie lange dauert die Lieferung?',
                   ].map((q) => (
                     <button
                       key={q}
@@ -173,7 +213,7 @@ export default function ChatWidget() {
                       : 'bg-[#1a1a1a] text-gray-200 border border-white/5 rounded-bl-md'
                   }`}
                 >
-                  {msg.content}
+                  {msg.role === 'assistant' ? renderMarkdown(msg.content) : msg.content}
                 </div>
               </div>
             ))}

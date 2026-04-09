@@ -322,98 +322,98 @@ export default function BundlesPage() {
 
           {/* Right: How it works */}
           <div className="lg:col-span-2 relative z-10 lg:pb-4">
-            {/* === MOBILE: Wie funktioniert's Container === */}
-            <ScrollReveal mobileOnly>
-            <div className="lg:hidden bg-[var(--red-main)]/5 rounded-xl px-4 py-4 border border-[var(--red-main)]/10 mb-6 flex flex-col items-center">
-              <h3 className="text-3xl font-bold uppercase tracking-wide text-center mb-3" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>Wie funktioniert&apos;s?</h3>
-              <div className="flex items-center gap-5">
-                <div className="flex flex-col items-center gap-1.5">
-                  <svg className="w-8 h-8 text-white/25" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M15.042 21.672L13.684 16.6m0 0l-2.51 2.225.569-9.47 5.227 7.917-3.286-.672zM12 2.25V4.5m5.834.166l-1.591 1.591M20.25 10.5H18M7.757 14.743l-1.59 1.59M6 10.5H3.75m4.007-4.243l-1.59-1.59" /></svg>
-                  <span className="text-[10px] text-white/30 uppercase tracking-wider">Wählen</span>
-                </div>
-                <div className="flex flex-col items-center gap-1.5">
-                  <svg className="w-8 h-8 text-white/25" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" /></svg>
-                  <span className="text-[10px] text-white/30 uppercase tracking-wider">Sammeln</span>
-                </div>
-                <div className="flex flex-col items-center gap-1.5">
-                  <svg className="w-8 h-8 text-white/25" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                  <span className="text-[10px] text-white/30 uppercase tracking-wider">Sparen</span>
-                </div>
-              </div>
-            </div>
-            </ScrollReveal>
+            {/* === MOBILE: Wie funktioniert's — Startseiten-Style === */}
             <div className="lg:hidden flex flex-col items-center">
-              {/* U-Branch – same border approach as desktop */}
+              {/* Obertitel */}
               <ScrollReveal mobileOnly>
-              <div className="flex justify-center gap-8 mb-0">
-                <div className="flex flex-col items-center">
-                  <div className="w-14 h-14 rounded-full bg-[#a8b0b8]/15 border-2 border-[#a8b0b8]/40 flex flex-col items-center justify-center z-10">
-                    <span className="text-[#a8b0b8] font-black text-3xl leading-none" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>3+</span>
-                    <span className="text-[#a8b0b8]/60 text-[11px] font-bold leading-none">15%</span>
+                <h3 className="text-3xl font-bold uppercase tracking-wide text-center mb-6" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>Wie funktioniert&apos;s?</h3>
+              </ScrollReveal>
+
+              {/* Step 1: Icon + Titel */}
+              <ScrollReveal mobileOnly className="w-full">
+                <div className="text-center">
+                  <div className="flex items-center justify-center gap-3 mb-3">
+                    <div className="inline-flex items-center justify-center w-11 h-11 rounded-xl bg-[var(--red-main)]/15 text-[var(--red-main)]">
+                      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15.042 21.672L13.684 16.6m0 0l-2.51 2.225.569-9.47 5.227 7.917-3.286-.672zM12 2.25V4.5m5.834.166l-1.591 1.591M20.25 10.5H18M7.757 14.743l-1.59 1.59M6 10.5H3.75m4.007-4.243l-1.59-1.59" /></svg>
+                    </div>
+                    <h4 className="font-bold text-lg">Bundle wählen</h4>
                   </div>
+                  <p className="text-sm text-gray-400 leading-relaxed">Erhalte 15% ab 3, 20% ab 6 oder 30% ab 10 Trikots.</p>
                 </div>
-                <div className="flex flex-col items-center">
-                  <div className="w-14 h-14 rounded-full bg-[var(--gold)]/25 border-2 border-[var(--gold)] flex flex-col items-center justify-center z-10">
-                    <span className="text-[var(--gold)] font-black text-3xl leading-none" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>6+</span>
-                    <span className="text-[var(--gold)]/60 text-[11px] font-bold leading-none">20%</span>
+              </ScrollReveal>
+
+              {/* Chevrons 1 */}
+              <ScrollReveal mobileOnly delay={100}>
+                <div className="flex items-center justify-center py-3">
+                  <span className="flex flex-col -space-y-0.5 text-[var(--red-main)]">
+                    <svg className="w-10 h-3 chevron-1" viewBox="0 0 40 12" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M4 2l16 8 16-8" /></svg>
+                    <svg className="w-10 h-3 chevron-2" viewBox="0 0 40 12" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M4 2l16 8 16-8" /></svg>
+                    <svg className="w-10 h-3 chevron-3" viewBox="0 0 40 12" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M4 2l16 8 16-8" /></svg>
+                  </span>
+                </div>
+              </ScrollReveal>
+
+              {/* Step 2: Icon + Titel */}
+              <ScrollReveal mobileOnly className="w-full">
+                <div className="text-center">
+                  <div className="flex items-center justify-center gap-3 mb-3">
+                    <div className="inline-flex items-center justify-center w-11 h-11 rounded-xl bg-[var(--red-main)]/15 text-[var(--red-main)]">
+                      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" /></svg>
+                    </div>
+                    <h4 className="font-bold text-lg">Trikots in den Warenkorb</h4>
                   </div>
+                  <p className="text-sm text-gray-400 leading-relaxed">Stöbere durch den Shop und lege deine Lieblings-Trikots in den Warenkorb.</p>
+                  <img src="/bundle-step2.png?v=6" alt="Trikot auswählen & Warenkorb" onClick={() => openLightbox('/bundle-step2.png?v=6')} className="mt-3 rounded-lg border border-white/10 w-full cursor-zoom-in hover:border-white/30 transition-colors" />
                 </div>
-                <div className="flex flex-col items-center">
-                  <div className="w-14 h-14 rounded-full bg-[#b066c4]/20 border-2 border-[#b066c4]/60 flex flex-col items-center justify-center z-10">
-                    <span className="text-[#b066c4] font-black text-3xl leading-none" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>10+</span>
-                    <span className="text-[#b066c4]/60 text-[11px] font-bold leading-none">30%</span>
+              </ScrollReveal>
+
+              {/* Chevrons 2 */}
+              <ScrollReveal mobileOnly delay={100}>
+                <div className="flex items-center justify-center py-3">
+                  <span className="flex flex-col -space-y-0.5 text-[var(--red-main)]">
+                    <svg className="w-10 h-3 chevron-1" viewBox="0 0 40 12" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M4 2l16 8 16-8" /></svg>
+                    <svg className="w-10 h-3 chevron-2" viewBox="0 0 40 12" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M4 2l16 8 16-8" /></svg>
+                    <svg className="w-10 h-3 chevron-3" viewBox="0 0 40 12" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M4 2l16 8 16-8" /></svg>
+                  </span>
+                </div>
+              </ScrollReveal>
+
+              {/* Step 3: Icon + Titel */}
+              <ScrollReveal mobileOnly className="w-full">
+                <div className="text-center">
+                  <div className="flex items-center justify-center gap-3 mb-3">
+                    <div className="inline-flex items-center justify-center w-11 h-11 rounded-xl bg-green-500/15 text-green-500">
+                      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                    </div>
+                    <h4 className="font-bold text-lg">Rabatt kassieren</h4>
                   </div>
+                  <p className="text-sm text-gray-400 leading-relaxed">Der Rabatt wird automatisch im Warenkorb angewendet.</p>
+                  <img src="/bundle-step3.png?v=3" alt="Rabatt im Warenkorb" onClick={() => openLightbox('/bundle-step3.png?v=3')} className="mt-3 rounded-lg border border-white/10 w-full cursor-zoom-in hover:border-white/30 transition-colors" />
                 </div>
-              </div>
-              <div className="flex justify-center">
-                <div className="relative" style={{ width: '11rem', height: '22px', borderBottom: '2px solid rgba(255,255,255,0.1)', borderLeft: '2px solid rgba(255,255,255,0.1)', borderRight: '2px solid rgba(255,255,255,0.1)', borderRadius: '0 0 6px 6px' }}>
-                  <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-white/10 -translate-x-1/2" />
+              </ScrollReveal>
+
+              {/* Chevrons 3 */}
+              <ScrollReveal mobileOnly delay={100}>
+                <div className="flex items-center justify-center py-3">
+                  <span className="flex flex-col -space-y-0.5 text-[var(--red-main)]">
+                    <svg className="w-10 h-3 chevron-1" viewBox="0 0 40 12" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M4 2l16 8 16-8" /></svg>
+                    <svg className="w-10 h-3 chevron-2" viewBox="0 0 40 12" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M4 2l16 8 16-8" /></svg>
+                    <svg className="w-10 h-3 chevron-3" viewBox="0 0 40 12" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M4 2l16 8 16-8" /></svg>
+                  </span>
                 </div>
-              </div>
-              <div className="flex justify-center">
-                <div className="w-0.5 h-3 bg-white/10" />
-              </div>
               </ScrollReveal>
 
-              <ScrollReveal mobileOnly delay={100} className="flex flex-col items-center w-full">
-              <div className="w-9 h-9 rounded-full bg-[var(--red-main)] text-white flex items-center justify-center font-bold text-base" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>1</div>
-              <div className="w-0.5 h-3 bg-white/10" />
-              <div className="bg-[#1a1a1a] rounded-xl border border-white/5 p-4 w-full">
-                <h4 className="font-bold text-white mb-1 text-sm">Bundle wählen</h4>
-                <p className="text-sm text-gray-400 leading-relaxed">Erhalte 15% ab 3, 20% ab 6 oder 30% ab 10 Trikots.</p>
-              </div>
-              </ScrollReveal>
-
-              <ScrollReveal mobileOnly delay={100} className="flex flex-col items-center w-full">
-              <div className="w-0.5 h-4 bg-white/10" />
-              <div className="w-9 h-9 rounded-full bg-[var(--red-main)] text-white flex items-center justify-center font-bold text-base" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>2</div>
-              <div className="w-0.5 h-4 bg-white/10" />
-              <div className="bg-[#1a1a1a] rounded-xl border border-white/5 p-4 w-full">
-                <h4 className="font-bold text-white mb-1 text-sm">Trikots in den Warenkorb</h4>
-                <p className="text-sm text-gray-400 leading-relaxed">Stöbere durch den Shop und lege deine Lieblings-Trikots in den Warenkorb.</p>
-                <img src="/bundle-step2.png?v=6" alt="Trikot auswählen & Warenkorb" onClick={() => openLightbox('/bundle-step2.png?v=6')} className="mt-3 rounded-lg border border-white/10 w-full cursor-zoom-in hover:border-white/30 transition-colors" />
-              </div>
-              </ScrollReveal>
-
-              <ScrollReveal mobileOnly delay={100} className="flex flex-col items-center w-full">
-              <div className="w-0.5 h-4 bg-white/10" />
-              <div className="w-9 h-9 rounded-full bg-green-500 text-white flex items-center justify-center font-bold text-sm">%</div>
-              <div className="w-0.5 h-4 bg-white/10" />
-              <div className="bg-[#1a1a1a] rounded-xl border border-white/5 p-4 w-full">
-                <h4 className="font-bold text-white mb-1 text-sm">Rabatt kassieren</h4>
-                <p className="text-sm text-gray-400 leading-relaxed">Der Rabatt wird automatisch im Warenkorb angewendet.</p>
-                <img src="/bundle-step3.png?v=3" alt="Rabatt im Warenkorb" onClick={() => openLightbox('/bundle-step3.png?v=3')} className="mt-3 rounded-lg border border-white/10 w-full cursor-zoom-in hover:border-white/30 transition-colors" />
-              </div>
-              </ScrollReveal>
-
-              <ScrollReveal mobileOnly delay={100} className="flex flex-col items-center w-full">
-              <div className="w-0.5 h-4 bg-white/10" />
-              <div className="w-9 h-9 rounded-full bg-[var(--red-main)] text-white flex items-center justify-center font-bold text-base" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>3</div>
-              <div className="w-0.5 h-4 bg-white/10" />
-              <div className="bg-[#1a1a1a] rounded-xl border border-white/5 p-4 w-full">
-                <h4 className="font-bold text-white mb-1 text-sm">Bestellung absenden</h4>
-                <p className="text-sm text-gray-400 leading-relaxed">Gib deinen Namen und Kontakt an und sende die Bestellung ab. Du erhältst in Kürze deine Bestellbestätigung.</p>
-              </div>
+              {/* Step 4: Icon + Titel */}
+              <ScrollReveal mobileOnly className="w-full">
+                <div className="text-center">
+                  <div className="flex items-center justify-center gap-3 mb-3">
+                    <div className="inline-flex items-center justify-center w-11 h-11 rounded-xl bg-[var(--red-main)]/15 text-[var(--red-main)]">
+                      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5" /></svg>
+                    </div>
+                    <h4 className="font-bold text-lg">Bestellung absenden</h4>
+                  </div>
+                  <p className="text-sm text-gray-400 leading-relaxed">Gib deinen Namen und Kontakt an und sende die Bestellung ab. Du erhältst in Kürze deine Bestellbestätigung.</p>
+                </div>
               </ScrollReveal>
             </div>
 

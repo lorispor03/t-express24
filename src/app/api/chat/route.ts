@@ -1,5 +1,7 @@
 import Anthropic from '@anthropic-ai/sdk';
 import { NextRequest } from 'next/server';
+import { searchProducts, searchTeams, getAllLeagues, getTeam } from '@/lib/data';
+import { CATEGORIES } from '@/lib/types';
 
 const client = new Anthropic({
   apiKey: process.env.ANTHROPIC_API_KEY,
@@ -54,15 +56,69 @@ KONTAKT:
 - Instagram: @T_express247
 - E-Mail: support@t-express24.ch
 
+KATEGORIEN IM SHOP:
+- Fan (Fan-Version), Player (Spieler-Version), Retro (Klassiker/Legendäre Trikots), Langarm, Kinder, Kinder Retro, Damen, Windbreaker, Training, Pullover
+
 DEINE REGELN:
 1. Antworte immer auf Deutsch (Schweizer Deutsch / Hochdeutsch)
 2. Sei freundlich, hilfsbereit und professionell
 3. Halte Antworten kurz und präzise (max 2-3 Sätze wenn möglich)
-4. Bei Fragen zu spezifischen Trikots/Teams verweise auf die Suchfunktion oder die Liga-Seiten
-5. Erfinde KEINE Preise oder Verfügbarkeiten — verweise stattdessen auf den Shop
-6. Bei Problemen mit Bestellungen verweise auf Instagram oder E-Mail (support@t-express24.ch)
-7. Du kannst keine Bestellungen entgegennehmen oder ändern
-8. Benutze gelegentlich Fussball-Emojis ⚽ um die Antworten aufzulockern`;
+4. Wenn du Suchergebnisse aus der Produktdatenbank bekommst, nutze diese um konkrete Produkte zu empfehlen mit Name, Preis und Link
+5. Produktlinks haben das Format: /product/[handle] — gib sie als Markdown-Links an
+6. Erfinde KEINE Produkte oder Preise — nutze NUR die Suchergebnisse die dir gegeben werden
+7. Wenn keine Suchergebnisse vorhanden sind, sage dem Kunden dass du nichts Passendes gefunden hast und empfehle die Suchfunktion auf der Website
+8. Bei Problemen mit Bestellungen verweise auf Instagram oder E-Mail (support@t-express24.ch)
+9. Du kannst keine Bestellungen entgegennehmen oder ändern
+10. Benutze gelegentlich Fussball-Emojis ⚽ um die Antworten aufzulockern
+11. Wenn ein Kunde nach einem bestimmten Team fragt, nenne auch die Anzahl verfügbarer Trikots und verlinke zur Team-Seite: /team/[teamId]
+12. Wenn ein Kunde nach einer Liga fragt, verlinke zur Liga-Seite: /league/[leagueSlug]`;
+
+function buildProductContext(userMessage: string): string {
+  const parts: string[] = [];
+
+  // Suche nach Teams
+  const teamResults = searchTeams(userMessage, 5);
+  if (teamResults.length > 0) {
+    parts.push('GEFUNDENE TEAMS:');
+    for (const team of teamResults) {
+      const teamData = getTeam(team.id);
+      const categories = new Set<string>();
+      if (teamData) {
+        for (const p of teamData.products) {
+          for (const c of p.c) {
+            if (CATEGORIES[c]) categories.add(CATEGORIES[c]);
+          }
+        }
+      }
+      parts.push(`- ${team.name} (${team.leagueName}) — ${team.productCount} Trikots verfügbar — Team-Link: /team/${team.id} — Kategorien: ${[...categories].join(', ')}`);
+    }
+    parts.push('');
+  }
+
+  // Suche nach Produkten
+  const productResults = searchProducts(userMessage, 10);
+  if (productResults.length > 0) {
+    parts.push('GEFUNDENE PRODUKTE:');
+    for (const item of productResults) {
+      const cats = item.product.c.map(c => CATEGORIES[c] || c).join(', ');
+      parts.push(`- "${item.product.t}" | Team: ${item.teamName} | Preis: CHF ${item.product.p} | Kategorien: ${cats} | Link: /product/${item.product.h}`);
+    }
+    parts.push('');
+  }
+
+  // Liga-Übersicht falls relevant
+  const leagueKeywords = ['liga', 'league', 'ligen', 'angebot', 'sortiment', 'was habt ihr', 'welche teams', 'welche ligen'];
+  if (leagueKeywords.some(kw => userMessage.toLowerCase().includes(kw))) {
+    const leagues = getAllLeagues();
+    parts.push('ALLE LIGEN IM SHOP:');
+    for (const [slug, league] of Object.entries(leagues)) {
+      parts.push(`- ${league.name} (${league.country}) — ${league.teamCount} Teams, ${league.productCount} Trikots — Link: /league/${slug}`);
+    }
+    parts.push('');
+  }
+
+  return parts.join('\n');
+}
 
 export async function POST(req: NextRequest) {
   try {
@@ -72,10 +128,18 @@ export async function POST(req: NextRequest) {
       return Response.json({ error: 'Keine Nachricht erhalten' }, { status: 400 });
     }
 
+    // Letzte User-Nachricht für die Produktsuche verwenden
+    const lastUserMessage = [...messages].reverse().find((m: { role: string }) => m.role === 'user');
+    const productContext = lastUserMessage ? buildProductContext(lastUserMessage.content) : '';
+
+    const systemWithContext = productContext
+      ? `${SYSTEM_PROMPT}\n\n--- AKTUELLE SUCHERGEBNISSE AUS DER PRODUKTDATENBANK ---\n${productContext}`
+      : SYSTEM_PROMPT;
+
     const response = await client.messages.create({
       model: 'claude-haiku-4-5-20251001',
-      max_tokens: 512,
-      system: SYSTEM_PROMPT,
+      max_tokens: 1024,
+      system: systemWithContext,
       messages: messages.map((m: { role: string; content: string }) => ({
         role: m.role as 'user' | 'assistant',
         content: m.content,
