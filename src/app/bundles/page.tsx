@@ -16,13 +16,31 @@ export default function BundlesPage() {
   const openLightbox = (src: string) => { setLightbox(src); setLbZoom(false); };
   const [glowOn, setGlowOn] = useState(true);
   const [scrollHint, setScrollHint] = useState(true);
+  const [revealedSteps, setRevealedSteps] = useState<Set<number>>(new Set());
+  const stepRefs = useRef<(HTMLDivElement | null)[]>([]);
   useEffect(() => {
     const id = setInterval(() => setGlowOn(v => !v), 800);
     return () => clearInterval(id);
   }, []);
   useEffect(() => {
-    const onScroll = () => { if (window.scrollY > 30) setScrollHint(false); };
+    const onScroll = () => {
+      if (window.scrollY > 30) setScrollHint(false);
+      // Reveal steps when they enter viewport
+      stepRefs.current.forEach((el, i) => {
+        if (!el) return;
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 40) {
+          setRevealedSteps(prev => {
+            if (prev.has(i)) return prev;
+            const next = new Set(prev);
+            next.add(i);
+            return next;
+          });
+        }
+      });
+    };
     window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll(); // initial check
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
@@ -322,13 +340,12 @@ export default function BundlesPage() {
 
           {/* Right: How it works */}
           <div className="lg:col-span-2 relative z-10 lg:pb-4">
-            {/* === MOBILE: Wie funktioniert's — Startseiten-Style === */}
+            {/* === MOBILE: Wie funktioniert's — Scroll-Reveal via scroll listener === */}
             <div className="lg:hidden flex flex-col items-center">
-              {/* Obertitel — immer sichtbar */}
               <h3 className="text-3xl font-bold uppercase tracking-wide text-center mb-6" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>Wie funktioniert&apos;s?</h3>
 
               {/* Step 1 */}
-              <ScrollReveal delay={0} className="w-full">
+              <div ref={el => { stepRefs.current[0] = el; }} className="w-full" style={{ opacity: revealedSteps.has(0) ? 1 : 0, transform: revealedSteps.has(0) ? 'translateY(0)' : 'translateY(20px)', transition: 'opacity 0.5s ease-out, transform 0.5s ease-out' }}>
                 <div className="text-center">
                   <div className="flex items-center justify-center gap-3 mb-3">
                     <div className="inline-flex items-center justify-center w-11 h-11 rounded-xl bg-[var(--red-main)]/15 text-[var(--red-main)]">
@@ -338,10 +355,10 @@ export default function BundlesPage() {
                   </div>
                   <p className="text-sm text-gray-400 leading-relaxed">Erhalte 15% ab 3, 20% ab 6 oder 30% ab 10 Trikots.</p>
                 </div>
-              </ScrollReveal>
+              </div>
 
               {/* Chevrons 1 */}
-              <ScrollReveal delay={150}>
+              <div ref={el => { stepRefs.current[1] = el; }} style={{ opacity: revealedSteps.has(1) ? 1 : 0, transform: revealedSteps.has(1) ? 'translateY(0)' : 'translateY(20px)', transition: 'opacity 0.5s ease-out 0.15s, transform 0.5s ease-out 0.15s' }}>
                 <div className="flex items-center justify-center py-3">
                   <span className="flex flex-col -space-y-0.5 text-[var(--red-main)]">
                     <svg className="w-10 h-3 chevron-1" viewBox="0 0 40 12" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M4 2l16 8 16-8" /></svg>
@@ -349,10 +366,10 @@ export default function BundlesPage() {
                     <svg className="w-10 h-3 chevron-3" viewBox="0 0 40 12" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M4 2l16 8 16-8" /></svg>
                   </span>
                 </div>
-              </ScrollReveal>
+              </div>
 
               {/* Step 2 */}
-              <ScrollReveal delay={0} className="w-full">
+              <div ref={el => { stepRefs.current[2] = el; }} className="w-full" style={{ opacity: revealedSteps.has(2) ? 1 : 0, transform: revealedSteps.has(2) ? 'translateY(0)' : 'translateY(20px)', transition: 'opacity 0.5s ease-out, transform 0.5s ease-out' }}>
                 <div className="text-center">
                   <div className="flex items-center justify-center gap-3 mb-3">
                     <div className="inline-flex items-center justify-center w-11 h-11 rounded-xl bg-[var(--red-main)]/15 text-[var(--red-main)]">
@@ -363,10 +380,10 @@ export default function BundlesPage() {
                   <p className="text-sm text-gray-400 leading-relaxed">Stöbere durch den Shop und lege deine Lieblings-Trikots in den Warenkorb.</p>
                   <img src="/bundle-step2.png?v=6" alt="Trikot auswählen & Warenkorb" onClick={() => openLightbox('/bundle-step2.png?v=6')} className="mt-3 rounded-lg border border-white/10 w-full cursor-zoom-in hover:border-white/30 transition-colors" />
                 </div>
-              </ScrollReveal>
+              </div>
 
               {/* Chevrons 2 */}
-              <ScrollReveal delay={150}>
+              <div ref={el => { stepRefs.current[3] = el; }} style={{ opacity: revealedSteps.has(3) ? 1 : 0, transform: revealedSteps.has(3) ? 'translateY(0)' : 'translateY(20px)', transition: 'opacity 0.5s ease-out 0.15s, transform 0.5s ease-out 0.15s' }}>
                 <div className="flex items-center justify-center py-3">
                   <span className="flex flex-col -space-y-0.5 text-[var(--red-main)]">
                     <svg className="w-10 h-3 chevron-1" viewBox="0 0 40 12" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M4 2l16 8 16-8" /></svg>
@@ -374,10 +391,10 @@ export default function BundlesPage() {
                     <svg className="w-10 h-3 chevron-3" viewBox="0 0 40 12" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M4 2l16 8 16-8" /></svg>
                   </span>
                 </div>
-              </ScrollReveal>
+              </div>
 
               {/* Step 3 */}
-              <ScrollReveal delay={0} className="w-full">
+              <div ref={el => { stepRefs.current[4] = el; }} className="w-full" style={{ opacity: revealedSteps.has(4) ? 1 : 0, transform: revealedSteps.has(4) ? 'translateY(0)' : 'translateY(20px)', transition: 'opacity 0.5s ease-out, transform 0.5s ease-out' }}>
                 <div className="text-center">
                   <div className="flex items-center justify-center gap-3 mb-3">
                     <div className="inline-flex items-center justify-center w-11 h-11 rounded-xl bg-green-500/15 text-green-500">
@@ -388,10 +405,10 @@ export default function BundlesPage() {
                   <p className="text-sm text-gray-400 leading-relaxed">Der Rabatt wird automatisch im Warenkorb angewendet.</p>
                   <img src="/bundle-step3.png?v=3" alt="Rabatt im Warenkorb" onClick={() => openLightbox('/bundle-step3.png?v=3')} className="mt-3 rounded-lg border border-white/10 w-full cursor-zoom-in hover:border-white/30 transition-colors" />
                 </div>
-              </ScrollReveal>
+              </div>
 
               {/* Chevrons 3 */}
-              <ScrollReveal delay={150}>
+              <div ref={el => { stepRefs.current[5] = el; }} style={{ opacity: revealedSteps.has(5) ? 1 : 0, transform: revealedSteps.has(5) ? 'translateY(0)' : 'translateY(20px)', transition: 'opacity 0.5s ease-out 0.15s, transform 0.5s ease-out 0.15s' }}>
                 <div className="flex items-center justify-center py-3">
                   <span className="flex flex-col -space-y-0.5 text-[var(--red-main)]">
                     <svg className="w-10 h-3 chevron-1" viewBox="0 0 40 12" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M4 2l16 8 16-8" /></svg>
@@ -399,10 +416,10 @@ export default function BundlesPage() {
                     <svg className="w-10 h-3 chevron-3" viewBox="0 0 40 12" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M4 2l16 8 16-8" /></svg>
                   </span>
                 </div>
-              </ScrollReveal>
+              </div>
 
               {/* Step 4 */}
-              <ScrollReveal delay={0} className="w-full">
+              <div ref={el => { stepRefs.current[6] = el; }} className="w-full" style={{ opacity: revealedSteps.has(6) ? 1 : 0, transform: revealedSteps.has(6) ? 'translateY(0)' : 'translateY(20px)', transition: 'opacity 0.5s ease-out, transform 0.5s ease-out' }}>
                 <div className="text-center">
                   <div className="flex items-center justify-center gap-3 mb-3">
                     <div className="inline-flex items-center justify-center w-11 h-11 rounded-xl bg-[var(--red-main)]/15 text-[var(--red-main)]">
@@ -412,7 +429,7 @@ export default function BundlesPage() {
                   </div>
                   <p className="text-sm text-gray-400 leading-relaxed">Gib deinen Namen und Kontakt an und sende die Bestellung ab. Du erhältst in Kürze deine Bestellbestätigung.</p>
                 </div>
-              </ScrollReveal>
+              </div>
             </div>
 
             {/* === DESKTOP: Rabatt-Kreise + U-Branch === */}

@@ -41,16 +41,31 @@ export default function ProductDetailClient({ product, teamId, teamName, leagueN
   const scrollTimer = useRef<ReturnType<typeof setTimeout>>(null);
   const [thumbScroll, setThumbScroll] = useState({ ratio: 1, left: 0 });
   const [isScrolling, setIsScrolling] = useState(false);
-  const onThumbScroll = useCallback(() => {
+  const updateThumbScroll = useCallback(() => {
     const el = thumbRef.current;
     if (!el) return;
     const max = el.scrollWidth - el.clientWidth;
+    if (max <= 0) {
+      setThumbScroll({ ratio: 1, left: 0 });
+      return;
+    }
     const ratio = el.clientWidth / el.scrollWidth;
-    setThumbScroll({ ratio, left: max > 0 ? el.scrollLeft / el.scrollWidth : 0 });
+    const left = el.scrollLeft / max * (1 - ratio);
+    setThumbScroll({ ratio, left });
+  }, []);
+  const onThumbScroll = useCallback(() => {
+    updateThumbScroll();
     setIsScrolling(true);
     if (scrollTimer.current) clearTimeout(scrollTimer.current);
     scrollTimer.current = setTimeout(() => setIsScrolling(false), 1200);
-  }, []);
+  }, [updateThumbScroll]);
+
+  // Scrollbar initial berechnen
+  useEffect(() => {
+    updateThumbScroll();
+    window.addEventListener('resize', updateThumbScroll);
+    return () => window.removeEventListener('resize', updateThumbScroll);
+  }, [updateThumbScroll]);
 
   const doSetZoom = useCallback((z: number) => { zoomRef.current = z; setZoom(z); }, []);
   const doSetPan = useCallback((p: { x: number; y: number }) => { panRef.current = p; setPan(p); }, []);
@@ -250,9 +265,9 @@ export default function ProductDetailClient({ product, teamId, teamName, leagueN
                 ))}
               </div>
               {thumbScroll.ratio < 1 && (
-                <div className={`mt-2 h-[3px] bg-white/10 rounded-full relative transition-opacity duration-300 ${isScrolling ? 'opacity-100' : 'opacity-0'}`}>
+                <div className={`mt-2 h-[3px] bg-white/10 rounded-full relative transition-opacity duration-300 ${isScrolling ? 'opacity-100' : 'md:opacity-0 opacity-60'}`}>
                   <div
-                    className="absolute top-0 h-full bg-[var(--red-main)] rounded-full"
+                    className="absolute top-0 h-full bg-[var(--red-main)] rounded-full transition-all duration-150"
                     style={{ width: `${thumbScroll.ratio * 100}%`, left: `${thumbScroll.left * 100}%` }}
                   />
                 </div>
