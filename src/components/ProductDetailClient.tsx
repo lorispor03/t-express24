@@ -176,8 +176,15 @@ export default function ProductDetailClient({ product, teamId, teamName, leagueN
 
   return (
     <div className="max-w-6xl mx-auto px-4 py-6">
-      {/* Breadcrumb */}
-      <div className="flex items-center gap-2 text-base md:text-sm text-gray-400 mb-8 py-1">
+      {/* Breadcrumb — Mobile: nur Zurück-Link */}
+      <div className="md:hidden mb-6">
+        <Link href={`/team/${teamId}`} className="inline-flex items-center gap-1.5 text-sm text-gray-400 hover:text-white transition-colors py-1">
+          <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" /></svg>
+          {teamName}
+        </Link>
+      </div>
+      {/* Breadcrumb — Desktop: voller Pfad */}
+      <div className="hidden md:flex items-center gap-2 text-sm text-gray-400 mb-8 py-1">
         <Link href={`/league/${leagueSlug}`} className="hover:text-white transition-colors py-1 flex items-center gap-1"><svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" /></svg>{leagueName}</Link>
         <span>/</span>
         <Link href={`/team/${teamId}`} className="hover:text-white transition-colors py-1">{teamName}</Link>
