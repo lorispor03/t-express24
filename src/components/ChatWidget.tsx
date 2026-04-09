@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect, type ReactElement } from 'react';
 
 interface Message {
   role: 'user' | 'assistant';
@@ -9,7 +9,7 @@ interface Message {
 
 function renderMarkdown(text: string) {
   // Markdown-Links [text](url) und **bold** parsen
-  const parts: (string | JSX.Element)[] = [];
+  const parts: (string | ReactElement)[] = [];
   let remaining = text;
   let key = 0;
 
