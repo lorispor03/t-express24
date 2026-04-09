@@ -342,7 +342,7 @@ export default function BundlesPage() {
           <div className="lg:col-span-2 relative z-10 lg:pb-4">
             {/* === MOBILE: Wie funktioniert's — Scroll-Reveal via scroll listener === */}
             <div className="lg:hidden flex flex-col items-center">
-              <h3 className="text-3xl font-bold uppercase tracking-wide text-center mb-6" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>Wie funktioniert&apos;s?</h3>
+              <h3 className="text-3xl font-bold uppercase tracking-wide text-center mb-6" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>Wie funktioniert&apos;s? <span className="text-xs text-red-500">(v2)</span></h3>
 
               {/* Step 1 */}
               <div ref={el => { stepRefs.current[0] = el; }} className="w-full" style={{ opacity: revealedSteps.has(0) ? 1 : 0, transform: revealedSteps.has(0) ? 'translateY(0)' : 'translateY(20px)', transition: 'opacity 0.5s ease-out, transform 0.5s ease-out' }}>
