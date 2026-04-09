@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef, useState, ReactNode } from 'react';
+import { useEffect, useRef, useState, useCallback, ReactNode } from 'react';
 
 interface Props {
   children: ReactNode;
@@ -12,33 +12,46 @@ interface Props {
 export default function ScrollReveal({ children, delay = 0, className = '', mobileOnly = false }: Props) {
   const ref = useRef<HTMLDivElement>(null);
   const [visible, setVisible] = useState(false);
-  const [isDesktop, setIsDesktop] = useState(false);
+  const triggered = useRef(false);
 
-  useEffect(() => {
-    if (mobileOnly) {
-      const check = () => setIsDesktop(window.innerWidth >= 1024);
-      check();
-      window.addEventListener('resize', check);
-      return () => window.removeEventListener('resize', check);
+  const reveal = useCallback(() => {
+    if (triggered.current) return;
+    triggered.current = true;
+    if (delay > 0) {
+      setTimeout(() => setVisible(true), delay);
+    } else {
+      setVisible(true);
     }
-  }, [mobileOnly]);
+  }, [delay]);
 
   useEffect(() => {
-    if (mobileOnly && isDesktop) { setVisible(true); return; }
+    // On desktop with mobileOnly: show immediately
+    if (mobileOnly && typeof window !== 'undefined' && window.innerWidth >= 1024) {
+      reveal();
+      return;
+    }
+
     const el = ref.current;
     if (!el) return;
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setTimeout(() => setVisible(true), delay);
-          observer.unobserve(el);
-        }
-      },
-      { threshold: 0.1 }
-    );
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, [delay, mobileOnly, isDesktop]);
+
+    // Use IntersectionObserver if available
+    if (typeof IntersectionObserver !== 'undefined') {
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            reveal();
+            observer.disconnect();
+          }
+        },
+        { threshold: 0.05, rootMargin: '0px 0px 50px 0px' }
+      );
+      observer.observe(el);
+      return () => observer.disconnect();
+    } else {
+      // Fallback: just show it
+      reveal();
+    }
+  }, [reveal, mobileOnly]);
 
   return (
     <div

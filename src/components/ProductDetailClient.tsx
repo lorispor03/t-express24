@@ -373,7 +373,7 @@ export default function ProductDetailClient({ product, teamId, teamName, leagueN
                       value={flockingName}
                       onChange={e => setFlockingName(e.target.value)}
                       placeholder="z.B. Ronaldo"
-                      className="flex-1 bg-[#111] border border-white/10 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-[var(--red-main)] transition-colors"
+                      className="flex-1 bg-[#111] border border-white/10 rounded-lg px-4 py-2.5 text-base md:text-sm focus:outline-none focus:border-[var(--red-main)] transition-colors"
                     />
                     <input
                       type="text"
@@ -383,7 +383,7 @@ export default function ProductDetailClient({ product, teamId, teamName, leagueN
                       value={flockingNumber}
                       onChange={e => { const v = e.target.value.replace(/\D/g, '').slice(0, 3); setFlockingNumber(v); }}
                       placeholder="Nr."
-                      className="w-16 bg-[#111] border border-white/10 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-[var(--red-main)] transition-colors text-center"
+                      className="w-16 bg-[#111] border border-white/10 rounded-lg px-3 py-2.5 text-base md:text-sm focus:outline-none focus:border-[var(--red-main)] transition-colors text-center"
                     />
                   </div>
                 </div>
