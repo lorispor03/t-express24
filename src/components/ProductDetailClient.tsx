@@ -39,28 +39,18 @@ export default function ProductDetailClient({ product, teamId, teamName, leagueN
   const allImages = product.imgs && product.imgs.length > 1 ? product.imgs : [product.i];
   const thumbRef = useRef<HTMLDivElement>(null);
   const scrollTimer = useRef<ReturnType<typeof setTimeout>>(null);
-  const [scrollPercent, setScrollPercent] = useState(0);
-  const [canScroll, setCanScroll] = useState(false);
+  const [thumbScroll, setThumbScroll] = useState({ ratio: 1, left: 0 });
   const [isScrolling, setIsScrolling] = useState(false);
-  const updateThumbScroll = useCallback(() => {
+  const onThumbScroll = useCallback(() => {
     const el = thumbRef.current;
     if (!el) return;
     const max = el.scrollWidth - el.clientWidth;
-    setCanScroll(max > 0);
-    setScrollPercent(max > 0 ? el.scrollLeft / max : 0);
-  }, []);
-  const onThumbScroll = useCallback(() => {
-    updateThumbScroll();
+    const ratio = el.clientWidth / el.scrollWidth;
+    setThumbScroll({ ratio, left: max > 0 ? el.scrollLeft / el.scrollWidth : 0 });
     setIsScrolling(true);
     if (scrollTimer.current) clearTimeout(scrollTimer.current);
     scrollTimer.current = setTimeout(() => setIsScrolling(false), 1200);
-  }, [updateThumbScroll]);
-
-  useEffect(() => {
-    updateThumbScroll();
-    window.addEventListener('resize', updateThumbScroll);
-    return () => window.removeEventListener('resize', updateThumbScroll);
-  }, [updateThumbScroll]);
+  }, []);
 
   const doSetZoom = useCallback((z: number) => { zoomRef.current = z; setZoom(z); }, []);
   const doSetPan = useCallback((p: { x: number; y: number }) => { panRef.current = p; setPan(p); }, []);
@@ -242,7 +232,7 @@ export default function ProductDetailClient({ product, teamId, teamName, leagueN
               <div
                 ref={thumbRef}
                 onScroll={onThumbScroll}
-                className="flex gap-2 mt-3 overflow-x-auto hide-sb justify-center"
+                className="flex gap-2 mt-3 overflow-x-auto hide-sb"
                 style={{ scrollbarWidth: 'none', msOverflowStyle: 'none', WebkitOverflowScrolling: 'touch' }}
               >
                 {allImages.map((img, idx) => (
@@ -259,11 +249,11 @@ export default function ProductDetailClient({ product, teamId, teamName, leagueN
                   </button>
                 ))}
               </div>
-              {canScroll && (
-                <div className={`mt-2 h-[3px] bg-white/10 rounded-full overflow-hidden relative transition-opacity duration-300 ${isScrolling ? 'opacity-100' : 'md:opacity-0 opacity-60'}`}>
+              {thumbScroll.ratio < 1 && (
+                <div className={`mt-2 h-[3px] bg-white/10 rounded-full relative transition-opacity duration-300 ${isScrolling ? 'opacity-100' : 'opacity-0'}`}>
                   <div
-                    className="absolute top-0 left-0 h-full bg-[var(--red-main)] rounded-full transition-[width] duration-150"
-                    style={{ width: `${Math.max(5, scrollPercent * 100)}%` }}
+                    className="absolute top-0 h-full bg-[var(--red-main)] rounded-full"
+                    style={{ width: `${thumbScroll.ratio * 100}%`, left: `${thumbScroll.left * 100}%` }}
                   />
                 </div>
               )}
