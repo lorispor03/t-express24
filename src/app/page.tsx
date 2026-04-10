@@ -74,7 +74,7 @@ export default function HomePage() {
       </section>
 
       {/* Leagues Grid */}
-      <section id="ligen" className="max-w-7xl mx-auto px-4 pt-2 md:pt-3 pb-6 md:pb-10 scroll-mt-20">
+      <section id="ligen" className="max-w-7xl mx-auto px-4 pt-2 md:pt-3 pb-6 md:pb-10 scroll-mt-[92px] md:scroll-mt-16">
         <h2 className="text-4xl md:text-5xl uppercase tracking-wide mb-1" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>Unsere Ligen</h2>
         <p className="text-gray-400 mb-3 md:mb-5">Wähle eine Liga und entdecke alle verfügbaren Artikel deiner Lieblings-Clubs.</p>
 
@@ -115,7 +115,7 @@ export default function HomePage() {
       </section>
 
       {/* How it works */}
-      <section id="so-funktionierts" className="bg-[#111] border-y border-white/10 scroll-mt-20">
+      <section id="so-funktionierts" className="bg-[#111] border-y border-white/10 scroll-mt-[92px] md:scroll-mt-16">
         <div className="max-w-7xl mx-auto px-4 py-10">
           <h2 className="text-4xl md:text-5xl uppercase tracking-wide mb-8 text-center" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>So funktioniert&apos;s</h2>
           <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr_auto_1fr] gap-x-10 gap-y-6 items-start">
@@ -194,7 +194,7 @@ export default function HomePage() {
       </section>
 
       {/* FAQ */}
-      <section id="faq" className="scroll-mt-20">
+      <section id="faq" className="scroll-mt-[92px] md:scroll-mt-16">
         <FAQ />
       </section>
 
