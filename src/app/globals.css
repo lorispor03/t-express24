@@ -254,6 +254,24 @@ body {
 .chevron-2 { animation: chevron-flow 1.2s ease-in-out 0.2s infinite; }
 .chevron-3 { animation: chevron-flow 1.2s ease-in-out 0.4s infinite; }
 
+/* Mobile-only scroll reveal — desktop is always fully visible, no animation. */
+.sr-mobile {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity var(--sr-duration, 500ms) ease-out, transform var(--sr-duration, 500ms) ease-out;
+}
+.sr-mobile.sr-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (min-width: 1024px) {
+  .sr-mobile {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+}
+
 @keyframes scroll-pulse {
   0% { opacity: 0.3; }
   100% { opacity: 1; }

@@ -120,69 +120,75 @@ export default function HomePage() {
           <h2 className="text-4xl md:text-5xl uppercase tracking-wide mb-8 text-center" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>So funktioniert&apos;s</h2>
           <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr_auto_1fr] gap-x-10 gap-y-6 items-start">
             {/* Step 1 */}
-            <div className="text-center md:text-left">
-              <div className="flex items-center justify-center md:justify-start gap-3 mb-3">
-                <div className="inline-flex items-center justify-center w-11 h-11 rounded-xl bg-[var(--red-main)]/15 text-[var(--red-main)]">
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+            <ScrollReveal delay={0} duration={1100} adaptive mobileOnly>
+              <div className="text-center md:text-left">
+                <div className="flex items-center justify-center md:justify-start gap-3 mb-3">
+                  <div className="inline-flex items-center justify-center w-11 h-11 rounded-xl bg-[var(--red-main)]/15 text-[var(--red-main)]">
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+                  </div>
+                  <h3 className="font-bold text-lg whitespace-nowrap">Dein Trikot auswählen</h3>
                 </div>
-                <h3 className="font-bold text-lg whitespace-nowrap">Dein Trikot auswählen</h3>
+                <p className="text-sm text-gray-400 leading-relaxed">Stöbere durch über 4700 Artikel aus den grössten Ligen der Welt — von aktuellen Saisons bis hin zu seltenen Retro-Klassikern.</p>
               </div>
-              <p className="text-sm text-gray-400 leading-relaxed">Stöbere durch über 4700 Artikel aus den grössten Ligen der Welt — von aktuellen Saisons bis hin zu seltenen Retro-Klassikern.</p>
-            </div>
+            </ScrollReveal>
 
             {/* Chevrons 1 */}
             <div className="hidden md:flex items-center justify-center self-center">
               <span className="flex text-[var(--red-main)]">
-                <svg className="w-3 h-10 -mr-0.5" viewBox="0 0 12 40" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M2 4l8 16-8 16" /></svg>
-                <svg className="w-3 h-10 -mr-0.5" viewBox="0 0 12 40" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M2 4l8 16-8 16" /></svg>
-                <svg className="w-3 h-10" viewBox="0 0 12 40" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M2 4l8 16-8 16" /></svg>
+                <svg className="w-3 h-10 -mr-0.5 chevron-1" viewBox="0 0 12 40" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M2 4l8 16-8 16" /></svg>
+                <svg className="w-3 h-10 -mr-0.5 chevron-2" viewBox="0 0 12 40" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M2 4l8 16-8 16" /></svg>
+                <svg className="w-3 h-10 chevron-3" viewBox="0 0 12 40" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M2 4l8 16-8 16" /></svg>
               </span>
             </div>
             <div className="flex md:hidden items-center justify-center py-0.5">
               <span className="flex flex-col -space-y-0.5 text-[var(--red-main)]">
-                <svg className="w-10 h-3" viewBox="0 0 40 12" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M4 2l16 8 16-8" /></svg>
-                <svg className="w-10 h-3" viewBox="0 0 40 12" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M4 2l16 8 16-8" /></svg>
-                <svg className="w-10 h-3" viewBox="0 0 40 12" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M4 2l16 8 16-8" /></svg>
+                <svg className="w-10 h-3 chevron-1" viewBox="0 0 40 12" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M4 2l16 8 16-8" /></svg>
+                <svg className="w-10 h-3 chevron-2" viewBox="0 0 40 12" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M4 2l16 8 16-8" /></svg>
+                <svg className="w-10 h-3 chevron-3" viewBox="0 0 40 12" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M4 2l16 8 16-8" /></svg>
               </span>
             </div>
 
             {/* Step 2 */}
-            <div className="text-center md:text-left">
-              <div className="flex items-center justify-center md:justify-start gap-3 mb-3">
-                <div className="inline-flex items-center justify-center w-11 h-11 rounded-xl bg-[var(--red-main)]/15 text-[var(--red-main)]">
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 100 4 2 2 0 000-4z" /></svg>
+            <ScrollReveal delay={550} duration={1100} adaptive mobileOnly>
+              <div className="text-center md:text-left">
+                <div className="flex items-center justify-center md:justify-start gap-3 mb-3">
+                  <div className="inline-flex items-center justify-center w-11 h-11 rounded-xl bg-[var(--red-main)]/15 text-[var(--red-main)]">
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 100 4 2 2 0 000-4z" /></svg>
+                  </div>
+                  <h3 className="font-bold text-lg whitespace-nowrap">Bestellung aufgeben</h3>
                 </div>
-                <h3 className="font-bold text-lg whitespace-nowrap">Bestellung aufgeben</h3>
+                <p className="text-sm text-gray-400 leading-relaxed">Wähle Grösse und optionalen Aufdruck direkt im Shop. Dein Trikot wird aus unserem internationalen Lager für dich reserviert und in die Schweiz geliefert.</p>
               </div>
-              <p className="text-sm text-gray-400 leading-relaxed">Wähle Grösse und optionalen Aufdruck direkt im Shop. Dein Trikot wird aus unserem internationalen Lager für dich reserviert und in die Schweiz geliefert.</p>
-            </div>
+            </ScrollReveal>
 
             {/* Chevrons 2 */}
             <div className="hidden md:flex items-center justify-center self-center">
               <span className="flex text-[var(--red-main)]">
-                <svg className="w-3 h-10 -mr-0.5" viewBox="0 0 12 40" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M2 4l8 16-8 16" /></svg>
-                <svg className="w-3 h-10 -mr-0.5" viewBox="0 0 12 40" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M2 4l8 16-8 16" /></svg>
-                <svg className="w-3 h-10" viewBox="0 0 12 40" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M2 4l8 16-8 16" /></svg>
+                <svg className="w-3 h-10 -mr-0.5 chevron-1" viewBox="0 0 12 40" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M2 4l8 16-8 16" /></svg>
+                <svg className="w-3 h-10 -mr-0.5 chevron-2" viewBox="0 0 12 40" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M2 4l8 16-8 16" /></svg>
+                <svg className="w-3 h-10 chevron-3" viewBox="0 0 12 40" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M2 4l8 16-8 16" /></svg>
               </span>
             </div>
             <div className="flex md:hidden items-center justify-center py-0.5">
               <span className="flex flex-col -space-y-0.5 text-[var(--red-main)]">
-                <svg className="w-10 h-3" viewBox="0 0 40 12" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M4 2l16 8 16-8" /></svg>
-                <svg className="w-10 h-3" viewBox="0 0 40 12" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M4 2l16 8 16-8" /></svg>
-                <svg className="w-10 h-3" viewBox="0 0 40 12" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M4 2l16 8 16-8" /></svg>
+                <svg className="w-10 h-3 chevron-1" viewBox="0 0 40 12" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M4 2l16 8 16-8" /></svg>
+                <svg className="w-10 h-3 chevron-2" viewBox="0 0 40 12" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M4 2l16 8 16-8" /></svg>
+                <svg className="w-10 h-3 chevron-3" viewBox="0 0 40 12" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M4 2l16 8 16-8" /></svg>
               </span>
             </div>
 
             {/* Step 3 */}
-            <div className="text-center md:text-left">
-              <div className="flex items-center justify-center md:justify-start gap-3 mb-3">
-                <div className="inline-flex items-center justify-center w-11 h-11 rounded-xl bg-[var(--red-main)]/15 text-[var(--red-main)]">
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+            <ScrollReveal delay={1100} duration={1100} adaptive mobileOnly>
+              <div className="text-center md:text-left">
+                <div className="flex items-center justify-center md:justify-start gap-3 mb-3">
+                  <div className="inline-flex items-center justify-center w-11 h-11 rounded-xl bg-[var(--red-main)]/15 text-[var(--red-main)]">
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" /></svg>
+                  </div>
+                  <h3 className="font-bold text-lg whitespace-nowrap">Qualitätscheck & Lieferung</h3>
                 </div>
-                <h3 className="font-bold text-lg whitespace-nowrap">Qualitätscheck & Lieferung</h3>
+                <p className="text-sm text-gray-400 leading-relaxed">Jedes Trikot wird von uns persönlich auf Qualität, Verarbeitung und Druckbild geprüft — erst dann geht es direkt zu dir nach Hause.</p>
               </div>
-              <p className="text-sm text-gray-400 leading-relaxed">Jedes Trikot wird von uns persönlich auf Qualität, Verarbeitung und Druckbild geprüft — erst dann geht es direkt zu dir nach Hause.</p>
-            </div>
+            </ScrollReveal>
           </div>
         </div>
       </section>
