@@ -145,7 +145,7 @@ export default async function LeaguePage({ params }: { params: Promise<{ slug: s
               <ScrollReveal key={team.id} delay={i * 30} mobileOnly>
               <Link
                 href={`/team/${team.id}`}
-                className="team-card bg-[#1a1a1a] rounded-xl p-3 sm:p-5 border border-white/5 hover:border-[var(--red-main)]/30 text-center block h-full"
+                className="team-card group bg-[#1a1a1a] rounded-xl p-3 sm:p-5 border border-white/5 hover:border-[var(--red-main)]/30 text-center block h-full"
               >
                 {(() => {
                   const teamSlug = team.id.split('__')[1];
@@ -158,7 +158,7 @@ export default async function LeaguePage({ params }: { params: Promise<{ slug: s
                     </div>
                   );
                 })()}
-                <h3 className="text-xs sm:text-sm uppercase line-clamp-2 mb-1" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>{team.name}</h3>
+                <h3 className="text-xs sm:text-sm uppercase line-clamp-2 mb-1 group-hover:text-[var(--gold)] transition-colors" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>{team.name}</h3>
                 <p className="text-[10px] sm:text-xs text-gray-500">{team.count} Artikel</p>
               </Link>
               </ScrollReveal>

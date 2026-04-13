@@ -21,6 +21,7 @@ export default function ProductCard({ product, teamName }: ProductCardProps) {
         <h3 className="text-xs font-medium text-gray-300 line-clamp-2 leading-tight mb-2 min-h-[2rem]">{product.t}</h3>
         <div className="flex items-center justify-between mb-2">
           <span className="text-[var(--gold)] font-bold text-sm">CHF {product.p}</span>
+          <span className="text-sm text-gray-300 line-through">CHF {(Math.floor(parseFloat(product.p) / 0.79) + 0.90).toFixed(2)}</span>
         </div>
         {/* Category tags */}
         <div className="flex flex-wrap gap-1">

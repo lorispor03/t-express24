@@ -254,6 +254,21 @@ body {
 .chevron-2 { animation: chevron-flow 1.2s ease-in-out 0.2s infinite; }
 .chevron-3 { animation: chevron-flow 1.2s ease-in-out 0.4s infinite; }
 
+/* Vertical marquee used as side watermark on legal pages. */
+@keyframes vmarquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.vmarquee-track {
+  display: flex;
+  width: max-content;
+  animation: vmarquee 60s linear infinite;
+  will-change: transform;
+}
+.vmarquee-track-reverse {
+  animation-direction: reverse;
+}
+
 /* Mobile-only scroll reveal — desktop is always fully visible, no animation. */
 .sr-mobile {
   opacity: 0;
