@@ -76,9 +76,9 @@ export default function BundlesPage() {
                 {/* Loch */}
                 <circle cx="10.5" cy="6.5" r=".5" fill="currentColor" />
                 {/* % Zeichen */}
-                <circle cx="11" cy="10" r="0.9" />
-                <circle cx="14" cy="13" r="0.9" />
-                <line x1="10.2" y1="13.8" x2="14.8" y2="9.2" strokeWidth={1.2} />
+                <circle cx="12.2" cy="10.2" r="0.7" />
+                <circle cx="15.2" cy="13.2" r="0.7" />
+                <line x1="11.5" y1="14" x2="15.9" y2="9.4" strokeWidth={0.9} />
               </svg>
             </div>
             <div>
@@ -122,15 +122,6 @@ export default function BundlesPage() {
               </div>
             </div>
           </div>
-        </div>
-        {/* Arrow starts under red container, overflows grey field */}
-        <div className="flex justify-center pt-2 -mb-2 relative z-20">
-          <span className="flex flex-col -space-y-0.5 text-[var(--red-main)]">
-            <svg className="w-14 h-3 chevron-1" viewBox="0 0 56 12" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M4 2l24 8 24-8" /></svg>
-            <svg className="w-14 h-3 chevron-2" viewBox="0 0 56 12" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M4 2l24 8 24-8" /></svg>
-            <svg className="w-14 h-3 chevron-3" viewBox="0 0 56 12" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M4 2l24 8 24-8" /></svg>
-            <svg className="w-14 h-3 chevron-4" viewBox="0 0 56 12" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M4 2l24 8 24-8" /></svg>
-          </span>
         </div>
       </div>
 
@@ -307,15 +298,6 @@ export default function BundlesPage() {
                 </div>
               </div>
             </div>
-          </div>
-          {/* Arrow starts under red container, overflows grey field */}
-          <div className="flex justify-center pt-2 -mb-2 relative z-20">
-            <span className="flex flex-col -space-y-0.5 text-[var(--red-main)]">
-              <svg className="w-14 h-3 chevron-1" viewBox="0 0 56 12" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M4 2l24 8 24-8" /></svg>
-              <svg className="w-14 h-3 chevron-2" viewBox="0 0 56 12" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M4 2l24 8 24-8" /></svg>
-              <svg className="w-14 h-3 chevron-3" viewBox="0 0 56 12" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M4 2l24 8 24-8" /></svg>
-              <svg className="w-14 h-3 chevron-4" viewBox="0 0 56 12" fill="none" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M4 2l24 8 24-8" /></svg>
-            </span>
           </div>
         </div>
       </div>
