@@ -50,6 +50,7 @@ export async function POST(req: NextRequest) {
           product_data: {
             name: item.produkt_name,
             description: descParts.join(' · '),
+            ...(item.produkt_bild ? { images: [item.produkt_bild] } : {}),
           },
           unit_amount: Math.round(unitPrice * 100), // Stripe uses cents
         },

@@ -127,6 +127,17 @@ const KEYWORD_MAP: Record<string, string[]> = {
   'damen': ['female', 'women'], 'frauen': ['female', 'women'],
   'spieler': ['player'], 'training': ['training'], 'retro': ['retro'],
   'torwart': ['goalkeeper'], 'sondertrikot': ['special'], 'spezial': ['special'],
+  // Farben DE → EN
+  'lila': ['purple', 'violet'], 'violett': ['purple', 'violet'], 'purpur': ['purple'],
+  'blau': ['blue'], 'dunkelblau': ['navy', 'dark blue'], 'hellblau': ['light blue', 'sky blue'],
+  'rot': ['red'], 'dunkelrot': ['maroon', 'dark red'], 'weinrot': ['maroon', 'burgundy'],
+  'schwarz': ['black'], 'weiss': ['white'],
+  'gelb': ['yellow'], 'gold': ['gold', 'golden'],
+  'gruen': ['green'], 'grün': ['green'],
+  'rosa': ['pink'], 'pink': ['pink'],
+  'orange': ['orange'],
+  'grau': ['grey', 'gray'],
+  'tuerkis': ['turquoise', 'teal'], 'türkis': ['turquoise', 'teal'],
 };
 
 // Flexible Jahreszahl-Erkennung: "2008" → auch "07-08", "08-09" etc.
@@ -189,9 +200,25 @@ function expandQuery(words: string[]): string[][] {
   });
 }
 
+const STOP_WORDS = new Set([
+  'ich', 'du', 'er', 'sie', 'es', 'wir', 'ihr', 'sie', 'ein', 'eine', 'einen', 'einer', 'einem',
+  'der', 'die', 'das', 'den', 'dem', 'des', 'und', 'oder', 'aber', 'von', 'vom', 'fuer', 'fur',
+  'mit', 'bei', 'nach', 'aus', 'zu', 'zum', 'zur', 'in', 'im', 'an', 'am', 'auf', 'um',
+  'ist', 'sind', 'war', 'hat', 'haben', 'habt', 'wird', 'kann', 'will', 'soll', 'muss',
+  'nicht', 'kein', 'keine', 'keinen', 'noch', 'schon', 'auch', 'nur', 'mal', 'mir', 'mich',
+  'was', 'wie', 'wo', 'wer', 'welche', 'welches', 'welcher', 'welchem',
+  'gibt', 'gibts', 'gibt es', 'hast', 'haette', 'waere', 'moeglich',
+  'bitte', 'danke', 'gerne', 'gern', 'ja', 'nein', 'ok', 'okay',
+  'suche', 'suchen', 'brauche', 'moechte', 'wuerde', 'will', 'zeig', 'zeige',
+  'hallo', 'hey', 'hi', 'moin', 'servus', 'grueezi',
+  'trikot', 'trikots', 'jersey', 'shirt', 'kit',
+  'so', 'sehr', 'ganz', 'echt', 'eher', 'etwas', 'etwa', 'ungefaehr',
+]);
+
 export function searchProducts(query: string, limit = 20) {
   const q = normalize(query);
-  const words = q.split(/\s+/).filter(Boolean);
+  const words = q.split(/\s+/).filter(w => w && !STOP_WORDS.has(w));
+  if (words.length === 0) return [];
   const expandedWords = expandQuery(words);
   const results: Array<{ teamId: string; teamName: string; product: Product; score: number }> = [];
   for (const [teamId, team] of Object.entries(data.teams)) {

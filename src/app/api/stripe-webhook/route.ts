@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import Stripe from 'stripe';
 import { Redis } from '@upstash/redis';
+import { sendOrderConfirmationToCustomer, sendOrderNotificationToAdmin } from '@/lib/email';
 
 function getStripe() {
   return new Stripe(process.env.STRIPE_SECRET_KEY!);
@@ -84,6 +85,12 @@ export async function POST(req: NextRequest) {
 
       await redis.lpush('orders', JSON.stringify(orderData));
       console.log(`Order ${bestell_nr} created from Stripe payment`);
+
+      // E-Mails versenden (blockiert den Webhook nicht bei Fehler)
+      await Promise.allSettled([
+        sendOrderConfirmationToCustomer(orderData),
+        sendOrderNotificationToAdmin(orderData),
+      ]);
     } catch (err) {
       console.error('Error creating order from webhook:', err);
     }

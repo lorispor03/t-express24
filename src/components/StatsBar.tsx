@@ -113,7 +113,7 @@ export default function StatsBar() {
 
   return (
     <section ref={ref} className="relative border-y border-white/10 bg-[#111] overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 py-5 md:py-6 grid grid-cols-4 gap-2 md:gap-4">
+      <div className="max-w-[1440px] mx-auto px-4 py-5 md:py-6 grid grid-cols-4 gap-2 md:gap-4">
         {STATS.map((stat, i) => (
           <div
             key={stat.label}
@@ -149,7 +149,7 @@ export default function StatsBar() {
           </div>
         ))}
       </div>
-      {/* Gold shimmer sweep */}
+      {/* Gold shimmer sweep — kontinuierlich nach erster Animation */}
       {shimmer && (
         <div
           className="absolute top-0 bottom-0 pointer-events-none"
@@ -157,7 +157,7 @@ export default function StatsBar() {
             width: '150px',
             left: '-150px',
             background: 'linear-gradient(110deg, transparent 0%, rgba(240,167,62,0.04) 20%, rgba(255,255,255,0.08) 50%, rgba(240,167,62,0.04) 80%, transparent 100%)',
-            animation: 'stats-shimmer 1.8s ease-in-out forwards',
+            animation: 'stats-shimmer-loop 4s ease-in-out infinite',
           }}
         />
       )}
@@ -174,10 +174,11 @@ export default function StatsBar() {
           70% { transform: scale(0.95) rotate(2deg); }
           100% { transform: scale(1) rotate(0deg); }
         }
-        @keyframes stats-shimmer {
+        @keyframes stats-shimmer-loop {
           0% { left: -150px; opacity: 0; }
           5% { opacity: 1; }
-          95% { opacity: 1; }
+          45% { left: 100%; opacity: 1; }
+          50% { left: 100%; opacity: 0; }
           100% { left: 100%; opacity: 0; }
         }
       `}</style>

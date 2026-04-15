@@ -378,7 +378,7 @@ export default function ProductDetailClient({ product, teamId, teamName, leagueN
                     <input
                       type="text"
                       value={flockingName}
-                      onChange={e => setFlockingName(e.target.value)}
+                      onChange={e => setFlockingName(e.target.value.replace(/[0-9]/g, '').slice(0, 13))}
                       placeholder="z.B. Ronaldo"
                       className="flex-1 bg-[#111] border border-white/10 rounded-lg px-4 py-2.5 text-base md:text-sm focus:outline-none focus:border-[var(--red-main)] transition-colors"
                     />

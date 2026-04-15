@@ -46,7 +46,7 @@ export default async function TeamPage({ params }: { params: Promise<{ id: strin
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[#111] via-[var(--red-dark)] to-[#111]" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(196,34,46,0.15),transparent_60%)]" />
-        <div className="relative max-w-7xl mx-auto px-4 py-4 md:py-6">
+        <div className="relative max-w-[1440px] mx-auto px-4 py-4 md:py-6">
           {/* Breadcrumb */}
           <div className="flex items-center gap-2 text-base md:text-sm text-gray-400 mb-3 md:mb-3 py-1">
             <Link href="/#ligen" className="hover:text-white transition-colors py-1 flex items-center gap-1"><svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" /></svg>Ligen</Link>

@@ -6,7 +6,7 @@ import BundleBar from "@/components/BundleBar";
 import ConsentBanner from "@/components/ConsentBanner";
 import ChatWidget from "@/components/ChatWidget";
 
-const SITE_URL = "https://t-express24.ch";
+const SITE_URL = "https://t-express24.shop";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -41,21 +41,12 @@ export const metadata: Metadata = {
     title: "T-EXPRESS24 | Premium Fussball Trikots aus der Schweiz",
     description:
       "Premium Fussballtrikots aus der Schweiz. Über 4'700 Artikel aus 10 Top-Ligen – Fan, Player, Retro, Kinder & Damen. Kostenloser Versand, 100% geprüfte Qualität.",
-    images: [
-      {
-        url: "/logo.png",
-        width: 1200,
-        height: 630,
-        alt: "T-EXPRESS24 – Premium Fussballtrikots",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "T-EXPRESS24 | Premium Fussball Trikots aus der Schweiz",
     description:
       "Premium Fussballtrikots aus der Schweiz. Über 4'700 Artikel aus 10 Top-Ligen. Kostenloser Versand, 100% geprüfte Qualität.",
-    images: ["/logo.png"],
   },
   robots: {
     index: true,
@@ -66,9 +57,6 @@ export const metadata: Metadata = {
       "max-image-preview": "large",
       "max-snippet": -1,
     },
-  },
-  icons: {
-    icon: "/favicon.ico",
   },
 };
 

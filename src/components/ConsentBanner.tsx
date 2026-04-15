@@ -38,6 +38,10 @@ export default function ConsentBanner() {
             Mit der Nutzung dieses Shops akzeptierst du unsere{' '}
             <Link href="/agb" className="text-[var(--gold)] underline hover:text-white">
               Geschäftsbedingungen
+            </Link>
+            {' '}und unsere{' '}
+            <Link href="/datenschutz" className="text-[var(--gold)] underline hover:text-white">
+              Datenschutzerklärung
             </Link>.
           </p>
           <button
