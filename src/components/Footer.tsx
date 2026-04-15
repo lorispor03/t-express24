@@ -5,7 +5,7 @@ export default function Footer({ dark }: { dark?: boolean }) {
     <footer className={`relative overflow-hidden border-t-2 border-white/15 ${dark ? 'bg-[#0d0d0d]' : 'mt-10'}`}>
       {!dark && <div className="absolute inset-0 bg-gradient-to-br from-[#111] via-[var(--red-dark)] to-[#111]" />}
       {!dark && <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(196,34,46,0.3),transparent_70%)]" />}
-      <div className="relative max-w-[1440px] mx-auto px-4 py-12">
+      <div className="relative max-w-[1920px] mx-auto px-4 md:px-8 xl:px-12 2xl:px-16 py-12">
         {/* Brand */}
         <div className="text-center mb-8">
           <div className="flex items-center gap-3 mb-3 justify-center">

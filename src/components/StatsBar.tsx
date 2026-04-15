@@ -113,7 +113,7 @@ export default function StatsBar() {
 
   return (
     <section ref={ref} className="relative border-y border-white/10 bg-[#111] overflow-hidden">
-      <div className="max-w-[1440px] mx-auto px-4 py-5 md:py-6 grid grid-cols-4 gap-2 md:gap-4">
+      <div className="max-w-[1920px] mx-auto px-4 md:px-8 xl:px-12 2xl:px-16 py-5 md:py-6 grid grid-cols-4 gap-2 md:gap-4">
         {STATS.map((stat, i) => (
           <div
             key={stat.label}

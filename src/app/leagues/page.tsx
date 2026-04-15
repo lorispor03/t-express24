@@ -11,7 +11,7 @@ export default function LeaguesPage() {
     <>
       <Header />
 
-      <section className="max-w-[1440px] mx-auto px-4 py-12">
+      <section className="max-w-[1920px] mx-auto px-4 md:px-8 xl:px-12 2xl:px-16 py-12">
         <div className="flex items-center gap-2 text-base md:text-sm text-gray-400 mb-6 py-1">
           <Link href="/#ligen" className="hover:text-white transition-colors py-1 flex items-center gap-1"><svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" /></svg>Ligen</Link>
           <span>/</span>

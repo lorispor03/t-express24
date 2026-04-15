@@ -60,7 +60,7 @@ export default async function LeaguePage({ params }: { params: Promise<{ slug: s
       {/* Hero */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[#111] via-[var(--red-dark)] to-[#111]" />
-        <div className="relative max-w-[1440px] mx-auto px-4 py-5 md:py-8">
+        <div className="relative max-w-[1920px] mx-auto px-4 md:px-8 xl:px-12 2xl:px-16 py-5 md:py-8">
           <div className="flex items-center gap-2 text-base md:text-sm text-gray-400 mb-2 md:mb-4 py-1">
             <Link href="/#ligen" className="hover:text-white transition-colors py-1 flex items-center gap-1"><svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" /></svg>Ligen</Link>
             <span>/</span>
@@ -88,7 +88,7 @@ export default async function LeaguePage({ params }: { params: Promise<{ slug: s
       {/* League Description */}
       {LEAGUE_DESCRIPTIONS[slug] && (
         <section className="border-b border-white/10 bg-[var(--red-main)]/5 md:bg-[#111]">
-          <div className="max-w-[1440px] mx-auto px-4 py-3 md:py-6">
+          <div className="max-w-[1920px] mx-auto px-4 md:px-8 xl:px-12 2xl:px-16 py-3 md:py-6">
             <div className="md:bg-[var(--red-main)]/5 md:backdrop-blur-md md:rounded-xl md:px-5 md:py-4 md:border md:border-[var(--red-main)]/10 min-h-[60px] flex items-center">
               <div className="relative pl-6 border-l-2 border-[var(--gold)]/40">
                 <span className="absolute left-0.5 -top-1 text-4xl text-[var(--gold)]/30 font-serif leading-none select-none">&ldquo;</span>
@@ -102,7 +102,7 @@ export default async function LeaguePage({ params }: { params: Promise<{ slug: s
       )}
 
       {/* Content */}
-      <section className="max-w-[1440px] mx-auto px-4 py-12">
+      <section className="max-w-[1920px] mx-auto px-4 md:px-8 xl:px-12 2xl:px-16 py-12">
         {hasSubLeagues ? (
           /* Sub-League Cards - same style as homepage league cards */
           <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">

@@ -28,7 +28,7 @@ export default function Header() {
   if (isCheckout) {
     return (
       <header className="sticky top-0 z-50 bg-[#111]/95 backdrop-blur-md border-b border-white/10">
-        <div className="max-w-[1440px] mx-auto px-4 h-12 md:h-16 flex items-center justify-between">
+        <div className="max-w-[1920px] mx-auto px-4 md:px-8 xl:px-12 2xl:px-16 h-12 md:h-16 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-3">
             <Image src="/logo.png" alt="T-EXPRESS24" width={40} height={40} className="rounded-lg" />
             <span className="font-extrabold text-lg tracking-tight hidden sm:inline">T-EXPRESS<span className="text-[var(--gold)]">24</span></span>
@@ -65,7 +65,7 @@ export default function Header() {
 
       {/* Main Header */}
       <header className="sticky top-0 z-50 bg-[#111]/95 backdrop-blur-md border-b border-white/10">
-        <div className="max-w-[1440px] mx-auto px-4 h-12 md:h-16 flex items-center justify-between relative">
+        <div className="max-w-[1920px] mx-auto px-4 md:px-8 xl:px-12 2xl:px-16 h-12 md:h-16 flex items-center justify-between relative">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 flex-shrink-0">
             <Image src="/logo.png" alt="T-EXPRESS24" width={40} height={40} className="rounded-lg" />

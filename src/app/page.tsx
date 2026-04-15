@@ -20,7 +20,7 @@ export default function HomePage() {
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[#111] via-[var(--red-dark)] to-[#111] hero-bg" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(196,34,46,0.3),transparent_70%)] hero-bg" />
-        <div className="relative max-w-[1440px] mx-auto px-4 py-2 md:pt-6 md:pb-4 flex justify-center">
+        <div className="relative max-w-[1920px] mx-auto px-4 md:px-8 xl:px-12 2xl:px-16 py-2 md:pt-6 md:pb-4 flex justify-center">
           <div className="relative">
             <Image src="/logo.png" alt="T-EXPRESS24" width={500} height={500} className="max-w-[280px] sm:max-w-[380px] md:max-w-[480px] w-full hero-logo" priority />
             <div className="hero-scanline" />
@@ -39,7 +39,7 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-[var(--red-dark)]/30" />
         <div className="absolute left-0 right-0 -top-16 h-16 bg-gradient-to-b from-transparent to-[var(--red-dark)]/30" />
         <div className="absolute left-0 right-0 -bottom-24 h-24 bg-gradient-to-b from-[var(--red-dark)]/30 to-transparent" />
-        <div className="relative max-w-[1440px] mx-auto px-4 pt-2 md:pt-3 pb-4 md:pb-5">
+        <div className="relative max-w-[1920px] mx-auto px-4 md:px-8 xl:px-12 2xl:px-16 pt-2 md:pt-3 pb-4 md:pb-5">
           <h2 className="text-4xl md:text-5xl uppercase tracking-wide mb-1 text-[var(--red-main)]" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
             Bundles
           </h2>
@@ -79,7 +79,7 @@ export default function HomePage() {
       </section>
 
       {/* Leagues Grid */}
-      <section id="ligen" className="max-w-[1440px] mx-auto px-4 pt-2 md:pt-3 pb-6 md:pb-10 scroll-mt-[92px] md:scroll-mt-16">
+      <section id="ligen" className="max-w-[1920px] mx-auto px-4 md:px-8 xl:px-12 2xl:px-16 pt-2 md:pt-3 pb-6 md:pb-10 scroll-mt-[92px] md:scroll-mt-16">
         <h2 className="text-4xl md:text-5xl uppercase tracking-wide mb-1" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>Unsere Ligen</h2>
         <p className="text-gray-400 mb-3 md:mb-5">Wähle eine Liga und entdecke alle verfügbaren Artikel deiner Lieblings-Clubs.</p>
 
@@ -138,7 +138,7 @@ export default function HomePage() {
 
       {/* How it works */}
       <section id="so-funktionierts" className="bg-[#111] border-y border-white/10 scroll-mt-[92px] md:scroll-mt-16">
-        <div className="max-w-[1440px] mx-auto px-4 py-10">
+        <div className="max-w-[1920px] mx-auto px-4 md:px-8 xl:px-12 2xl:px-16 py-10">
           <h2 className="text-4xl md:text-5xl uppercase tracking-wide mb-8 text-center" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>So funktioniert&apos;s</h2>
           <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr_auto_1fr] gap-x-10 gap-y-6 items-start">
             {/* Step 1 */}

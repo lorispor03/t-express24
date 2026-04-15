@@ -60,7 +60,7 @@ export default function BundlesPage() {
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[#111] via-[var(--red-dark)] to-[#111]" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(196,34,46,0.3),transparent_70%)]" />
-        <div className="relative max-w-[1440px] mx-auto px-4 py-5 md:py-8">
+        <div className="relative max-w-[1920px] mx-auto px-4 md:px-8 xl:px-12 2xl:px-16 py-5 md:py-8">
           <nav className="flex items-center gap-2 text-base md:text-sm text-gray-400 mb-2 md:mb-4 py-1">
             <Link href="/" className="hover:text-white transition-colors py-1 flex items-center gap-1"><svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" /></svg>Home</Link>
             <span>/</span>
@@ -95,7 +95,7 @@ export default function BundlesPage() {
 
       {/* Graues Feld unter Hero */}
       <div className="border-b border-white/10 bg-[var(--red-main)]/5 lg:bg-[#111] overflow-visible relative z-10">
-        <div className="max-w-[1440px] mx-auto px-4 pt-4 pb-0 lg:pt-6 lg:pb-0">
+        <div className="max-w-[1920px] mx-auto px-4 md:px-8 xl:px-12 2xl:px-16 pt-4 pb-0 lg:pt-6 lg:pb-0">
           <div className="flex flex-col items-center">
             <div className="relative w-full lg:bg-[var(--red-main)]/5 lg:backdrop-blur-md lg:rounded-xl lg:px-8 lg:py-5 lg:border lg:border-[var(--red-main)]/10 flex flex-col items-center py-3 lg:py-5 mb-2">
               <div className="flex items-center justify-center gap-6 lg:gap-12 w-full">
@@ -126,7 +126,7 @@ export default function BundlesPage() {
       </div>
 
       {/* Bundle Cards */}
-      <section className="max-w-[1440px] mx-auto px-4 pt-8 pb-8">
+      <section className="max-w-[1920px] mx-auto px-4 md:px-8 xl:px-12 2xl:px-16 pt-8 pb-8">
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 lg:gap-6">
             {/* 3+ Trikots = 15% */}
             <div className={`relative bg-[#1a1a1a] rounded-2xl border-2 overflow-hidden flex flex-col ${activeBundle === '3plus' ? 'border-green-400/50' : 'border-white/15'}`}>
@@ -282,7 +282,7 @@ export default function BundlesPage() {
 
       {/* Wie funktioniert's */}
       <div className="border-t border-b border-white/10 bg-[var(--red-main)]/5 lg:bg-[#111] overflow-visible relative z-10">
-        <div className="max-w-[1440px] mx-auto px-4 pt-4 pb-0 lg:pt-6 lg:pb-0">
+        <div className="max-w-[1920px] mx-auto px-4 md:px-8 xl:px-12 2xl:px-16 pt-4 pb-0 lg:pt-6 lg:pb-0">
           <div className="flex flex-col items-center">
             <div className="relative w-full lg:bg-[var(--red-main)]/5 lg:backdrop-blur-md lg:rounded-xl lg:px-8 lg:py-5 lg:border lg:border-[var(--red-main)]/10 flex flex-col items-center py-3 lg:py-5 mb-2">
               <div className="flex items-center justify-center gap-4 lg:gap-6 w-full">
@@ -318,7 +318,7 @@ export default function BundlesPage() {
             </div>
           </div>
         </div>
-      <section className="relative max-w-[1440px] mx-auto px-4 pt-6 pb-4">
+      <section className="relative max-w-[1920px] mx-auto px-4 md:px-8 xl:px-12 2xl:px-16 pt-6 pb-4">
         <div className="max-w-xl mx-auto flex flex-col items-center gap-0 relative z-10">
           {/* Rabatt-Kreise + U-Branch */}
           <div className="flex justify-center gap-20 mb-0">

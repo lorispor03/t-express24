@@ -76,7 +76,7 @@ export default function LeagueTopSeller({ deals }: { deals: Deal[] }) {
   const items = [...deals, ...deals];
 
   return (
-    <section className="max-w-[1440px] mx-auto px-4 py-4 md:py-6">
+    <section className="max-w-[1920px] mx-auto px-4 md:px-8 xl:px-12 2xl:px-16 py-4 md:py-6">
       <div className="flex items-center justify-between mb-4 md:mb-6">
         <div>
           <h2 className="text-4xl md:text-5xl uppercase tracking-wide" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
