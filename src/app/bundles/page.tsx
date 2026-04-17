@@ -75,10 +75,10 @@ export default function BundlesPage() {
                 <path d="M2 7v6.172a2 2 0 0 0 .586 1.414l6.71 6.71a2.4 2.4 0 0 0 3.191.193" />
                 {/* Loch */}
                 <circle cx="10.5" cy="6.5" r=".5" fill="currentColor" />
-                {/* % Zeichen */}
-                <circle cx="12.2" cy="10.2" r="0.7" />
-                <circle cx="15.2" cy="13.2" r="0.7" />
-                <line x1="11.5" y1="14" x2="15.9" y2="9.4" strokeWidth={0.9} />
+                {/* % Zeichen — zentriert auf Tag-Body */}
+                <circle cx="13.3" cy="9.8" r="0.7" strokeWidth={0.8} />
+                <circle cx="15.7" cy="12.2" r="0.7" strokeWidth={0.8} />
+                <line x1="12.5" y1="13" x2="16.5" y2="9" strokeWidth={0.8} />
               </svg>
             </div>
             <div>
@@ -95,10 +95,10 @@ export default function BundlesPage() {
 
       {/* Graues Feld unter Hero */}
       <div className="border-b border-white/10 bg-[var(--red-main)]/5 lg:bg-[#111] overflow-visible relative z-10">
-        <div className="max-w-[1920px] mx-auto px-4 md:px-8 xl:px-12 2xl:px-16 pt-4 pb-0 lg:pt-6 lg:pb-0">
+        <div className="max-w-[1920px] mx-auto px-4 md:px-8 xl:px-12 2xl:px-16 py-4 lg:py-6">
           <div className="flex flex-col items-center">
-            <div className="relative w-full lg:bg-[var(--red-main)]/5 lg:backdrop-blur-md lg:rounded-xl lg:px-8 lg:py-5 lg:border lg:border-[var(--red-main)]/10 flex flex-col items-center py-3 lg:py-5 mb-2">
-              <div className="flex items-center justify-center gap-6 lg:gap-12 w-full">
+            <div className="relative w-full lg:bg-[var(--red-main)]/5 lg:backdrop-blur-md lg:rounded-xl lg:px-8 lg:py-5 lg:border lg:border-[var(--red-main)]/10 flex flex-col items-center justify-center py-3 lg:py-5">
+              <div className="flex items-center justify-center gap-6 lg:gap-12">
                 <div className="flex flex-col items-center gap-1.5">
                   <svg className="w-11 h-11 text-white/25" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z" /></svg>
                   <span className="text-[10px] text-white/30 uppercase tracking-wider">Sparen</span>
@@ -282,10 +282,10 @@ export default function BundlesPage() {
 
       {/* Wie funktioniert's */}
       <div className="border-t border-b border-white/10 bg-[var(--red-main)]/5 lg:bg-[#111] overflow-visible relative z-10">
-        <div className="max-w-[1920px] mx-auto px-4 md:px-8 xl:px-12 2xl:px-16 pt-4 pb-0 lg:pt-6 lg:pb-0">
+        <div className="max-w-[1920px] mx-auto px-4 md:px-8 xl:px-12 2xl:px-16 py-4 lg:py-6">
           <div className="flex flex-col items-center">
-            <div className="relative w-full lg:bg-[var(--red-main)]/5 lg:backdrop-blur-md lg:rounded-xl lg:px-8 lg:py-5 lg:border lg:border-[var(--red-main)]/10 flex flex-col items-center py-3 lg:py-5 mb-2">
-              <div className="flex items-center justify-center gap-4 lg:gap-6 w-full">
+            <div className="relative w-full lg:bg-[var(--red-main)]/5 lg:backdrop-blur-md lg:rounded-xl lg:px-8 lg:py-5 lg:border lg:border-[var(--red-main)]/10 flex flex-col items-center justify-center py-3 lg:py-5">
+              <div className="flex items-center justify-center gap-4 lg:gap-6">
                 <svg className="w-20 h-20 text-white/25 flex-shrink-0" viewBox="0 0 100 100" fill="currentColor">
                   {/* Grosses Zahnrad */}
                   <path d="M40.6 11.2l-2.8 8.4c-2.4.7-4.6 1.8-6.6 3.2l-8.2-3.2-5.8 10 6.4 6c-.4 1.4-.6 2.9-.6 4.4s.2 3 .6 4.4l-6.4 6 5.8 10 8.2-3.2c2 1.4 4.2 2.5 6.6 3.2l2.8 8.4h11.6l2.8-8.4c2.4-.7 4.6-1.8 6.6-3.2l8.2 3.2 5.8-10-6.4-6c.4-1.4.6-2.9.6-4.4s-.2-3-.6-4.4l6.4-6-5.8-10-8.2 3.2c-2-1.4-4.2-2.5-6.6-3.2l-2.8-8.4H40.6zM46.4 30c5.5 0 10 4.5 10 10s-4.5 10-10 10-10-4.5-10-10 4.5-10 10-10z" fillRule="evenodd" />
@@ -294,7 +294,7 @@ export default function BundlesPage() {
                 </svg>
                 <div>
                   <h3 className="text-4xl lg:text-6xl font-bold uppercase tracking-wide" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>Wie funktioniert&apos;s?</h3>
-                  <p className="text-white/25 text-xs lg:text-sm max-w-sm">Schwierigkeiten? Hier findest du die Anleitung für deine Bundle-Bestellung.</p>
+                  <p className="text-white/25 text-xs lg:text-sm">Schwierigkeiten? Hier findest du die Anleitung für deine Bundle-Bestellung.</p>
                 </div>
               </div>
             </div>

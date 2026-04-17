@@ -54,17 +54,26 @@ export default function DealsSection() {
   const scrollRef = useRef<HTMLDivElement>(null);
   const [paused, setPaused] = useState(false);
 
+  // Start in the middle so user can swipe both directions immediately
+  useEffect(() => {
+    const el = scrollRef.current;
+    if (!el) return;
+    // Jump to start of second copy (middle of total)
+    const half = el.scrollWidth / 3;
+    el.scrollLeft = half;
+  }, []);
+
   // Infinite scroll loop: when reaching end, jump back seamlessly
   useEffect(() => {
     const el = scrollRef.current;
     if (!el) return;
 
     const onScroll = () => {
-      const half = el.scrollWidth / 2;
-      if (el.scrollLeft >= half) {
-        el.scrollLeft -= half;
+      const third = el.scrollWidth / 3;
+      if (el.scrollLeft >= third * 2) {
+        el.scrollLeft -= third;
       } else if (el.scrollLeft <= 0) {
-        el.scrollLeft += half;
+        el.scrollLeft += third;
       }
     };
 
@@ -91,8 +100,8 @@ export default function DealsSection() {
     return () => cancelAnimationFrame(rafId);
   }, [paused]);
 
-  // Duplicate items for seamless loop
-  const items = [...DEALS, ...DEALS];
+  // Triplicate items for seamless bidirectional loop
+  const items = [...DEALS, ...DEALS, ...DEALS];
 
   return (
     <section className="max-w-[1920px] mx-auto px-4 md:px-8 xl:px-12 2xl:px-16 py-4 md:py-6">
@@ -114,7 +123,7 @@ export default function DealsSection() {
         onMouseLeave={() => setPaused(false)}
         onTouchStart={() => setPaused(true)}
         onTouchEnd={() => { setTimeout(() => setPaused(false), 2000); }}
-        className="flex gap-3 overflow-x-auto hide-sb pb-2"
+        className="flex gap-3 overflow-x-auto hide-sb pb-2 -mx-4 px-4 md:-mx-8 md:px-8 xl:-mx-12 xl:px-12 2xl:-mx-16 2xl:px-16"
         style={{ scrollbarWidth: 'none', WebkitOverflowScrolling: 'touch' }}
       >
         {items.map((deal, i) => (
