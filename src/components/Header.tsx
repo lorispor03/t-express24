@@ -31,7 +31,7 @@ export default function Header() {
         <div className="max-w-[1920px] mx-auto px-4 md:px-8 xl:px-12 2xl:px-16 h-12 md:h-16 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-3">
             <Image src="/logo.png" alt="T-EXPRESS24" width={40} height={40} className="rounded-lg" />
-            <span className="font-extrabold text-lg tracking-tight hidden sm:inline">T-EXPRESS<span className="text-[var(--gold)]">24</span></span>
+            <span className="font-extrabold text-lg tracking-tight">T-EXPRESS<span className="text-[var(--gold)]">24</span></span>
           </Link>
         </div>
       </header>
@@ -69,7 +69,7 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 flex-shrink-0">
             <Image src="/logo.png" alt="T-EXPRESS24" width={40} height={40} className="rounded-lg" />
-            <span className="font-extrabold text-lg tracking-tight hidden sm:inline">T-EXPRESS<span className="text-[var(--gold)]">24</span></span>
+            <span className="font-extrabold text-lg tracking-tight">T-EXPRESS<span className="text-[var(--gold)]">24</span></span>
           </Link>
 
           {/* Search bar - Desktop: centered absolutely */}
@@ -154,10 +154,10 @@ export default function Header() {
 
         {/* Mobile menu */}
         {menuOpen && (
-          <div className="md:hidden bg-[#111] border-t border-white/10 px-4 py-4 space-y-3">
-            <Link href="/#ligen" onClick={() => setMenuOpen(false)} className="block text-sm font-medium hover:text-[var(--gold)]">Ligen</Link>
-            <Link href="/#so-funktionierts" onClick={() => setMenuOpen(false)} className="block text-sm font-medium hover:text-[var(--gold)]">So funktioniert&apos;s</Link>
-            <Link href="/#faq" onClick={() => setMenuOpen(false)} className="block text-sm font-medium hover:text-[var(--gold)]">FAQ</Link>
+          <div className="md:hidden bg-[#111] border-t border-white/10 px-4 py-2 divide-y divide-white/10">
+            <Link href="/#ligen" onClick={() => setMenuOpen(false)} className="block text-sm font-medium hover:text-[var(--gold)] py-3">Ligen</Link>
+            <Link href="/#so-funktionierts" onClick={() => setMenuOpen(false)} className="block text-sm font-medium hover:text-[var(--gold)] py-3">So funktioniert&apos;s</Link>
+            <Link href="/#faq" onClick={() => setMenuOpen(false)} className="block text-sm font-medium hover:text-[var(--gold)] py-3">FAQ</Link>
           </div>
         )}
       </header>

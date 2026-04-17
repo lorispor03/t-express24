@@ -71,7 +71,7 @@ export default function RootLayout({
         {/* Always start at the top on reload, never restore the previous scroll position. */}
         <script
           dangerouslySetInnerHTML={{
-            __html: `if('scrollRestoration' in history){history.scrollRestoration='manual';}`,
+            __html: `if('scrollRestoration' in history){history.scrollRestoration='manual';}window.scrollTo(0,0);`,
           }}
         />
       </head>
