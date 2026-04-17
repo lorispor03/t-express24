@@ -303,7 +303,7 @@ export default function BundlesPage() {
       </div>
       <div className="relative overflow-hidden pb-10 -mb-10">
         {/* Marquee links */}
-        <div aria-hidden className="hidden lg:block absolute inset-y-0 left-[calc(50%-40rem)] right-[calc(50%+18rem)] pointer-events-none">
+        <div aria-hidden className="hidden lg:block absolute inset-y-0 left-0 right-[calc(50%+24rem)] pointer-events-none">
           <div className="absolute top-1/2 left-1/2" style={{ transform: 'translate(-50%, -50%) rotate(-90deg)', transformOrigin: 'center' }}>
             <div className="vmarquee-track text-white/[0.05] select-none" style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: 'clamp(7rem, 13vw, 15rem)', letterSpacing: '0.1em', lineHeight: 1, whiteSpace: 'nowrap' }}>
               {Array.from({ length: 2 }).map((_, u) => <span key={u} className="flex items-center shrink-0">{Array.from({ length: 6 }).map((_, i) => <span key={i} className="flex items-center shrink-0"><span>T-EXPRESS24</span><span className="mx-[0.45em] text-white/[0.08]">•</span></span>)}</span>)}
@@ -311,7 +311,7 @@ export default function BundlesPage() {
           </div>
         </div>
         {/* Marquee rechts */}
-        <div aria-hidden className="hidden lg:block absolute inset-y-0 right-[calc(50%-40rem)] left-[calc(50%+18rem)] pointer-events-none">
+        <div aria-hidden className="hidden lg:block absolute inset-y-0 right-0 left-[calc(50%+24rem)] pointer-events-none">
           <div className="absolute top-1/2 left-1/2" style={{ transform: 'translate(-50%, -50%) rotate(90deg)', transformOrigin: 'center' }}>
             <div className="vmarquee-track text-white/[0.05] select-none" style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: 'clamp(7rem, 13vw, 15rem)', letterSpacing: '0.1em', lineHeight: 1, whiteSpace: 'nowrap' }}>
               {Array.from({ length: 2 }).map((_, u) => <span key={u} className="flex items-center shrink-0">{Array.from({ length: 6 }).map((_, i) => <span key={i} className="flex items-center shrink-0"><span>T-EXPRESS24</span><span className="mx-[0.45em] text-white/[0.08]">•</span></span>)}</span>)}
@@ -319,7 +319,7 @@ export default function BundlesPage() {
           </div>
         </div>
       <section className="relative max-w-[1920px] mx-auto px-4 md:px-8 xl:px-12 2xl:px-16 pt-6 pb-4">
-        <div className="max-w-xl mx-auto flex flex-col items-center gap-0 relative z-10">
+        <div className="max-w-xl lg:max-w-3xl mx-auto flex flex-col items-center gap-0 relative z-10">
           {/* Rabatt-Kreise + U-Branch */}
           <div className="flex justify-center gap-20 mb-0">
             <div className="w-14 h-14 rounded-full bg-[#a8b0b8]/15 border-2 border-[#a8b0b8]/40 flex flex-col items-center justify-center z-10">
