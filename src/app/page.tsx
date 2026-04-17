@@ -49,17 +49,17 @@ export default function HomePage() {
                 <div className="flex items-center gap-3 md:gap-6">
                   <div className="flex-shrink-0">
                     <span className="text-3xl md:text-5xl font-black text-white leading-none" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>3+</span>
-                    <sup className="text-xs md:text-lg font-black text-[var(--gold)] ml-1" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>15%</sup>
+                    <sup className="text-[10px] md:text-lg font-black text-[var(--gold)] ml-0.5 md:ml-1" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>15%</sup>
                   </div>
                   <div className="w-px h-8 md:h-10 bg-white/10" />
                   <div className="flex-shrink-0">
                     <span className="text-3xl md:text-5xl font-black text-white leading-none" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>6+</span>
-                    <sup className="text-xs md:text-lg font-black text-[var(--gold)] ml-1" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>20%</sup>
+                    <sup className="text-[10px] md:text-lg font-black text-[var(--gold)] ml-0.5 md:ml-1" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>20%</sup>
                   </div>
                   <div className="w-px h-8 md:h-10 bg-white/10" />
                   <div className="flex-shrink-0">
                     <span className="text-3xl md:text-5xl font-black text-white leading-none" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>10+</span>
-                    <sup className="text-xs md:text-lg font-black text-[var(--gold)] ml-1" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>30%</sup>
+                    <sup className="text-[10px] md:text-lg font-black text-[var(--gold)] ml-0.5 md:ml-1" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>30%</sup>
                   </div>
                   <div className="hidden md:block ml-2">
                     <p className="text-sm font-bold text-white">Trikot Bundles</p>
