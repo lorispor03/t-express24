@@ -115,18 +115,31 @@ export default function CheckoutPage() {
       {/* Hero */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[#111] via-[var(--red-dark)] to-[#111]" />
-        <div className="relative max-w-[1920px] mx-auto px-4 md:px-8 xl:px-12 2xl:px-16 py-6 md:py-8">
+        <div className="relative max-w-[1920px] mx-auto px-4 md:px-8 xl:px-12 2xl:px-16 py-5 md:py-8">
           <Link href="/" className="flex items-center gap-2 text-base md:text-sm text-gray-400 hover:text-white transition-colors mb-3 py-1">
             <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
             </svg>
             Zurück zum Shop
           </Link>
-          <h1 className="text-2xl md:text-6xl font-black uppercase tracking-wide" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
-            Bestellung abschliessen
-          </h1>
-          <p className="text-gray-400 mt-1 text-sm">{totalItems} {totalItems === 1 ? 'Artikel' : 'Artikel'} im Warenkorb</p>
-          <img src="/logo.png" alt="T-EXPRESS24" className="absolute right-4 md:right-8 top-1/2 -translate-y-[45%] h-[50%] md:h-[110%] object-contain" />
+          <div className="flex items-center gap-5 min-h-[128px] sm:min-h-[144px]">
+            <div className="w-20 h-20 md:w-32 md:h-32 bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 p-3 flex items-center justify-center flex-shrink-0">
+              <svg className="w-full h-full text-[var(--red-main)]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} strokeLinecap="round" strokeLinejoin="round">
+                <rect x="1" y="4" width="22" height="16" rx="2" ry="2"/>
+                <line x1="1" y1="10" x2="23" y2="10"/>
+                <circle cx="5.5" cy="15" r="0.5" fill="currentColor"/>
+                <line x1="8" y1="15" x2="12" y2="15" strokeWidth={1.2}/>
+                <circle cx="18.5" cy="7" r="1.5" strokeWidth={0.6}/>
+                <circle cx="20" cy="7" r="1.5" strokeWidth={0.6}/>
+              </svg>
+            </div>
+            <div>
+              <h1 className="text-2xl md:text-6xl font-black uppercase tracking-wide" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
+                Bestellung abschliessen
+              </h1>
+              <p className="text-gray-400 mt-1 text-sm">{totalItems} {totalItems === 1 ? 'Artikel' : 'Artikel'} im Warenkorb</p>
+            </div>
+          </div>
         </div>
       </section>
 
