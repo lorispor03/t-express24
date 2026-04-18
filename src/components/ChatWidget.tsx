@@ -31,14 +31,14 @@ function renderMarkdown(text: string) {
     if (linkIdx <= boldIdx && linkMatch) {
       parts.push(remaining.slice(0, linkIdx));
       parts.push(
-        <a key={key++} href={linkMatch[2]} className="text-[var(--gold)] underline hover:text-white transition-colors" onClick={(e) => { e.stopPropagation(); }}>
+        <a key={key++} href={linkMatch[2]} className="text-[var(--gold)] underline hover:text-gray-900 transition-colors" onClick={(e) => { e.stopPropagation(); }}>
           {linkMatch[1]}
         </a>
       );
       remaining = remaining.slice(linkIdx + linkMatch[0].length);
     } else if (boldMatch) {
       parts.push(remaining.slice(0, boldIdx));
-      parts.push(<strong key={key++} className="font-semibold text-white">{boldMatch[1]}</strong>);
+      parts.push(<strong key={key++} className="font-semibold text-gray-900">{boldMatch[1]}</strong>);
       remaining = remaining.slice(boldIdx + boldMatch[0].length);
     }
   }
@@ -142,9 +142,9 @@ export default function ChatWidget() {
           className="fixed bottom-36 right-4 md:bottom-20 md:right-6 z-[9999] w-[calc(100vw-2rem)] max-w-[380px] rounded-2xl overflow-hidden shadow-2xl flex flex-col"
           style={{
             height: 'min(500px, calc(100vh - 12rem))',
-            background: '#111',
-            border: '1px solid rgba(255,255,255,0.1)',
-            boxShadow: '0 8px 40px rgba(0,0,0,0.6), 0 0 30px rgba(196, 34, 46, 0.15)',
+            background: '#ffffff',
+            border: '1px solid rgba(0,0,0,0.1)',
+            boxShadow: '0 8px 40px rgba(0,0,0,0.15), 0 0 30px rgba(196, 34, 46, 0.1)',
           }}
         >
           {/* Header */}
@@ -177,7 +177,7 @@ export default function ChatWidget() {
             {messages.length === 0 && (
               <div className="text-center py-8">
                 <div className="text-3xl mb-3">👋</div>
-                <p className="text-sm text-gray-400 mb-4">
+                <p className="text-sm text-gray-500 mb-4">
                   Hallo! Wie kann ich dir helfen?
                 </p>
                 <div className="space-y-2">
@@ -211,7 +211,7 @@ export default function ChatWidget() {
                             .finally(() => setLoading(false));
                         }, 0);
                       }}
-                      className="block w-full text-left px-3 py-2 text-xs rounded-lg border border-white/10 text-gray-300 hover:bg-white/5 hover:border-[var(--red-main)] transition-colors"
+                      className="block w-full text-left px-3 py-2 text-xs rounded-lg border border-gray-200 text-gray-600 hover:bg-gray-100 hover:border-[var(--red-main)] transition-colors"
                     >
                       {q}
                     </button>
@@ -226,7 +226,7 @@ export default function ChatWidget() {
                   className={`max-w-[85%] px-3.5 py-2.5 rounded-2xl text-sm leading-relaxed ${
                     msg.role === 'user'
                       ? 'bg-[var(--red-main)] text-white rounded-br-md'
-                      : 'bg-[#1a1a1a] text-gray-200 border border-white/5 rounded-bl-md'
+                      : 'bg-[#f5f5f5] text-gray-800 border border-gray-200 rounded-bl-md'
                   }`}
                 >
                   {msg.role === 'assistant' ? renderMarkdown(msg.content) : msg.content}
@@ -236,7 +236,7 @@ export default function ChatWidget() {
 
             {loading && (
               <div className="flex justify-start">
-                <div className="bg-[#1a1a1a] border border-white/5 rounded-2xl rounded-bl-md px-4 py-3 flex gap-1.5">
+                <div className="bg-[#f5f5f5] border border-gray-200 rounded-2xl rounded-bl-md px-4 py-3 flex gap-1.5">
                   <span className="w-2 h-2 bg-gray-500 rounded-full animate-bounce" style={{ animationDelay: '0ms' }} />
                   <span className="w-2 h-2 bg-gray-500 rounded-full animate-bounce" style={{ animationDelay: '150ms' }} />
                   <span className="w-2 h-2 bg-gray-500 rounded-full animate-bounce" style={{ animationDelay: '300ms' }} />
@@ -248,7 +248,7 @@ export default function ChatWidget() {
           </div>
 
           {/* Input */}
-          <div className="p-3 border-t border-white/10 flex-shrink-0" style={{ background: '#0d0d0d' }}>
+          <div className="p-3 border-t border-gray-200 flex-shrink-0" style={{ background: '#f5f5f5' }}>
             <form
               onSubmit={(e) => {
                 e.preventDefault();
@@ -262,7 +262,7 @@ export default function ChatWidget() {
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 placeholder="Schreib deine Frage..."
-                className="flex-1 bg-[#1a1a1a] border border-white/10 rounded-xl px-3.5 py-2.5 text-sm text-white placeholder-gray-500 focus:outline-none focus:border-[var(--red-main)] transition-colors"
+                className="flex-1 bg-white border border-gray-200 rounded-xl px-3.5 py-2.5 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:border-[var(--red-main)] transition-colors"
                 disabled={loading}
               />
               <button

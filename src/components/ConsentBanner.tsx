@@ -32,15 +32,15 @@ export default function ConsentBanner() {
       <div className="fixed inset-0 bg-black/60 z-[9998]" />
 
       <div className="fixed inset-0 z-[9999] flex items-center justify-center px-4">
-        <div className="bg-[#1a1a1a] border border-white/10 rounded-2xl px-6 py-8 max-w-sm w-full text-center shadow-2xl">
-          <h2 className="text-lg font-bold text-white mb-3">Willkommen bei T-EXPRESS24</h2>
-          <p className="text-sm text-gray-300 mb-6">
+        <div className="bg-white border border-gray-200 rounded-2xl px-6 py-8 max-w-sm w-full text-center shadow-2xl">
+          <h2 className="text-lg font-bold text-gray-900 mb-3">Willkommen bei T-EXPRESS24</h2>
+          <p className="text-sm text-gray-600 mb-6">
             Mit der Nutzung dieses Shops akzeptierst du unsere{' '}
-            <Link href="/agb" className="text-[var(--gold)] underline hover:text-white">
+            <Link href="/agb" className="text-[var(--gold)] underline hover:text-gray-900">
               Geschäftsbedingungen
             </Link>
             {' '}und unsere{' '}
-            <Link href="/datenschutz" className="text-[var(--gold)] underline hover:text-white">
+            <Link href="/datenschutz" className="text-[var(--gold)] underline hover:text-gray-900">
               Datenschutzerklärung
             </Link>.
           </p>

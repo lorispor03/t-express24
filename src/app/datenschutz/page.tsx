@@ -177,7 +177,7 @@ export default function DatenschutzPage() {
               </p>
             </div>
 
-            <p className="text-xs text-gray-500 pt-4 border-t border-white/5">
+            <p className="text-xs text-gray-500 pt-4 border-t border-white/10">
               Stand: {new Date().toLocaleDateString('de-CH', { year: 'numeric', month: 'long' })}
             </p>
 

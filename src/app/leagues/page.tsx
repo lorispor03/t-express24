@@ -12,21 +12,21 @@ export default function LeaguesPage() {
       <Header />
 
       <section className="max-w-[1920px] mx-auto px-4 md:px-8 xl:px-12 2xl:px-16 py-12">
-        <div className="flex items-center gap-2 text-base md:text-sm text-gray-400 mb-6 py-1">
-          <Link href="/#ligen" className="hover:text-white transition-colors py-1 flex items-center gap-1"><svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" /></svg>Ligen</Link>
+        <div className="flex items-center gap-2 text-base md:text-sm text-gray-500 mb-6 py-1">
+          <Link href="/#ligen" className="hover:text-gray-900 transition-colors py-1 flex items-center gap-1"><svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" /></svg>Ligen</Link>
           <span>/</span>
-          <span className="text-white">Alle Ligen</span>
+          <span className="text-gray-900">Alle Ligen</span>
         </div>
 
         <h1 className="text-3xl md:text-5xl uppercase tracking-wide mb-2" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>Alle Ligen</h1>
-        <p className="text-gray-400 mb-10">Entdecke Trikots aus 10 Ligen weltweit.</p>
+        <p className="text-gray-500 mb-10">Entdecke Trikots aus 10 Ligen weltweit.</p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {Object.entries(leagues).map(([slug, league]) => (
             <Link
               key={slug}
               href={`/league/${slug}`}
-              className="league-card group bg-[#1a1a1a] rounded-xl p-6 border border-white/5 hover:border-[var(--red-main)]/30"
+              className="league-card group bg-[#e8e8e8] rounded-xl p-6 border border-gray-300 hover:border-[var(--red-main)]/30"
             >
               <div className="flex items-start justify-between mb-4">
                 {LEAGUE_LOGOS[slug] ? (
@@ -38,24 +38,24 @@ export default function LeaguesPage() {
                 ) : (
                   <span className="text-3xl">&#9917;</span>
                 )}
-                <span className="text-xs bg-white/5 rounded-full px-3 py-1 text-gray-400">
+                <span className="text-xs bg-gray-100 rounded-full px-3 py-1 text-gray-500">
                   {league.productCount} Artikel
                 </span>
               </div>
-              <h3 className="text-xl md:text-2xl uppercase tracking-wide group-hover:text-[var(--gold)] transition-colors" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
+              <h3 className="text-xl md:text-2xl uppercase tracking-wide text-gray-900 group-hover:text-[var(--gold)] transition-colors" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
                 {league.name}
               </h3>
-              <p className="text-sm text-gray-400 mt-1">
+              <p className="text-sm text-gray-700 mt-1">
                 {league.teamCount} {league.teamCount === 1 ? 'Team' : 'Teams'} {league.country && `· ${league.country}`}
               </p>
               <div className="mt-4 flex flex-wrap gap-1.5">
                 {league.teams.slice(0, 5).map(team => (
-                  <span key={team.id} className="text-[10px] bg-white/5 rounded px-2 py-0.5 text-gray-500">
+                  <span key={team.id} className="text-[10px] bg-gray-100 rounded px-2 py-0.5 text-gray-500">
                     {team.name}
                   </span>
                 ))}
                 {league.teams.length > 5 && (
-                  <span className="text-[10px] bg-white/5 rounded px-2 py-0.5 text-gray-500">
+                  <span className="text-[10px] bg-gray-100 rounded px-2 py-0.5 text-gray-500">
                     +{league.teams.length - 5} mehr
                   </span>
                 )}

@@ -13,7 +13,7 @@ interface SearchOverlayProps {
 const POPULAR_SEARCHES = [
   'Barcelona', 'Real Madrid', 'Manchester United', 'Bayern München',
   'Liverpool', 'AC Milan', 'Juventus', 'Arsenal',
-  'Deutschland', 'Brasilien', 'Retro',
+  'Deutschland', 'Brasilien', 'Inter Mailand',
 ];
 
 const RECENT_KEY = 'te24_recent_searches';
@@ -136,23 +136,23 @@ export default function SearchOverlay({ open, onClose }: SearchOverlayProps) {
             value={displayQuery}
             onChange={e => handleSearch(e.target.value)}
             placeholder="Team oder Trikot suchen..."
-            className="w-full bg-[#1a1a1a] border border-white/10 rounded-xl pl-12 pr-20 py-4 text-base focus:outline-none focus:border-[var(--red-main)] transition-colors"
+            className="w-full bg-white border border-gray-200 rounded-xl pl-12 pr-20 py-4 text-base text-gray-900 focus:outline-none focus:border-[var(--red-main)] transition-colors"
           />
           {displayQuery ? (
-            <button onClick={clearSearch} className="absolute right-14 top-1/2 -translate-y-1/2 text-gray-400 hover:text-white transition-colors">
+            <button onClick={clearSearch} className="absolute right-14 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-900 transition-colors">
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
           ) : null}
-          <button onClick={onClose} className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-500 hover:text-white transition-colors text-xs uppercase tracking-wider font-medium">
+          <button onClick={onClose} className="absolute right-4 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-900 transition-colors text-xs uppercase tracking-wider font-medium">
             ESC
           </button>
         </div>
 
         {/* Suggestions when empty */}
         {showSuggestions && (
-          <div className="mt-4 bg-[#1a1a1a] border border-white/10 rounded-xl p-4">
+          <div className="mt-4 bg-white border border-gray-200 rounded-xl p-4">
             {recentSearches.length > 0 && (
               <div className="mb-4">
                 <p className="text-[10px] uppercase tracking-wider text-gray-500 font-medium mb-2">Letzte Suchen</p>
@@ -161,7 +161,7 @@ export default function SearchOverlay({ open, onClose }: SearchOverlayProps) {
                     <button
                       key={term}
                       onClick={() => quickSearch(term)}
-                      className="flex items-center gap-1.5 bg-white/5 hover:bg-white/10 text-sm text-gray-300 px-3 py-1.5 rounded-lg transition-colors"
+                      className="flex items-center gap-1.5 bg-gray-100 hover:bg-gray-200 text-sm text-gray-600 px-3 py-1.5 rounded-lg transition-colors"
                     >
                       <svg className="w-3 h-3 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -179,7 +179,7 @@ export default function SearchOverlay({ open, onClose }: SearchOverlayProps) {
                   <button
                     key={term}
                     onClick={() => quickSearch(term)}
-                    className="bg-white/5 hover:bg-[var(--red-main)]/20 hover:text-[var(--red-main)] text-sm text-gray-400 px-3 py-1.5 rounded-lg transition-colors"
+                    className="bg-gray-100 hover:bg-[var(--red-main)]/20 hover:text-[var(--red-main)] text-sm text-gray-500 px-3 py-1.5 rounded-lg transition-colors"
                   >
                     {term}
                   </button>
@@ -198,7 +198,7 @@ export default function SearchOverlay({ open, onClose }: SearchOverlayProps) {
 
         {/* Results */}
         {query.trim().length >= 2 && !loading && (
-          <div className="mt-4 bg-[#1a1a1a] border border-white/10 rounded-xl max-h-[60vh] overflow-y-auto">
+          <div className="mt-4 bg-white border border-gray-200 rounded-xl max-h-[60vh] overflow-y-auto">
             {showNoResults && (
               <div className="p-6 text-center">
                 <p className="text-gray-500 text-sm mb-3">Keine Ergebnisse für &quot;{query}&quot;</p>
@@ -215,10 +215,10 @@ export default function SearchOverlay({ open, onClose }: SearchOverlayProps) {
                     key={team.id}
                     href={`/team/${team.id}`}
                     onClick={handleResultClick}
-                    className="flex items-center justify-between px-3 py-2.5 rounded-lg hover:bg-white/5 transition-colors"
+                    className="flex items-center justify-between px-3 py-2.5 rounded-lg hover:bg-gray-100 transition-colors"
                   >
                     <div>
-                      <span className="text-sm font-medium text-white">{team.name}</span>
+                      <span className="text-sm font-medium text-gray-900">{team.name}</span>
                       <span className="text-xs text-gray-500 ml-2">{team.leagueName}</span>
                     </div>
                     <span className="text-xs text-gray-500">{team.productCount} Artikel</span>
@@ -228,7 +228,7 @@ export default function SearchOverlay({ open, onClose }: SearchOverlayProps) {
             )}
 
             {teams.length > 0 && products.length > 0 && (
-              <div className="border-t border-white/5" />
+              <div className="border-t border-gray-200" />
             )}
 
             {/* Products */}
@@ -241,14 +241,14 @@ export default function SearchOverlay({ open, onClose }: SearchOverlayProps) {
                       key={product.h}
                       href={`/product/${product.h}`}
                       onClick={handleResultClick}
-                      className="bg-white/5 rounded-lg overflow-hidden hover:bg-white/10 transition-colors"
+                      className="bg-gray-100 rounded-lg overflow-hidden hover:bg-gray-200 transition-colors"
                     >
                       <div className="aspect-square overflow-hidden bg-white">
                         <img src={product.i} alt={product.t} className="w-full h-full object-contain p-1" loading="lazy" />
                       </div>
                       <div className="p-2">
                         <p className="text-[10px] text-gray-500">{teamName}</p>
-                        <p className="text-[11px] text-gray-300 line-clamp-1">{product.t}</p>
+                        <p className="text-[11px] text-gray-600 line-clamp-1">{product.t}</p>
                         <p className="text-xs font-bold text-[var(--gold)] mt-0.5">CHF {product.p}</p>
                       </div>
                     </Link>

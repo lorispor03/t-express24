@@ -51,7 +51,7 @@ export default function NotFound() {
           <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
             <Link
               href="/"
-              className="w-full sm:w-auto bg-[#1a1a1a] hover:bg-[#222] border border-white/15 text-white text-sm font-bold px-8 py-4 rounded-lg transition-colors"
+              className="w-full sm:w-auto bg-white/10 hover:bg-white/20 border border-white/15 text-white text-sm font-bold px-8 py-4 rounded-lg transition-colors"
             >
               Zurück zum Shop
             </Link>

@@ -2,19 +2,55 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, useCallback } from 'react';
 import { usePathname } from 'next/navigation';
 import { useCart } from '@/context/CartContext';
-import SearchOverlay from './SearchOverlay';
+import { searchProducts, searchTeams } from '@/lib/data';
+import { Product } from '@/lib/types';
+
+const POPULAR_SEARCHES = [
+  'Barcelona', 'Real Madrid', 'Manchester United', 'Bayern München',
+  'Liverpool', 'AC Milan', 'Juventus', 'Arsenal',
+  'Deutschland', 'Brasilien', 'Inter Mailand',
+];
+
+const RECENT_KEY = 'te24_recent_searches';
+
+function getRecentSearches(): string[] {
+  try {
+    return JSON.parse(localStorage.getItem(RECENT_KEY) || '[]').slice(0, 5);
+  } catch { return []; }
+}
+
+function saveRecentSearch(q: string) {
+  try {
+    const recent = getRecentSearches().filter(r => r.toLowerCase() !== q.toLowerCase());
+    recent.unshift(q);
+    localStorage.setItem(RECENT_KEY, JSON.stringify(recent.slice(0, 5)));
+  } catch { /* noop */ }
+}
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [searchOpen, setSearchOpen] = useState(false);
+  const [searchFocused, setSearchFocused] = useState(false);
   const [bounce, setBounce] = useState(false);
   const prevItems = useRef(0);
   const pathname = usePathname();
   const isCheckout = pathname.startsWith('/checkout');
   const { totalItems, setCartOpen } = useCart();
+
+  // Search state
+  const [displayQuery, setDisplayQuery] = useState('');
+  const [query, setQuery] = useState('');
+  const [teams, setTeams] = useState<Array<{ id: string; name: string; leagueName: string; productCount: number }>>([]);
+  const [products, setProducts] = useState<Array<{ teamId: string; teamName: string; product: Product }>>([]);
+  const [loading, setLoading] = useState(false);
+  const [recentSearches, setRecentSearches] = useState<string[]>([]);
+  const inputRef = useRef<HTMLInputElement>(null);
+  const mobileInputRef = useRef<HTMLInputElement>(null);
+  const debounceRef = useRef<ReturnType<typeof setTimeout>>(undefined);
+  const searchContainerRef = useRef<HTMLDivElement>(null);
+  const mobileSearchContainerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (totalItems > prevItems.current) {
@@ -24,14 +60,217 @@ export default function Header() {
     prevItems.current = totalItems;
   }, [totalItems]);
 
+  // Close dropdown on click outside
+  useEffect(() => {
+    if (!searchFocused) return;
+    const handleClick = (e: MouseEvent) => {
+      const target = e.target as Node;
+      const inDesktop = searchContainerRef.current?.contains(target);
+      const inMobile = mobileSearchContainerRef.current?.contains(target);
+      if (!inDesktop && !inMobile) {
+        setSearchFocused(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClick);
+    return () => document.removeEventListener('mousedown', handleClick);
+  }, [searchFocused]);
+
+  // Close on route change
+  useEffect(() => {
+    setSearchFocused(false);
+    setDisplayQuery('');
+    setQuery('');
+    setTeams([]);
+    setProducts([]);
+  }, [pathname]);
+
+  // ESC to close
+  useEffect(() => {
+    if (!searchFocused) return;
+    const handleKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') {
+        setSearchFocused(false);
+        inputRef.current?.blur();
+        mobileInputRef.current?.blur();
+      }
+    };
+    window.addEventListener('keydown', handleKey);
+    return () => window.removeEventListener('keydown', handleKey);
+  }, [searchFocused]);
+
+  const doSearch = useCallback((q: string) => {
+    if (q.trim().length < 2) {
+      setTeams([]);
+      setProducts([]);
+      setLoading(false);
+      return;
+    }
+    setTeams(searchTeams(q.trim(), 5));
+    setProducts(searchProducts(q.trim(), 12));
+    setLoading(false);
+  }, []);
+
+  const handleSearch = useCallback((q: string) => {
+    setDisplayQuery(q);
+    setLoading(q.trim().length >= 2);
+    if (debounceRef.current) clearTimeout(debounceRef.current);
+    debounceRef.current = setTimeout(() => {
+      setQuery(q);
+      doSearch(q);
+    }, 200);
+  }, [doSearch]);
+
+  const quickSearch = (term: string) => {
+    setDisplayQuery(term);
+    setQuery(term);
+    setLoading(true);
+    doSearch(term);
+    inputRef.current?.focus();
+    mobileInputRef.current?.focus();
+  };
+
+  const clearSearch = () => {
+    setDisplayQuery('');
+    setQuery('');
+    setTeams([]);
+    setProducts([]);
+    inputRef.current?.focus();
+    mobileInputRef.current?.focus();
+  };
+
+  const handleResultClick = () => {
+    if (displayQuery.trim().length >= 2) {
+      saveRecentSearch(displayQuery.trim());
+    }
+    setSearchFocused(false);
+  };
+
+  const handleFocus = () => {
+    setSearchFocused(true);
+    setRecentSearches(getRecentSearches());
+  };
+
+  const hasResults = teams.length > 0 || products.length > 0;
+  const showNoResults = query.trim().length >= 2 && !hasResults && !loading;
+  const showSuggestions = displayQuery.trim().length === 0;
+
+  const searchDropdown = (
+    <div className="absolute left-0 right-0 top-full mt-1 bg-white border border-gray-200 rounded-xl shadow-xl max-h-[70vh] overflow-y-auto z-[60]">
+      {/* Suggestions when empty */}
+      {showSuggestions && (
+        <div className="p-4">
+          {recentSearches.length > 0 && (
+            <div className="mb-4">
+              <p className="text-[10px] uppercase tracking-wider text-gray-500 font-medium mb-2">Letzte Suchen</p>
+              <div className="flex flex-wrap gap-2">
+                {recentSearches.map(term => (
+                  <button
+                    key={term}
+                    onMouseDown={(e) => { e.preventDefault(); quickSearch(term); }}
+                    className="flex items-center gap-1.5 bg-gray-100 hover:bg-gray-200 text-sm text-gray-600 px-3 py-1.5 rounded-lg transition-colors"
+                  >
+                    <svg className="w-3 h-3 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                    {term}
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
+          <div>
+            <p className="text-[10px] uppercase tracking-wider text-gray-500 font-medium mb-2">Beliebt</p>
+            <div className="flex flex-wrap gap-2">
+              {POPULAR_SEARCHES.map(term => (
+                <button
+                  key={term}
+                  onMouseDown={(e) => { e.preventDefault(); quickSearch(term); }}
+                  className="bg-gray-100 hover:bg-[var(--red-main)]/20 hover:text-[var(--red-main)] text-sm text-gray-500 px-3 py-1.5 rounded-lg transition-colors"
+                >
+                  {term}
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Loading */}
+      {loading && (
+        <div className="p-4 text-center">
+          <div className="inline-block w-5 h-5 border-2 border-gray-600 border-t-[var(--red-main)] rounded-full animate-spin" />
+        </div>
+      )}
+
+      {/* No results */}
+      {showNoResults && (
+        <div className="p-6 text-center">
+          <p className="text-gray-500 text-sm mb-3">Keine Ergebnisse für &quot;{query}&quot;</p>
+          <p className="text-gray-600 text-xs">Versuche es mit einem anderen Begriff, z.B. einem Teamnamen oder einer Saison.</p>
+        </div>
+      )}
+
+      {/* Teams */}
+      {teams.length > 0 && (
+        <div className="p-3">
+          <p className="text-[10px] uppercase tracking-wider text-gray-500 font-medium px-2 mb-2">Teams</p>
+          {teams.map(team => (
+            <Link
+              key={team.id}
+              href={`/team/${team.id}`}
+              onClick={handleResultClick}
+              className="flex items-center justify-between px-3 py-2.5 rounded-lg hover:bg-gray-100 transition-colors"
+            >
+              <div>
+                <span className="text-sm font-medium text-gray-900">{team.name}</span>
+                <span className="text-xs text-gray-500 ml-2">{team.leagueName}</span>
+              </div>
+              <span className="text-xs text-gray-500">{team.productCount} Artikel</span>
+            </Link>
+          ))}
+        </div>
+      )}
+
+      {teams.length > 0 && products.length > 0 && (
+        <div className="border-t border-gray-200" />
+      )}
+
+      {/* Products */}
+      {products.length > 0 && (
+        <div className="p-3">
+          <p className="text-[10px] uppercase tracking-wider text-gray-500 font-medium px-2 mb-2">Produkte</p>
+          <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+            {products.map(({ product, teamName }) => (
+              <Link
+                key={product.h}
+                href={`/product/${product.h}`}
+                onClick={handleResultClick}
+                className="bg-gray-100 rounded-lg overflow-hidden border border-gray-400 hover:bg-gray-200 transition-colors"
+              >
+                <div className="aspect-square overflow-hidden bg-white">
+                  <img src={product.i} alt={product.t} className="w-full h-full object-contain p-1" loading="lazy" />
+                </div>
+                <div className="p-2">
+                  <p className="text-[10px] text-gray-500">{teamName}</p>
+                  <p className="text-[11px] text-gray-600 line-clamp-1">{product.t}</p>
+                  <p className="text-xs font-bold text-[var(--gold)] mt-0.5">CHF {product.p}</p>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+
   // Checkout: minimaler Header
   if (isCheckout) {
     return (
-      <header className="sticky top-0 z-50 bg-[#111]/95 backdrop-blur-md border-b border-white/10">
+      <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-200">
         <div className="max-w-[1920px] mx-auto px-4 md:px-8 xl:px-12 2xl:px-16 h-12 md:h-16 flex items-center justify-between">
           <Link href="/" className="flex items-center gap-3">
             <Image src="/logo.png" alt="T-EXPRESS24" width={40} height={40} className="rounded-lg" />
-            <span className="font-extrabold text-lg tracking-tight">T-EXPRESS<span className="text-[var(--gold)]">24</span></span>
+            <span className="font-extrabold text-lg tracking-tight text-gray-900">T-EXPRESS<span className="text-[var(--gold)]">24</span></span>
           </Link>
         </div>
       </header>
@@ -64,31 +303,46 @@ export default function Header() {
       </div>
 
       {/* Main Header */}
-      <header className="sticky top-0 z-50 bg-[#111]/95 backdrop-blur-md border-b border-white/10">
+      <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-gray-200">
         <div className="max-w-[1920px] mx-auto px-4 md:px-8 xl:px-12 2xl:px-16 h-12 md:h-16 flex items-center justify-between relative">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-3 flex-shrink-0">
             <Image src="/logo.png" alt="T-EXPRESS24" width={40} height={40} className="rounded-lg" />
-            <span className="font-extrabold text-lg tracking-tight">T-EXPRESS<span className="text-[var(--gold)]">24</span></span>
+            <span className="font-extrabold text-lg tracking-tight text-gray-900">T-EXPRESS<span className="text-[var(--gold)]">24</span></span>
           </Link>
 
-          {/* Search bar - Desktop: centered absolutely */}
-          <button
-            onClick={() => setSearchOpen(true)}
-            className="hidden md:flex items-center gap-2 absolute left-1/2 -translate-x-1/2 w-full max-w-md bg-white/5 border border-white/10 rounded-lg px-4 py-2 text-sm text-gray-400 hover:border-white/20 hover:bg-white/[0.07] transition-colors cursor-text"
-          >
-            <svg className="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-            </svg>
-            Team oder Trikot suchen...
-          </button>
+          {/* Search bar - Desktop: inline input with dropdown */}
+          <div ref={searchContainerRef} className="hidden md:block absolute left-1/2 -translate-x-1/2 w-full max-w-md">
+            <div className="relative">
+              <svg className="absolute left-4 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
+              </svg>
+              <input
+                ref={inputRef}
+                type="text"
+                value={displayQuery}
+                onChange={e => handleSearch(e.target.value)}
+                onFocus={handleFocus}
+                placeholder="Team oder Trikot suchen..."
+                className="w-full bg-[#d0d0d0] border border-gray-300 rounded-lg pl-10 pr-8 py-2 text-sm text-gray-900 placeholder:text-gray-500 focus:outline-none focus:border-[var(--red-main)] transition-colors"
+              />
+              {displayQuery && (
+                <button onMouseDown={(e) => { e.preventDefault(); clearSearch(); }} className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-900 transition-colors">
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              )}
+              {searchFocused && searchDropdown}
+            </div>
+          </div>
 
           {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center gap-6 text-sm font-medium flex-shrink-0">
+          <nav className="hidden md:flex items-center gap-6 text-sm font-medium flex-shrink-0 text-gray-700">
             <Link href="/#ligen" className="hover:text-[var(--gold)] transition-colors">Ligen</Link>
             <Link href="/#so-funktionierts" className="hover:text-[var(--gold)] transition-colors">So funktioniert&apos;s</Link>
             <Link href="/#faq" className="hover:text-[var(--gold)] transition-colors">FAQ</Link>
-            <div className="flex items-center gap-4 ml-1 pl-4 border-l border-white/10">
+            <div className="flex items-center gap-4 ml-1 pl-4 border-l border-gray-200">
               <a href="https://instagram.com/T_express247" target="_blank" rel="noopener noreferrer" className="hover:text-pink-400 transition-colors" title="Instagram">
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
               </a>
@@ -110,7 +364,7 @@ export default function Header() {
             </div>
           </nav>
 
-          {/* Mobile: Search + Social + Cart + Burger */}
+          {/* Mobile: Social + Cart + Burger */}
           <div className="flex items-center gap-3 md:hidden ml-auto">
             <a href="https://instagram.com/T_express247" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-pink-400">
               <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
@@ -131,37 +385,49 @@ export default function Header() {
             </button>
             <button onClick={() => setMenuOpen(!menuOpen)} className="p-2" aria-label="Menu">
               <div className="space-y-1.5">
-                <span className={`block w-6 h-0.5 bg-white transition-transform ${menuOpen ? 'rotate-45 translate-y-2' : ''}`} />
-                <span className={`block w-6 h-0.5 bg-white transition-opacity ${menuOpen ? 'opacity-0' : ''}`} />
-                <span className={`block w-6 h-0.5 bg-white transition-transform ${menuOpen ? '-rotate-45 -translate-y-2' : ''}`} />
+                <span className={`block w-6 h-0.5 bg-gray-800 transition-transform ${menuOpen ? 'rotate-45 translate-y-2' : ''}`} />
+                <span className={`block w-6 h-0.5 bg-gray-800 transition-opacity ${menuOpen ? 'opacity-0' : ''}`} />
+                <span className={`block w-6 h-0.5 bg-gray-800 transition-transform ${menuOpen ? '-rotate-45 -translate-y-2' : ''}`} />
               </div>
             </button>
           </div>
         </div>
 
-        {/* Mobile search bar */}
-        <div className="md:hidden px-4 pb-2">
-          <button
-            onClick={() => setSearchOpen(true)}
-            className="flex items-center gap-2 w-full bg-white/5 border border-white/10 rounded-lg px-3 py-2 text-sm text-gray-400 active:bg-white/10 transition-colors"
-          >
-            <svg className="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        {/* Mobile search bar - inline input */}
+        <div ref={mobileSearchContainerRef} className="md:hidden px-4 pb-2 relative">
+          <div className="relative">
+            <svg className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
             </svg>
-            Team oder Trikot suchen...
-          </button>
+            <input
+              ref={mobileInputRef}
+              type="text"
+              value={displayQuery}
+              onChange={e => handleSearch(e.target.value)}
+              onFocus={handleFocus}
+              placeholder="Team oder Trikot suchen..."
+              className="w-full bg-[#d0d0d0] border border-gray-300 rounded-lg pl-9 pr-8 py-2 text-sm text-gray-900 placeholder:text-gray-500 focus:outline-none focus:border-[var(--red-main)] transition-colors"
+            />
+            {displayQuery && (
+              <button onMouseDown={(e) => { e.preventDefault(); clearSearch(); }} className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-900 transition-colors">
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            )}
+          </div>
+          {searchFocused && searchDropdown}
         </div>
 
         {/* Mobile menu */}
         {menuOpen && (
-          <div className="md:hidden bg-[#111] border-t border-white/10 px-4 py-2 divide-y divide-white/10">
-            <Link href="/#ligen" onClick={() => setMenuOpen(false)} className="block text-base font-medium hover:text-[var(--gold)] py-4">Ligen</Link>
-            <Link href="/#so-funktionierts" onClick={() => setMenuOpen(false)} className="block text-base font-medium hover:text-[var(--gold)] py-4">So funktioniert&apos;s</Link>
-            <Link href="/#faq" onClick={() => setMenuOpen(false)} className="block text-base font-medium hover:text-[var(--gold)] py-4">FAQ</Link>
+          <div className="md:hidden bg-white border-t border-gray-200 px-4 py-2 divide-y divide-gray-200">
+            <Link href="/#ligen" onClick={() => setMenuOpen(false)} className="block text-base font-medium text-gray-800 hover:text-[var(--gold)] py-4">Ligen</Link>
+            <Link href="/#so-funktionierts" onClick={() => setMenuOpen(false)} className="block text-base font-medium text-gray-800 hover:text-[var(--gold)] py-4">So funktioniert&apos;s</Link>
+            <Link href="/#faq" onClick={() => setMenuOpen(false)} className="block text-base font-medium text-gray-800 hover:text-[var(--gold)] py-4">FAQ</Link>
           </div>
         )}
       </header>
-      <SearchOverlay open={searchOpen} onClose={() => setSearchOpen(false)} />
     </>
   );
 }

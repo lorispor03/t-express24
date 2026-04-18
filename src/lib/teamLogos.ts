@@ -37,6 +37,7 @@ export const TEAM_LOGOS: Record<string, string> = {
   'bocajuniors': '/teams/bocajuniors.png',
   'bochum': '/teams/bochum.png',
   'bologna': '/teams/bologna.png',
+  'bosnia-and-herzegovina': '/teams/bosnia-and-herzegovina.png',
   'bordeaux': '/teams/bordeaux.png',
   'bournemouth': '/teams/bournemouth.png',
   'braga': '/teams/braga.png',

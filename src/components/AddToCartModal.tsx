@@ -32,12 +32,12 @@ export default function AddToCartModal({ product, teamName, onClose }: AddToCart
   return (
     <div className="fixed inset-0 z-[70] flex items-center justify-center p-4">
       <div className="absolute inset-0 bg-black/70" onClick={onClose} />
-      <div className="relative bg-[#1a1a1a] rounded-xl border border-white/10 w-full max-w-sm overflow-hidden">
+      <div className="relative bg-white rounded-xl border border-gray-200 w-full max-w-sm overflow-hidden">
         {/* Product Preview */}
-        <div className="flex gap-3 p-4 border-b border-white/5">
+        <div className="flex gap-3 p-4 border-b border-gray-200">
           <img src={product.i} alt={product.t} className="w-20 h-20 object-cover rounded-lg flex-shrink-0" />
           <div className="flex-1 min-w-0">
-            <p className="text-sm font-medium text-gray-200 line-clamp-2 leading-tight">{product.t}</p>
+            <p className="text-sm font-medium text-gray-800 line-clamp-2 leading-tight">{product.t}</p>
             <p className="text-xs text-gray-500 mt-1">{teamName}</p>
             <p className="text-sm font-bold text-[var(--gold)] mt-1">CHF {product.p}</p>
           </div>
@@ -56,7 +56,7 @@ export default function AddToCartModal({ product, teamName, onClose }: AddToCart
                 className={`px-3 py-1.5 rounded-lg text-sm font-medium border transition-all ${
                   size === s
                     ? 'bg-[var(--red-main)] border-[var(--red-main)] text-white'
-                    : 'bg-white/5 border-white/10 text-gray-300 hover:border-white/20'
+                    : 'bg-gray-100 border-gray-200 text-gray-600 hover:border-gray-300'
                 }`}
               >
                 {isKids ? s : s}
@@ -68,7 +68,7 @@ export default function AddToCartModal({ product, teamName, onClose }: AddToCart
           <div className="mt-4">
             <button
               onClick={() => setShowFlocking(!showFlocking)}
-              className="text-sm text-gray-400 hover:text-white flex items-center gap-2 transition-colors"
+              className="text-sm text-gray-500 hover:text-gray-900 flex items-center gap-2 transition-colors"
             >
               <svg className={`w-4 h-4 transition-transform ${showFlocking ? 'rotate-90' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -82,14 +82,14 @@ export default function AddToCartModal({ product, teamName, onClose }: AddToCart
                   value={flockingName}
                   onChange={e => setFlockingName(e.target.value)}
                   placeholder="z.B. Ronaldo"
-                  className="flex-1 bg-[#111] border border-white/10 rounded-lg px-4 py-2 text-sm focus:outline-none focus:border-[var(--red-main)]"
+                  className="flex-1 bg-[#f0f0f0] border border-gray-200 rounded-lg px-4 py-2 text-sm text-gray-900 focus:outline-none focus:border-[var(--red-main)]"
                 />
                 <input
                   type="text"
                   value={flockingNumber}
                   onChange={e => setFlockingNumber(e.target.value)}
                   placeholder="z.B. 7"
-                  className="w-20 bg-[#111] border border-white/10 rounded-lg px-4 py-2 text-sm focus:outline-none focus:border-[var(--red-main)] text-center"
+                  className="w-20 bg-[#f0f0f0] border border-gray-200 rounded-lg px-4 py-2 text-sm text-gray-900 focus:outline-none focus:border-[var(--red-main)] text-center"
                 />
               </div>
             )}
@@ -100,7 +100,7 @@ export default function AddToCartModal({ product, teamName, onClose }: AddToCart
         <div className="p-4 pt-0 flex gap-2">
           <button
             onClick={onClose}
-            className="flex-1 px-4 py-2.5 rounded-lg text-sm text-gray-400 hover:text-white bg-white/5 hover:bg-white/10 transition-colors"
+            className="flex-1 px-4 py-2.5 rounded-lg text-sm text-gray-500 hover:text-gray-900 bg-gray-100 hover:bg-gray-200 transition-colors"
           >
             Abbrechen
           </button>

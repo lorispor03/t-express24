@@ -45,12 +45,12 @@ export default function CartDrawer() {
 
       {/* Drawer */}
       <div
-        className={`absolute right-0 top-0 h-full w-full max-w-md bg-[#111] border-l border-white/10 flex flex-col transition-transform duration-300 ease-out ${animating ? 'translate-x-0' : 'translate-x-full'}`}
+        className={`absolute right-0 top-0 h-full w-full max-w-md bg-white border-l border-gray-200 flex flex-col transition-transform duration-300 ease-out ${animating ? 'translate-x-0' : 'translate-x-full'}`}
       >
         {/* Header */}
-        <div className="flex items-center justify-between px-5 py-4 border-b border-white/10">
-          <h2 className="font-bold text-lg">Warenkorb ({totalItems})</h2>
-          <button onClick={handleClose} className="p-2 hover:text-gray-400">
+        <div className="flex items-center justify-between px-5 py-4 border-b border-gray-200">
+          <h2 className="font-bold text-lg text-gray-900">Warenkorb ({totalItems})</h2>
+          <button onClick={handleClose} className="p-2 text-gray-500 hover:text-gray-700">
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
             </svg>
@@ -71,11 +71,11 @@ export default function CartDrawer() {
           ) : (
             <div className="p-4 space-y-3">
               {items.map(item => (
-                <div key={item.id} className="bg-[#1a1a1a] rounded-lg p-3 border border-white/5">
+                <div key={item.id} className="bg-[#d0d0d0] rounded-lg p-3 border border-gray-300">
                   <div className="flex gap-3">
                     <img src={item.product.i} alt={item.product.t} className="w-16 h-16 object-cover rounded-md flex-shrink-0" />
                     <div className="flex-1 min-w-0">
-                      <p className="text-xs font-medium text-gray-300 line-clamp-2 leading-tight">{item.product.t}</p>
+                      <p className="text-xs font-medium text-gray-700 line-clamp-2 leading-tight">{item.product.t}</p>
                       <p className="text-[10px] text-gray-500 mt-1">
                         Grösse: {item.size}{(item.flockingName || item.flockingNumber) && ` · Aufdruck: ${[item.flockingName, item.flockingNumber].filter(Boolean).join(' ')}`}
                       </p>
@@ -88,7 +88,7 @@ export default function CartDrawer() {
                       {item.patches && item.patches.length > 0 && (
                         <div className="flex flex-wrap gap-1 mt-1">
                           {item.patches.map(p => (
-                            <span key={p.id} className="inline-flex items-center gap-1 text-[9px] bg-white/5 text-gray-400 px-1.5 py-0.5 rounded">
+                            <span key={p.id} className="inline-flex items-center gap-1 text-[9px] bg-gray-100 text-gray-500 px-1.5 py-0.5 rounded">
                               <img src={p.image} alt={p.name} className="w-3 h-3 object-contain" />
                               {p.name}
                             </span>
@@ -102,16 +102,16 @@ export default function CartDrawer() {
                       </svg>
                     </button>
                   </div>
-                  <div className="flex items-center justify-between mt-2 pt-2 border-t border-white/5">
+                  <div className="flex items-center justify-between mt-2 pt-2 border-t border-gray-400">
                     <div className="flex items-center gap-2">
                       <button
                         onClick={() => updateQuantity(item.id, item.quantity - 1)}
-                        className="w-6 h-6 rounded bg-white/5 hover:bg-white/10 flex items-center justify-center text-xs"
+                        className="w-6 h-6 rounded bg-[var(--red-main)]/20 hover:bg-[var(--red-main)]/30 text-[var(--red-main)] flex items-center justify-center text-xs font-medium"
                       >-</button>
-                      <span className="text-sm font-medium w-6 text-center">{item.quantity}</span>
+                      <span className="text-sm font-medium w-6 text-center text-gray-900">{item.quantity}</span>
                       <button
                         onClick={() => updateQuantity(item.id, item.quantity + 1)}
-                        className="w-6 h-6 rounded bg-white/5 hover:bg-white/10 flex items-center justify-center text-xs"
+                        className="w-6 h-6 rounded bg-[var(--red-main)]/20 hover:bg-[var(--red-main)]/30 text-[var(--red-main)] flex items-center justify-center text-xs font-medium"
                       >+</button>
                     </div>
                     {(() => {
@@ -137,7 +137,7 @@ export default function CartDrawer() {
 
         {/* Footer */}
         {items.length > 0 && (
-          <div className="p-5 border-t border-white/10 space-y-3">
+          <div className="p-5 border-t border-gray-200 space-y-3">
             {/* Bundle progress */}
             {activeBundle && !bundleProgress.reached && (
               <div className="bg-[var(--gold)]/10 rounded-lg px-3 py-2 text-xs">
@@ -145,10 +145,10 @@ export default function CartDrawer() {
                   <span>Bundle {activeBundle === '3plus' ? '15%' : activeBundle === '6plus' ? '20%' : '30%'}</span>
                   <span>{bundleProgress.current}/{bundleProgress.target} Trikots</span>
                 </div>
-                <div className="h-1 bg-white/10 rounded-full overflow-hidden">
+                <div className="h-1 bg-gray-200 rounded-full overflow-hidden">
                   <div className="h-full bg-[var(--gold)] rounded-full transition-all" style={{ width: `${Math.min(100, (bundleProgress.current / bundleProgress.target) * 100)}%` }} />
                 </div>
-                <p className="text-gray-400 mt-1">Noch {bundleProgress.remaining} {bundleProgress.remaining === 1 ? 'Trikot' : 'Trikots'} bis zum Rabatt</p>
+                <p className="text-gray-500 mt-1">Noch {bundleProgress.remaining} {bundleProgress.remaining === 1 ? 'Trikot' : 'Trikots'} bis zum Rabatt</p>
               </div>
             )}
             {bundleDiscount > 0 && (
@@ -162,7 +162,7 @@ export default function CartDrawer() {
                 </div>
               </div>
             )}
-            <div className="flex justify-between text-sm text-gray-400">
+            <div className="flex justify-between text-sm text-gray-500">
               <span>Zwischensumme</span>
               <span>CHF {totalPrice.toFixed(2)}</span>
             </div>
@@ -172,7 +172,7 @@ export default function CartDrawer() {
                 <span>-CHF {bundleDiscount.toFixed(2)}</span>
               </div>
             )}
-            <div className="flex justify-between font-bold pt-1 border-t border-white/10">
+            <div className="flex justify-between font-bold pt-1 border-t border-gray-200">
               <span>Total</span>
               <span className="text-[var(--gold)]">CHF {finalPrice.toFixed(2)}</span>
             </div>
@@ -207,7 +207,7 @@ export default function CartDrawer() {
             </button>
             <button
               onClick={clearCart}
-              className="w-full text-gray-500 hover:text-gray-300 text-xs py-1 transition-colors"
+              className="w-full text-gray-500 hover:text-gray-700 text-xs py-1 transition-colors"
             >
               Warenkorb leeren
             </button>
@@ -220,7 +220,7 @@ export default function CartDrawer() {
         <>
           <div className="fixed inset-0 bg-black/60 z-[9998]" />
           <div className="fixed inset-0 z-[9999] flex items-center justify-center px-4">
-            <div className="bg-[#1a1a1a] border border-white/10 rounded-2xl px-6 py-8 max-w-sm w-full text-center shadow-2xl">
+            <div className="bg-white border border-gray-200 rounded-2xl px-6 py-8 max-w-sm w-full text-center shadow-2xl">
               {(() => {
                 const jerseyTotal = items.reduce((sum, i) => sum + parseFloat(i.product.p) * i.quantity, 0);
 
@@ -234,14 +234,14 @@ export default function CartDrawer() {
                       <div className="w-14 h-14 bg-[var(--gold)]/15 rounded-full flex items-center justify-center mx-auto mb-4">
                         <span className="text-2xl font-black text-[var(--gold)]" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>{discount}</span>
                       </div>
-                      <h2 className="text-lg font-bold text-white mb-2">Bundle-Rabatt verfügbar!</h2>
-                      <p className="text-sm text-gray-300 mb-6">
+                      <h2 className="text-lg font-bold text-gray-900 mb-2">Bundle-Rabatt verfügbar!</h2>
+                      <p className="text-sm text-gray-600 mb-6">
                         Du hast {totalItems} Trikots im Warenkorb. Mit dem Bundle sparst du <span className="text-[var(--gold)] font-bold">{discount}</span> auf jedes Trikot — das sind <span className="text-[var(--gold)] font-bold">CHF {saving.toFixed(2)}</span> Ersparnis!
                       </p>
                       <div className="flex gap-3">
                         <button
                           onClick={() => { setHintType(null); setCartOpen(false); router.push('/checkout'); }}
-                          className="flex-1 bg-white/5 hover:bg-white/10 text-gray-300 text-sm font-bold px-4 py-3 rounded-lg transition-colors border border-white/10"
+                          className="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-600 text-sm font-bold px-4 py-3 rounded-lg transition-colors border border-gray-200"
                         >
                           Ohne fortfahren
                         </button>
@@ -266,8 +266,8 @@ export default function CartDrawer() {
                       <div className="w-14 h-14 bg-green-500/15 rounded-full flex items-center justify-center mx-auto mb-4">
                         <svg className="w-7 h-7 text-green-400" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M5 10l7-7m0 0l7 7m-7-7v18" /></svg>
                       </div>
-                      <h2 className="text-lg font-bold text-white mb-2">Upgrade auf 20%!</h2>
-                      <p className="text-sm text-gray-300 mb-6">
+                      <h2 className="text-lg font-bold text-gray-900 mb-2">Upgrade auf 20%!</h2>
+                      <p className="text-sm text-gray-600 mb-6">
                         Du hast {totalItems} Trikots — dein Bundle wird automatisch auf <span className="text-[var(--gold)] font-bold">20% statt 15%</span> angehoben. Das sind <span className="text-[var(--gold)] font-bold">CHF {extraSaving.toFixed(2)}</span> extra Ersparnis!
                       </p>
                       <button
@@ -288,14 +288,14 @@ export default function CartDrawer() {
                       <div className="w-14 h-14 bg-[var(--gold)]/15 rounded-full flex items-center justify-center mx-auto mb-4">
                         <span className="text-2xl font-black text-[var(--gold)]" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>15%</span>
                       </div>
-                      <h2 className="text-lg font-bold text-white mb-2">6er Bundle nicht erreicht</h2>
-                      <p className="text-sm text-gray-300 mb-6">
+                      <h2 className="text-lg font-bold text-gray-900 mb-2">6er Bundle nicht erreicht</h2>
+                      <p className="text-sm text-gray-600 mb-6">
                         Du hast {totalItems} von 6 Trikots. Der 20%-Rabatt greift noch nicht. Wechsle zum <span className="text-[var(--gold)] font-bold">3er Bundle</span> und spare trotzdem <span className="text-[var(--gold)] font-bold">CHF {saving3plus.toFixed(2)}</span>!
                       </p>
                       <div className="flex gap-3">
                         <button
                           onClick={() => { setHintType(null); setCartOpen(false); router.push('/checkout'); }}
-                          className="flex-1 bg-white/5 hover:bg-white/10 text-gray-300 text-sm font-bold px-4 py-3 rounded-lg transition-colors border border-white/10"
+                          className="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-600 text-sm font-bold px-4 py-3 rounded-lg transition-colors border border-gray-200"
                         >
                           Ohne Rabatt fortfahren
                         </button>
@@ -318,14 +318,14 @@ export default function CartDrawer() {
                       <div className="w-14 h-14 bg-[var(--red-main)]/15 rounded-full flex items-center justify-center mx-auto mb-4">
                         <svg className="w-7 h-7 text-[var(--red-main)]" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M12 9v3.75m9-.75a9 9 0 11-18 0 9 9 0 0118 0zm-9 3.75h.008v.008H12v-.008z" /></svg>
                       </div>
-                      <h2 className="text-lg font-bold text-white mb-2">Rabatt noch nicht aktiv</h2>
-                      <p className="text-sm text-gray-300 mb-6">
+                      <h2 className="text-lg font-bold text-gray-900 mb-2">Rabatt noch nicht aktiv</h2>
+                      <p className="text-sm text-gray-600 mb-6">
                         Du hast {totalItems} von {config.min} Trikots. Noch <span className="text-[var(--gold)] font-bold">{bundleProgress.remaining} {bundleProgress.remaining === 1 ? 'Trikot' : 'Trikots'}</span> bis zum {config.label}-Rabatt. Ohne Rabatt bestellen?
                       </p>
                       <div className="flex gap-3">
                         <button
                           onClick={() => { setHintType(null); setCartOpen(false); router.push('/checkout'); }}
-                          className="flex-1 bg-white/5 hover:bg-white/10 text-gray-300 text-sm font-bold px-4 py-3 rounded-lg transition-colors border border-white/10"
+                          className="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-600 text-sm font-bold px-4 py-3 rounded-lg transition-colors border border-gray-200"
                         >
                           Ohne Rabatt bestellen
                         </button>

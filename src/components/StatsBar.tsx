@@ -112,7 +112,7 @@ export default function StatsBar() {
   const counts = STATS.map((s, i) => useCountUp(s.num, 1800, startTimes[i]));
 
   return (
-    <section ref={ref} className="relative border-y border-white/10 bg-[#111] overflow-hidden">
+    <section ref={ref} className="relative border-y border-gray-200 bg-[#d0d0d0] overflow-hidden">
       <div className="max-w-[1920px] mx-auto px-4 md:px-8 xl:px-12 2xl:px-16 py-5 md:py-8 xl:py-10 grid grid-cols-4 gap-2 md:gap-4">
         {STATS.map((stat, i) => (
           <div
@@ -136,7 +136,7 @@ export default function StatsBar() {
                 <span className="invisible" suppressHydrationWarning>{stat.num.toLocaleString('de-CH')}{stat.suffix}</span>
                 <span className="absolute inset-0 text-right" suppressHydrationWarning>{counts[i].toLocaleString('de-CH')}{stat.suffix}</span>
               </div>
-              <div className="text-[9px] sm:text-xs xl:text-sm text-gray-400 uppercase tracking-wider">{stat.label}</div>
+              <div className="text-[9px] sm:text-xs xl:text-sm text-gray-700 uppercase tracking-wider">{stat.label}</div>
             </div>
             <div
               className="text-[var(--red-main)]"

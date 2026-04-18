@@ -185,12 +185,12 @@ export default function TeamPageClient({ teamName, leagueName, leagueSlug, produ
             placeholder="Trikot suchen..."
             value={search}
             onChange={e => handleSearch(e.target.value)}
-            className="w-full bg-[#1a1a1a] border border-white/10 rounded-lg pl-10 pr-9 py-2.5 text-sm focus:outline-none focus:border-[var(--red-main)] transition-colors"
+            className="w-full bg-[#d0d0d0] border border-gray-300 rounded-lg pl-10 pr-9 py-2.5 text-sm text-gray-900 placeholder:text-gray-500 focus:outline-none focus:border-[var(--red-main)] transition-colors"
           />
           {search && (
             <button
               onClick={() => handleSearch('')}
-              className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 hover:text-white transition-colors"
+              className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-500 hover:text-gray-900 transition-colors"
             >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
@@ -208,7 +208,7 @@ export default function TeamPageClient({ teamName, leagueName, leagueSlug, produ
             <select
               value={sort}
               onChange={e => handleSort(e.target.value as SortOption)}
-              className="w-full sm:w-auto bg-[#1a1a1a] border border-white/10 rounded-lg pl-10 pr-4 py-2.5 text-sm focus:outline-none focus:border-[var(--red-main)] cursor-pointer appearance-none"
+              className="w-full sm:w-auto bg-[#d0d0d0] border border-gray-300 rounded-lg pl-10 pr-4 py-2.5 text-sm text-gray-900 focus:outline-none focus:border-[var(--red-main)] cursor-pointer appearance-none"
             >
               <option value="default">Sortierung</option>
               <option value="price-asc">Preis: Tief → Hoch</option>
@@ -221,7 +221,7 @@ export default function TeamPageClient({ teamName, leagueName, leagueSlug, produ
           {/* Mobile filter toggle */}
           <button
             onClick={() => setMobileFilterOpen(!mobileFilterOpen)}
-            className="lg:hidden flex items-center gap-2 bg-[#1a1a1a] border border-white/10 rounded-lg px-4 py-2.5 text-sm whitespace-nowrap"
+            className="lg:hidden flex items-center gap-2 bg-[#d0d0d0] border border-gray-300 rounded-lg px-4 py-2.5 text-sm text-gray-900 whitespace-nowrap"
           >
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" />
@@ -248,7 +248,7 @@ export default function TeamPageClient({ teamName, leagueName, leagueSlug, produ
           ))}
           <button
             onClick={resetFilters}
-            className="text-xs text-gray-500 hover:text-white px-3 py-1.5 transition-colors"
+            className="flex items-center gap-1.5 bg-[var(--red-main)]/20 text-[var(--red-main)] text-xs font-medium px-3 py-1.5 rounded-full hover:bg-[var(--red-main)]/30 transition-colors"
           >
             Alle entfernen
           </button>
@@ -274,7 +274,7 @@ export default function TeamPageClient({ teamName, leagueName, leagueSlug, produ
         {mobileFilterOpen && (
           <div className="fixed inset-0 z-50 lg:hidden">
             <div className="absolute inset-0 bg-black/60" onClick={() => setMobileFilterOpen(false)} />
-            <div className="absolute right-0 top-0 h-full w-80 max-w-[85vw] bg-[#111] p-6 overflow-y-auto">
+            <div className="absolute right-0 top-0 h-full w-80 max-w-[85vw] bg-white p-6 overflow-y-auto">
               <div className="flex items-center justify-between mb-6">
                 <h3 className="font-bold text-lg">Filter</h3>
                 <button onClick={() => setMobileFilterOpen(false)} className="p-2">

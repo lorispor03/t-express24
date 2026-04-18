@@ -13,9 +13,9 @@ interface FilterSidebarProps {
 
 export default function FilterSidebar({ activeCategories, availableCategories, onToggle, onReset, productCount, filteredCount }: FilterSidebarProps) {
   return (
-    <div className="bg-[#1a1a1a] rounded-xl p-5 border border-white/5">
+    <div className="bg-[#d0d0d0] rounded-xl p-5 border border-gray-300">
       <div className="flex items-center justify-between mb-4">
-        <h3 className="font-bold text-sm uppercase tracking-wider">Filter</h3>
+        <h3 className="font-bold text-sm uppercase tracking-wider text-gray-900">Filter</h3>
         {activeCategories.size > 0 && (
           <button onClick={onReset} className="text-xs text-[var(--red-main)] hover:text-[var(--gold)] transition-colors">
             Zurücksetzen
@@ -32,14 +32,14 @@ export default function FilterSidebar({ activeCategories, availableCategories, o
               checked={activeCategories.has(cat)}
               onChange={() => onToggle(cat)}
             />
-            <span className="text-sm text-gray-300 group-hover:text-white transition-colors">
+            <span className="text-sm text-gray-600 group-hover:text-gray-900 transition-colors">
               {CATEGORIES[cat] || cat}
             </span>
           </label>
         ))}
       </div>
 
-      <div className="mt-5 pt-4 border-t border-white/10 text-xs text-gray-500">
+      <div className="mt-5 pt-4 border-t border-gray-200 text-xs text-gray-500">
         {filteredCount} von {productCount} Produkten
       </div>
     </div>

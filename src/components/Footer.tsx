@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function Footer({ dark }: { dark?: boolean }) {
   return (
-    <footer className={`relative overflow-hidden border-t-2 border-white/15 ${dark ? 'bg-[#0d0d0d]' : 'mt-10'}`}>
+    <footer className={`relative overflow-hidden border-t-2 border-gray-300 ${dark ? 'bg-[#0d0d0d]' : 'mt-10'}`}>
       {!dark && <div className="absolute inset-0 bg-gradient-to-br from-[#111] via-[var(--red-dark)] to-[#111]" />}
       {!dark && <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(196,34,46,0.3),transparent_70%)]" />}
       <div className="relative max-w-[1920px] mx-auto px-4 md:px-8 xl:px-12 2xl:px-16 py-12">
@@ -93,9 +93,9 @@ export default function Footer({ dark }: { dark?: boolean }) {
           <div className="text-center">
             <h3 className="font-bold text-sm uppercase tracking-wider mb-3 text-[var(--gold)]">Info</h3>
             <div className="flex flex-wrap justify-center gap-2 text-xs text-gray-400">
-              <span className="bg-white/5 px-3 py-1.5 rounded-full">Qualitätskontrolle in CH</span>
-              <span className="bg-white/5 px-3 py-1.5 rounded-full">Preise in CHF</span>
-              <span className="bg-white/5 px-3 py-1.5 rounded-full">Versand aus der Schweiz</span>
+              <span className="bg-white/10 px-3 py-1.5 rounded-full">Qualitätskontrolle in CH</span>
+              <span className="bg-white/10 px-3 py-1.5 rounded-full">Preise in CHF</span>
+              <span className="bg-white/10 px-3 py-1.5 rounded-full">Versand aus der Schweiz</span>
             </div>
           </div>
 
@@ -115,7 +115,7 @@ export default function Footer({ dark }: { dark?: boolean }) {
           </div>
         </div>
 
-        <div className="mt-10 pt-6 border-t border-white/10 text-center text-xs text-gray-500">
+        <div className="mt-10 pt-6 border-t border-white/20 text-center text-xs text-gray-400">
           <a href="/agb" className="hover:text-white transition-colors">Geschäftsbedingungen</a>
           <span className="mx-2">·</span>
           <a href="/datenschutz" className="hover:text-white transition-colors">Datenschutz</a>

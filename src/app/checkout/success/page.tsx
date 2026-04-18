@@ -22,8 +22,8 @@ export default function CheckoutSuccessPage() {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
           </svg>
         </div>
-        <h1 className="text-3xl font-bold mb-3" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>Zahlung erfolgreich!</h1>
-        <p className="text-gray-400 mb-2">Vielen Dank für deine Bestellung bei T-EXPRESS24.</p>
+        <h1 className="text-3xl font-bold mb-3 text-gray-900" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>Zahlung erfolgreich!</h1>
+        <p className="text-gray-500 mb-2">Vielen Dank für deine Bestellung bei T-EXPRESS24.</p>
         <p className="text-gray-500 text-sm mb-8">Du erhältst in Kürze eine Bestätigung per E-Mail.</p>
         <a href="/" className="inline-block bg-[var(--red-main)] hover:bg-[#a81d27] text-white font-bold py-3 px-8 rounded-lg text-sm transition-colors">
           Zurück zum Shop

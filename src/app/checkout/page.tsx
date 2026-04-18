@@ -27,7 +27,7 @@ export default function CheckoutPage() {
       <>
         <Header />
         <section className="max-w-3xl mx-auto px-4 py-20 text-center">
-          <p className="text-gray-400">Warenkorb wird geladen...</p>
+          <p className="text-gray-500">Warenkorb wird geladen...</p>
         </section>
         <Footer />
       </>
@@ -43,7 +43,7 @@ export default function CheckoutPage() {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 100 4 2 2 0 000-4z" />
           </svg>
           <h1 className="text-2xl font-bold mb-2">Dein Warenkorb ist leer</h1>
-          <p className="text-gray-400 mb-6">Füge zuerst Trikots hinzu, bevor du zur Kasse gehst.</p>
+          <p className="text-gray-500 mb-6">Füge zuerst Trikots hinzu, bevor du zur Kasse gehst.</p>
           <Link href="/" className="inline-block bg-[var(--red-main)] hover:bg-[#a81d27] text-white font-bold py-3 px-8 rounded-lg text-sm transition-colors">
             Weiter shoppen
           </Link>
@@ -155,30 +155,30 @@ export default function CheckoutPage() {
                 </div>
                 <div>
                   <span className="text-sm font-bold text-green-400">Bundle-Rabatt {activeBundle === '3plus' ? '15%' : '20%'} aktiv</span>
-                  <p className="text-xs text-gray-400">Du sparst CHF {bundleDiscount.toFixed(2)} auf diese Bestellung</p>
+                  <p className="text-xs text-gray-500">Du sparst CHF {bundleDiscount.toFixed(2)} auf diese Bestellung</p>
                 </div>
               </div>
             )}
-            <h2 className="text-2xl md:text-3xl font-bold mb-4 uppercase tracking-wide" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>Deine Artikel</h2>
+            <h2 className="text-4xl md:text-5xl uppercase tracking-wide mb-4 text-gray-900" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>Deine Artikel</h2>
             {items.map(item => (
-              <div key={item.id} className="bg-[#1a1a1a] rounded-xl p-4 border border-white/5 flex gap-4">
+              <div key={item.id} className="bg-[#d0d0d0] rounded-xl p-4 border border-gray-300 flex gap-4">
                 <img src={item.product.i} alt={item.product.t} className="w-20 h-20 md:w-24 md:h-24 object-cover rounded-lg flex-shrink-0" />
                 <div className="flex-1 min-w-0">
-                  <p className="text-sm font-medium text-gray-200 line-clamp-2 leading-tight">{item.product.t}</p>
+                  <p className="text-sm font-medium text-gray-800 line-clamp-2 leading-tight">{item.product.t}</p>
                   <p className="text-xs text-gray-500 mt-1">{item.teamName}</p>
-                  <div className="flex flex-wrap gap-x-4 gap-y-1 mt-2 text-xs text-gray-400">
-                    <span>Grösse: <span className="text-white">{item.size}</span></span>
-                    <span>Menge: <span className="text-white">{item.quantity}</span></span>
+                  <div className="flex flex-wrap gap-x-4 gap-y-1 mt-2 text-xs text-gray-500">
+                    <span>Grösse: <span className="text-gray-900">{item.size}</span></span>
+                    <span>Menge: <span className="text-gray-900">{item.quantity}</span></span>
                   </div>
                   {(item.flockingName || item.flockingNumber) && (
-                    <p className="text-xs text-gray-400 mt-1">
-                      Aufdruck: <span className="text-white">{[item.flockingName, item.flockingNumber].filter(Boolean).join(' ')}</span>
+                    <p className="text-xs text-gray-500 mt-1">
+                      Aufdruck: <span className="text-gray-900">{[item.flockingName, item.flockingNumber].filter(Boolean).join(' ')}</span>
                     </p>
                   )}
                   {item.patches && item.patches.length > 0 && (
                     <div className="flex flex-wrap gap-1.5 mt-2">
                       {item.patches.map(p => (
-                        <span key={p.id} className="inline-flex items-center gap-1 text-[10px] bg-white/5 text-gray-400 px-2 py-0.5 rounded">
+                        <span key={p.id} className="inline-flex items-center gap-1 text-[10px] bg-gray-100 text-gray-500 px-2 py-0.5 rounded">
                           <img src={p.image} alt={p.name} className="w-3.5 h-3.5 object-contain" />
                           {p.name}
                         </span>
@@ -217,106 +217,106 @@ export default function CheckoutPage() {
             {/* Contact Form */}
             <form onSubmit={handleSubmit} className="space-y-6">
               {/* Persönliche Daten */}
-              <div className="bg-[#1a1a1a] rounded-xl p-5 border border-white/5 space-y-4">
+              <div className="bg-[#d0d0d0] rounded-xl p-5 border border-gray-300 space-y-4">
                 <h2 className="text-lg font-bold uppercase tracking-wide" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>Persönliche Daten</h2>
 
                 <div className="grid grid-cols-2 gap-3">
                   <div>
-                    <label className="block text-sm font-medium mb-1.5 text-gray-300">Vorname *</label>
+                    <label className="block text-sm font-medium mb-1.5 text-gray-600">Vorname *</label>
                     <input
                       type="text"
                       value={vorname}
                       onChange={e => setVorname(e.target.value)}
                       required
                       placeholder="Max"
-                      className="w-full bg-[#111] border border-white/10 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-[var(--red-main)] transition-colors"
+                      className="w-full bg-white border border-gray-300 rounded-lg px-4 py-2.5 text-sm text-gray-900 focus:outline-none focus:border-[var(--red-main)] transition-colors"
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium mb-1.5 text-gray-300">Nachname *</label>
+                    <label className="block text-sm font-medium mb-1.5 text-gray-600">Nachname *</label>
                     <input
                       type="text"
                       value={nachname}
                       onChange={e => setNachname(e.target.value)}
                       required
                       placeholder="Muster"
-                      className="w-full bg-[#111] border border-white/10 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-[var(--red-main)] transition-colors"
+                      className="w-full bg-white border border-gray-300 rounded-lg px-4 py-2.5 text-sm text-gray-900 focus:outline-none focus:border-[var(--red-main)] transition-colors"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium mb-1.5 text-gray-300">E-Mail *</label>
+                  <label className="block text-sm font-medium mb-1.5 text-gray-600">E-Mail *</label>
                   <input
                     type="email"
                     value={email}
                     onChange={e => setEmail(e.target.value)}
                     required
                     placeholder="deine@email.ch"
-                    className="w-full bg-[#111] border border-white/10 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-[var(--red-main)] transition-colors"
+                    className="w-full bg-white border border-gray-300 rounded-lg px-4 py-2.5 text-sm text-gray-900 focus:outline-none focus:border-[var(--red-main)] transition-colors"
                   />
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium mb-1.5 text-gray-300">Telefon *</label>
+                  <label className="block text-sm font-medium mb-1.5 text-gray-600">Telefon *</label>
                   <input
                     type="tel"
                     value={telefon}
                     onChange={e => setTelefon(e.target.value)}
                     required
                     placeholder="+41 00 000 00 00"
-                    className="w-full bg-[#111] border border-white/10 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-[var(--red-main)] transition-colors"
+                    className="w-full bg-white border border-gray-300 rounded-lg px-4 py-2.5 text-sm text-gray-900 focus:outline-none focus:border-[var(--red-main)] transition-colors"
                   />
                 </div>
               </div>
 
               {/* Lieferadresse */}
-              <div className="bg-[#1a1a1a] rounded-xl p-5 border border-white/5 space-y-4">
+              <div className="bg-[#d0d0d0] rounded-xl p-5 border border-gray-300 space-y-4">
                 <h2 className="text-lg font-bold uppercase tracking-wide" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>Lieferadresse</h2>
 
                 <div>
-                  <label className="block text-sm font-medium mb-1.5 text-gray-300">Strasse & Nr. *</label>
+                  <label className="block text-sm font-medium mb-1.5 text-gray-600">Strasse & Nr. *</label>
                   <input
                     type="text"
                     value={strasse}
                     onChange={e => setStrasse(e.target.value)}
                     required
                     placeholder="Musterstrasse 12"
-                    className="w-full bg-[#111] border border-white/10 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-[var(--red-main)] transition-colors"
+                    className="w-full bg-white border border-gray-300 rounded-lg px-4 py-2.5 text-sm text-gray-900 focus:outline-none focus:border-[var(--red-main)] transition-colors"
                   />
                 </div>
 
                 <div className="grid grid-cols-[100px_1fr] gap-3">
                   <div>
-                    <label className="block text-sm font-medium mb-1.5 text-gray-300">PLZ *</label>
+                    <label className="block text-sm font-medium mb-1.5 text-gray-600">PLZ *</label>
                     <input
                       type="text"
                       value={plz}
                       onChange={e => setPlz(e.target.value)}
                       required
                       placeholder="8000"
-                      className="w-full bg-[#111] border border-white/10 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-[var(--red-main)] transition-colors"
+                      className="w-full bg-white border border-gray-300 rounded-lg px-4 py-2.5 text-sm text-gray-900 focus:outline-none focus:border-[var(--red-main)] transition-colors"
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium mb-1.5 text-gray-300">Ort *</label>
+                    <label className="block text-sm font-medium mb-1.5 text-gray-600">Ort *</label>
                     <input
                       type="text"
                       value={ort}
                       onChange={e => setOrt(e.target.value)}
                       required
                       placeholder="Zürich"
-                      className="w-full bg-[#111] border border-white/10 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-[var(--red-main)] transition-colors"
+                      className="w-full bg-white border border-gray-300 rounded-lg px-4 py-2.5 text-sm text-gray-900 focus:outline-none focus:border-[var(--red-main)] transition-colors"
                     />
                   </div>
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium mb-1.5 text-gray-300">Land *</label>
+                  <label className="block text-sm font-medium mb-1.5 text-gray-600">Land *</label>
                   <select
                     value={land}
                     onChange={e => setLand(e.target.value)}
-                    className="w-full bg-[#111] border border-white/10 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-[var(--red-main)] transition-colors appearance-none"
+                    className="w-full bg-white border border-gray-300 rounded-lg px-4 py-2.5 text-sm text-gray-900 focus:outline-none focus:border-[var(--red-main)] transition-colors appearance-none"
                     style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23999' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E")`, backgroundRepeat: 'no-repeat', backgroundPosition: 'right 12px center' }}
                   >
                     <option value="Schweiz">Schweiz</option>
@@ -325,53 +325,53 @@ export default function CheckoutPage() {
               </div>
 
               {/* Zahlungsart */}
-              <div className="bg-[#1a1a1a] rounded-xl p-5 border border-white/5 space-y-4">
+              <div className="bg-[#d0d0d0] rounded-xl p-5 border border-gray-300 space-y-4">
                 <h2 className="text-lg font-bold uppercase tracking-wide" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>Zahlungsart</h2>
                 <div className="grid grid-cols-3 gap-3">
                   <button
                     type="button"
                     onClick={() => setZahlungsart('kreditkarte')}
-                    className={`flex flex-col items-center justify-center gap-2 p-4 rounded-lg border transition-all ${zahlungsart === 'kreditkarte' ? 'border-[var(--red-main)] bg-[var(--red-main)]/10' : 'border-white/10 bg-white/5 hover:border-white/20'}`}
+                    className={`flex flex-col items-center justify-center gap-2 p-4 rounded-lg border transition-all ${zahlungsart === 'kreditkarte' ? 'border-[var(--red-main)] bg-[var(--red-main)]/10' : 'border-gray-200 bg-gray-100 hover:border-gray-300'}`}
                   >
-                    <svg className="w-7 h-7 text-gray-300" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5z" /></svg>
-                    <span className="text-xs text-gray-300 font-medium">Kreditkarte</span>
+                    <svg className="w-7 h-7 text-gray-600" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5z" /></svg>
+                    <span className="text-xs text-gray-600 font-medium">Kreditkarte</span>
                   </button>
                   <button
                     type="button"
                     onClick={() => setZahlungsart('twint')}
-                    className={`flex flex-col items-center justify-center gap-2 p-4 rounded-lg border transition-all ${zahlungsart === 'twint' ? 'border-[var(--red-main)] bg-[var(--red-main)]/10' : 'border-white/10 bg-white/5 hover:border-white/20'}`}
+                    className={`flex flex-col items-center justify-center gap-2 p-4 rounded-lg border transition-all ${zahlungsart === 'twint' ? 'border-[var(--red-main)] bg-[var(--red-main)]/10' : 'border-gray-200 bg-gray-100 hover:border-gray-300'}`}
                   >
                     <img src="/twint-logo.png" alt="TWINT" className="h-7 w-auto" />
-                    <span className="text-xs text-gray-300 font-medium">TWINT</span>
+                    <span className="text-xs text-gray-600 font-medium">TWINT</span>
                   </button>
                   <button
                     type="button"
                     onClick={() => setZahlungsart('paypal')}
-                    className={`flex flex-col items-center justify-center gap-2 p-4 rounded-lg border transition-all ${zahlungsart === 'paypal' ? 'border-[var(--red-main)] bg-[var(--red-main)]/10' : 'border-white/10 bg-white/5 hover:border-white/20'}`}
+                    className={`flex flex-col items-center justify-center gap-2 p-4 rounded-lg border transition-all ${zahlungsart === 'paypal' ? 'border-[var(--red-main)] bg-[var(--red-main)]/10' : 'border-gray-200 bg-gray-100 hover:border-gray-300'}`}
                   >
                     <img src="/paypal-logo.png" alt="PayPal" className="h-7 w-7 rounded" />
-                    <span className="text-xs text-gray-300 font-medium">PayPal</span>
+                    <span className="text-xs text-gray-600 font-medium">PayPal</span>
                   </button>
                 </div>
               </div>
 
               {/* Nachricht */}
-              <div className="bg-[#1a1a1a] rounded-xl p-5 border border-white/5 space-y-4">
+              <div className="bg-[#d0d0d0] rounded-xl p-5 border border-gray-300 space-y-4">
                 <h2 className="text-lg font-bold uppercase tracking-wide" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>Anmerkungen</h2>
                 <div>
-                  <label className="block text-sm font-medium mb-1.5 text-gray-300">Nachricht (optional)</label>
+                  <label className="block text-sm font-medium mb-1.5 text-gray-600">Nachricht (optional)</label>
                   <textarea
                     value={nachricht}
                     onChange={e => setNachricht(e.target.value)}
                     placeholder="Spezielle Wünsche, Fragen..."
                     rows={3}
-                    className="w-full bg-[#111] border border-white/10 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-[var(--red-main)] resize-none transition-colors"
+                    className="w-full bg-white border border-gray-300 rounded-lg px-4 py-2.5 text-sm text-gray-900 focus:outline-none focus:border-[var(--red-main)] resize-none transition-colors"
                   />
                 </div>
               </div>
 
               {/* Price Summary */}
-              <div className="bg-[#1a1a1a] rounded-xl p-5 border border-white/5 space-y-3">
+              <div className="bg-[#d0d0d0] rounded-xl p-5 border border-gray-300 space-y-3">
                 <h2 className="text-lg font-bold uppercase tracking-wide" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>Zusammenfassung</h2>
 
                 {activeBundle && !bundleProgress.reached && (
@@ -380,10 +380,10 @@ export default function CheckoutPage() {
                       <span>Bundle {activeBundle === '3plus' ? '15%' : '20%'}</span>
                       <span>{bundleProgress.current}/{bundleProgress.target} Trikots</span>
                     </div>
-                    <div className="h-1 bg-white/10 rounded-full overflow-hidden">
+                    <div className="h-1 bg-gray-200 rounded-full overflow-hidden">
                       <div className="h-full bg-[var(--gold)] rounded-full transition-all" style={{ width: `${Math.min(100, (bundleProgress.current / bundleProgress.target) * 100)}%` }} />
                     </div>
-                    <p className="text-gray-400 mt-1">Noch {bundleProgress.remaining} {bundleProgress.remaining === 1 ? 'Trikot' : 'Trikots'} bis zum Rabatt</p>
+                    <p className="text-gray-500 mt-1">Noch {bundleProgress.remaining} {bundleProgress.remaining === 1 ? 'Trikot' : 'Trikots'} bis zum Rabatt</p>
                   </div>
                 )}
 
@@ -399,7 +399,7 @@ export default function CheckoutPage() {
                   </div>
                 )}
 
-                <div className="flex justify-between text-sm text-gray-400">
+                <div className="flex justify-between text-sm text-gray-500">
                   <span>Zwischensumme ({totalItems} Artikel)</span>
                   <span>CHF {totalPrice.toFixed(2)}</span>
                 </div>
@@ -409,7 +409,7 @@ export default function CheckoutPage() {
                     <span>-CHF {bundleDiscount.toFixed(2)}</span>
                   </div>
                 )}
-                <div className="flex justify-between font-bold text-lg pt-2 border-t border-white/10">
+                <div className="flex justify-between font-bold text-lg pt-2 border-t border-gray-200">
                   <span>Total</span>
                   <span className="text-[var(--gold)]">CHF {finalPrice.toFixed(2)}</span>
                 </div>

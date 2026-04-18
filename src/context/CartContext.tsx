@@ -183,14 +183,14 @@ export function CartProvider({ children }: { children: ReactNode }) {
         <>
           <div className="fixed inset-0 bg-black/60 z-[9998]" />
           <div className="fixed inset-0 z-[9999] flex items-center justify-center px-4">
-            <div className="bg-[#1a1a1a] border border-white/10 rounded-2xl px-6 py-8 max-w-sm w-full text-center shadow-2xl">
+            <div className="bg-white border border-gray-200 rounded-2xl px-6 py-8 max-w-sm w-full text-center shadow-2xl">
               <div className="w-14 h-14 bg-[var(--gold)]/15 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl font-black text-[var(--gold)]" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
                   {activeBundle === '3plus' ? '15%' : activeBundle === '6plus' ? '20%' : '30%'}
                 </span>
               </div>
-              <h2 className="text-lg font-bold text-white mb-2">Bundle auflösen?</h2>
-              <p className="text-sm text-gray-300 mb-6">
+              <h2 className="text-lg font-bold text-gray-900 mb-2">Bundle auflösen?</h2>
+              <p className="text-sm text-gray-600 mb-6">
                 {bundleProgress.reached
                   ? `Du hast ${totalItems} Trikots im Warenkorb. Wenn du das Bundle auflöst, verlierst du den Rabatt.`
                   : `Du hast ${totalItems}/${bundleProgress.target} Trikots bis zum Rabatt. Bundle wirklich auflösen?`
@@ -199,7 +199,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
               <div className="flex gap-3">
                 <button
                   onClick={dismissCancelBundle}
-                  className="flex-1 bg-white/5 hover:bg-white/10 text-gray-300 text-sm font-bold px-4 py-3 rounded-lg transition-colors border border-white/10"
+                  className="flex-1 bg-gray-100 hover:bg-gray-200 text-gray-600 text-sm font-bold px-4 py-3 rounded-lg transition-colors border border-gray-200"
                 >
                   Behalten
                 </button>

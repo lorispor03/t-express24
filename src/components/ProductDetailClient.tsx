@@ -178,18 +178,18 @@ export default function ProductDetailClient({ product, teamId, teamName, leagueN
     <div className="max-w-6xl mx-auto px-4 py-6">
       {/* Breadcrumb — Mobile: nur Zurück-Link */}
       <div className="md:hidden mb-6">
-        <Link href={`/team/${teamId}`} className="inline-flex items-center gap-1.5 text-sm text-gray-400 hover:text-white transition-colors py-1">
+        <Link href={`/team/${teamId}`} className="inline-flex items-center gap-1.5 text-sm text-gray-500 hover:text-gray-900 transition-colors py-1">
           <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" /></svg>
           {teamName}
         </Link>
       </div>
       {/* Breadcrumb — Desktop: voller Pfad */}
-      <div className="hidden md:flex items-center gap-2 text-sm text-gray-400 mb-8 py-1">
-        <Link href={`/league/${leagueSlug}`} className="hover:text-white transition-colors py-1 flex items-center gap-1"><svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" /></svg>{leagueName}</Link>
+      <div className="hidden md:flex items-center gap-2 text-sm text-gray-500 mb-8 py-1">
+        <Link href={`/league/${leagueSlug}`} className="hover:text-gray-900 transition-colors py-1 flex items-center gap-1"><svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" /></svg>{leagueName}</Link>
         <span>/</span>
-        <Link href={`/team/${teamId}`} className="hover:text-white transition-colors py-1">{teamName}</Link>
+        <Link href={`/team/${teamId}`} className="hover:text-gray-900 transition-colors py-1">{teamName}</Link>
         <span>/</span>
-        <span className="text-white truncate">{product.t}</span>
+        <span className="text-gray-900 truncate">{product.t}</span>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -199,7 +199,7 @@ export default function ProductDetailClient({ product, teamId, teamName, leagueN
             {allImages.length > 1 && (
               <button
                 onClick={() => setSelectedImg(prev => prev === 0 ? allImages.length - 1 : prev - 1)}
-                className="flex-shrink-0 w-7 h-7 md:w-9 md:h-9 rounded-full bg-white/5 flex items-center justify-center text-[var(--red-main)] hover:bg-white/10 active:bg-white/10 transition-colors mr-1.5 md:mr-3"
+                className="flex-shrink-0 w-7 h-7 md:w-9 md:h-9 rounded-full bg-gray-100 flex items-center justify-center text-[var(--red-main)] hover:bg-gray-200 active:bg-gray-200 transition-colors mr-1.5 md:mr-3"
               >
                 <svg className="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
@@ -208,7 +208,7 @@ export default function ProductDetailClient({ product, teamId, teamName, leagueN
             )}
             <div
               onClick={() => setLightbox(true)}
-              className="bg-[#1a1a1a] rounded-xl overflow-hidden border border-white/5 aspect-square flex-1 min-w-0 cursor-zoom-in"
+              className="bg-white rounded-xl overflow-hidden border border-gray-200 aspect-square flex-1 min-w-0 cursor-zoom-in"
             >
               <img
                 src={allImages[selectedImg]}
@@ -219,7 +219,7 @@ export default function ProductDetailClient({ product, teamId, teamName, leagueN
             {allImages.length > 1 && (
               <button
                 onClick={() => setSelectedImg(prev => prev === allImages.length - 1 ? 0 : prev + 1)}
-                className="flex-shrink-0 w-7 h-7 md:w-9 md:h-9 rounded-full bg-white/5 flex items-center justify-center text-[var(--red-main)] hover:bg-white/10 active:bg-white/10 transition-colors ml-1.5 md:ml-3"
+                className="flex-shrink-0 w-7 h-7 md:w-9 md:h-9 rounded-full bg-gray-100 flex items-center justify-center text-[var(--red-main)] hover:bg-gray-200 active:bg-gray-200 transition-colors ml-1.5 md:ml-3"
               >
                 <svg className="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
@@ -242,7 +242,7 @@ export default function ProductDetailClient({ product, teamId, teamName, leagueN
                     className={`flex-shrink-0 w-16 h-16 rounded-lg overflow-hidden border-2 transition-all ${
                       selectedImg === idx
                         ? 'border-[var(--red-main)]'
-                        : 'border-white/10 hover:border-white/30'
+                        : 'border-gray-200 hover:border-gray-400'
                     }`}
                   >
                     <img src={img} alt={`${product.t} ${idx + 1}`} className="w-full h-full object-cover" />
@@ -250,7 +250,7 @@ export default function ProductDetailClient({ product, teamId, teamName, leagueN
                 ))}
               </div>
               {thumbScroll.ratio < 1 && (
-                <div className={`mt-2 h-[3px] bg-white/10 rounded-full relative transition-opacity duration-300 ${isScrolling ? 'opacity-100' : 'opacity-0'}`}>
+                <div className={`mt-2 h-[3px] bg-gray-200 rounded-full relative transition-opacity duration-300 ${isScrolling ? 'opacity-100' : 'opacity-0'}`}>
                   <div
                     className="absolute top-0 h-full bg-[var(--red-main)] rounded-full"
                     style={{ width: `${thumbScroll.ratio * 100}%`, left: `${thumbScroll.left * 100}%` }}
@@ -266,18 +266,18 @@ export default function ProductDetailClient({ product, teamId, teamName, leagueN
           {/* Category tags */}
           <div className="flex flex-wrap gap-2 mb-3">
             {product.c.map(cat => (
-              <span key={cat} className="text-[10px] px-2 py-1 rounded-full bg-white/5 text-gray-400 uppercase tracking-wide">
+              <span key={cat} className="text-[10px] px-2 py-1 rounded-full bg-gray-100 text-gray-500 uppercase tracking-wide">
                 {CATEGORIES[cat] || cat}
               </span>
             ))}
           </div>
 
-          <h1 className="text-xl sm:text-2xl font-bold text-white leading-tight mb-2">{product.t}</h1>
+          <h1 className="text-xl sm:text-2xl font-bold text-gray-900 leading-tight mb-2">{product.t}</h1>
           <p className="text-sm text-gray-500 mb-4">{teamName}</p>
           <div className="mb-6">
             <div className="flex items-center gap-3">
               <span className="text-2xl font-bold text-[var(--gold)]">CHF {parseFloat(product.p).toFixed(2)}</span>
-              <span className="text-2xl font-bold text-gray-300 line-through">CHF {(Math.floor(parseFloat(product.p) / 0.79) + 0.90).toFixed(2)}</span>
+              <span className="text-2xl font-bold text-gray-400 line-through">CHF {(Math.floor(parseFloat(product.p) / 0.79) + 0.90).toFixed(2)}</span>
               <span className="text-xs font-bold bg-green-500/20 text-green-400 px-2 py-1 rounded-full">
                 -21%
               </span>
@@ -302,7 +302,7 @@ export default function ProductDetailClient({ product, teamId, teamName, leagueN
                   className={`px-4 py-2 rounded-lg text-sm font-medium border transition-all ${
                     size === s
                       ? 'bg-[var(--red-main)] border-[var(--red-main)] text-white'
-                      : 'bg-white/5 border-white/10 text-gray-300 hover:border-white/20'
+                      : 'bg-gray-100 border-gray-200 text-gray-600 hover:border-gray-300'
                   }`}
                 >
                   {s}
@@ -321,10 +321,10 @@ export default function ProductDetailClient({ product, teamId, teamName, leagueN
                   className={`flex flex-col items-center justify-center p-2.5 rounded-lg border transition-all text-center ${
                     extraOption === 'none'
                       ? 'border-[var(--red-main)] bg-[var(--red-main)]/10'
-                      : 'border-white/10 bg-white/5 hover:border-white/20'
+                      : 'border-gray-200 bg-gray-100 hover:border-gray-300'
                   }`}
                 >
-                  <span className="text-xs text-gray-300">Ohne</span>
+                  <span className="text-xs text-gray-600">Ohne</span>
                 </button>
 
                 <button
@@ -332,10 +332,10 @@ export default function ProductDetailClient({ product, teamId, teamName, leagueN
                   className={`flex flex-col items-center justify-center p-2.5 rounded-lg border transition-all text-center ${
                     extraOption === 'aufdruck'
                       ? 'border-[var(--red-main)] bg-[var(--red-main)]/10'
-                      : 'border-white/10 bg-white/5 hover:border-white/20'
+                      : 'border-gray-200 bg-gray-100 hover:border-gray-300'
                   }`}
                 >
-                  <span className="text-xs text-gray-300">Aufdruck</span>
+                  <span className="text-xs text-gray-600">Aufdruck</span>
                   <span className="text-[10px] text-[var(--gold)]">+CHF {EXTRA_PRICES.aufdruck.toFixed(0)}</span>
                 </button>
 
@@ -345,10 +345,10 @@ export default function ProductDetailClient({ product, teamId, teamName, leagueN
                     className={`flex flex-col items-center justify-center p-2.5 rounded-lg border transition-all text-center ${
                       extraOption === 'patches'
                         ? 'border-[var(--red-main)] bg-[var(--red-main)]/10'
-                        : 'border-white/10 bg-white/5 hover:border-white/20'
+                        : 'border-gray-200 bg-gray-100 hover:border-gray-300'
                     }`}
                   >
-                    <span className="text-xs text-gray-300">Patches</span>
+                    <span className="text-xs text-gray-600">Patches</span>
                     <span className="text-[10px] text-[var(--gold)]">+CHF {EXTRA_PRICES.patches.toFixed(0)}</span>
                   </button>
                 )}
@@ -359,11 +359,11 @@ export default function ProductDetailClient({ product, teamId, teamName, leagueN
                     className={`relative flex flex-col items-center justify-center p-2.5 rounded-lg border-2 transition-all text-center ${
                       extraOption === 'komplett'
                         ? 'border-[var(--gold)] bg-[var(--gold)]/10'
-                        : 'border-[var(--gold)]/30 bg-white/5 hover:border-[var(--gold)]/60'
+                        : 'border-[var(--gold)]/30 bg-gray-100 hover:border-[var(--gold)]/60'
                     }`}
                   >
                     <span className="absolute -top-2 left-1/2 -translate-x-1/2 bg-[var(--gold)] text-black text-[8px] font-bold px-1.5 py-0.5 rounded-full whitespace-nowrap">SPAR-PAKET</span>
-                    <span className="text-xs text-white font-medium">Komplett</span>
+                    <span className="text-xs text-gray-900 font-medium">Komplett</span>
                     <span className="text-[10px] text-[var(--gold)]">+CHF {EXTRA_PRICES.komplett.toFixed(0)}</span>
                     <span className="text-[9px] text-gray-500 line-through">CHF {EXTRA_PRICES.aufdruck + EXTRA_PRICES.patches}</span>
                   </button>
@@ -380,7 +380,7 @@ export default function ProductDetailClient({ product, teamId, teamName, leagueN
                       value={flockingName}
                       onChange={e => setFlockingName(e.target.value.replace(/[0-9]/g, '').slice(0, 13))}
                       placeholder="z.B. Ronaldo"
-                      className="flex-1 bg-[#111] border border-white/10 rounded-lg px-4 py-2.5 text-base md:text-sm focus:outline-none focus:border-[var(--red-main)] transition-colors"
+                      className="flex-1 bg-[#f0f0f0] border border-gray-200 rounded-lg px-4 py-2.5 text-base md:text-sm text-gray-900 focus:outline-none focus:border-[var(--red-main)] transition-colors"
                     />
                     <input
                       type="text"
@@ -390,7 +390,7 @@ export default function ProductDetailClient({ product, teamId, teamName, leagueN
                       value={flockingNumber}
                       onChange={e => { const v = e.target.value.replace(/\D/g, '').slice(0, 3); setFlockingNumber(v); }}
                       placeholder="Nr."
-                      className="w-16 bg-[#111] border border-white/10 rounded-lg px-3 py-2.5 text-base md:text-sm focus:outline-none focus:border-[var(--red-main)] transition-colors text-center"
+                      className="w-16 bg-[#f0f0f0] border border-gray-200 rounded-lg px-3 py-2.5 text-base md:text-sm text-gray-900 focus:outline-none focus:border-[var(--red-main)] transition-colors text-center"
                     />
                   </div>
                 </div>
@@ -410,7 +410,7 @@ export default function ProductDetailClient({ product, teamId, teamName, leagueN
                           className={`group relative flex flex-col items-center p-2 rounded-lg border transition-all ${
                             isSelected
                               ? 'bg-[var(--red-main)]/10 border-[var(--red-main)] ring-1 ring-[var(--red-main)]'
-                              : 'bg-white/5 border-white/10 hover:border-white/20'
+                              : 'bg-gray-100 border-gray-200 hover:border-gray-300'
                           }`}
                         >
                           <div className="w-full aspect-square rounded overflow-hidden mb-1 bg-white">
@@ -475,13 +475,13 @@ export default function ProductDetailClient({ product, teamId, teamName, leagueN
 
           {/* Trust badges */}
           <div className="mt-8 grid grid-cols-2 gap-3">
-            <div className="flex items-center gap-2 text-xs text-gray-400 bg-white/5 rounded-lg p-3">
+            <div className="flex items-center gap-2 text-xs text-gray-500 bg-gray-100 rounded-lg p-3">
               <svg className="w-4 h-4 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
               </svg>
               Wird qualitätsgeprüft
             </div>
-            <div className="flex items-center gap-2 text-xs text-gray-400 bg-white/5 rounded-lg p-3">
+            <div className="flex items-center gap-2 text-xs text-gray-500 bg-gray-100 rounded-lg p-3">
               <svg className="w-4 h-4 text-green-500 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" />
               </svg>
@@ -503,7 +503,7 @@ export default function ProductDetailClient({ product, teamId, teamName, leagueN
 
           {/* Counter */}
           {allImages.length > 1 && (
-            <div className="absolute top-5 left-1/2 -translate-x-1/2 text-sm text-gray-400 z-10">
+            <div className="absolute top-5 left-1/2 -translate-x-1/2 text-sm text-gray-500 z-10">
               {selectedImg + 1} / {allImages.length}
             </div>
           )}
