@@ -20,9 +20,9 @@ export default function HomePage() {
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-[#111] via-[var(--red-dark)] to-[#111] hero-bg" />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(196,34,46,0.3),transparent_70%)] hero-bg" />
-        <div className="relative max-w-[1920px] mx-auto px-4 md:px-8 xl:px-12 2xl:px-16 py-2 md:pt-6 md:pb-4 flex justify-center">
+        <div className="relative max-w-[1920px] mx-auto px-4 md:px-8 xl:px-12 2xl:px-16 py-2 md:pt-3 md:pb-2 flex justify-center">
           <div className="relative">
-            <Image src="/logo.png" alt="T-EXPRESS24" width={500} height={500} className="max-w-[280px] sm:max-w-[380px] md:max-w-[480px] w-full hero-logo" priority />
+            <Image src="/logo.png" alt="T-EXPRESS24" width={500} height={500} className="max-w-[280px] sm:max-w-[380px] md:max-w-[550px] lg:max-w-[650px] w-full hero-logo" priority />
             <div className="hero-scanline" />
           </div>
         </div>
@@ -43,23 +43,23 @@ export default function HomePage() {
           </h2>
           <p className="text-gray-400 text-sm mb-3 md:mb-4">Mehr Trikots, weniger zahlen</p>
           <Link href="/bundles" className="block group">
-            <div className="relative overflow-hidden rounded-xl border border-[var(--gold)]/30 bg-gradient-to-r from-[#1a1a1a] via-[#1f1510] to-[#1a1a1a] p-5 md:p-6 animate-pulse-slow hover:border-[var(--gold)]/60 transition-all">
+            <div className="relative overflow-hidden rounded-xl border border-[var(--gold)]/30 bg-gradient-to-r from-[#1a1a1a] via-[#1f1510] to-[#1a1a1a] p-3 md:p-6 animate-pulse-slow hover:border-[var(--gold)]/60 transition-all">
               <div className="absolute top-0 right-0 w-40 h-full bg-gradient-to-l from-[var(--gold)]/10 to-transparent" />
               <div className="relative flex items-center justify-between gap-2 md:gap-4">
-                <div className="flex items-center gap-1.5 md:gap-6">
+                <div className="flex items-center gap-2.5 md:gap-6">
                   <div className="flex-shrink-0">
-                    <span className="text-3xl md:text-5xl font-black text-white leading-none" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>3+</span>
-                    <sup className="text-sm md:text-lg font-black text-[var(--gold)] ml-0.5 md:ml-1" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>15%</sup>
+                    <span className="text-4xl md:text-5xl font-black text-white leading-none" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>3+</span>
+                    <sup className="text-base md:text-lg font-black text-[var(--gold)] ml-0.5 md:ml-1" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>15%</sup>
                   </div>
                   <div className="w-px h-8 md:h-10 bg-white/10" />
                   <div className="flex-shrink-0">
-                    <span className="text-3xl md:text-5xl font-black text-white leading-none" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>6+</span>
-                    <sup className="text-sm md:text-lg font-black text-[var(--gold)] ml-0.5 md:ml-1" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>20%</sup>
+                    <span className="text-4xl md:text-5xl font-black text-white leading-none" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>6+</span>
+                    <sup className="text-base md:text-lg font-black text-[var(--gold)] ml-0.5 md:ml-1" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>20%</sup>
                   </div>
                   <div className="w-px h-8 md:h-10 bg-white/10" />
                   <div className="flex-shrink-0">
-                    <span className="text-3xl md:text-5xl font-black text-white leading-none" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>10+</span>
-                    <sup className="text-sm md:text-lg font-black text-[var(--gold)] ml-0.5 md:ml-1" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>30%</sup>
+                    <span className="text-4xl md:text-5xl font-black text-white leading-none" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>10+</span>
+                    <sup className="text-base md:text-lg font-black text-[var(--gold)] ml-0.5 md:ml-1" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>30%</sup>
                   </div>
                   <div className="hidden md:block ml-2">
                     <p className="text-sm font-bold text-white">Trikot Bundles</p>

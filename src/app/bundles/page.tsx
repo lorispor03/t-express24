@@ -94,7 +94,7 @@ export default function BundlesPage() {
       </section>
 
       {/* Graues Feld unter Hero */}
-      <div className="border-b border-white/10 bg-[var(--red-main)]/5 lg:bg-[#111] overflow-visible relative z-10">
+      <div className="border-t border-b border-white/10 bg-[var(--red-main)]/5 lg:bg-[#111] overflow-visible relative z-10">
         <div className="max-w-[1920px] mx-auto px-4 md:px-8 xl:px-12 2xl:px-16 py-4 lg:py-6">
           <div className="flex flex-col items-center">
             <div className="relative w-full lg:bg-[var(--red-main)]/5 lg:backdrop-blur-md lg:rounded-xl lg:px-8 lg:py-5 lg:border lg:border-[var(--red-main)]/10 flex flex-col items-center justify-center py-3 lg:py-5">

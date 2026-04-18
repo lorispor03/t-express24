@@ -155,9 +155,9 @@ export default function Header() {
         {/* Mobile menu */}
         {menuOpen && (
           <div className="md:hidden bg-[#111] border-t border-white/10 px-4 py-2 divide-y divide-white/10">
-            <Link href="/#ligen" onClick={() => setMenuOpen(false)} className="block text-sm font-medium hover:text-[var(--gold)] py-3">Ligen</Link>
-            <Link href="/#so-funktionierts" onClick={() => setMenuOpen(false)} className="block text-sm font-medium hover:text-[var(--gold)] py-3">So funktioniert&apos;s</Link>
-            <Link href="/#faq" onClick={() => setMenuOpen(false)} className="block text-sm font-medium hover:text-[var(--gold)] py-3">FAQ</Link>
+            <Link href="/#ligen" onClick={() => setMenuOpen(false)} className="block text-base font-medium hover:text-[var(--gold)] py-4">Ligen</Link>
+            <Link href="/#so-funktionierts" onClick={() => setMenuOpen(false)} className="block text-base font-medium hover:text-[var(--gold)] py-4">So funktioniert&apos;s</Link>
+            <Link href="/#faq" onClick={() => setMenuOpen(false)} className="block text-base font-medium hover:text-[var(--gold)] py-4">FAQ</Link>
           </div>
         )}
       </header>
