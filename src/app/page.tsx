@@ -48,27 +48,27 @@ export default function HomePage() {
               <div className="relative flex items-center justify-between gap-2 md:gap-4">
                 <div className="flex items-center gap-1.5 md:gap-6">
                   <div className="flex-shrink-0">
-                    <span className="text-4xl md:text-5xl font-black text-white leading-none" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>3+</span>
-                    <sup className="text-[11px] md:text-lg font-black text-[var(--gold)] ml-0.5 md:ml-1" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>15%</sup>
+                    <span className="text-3xl md:text-5xl font-black text-white leading-none" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>3+</span>
+                    <sup className="text-sm md:text-lg font-black text-[var(--gold)] ml-0.5 md:ml-1" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>15%</sup>
                   </div>
                   <div className="w-px h-8 md:h-10 bg-white/10" />
                   <div className="flex-shrink-0">
-                    <span className="text-4xl md:text-5xl font-black text-white leading-none" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>6+</span>
-                    <sup className="text-[11px] md:text-lg font-black text-[var(--gold)] ml-0.5 md:ml-1" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>20%</sup>
+                    <span className="text-3xl md:text-5xl font-black text-white leading-none" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>6+</span>
+                    <sup className="text-sm md:text-lg font-black text-[var(--gold)] ml-0.5 md:ml-1" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>20%</sup>
                   </div>
                   <div className="w-px h-8 md:h-10 bg-white/10" />
                   <div className="flex-shrink-0">
-                    <span className="text-4xl md:text-5xl font-black text-white leading-none" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>10+</span>
-                    <sup className="text-[11px] md:text-lg font-black text-[var(--gold)] ml-0.5 md:ml-1" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>30%</sup>
+                    <span className="text-3xl md:text-5xl font-black text-white leading-none" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>10+</span>
+                    <sup className="text-sm md:text-lg font-black text-[var(--gold)] ml-0.5 md:ml-1" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>30%</sup>
                   </div>
                   <div className="hidden md:block ml-2">
                     <p className="text-sm font-bold text-white">Trikot Bundles</p>
                     <p className="text-xs text-gray-400">Mehr kaufen, mehr sparen</p>
                   </div>
                 </div>
-                <div className="flex items-center gap-2 flex-shrink-0 bg-[var(--gold)] text-black text-xs font-bold px-4 py-2 rounded-full group-hover:scale-105 transition-transform">
+                <div className="flex items-center gap-1.5 flex-shrink-0 bg-[var(--gold)] text-black text-[11px] md:text-xs font-bold px-3 md:px-4 py-1.5 md:py-2 rounded-full group-hover:scale-105 transition-transform">
                   Jetzt sparen
-                  <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" /></svg>
+                  <svg className="w-3.5 h-3.5 md:w-4 md:h-4" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" /></svg>
                 </div>
               </div>
             </div>

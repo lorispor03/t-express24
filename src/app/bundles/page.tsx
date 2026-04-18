@@ -108,8 +108,27 @@ export default function BundlesPage() {
                   <span className="text-[10px] text-white/30 uppercase tracking-wider">Empfohlen</span>
                 </div>
                 <div className="text-center">
-                  <h3 className="text-2xl lg:text-6xl font-bold uppercase tracking-wide" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>Jetzt profitieren</h3>
-                  <p className="text-white/25 text-xs lg:text-sm mt-1">Profitiere mit Freunden, Familie oder deinem Team — legt eure Trikots zusammen und spart gemeinsam bis zu 30%.</p>
+                  <h3 className="text-3xl lg:text-6xl font-bold uppercase tracking-wide" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>Jetzt profitieren</h3>
+                  {/* Mobile icons row */}
+                  <div className="flex lg:hidden justify-center gap-6 mt-2">
+                    <div className="flex flex-col items-center gap-1">
+                      <svg className="w-8 h-8 text-white/25" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z" /></svg>
+                      <span className="text-[9px] text-white/30 uppercase tracking-wider">Sparen</span>
+                    </div>
+                    <div className="flex flex-col items-center gap-1">
+                      <svg className="w-8 h-8 text-white/25" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M13.5 10V5.5a1.5 1.5 0 00-3 0L8 14v6h11.5a2 2 0 002-1.7l1.1-7.3a2 2 0 00-2-2.3h-7.1zM8 14H5v6h3" /></svg>
+                      <span className="text-[9px] text-white/30 uppercase tracking-wider">Empfohlen</span>
+                    </div>
+                    <div className="flex flex-col items-center gap-1">
+                      <svg className="w-8 h-8 text-white/25" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24"><circle cx="8.25" cy="8.25" r="2.25" /><circle cx="15.75" cy="15.75" r="2.25" /><path strokeLinecap="round" strokeLinejoin="round" d="M19.5 4.5L4.5 19.5" /></svg>
+                      <span className="text-[9px] text-white/30 uppercase tracking-wider">Rabatt</span>
+                    </div>
+                    <div className="flex flex-col items-center gap-1">
+                      <svg className="w-8 h-8 text-white/25" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M21 11.25v8.25a1.5 1.5 0 01-1.5 1.5H5.25a1.5 1.5 0 01-1.5-1.5v-8.25M12 4.875A2.625 2.625 0 109.375 7.5H12m0-2.625V7.5m0-2.625A2.625 2.625 0 1114.625 7.5H12m0 0V21m-8.625-9.75h18c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125h-18c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z" /></svg>
+                      <span className="text-[9px] text-white/30 uppercase tracking-wider">Geschenk</span>
+                    </div>
+                  </div>
+                  <p className="text-white/25 text-xs lg:text-sm mt-2">Profitiere mit Freunden, Familie oder deinem Team — legt eure Trikots zusammen und spart gemeinsam bis zu 30%.</p>
                 </div>
                 <div className="hidden lg:flex flex-col items-center gap-1.5">
                   <svg className="w-11 h-11 text-white/25" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24"><circle cx="8.25" cy="8.25" r="2.25" /><circle cx="15.75" cy="15.75" r="2.25" /><path strokeLinecap="round" strokeLinejoin="round" d="M19.5 4.5L4.5 19.5" /></svg>
@@ -293,7 +312,7 @@ export default function BundlesPage() {
                   <path d="M72.8 55.6l-1.6 5c-1.4.4-2.8 1.1-4 1.9l-4.9-1.9-3.5 6 3.8 3.6c-.2.8-.4 1.7-.4 2.6s.1 1.8.4 2.6l-3.8 3.6 3.5 6 4.9-1.9c1.2.8 2.6 1.5 4 1.9l1.6 5h7l1.6-5c1.4-.4 2.8-1.1 4-1.9l4.9 1.9 3.5-6-3.8-3.6c.2-.8.4-1.7.4-2.6s-.1-1.8-.4-2.6l3.8-3.6-3.5-6-4.9 1.9c-1.2-.8-2.6-1.5-4-1.9l-1.6-5h-7zM76.3 66.8c3.3 0 6 2.7 6 6s-2.7 6-6 6-6-2.7-6-6 2.7-6 6-6z" fillRule="evenodd" />
                 </svg>
                 <div>
-                  <h3 className="text-2xl lg:text-6xl font-bold uppercase tracking-wide" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>Wie funktioniert&apos;s?</h3>
+                  <h3 className="text-3xl lg:text-6xl font-bold uppercase tracking-wide" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>Wie funktioniert&apos;s?</h3>
                   <p className="text-white/25 text-xs lg:text-sm">Schwierigkeiten? Hier findest du die Anleitung für deine Bundle-Bestellung.</p>
                 </div>
               </div>

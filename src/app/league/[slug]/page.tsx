@@ -71,7 +71,7 @@ export default async function LeaguePage({ params }: { params: Promise<{ slug: s
               <img src={logo} alt={league.name} className={`w-auto object-contain ${slug === 'la-liga' ? 'h-10 sm:h-16' : ['premier-league'].includes(slug) ? 'h-16 sm:h-24' : 'h-32 sm:h-36'}`} />
             )}
             <div>
-              <h1 className="text-3xl md:text-5xl uppercase tracking-wide" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>{league.name}</h1>
+              <h1 className="text-2xl md:text-5xl uppercase tracking-wide" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>{league.name}</h1>
               {league.country && (
                 <p className="text-gray-400 mt-1">{league.country}</p>
               )}
