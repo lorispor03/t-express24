@@ -138,7 +138,7 @@ export default function HomePage() {
       <section id="so-funktionierts" className="bg-[#111] border-y border-white/10 scroll-mt-[92px] md:scroll-mt-16">
         <div className="max-w-[1920px] mx-auto px-4 md:px-8 xl:px-12 2xl:px-16 py-10">
           <h2 className="text-4xl md:text-5xl uppercase tracking-wide mb-8 text-center" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>So funktioniert&apos;s</h2>
-          <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr_auto_1fr] gap-x-10 gap-y-6 items-start">
+          <div className="grid grid-cols-1 md:grid-cols-[1fr_auto_1fr_auto_1fr] gap-x-10 gap-y-6 items-center">
             {/* Step 1 */}
             <ScrollReveal delay={0} duration={1100} mobileOnly>
               <div className="text-center md:text-left">
