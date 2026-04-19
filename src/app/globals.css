@@ -205,7 +205,8 @@ body {
   100% { opacity: 1; }
 }
 @keyframes hero-scanline {
-  0% { top: 0%; opacity: 1; }
+  0% { top: 0%; opacity: 0; }
+  5% { opacity: 1; }
   80% { opacity: 1; }
   100% { top: 80%; opacity: 0; }
 }
@@ -217,11 +218,7 @@ body {
   animation-play-state: var(--anim-state);
 }
 .hero-bg {
-  opacity: 0;
-  -webkit-animation: hero-bg-fade 1.8s ease-out both;
-  animation: hero-bg-fade 1.8s ease-out both;
-  -webkit-animation-play-state: var(--anim-state);
-  animation-play-state: var(--anim-state);
+  opacity: 1;
 }
 .hero-scanline {
   position: absolute;
