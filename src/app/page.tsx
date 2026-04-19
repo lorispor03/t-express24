@@ -230,7 +230,7 @@ export default function HomePage() {
         {/* Marquee rechts */}
         <div aria-hidden className="hidden lg:block absolute inset-y-0 right-0 left-[calc(50%+24rem)] pointer-events-none overflow-hidden">
           <div className="absolute top-1/2 left-1/2" style={{ transform: 'translate(-50%, -50%) rotate(90deg)', transformOrigin: 'center' }}>
-            <div className="vmarquee-track text-[var(--red-main)] select-none" style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: 'clamp(7rem, 13vw, 15rem)', letterSpacing: '0.1em', lineHeight: 1, whiteSpace: 'nowrap' }}>
+            <div className="vmarquee-track text-[var(--red-main)] select-none" style={{ fontFamily: "'Bebas Neue', sans-serif", fontSize: 'clamp(7rem, 13vw, 15rem)', letterSpacing: '0.1em', lineHeight: 1, whiteSpace: 'nowrap', animationDelay: '-50s' }}>
               {Array.from({ length: 2 }).map((_, u) => <span key={u} className="flex items-center shrink-0">{Array.from({ length: 6 }).map((_, i) => <span key={i} className="flex items-center shrink-0"><span>T-EXPRESS24</span><span className="mx-[0.45em] text-[var(--red-main)]">•</span></span>)}</span>)}
             </div>
           </div>

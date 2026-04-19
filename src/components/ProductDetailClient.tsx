@@ -282,11 +282,9 @@ export default function ProductDetailClient({ product, teamId, teamName, leagueN
                 -21%
               </span>
             </div>
-            {extraPrice > 0 && (
-              <p className="text-sm text-gray-500 mt-1">
-                + {extraOption === 'komplett' ? 'Komplett-Paket' : extraOption === 'aufdruck' ? 'Aufdruck' : 'Patches'} (CHF {extraPrice.toFixed(2)})
-              </p>
-            )}
+            <p className={`text-sm text-gray-500 mt-1 ${extraPrice > 0 ? 'visible' : 'invisible'}`}>
+              + {extraOption === 'komplett' ? 'Komplett-Paket' : extraOption === 'aufdruck' ? 'Aufdruck' : 'Patches'} (CHF {extraPrice.toFixed(2)})
+            </p>
           </div>
 
           {/* Size Selection */}
@@ -315,10 +313,10 @@ export default function ProductDetailClient({ product, teamId, teamName, leagueN
           {isJersey && (
             <div className="mb-6">
               <label className="block text-sm font-medium mb-3">Extras (optional)</label>
-              <div className={`grid gap-2 ${availablePatchSets.length > 0 ? 'grid-cols-4' : 'grid-cols-2'}`}>
+              <div className={`grid gap-2 items-stretch ${availablePatchSets.length > 0 ? 'grid-cols-4' : 'grid-cols-2'}`}>
                 <button
                   onClick={() => handleExtraChange('none')}
-                  className={`flex flex-col items-center justify-center p-2.5 rounded-lg border transition-all text-center ${
+                  className={`flex flex-col items-center justify-center p-2.5 rounded-lg border transition-all text-center h-full ${
                     extraOption === 'none'
                       ? 'border-[var(--red-main)] bg-[var(--red-main)]/10'
                       : 'border-gray-200 bg-gray-100 hover:border-gray-300'
@@ -329,7 +327,7 @@ export default function ProductDetailClient({ product, teamId, teamName, leagueN
 
                 <button
                   onClick={() => handleExtraChange('aufdruck')}
-                  className={`flex flex-col items-center justify-center p-2.5 rounded-lg border transition-all text-center ${
+                  className={`flex flex-col items-center justify-center p-2.5 rounded-lg border transition-all text-center h-full ${
                     extraOption === 'aufdruck'
                       ? 'border-[var(--red-main)] bg-[var(--red-main)]/10'
                       : 'border-gray-200 bg-gray-100 hover:border-gray-300'
@@ -342,7 +340,7 @@ export default function ProductDetailClient({ product, teamId, teamName, leagueN
                 {availablePatchSets.length > 0 && (
                   <button
                     onClick={() => handleExtraChange('patches')}
-                    className={`flex flex-col items-center justify-center p-2.5 rounded-lg border transition-all text-center ${
+                    className={`flex flex-col items-center justify-center p-2.5 rounded-lg border transition-all text-center h-full ${
                       extraOption === 'patches'
                         ? 'border-[var(--red-main)] bg-[var(--red-main)]/10'
                         : 'border-gray-200 bg-gray-100 hover:border-gray-300'
@@ -356,7 +354,7 @@ export default function ProductDetailClient({ product, teamId, teamName, leagueN
                 {availablePatchSets.length > 0 && (
                   <button
                     onClick={() => handleExtraChange('komplett')}
-                    className={`relative flex flex-col items-center justify-center p-2.5 rounded-lg border-2 transition-all text-center ${
+                    className={`relative flex flex-col items-center justify-center p-2.5 rounded-lg border-2 transition-all text-center h-full ${
                       extraOption === 'komplett'
                         ? 'border-[var(--gold)] bg-[var(--gold)]/10'
                         : 'border-[var(--gold)]/30 bg-gray-100 hover:border-[var(--gold)]/60'

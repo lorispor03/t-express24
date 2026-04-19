@@ -94,7 +94,7 @@ export default function BundlesPage() {
       </section>
 
       {/* Jetzt profitieren */}
-      <div className="border-t border-b border-[var(--red-main)]/20 bg-[var(--red-main)]/25 backdrop-blur-md overflow-visible relative z-10">
+      <div className="border-t border-b border-gray-300 bg-[#d0d0d0] overflow-visible relative z-10">
         <div className="max-w-[1920px] mx-auto px-4 md:px-8 xl:px-12 2xl:px-16 py-4 lg:py-6">
           <div className="flex flex-col items-center">
             <div className="relative w-full flex flex-col items-center justify-center">
@@ -300,7 +300,7 @@ export default function BundlesPage() {
       </section>
 
       {/* Wie funktioniert's */}
-      <div className="border-t border-b border-[var(--red-main)]/20 bg-[var(--red-main)]/25 backdrop-blur-md overflow-visible relative z-10">
+      <div className="border-t border-b border-gray-300 bg-[#d0d0d0] overflow-visible relative z-10">
         <div className="max-w-[1920px] mx-auto px-4 md:px-8 xl:px-12 2xl:px-16 py-4 lg:py-6">
           <div className="flex flex-col items-center">
             <div className="relative w-full flex flex-col items-center justify-center">
@@ -340,72 +340,74 @@ export default function BundlesPage() {
       <section className="relative max-w-[1920px] mx-auto px-4 md:px-8 xl:px-12 2xl:px-16 pt-6 pb-4">
         <div className="max-w-xl lg:max-w-3xl mx-auto flex flex-col items-center gap-0 relative z-10">
           {/* Rabatt-Kreise + U-Branch */}
-          <div className="flex justify-center gap-20 mb-0">
-            <div className="w-14 h-14 rounded-full bg-[#a8b0b8]/15 border-2 border-[#a8b0b8]/40 flex flex-col items-center justify-center z-10">
-              <span className="text-[#a8b0b8] font-black text-3xl leading-none" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>3+</span>
-              <span className="text-[#a8b0b8]/60 text-[11px] font-bold leading-none">15%</span>
+          <div ref={el => { stepRefs.current[0] = el; }} style={{ opacity: revealedSteps.has(0) ? 1 : 0, transform: revealedSteps.has(0) ? 'translateY(0)' : 'translateY(20px)', transition: 'opacity 0.5s ease-out, transform 0.5s ease-out' }}>
+            <div className="flex justify-center gap-20 mb-0">
+              <div className="w-14 h-14 rounded-full bg-[#a8b0b8]/15 border-2 border-[#a8b0b8]/40 flex flex-col items-center justify-center z-10">
+                <span className="text-[#a8b0b8] font-black text-3xl leading-none" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>3+</span>
+                <span className="text-[#a8b0b8]/60 text-[11px] font-bold leading-none">15%</span>
+              </div>
+              <div className="w-14 h-14 rounded-full bg-[var(--gold)]/25 border-2 border-[var(--gold)] flex flex-col items-center justify-center z-10">
+                <span className="text-[var(--gold)] font-black text-3xl leading-none" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>6+</span>
+                <span className="text-[var(--gold)]/60 text-[11px] font-bold leading-none">20%</span>
+              </div>
+              <div className="w-14 h-14 rounded-full bg-[#b066c4]/20 border-2 border-[#b066c4]/60 flex flex-col items-center justify-center z-10">
+                <span className="text-[#b066c4] font-black text-3xl leading-none" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>10+</span>
+                <span className="text-[#b066c4]/60 text-[11px] font-bold leading-none">30%</span>
+              </div>
             </div>
-            <div className="w-14 h-14 rounded-full bg-[var(--gold)]/25 border-2 border-[var(--gold)] flex flex-col items-center justify-center z-10">
-              <span className="text-[var(--gold)] font-black text-3xl leading-none" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>6+</span>
-              <span className="text-[var(--gold)]/60 text-[11px] font-bold leading-none">20%</span>
+            <div className="flex justify-center">
+              <div className="relative" style={{ width: '17rem', height: '22px', borderBottom: '2px solid #9ca3af', borderLeft: '2px solid #9ca3af', borderRight: '2px solid #9ca3af', borderRadius: '0 0 6px 6px' }}>
+                <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-gray-400 -translate-x-1/2" />
+              </div>
             </div>
-            <div className="w-14 h-14 rounded-full bg-[#b066c4]/20 border-2 border-[#b066c4]/60 flex flex-col items-center justify-center z-10">
-              <span className="text-[#b066c4] font-black text-3xl leading-none" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>10+</span>
-              <span className="text-[#b066c4]/60 text-[11px] font-bold leading-none">30%</span>
+            <div className="flex justify-center">
+              <div className="w-0.5 h-4 bg-gray-400" />
             </div>
-          </div>
-          <div className="flex justify-center">
-            <div className="relative" style={{ width: '17rem', height: '22px', borderBottom: '2px solid #9ca3af', borderLeft: '2px solid #9ca3af', borderRight: '2px solid #9ca3af', borderRadius: '0 0 6px 6px' }}>
-              <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-gray-400 -translate-x-1/2" />
-            </div>
-          </div>
-          <div className="flex justify-center">
-            <div className="w-0.5 h-4 bg-gray-400" />
           </div>
           {/* Step 1 */}
-          <div ref={el => { stepRefs.current[0] = el; }} className="w-full relative z-10" style={{ opacity: revealedSteps.has(0) ? 1 : 0, transform: revealedSteps.has(0) ? 'translateY(0)' : 'translateY(20px)', transition: 'opacity 0.5s ease-out, transform 0.5s ease-out' }}>
-            <div className="bg-[#d0d0d0] rounded-xl border border-gray-400 p-4">
+          <div ref={el => { stepRefs.current[1] = el; }} className="w-full relative z-10" style={{ opacity: revealedSteps.has(1) ? 1 : 0, transform: revealedSteps.has(1) ? 'translateY(0)' : 'translateY(20px)', transition: 'opacity 0.5s ease-out, transform 0.5s ease-out' }}>
+            <div className="bg-[#e8e8e8] rounded-xl border border-gray-300 p-4">
               <h4 className="font-bold text-gray-900 mb-1 text-sm">Bundle wählen</h4>
               <p className="text-sm text-gray-500 leading-relaxed">Erhalte 15% ab 3, 20% ab 6 oder 30% ab 10 Trikots.</p>
             </div>
           </div>
           {/* Connector 1 */}
-          <div ref={el => { stepRefs.current[1] = el; }} className="flex flex-col items-center" style={{ opacity: revealedSteps.has(1) ? 1 : 0, transition: 'opacity 0.4s ease-out 0.1s' }}>
+          <div ref={el => { stepRefs.current[2] = el; }} className="flex flex-col items-center" style={{ opacity: revealedSteps.has(2) ? 1 : 0, transition: 'opacity 0.4s ease-out 0.1s' }}>
             <div className="w-0.5 h-3 bg-gray-400" />
             <div className="w-8 h-8 rounded-full bg-[var(--red-main)] text-white flex items-center justify-center font-bold text-sm flex-shrink-0" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>1</div>
             <div className="w-0.5 h-3 bg-gray-400" />
           </div>
           {/* Step 2 */}
-          <div ref={el => { stepRefs.current[2] = el; }} className="w-full" style={{ opacity: revealedSteps.has(2) ? 1 : 0, transform: revealedSteps.has(2) ? 'translateY(0)' : 'translateY(20px)', transition: 'opacity 0.5s ease-out, transform 0.5s ease-out' }}>
-            <div className="bg-[#d0d0d0] rounded-xl border border-gray-400 p-4">
+          <div ref={el => { stepRefs.current[3] = el; }} className="w-full" style={{ opacity: revealedSteps.has(3) ? 1 : 0, transform: revealedSteps.has(3) ? 'translateY(0)' : 'translateY(20px)', transition: 'opacity 0.5s ease-out, transform 0.5s ease-out' }}>
+            <div className="bg-[#e8e8e8] rounded-xl border border-gray-300 p-4">
               <h4 className="font-bold text-gray-900 mb-1 text-sm">Trikots in den Warenkorb</h4>
               <p className="text-sm text-gray-500 leading-relaxed">Stöbere durch den Shop und lege deine Lieblings-Trikots in den Warenkorb.</p>
               <img src="/bundle-step2.png?v=6" alt="Trikot auswählen & Warenkorb" onClick={() => openLightbox('/bundle-step2.png?v=6')} className="mt-3 rounded-lg border border-gray-200 w-full cursor-zoom-in hover:border-gray-400 transition-colors" />
             </div>
           </div>
           {/* Connector 2 */}
-          <div ref={el => { stepRefs.current[3] = el; }} className="flex flex-col items-center" style={{ opacity: revealedSteps.has(3) ? 1 : 0, transition: 'opacity 0.4s ease-out 0.1s' }}>
+          <div ref={el => { stepRefs.current[4] = el; }} className="flex flex-col items-center" style={{ opacity: revealedSteps.has(4) ? 1 : 0, transition: 'opacity 0.4s ease-out 0.1s' }}>
             <div className="w-0.5 h-3 bg-gray-400" />
             <div className="w-8 h-8 rounded-full bg-[var(--red-main)] text-white flex items-center justify-center font-bold text-sm flex-shrink-0" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>2</div>
             <div className="w-0.5 h-3 bg-gray-400" />
           </div>
           {/* Step 3 */}
-          <div ref={el => { stepRefs.current[4] = el; }} className="w-full" style={{ opacity: revealedSteps.has(4) ? 1 : 0, transform: revealedSteps.has(4) ? 'translateY(0)' : 'translateY(20px)', transition: 'opacity 0.5s ease-out, transform 0.5s ease-out' }}>
-            <div className="bg-[#d0d0d0] rounded-xl border border-gray-400 p-4">
+          <div ref={el => { stepRefs.current[5] = el; }} className="w-full" style={{ opacity: revealedSteps.has(5) ? 1 : 0, transform: revealedSteps.has(5) ? 'translateY(0)' : 'translateY(20px)', transition: 'opacity 0.5s ease-out, transform 0.5s ease-out' }}>
+            <div className="bg-[#e8e8e8] rounded-xl border border-gray-300 p-4">
               <h4 className="font-bold text-gray-900 mb-1 text-sm">Rabatt kassieren</h4>
               <p className="text-sm text-gray-500 leading-relaxed">Der Rabatt wird automatisch im Warenkorb angewendet.</p>
               <img src="/bundle-step3.png?v=3" alt="Rabatt im Warenkorb" onClick={() => openLightbox('/bundle-step3.png?v=3')} className="mt-3 rounded-lg border border-gray-200 w-full cursor-zoom-in hover:border-gray-400 transition-colors" />
             </div>
           </div>
           {/* Connector 3 */}
-          <div ref={el => { stepRefs.current[5] = el; }} className="flex flex-col items-center" style={{ opacity: revealedSteps.has(5) ? 1 : 0, transition: 'opacity 0.4s ease-out 0.1s' }}>
+          <div ref={el => { stepRefs.current[6] = el; }} className="flex flex-col items-center" style={{ opacity: revealedSteps.has(6) ? 1 : 0, transition: 'opacity 0.4s ease-out 0.1s' }}>
             <div className="w-0.5 h-3 bg-gray-400" />
             <div className="w-8 h-8 rounded-full bg-green-500 text-white flex items-center justify-center font-bold text-xs flex-shrink-0">%</div>
             <div className="w-0.5 h-3 bg-gray-400" />
           </div>
           {/* Step 4 */}
-          <div ref={el => { stepRefs.current[6] = el; }} className="w-full" style={{ opacity: revealedSteps.has(6) ? 1 : 0, transform: revealedSteps.has(6) ? 'translateY(0)' : 'translateY(20px)', transition: 'opacity 0.5s ease-out, transform 0.5s ease-out' }}>
-            <div className="bg-[#d0d0d0] rounded-xl border border-gray-400 p-4">
+          <div ref={el => { stepRefs.current[7] = el; }} className="w-full" style={{ opacity: revealedSteps.has(7) ? 1 : 0, transform: revealedSteps.has(7) ? 'translateY(0)' : 'translateY(20px)', transition: 'opacity 0.5s ease-out, transform 0.5s ease-out' }}>
+            <div className="bg-[#e8e8e8] rounded-xl border border-gray-300 p-4">
               <h4 className="font-bold text-gray-900 mb-1 text-sm">Bestellung absenden</h4>
               <p className="text-sm text-gray-500 leading-relaxed">Gib deinen Namen und Kontakt an und sende die Bestellung ab. Du erhältst in Kürze deine Bestellbestätigung.</p>
             </div>

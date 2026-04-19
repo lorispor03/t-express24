@@ -262,7 +262,7 @@ export default function ChatWidget() {
                 value={input}
                 onChange={(e) => setInput(e.target.value)}
                 placeholder="Schreib deine Frage..."
-                className="flex-1 bg-white border border-gray-200 rounded-xl px-3.5 py-2.5 text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:border-[var(--red-main)] transition-colors"
+                className="flex-1 bg-white border border-gray-200 rounded-xl px-3.5 py-2.5 text-[16px] sm:text-sm text-gray-900 placeholder-gray-400 focus:outline-none focus:border-[var(--red-main)] transition-colors"
                 disabled={loading}
               />
               <button
