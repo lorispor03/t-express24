@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 export default function Footer({ dark }: { dark?: boolean }) {
   return (
-    <footer className={`relative overflow-hidden border-t-2 border-gray-300 ${dark ? 'bg-[#0d0d0d]' : 'mt-10'}`}>
+    <footer className={`relative overflow-hidden ${dark ? 'bg-[#0d0d0d]' : 'mt-10'}`}>
       {!dark && <div className="absolute inset-0 bg-gradient-to-br from-[#111] via-[var(--red-dark)] to-[#111]" />}
       {!dark && <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(196,34,46,0.3),transparent_70%)]" />}
       <div className="relative max-w-[1920px] mx-auto px-4 md:px-8 xl:px-12 2xl:px-16 py-12">

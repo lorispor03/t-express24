@@ -115,31 +115,10 @@ export default function ChatWidget() {
 
   return (
     <>
-      {/* Chat Button */}
-      <button
-        onClick={() => setOpen(!open)}
-        className="fixed bottom-20 right-4 md:bottom-6 md:right-6 z-[9999] w-14 h-14 rounded-full flex items-center justify-center shadow-lg transition-all duration-300 hover:scale-110"
-        style={{
-          background: 'linear-gradient(135deg, var(--red-main), var(--red-dark))',
-          boxShadow: '0 4px 20px rgba(196, 34, 46, 0.4)',
-        }}
-        aria-label="Kundensupport öffnen"
-      >
-        {open ? (
-          <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-          </svg>
-        ) : (
-          <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-          </svg>
-        )}
-      </button>
-
       {/* Chat Window */}
       {open && (
         <div
-          className="fixed bottom-36 right-4 md:bottom-20 md:right-6 z-[9999] w-[calc(100vw-2rem)] max-w-[380px] rounded-2xl overflow-hidden shadow-2xl flex flex-col"
+          className="fixed bottom-4 right-4 md:top-16 md:bottom-auto md:right-6 z-[9999] w-[calc(100vw-2rem)] max-w-[380px] rounded-2xl overflow-hidden shadow-2xl flex flex-col"
           style={{
             height: 'min(500px, calc(100vh - 12rem))',
             background: '#ffffff',

@@ -22,8 +22,8 @@ export default function BundleBar() {
       prevBundle.current = activeBundle;
       return;
     }
-    // Only show overlay when user freshly activates a bundle (null → value)
-    if (activeBundle && !prevBundle.current) {
+    // Show overlay when user activates or switches a bundle
+    if (activeBundle && activeBundle !== prevBundle.current) {
       setDismissedOverlay(false);
       setDismissedShopBtn(false);
       // Auto-dismiss overlay after 3 seconds
@@ -40,49 +40,52 @@ export default function BundleBar() {
 
   const config = BUNDLE_CONFIG[activeBundle];
   const progressPercent = Math.min(100, (bundleProgress.current / bundleProgress.target) * 100);
+  const bundleColor = activeBundle === '3plus' ? '#a8b0b8' : activeBundle === '6plus' ? 'var(--gold)' : '#b066c4';
 
   return (
     <>
-    <div className="h-24" />
+    <div className="h-[88px] bg-[#111]" />
     {isBundles && !dismissedOverlay && (
       <div className="fixed inset-0 z-40 bg-black/80 pointer-events-auto animate-overlay-fade" onClick={() => setDismissedOverlay(true)} />
     )}
-    <div className={`fixed bottom-0 left-0 right-0 z-50 safe-area-bottom ${bundleProgress.reached ? 'bg-gradient-to-r from-green-900/90 via-green-800/90 to-green-900/90 border-t-2 border-green-400/50' : 'bg-gradient-to-r from-[#1a1000]/95 via-[#1a1500]/95 to-[#1a1000]/95 border-t-2 border-[var(--gold)]/50'}`} style={{ backdropFilter: 'blur(12px)' }}>
+    <div className={`fixed bottom-0 left-0 right-0 z-50 safe-area-bottom ${bundleProgress.reached ? 'bg-gradient-to-r from-green-900/90 via-green-800/90 to-green-900/90' : 'bg-gradient-to-r from-[#1a1000]/95 via-[#1a1500]/95 to-[#1a1000]/95'}`} style={{ backdropFilter: 'blur(12px)' }}>
       <div className="max-w-[1920px] mx-auto px-4 md:px-8 xl:px-12 2xl:px-16 py-3.5">
         <div className="flex items-center justify-between gap-4">
           {/* Left: Icon + Info */}
           <div className="flex items-center gap-3 flex-1 min-w-0">
-            <div className={`flex-shrink-0 w-11 h-11 rounded-xl flex items-center justify-center ${bundleProgress.reached ? 'bg-green-400/20' : 'bg-[var(--gold)]/20'}`}>
+            <div className={`flex-shrink-0 w-11 h-11 rounded-xl flex items-center justify-center ${bundleProgress.reached ? 'bg-green-400/20' : ''}`} style={!bundleProgress.reached ? { backgroundColor: `color-mix(in srgb, ${bundleColor} 20%, transparent)` } : {}}>
               {bundleProgress.reached ? (
                 <svg className="w-6 h-6 text-green-400" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
               ) : (
-                <span className="text-lg font-black text-[var(--gold)]" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>{config.label}</span>
+                <span className="text-lg font-black" style={{ fontFamily: "'Bebas Neue', sans-serif", color: bundleColor }}>{config.label}</span>
               )}
             </div>
             <div className="flex-1 min-w-0">
               <div className="flex items-center gap-2">
                 <span className="text-sm font-bold text-white">
-                  {bundleProgress.reached ? 'Rabatt aktiv!' : `Bundle ${config.label}`}
+                  {bundleProgress.reached ? 'Rabatt aktiv!' : (<span className="text-[var(--red-main)]">Bundle {config.label}</span>)}
                 </span>
                 {!bundleProgress.reached && (
-                  <span className="text-xs text-[var(--gold)] font-semibold">
+                  <span className="text-xs font-semibold" style={{ color: bundleColor }}>
                     — noch {bundleProgress.remaining} {bundleProgress.remaining === 1 ? 'Trikot' : 'Trikots'}
                   </span>
                 )}
               </div>
               {/* Progress bar */}
-              <div className="h-2 bg-white/10 rounded-full overflow-hidden mt-1.5 relative">
+              <div className="h-2 bg-white/10 rounded-full mt-1.5 relative">
                 <div
-                  className={`h-full rounded-full transition-all duration-500 relative overflow-hidden ${bundleProgress.reached ? 'bg-green-400' : 'bg-[var(--gold)]'}`}
-                  style={{ width: `${progressPercent}%` }}
+                  className={`h-full rounded-full transition-all duration-500 relative ${bundleProgress.reached ? 'bg-green-400' : ''}`}
+                  style={{ width: `${progressPercent}%`, ...(!bundleProgress.reached ? { backgroundColor: bundleColor } : {}) }}
                 >
-                  <div className="absolute inset-0 bundle-shimmer" />
-                </div>
-                {progressPercent > 0 && progressPercent < 100 && (
-                  <div className="absolute top-1/2 -translate-y-1/2 bundle-spark" style={{ left: `${progressPercent}%` }}>
-                    <div className="w-3 h-3 -ml-1.5 rounded-full bg-[var(--gold)] bundle-spark-glow" />
+                  <div className="absolute inset-0 overflow-hidden rounded-full">
+                    <div className="absolute inset-0 bundle-shimmer" />
                   </div>
-                )}
+                  {progressPercent > 0 && progressPercent < 100 && (
+                    <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 bundle-spark" style={{ '--spark-color': bundleColor } as React.CSSProperties}>
+                      <div className="w-3 h-3 rounded-full bundle-spark-glow" style={{ backgroundColor: bundleColor, '--spark-color': bundleColor } as React.CSSProperties} />
+                    </div>
+                  )}
+                </div>
               </div>
               <span className="text-[11px] text-gray-400 mt-0.5 block">{bundleProgress.current} / {bundleProgress.target} Trikots</span>
             </div>
@@ -101,19 +104,19 @@ export default function BundleBar() {
               <Link
                 href="/#ligen"
                 onClick={() => { setDismissedOverlay(true); setDismissedShopBtn(true); }}
-                className="relative bg-[var(--red-main)] text-white text-xs font-bold px-5 py-2.5 rounded-full hover:scale-105 transition-transform flex items-center gap-1.5 shadow-[0_0_15px_rgba(196,34,46,0.6),0_0_30px_rgba(196,34,46,0.3)] animate-glow-pulse"
+                className="relative bg-[var(--gold)] text-black text-xs font-bold px-5 py-2.5 rounded-full hover:scale-105 transition-transform flex items-center gap-1.5 shadow-[0_0_15px_rgba(181,155,75,0.6),0_0_30px_rgba(181,155,75,0.3)] animate-glow-pulse"
               >
                 <div className="absolute -top-16 left-1/2 -translate-x-1/2 flex chevron-pulse">
-                  <svg className="w-6 h-12 -mr-1.5 chevron-1" viewBox="0 0 12 40" fill="none" stroke="var(--red-main)" strokeWidth={3}><path strokeLinecap="round" strokeLinejoin="round" d="M2 4l8 16-8 16" /></svg>
-                  <svg className="w-6 h-12 -mr-1.5 chevron-2" viewBox="0 0 12 40" fill="none" stroke="var(--red-main)" strokeWidth={3}><path strokeLinecap="round" strokeLinejoin="round" d="M2 4l8 16-8 16" /></svg>
-                  <svg className="w-6 h-12 chevron-3" viewBox="0 0 12 40" fill="none" stroke="var(--red-main)" strokeWidth={3}><path strokeLinecap="round" strokeLinejoin="round" d="M2 4l8 16-8 16" /></svg>
+                  <svg className="w-6 h-12 -mr-1.5 chevron-1" viewBox="0 0 12 40" fill="none" stroke="var(--gold)" strokeWidth={3}><path strokeLinecap="round" strokeLinejoin="round" d="M2 4l8 16-8 16" /></svg>
+                  <svg className="w-6 h-12 -mr-1.5 chevron-2" viewBox="0 0 12 40" fill="none" stroke="var(--gold)" strokeWidth={3}><path strokeLinecap="round" strokeLinejoin="round" d="M2 4l8 16-8 16" /></svg>
+                  <svg className="w-6 h-12 chevron-3" viewBox="0 0 12 40" fill="none" stroke="var(--gold)" strokeWidth={3}><path strokeLinecap="round" strokeLinejoin="round" d="M2 4l8 16-8 16" /></svg>
                 </div>
                 Jetzt shoppen
               </Link>
             ) : null}
             <button
               onClick={() => { setActiveBundle(null); setDismissedOverlay(false); setDismissedShopBtn(false); }}
-              className="text-[var(--red-main)] hover:text-white p-2 rounded-lg hover:bg-white/10 transition-colors flex items-center gap-1.5"
+              className="text-[var(--red-main)] hover:text-[var(--red-main)] active:text-[var(--red-main)] p-2 rounded-lg hover:bg-white/10 transition-colors flex items-center gap-1.5"
               title="Bundle auflösen"
             >
               <span className="text-xs font-semibold hidden sm:inline">Auflösen</span>

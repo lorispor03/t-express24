@@ -274,7 +274,7 @@ export default function ProductDetailClient({ product, teamId, teamName, leagueN
 
           <h1 className="text-xl sm:text-2xl font-bold text-gray-900 leading-tight mb-2">{product.t}</h1>
           <p className="text-sm text-gray-500 mb-4">{teamName}</p>
-          <div className="mb-6">
+          <div className="mb-3 md:mb-6">
             <div className="flex items-center gap-3">
               <span className="text-2xl font-bold text-[var(--gold)]">CHF {parseFloat(product.p).toFixed(2)}</span>
               <span className="text-2xl font-bold text-gray-400 line-through">CHF {(Math.floor(parseFloat(product.p) / 0.79) + 0.90).toFixed(2)}</span>
@@ -288,8 +288,8 @@ export default function ProductDetailClient({ product, teamId, teamName, leagueN
           </div>
 
           {/* Size Selection */}
-          <div className="mb-5">
-            <label className="block text-sm font-medium mb-3">
+          <div className="mb-3 md:mb-5">
+            <label className="block text-sm font-medium mb-2 md:mb-3">
               Grösse wählen {isKids && <span className="text-gray-500">(Kinder)</span>}
             </label>
             <div className="flex flex-wrap gap-2">
@@ -311,8 +311,8 @@ export default function ProductDetailClient({ product, teamId, teamName, leagueN
 
           {/* Extras */}
           {isJersey && (
-            <div className="mb-6">
-              <label className="block text-sm font-medium mb-3">Extras (optional)</label>
+            <div className="mb-3 md:mb-6">
+              <label className="block text-sm font-medium mb-2 md:mb-3">Extras (optional)</label>
               <div className={`grid gap-2 items-stretch ${availablePatchSets.length > 0 ? 'grid-cols-4' : 'grid-cols-2'}`}>
                 <button
                   onClick={() => handleExtraChange('none')}

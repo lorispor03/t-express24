@@ -43,9 +43,9 @@ export default function HomePage() {
           </h2>
           <p className="text-gray-500 text-sm mb-3 md:mb-4">Mehr Trikots, weniger zahlen</p>
           <Link href="/bundles" className="block group">
-            <div className="relative overflow-hidden rounded-xl border border-[var(--red-main)]/30 bg-gradient-to-r from-[var(--red-dark)] via-[var(--red-main)] to-[var(--red-dark)] p-3 md:p-6 animate-pulse-slow hover:border-[var(--red-main)]/60 transition-all">
+            <div className="relative overflow-hidden rounded-xl border border-[var(--red-main)]/30 bg-gradient-to-r from-[var(--red-dark)] via-[var(--red-main)] to-[var(--red-dark)] p-3 md:p-6 animate-pulse-slow animate-chat-pulse hover:border-[var(--red-main)]/60 transition-all">
               <div className="absolute top-0 right-0 w-40 h-full bg-gradient-to-l from-white/10 to-transparent" />
-              <div className="relative flex items-center justify-between gap-2 md:gap-4">
+              <div className="relative flex items-center justify-center md:justify-between gap-2 md:gap-4">
                 <div className="flex items-center gap-2.5 md:gap-6">
                   <div className="flex-shrink-0">
                     <span className="text-4xl md:text-5xl font-black text-white leading-none" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>3+</span>

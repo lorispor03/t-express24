@@ -188,8 +188,7 @@ export default function BundlesPage() {
                 </div>
                 <button
                   onClick={() => toggleBundle('3plus')}
-                                    style={activeBundle !== '3plus' ? { animation: 'bundle-zoom 1s ease-in-out infinite' } : {}}
-                                    className={`w-full font-bold py-3 rounded-xl text-sm transition-all mt-auto ${activeBundle === '3plus' ? 'bg-red-500/15 text-red-400 border border-red-500/30' : 'bg-[#a8b0b8] text-black'}`}
+                                    className={`w-full font-bold py-3 rounded-xl text-sm transition-all mt-auto bundle-zoom ${activeBundle === '3plus' ? 'bg-red-500/15 text-red-400 border border-red-500/30' : 'bg-[#a8b0b8] text-black'}`}
                 >
                   {activeBundle === '3plus' ? 'Bundle deaktivieren' : 'Bundle aktivieren & Trikots wählen'}
                 </button>
@@ -237,8 +236,7 @@ export default function BundlesPage() {
                 </div>
                 <button
                   onClick={() => toggleBundle('6plus')}
-                                    style={activeBundle !== '6plus' ? { animation: 'bundle-zoom 1s ease-in-out infinite' } : {}}
-                                    className={`w-full font-bold py-3 rounded-xl text-sm transition-all mt-auto ${activeBundle === '6plus' ? 'bg-red-500/15 text-red-400 border border-red-500/30' : 'bg-[var(--gold)] text-black'}`}
+                                    className={`w-full font-bold py-3 rounded-xl text-sm transition-all mt-auto bundle-zoom ${activeBundle === '6plus' ? 'bg-red-500/15 text-red-400 border border-red-500/30' : 'bg-[var(--gold)] text-black'}`}
                 >
                   {activeBundle === '6plus' ? 'Bundle deaktivieren' : 'Bundle aktivieren & Trikots wählen'}
                 </button>
@@ -289,8 +287,7 @@ export default function BundlesPage() {
                 </div>
                 <button
                   onClick={() => toggleBundle('10plus')}
-                  style={activeBundle !== '10plus' ? { animation: 'bundle-zoom 1s ease-in-out infinite' } : {}}
-                  className={`w-full font-bold py-3 rounded-xl text-sm transition-all mt-auto ${activeBundle === '10plus' ? 'bg-[var(--red-main)]/15 text-[var(--red-main)] border border-[var(--red-main)]/30' : 'bg-[#b066c4] text-white'}`}
+                  className={`w-full font-bold py-3 rounded-xl text-sm transition-all mt-auto bundle-zoom ${activeBundle === '10plus' ? 'bg-[var(--red-main)]/15 text-[var(--red-main)] border border-[var(--red-main)]/30' : 'bg-[#b066c4] text-white'}`}
                 >
                   {activeBundle === '10plus' ? 'Bundle deaktivieren' : 'Bundle aktivieren & Trikots wählen'}
                 </button>

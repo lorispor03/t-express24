@@ -116,8 +116,8 @@ body {
 }
 
 @keyframes spark-glow {
-  0%, 100% { box-shadow: 0 0 4px 1px rgba(240,167,62,0.6), 0 0 8px 2px rgba(240,167,62,0.3); transform: scale(1); }
-  50% { box-shadow: 0 0 8px 3px rgba(240,167,62,0.9), 0 0 16px 6px rgba(240,167,62,0.4), 0 0 24px 8px rgba(255,255,255,0.15); transform: scale(1.3); }
+  0%, 100% { box-shadow: 0 0 4px 1px color-mix(in srgb, var(--spark-color) 60%, transparent), 0 0 8px 2px color-mix(in srgb, var(--spark-color) 30%, transparent); transform: scale(1); }
+  50% { box-shadow: 0 0 8px 3px color-mix(in srgb, var(--spark-color) 90%, transparent), 0 0 16px 6px color-mix(in srgb, var(--spark-color) 40%, transparent), 0 0 24px 8px rgba(255,255,255,0.15); transform: scale(1.3); }
 }
 .bundle-spark-glow { animation: spark-glow 0.8s ease-in-out infinite; }
 
@@ -141,11 +141,11 @@ body {
 }
 .bundle-spark::before {
   width: 8px; height: 8px;
-  border: 1px solid rgba(240,167,62,0.5);
+  border: 1px solid color-mix(in srgb, var(--spark-color) 50%, transparent);
 }
 .bundle-spark::after {
   width: 14px; height: 14px;
-  border: 1px solid rgba(240,167,62,0.3);
+  border: 1px solid color-mix(in srgb, var(--spark-color) 30%, transparent);
   animation-delay: 0.4s;
 }
 
@@ -257,6 +257,28 @@ body {
 .chevron-2 { animation: chevron-flow 1.2s ease-in-out 0.2s infinite; }
 .chevron-3 { animation: chevron-flow 1.2s ease-in-out 0.4s infinite; }
 .chevron-4 { animation: chevron-flow 1.2s ease-in-out 0.6s infinite; }
+
+/* Chat button pulse */
+@keyframes chat-pulse-ring {
+  0% { transform: scale(1); opacity: 0.6; }
+  100% { transform: scale(1.35); opacity: 0; }
+}
+.animate-chat-pulse {
+  position: relative;
+}
+.animate-chat-pulse::before,
+.animate-chat-pulse::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  border: 2px solid var(--red-main);
+  pointer-events: none;
+  animation: chat-pulse-ring 2s ease-out infinite;
+}
+.animate-chat-pulse::after {
+  animation-delay: 0.4s;
+}
 
 /* Vertical marquee used as side watermark on legal pages. */
 @keyframes vmarquee {
