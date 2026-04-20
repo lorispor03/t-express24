@@ -366,6 +366,7 @@ export default function BundlesPage() {
             <div className="bg-[#e8e8e8] rounded-xl border border-gray-300 p-4">
               <h4 className="font-bold text-gray-900 mb-1 text-sm">Bundle wählen</h4>
               <p className="text-sm text-gray-500 leading-relaxed">Erhalte 15% ab 3, 20% ab 6 oder 30% ab 10 Trikots.</p>
+              <img src="/bundle-step1.png?v=1" alt="Bundle wählen" onClick={() => openLightbox('/bundle-step1.png?v=1')} className="mt-3 rounded-lg border border-gray-200 w-full cursor-zoom-in hover:border-gray-400 transition-colors" />
             </div>
           </div>
           {/* Connector 1 */}
@@ -379,7 +380,7 @@ export default function BundlesPage() {
             <div className="bg-[#e8e8e8] rounded-xl border border-gray-300 p-4">
               <h4 className="font-bold text-gray-900 mb-1 text-sm">Trikots in den Warenkorb</h4>
               <p className="text-sm text-gray-500 leading-relaxed">Stöbere durch den Shop und lege deine Lieblings-Trikots in den Warenkorb.</p>
-              <img src="/bundle-step2.png?v=6" alt="Trikot auswählen & Warenkorb" onClick={() => openLightbox('/bundle-step2.png?v=6')} className="mt-3 rounded-lg border border-gray-200 w-full cursor-zoom-in hover:border-gray-400 transition-colors" />
+              <img src="/bundle-step2.png?v=7" alt="Trikot auswählen & Warenkorb" onClick={() => openLightbox('/bundle-step2.png?v=7')} className="mt-3 rounded-lg border border-gray-200 w-full cursor-zoom-in hover:border-gray-400 transition-colors" />
             </div>
           </div>
           {/* Connector 2 */}
@@ -393,7 +394,7 @@ export default function BundlesPage() {
             <div className="bg-[#e8e8e8] rounded-xl border border-gray-300 p-4">
               <h4 className="font-bold text-gray-900 mb-1 text-sm">Rabatt kassieren</h4>
               <p className="text-sm text-gray-500 leading-relaxed">Der Rabatt wird automatisch im Warenkorb angewendet.</p>
-              <img src="/bundle-step3.png?v=3" alt="Rabatt im Warenkorb" onClick={() => openLightbox('/bundle-step3.png?v=3')} className="mt-3 rounded-lg border border-gray-200 w-full cursor-zoom-in hover:border-gray-400 transition-colors" />
+              <img src="/bundle-step3.png?v=4" alt="Rabatt im Warenkorb" onClick={() => openLightbox('/bundle-step3.png?v=4')} className="mt-3 rounded-lg border border-gray-200 w-full cursor-zoom-in hover:border-gray-400 transition-colors" />
             </div>
           </div>
           {/* Connector 3 */}

@@ -7,6 +7,13 @@ const nextConfig: NextConfig = {
   // Remove X-Powered-By header
   poweredByHeader: false,
 
+  // Hide Next.js dev indicator
+  devIndicators: {
+    appIsrStatus: false,
+    buildActivity: false,
+    buildActivityPosition: 'bottom-right',
+  },
+
   // Prefer modern image formats
   images: {
     formats: ['image/avif', 'image/webp'],
