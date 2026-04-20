@@ -8,11 +8,7 @@ const nextConfig: NextConfig = {
   poweredByHeader: false,
 
   // Hide Next.js dev indicator
-  devIndicators: {
-    appIsrStatus: false,
-    buildActivity: false,
-    buildActivityPosition: 'bottom-right',
-  },
+  devIndicators: false,
 
   // Prefer modern image formats
   images: {

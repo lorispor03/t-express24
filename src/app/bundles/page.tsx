@@ -393,8 +393,8 @@ export default function BundlesPage() {
           <div ref={el => { stepRefs.current[5] = el; }} className="w-full" style={{ opacity: revealedSteps.has(5) ? 1 : 0, transform: revealedSteps.has(5) ? 'translateY(0)' : 'translateY(20px)', transition: 'opacity 0.5s ease-out, transform 0.5s ease-out' }}>
             <div className="bg-[#e8e8e8] rounded-xl border border-gray-300 p-4">
               <h4 className="font-bold text-gray-900 mb-1 text-sm">Rabatt kassieren</h4>
-              <p className="text-sm text-gray-500 leading-relaxed">Der Rabatt wird automatisch im Warenkorb angewendet.</p>
-              <img src="/bundle-step3.png?v=4" alt="Rabatt im Warenkorb" onClick={() => openLightbox('/bundle-step3.png?v=4')} className="mt-3 rounded-lg border border-gray-200 w-full cursor-zoom-in hover:border-gray-400 transition-colors" />
+              <p className="text-sm text-gray-500 leading-relaxed">Der Rabatt wird automatisch im Warenkorb angewendet. Danach kannst du ganz einfach zur Kasse gehen.</p>
+              <img src="/bundle-step3.png?v=5" alt="Rabatt im Warenkorb" onClick={() => openLightbox('/bundle-step3.png?v=5')} className="mt-3 rounded-lg border border-gray-200 w-full cursor-zoom-in hover:border-gray-400 transition-colors" />
             </div>
           </div>
           {/* Connector 3 */}

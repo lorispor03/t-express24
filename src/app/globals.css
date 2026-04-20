@@ -19,6 +19,9 @@ a, button, input, select, textarea, [role="button"] {
   touch-action: manipulation;
 }
 
+/* Hide Next.js dev indicator */
+[data-next-badge], [data-nextjs-dialog], nextjs-portal, #__next-build-indicator, [class*="nextjs-"] { display: none !important; }
+
 /* Scrollbar (global) */
 ::-webkit-scrollbar { width: 4px; height: 4px; }
 ::-webkit-scrollbar-track { background: #111; }
