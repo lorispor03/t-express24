@@ -13,7 +13,7 @@ export default function ProductCard({ product, teamName }: ProductCardProps) {
     <Link href={`/product/${product.h}`} className="product-card group bg-white rounded-xl overflow-hidden border border-gray-400 transition-all block">
       {/* Image */}
       <div className="relative aspect-square overflow-hidden bg-white">
-        <img src={product.i} alt={product.t} className="absolute inset-0 w-full h-full object-cover" loading="lazy" />
+        <img src={product.i} alt={product.t} className="absolute inset-0 w-full h-full object-cover" loading="lazy" decoding="async" />
       </div>
 
       {/* Info */}

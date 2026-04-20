@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import { CartProvider } from "@/context/CartContext";
 import CartDrawer from "@/components/CartDrawer";
@@ -7,6 +7,12 @@ import ConsentBanner from "@/components/ConsentBanner";
 import ChatWidget from "@/components/ChatWidget";
 
 const SITE_URL = "https://t-express24.shop";
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -68,6 +74,10 @@ export default function RootLayout({
   return (
     <html lang="de">
       <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://img.wpassets-gamma.com" />
+        <link rel="dns-prefetch" href="https://img.wpassets-gamma.com" />
         {/* Always start at the top on reload, never restore the previous scroll position. */}
         <script
           dangerouslySetInnerHTML={{

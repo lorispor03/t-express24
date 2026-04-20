@@ -14,6 +14,11 @@ body {
   color: #fff;
 }
 
+/* Eliminate 300ms tap delay on mobile */
+a, button, input, select, textarea, [role="button"] {
+  touch-action: manipulation;
+}
+
 /* Scrollbar (global) */
 ::-webkit-scrollbar { width: 4px; height: 4px; }
 ::-webkit-scrollbar-track { background: #111; }
