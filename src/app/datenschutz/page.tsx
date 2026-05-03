@@ -45,8 +45,8 @@ export default function DatenschutzPage() {
                 <a href="https://instagram.com/T_express247" target="_blank" rel="noopener noreferrer" className="text-[var(--gold)] hover:underline">
                   Instagram: @T_express247
                 </a>
-                <a href="mailto:support@t-express24.shop" className="text-[var(--gold)] hover:underline">
-                  E-Mail: support@t-express24.shop
+                <a href="mailto:kontakt@t-express24.shop" className="text-[var(--gold)] hover:underline">
+                  E-Mail: kontakt@t-express24.shop
                 </a>
               </div>
             </div>
@@ -56,7 +56,7 @@ export default function DatenschutzPage() {
               <p>Wir erheben und verarbeiten folgende Kategorien personenbezogener Daten:</p>
               <ul className="list-disc list-inside mt-2 space-y-1">
                 <li><strong className="text-white">Bestelldaten:</strong> Name, Lieferadresse, E-Mail-Adresse, Telefonnummer (optional), bestellte Artikel</li>
-                <li><strong className="text-white">Zahlungsdaten:</strong> werden direkt beim Zahlungsdienstleister (Stripe, PayPal, TWINT) eingegeben und verarbeitet – wir speichern keine vollständigen Kartendaten</li>
+                <li><strong className="text-white">Zahlungsdaten:</strong> werden direkt beim Zahlungsdienstleister (Stripe, TWINT) eingegeben und verarbeitet – wir speichern keine vollständigen Kartendaten</li>
                 <li><strong className="text-white">Kommunikationsdaten:</strong> E-Mail- und Instagram-Nachrichten, Chatbot-Verlauf</li>
                 <li><strong className="text-white">Technische Daten:</strong> IP-Adresse, Browser- und Gerätedaten, Zeitpunkt des Zugriffs (Server-Logs)</li>
                 <li><strong className="text-white">Cookies:</strong> siehe Abschnitt 6</li>
@@ -86,7 +86,6 @@ export default function DatenschutzPage() {
               </p>
               <ul className="list-disc list-inside mt-2 space-y-1">
                 <li><strong className="text-white">Stripe (USA/Irland):</strong> Verarbeitung von Kreditkartenzahlungen</li>
-                <li><strong className="text-white">PayPal (Luxemburg):</strong> Verarbeitung von PayPal-Zahlungen</li>
                 <li><strong className="text-white">TWINT (Schweiz):</strong> Verarbeitung von TWINT-Zahlungen</li>
                 <li><strong className="text-white">Vercel (USA):</strong> Hosting der Webseite</li>
                 <li><strong className="text-white">Upstash (USA/EU):</strong> Speicherung von Bestelldaten</li>
@@ -155,7 +154,7 @@ export default function DatenschutzPage() {
                 <li><strong className="text-white">Datenübertragbarkeit:</strong> Erhalt deiner Daten in einem strukturierten Format</li>
               </ul>
               <p className="mt-2">
-                Zur Ausübung dieser Rechte genügt eine formlose Mitteilung an <a href="mailto:support@t-express24.shop" className="text-[var(--gold)] hover:underline">support@t-express24.shop</a>.
+                Zur Ausübung dieser Rechte genügt eine formlose Mitteilung an <a href="mailto:kontakt@t-express24.shop" className="text-[var(--gold)] hover:underline">kontakt@t-express24.shop</a>.
               </p>
             </div>
 

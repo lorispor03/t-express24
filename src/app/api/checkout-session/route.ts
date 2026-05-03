@@ -1,13 +1,26 @@
 import { NextRequest, NextResponse } from 'next/server';
-import Stripe from 'stripe';
+import crypto from 'crypto';
+import { Redis } from '@upstash/redis';
 
-function getStripe() {
-  return new Stripe(process.env.STRIPE_SECRET_KEY!);
+function getRedis() {
+  return new Redis({
+    url: process.env.KV_REST_API_URL!,
+    token: process.env.KV_REST_API_TOKEN!,
+  });
+}
+
+const PAYREXX_INSTANCE = process.env.PAYREXX_INSTANCE!;
+const PAYREXX_API_SECRET = process.env.PAYREXX_API_SECRET!;
+
+function buildSignature(params: URLSearchParams): string {
+  return crypto
+    .createHmac('sha256', PAYREXX_API_SECRET)
+    .update(params.toString())
+    .digest('base64');
 }
 
 export async function POST(req: NextRequest) {
   try {
-    const stripe = getStripe();
     const body = await req.json();
     const { items, kunde, lieferadresse, nachricht, zahlungsart, bundle, bundleDiscount } = body;
 
@@ -15,118 +28,91 @@ export async function POST(req: NextRequest) {
       return NextResponse.json({ error: 'Fehlende Daten' }, { status: 400 });
     }
 
-    // Map payment method types
-    const paymentMethodMap: Record<string, string[]> = {
-      kreditkarte: ['card'],
-      twint: ['twint'],
-      paypal: ['paypal'],
-    };
-    const paymentMethods = paymentMethodMap[zahlungsart] || ['card'];
-
-    // Build line items for Stripe
-    const lineItems: any[] = items.map((item: any) => {
+    // Gesamtbetrag berechnen (in Rappen)
+    let totalCents = 0;
+    for (const item of items) {
       const basePrice = parseFloat(item.produkt_preis);
       const extraPrice = item.extras_preis || 0;
       const unitPrice = basePrice + extraPrice;
+      totalCents += Math.round(unitPrice * 100) * (item.menge || 1);
+    }
 
-      // Build description
-      const descParts = [
-        item.team,
-        `Grösse: ${item.groesse}`,
-      ];
-      if (item.beflockung_name || item.beflockung_nummer) {
-        descParts.push(`Aufdruck: ${[item.beflockung_name, item.beflockung_nummer].filter(Boolean).join(' ')}`);
-      }
-      if (item.patches?.length) {
-        descParts.push(`Patches: ${item.patches.map((p: any) => p.name).join(', ')}`);
-      }
-      if (item.extras && item.extras !== 'none') {
-        descParts.push(`Extra: ${item.extras === 'komplett' ? 'Komplett-Paket' : item.extras === 'aufdruck' ? 'Aufdruck' : 'Patches'}`);
-      }
-
-      return {
-        price_data: {
-          currency: 'chf',
-          product_data: {
-            name: item.produkt_name,
-            description: descParts.join(' · '),
-            ...(item.produkt_bild ? { images: [item.produkt_bild] } : {}),
-          },
-          unit_amount: Math.round(unitPrice * 100), // Stripe uses cents
-        },
-        quantity: item.menge || 1,
-      };
-    });
-
-    // Create Stripe coupon for bundle discount
-    let discounts: any[] = [];
+    // Bundle-Rabatt abziehen
     if (bundleDiscount && bundleDiscount > 0) {
-      const coupon = await stripe.coupons.create({
-        amount_off: Math.round(bundleDiscount * 100),
-        currency: 'chf',
-        name: `Bundle-Rabatt (${bundle === '3plus' ? '15%' : '20%'})`,
-        duration: 'once',
-      });
-      discounts = [{ coupon: coupon.id }];
+      totalCents -= Math.round(bundleDiscount * 100);
     }
 
-    // Build metadata for order processing (Stripe max 500 chars per value)
-    // Kompakte Items: nur nötige Felder
-    const compactItems = items.map((item: any) => ({
-      n: item.produkt_name,
-      p: item.produkt_preis,
-      t: item.team || '',
-      g: item.groesse || '',
-      bn: item.beflockung_name || '',
-      bx: item.beflockung_nummer || '',
-      pa: (item.patches || []).map((p: any) => p.name),
-      e: item.extras || 'none',
-      ep: item.extras_preis || 0,
-      m: item.menge || 1,
-    }));
+    // Eindeutige Referenz-ID generieren
+    const refId = `pending-${Date.now()}-${crypto.randomBytes(4).toString('hex')}`;
 
-    // Items auf mehrere Keys aufteilen (max 500 Zeichen pro Wert)
-    const itemChunks: string[] = [];
-    let currentChunk: any[] = [];
-    for (const item of compactItems) {
-      const test = JSON.stringify([...currentChunk, item]);
-      if (test.length > 490 && currentChunk.length > 0) {
-        itemChunks.push(JSON.stringify(currentChunk));
-        currentChunk = [item];
-      } else {
-        currentChunk.push(item);
-      }
-    }
-    if (currentChunk.length > 0) itemChunks.push(JSON.stringify(currentChunk));
-
-    const metadata: Record<string, string> = {
-      kunde_name: `${kunde.vorname} ${kunde.nachname}`,
-      kunde_email: kunde.email,
-      kunde_telefon: kunde.telefon || '',
-      lieferadresse: JSON.stringify(lieferadresse).slice(0, 500),
-      nachricht: (nachricht || '').slice(0, 500),
+    // Bestelldaten temporär in Redis speichern (2h TTL)
+    const redis = getRedis();
+    await redis.set(refId, JSON.stringify({
+      items,
+      kunde,
+      lieferadresse,
+      nachricht,
       zahlungsart,
-      bundle: bundle || '',
-      items_count: String(itemChunks.length),
-    };
-    itemChunks.forEach((chunk, i) => { metadata[`items_${i}`] = chunk; });
+      bundle,
+      bundleDiscount,
+      totalCents,
+    }), { ex: 7200 });
 
-    const origin = req.headers.get('origin') || 'https://t-express24.vercel.app';
+    // Payrexx Gateway erstellen
+    const origin = req.headers.get('origin') || 'https://t-express24.shop';
 
-    const session = await stripe.checkout.sessions.create({
-      payment_method_types: paymentMethods as any[],
-      mode: 'payment',
-      line_items: lineItems,
-      ...(discounts.length > 0 ? { discounts } : {}),
-      customer_email: kunde.email,
-      metadata,
-      success_url: `${origin}/checkout/success?session_id={CHECKOUT_SESSION_ID}`,
-      cancel_url: `${origin}/checkout`,
-    });
+    const params = new URLSearchParams();
+    params.append('amount', String(totalCents));
+    params.append('currency', 'CHF');
+    params.append('referenceId', refId);
+    params.append('successRedirectUrl', `${origin}/checkout/success`);
+    params.append('failedRedirectUrl', `${origin}/checkout`);
+    params.append('cancelRedirectUrl', `${origin}/checkout`);
+    params.append('skipResultPage', '0');
 
-    return NextResponse.json({ url: session.url });
+    // Zahlungsmethode
+    if (zahlungsart === 'twint') {
+      params.append('pm[]', 'twint');
+    } else {
+      params.append('pm[]', 'visa');
+      params.append('pm[]', 'mastercard');
+    }
+
+    // Kundendaten
+    params.append('fields[forename][value]', kunde.vorname);
+    params.append('fields[surname][value]', kunde.nachname);
+    params.append('fields[email][value]', kunde.email);
+    if (kunde.telefon) {
+      params.append('fields[phone][value]', kunde.telefon);
+    }
+
+    // Beschreibung
+    const itemNames = items.map((i: any) => `${i.menge || 1}× ${i.produkt_name}`).join(', ');
+    params.append('purpose', itemNames.slice(0, 200));
+
+    // HMAC-Signatur
+    const signature = buildSignature(params);
+
+    // Payrexx API aufrufen
+    const response = await fetch(
+      `https://api.payrexx.com/v1.14/Gateway/?instance=${PAYREXX_INSTANCE}`,
+      {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: params.toString() + '&ApiSignature=' + encodeURIComponent(signature),
+      },
+    );
+
+    const result = await response.json();
+
+    if (result.status !== 'success' || !result.data?.[0]?.link) {
+      console.error('Payrexx Gateway error:', result);
+      throw new Error('Zahlungsseite konnte nicht erstellt werden');
+    }
+
+    return NextResponse.json({ url: result.data[0].link });
   } catch (err: any) {
-    console.error('Stripe checkout error:', err);
-    return NextResponse.json({ error: err.message || 'Stripe Fehler' }, { status: 500 });
+    console.error('Checkout error:', err);
+    return NextResponse.json({ error: err.message || 'Zahlungsfehler' }, { status: 500 });
   }
 }

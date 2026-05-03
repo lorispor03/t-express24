@@ -14,6 +14,30 @@ const POPULAR_SEARCHES = [
   'Deutschland', 'Brasilien', 'Inter Mailand',
 ];
 
+const JERSEY_CATS = new Set(['fan', 'player', 'retro', 'longsleeve', 'kids', 'kids-retro', 'female']);
+
+function searchResultPriority(p: Product): number {
+  const t = p.t.toLowerCase();
+  const isJersey = /trikot|jersey/i.test(p.t);
+  const isRetro = p.c.includes('retro') || p.c.includes('kids-retro');
+  const isCurrent = /25\/26|26\/27|wm 2026/i.test(p.t);
+  const isPrevSeason = /24\/25/.test(p.t);
+
+  // Current season jerseys first
+  if (isJersey && isCurrent) return 0;
+  if (isJersey && isPrevSeason) return 1;
+  // Retro jerseys
+  if (isJersey && isRetro) return 2;
+  // Other current season (longsleeve etc.)
+  if (isCurrent) return 3;
+  // Other jerseys with season
+  if (isJersey) return 4;
+  // Retro non-jersey
+  if (isRetro) return 5;
+  // Everything else (t-shirts etc.)
+  return 6;
+}
+
 const RECENT_KEY = 'te24_recent_searches';
 
 function getRecentSearches(): string[] {
@@ -106,7 +130,10 @@ export default function Header() {
       return;
     }
     setTeams(searchTeams(q.trim(), 5));
-    setProducts(searchProducts(q.trim(), 12));
+    const all = searchProducts(q.trim(), 60);
+    const jerseys = all.filter(r => r.product.c.some(c => JERSEY_CATS.has(c)));
+    jerseys.sort((a, b) => searchResultPriority(a.product) - searchResultPriority(b.product));
+    setProducts(jerseys.slice(0, 12));
     setLoading(false);
   }, []);
 
@@ -166,7 +193,7 @@ export default function Header() {
                 {recentSearches.map(term => (
                   <button
                     key={term}
-                    onMouseDown={(e) => { e.preventDefault(); quickSearch(term); }}
+                    onMouseDown={(e) => { e.preventDefault(); e.nativeEvent.stopImmediatePropagation(); quickSearch(term); }}
                     className="flex items-center gap-1.5 bg-gray-100 hover:bg-gray-200 text-sm text-gray-600 px-3 py-1.5 rounded-lg transition-colors"
                   >
                     <svg className="w-3 h-3 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -184,7 +211,7 @@ export default function Header() {
               {POPULAR_SEARCHES.map(term => (
                 <button
                   key={term}
-                  onMouseDown={(e) => { e.preventDefault(); quickSearch(term); }}
+                  onMouseDown={(e) => { e.preventDefault(); e.nativeEvent.stopImmediatePropagation(); quickSearch(term); }}
                   className="bg-gray-100 hover:bg-[var(--red-main)]/20 hover:text-[var(--red-main)] text-sm text-gray-500 px-3 py-1.5 rounded-lg transition-colors"
                 >
                   {term}
@@ -294,7 +321,7 @@ export default function Header() {
               <span className="text-white/50 text-2xl leading-none">•</span>
               <span className="px-6">Jedes Trikot einzeln geprüft</span>
               <span className="text-white/50 text-2xl leading-none">•</span>
-              <span className="px-6">Über 4700 Artikel verfügbar</span>
+              <span className="px-6">Über 4500 Artikel verfügbar</span>
               <span className="text-white/50 text-2xl leading-none">•</span>
             </span>
           ))}

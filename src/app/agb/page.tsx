@@ -74,7 +74,6 @@ export default function AGBPage() {
               <ul className="list-disc list-inside mt-2 space-y-1">
                 <li>Kreditkarte (Visa, Mastercard – abgewickelt via Stripe)</li>
                 <li>TWINT</li>
-                <li>PayPal</li>
               </ul>
               <p className="mt-2">
                 Die Zahlung erfolgt ausschliesslich im Voraus, vor dem Versand der Ware. Bei Zahlungsausfall
@@ -180,8 +179,8 @@ export default function AGBPage() {
                 <a href="https://instagram.com/T_express247" target="_blank" rel="noopener noreferrer" className="text-[var(--gold)] hover:underline">
                   Instagram: @T_express247
                 </a>
-                <a href="mailto:support@t-express24.shop" className="text-[var(--gold)] hover:underline">
-                  E-Mail: support@t-express24.shop
+                <a href="mailto:kontakt@t-express24.shop" className="text-[var(--gold)] hover:underline">
+                  E-Mail: kontakt@t-express24.shop
                 </a>
               </div>
             </div>

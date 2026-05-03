@@ -166,7 +166,7 @@ export async function sendOrderConfirmationToCustomer(order: OrderData) {
 
                   <!-- Support -->
                   <p style="color:#666; font-size:13px; line-height:1.6; margin:24px 0 0 0;">
-                    Fragen zur Bestellung? Schreib uns einfach auf <a href="https://instagram.com/T_express247" style="color:#c4222e; text-decoration:none; font-weight:600;">Instagram</a> oder per <a href="mailto:support@t-express24.shop" style="color:#c4222e; text-decoration:none; font-weight:600;">E-Mail</a>.
+                    Fragen zur Bestellung? Schreib uns einfach auf <a href="https://instagram.com/T_express247" style="color:#c4222e; text-decoration:none; font-weight:600;">Instagram</a> oder per <a href="mailto:kontakt@t-express24.shop" style="color:#c4222e; text-decoration:none; font-weight:600;">E-Mail</a>.
                   </p>
                 </td>
               </tr>

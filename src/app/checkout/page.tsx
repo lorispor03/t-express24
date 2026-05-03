@@ -100,7 +100,7 @@ export default function CheckoutPage() {
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || 'Fehler beim Erstellen der Zahlung');
 
-      // Redirect to Stripe Checkout
+      // Redirect to Payrexx payment page
       window.location.href = data.url;
     } catch (err: any) {
       setError(err.message || 'Zahlung konnte nicht gestartet werden. Bitte versuche es erneut.');
@@ -327,7 +327,7 @@ export default function CheckoutPage() {
               {/* Zahlungsart */}
               <div className="bg-[#d0d0d0] rounded-xl p-5 border border-gray-300 space-y-4">
                 <h2 className="text-lg font-bold uppercase tracking-wide" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>Zahlungsart</h2>
-                <div className="grid grid-cols-3 gap-3">
+                <div className="grid grid-cols-2 gap-3">
                   <button
                     type="button"
                     onClick={() => setZahlungsart('kreditkarte')}
@@ -343,14 +343,6 @@ export default function CheckoutPage() {
                   >
                     <img src="/twint-logo.png" alt="TWINT" className="h-7 w-auto" />
                     <span className="text-xs text-gray-600 font-medium">TWINT</span>
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() => setZahlungsart('paypal')}
-                    className={`flex flex-col items-center justify-center gap-2 p-4 rounded-lg border transition-all ${zahlungsart === 'paypal' ? 'border-[var(--red-main)] bg-[var(--red-main)]/10' : 'border-gray-200 bg-gray-100 hover:border-gray-300'}`}
-                  >
-                    <img src="/paypal-logo.png" alt="PayPal" className="h-7 w-7 rounded" />
-                    <span className="text-xs text-gray-600 font-medium">PayPal</span>
                   </button>
                 </div>
               </div>

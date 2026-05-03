@@ -148,7 +148,7 @@ export default function HomePage() {
                   </div>
                   <h3 className="font-bold text-lg whitespace-nowrap text-gray-900">Dein Trikot auswählen</h3>
                 </div>
-                <p className="text-sm text-gray-700 leading-relaxed">Stöbere durch über 4700 Artikel aus den grössten Ligen der Welt — von aktuellen Saisons bis hin zu seltenen Retro-Klassikern.</p>
+                <p className="text-sm text-gray-700 leading-relaxed">Stöbere durch über 4500 Artikel aus den grössten Ligen der Welt — von aktuellen Saisons bis hin zu seltenen Retro-Klassikern.</p>
               </div>
             </ScrollReveal>
 

@@ -6,6 +6,8 @@ import { useRouter } from 'next/navigation';
 import { Product, CATEGORIES } from '@/lib/types';
 import { useCart, ExtraOption, EXTRA_PRICES } from '@/context/CartContext';
 import { getPatchSetsForProduct, PatchSetOption } from '@/lib/patches';
+import { useRecentlyViewed } from '@/hooks/useRecentlyViewed';
+import RecentlyViewed from '@/components/RecentlyViewed';
 
 interface Props {
   product: Product;
@@ -35,6 +37,12 @@ export default function ProductDetailClient({ product, teamId, teamName, leagueN
   const zoomRef = useRef(1);
   const panRef = useRef({ x: 0, y: 0 });
   const imgContainerRef = useRef<HTMLDivElement>(null);
+
+  const { items: recentlyViewed, addProduct: addToRecent } = useRecentlyViewed(product.h);
+
+  useEffect(() => {
+    addToRecent({ handle: product.h, title: product.t, image: product.i, price: product.p, teamName });
+  }, [product.h, product.t, product.i, product.p, teamName, addToRecent]);
 
   const allImages = product.imgs && product.imgs.length > 1 ? product.imgs : [product.i];
   const thumbRef = useRef<HTMLDivElement>(null);
@@ -564,6 +572,11 @@ export default function ProductDetailClient({ product, teamId, teamName, leagueN
             </div>
           )}
         </div>
+      )}
+
+      {/* Zuletzt angesehen */}
+      {recentlyViewed.length > 0 && (
+        <RecentlyViewed items={recentlyViewed} />
       )}
     </div>
   );

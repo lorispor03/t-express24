@@ -4,6 +4,19 @@ import { SUB_LEAGUE_SLUGS } from './subLeagueLogos';
 
 const data = productsData as unknown as ProductsData;
 
+// productCount/teamCount immer aus echten Daten berechnen
+for (const team of Object.values(data.teams)) {
+  team.productCount = team.products.length;
+}
+for (const league of Object.values(data.leagues)) {
+  const teamIds = league.teams.map(t => t.id);
+  league.teamCount = teamIds.length;
+  league.productCount = teamIds.reduce((sum, id) => sum + (data.teams[id]?.products.length || 0), 0);
+  for (const ref of league.teams) {
+    ref.count = data.teams[ref.id]?.products.length || 0;
+  }
+}
+
 export function getAllLeagues(): Record<string, LeagueData> {
   return data.leagues;
 }

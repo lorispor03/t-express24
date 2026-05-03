@@ -16,6 +16,8 @@ const POPULAR_SEARCHES = [
   'Deutschland', 'Brasilien', 'Inter Mailand',
 ];
 
+const JERSEY_CATS = new Set(['fan', 'player', 'retro', 'longsleeve', 'kids', 'kids-retro', 'female']);
+
 const RECENT_KEY = 'te24_recent_searches';
 
 function getRecentSearches(): string[] {
@@ -32,22 +34,31 @@ function saveRecentSearch(q: string) {
   } catch { /* noop */ }
 }
 
+function doSearchSync(q: string) {
+  if (q.trim().length < 2) return { teams: [] as any[], products: [] as any[] };
+  const teams = searchTeams(q.trim(), 5);
+  const all = searchProducts(q.trim(), 40);
+  const products = all.filter(r => r.product.c.some(c => JERSEY_CATS.has(c))).slice(0, 12);
+  return { teams, products };
+}
+
 export default function SearchOverlay({ open, onClose }: SearchOverlayProps) {
-  const [query, setQuery] = useState('');
-  const [displayQuery, setDisplayQuery] = useState('');
   const inputRef = useRef<HTMLInputElement>(null);
   const debounceRef = useRef<ReturnType<typeof setTimeout>>(undefined);
-  const [teams, setTeams] = useState<Array<{ id: string; name: string; leagueName: string; productCount: number }>>([]);
-  const [products, setProducts] = useState<Array<{ teamId: string; teamName: string; product: Product }>>([]);
-  const [loading, setLoading] = useState(false);
+
+  const [state, setState] = useState({
+    displayQuery: '',
+    query: '',
+    teams: [] as Array<{ id: string; name: string; leagueName: string; productCount: number }>,
+    products: [] as Array<{ teamId: string; teamName: string; product: Product }>,
+    loading: false,
+  });
+
   const [recentSearches, setRecentSearches] = useState<string[]>([]);
 
   useEffect(() => {
     if (open) {
-      setQuery('');
-      setDisplayQuery('');
-      setTeams([]);
-      setProducts([]);
+      setState({ displayQuery: '', query: '', teams: [], products: [], loading: false });
       setRecentSearches(getRecentSearches());
       setTimeout(() => inputRef.current?.focus(), 100);
     }
@@ -62,7 +73,6 @@ export default function SearchOverlay({ open, onClose }: SearchOverlayProps) {
     return () => { document.body.style.overflow = ''; };
   }, [open]);
 
-  // ESC zum Schließen
   useEffect(() => {
     if (!open) return;
     const handleKey = (e: KeyboardEvent) => {
@@ -72,59 +82,42 @@ export default function SearchOverlay({ open, onClose }: SearchOverlayProps) {
     return () => window.removeEventListener('keydown', handleKey);
   }, [open, onClose]);
 
-  const doSearch = useCallback((q: string) => {
-    if (q.trim().length < 2) {
-      setTeams([]);
-      setProducts([]);
-      setLoading(false);
-      return;
-    }
-    setTeams(searchTeams(q.trim(), 5));
-    setProducts(searchProducts(q.trim(), 12));
-    setLoading(false);
-  }, []);
-
   const handleSearch = useCallback((q: string) => {
-    setDisplayQuery(q);
-    setLoading(q.trim().length >= 2);
+    setState(prev => ({ ...prev, displayQuery: q, loading: q.trim().length >= 2 }));
     if (debounceRef.current) clearTimeout(debounceRef.current);
     debounceRef.current = setTimeout(() => {
-      setQuery(q);
-      doSearch(q);
+      const { teams, products } = doSearchSync(q);
+      setState(prev => ({ ...prev, query: q, teams, products, loading: false }));
     }, 200);
-  }, [doSearch]);
+  }, []);
 
   const quickSearch = (term: string) => {
-    setDisplayQuery(term);
-    setQuery(term);
-    setLoading(true);
-    doSearch(term);
+    const { teams, products } = doSearchSync(term);
+    setState({ displayQuery: term, query: term, teams, products, loading: false });
   };
 
   const clearSearch = () => {
-    setDisplayQuery('');
-    setQuery('');
-    setTeams([]);
-    setProducts([]);
+    setState({ displayQuery: '', query: '', teams: [], products: [], loading: false });
     inputRef.current?.focus();
   };
 
   const handleResultClick = () => {
-    if (displayQuery.trim().length >= 2) {
-      saveRecentSearch(displayQuery.trim());
+    if (state.displayQuery.trim().length >= 2) {
+      saveRecentSearch(state.displayQuery.trim());
     }
     onClose();
   };
 
   if (!open) return null;
 
+  const { displayQuery, query, teams, products, loading } = state;
   const hasResults = teams.length > 0 || products.length > 0;
   const showNoResults = query.trim().length >= 2 && !hasResults && !loading;
   const showSuggestions = displayQuery.trim().length === 0;
 
   return (
-    <div className="fixed inset-0 z-[60] bg-black/80 backdrop-blur-sm" onClick={onClose}>
-      <div className="max-w-2xl mx-auto px-4 pt-20" onClick={e => e.stopPropagation()}>
+    <div className="fixed inset-0 z-[60] bg-black/80 backdrop-blur-sm" onMouseDown={(e) => { if (e.target === e.currentTarget) onClose(); }}>
+      <div className="max-w-2xl mx-auto px-4 pt-20" onMouseDown={e => e.stopPropagation()}>
         {/* Search input */}
         <div className="relative">
           <svg className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -160,7 +153,7 @@ export default function SearchOverlay({ open, onClose }: SearchOverlayProps) {
                   {recentSearches.map(term => (
                     <button
                       key={term}
-                      onClick={() => quickSearch(term)}
+                      onMouseDown={(e) => { e.preventDefault(); e.stopPropagation(); quickSearch(term); }}
                       className="flex items-center gap-1.5 bg-gray-100 hover:bg-gray-200 text-sm text-gray-600 px-3 py-1.5 rounded-lg transition-colors"
                     >
                       <svg className="w-3 h-3 text-gray-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -178,7 +171,7 @@ export default function SearchOverlay({ open, onClose }: SearchOverlayProps) {
                 {POPULAR_SEARCHES.map(term => (
                   <button
                     key={term}
-                    onClick={() => quickSearch(term)}
+                    onMouseDown={(e) => { e.preventDefault(); e.stopPropagation(); quickSearch(term); }}
                     className="bg-gray-100 hover:bg-[var(--red-main)]/20 hover:text-[var(--red-main)] text-sm text-gray-500 px-3 py-1.5 rounded-lg transition-colors"
                   >
                     {term}

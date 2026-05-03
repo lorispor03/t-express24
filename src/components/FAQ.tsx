@@ -9,11 +9,11 @@ const faqs = [
   },
   {
     q: 'Welche Grössen sind verfügbar?',
-    a: 'Für Erwachsene bieten wir S bis XXL an, für Kinder die Grössen 116, 128, 140, 152 und 164. Bei Unsicherheiten beraten wir dich gerne über Instagram.',
+    a: 'Für Erwachsene bieten wir S bis XXL an, für Kinder die Grössen 116, 128, 140, 152 und 164. Bei Unsicherheiten beraten wir dich gerne über Instagram oder per E-Mail an kontakt@t-express24.shop.',
   },
   {
     q: 'Wie bezahle ich?',
-    a: 'Wir akzeptieren Kreditkarte, TWINT und PayPal. Die Zahlung erfolgt nach Bestellbestätigung.',
+    a: 'Wir akzeptieren Kreditkarte und TWINT. Die Zahlung erfolgt kurz vor der Bestellbestätigung.',
   },
   {
     q: 'Wie ist die Qualität der Trikots?',

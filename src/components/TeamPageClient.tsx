@@ -55,10 +55,13 @@ export default function TeamPageClient({ teamName, leagueName, leagueSlug, produ
     // Search filter — Titel, Handle, Keywords, Jahreszahlen
     if (search.trim()) {
       const KMAP: Record<string, string[]> = {
-        'heim': ['home'], 'zuhause': ['home'], 'auswaerts': ['away'], 'auswarts': ['away'],
-        'langarm': ['long sleeve', 'longsleeve', 'long sleeves'], 'kinder': ['kids'],
-        'damen': ['female', 'women'], 'frauen': ['female', 'women'],
-        'spieler': ['player'], 'retro': ['retro'], 'torwart': ['goalkeeper'], 'spezial': ['special'],
+        'heim': ['heimtrikot', 'home'], 'zuhause': ['heimtrikot', 'home'],
+        'auswaerts': ['auswaertstrikot', 'away'], 'auswarts': ['auswaertstrikot', 'away'],
+        'langarm': ['langarm', 'long sleeve', 'longsleeve'], 'kinder': ['kinder', 'kids'],
+        'damen': ['damen', 'female', 'women'], 'frauen': ['damen', 'female', 'women'],
+        'spieler': ['player'], 'retro': ['retro'], 'torwart': ['torwarttrikot', 'goalkeeper'],
+        'spezial': ['sondertrikot', 'special'], 'ausweich': ['ausweichtrikot', 'third'],
+        'training': ['trainingsanzug', 'training'], 'windbreaker': ['windbreaker'],
       };
       const norm = (s: string) => s.toLowerCase()
         .replace(/ä/g, 'ae').replace(/ö/g, 'oe').replace(/ü/g, 'ue').replace(/ß/g, 'ss')
@@ -94,30 +97,38 @@ export default function TeamPageClient({ teamName, leagueName, leagueSlug, produ
       const t = p.t.toLowerCase();
       const cats = p.c;
 
-      // Season: 25/26 first, then 24/25, then rest
-      let season = 2;
-      if (t.includes('25/26') || t.includes('25-26') || t.includes('2526')) season = 0;
-      else if (t.includes('24/25') || t.includes('24-25') || t.includes('2425')) season = 1;
-      if (cats.includes('retro') || cats.includes('kids-retro')) season = 3;
+      // 1) Produkt-Typ: Trikots zuerst, Nebenprodukte hinten
+      const isJersey = /heimtrikot|auswärtstrikot|ausweichtrikot|torwarttrikot|sondertrikot|home|away|third|gk/i.test(p.t);
+      const isRetroJersey = isJersey && (cats.includes('retro') || cats.includes('kids-retro'));
+      let productType = 0;
+      if (isJersey && !isRetroJersey) productType = 0;      // Aktuelle Trikots
+      else if (isRetroJersey) productType = 2;               // Retro-Trikots
+      else productType = 3;                                   // Windbreaker, Training, T-Shirt etc.
 
-      // Type: home → away → third → special → rest
-      let type = 4;
-      if (t.includes('home')) type = 0;
-      else if (t.includes('away')) type = 1;
-      else if (t.includes('third')) type = 2;
-      else if (t.includes('special')) type = 3;
+      // 2) Saison: aktuellste zuerst
+      let season = 5;
+      if (t.includes('26/27')) season = 0;
+      else if (t.includes('25/26') || t.includes('wm 2026')) season = 1;
+      else if (t.includes('24/25')) season = 2;
+      else if (t.includes('23/24')) season = 3;
+      else if (/\d{2}\/\d{2}|\d{4}/.test(t)) season = 4;
 
-      // Category: player → fan → longsleeve → female → kids → training/windbreaker → retro
-      let cat = 1;
-      if (cats.includes('player')) cat = 0;
-      else if (cats.includes('female')) cat = 2;
-      else if (cats.includes('kids')) cat = 3;
-      else if (cats.includes('kids-retro')) cat = 4;
-      else if (cats.includes('training') || cats.includes('windbreaker') || cats.includes('sweater')) cat = 5;
-      else if (cats.includes('retro')) cat = 6;
-      else if (cats.includes('longsleeve')) cat = 1;
+      // 3) Trikotart: Heim → Auswärts → Ausweich → Torwart → Sonder → Rest
+      let jerseyType = 5;
+      if (/heimtrikot|home/i.test(p.t)) jerseyType = 0;
+      else if (/auswärtstrikot|away/i.test(p.t)) jerseyType = 1;
+      else if (/ausweichtrikot|third/i.test(p.t)) jerseyType = 2;
+      else if (/torwarttrikot|gk/i.test(p.t)) jerseyType = 3;
+      else if (/sondertrikot|special/i.test(p.t)) jerseyType = 4;
 
-      return season * 1000 + cat * 100 + type;
+      // 4) Variante: Player → Fan → Langarm → Kinder → Damen
+      let variant = 1;
+      if (cats.includes('player')) variant = 0;
+      else if (cats.includes('longsleeve')) variant = 2;
+      else if (cats.includes('kids') || cats.includes('kids-retro')) variant = 3;
+      else if (cats.includes('female')) variant = 4;
+
+      return productType * 10000 + season * 1000 + jerseyType * 100 + variant;
     };
 
     switch (sort) {
