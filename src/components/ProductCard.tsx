@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { Product, CATEGORIES } from '@/lib/types';
 
 interface ProductCardProps {
@@ -13,7 +14,13 @@ export default function ProductCard({ product, teamName }: ProductCardProps) {
     <Link href={`/product/${product.h}`} className="product-card group bg-white rounded-xl overflow-hidden border border-gray-400 transition-all block">
       {/* Image */}
       <div className="relative aspect-square overflow-hidden bg-white">
-        <img src={product.i} alt={product.t} className="absolute inset-0 w-full h-full object-cover" loading="lazy" decoding="async" />
+        <Image
+          src={product.i}
+          alt={product.t}
+          fill
+          sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+          className="object-cover"
+        />
       </div>
 
       {/* Info */}

@@ -66,11 +66,28 @@ export default function SearchOverlay({ open, onClose }: SearchOverlayProps) {
 
   useEffect(() => {
     if (open) {
+      const scrollY = window.scrollY;
       document.body.style.overflow = 'hidden';
+      document.body.style.position = 'fixed';
+      document.body.style.top = `-${scrollY}px`;
+      document.body.style.width = '100%';
+      document.body.dataset.scrollY = String(scrollY);
     } else {
+      const scrollY = parseInt(document.body.dataset.scrollY || '0');
       document.body.style.overflow = '';
+      document.body.style.position = '';
+      document.body.style.top = '';
+      document.body.style.width = '';
+      window.scrollTo(0, scrollY);
     }
-    return () => { document.body.style.overflow = ''; };
+    return () => {
+      const scrollY = parseInt(document.body.dataset.scrollY || '0');
+      document.body.style.overflow = '';
+      document.body.style.position = '';
+      document.body.style.top = '';
+      document.body.style.width = '';
+      window.scrollTo(0, scrollY);
+    };
   }, [open]);
 
   useEffect(() => {

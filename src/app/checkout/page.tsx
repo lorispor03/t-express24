@@ -162,7 +162,7 @@ export default function CheckoutPage() {
             <h2 className="text-4xl md:text-5xl uppercase tracking-wide mb-4 text-gray-900" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>Deine Artikel</h2>
             {items.map(item => (
               <div key={item.id} className="bg-[#d0d0d0] rounded-xl p-4 border border-gray-300 flex gap-4">
-                <img src={item.product.i} alt={item.product.t} className="w-20 h-20 md:w-24 md:h-24 object-cover rounded-lg flex-shrink-0" />
+                <img src={item.product.i} alt={item.product.t} className="w-20 h-20 md:w-24 md:h-24 object-cover rounded-lg flex-shrink-0" loading="lazy" decoding="async" />
                 <div className="flex-1 min-w-0">
                   <p className="text-sm font-medium text-gray-800 line-clamp-2 leading-tight">{item.product.t}</p>
                   <p className="text-xs text-gray-500 mt-1">{item.teamName}</p>

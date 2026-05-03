@@ -85,7 +85,7 @@ export default function RecentlyViewed({ items }: Props) {
               >
                 <div className="relative bg-white rounded-xl border border-gray-200 overflow-hidden transition-all group-hover:border-[var(--red-main)]/30 group-hover:shadow-lg group-hover:shadow-[var(--red-main)]/10 h-full flex flex-col">
                   <div className="aspect-square bg-white">
-                    <img src={product.image} alt={product.title} className="w-full h-full object-contain p-2" />
+                    <img src={product.image} alt={product.title} className="w-full h-full object-contain p-2" loading="lazy" decoding="async" />
                   </div>
                   <div className="p-3 flex flex-col flex-1 bg-[#fafafa] border-t border-gray-100">
                     <p className="text-[11px] text-gray-500">{product.teamName}</p>

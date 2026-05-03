@@ -22,7 +22,7 @@ function DealCard({ deal }: { deal: Deal }) {
           -21%
         </div>
         <div className="aspect-square bg-[#e8e8e8]">
-          <img src={deal.image} alt={deal.title} className="w-full h-full object-contain p-2" />
+          <img src={deal.image} alt={deal.title} className="w-full h-full object-contain p-2" loading="lazy" decoding="async" />
         </div>
         <div className="p-3 flex flex-col flex-1">
           <p className="text-[11px] text-gray-500">{deal.team}</p>

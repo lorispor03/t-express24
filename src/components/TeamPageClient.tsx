@@ -105,13 +105,21 @@ export default function TeamPageClient({ teamName, leagueName, leagueSlug, produ
       else if (isRetroJersey) productType = 2;               // Retro-Trikots
       else productType = 3;                                   // Windbreaker, Training, T-Shirt etc.
 
-      // 2) Saison: aktuellste zuerst
-      let season = 5;
-      if (t.includes('26/27')) season = 0;
-      else if (t.includes('25/26') || t.includes('wm 2026')) season = 1;
-      else if (t.includes('24/25')) season = 2;
-      else if (t.includes('23/24')) season = 3;
-      else if (/\d{2}\/\d{2}|\d{4}/.test(t)) season = 4;
+      // 2) Saison: aktuellste zuerst (Jahreszahl extrahieren)
+      let year = 0;
+      // Pattern: 25/26, 98/99, 04/05 etc.
+      const slashMatch = t.match(/(\d{2})\/(\d{2})/);
+      if (slashMatch) {
+        const y = parseInt(slashMatch[1]);
+        year = y >= 50 ? 1900 + y : 2000 + y;
+      }
+      // Pattern: WM 2002, EM 2024, 1986 etc.
+      const fourDigit = t.match(/(19|20)\d{2}/);
+      if (!slashMatch && fourDigit) {
+        year = parseInt(fourDigit[0]);
+      }
+      // Höheres Jahr = niedrigerer Score (neueste zuerst)
+      const season = year > 0 ? (2030 - year) : 999;
 
       // 3) Trikotart: Heim → Auswärts → Ausweich → Torwart → Sonder → Rest
       let jerseyType = 5;
@@ -128,7 +136,7 @@ export default function TeamPageClient({ teamName, leagueName, leagueSlug, produ
       else if (cats.includes('kids') || cats.includes('kids-retro')) variant = 3;
       else if (cats.includes('female')) variant = 4;
 
-      return productType * 10000 + season * 1000 + jerseyType * 100 + variant;
+      return productType * 1000000 + season * 1000 + jerseyType * 100 + variant;
     };
 
     switch (sort) {
