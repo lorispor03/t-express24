@@ -1,5 +1,5 @@
 import productsData from '@/data/products.json';
-import { ProductsData, LeagueData, TeamData, Product } from './types';
+import { ProductsData, LeagueData, TeamData, Product, CATEGORIES } from './types';
 import { SUB_LEAGUE_SLUGS } from './subLeagueLogos';
 
 const data = productsData as unknown as ProductsData;
@@ -227,7 +227,8 @@ export function searchProducts(query: string, limit = 20) {
     for (const product of team.products) {
       const titleNorm = normalize(product.t);
       const prodHandle = product.h.replace(/-/g, ' ').toLowerCase();
-      const combined = titleNorm + ' ' + teamNorm + ' ' + prodHandle;
+      const catNames = (product.c || []).map(c => CATEGORIES[c] || c).join(' ');
+      const combined = titleNorm + ' ' + teamNorm + ' ' + prodHandle + ' ' + catNames.toLowerCase();
 
       // Jedes Wort muss in mindestens einer Variante matchen
       let allMatch = true;
