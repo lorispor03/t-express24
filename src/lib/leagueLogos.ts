@@ -1,4 +1,5 @@
 export const LEAGUE_LOGOS: Record<string, string> = {
+  'wm-2026': '/leagues/wm-2026.svg',
   'premier-league': '/leagues/premier-league.svg',
   'la-liga': '/leagues/la-liga.png',
   'bundesliga': '/leagues/bundesliga.svg',

@@ -46,7 +46,7 @@ export default function AddToCartModal({ product, teamName, onClose }: AddToCart
         {/* Size Selection */}
         <div className="p-4">
           <label className="block text-sm font-medium mb-2">
-            Grösse wählen {isKids && <span className="text-gray-500">(Kinder)</span>}
+            Grösse wählen
           </label>
           <div className="flex flex-wrap gap-2">
             {sizes.map(s => (

@@ -237,25 +237,27 @@ export default function ProductDetailClient({ product, teamId, teamName, leagueN
           </div>
           {allImages.length > 1 && (
             <>
-              <div
-                ref={thumbRef}
-                onScroll={onThumbScroll}
-                className="flex gap-2 mt-3 overflow-x-auto hide-sb"
-                style={{ scrollbarWidth: 'none', msOverflowStyle: 'none', WebkitOverflowScrolling: 'touch' }}
-              >
-                {allImages.map((img, idx) => (
-                  <button
-                    key={idx}
-                    onClick={() => setSelectedImg(idx)}
-                    className={`flex-shrink-0 w-16 h-16 rounded-lg overflow-hidden border-2 transition-all ${
-                      selectedImg === idx
-                        ? 'border-[var(--red-main)]'
-                        : 'border-gray-200 hover:border-gray-400'
-                    }`}
-                  >
-                    <img src={img} alt={`${product.t} ${idx + 1}`} className="w-full h-full object-cover" />
-                  </button>
-                ))}
+              <div className="mt-3 flex justify-center">
+                <div
+                  ref={thumbRef}
+                  onScroll={onThumbScroll}
+                  className="flex gap-2 overflow-x-auto hide-sb max-w-full"
+                  style={{ scrollbarWidth: 'none', msOverflowStyle: 'none', WebkitOverflowScrolling: 'touch' }}
+                >
+                  {allImages.map((img, idx) => (
+                    <button
+                      key={idx}
+                      onClick={() => setSelectedImg(idx)}
+                      className={`flex-shrink-0 w-16 h-16 rounded-lg overflow-hidden border-2 transition-all ${
+                        selectedImg === idx
+                          ? 'border-[var(--red-main)]'
+                          : 'border-gray-200 hover:border-gray-400'
+                      }`}
+                    >
+                      <img src={img} alt={`${product.t} ${idx + 1}`} className="w-full h-full object-cover" />
+                    </button>
+                  ))}
+                </div>
               </div>
               {thumbScroll.ratio < 1 && (
                 <div className={`mt-2 h-[3px] bg-gray-200 rounded-full relative transition-opacity duration-300 ${isScrolling ? 'opacity-100' : 'opacity-0'}`}>
@@ -298,7 +300,7 @@ export default function ProductDetailClient({ product, teamId, teamName, leagueN
           {/* Size Selection */}
           <div className="mb-3 md:mb-5">
             <label className="block text-sm font-medium mb-2 md:mb-3">
-              Grösse wählen {isKids && <span className="text-gray-500">(Kinder)</span>}
+              Grösse wählen
             </label>
             <div className="flex flex-wrap gap-2">
               {sizes.map(s => (

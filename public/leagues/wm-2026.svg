@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <circle cx="60" cy="52" r="38" fill="#1a1a2e" stroke="#c9a84c" stroke-width="2.5"/>
+  <path d="M60 18 L64 30 L77 30 L66 38 L70 50 L60 42 L50 50 L54 38 L43 30 L56 30 Z" fill="#c9a84c"/>
+  <path d="M38 35 Q60 70 82 35" stroke="#fff" stroke-width="1.5" fill="none"/>
+  <path d="M30 52 Q60 20 90 52" stroke="#fff" stroke-width="1.5" fill="none"/>
+  <circle cx="60" cy="52" r="38" fill="none" stroke="#c9a84c" stroke-width="1" stroke-dasharray="4 3"/>
+  <text x="60" y="108" text-anchor="middle" font-family="Arial Black, sans-serif" font-weight="900" font-size="22" fill="#1a1a2e" letter-spacing="1">WM 2026</text>
+</svg>
