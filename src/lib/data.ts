@@ -41,7 +41,7 @@ export function getSubLeaguesForLeague(leagueSlug: string): Record<string, { id:
   const groups: Record<string, { id: string; name: string; slug: string; count: number }[]> = {};
   for (const teamRef of league.teams) {
     const team = data.teams[teamRef.id];
-    const sub = team?.subLeague || 'Andere';
+    const sub = (teamRef as any).subLeague || team?.subLeague || 'Andere';
     if (!groups[sub]) groups[sub] = [];
     groups[sub].push(teamRef);
   }
@@ -56,7 +56,15 @@ export function getAllLeagueSlugs(): string[] {
   return Object.keys(data.leagues);
 }
 
-export function getProductByHandle(handle: string): { product: Product; teamId: string; teamName: string; leagueName: string; leagueSlug: string; subLeague?: string } | undefined {
+export function getProductByHandle(handle: string, preferredTeamId?: string): { product: Product; teamId: string; teamName: string; leagueName: string; leagueSlug: string; subLeague?: string } | undefined {
+  // If a preferred team is specified, try that first
+  if (preferredTeamId && data.teams[preferredTeamId]) {
+    const team = data.teams[preferredTeamId];
+    const product = team.products.find(p => p.h === handle);
+    if (product) {
+      return { product, teamId: preferredTeamId, teamName: team.name, leagueName: team.leagueName, leagueSlug: team.league, subLeague: team.subLeague };
+    }
+  }
   for (const [teamId, team] of Object.entries(data.teams)) {
     for (const product of team.products) {
       if (product.h === handle) {
@@ -82,8 +90,7 @@ export function getTeamsBySubLeague(leagueSlug: string, subLeagueSlug: string): 
   if (!subLeagueName) return undefined;
 
   const teams = league.teams.filter(teamRef => {
-    const team = data.teams[teamRef.id];
-    return team?.subLeague === subLeagueName;
+    return (teamRef as any).subLeague === subLeagueName;
   });
 
   if (teams.length === 0) return undefined;

@@ -86,7 +86,11 @@ export default function HomePage() {
             <ScrollReveal key={slug} delay={i * 80}>
               <Link
                 href={`/league/${slug}`}
-                className="league-card group bg-[#e8e8e8] rounded-xl p-6 border border-gray-300 hover:border-[var(--red-main)]/30 text-left block h-full"
+                className={`league-card group rounded-xl p-6 border text-left block h-full ${
+                  slug === 'wm-2026'
+                    ? 'bg-black border-[var(--gold)]/40 hover:border-[var(--gold)] wm-card-glow'
+                    : 'bg-[#e8e8e8] border-gray-300 hover:border-[var(--red-main)]/30'
+                }`}
               >
                 <div className="flex items-start justify-between mb-4">
                   <div className="h-14 flex items-end">
@@ -100,30 +104,38 @@ export default function HomePage() {
                       <span className="text-3xl">&#9917;</span>
                     )}
                   </div>
-                  <span className="hidden lg:inline text-xs bg-gray-100 rounded-full px-3 py-1 text-gray-500">
-                    {league.productCount} Artikel
+                  <span className={`hidden lg:inline text-xs rounded-full px-3 py-1 ${
+                    slug === 'wm-2026' ? 'bg-[var(--gold)]/20 text-[var(--gold)]' : 'bg-gray-100 text-gray-500'
+                  }`}>
+                    {slug === 'wm-2026' ? 'Special Event' : `${league.productCount} Artikel`}
                   </span>
                 </div>
-                <h3 className="text-xl md:text-2xl uppercase tracking-wide text-gray-900 group-hover:text-[var(--gold)] transition-colors" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
+                <h3 className={`text-xl md:text-2xl uppercase tracking-wide transition-colors ${
+                  slug === 'wm-2026' ? 'text-[var(--gold)] group-hover:text-white' : 'text-gray-900 group-hover:text-[var(--gold)]'
+                }`} style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
                   {slug === 'nationalmannschaften' ? <><span className="sm:hidden">National-<br/>mannschaften</span><span className="hidden sm:inline">{league.name}</span></> : league.name}
                 </h3>
-                <p className="text-sm text-gray-700 mt-1">
+                <p className={`text-sm mt-1 ${slug === 'wm-2026' ? 'text-[var(--gold)]/70' : 'text-gray-700'}`}>
                   {league.teamCount} {league.teamCount === 1 ? 'Team' : 'Teams'} {league.country && <span className="hidden lg:inline">· {league.country}</span>}
                 </p>
                 {league.country && (
-                  <p className="text-sm text-gray-700 mt-0.5 flex items-center gap-1 lg:hidden">
+                  <p className={`text-sm mt-0.5 flex items-center gap-1 lg:hidden ${slug === 'wm-2026' ? 'text-[var(--gold)]/70' : 'text-gray-700'}`}>
                     <svg className="w-3 h-3 flex-shrink-0" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" /><path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" /></svg>
                     {league.country}
                   </p>
                 )}
                 <div className="hidden lg:flex mt-4 flex-wrap gap-1.5">
                   {league.teams.slice(0, 5).map(team => (
-                    <span key={team.id} className="text-[10px] bg-gray-100 rounded px-2 py-0.5 text-gray-500">
+                    <span key={team.id} className={`text-[10px] rounded px-2 py-0.5 ${
+                      slug === 'wm-2026' ? 'bg-[var(--gold)]/15 text-[var(--gold)]/80' : 'bg-gray-100 text-gray-500'
+                    }`}>
                       {team.name}
                     </span>
                   ))}
                   {league.teams.length > 5 && (
-                    <span className="text-[10px] bg-gray-100 rounded px-2 py-0.5 text-gray-500">
+                    <span className={`text-[10px] rounded px-2 py-0.5 ${
+                      slug === 'wm-2026' ? 'bg-[var(--gold)]/15 text-[var(--gold)]/80' : 'bg-gray-100 text-gray-500'
+                    }`}>
                       +{league.teams.length - 5} mehr
                     </span>
                   )}
@@ -148,7 +160,7 @@ export default function HomePage() {
                   </div>
                   <h3 className="font-bold text-lg whitespace-nowrap text-gray-900">Dein Trikot auswählen</h3>
                 </div>
-                <p className="text-sm text-gray-700 leading-relaxed">Stöbere durch über 4500 Artikel aus den grössten Ligen der Welt — von aktuellen Saisons bis hin zu seltenen Retro-Klassikern.</p>
+                <p className="text-sm text-gray-700 leading-relaxed">Stöbere durch über 4800 Artikel aus den grössten Ligen der Welt — von aktuellen Saisons bis hin zu seltenen Retro-Klassikern.</p>
               </div>
             </ScrollReveal>
 

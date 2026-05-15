@@ -8,6 +8,7 @@ import { Product, CATEGORIES } from '@/lib/types';
 
 interface TeamPageClientProps {
   teamName: string;
+  teamId: string;
   leagueName: string;
   leagueSlug: string;
   products: Product[];
@@ -15,7 +16,7 @@ interface TeamPageClientProps {
 
 type SortOption = 'default' | 'price-asc' | 'price-desc' | 'name-asc' | 'name-desc';
 
-export default function TeamPageClient({ teamName, leagueName, leagueSlug, products }: TeamPageClientProps) {
+export default function TeamPageClient({ teamName, teamId, leagueName, leagueSlug, products }: TeamPageClientProps) {
   const searchParams = useSearchParams();
   const router = useRouter();
   const pathname = usePathname();
@@ -329,7 +330,7 @@ export default function TeamPageClient({ teamName, leagueName, leagueSlug, produ
               <p className="text-xs text-gray-500 mb-4">{filteredProducts.length} Artikel</p>
               <div className="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4">
                 {filteredProducts.slice(0, visibleCount).map((product, idx) => (
-                  <ProductCard key={`${product.h}-${idx}`} product={product} teamName={teamName} />
+                  <ProductCard key={`${product.h}-${idx}`} product={product} teamName={teamName} teamId={teamId} />
                 ))}
               </div>
               {visibleCount < filteredProducts.length && (

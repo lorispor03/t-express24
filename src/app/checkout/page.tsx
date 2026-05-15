@@ -109,7 +109,7 @@ export default function CheckoutPage() {
   };
 
   return (
-    <>
+    <div className="bg-[#111] min-h-screen">
       <Header />
 
       {/* Hero */}
@@ -143,81 +143,22 @@ export default function CheckoutPage() {
         </div>
       </section>
 
-      <section className="max-w-[1920px] mx-auto px-4 md:px-8 xl:px-12 2xl:px-16 py-8 md:py-12">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-
-          {/* Left: Items */}
-          <div className="lg:col-span-2 space-y-3">
-            {bundleDiscount > 0 && (
-              <div className="bg-green-500/10 rounded-xl px-4 py-3 border border-green-500/20 flex items-center gap-3">
-                <div className="w-10 h-10 bg-green-500/20 rounded-full flex items-center justify-center flex-shrink-0">
-                  <svg className="w-5 h-5 text-green-400" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
-                </div>
-                <div>
-                  <span className="text-sm font-bold text-green-400">Bundle-Rabatt {activeBundle === '3plus' ? '15%' : '20%'} aktiv</span>
-                  <p className="text-xs text-gray-500">Du sparst CHF {bundleDiscount.toFixed(2)} auf diese Bestellung</p>
-                </div>
-              </div>
-            )}
-            <h2 className="text-4xl md:text-5xl uppercase tracking-wide mb-4 text-gray-900" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>Deine Artikel</h2>
-            {items.map(item => (
-              <div key={item.id} className="bg-[#d0d0d0] rounded-xl p-4 border border-gray-300 flex gap-4">
-                <img src={item.product.i} alt={item.product.t} className="w-20 h-20 md:w-24 md:h-24 object-cover rounded-lg flex-shrink-0" loading="lazy" decoding="async" />
-                <div className="flex-1 min-w-0">
-                  <p className="text-sm font-medium text-gray-800 line-clamp-2 leading-tight">{item.product.t}</p>
-                  <p className="text-xs text-gray-500 mt-1">{item.teamName}</p>
-                  <div className="flex flex-wrap gap-x-4 gap-y-1 mt-2 text-xs text-gray-500">
-                    <span>Grösse: <span className="text-gray-900">{item.size}</span></span>
-                    <span>Menge: <span className="text-gray-900">{item.quantity}</span></span>
-                  </div>
-                  {(item.flockingName || item.flockingNumber) && (
-                    <p className="text-xs text-gray-500 mt-1">
-                      Aufdruck: <span className="text-gray-900">{[item.flockingName, item.flockingNumber].filter(Boolean).join(' ')}</span>
-                    </p>
-                  )}
-                  {item.patches && item.patches.length > 0 && (
-                    <div className="flex flex-wrap gap-1.5 mt-2">
-                      {item.patches.map(p => (
-                        <span key={p.id} className="inline-flex items-center gap-1 text-[10px] bg-gray-100 text-gray-500 px-2 py-0.5 rounded">
-                          <img src={p.image} alt={p.name} className="w-3.5 h-3.5 object-contain" />
-                          {p.name}
-                        </span>
-                      ))}
-                    </div>
-                  )}
-                  {item.extraOption && item.extraOption !== 'none' && (
-                    <p className="text-[10px] text-[var(--gold)] mt-1.5">
-                      {item.extraOption === 'komplett' ? 'Komplett-Paket' : item.extraOption === 'aufdruck' ? 'Aufdruck' : 'Patches'} (+CHF {(item.extraPrice || 0).toFixed(2)})
-                    </p>
-                  )}
-                </div>
-                <div className="text-right flex-shrink-0">
-                  {(() => {
-                    const itemTotal = (parseFloat(item.product.p) + (item.extraPrice || 0)) * item.quantity;
-                    const discount = bundleDiscount > 0 && activeBundle ? (activeBundle === '3plus' ? 0.15 : 0.20) : 0;
-                    const jerseyDisc = parseFloat(item.product.p) * item.quantity * discount;
-                    const discountedTotal = itemTotal - jerseyDisc;
-                    return discount > 0 ? (
-                      <>
-                        <span className="text-sm text-gray-500 line-through block">CHF {itemTotal.toFixed(2)}</span>
-                        <span className="text-sm font-bold text-green-400">CHF {discountedTotal.toFixed(2)}</span>
-                      </>
-                    ) : (
-                      <span className="text-sm font-bold text-[var(--gold)]">CHF {itemTotal.toFixed(2)}</span>
-                    );
-                  })()}
-                </div>
-              </div>
-            ))}
-
+      <section className="bg-[#111]">
+      <div className="max-w-[1920px] mx-auto px-4 md:px-8 xl:px-12 2xl:px-16 py-8 md:py-12">
+        <form onSubmit={handleSubmit}>
+          {/* Titles row */}
+          <div className="hidden lg:grid grid-cols-5 gap-8 mb-6">
+            <h2 className="col-span-3 text-4xl md:text-5xl uppercase tracking-wide text-white" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>Deine Angaben</h2>
+            <h2 className="col-span-2 text-4xl md:text-5xl uppercase tracking-wide text-white" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>Deine Artikel</h2>
           </div>
 
-          {/* Right: Form + Summary */}
-          <div className="space-y-6">
-            {/* Contact Form */}
-            <form onSubmit={handleSubmit} className="space-y-6">
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
+
+            {/* Left: Form */}
+            <div className="lg:col-span-3 space-y-6">
+              <h2 className="lg:hidden text-4xl md:text-5xl uppercase tracking-wide text-white" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>Deine Angaben</h2>
               {/* Persönliche Daten */}
-              <div className="bg-[#d0d0d0] rounded-xl p-5 border border-gray-300 space-y-4">
+              <div className="bg-[#e8e8e8] rounded-xl p-5 border border-gray-200 space-y-4">
                 <h2 className="text-lg font-bold uppercase tracking-wide" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>Persönliche Daten</h2>
 
                 <div className="grid grid-cols-2 gap-3">
@@ -245,33 +186,34 @@ export default function CheckoutPage() {
                   </div>
                 </div>
 
-                <div>
-                  <label className="block text-sm font-medium mb-1.5 text-gray-600">E-Mail *</label>
-                  <input
-                    type="email"
-                    value={email}
-                    onChange={e => setEmail(e.target.value)}
-                    required
-                    placeholder="deine@email.ch"
-                    className="w-full bg-white border border-gray-300 rounded-lg px-4 py-2.5 text-sm text-gray-900 focus:outline-none focus:border-[var(--red-main)] transition-colors"
-                  />
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium mb-1.5 text-gray-600">Telefon *</label>
-                  <input
-                    type="tel"
-                    value={telefon}
-                    onChange={e => setTelefon(e.target.value)}
-                    required
-                    placeholder="+41 00 000 00 00"
-                    className="w-full bg-white border border-gray-300 rounded-lg px-4 py-2.5 text-sm text-gray-900 focus:outline-none focus:border-[var(--red-main)] transition-colors"
-                  />
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                  <div>
+                    <label className="block text-sm font-medium mb-1.5 text-gray-600">E-Mail *</label>
+                    <input
+                      type="email"
+                      value={email}
+                      onChange={e => setEmail(e.target.value)}
+                      required
+                      placeholder="deine@email.ch"
+                      className="w-full bg-white border border-gray-300 rounded-lg px-4 py-2.5 text-sm text-gray-900 focus:outline-none focus:border-[var(--red-main)] transition-colors"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium mb-1.5 text-gray-600">Telefon *</label>
+                    <input
+                      type="tel"
+                      value={telefon}
+                      onChange={e => setTelefon(e.target.value)}
+                      required
+                      placeholder="+41 00 000 00 00"
+                      className="w-full bg-white border border-gray-300 rounded-lg px-4 py-2.5 text-sm text-gray-900 focus:outline-none focus:border-[var(--red-main)] transition-colors"
+                    />
+                  </div>
                 </div>
               </div>
 
               {/* Lieferadresse */}
-              <div className="bg-[#d0d0d0] rounded-xl p-5 border border-gray-300 space-y-4">
+              <div className="bg-[#e8e8e8] rounded-xl p-5 border border-gray-200 space-y-4">
                 <h2 className="text-lg font-bold uppercase tracking-wide" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>Lieferadresse</h2>
 
                 <div>
@@ -286,7 +228,7 @@ export default function CheckoutPage() {
                   />
                 </div>
 
-                <div className="grid grid-cols-[100px_1fr] gap-3">
+                <div className="grid grid-cols-[100px_1fr_1fr] gap-3">
                   <div>
                     <label className="block text-sm font-medium mb-1.5 text-gray-600">PLZ *</label>
                     <input
@@ -309,46 +251,53 @@ export default function CheckoutPage() {
                       className="w-full bg-white border border-gray-300 rounded-lg px-4 py-2.5 text-sm text-gray-900 focus:outline-none focus:border-[var(--red-main)] transition-colors"
                     />
                   </div>
-                </div>
-
-                <div>
-                  <label className="block text-sm font-medium mb-1.5 text-gray-600">Land *</label>
-                  <select
-                    value={land}
-                    onChange={e => setLand(e.target.value)}
-                    className="w-full bg-white border border-gray-300 rounded-lg px-4 py-2.5 text-sm text-gray-900 focus:outline-none focus:border-[var(--red-main)] transition-colors appearance-none"
-                    style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23999' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E")`, backgroundRepeat: 'no-repeat', backgroundPosition: 'right 12px center' }}
-                  >
-                    <option value="Schweiz">Schweiz</option>
-                  </select>
+                  <div>
+                    <label className="block text-sm font-medium mb-1.5 text-gray-600">Land *</label>
+                    <select
+                      value={land}
+                      onChange={e => setLand(e.target.value)}
+                      className="w-full bg-white border border-gray-300 rounded-lg px-4 py-2.5 text-sm text-gray-900 focus:outline-none focus:border-[var(--red-main)] transition-colors appearance-none"
+                      style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23999' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E")`, backgroundRepeat: 'no-repeat', backgroundPosition: 'right 12px center' }}
+                    >
+                      <option value="Schweiz">Schweiz</option>
+                    </select>
+                  </div>
                 </div>
               </div>
 
               {/* Zahlungsart */}
-              <div className="bg-[#d0d0d0] rounded-xl p-5 border border-gray-300 space-y-4">
+              <div className="bg-[#e8e8e8] rounded-xl p-5 border border-gray-200 space-y-4">
                 <h2 className="text-lg font-bold uppercase tracking-wide" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>Zahlungsart</h2>
-                <div className="grid grid-cols-2 gap-3">
-                  <button
-                    type="button"
-                    onClick={() => setZahlungsart('kreditkarte')}
-                    className={`flex flex-col items-center justify-center gap-2 p-4 rounded-lg border transition-all ${zahlungsart === 'kreditkarte' ? 'border-[var(--red-main)] bg-[var(--red-main)]/10' : 'border-gray-200 bg-gray-100 hover:border-gray-300'}`}
-                  >
-                    <svg className="w-7 h-7 text-gray-600" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5z" /></svg>
-                    <span className="text-xs text-gray-600 font-medium">Kreditkarte</span>
-                  </button>
+                <div className="grid grid-cols-3 gap-3">
                   <button
                     type="button"
                     onClick={() => setZahlungsart('twint')}
-                    className={`flex flex-col items-center justify-center gap-2 p-4 rounded-lg border transition-all ${zahlungsart === 'twint' ? 'border-[var(--red-main)] bg-[var(--red-main)]/10' : 'border-gray-200 bg-gray-100 hover:border-gray-300'}`}
+                    className={`flex flex-col items-center justify-center gap-2 p-4 rounded-lg border-2 transition-all ${zahlungsart === 'twint' ? 'border-[var(--red-main)] bg-white shadow-md' : 'border-gray-200 bg-white hover:border-gray-300'}`}
                   >
-                    <img src="/twint-logo.png" alt="TWINT" className="h-7 w-auto" />
-                    <span className="text-xs text-gray-600 font-medium">TWINT</span>
+                    <img src="/twint-logo.png" alt="TWINT" className="h-8 w-auto" />
+                    <span className="text-xs text-gray-700 font-medium">TWINT</span>
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setZahlungsart('visa')}
+                    className={`flex flex-col items-center justify-center gap-2 p-4 rounded-lg border-2 transition-all ${zahlungsart === 'visa' ? 'border-[var(--red-main)] bg-white shadow-md' : 'border-gray-200 bg-white hover:border-gray-300'}`}
+                  >
+                    <img src="/visa-logo.svg" alt="Visa" className="h-8 w-auto" />
+                    <span className="text-xs text-gray-700 font-medium">Visa</span>
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setZahlungsart('mastercard')}
+                    className={`flex flex-col items-center justify-center gap-2 p-4 rounded-lg border-2 transition-all ${zahlungsart === 'mastercard' ? 'border-[var(--red-main)] bg-white shadow-md' : 'border-gray-200 bg-white hover:border-gray-300'}`}
+                  >
+                    <img src="/mastercard-logo.svg" alt="Mastercard" className="h-8 w-auto" />
+                    <span className="text-xs text-gray-700 font-medium">Mastercard</span>
                   </button>
                 </div>
               </div>
 
               {/* Nachricht */}
-              <div className="bg-[#d0d0d0] rounded-xl p-5 border border-gray-300 space-y-4">
+              <div className="bg-[#e8e8e8] rounded-xl p-5 border border-gray-200 space-y-4">
                 <h2 className="text-lg font-bold uppercase tracking-wide" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>Anmerkungen</h2>
                 <div>
                   <label className="block text-sm font-medium mb-1.5 text-gray-600">Nachricht (optional)</label>
@@ -362,68 +311,167 @@ export default function CheckoutPage() {
                 </div>
               </div>
 
-              {/* Price Summary */}
-              <div className="bg-[#d0d0d0] rounded-xl p-5 border border-gray-300 space-y-3">
-                <h2 className="text-lg font-bold uppercase tracking-wide" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>Zusammenfassung</h2>
-
-                {activeBundle && !bundleProgress.reached && (
-                  <div className="bg-[var(--gold)]/10 rounded-lg px-3 py-2 text-xs">
-                    <div className="flex items-center justify-between text-[var(--gold)] font-semibold mb-1">
-                      <span>Bundle {activeBundle === '3plus' ? '15%' : '20%'}</span>
-                      <span>{bundleProgress.current}/{bundleProgress.target} Trikots</span>
-                    </div>
-                    <div className="h-1 bg-gray-200 rounded-full overflow-hidden">
-                      <div className="h-full bg-[var(--gold)] rounded-full transition-all" style={{ width: `${Math.min(100, (bundleProgress.current / bundleProgress.target) * 100)}%` }} />
-                    </div>
-                    <p className="text-gray-500 mt-1">Noch {bundleProgress.remaining} {bundleProgress.remaining === 1 ? 'Trikot' : 'Trikots'} bis zum Rabatt</p>
-                  </div>
-                )}
-
-                {bundleDiscount > 0 && (
-                  <div className="bg-green-500/10 rounded-lg px-3 py-2 text-xs">
-                    <div className="flex items-center justify-between">
-                      <span className="text-green-400 font-semibold flex items-center gap-1">
-                        <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
-                        Bundle-Rabatt aktiv
-                      </span>
-                      <span className="text-green-400 font-bold">-CHF {bundleDiscount.toFixed(2)}</span>
-                    </div>
-                  </div>
-                )}
-
-                <div className="flex justify-between text-sm text-gray-500">
-                  <span>Zwischensumme ({totalItems} Artikel)</span>
-                  <span>CHF {totalPrice.toFixed(2)}</span>
+              {/* Trust Badges */}
+              <div className="grid grid-cols-3 gap-3">
+                <div className="bg-[#e8e8e8] rounded-xl p-4 border border-gray-200 text-center">
+                  <svg className="w-6 h-6 mx-auto text-[var(--gold)] mb-2" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 00-10.026 0 1.106 1.106 0 00-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12" /></svg>
+                  <p className="text-xs font-bold text-gray-700">Kostenloser Versand</p>
+                  <p className="text-[10px] text-gray-500 mt-0.5">In die ganze Schweiz</p>
                 </div>
-                {bundleDiscount > 0 && (
-                  <div className="flex justify-between text-sm text-green-400">
-                    <span>Bundle-Rabatt</span>
-                    <span>-CHF {bundleDiscount.toFixed(2)}</span>
-                  </div>
-                )}
-                <div className="flex justify-between font-bold text-lg pt-2 border-t border-gray-200">
-                  <span>Total</span>
-                  <span className="text-[var(--gold)]">CHF {finalPrice.toFixed(2)}</span>
+                <div className="bg-[#e8e8e8] rounded-xl p-4 border border-gray-200 text-center">
+                  <svg className="w-6 h-6 mx-auto text-[var(--gold)] mb-2" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" /></svg>
+                  <p className="text-xs font-bold text-gray-700">Qualitätsgeprüft</p>
+                  <p className="text-[10px] text-gray-500 mt-0.5">Jedes Trikot kontrolliert</p>
+                </div>
+                <div className="bg-[#e8e8e8] rounded-xl p-4 border border-gray-200 text-center">
+                  <svg className="w-6 h-6 mx-auto text-[var(--gold)] mb-2" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" /></svg>
+                  <p className="text-xs font-bold text-gray-700">Sichere Zahlung</p>
+                  <p className="text-[10px] text-gray-500 mt-0.5">SSL-verschlüsselt</p>
                 </div>
               </div>
+            </div>
 
-              {error && (
-                <p className="text-red-400 text-sm bg-red-400/10 rounded-lg px-4 py-2">{error}</p>
-              )}
+            {/* Right: Order Summary (sticky) */}
+            <div className="lg:col-span-2">
+              <div className="lg:sticky lg:top-8 space-y-4">
+                <h2 className="lg:hidden text-4xl md:text-5xl uppercase tracking-wide text-white" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>Deine Artikel</h2>
 
-              <button
-                type="submit"
-                disabled={submitting || !vorname.trim() || !nachname.trim() || !email.trim() || !telefon.trim() || !strasse.trim() || !plz.trim() || !ort.trim() || !zahlungsart}
-                className="w-full bg-[var(--red-main)] hover:bg-[#a81d27] disabled:opacity-50 disabled:cursor-not-allowed text-white font-bold py-3.5 rounded-lg text-sm transition-colors"
-              >
-                {submitting ? 'Weiterleitung zur Zahlung...' : `Jetzt bezahlen — CHF ${finalPrice.toFixed(2)}`}
-              </button>
-            </form>
+                {bundleDiscount > 0 && (
+                  <div className="bg-green-500/10 rounded-xl px-4 py-3 border border-green-500/20 flex items-center gap-3">
+                    <div className="w-10 h-10 bg-green-500/20 rounded-full flex items-center justify-center flex-shrink-0">
+                      <svg className="w-5 h-5 text-green-400" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                    </div>
+                    <div>
+                      <span className="text-sm font-bold text-green-400">Bundle-Rabatt {activeBundle === '3plus' ? '15%' : '20%'} aktiv</span>
+                      <p className="text-xs text-gray-500">Du sparst CHF {bundleDiscount.toFixed(2)} auf diese Bestellung</p>
+                    </div>
+                  </div>
+                )}
+
+                <div className="space-y-3">
+                  {items.map(item => (
+                    <div key={item.id} className="bg-[#d0d0d0] rounded-xl p-4 border border-gray-300 flex gap-4">
+                      <img src={item.product.i} alt={item.product.t} className="w-20 h-20 md:w-24 md:h-24 object-cover rounded-lg flex-shrink-0" loading="lazy" decoding="async" />
+                      <div className="flex-1 min-w-0">
+                        <p className="text-sm font-medium text-gray-800 line-clamp-2 leading-tight">{item.product.t}</p>
+                        <p className="text-xs text-gray-500 mt-1">{item.teamName}</p>
+                        <div className="flex flex-wrap gap-x-4 gap-y-1 mt-2 text-xs text-gray-500">
+                          <span>Grösse: <span className="text-gray-900">{item.size}</span></span>
+                          <span>Menge: <span className="text-gray-900">{item.quantity}</span></span>
+                        </div>
+                        {(item.flockingName || item.flockingNumber) && (
+                          <p className="text-xs text-gray-500 mt-1">
+                            Aufdruck: <span className="text-gray-900">{[item.flockingName, item.flockingNumber].filter(Boolean).join(' ')}</span>
+                          </p>
+                        )}
+                        {item.patches && item.patches.length > 0 && (
+                          <div className="flex flex-wrap gap-1.5 mt-2">
+                            {item.patches.map(p => (
+                              <span key={p.id} className="inline-flex items-center gap-1 text-[10px] bg-gray-100 text-gray-500 px-2 py-0.5 rounded">
+                                <img src={p.image} alt={p.name} className="w-3.5 h-3.5 object-contain" />
+                                {p.name}
+                              </span>
+                            ))}
+                          </div>
+                        )}
+                        {item.extraOption && item.extraOption !== 'none' && (
+                          <p className="text-[10px] text-[var(--gold)] mt-1.5">
+                            {item.extraOption === 'komplett' ? 'Komplett-Paket' : item.extraOption === 'aufdruck' ? 'Aufdruck' : 'Patches'} (+CHF {(item.extraPrice || 0).toFixed(2)})
+                          </p>
+                        )}
+                      </div>
+                      <div className="text-right flex-shrink-0">
+                        {(() => {
+                          const itemTotal = (parseFloat(item.product.p) + (item.extraPrice || 0)) * item.quantity;
+                          const discount = bundleDiscount > 0 && activeBundle ? (activeBundle === '3plus' ? 0.15 : 0.20) : 0;
+                          const jerseyDisc = parseFloat(item.product.p) * item.quantity * discount;
+                          const discountedTotal = itemTotal - jerseyDisc;
+                          return discount > 0 ? (
+                            <>
+                              <span className="text-sm text-gray-500 line-through block">CHF {itemTotal.toFixed(2)}</span>
+                              <span className="text-sm font-bold text-green-400">CHF {discountedTotal.toFixed(2)}</span>
+                            </>
+                          ) : (
+                            <span className="text-sm font-bold text-[var(--gold)]">CHF {itemTotal.toFixed(2)}</span>
+                          );
+                        })()}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                {/* Price Summary */}
+                <div className="bg-[#d0d0d0] rounded-xl p-5 border border-gray-300 space-y-3">
+                  <h2 className="text-lg font-bold uppercase tracking-wide" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>Zusammenfassung</h2>
+
+                  {activeBundle && !bundleProgress.reached && (
+                    <div className="bg-[var(--gold)]/10 rounded-lg px-3 py-2 text-xs">
+                      <div className="flex items-center justify-between text-[var(--gold)] font-semibold mb-1">
+                        <span>Bundle {activeBundle === '3plus' ? '15%' : '20%'}</span>
+                        <span>{bundleProgress.current}/{bundleProgress.target} Trikots</span>
+                      </div>
+                      <div className="h-1 bg-gray-200 rounded-full overflow-hidden">
+                        <div className="h-full bg-[var(--gold)] rounded-full transition-all" style={{ width: `${Math.min(100, (bundleProgress.current / bundleProgress.target) * 100)}%` }} />
+                      </div>
+                      <p className="text-gray-500 mt-1">Noch {bundleProgress.remaining} {bundleProgress.remaining === 1 ? 'Trikot' : 'Trikots'} bis zum Rabatt</p>
+                    </div>
+                  )}
+
+                  {bundleDiscount > 0 && (
+                    <div className="bg-green-500/10 rounded-lg px-3 py-2 text-xs">
+                      <div className="flex items-center justify-between">
+                        <span className="text-green-400 font-semibold flex items-center gap-1">
+                          <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
+                          Bundle-Rabatt aktiv
+                        </span>
+                        <span className="text-green-400 font-bold">-CHF {bundleDiscount.toFixed(2)}</span>
+                      </div>
+                    </div>
+                  )}
+
+                  <div className="flex justify-between text-sm text-gray-500">
+                    <span>Zwischensumme ({totalItems} Artikel)</span>
+                    <span>CHF {totalPrice.toFixed(2)}</span>
+                  </div>
+                  <div className="flex justify-between text-sm text-gray-500">
+                    <span>Versand</span>
+                    <span className="text-green-500 font-medium">Kostenlos</span>
+                  </div>
+                  {bundleDiscount > 0 && (
+                    <div className="flex justify-between text-sm text-green-400">
+                      <span>Bundle-Rabatt</span>
+                      <span>-CHF {bundleDiscount.toFixed(2)}</span>
+                    </div>
+                  )}
+                  <div className="flex justify-between font-bold text-lg pt-2 border-t border-gray-200">
+                    <span>Total</span>
+                    <span className="text-[var(--gold)]">CHF {finalPrice.toFixed(2)}</span>
+                  </div>
+                </div>
+
+                {error && (
+                  <p className="text-red-400 text-sm bg-red-400/10 rounded-lg px-4 py-2">{error}</p>
+                )}
+
+                <button
+                  type="submit"
+                  disabled={submitting || !vorname.trim() || !nachname.trim() || !email.trim() || !telefon.trim() || !strasse.trim() || !plz.trim() || !ort.trim() || !zahlungsart}
+                  className="w-full bg-[var(--red-main)] hover:bg-[#a81d27] disabled:opacity-50 disabled:cursor-not-allowed text-white font-bold py-3.5 rounded-lg text-sm transition-colors"
+                >
+                  {submitting ? 'Weiterleitung zur Zahlung...' : `Jetzt bezahlen — CHF ${finalPrice.toFixed(2)}`}
+                </button>
+
+                <p className="text-[10px] text-gray-500 text-center leading-relaxed">
+                  Mit der Bestellung akzeptierst du unsere <Link href="/agb" className="underline hover:text-gray-300">AGB</Link> und <Link href="/datenschutz" className="underline hover:text-gray-300">Datenschutzerklärung</Link>.
+                </p>
+              </div>
+            </div>
           </div>
-        </div>
+        </form>
+      </div>
       </section>
 
       <Footer />
-    </>
+    </div>
   );
 }

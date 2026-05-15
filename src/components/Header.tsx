@@ -321,7 +321,7 @@ export default function Header() {
               <span className="text-white/50 text-2xl leading-none">•</span>
               <span className="px-6">Jedes Trikot einzeln geprüft</span>
               <span className="text-white/50 text-2xl leading-none">•</span>
-              <span className="px-6">Über 4500 Artikel verfügbar</span>
+              <span className="px-6">Über 4800 Artikel verfügbar</span>
               <span className="text-white/50 text-2xl leading-none">•</span>
             </span>
           ))}

@@ -6,11 +6,13 @@ import ProductDetailClient from '@/components/ProductDetailClient';
 
 interface Props {
   params: Promise<{ handle: string }>;
+  searchParams: Promise<{ from?: string }>;
 }
 
-export default async function ProductPage({ params }: Props) {
+export default async function ProductPage({ params, searchParams }: Props) {
   const { handle } = await params;
-  const result = getProductByHandle(handle);
+  const { from } = await searchParams;
+  const result = getProductByHandle(handle, from);
   if (!result) return notFound();
 
   const { product, teamId, teamName, leagueName, leagueSlug, subLeague } = result;

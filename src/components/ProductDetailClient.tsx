@@ -8,6 +8,7 @@ import { useCart, ExtraOption, EXTRA_PRICES } from '@/context/CartContext';
 import { getPatchSetsForProduct, PatchSetOption } from '@/lib/patches';
 import { useRecentlyViewed } from '@/hooks/useRecentlyViewed';
 import RecentlyViewed from '@/components/RecentlyViewed';
+import { SUB_LEAGUE_SLUGS } from '@/lib/subLeagueLogos';
 
 interface Props {
   product: Product;
@@ -194,6 +195,12 @@ export default function ProductDetailClient({ product, teamId, teamName, leagueN
       {/* Breadcrumb — Desktop: voller Pfad */}
       <div className="hidden md:flex items-center gap-2 text-sm text-gray-500 mb-8 py-1">
         <Link href={`/league/${leagueSlug}`} className="hover:text-gray-900 transition-colors py-1 flex items-center gap-1"><svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" /></svg>{leagueName}</Link>
+        {subLeague && SUB_LEAGUE_SLUGS[subLeague] && (
+          <>
+            <span>/</span>
+            <Link href={`/league/${leagueSlug}/${SUB_LEAGUE_SLUGS[subLeague]}`} className="hover:text-gray-900 transition-colors py-1">{subLeague}</Link>
+          </>
+        )}
         <span>/</span>
         <Link href={`/team/${teamId}`} className="hover:text-gray-900 transition-colors py-1">{teamName}</Link>
         <span>/</span>

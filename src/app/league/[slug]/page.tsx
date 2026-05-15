@@ -1,3 +1,4 @@
+import React from 'react';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 import Header from '@/components/Header';
@@ -21,6 +22,7 @@ const LEAGUE_DESCRIPTIONS: Record<string, string> = {
   'nationalmannschaften': 'Nationalmannschaftstrikots stehen für den Stolz eines ganzen Landes und die größten Momente des internationalen Fußballs. Von der Weltmeisterschaft über die Europameisterschaft bis hin zur Copa América vereinen sie Millionen von Fans hinter ihren Teams. Jedes Trikot erzählt die Geschichte einer Nation und ihrer Fußballtradition.',
   'europa-andere': 'Neben den großen europäischen Top-Ligen bieten Wettbewerbe wie die türkische Süper Lig, die belgische Pro League oder die schottische Premiership erstklassigen Fußball mit eigener Identität. Auch Ligen aus Südamerika, Nordamerika und Asien begeistern mit leidenschaftlichen Fans und aufstrebenden Talenten. Hier findest du Trikots von Vereinen und Ligen abseits des Mainstreams.',
   'clubs-world': 'Weltclubs vereinen die spannendsten Vereine aus Südamerika, Nordamerika, Asien und Afrika unter einem Dach. Von Brasiliens Flamengo über Mexikos Club América bis hin zu Japans Vissel Kobe – hier triffst du auf Fußballkultur aus allen Ecken der Welt. Entdecke Trikots von Vereinen, die in ihren Heimatländern Legenden sind.',
+  'wm-2026': 'Die FIFA Fussball-Weltmeisterschaft 2026 findet in den USA, Kanada und Mexiko statt — erstmals mit 48 Nationalmannschaften in 12 Gruppen. Das grösste Fussballturnier der Geschichte verspricht unvergessliche Momente und historische Duelle. Sichere dir jetzt die offiziellen Trikots deiner Lieblingsnation.',
   'zweitligisten': 'Die zweiten Ligen Europas sind das Rückgrat des professionellen Fußballs und oft die Heimat von Traditionsklubs mit leidenschaftlicher Fanbase. Von der englischen Championship über die 2. Bundesliga bis hin zur Serie B bieten sie spannende Aufstiegskämpfe und packende Derbys. Hier findest du Trikots von Vereinen mit Geschichte und Charakter.',
 };
 
@@ -48,7 +50,14 @@ export default async function LeaguePage({ params }: { params: Promise<{ slug: s
 
   const logo = LEAGUE_LOGOS[slug];
   const subLeagues = getSubLeaguesForLeague(slug);
-  const subLeagueKeys = Object.keys(subLeagues);
+  const subLeagueKeys = Object.keys(subLeagues).sort((a, b) => {
+    const ga = a.match(/Gruppe ([A-L])/);
+    const gb = b.match(/Gruppe ([A-L])/);
+    if (ga && gb) return ga[1].localeCompare(gb[1]);
+    if (ga) return -1;
+    if (gb) return 1;
+    return a.localeCompare(b);
+  });
   const hasSubLeagues = subLeagueKeys.length > 1;
   const topSellerLeagues = ['premier-league', 'la-liga', 'bundesliga', 'serie-a', 'ligue-1', 'liga-portugal', 'eredivisie', 'nationalmannschaften'];
   const topSeller = topSellerLeagues.includes(slug) ? getLeagueTopSeller(slug) : [];
@@ -117,23 +126,81 @@ export default async function LeaguePage({ params }: { params: Promise<{ slug: s
                   href={`/league/${slug}/${subSlug}`}
                   className="league-card group bg-[#e8e8e8] rounded-xl p-6 border border-gray-300 hover:border-[var(--red-main)]/30"
                 >
-                  <div className="mb-4 h-14 flex items-end">
-                    {subLogo ? (
-                      <img
-                        src={subLogo}
-                        alt={subName}
-                        className="h-14 w-auto object-contain"
-                      />
-                    ) : (
-                      <span className="text-3xl">&#9917;</span>
-                    )}
-                  </div>
-                  <h3 className="text-xl md:text-2xl uppercase tracking-wide text-gray-900 group-hover:text-[var(--gold)] transition-colors" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
-                    {subName}
-                  </h3>
-                  <p className="text-sm text-gray-700 mt-1">
-                    {teamCount} {teamCount === 1 ? 'Team' : 'Teams'}{subCountry && ` · ${subCountry}`}
-                  </p>
+                  {subName.startsWith('Gruppe') ? (
+                    (() => {
+                      const countryStr = SUB_LEAGUE_COUNTRIES[subName] || '';
+                      const codes = countryStr.split(' · ');
+                      const codeToSlug: Record<string, string> = {
+                        MEX:'mexico',RSA:'southafrica',KOR:'korea',CZE:'czech-republic',
+                        CAN:'canada',BIH:'bosnia-and-herzegovina',QAT:'qatar',SUI:'switzerland',
+                        BRA:'brazil',MAR:'morocco',HAI:'haiti',SCO:'scotland',
+                        USA:'usa',PAR:'paraguay',AUS:'australia',TUR:'turkey',
+                        GER:'germany',CUW:'curacao',CIV:'ivorycoast',ECU:'ecuador',
+                        NED:'netherlands',JPN:'japan',SWE:'sweden',TUN:'tunisia',
+                        BEL:'belgium',EGY:'egypt',IRN:'iran',NZL:'newzealand',
+                        ESP:'spain',CPV:'capeverde',KSA:'saudiarabia',URU:'uruguay',
+                        FRA:'france',SEN:'senegal',IRQ:'iraq',NOR:'norway',
+                        ARG:'argentina',ALG:'algeria',AUT:'austria',JOR:'jordan',
+                        POR:'portugal',COD:'congo',UZB:'uzbekistan',COL:'colombia',
+                        ENG:'england',CRO:'croatia',GHA:'ghana',PAN:'panama',
+                      };
+                      return (
+                        <>
+                          <div className="grid grid-cols-4 mb-4">
+                            <div className="flex justify-center">
+                              {subLogo ? (
+                                <img src={subLogo} alt={subName} className="h-14 w-auto object-contain" />
+                              ) : (
+                                <span className="text-3xl">&#9917;</span>
+                              )}
+                            </div>
+                            <div className="col-span-3 flex items-center">
+                              <div>
+                                <h3 className="text-xl md:text-2xl uppercase tracking-wide text-gray-900 group-hover:text-[var(--gold)] transition-colors" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
+                                  {subName}
+                                </h3>
+                                <p className="text-sm text-gray-700">
+                                  {teamCount} Teams
+                                </p>
+                              </div>
+                            </div>
+                          </div>
+                          <div className="grid grid-cols-4">
+                            {codes.map((code, i) => (
+                              <React.Fragment key={code}>
+                                <div className={`flex flex-col items-center gap-1.5 ${i > 0 ? 'border-l border-black/20' : ''}`}>
+                                  {(() => {
+                                    const s = codeToSlug[code];
+                                    const logo = s ? TEAM_LOGOS[s] : undefined;
+                                    return logo ? (
+                                      <img src={logo} alt={code} className="h-10 w-10 object-contain" />
+                                    ) : null;
+                                  })()}
+                                  <span className="text-[10px] font-semibold text-gray-500">{code}</span>
+                                </div>
+                              </React.Fragment>
+                            ))}
+                          </div>
+                        </>
+                      );
+                    })()
+                  ) : (
+                    <>
+                      <div className="mb-4 h-14 flex items-center gap-3">
+                        {subLogo ? (
+                          <img src={subLogo} alt={subName} className="h-14 w-auto object-contain" />
+                        ) : (
+                          <span className="text-3xl">&#9917;</span>
+                        )}
+                      </div>
+                      <h3 className="text-xl md:text-2xl uppercase tracking-wide text-gray-900 group-hover:text-[var(--gold)] transition-colors" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
+                        {subName}
+                      </h3>
+                      <p className="text-sm text-gray-700 mt-1">
+                        {teamCount} {teamCount === 1 ? 'Team' : 'Teams'}{subCountry && ` · ${subCountry}`}
+                      </p>
+                    </>
+                  )}
                 </Link>
               );
             })}
@@ -141,28 +208,38 @@ export default async function LeaguePage({ params }: { params: Promise<{ slug: s
         ) : (
           /* Normal team grid */
           <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 sm:gap-4">
-            {league.teams.map((team, i) => (
-              <ScrollReveal key={team.id} delay={i * 30} mobileOnly>
-              <Link
-                href={`/team/${team.id}`}
-                className="team-card group bg-[#e8e8e8] rounded-xl p-3 sm:p-5 border border-gray-300 hover:border-[var(--red-main)]/30 text-center block h-full"
-              >
-                {(() => {
-                  const teamSlug = team.id.split('__')[1];
-                  const teamLogo = teamSlug ? TEAM_LOGOS[teamSlug] : undefined;
-                  return teamLogo ? (
-                    <img src={teamLogo} alt={team.name} className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-2 sm:mb-3 object-contain" />
-                  ) : (
-                    <div className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-2 sm:mb-3 bg-gray-200 rounded-full flex items-center justify-center text-xl sm:text-2xl font-black text-[var(--red-main)]">
-                      {team.name.charAt(0)}
-                    </div>
-                  );
-                })()}
-                <h3 className="text-xs sm:text-sm uppercase line-clamp-2 mb-1 text-gray-900 group-hover:text-[var(--gold)] transition-colors" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>{team.name}</h3>
-                <p className="text-[10px] sm:text-xs text-gray-500">{team.count} Artikel</p>
-              </Link>
-              </ScrollReveal>
-            ))}
+            {league.teams.map((team, i) => {
+              const isEmpty = team.count === 0;
+              const Wrapper = isEmpty ? 'div' : Link;
+              const wrapperProps = isEmpty ? {} : { href: `/team/${team.id}` };
+              return (
+                <ScrollReveal key={team.id} delay={i * 30} mobileOnly>
+                <Wrapper
+                  {...wrapperProps as any}
+                  className={`team-card group rounded-xl p-3 sm:p-5 border text-center block h-full ${
+                    isEmpty
+                      ? 'border-red-300 cursor-default'
+                      : 'bg-[#e8e8e8] border-gray-300 hover:border-[var(--red-main)]/30'
+                  }`}
+                  style={isEmpty ? { backgroundColor: '#fde8e8', opacity: 0.6 } : undefined}
+                >
+                  {(() => {
+                    const teamSlug = team.id.split('__')[1];
+                    const teamLogo = teamSlug ? TEAM_LOGOS[teamSlug] : undefined;
+                    return teamLogo ? (
+                      <img src={teamLogo} alt={team.name} className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-2 sm:mb-3 object-contain" />
+                    ) : (
+                      <div className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-2 sm:mb-3 bg-gray-200 rounded-full flex items-center justify-center text-xl sm:text-2xl font-black text-[var(--red-main)]">
+                        {team.name.charAt(0)}
+                      </div>
+                    );
+                  })()}
+                  <h3 className={`text-xs sm:text-sm uppercase line-clamp-2 mb-1 transition-colors ${isEmpty ? 'text-gray-500' : 'text-gray-900 group-hover:text-[var(--gold)]'}`} style={{ fontFamily: "'Bebas Neue', sans-serif" }}>{team.name}</h3>
+                  <p className="text-[10px] sm:text-xs text-gray-500">{isEmpty ? 'Keine Artikel' : `${team.count} Artikel`}</p>
+                </Wrapper>
+                </ScrollReveal>
+              );
+            })}
           </div>
         )}
       </section>

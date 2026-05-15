@@ -7,11 +7,13 @@ import { Product, CATEGORIES } from '@/lib/types';
 interface ProductCardProps {
   product: Product;
   teamName: string;
+  teamId?: string;
 }
 
-export default function ProductCard({ product, teamName }: ProductCardProps) {
+export default function ProductCard({ product, teamName, teamId }: ProductCardProps) {
+  const href = teamId ? `/product/${product.h}?from=${teamId}` : `/product/${product.h}`;
   return (
-    <Link href={`/product/${product.h}`} className="product-card group bg-white rounded-xl overflow-hidden border border-gray-400 transition-all block">
+    <Link href={href} className="product-card group bg-white rounded-xl overflow-hidden border border-gray-400 transition-all block">
       {/* Image */}
       <div className="relative aspect-square overflow-hidden bg-white">
         <Image
@@ -20,6 +22,7 @@ export default function ProductCard({ product, teamName }: ProductCardProps) {
           fill
           sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
           className="object-cover"
+          unoptimized={product.i.startsWith('https://')}
         />
       </div>
 

@@ -22,17 +22,10 @@ export default function Footer({ dark }: { dark?: boolean }) {
           {/* Zahlungsarten */}
           <div>
             <h3 className="font-bold text-sm uppercase tracking-wider mb-4 text-[var(--gold)]">Zahlungsarten</h3>
-            <div className="space-y-3 text-sm text-gray-400">
-              <div className="flex items-center gap-2 justify-center">
-                <svg className="h-6 w-6 flex-shrink-0 text-gray-400" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5z" />
-                </svg>
-                <span>Kreditkarte</span>
-              </div>
-              <div className="flex items-center gap-2 justify-center">
-                <img src="/twint-logo.png" alt="TWINT" className="h-6 w-auto flex-shrink-0" />
-                <span>TWINT</span>
-              </div>
+            <div className="flex items-center justify-center gap-4">
+              <img src="/twint-logo.png" alt="TWINT" className="h-8 w-auto" />
+              <img src="/visa-logo.svg" alt="Visa" className="h-8 w-auto" />
+              <img src="/mastercard-logo.svg" alt="Mastercard" className="h-8 w-auto" />
             </div>
           </div>
 
@@ -67,17 +60,10 @@ export default function Footer({ dark }: { dark?: boolean }) {
           {/* Zahlungsarten - horizontal */}
           <div className="text-center">
             <h3 className="font-bold text-sm uppercase tracking-wider mb-3 text-[var(--gold)]">Zahlungsarten</h3>
-            <div className="flex items-center justify-center gap-5">
-              <div className="flex items-center gap-1.5 text-sm text-gray-400">
-                <svg className="h-5 w-5 flex-shrink-0 text-gray-400" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5z" />
-                </svg>
-                <span className="text-xs">Karte</span>
-              </div>
-              <div className="flex items-center gap-1.5 text-sm text-gray-400">
-                <img src="/twint-logo.png" alt="TWINT" className="h-5 w-auto flex-shrink-0" />
-                <span className="text-xs">TWINT</span>
-              </div>
+            <div className="flex items-center justify-center gap-4">
+              <img src="/twint-logo.png" alt="TWINT" className="h-7 w-auto" />
+              <img src="/visa-logo.svg" alt="Visa" className="h-7 w-auto" />
+              <img src="/mastercard-logo.svg" alt="Mastercard" className="h-7 w-auto" />
             </div>
           </div>
 

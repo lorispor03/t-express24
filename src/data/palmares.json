@@ -298,7 +298,7 @@
   },
   "serie-a__napoli": {
     "trophies": [
-      { "name": "Serie A", "count": 3, "icon": "/trophies/serie-a.png" },
+      { "name": "Serie A", "count": 4, "icon": "/trophies/serie-a.png" },
       { "name": "Coppa Italia", "count": 6, "icon": "/trophies/coppa-italia.png" },
       { "name": "Supercoppa", "count": 2, "icon": "/trophies/supercoppa.png?v=2" },
       { "name": "UEFA Cup", "count": 1, "icon": "/trophies/europa-league.png" }

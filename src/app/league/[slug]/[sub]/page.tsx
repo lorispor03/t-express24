@@ -82,28 +82,38 @@ export default async function SubLeaguePage({ params }: { params: Promise<{ slug
       {/* Teams Grid */}
       <section className="max-w-[1920px] mx-auto px-4 md:px-8 xl:px-12 2xl:px-16 py-12">
         <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 sm:gap-4">
-          {result.teams.map((team, i) => (
-            <ScrollReveal key={team.id} delay={i * 30} mobileOnly>
-            <Link
-              href={`/team/${team.id}`}
-              className="team-card group bg-[#e8e8e8] rounded-xl p-3 sm:p-5 border border-gray-300 hover:border-[var(--red-main)]/30 text-center block h-full"
-            >
-              {(() => {
-                const teamSlug = team.id.split('__')[1];
-                const teamLogo = teamSlug ? TEAM_LOGOS[teamSlug] : undefined;
-                return teamLogo ? (
-                  <img src={teamLogo} alt={team.name} className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-2 sm:mb-3 object-contain" />
-                ) : (
-                  <div className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-2 sm:mb-3 bg-gray-200 rounded-full flex items-center justify-center text-xl sm:text-2xl font-black text-[var(--red-main)]">
-                    {team.name.charAt(0)}
-                  </div>
-                );
-              })()}
-              <h3 className="text-xs sm:text-sm uppercase line-clamp-2 mb-1 text-gray-900 group-hover:text-[var(--gold)] transition-colors" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>{team.name}</h3>
-              <p className="text-[10px] sm:text-xs text-gray-500">{team.count} Artikel</p>
-            </Link>
-            </ScrollReveal>
-          ))}
+          {result.teams.map((team, i) => {
+            const isEmpty = team.count === 0;
+            const Wrapper = isEmpty ? 'div' : Link;
+            const wrapperProps = isEmpty ? {} : { href: `/team/${team.id}` };
+            return (
+              <ScrollReveal key={team.id} delay={i * 30} mobileOnly>
+              <Wrapper
+                {...wrapperProps as any}
+                className={`team-card group rounded-xl p-3 sm:p-5 border text-center block h-full ${
+                  isEmpty
+                    ? 'border-red-300 cursor-default'
+                    : 'bg-[#e8e8e8] border-gray-300 hover:border-[var(--red-main)]/30'
+                }`}
+                style={isEmpty ? { backgroundColor: '#fde8e8', opacity: 0.6 } : undefined}
+              >
+                {(() => {
+                  const teamSlug = team.id.split('__')[1];
+                  const teamLogo = teamSlug ? TEAM_LOGOS[teamSlug] : undefined;
+                  return teamLogo ? (
+                    <img src={teamLogo} alt={team.name} className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-2 sm:mb-3 object-contain" />
+                  ) : (
+                    <div className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-2 sm:mb-3 bg-gray-200 rounded-full flex items-center justify-center text-xl sm:text-2xl font-black text-[var(--red-main)]">
+                      {team.name.charAt(0)}
+                    </div>
+                  );
+                })()}
+                <h3 className={`text-xs sm:text-sm uppercase line-clamp-2 mb-1 transition-colors ${isEmpty ? 'text-gray-500' : 'text-gray-900 group-hover:text-[var(--gold)]'}`} style={{ fontFamily: "'Bebas Neue', sans-serif" }}>{team.name}</h3>
+                <p className="text-[10px] sm:text-xs text-gray-500">{isEmpty ? 'Keine Artikel' : `${team.count} Artikel`}</p>
+              </Wrapper>
+              </ScrollReveal>
+            );
+          })}
         </div>
       </section>
 

@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     template: "%s | T-EXPRESS24",
   },
   description:
-    "Premium Fussballtrikots aus der Schweiz. Über 4'500 Artikel aus 10 Top-Ligen – Fan, Player, Retro, Kinder & Damen. Kostenloser Versand, 100% geprüfte Qualität.",
+    "Premium Fussballtrikots aus der Schweiz. Über 4'800 Artikel aus 10 Top-Ligen – Fan, Player, Retro, Kinder & Damen. Kostenloser Versand, 100% geprüfte Qualität.",
   keywords: [
     "Fussballtrikots",
     "Trikots Schweiz",
@@ -46,13 +46,13 @@ export const metadata: Metadata = {
     siteName: "T-EXPRESS24",
     title: "T-EXPRESS24 | Premium Fussball Trikots aus der Schweiz",
     description:
-      "Premium Fussballtrikots aus der Schweiz. Über 4'500 Artikel aus 10 Top-Ligen – Fan, Player, Retro, Kinder & Damen. Kostenloser Versand, 100% geprüfte Qualität.",
+      "Premium Fussballtrikots aus der Schweiz. Über 4'800 Artikel aus 10 Top-Ligen – Fan, Player, Retro, Kinder & Damen. Kostenloser Versand, 100% geprüfte Qualität.",
   },
   twitter: {
     card: "summary_large_image",
     title: "T-EXPRESS24 | Premium Fussball Trikots aus der Schweiz",
     description:
-      "Premium Fussballtrikots aus der Schweiz. Über 4'500 Artikel aus 10 Top-Ligen. Kostenloser Versand, 100% geprüfte Qualität.",
+      "Premium Fussballtrikots aus der Schweiz. Über 4'800 Artikel aus 10 Top-Ligen. Kostenloser Versand, 100% geprüfte Qualität.",
   },
   robots: {
     index: true,

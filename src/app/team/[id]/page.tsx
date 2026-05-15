@@ -6,6 +6,7 @@ import Footer from '@/components/Footer';
 import TeamPageClient from '@/components/TeamPageClient';
 import { getTeam, getAllTeamIds } from '@/lib/data';
 import { TEAM_LOGOS } from '@/lib/teamLogos';
+import { SUB_LEAGUE_SLUGS } from '@/lib/subLeagueLogos';
 import teamDescriptions from '@/data/team-descriptions.json';
 import palmaresData from '@/data/palmares.json';
 import type { Metadata } from 'next';
@@ -52,6 +53,12 @@ export default async function TeamPage({ params }: { params: Promise<{ id: strin
             <Link href="/#ligen" className="hover:text-white transition-colors py-1 flex items-center gap-1"><svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" /></svg>Ligen</Link>
             <span>/</span>
             <Link href={`/league/${team.league}`} className="hover:text-white transition-colors py-1">{team.leagueName}</Link>
+            {team.subLeague && SUB_LEAGUE_SLUGS[team.subLeague] && (
+              <>
+                <span>/</span>
+                <Link href={`/league/${team.league}/${SUB_LEAGUE_SLUGS[team.subLeague]}`} className="hover:text-white transition-colors py-1">{team.subLeague}</Link>
+              </>
+            )}
             <span>/</span>
             <span className="text-white">{team.name}</span>
           </div>
@@ -121,6 +128,7 @@ export default async function TeamPage({ params }: { params: Promise<{ id: strin
       <Suspense>
         <TeamPageClient
           teamName={team.name}
+          teamId={id}
           leagueName={team.leagueName}
           leagueSlug={team.league}
           products={team.products}
