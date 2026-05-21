@@ -90,7 +90,8 @@ export function getTeamsBySubLeague(leagueSlug: string, subLeagueSlug: string): 
   if (!subLeagueName) return undefined;
 
   const teams = league.teams.filter(teamRef => {
-    return (teamRef as any).subLeague === subLeagueName;
+    const team = data.teams[teamRef.id];
+    return (teamRef as any).subLeague === subLeagueName || team?.subLeague === subLeagueName;
   });
 
   if (teams.length === 0) return undefined;

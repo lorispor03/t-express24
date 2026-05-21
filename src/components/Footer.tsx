@@ -94,9 +94,13 @@ export default function Footer({ dark }: { dark?: boolean }) {
         </div>
 
         <div className="mt-10 pt-6 border-t border-white/20 text-center text-xs text-gray-400">
-          <a href="/agb" className="hover:text-white transition-colors">Geschäftsbedingungen</a>
+          <a href="/impressum" className="hover:text-white transition-colors">Impressum</a>
+          <span className="mx-2">·</span>
+          <a href="/agb" className="hover:text-white transition-colors">AGB</a>
           <span className="mx-2">·</span>
           <a href="/datenschutz" className="hover:text-white transition-colors">Datenschutz</a>
+          <span className="mx-2">·</span>
+          <a href="/lieferung" className="hover:text-white transition-colors">Lieferung</a>
           <span className="mx-2">·</span>
           &copy; {new Date().getFullYear()} T-EXPRESS24. Alle Rechte vorbehalten.
         </div>
