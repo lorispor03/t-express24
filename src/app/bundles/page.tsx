@@ -183,8 +183,8 @@ export default function BundlesPage() {
                     <span className="text-sm text-gray-600">Bereits ab 3 Trikots</span>
                   </div>
                 </div>
-                <div className="bg-gray-100 rounded-lg px-3 py-2 text-xs text-gray-500 mb-4">
-                  3× à CHF 49.90 = <span className="text-[#a8b0b8] font-bold">CHF 127.25</span> <span className="text-gray-500 line-through ml-1">149.70</span>
+                <div className="bg-gray-100 rounded-lg px-3 py-3 text-sm text-gray-500 mb-4">
+                  3× à CHF 49.90 = <span className="text-[#a8b0b8] font-bold text-lg">CHF 125.–</span> <span className="text-gray-500 line-through ml-1">149.70</span>
                 </div>
                 <button
                   onClick={() => toggleBundle('3plus')}
@@ -231,8 +231,8 @@ export default function BundlesPage() {
                     <span className="text-sm text-gray-600">Rabatt automatisch berechnet</span>
                   </div>
                 </div>
-                <div className="bg-gray-100 rounded-lg px-3 py-2 text-xs text-gray-500 mb-4">
-                  6× à CHF 49.90 = <span className="text-[var(--gold)] font-bold">CHF 239.50</span> <span className="text-gray-500 line-through ml-1">299.40</span>
+                <div className="bg-gray-100 rounded-lg px-3 py-3 text-sm text-gray-500 mb-4">
+                  6× à CHF 49.90 = <span className="text-[var(--gold)] font-bold text-lg">CHF 240.–</span> <span className="text-gray-500 line-through ml-1">299.40</span>
                 </div>
                 <button
                   onClick={() => toggleBundle('6plus')}
@@ -282,8 +282,8 @@ export default function BundlesPage() {
                     <span className="text-sm text-gray-600">Höchste Ersparnis pro Trikot</span>
                   </div>
                 </div>
-                <div className="bg-gray-100 rounded-lg px-3 py-2 text-xs text-gray-500 mb-4">
-                  10× à CHF 49.90 = <span className="text-[#b066c4] font-bold">CHF 349.30</span> <span className="text-gray-500 line-through ml-1">499.00</span>
+                <div className="bg-gray-100 rounded-lg px-3 py-3 text-sm text-gray-500 mb-4">
+                  10× à CHF 49.90 = <span className="text-[#b066c4] font-bold text-lg">CHF 350.–</span> <span className="text-gray-500 line-through ml-1">499.–</span>
                 </div>
                 <button
                   onClick={() => toggleBundle('10plus')}
