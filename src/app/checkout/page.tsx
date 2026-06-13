@@ -9,13 +9,13 @@ import { useCart } from '@/context/CartContext';
 export default function CheckoutPage() {
   const { items, totalItems, totalPrice, bundleDiscount, finalPrice, activeBundle, bundleProgress, loaded } = useCart();
 
-  const [vorname, setVorname] = useState('Max');
-  const [nachname, setNachname] = useState('Muster');
-  const [email, setEmail] = useState('max@test.ch');
-  const [telefon, setTelefon] = useState('+41 79 123 45 67');
-  const [strasse, setStrasse] = useState('Bahnhofstrasse 10');
-  const [plz, setPlz] = useState('8001');
-  const [ort, setOrt] = useState('Zürich');
+  const [vorname, setVorname] = useState('');
+  const [nachname, setNachname] = useState('');
+  const [email, setEmail] = useState('');
+  const [telefon, setTelefon] = useState('');
+  const [strasse, setStrasse] = useState('');
+  const [plz, setPlz] = useState('');
+  const [ort, setOrt] = useState('');
   const [land, setLand] = useState('Schweiz');
   const [nachricht, setNachricht] = useState('');
   const [zahlungsart, setZahlungsart] = useState('');
@@ -55,7 +55,7 @@ export default function CheckoutPage() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!vorname.trim() || !nachname.trim() || !email.trim() || !telefon.trim() || !strasse.trim() || !plz.trim() || !ort.trim() || !zahlungsart) return;
+    if (!vorname.trim() || !nachname.trim() || !email.trim() || !telefon.trim() || !strasse.trim() || !plz.trim() || !ort.trim()) return;
 
     setSubmitting(true);
     setError('');
@@ -100,7 +100,7 @@ export default function CheckoutPage() {
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || 'Fehler beim Erstellen der Zahlung');
 
-      // Redirect to Payrexx payment page
+      // Redirect to success page
       window.location.href = data.url;
     } catch (err: any) {
       setError(err.message || 'Zahlung konnte nicht gestartet werden. Bitte versuche es erneut.');
@@ -267,7 +267,8 @@ export default function CheckoutPage() {
 
               {/* Zahlungsart */}
               <div className="bg-[#e8e8e8] rounded-xl p-5 border border-gray-200 space-y-4">
-                <h2 className="text-lg font-bold uppercase tracking-wide" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>Zahlungsart</h2>
+                <h2 className="text-lg font-bold uppercase tracking-wide" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>Bevorzugte Zahlungsart</h2>
+                <p className="text-xs text-gray-500">Wähle deine bevorzugte Zahlungsart – wir melden uns bei dir zur Abwicklung.</p>
                 <div className="grid grid-cols-3 gap-3">
                   <button
                     type="button"
@@ -455,10 +456,10 @@ export default function CheckoutPage() {
 
                 <button
                   type="submit"
-                  disabled={submitting || !vorname.trim() || !nachname.trim() || !email.trim() || !telefon.trim() || !strasse.trim() || !plz.trim() || !ort.trim() || !zahlungsart}
+                  disabled={submitting || !vorname.trim() || !nachname.trim() || !email.trim() || !telefon.trim() || !strasse.trim() || !plz.trim() || !ort.trim()}
                   className="w-full bg-[var(--red-main)] hover:bg-[#a81d27] disabled:opacity-50 disabled:cursor-not-allowed text-white font-bold py-3.5 rounded-lg text-sm transition-colors"
                 >
-                  {submitting ? 'Weiterleitung zur Zahlung...' : `Jetzt bezahlen — CHF ${finalPrice.toFixed(2)}`}
+                  {submitting ? 'Bestellung wird gesendet...' : `Jetzt bestellen — CHF ${finalPrice.toFixed(2)}`}
                 </button>
 
                 <p className="text-[10px] text-gray-500 text-center leading-relaxed">
