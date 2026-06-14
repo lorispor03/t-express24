@@ -1,12 +1,12 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { Suspense, useEffect, useState } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { useCart } from '@/context/CartContext';
 
-export default function CheckoutSuccessPage() {
+function SuccessContent() {
   const { clearCart } = useCart();
   const searchParams = useSearchParams();
   const bestellNr = searchParams.get('nr') || '';
@@ -78,5 +78,13 @@ export default function CheckoutSuccessPage() {
       </section>
       <Footer />
     </>
+  );
+}
+
+export default function CheckoutSuccessPage() {
+  return (
+    <Suspense fallback={<><Header /><div className="min-h-screen" /><Footer /></>}>
+      <SuccessContent />
+    </Suspense>
   );
 }
