@@ -147,7 +147,7 @@ export default async function LeaguePage({ params }: { params: Promise<{ slug: s
                       return (
                         <>
                           <div className="grid grid-cols-4 mb-4">
-                            <div className="flex justify-center">
+                            <div className="flex justify-center items-center">
                               {subLogo ? (
                                 <img src={subLogo} alt={subName} className="h-14 w-auto object-contain" />
                               ) : (
