@@ -33,6 +33,7 @@ type OrderData = {
   bestell_nr: string;
   datum: string;
   kunde_name: string;
+  kunde_instagram?: string;
   kunde_telefon?: string;
   kunde_kontakt: string;
   lieferadresse: OrderLieferadresse;
@@ -246,6 +247,7 @@ export async function sendOrderNotificationToAdmin(order: OrderData) {
                   <h2 style="color:#111; font-size:16px; margin:0 0 12px 0;">Kunde</h2>
                   <div style="background:#f8f8f8; border-radius:8px; padding:12px; margin-bottom:16px; font-size:14px; line-height:1.6; color:#444;">
                     <strong style="color:#111;">${order.kunde_name}</strong><br>
+                    ${order.kunde_instagram ? `📸 <a href="https://instagram.com/${order.kunde_instagram}" style="color:#c4222e; text-decoration:none; font-weight:600;">@${order.kunde_instagram}</a><br>` : ''}
                     📧 ${order.kunde_kontakt}<br>
                     ${order.kunde_telefon ? `📱 ${order.kunde_telefon}<br>` : ''}
                   </div>

@@ -61,6 +61,7 @@ export async function POST(req: NextRequest) {
       bestell_nr,
       datum,
       kunde_name: `${kunde.vorname} ${kunde.nachname}`,
+      kunde_instagram: kunde.instagram,
       kunde_telefon: kunde.telefon,
       kunde_kontakt: kunde.email,
       lieferadresse,
