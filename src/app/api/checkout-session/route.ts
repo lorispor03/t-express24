@@ -13,7 +13,7 @@ function getRedis() {
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
-    const { items, kunde, lieferadresse, nachricht, zahlungsart, bundle, bundleDiscount } = body;
+    const { items, kunde, lieferadresse, nachricht, zahlungsart, kontaktweg, bundle, bundleDiscount } = body;
 
     if (!items?.length || !kunde?.vorname || !kunde?.nachname || !kunde?.email) {
       return NextResponse.json({ error: 'Fehlende Daten' }, { status: 400 });
@@ -49,6 +49,7 @@ export async function POST(req: NextRequest) {
       lieferadresse,
       nachricht,
       zahlungsart,
+      kontaktweg,
       bundle,
       bundleDiscount,
       totalCents,
@@ -67,6 +68,7 @@ export async function POST(req: NextRequest) {
       lieferadresse,
       nachricht,
       zahlungsart: zahlungsart || 'Wird noch vereinbart',
+      kontaktweg: kontaktweg || 'instagram',
       items,
       gesamtpreis,
     };
@@ -76,7 +78,7 @@ export async function POST(req: NextRequest) {
       sendOrderNotificationToAdmin(emailOrder),
     ]);
 
-    return NextResponse.json({ url: '/checkout/success' });
+    return NextResponse.json({ url: `/checkout/success?nr=${encodeURIComponent(bestell_nr)}&kontakt=${kontaktweg || 'instagram'}` });
   } catch (err: any) {
     console.error('Checkout error:', err);
     return NextResponse.json({ error: err.message || 'Bestellfehler' }, { status: 500 });

@@ -36,6 +36,7 @@ type OrderData = {
   kunde_instagram?: string;
   kunde_telefon?: string;
   kunde_kontakt: string;
+  kontaktweg?: string;
   lieferadresse: OrderLieferadresse;
   nachricht?: string;
   zahlungsart: string;
@@ -250,6 +251,10 @@ export async function sendOrderNotificationToAdmin(order: OrderData) {
                     ${order.kunde_instagram ? `📸 <a href="https://instagram.com/${order.kunde_instagram}" style="color:#c4222e; text-decoration:none; font-weight:600;">@${order.kunde_instagram}</a><br>` : ''}
                     📧 ${order.kunde_kontakt}<br>
                     ${order.kunde_telefon ? `📱 ${order.kunde_telefon}<br>` : ''}
+                  </div>
+
+                  <div style="background:#fff0f0; border-left:4px solid #c4222e; padding:12px; margin-bottom:16px; font-size:14px;">
+                    <strong style="color:#c4222e;">📌 Bevorzugter Kontaktweg:</strong> ${order.kontaktweg === 'instagram' ? `Instagram (@${order.kunde_instagram || '?'})` : `E-Mail (${order.kunde_kontakt})`}
                   </div>
 
                   <h2 style="color:#111; font-size:16px; margin:0 0 12px 0;">Lieferadresse</h2>

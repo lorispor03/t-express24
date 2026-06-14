@@ -19,6 +19,7 @@ export default function CheckoutPage() {
   const [ort, setOrt] = useState('');
   const [land, setLand] = useState('Schweiz');
   const [nachricht, setNachricht] = useState('');
+  const [kontaktweg, setKontaktweg] = useState<'instagram' | 'email' | ''>('');
   const [zahlungsart, setZahlungsart] = useState('');
   const [submitting, setSubmitting] = useState(false);
   const [error, setError] = useState('');
@@ -56,7 +57,7 @@ export default function CheckoutPage() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!vorname.trim() || !nachname.trim() || !instagram.trim() || !email.trim() || !strasse.trim() || !plz.trim() || !ort.trim()) return;
+    if (!vorname.trim() || !nachname.trim() || !instagram.trim() || !email.trim() || !strasse.trim() || !plz.trim() || !ort.trim() || !kontaktweg) return;
 
     setSubmitting(true);
     setError('');
@@ -80,6 +81,7 @@ export default function CheckoutPage() {
             land: land,
           },
           zahlungsart,
+          kontaktweg,
           nachricht: nachricht.trim(),
           bundle: activeBundle,
           bundleDiscount,
@@ -137,7 +139,7 @@ export default function CheckoutPage() {
             </div>
             <div>
               <h1 className="text-2xl md:text-6xl font-black uppercase tracking-wide" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
-                Bestellung abschliessen
+                Bestellung aufgeben
               </h1>
               <p className="text-gray-400 mt-1 text-sm">{totalItems} {totalItems === 1 ? 'Artikel' : 'Artikel'} im Warenkorb</p>
             </div>
@@ -228,6 +230,30 @@ export default function CheckoutPage() {
                 </div>
               </div>
 
+              {/* Kontaktweg */}
+              <div className="bg-[#e8e8e8] rounded-xl p-5 border border-gray-200 space-y-4">
+                <h2 className="text-lg font-bold uppercase tracking-wide" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>Wie möchtest du kontaktiert werden?</h2>
+                <p className="text-xs text-gray-500">Wir melden uns bei dir zur Zahlungsabwicklung.</p>
+                <div className="grid grid-cols-2 gap-3">
+                  <button
+                    type="button"
+                    onClick={() => setKontaktweg('instagram')}
+                    className={`flex flex-col items-center justify-center gap-2 p-4 rounded-lg border-2 transition-all ${kontaktweg === 'instagram' ? 'border-[var(--red-main)] bg-white shadow-md' : 'border-gray-200 bg-white hover:border-gray-300'}`}
+                  >
+                    <svg className="w-8 h-8 text-gray-700" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" /><circle cx="12" cy="12" r="5" /><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" /></svg>
+                    <span className="text-xs text-gray-700 font-medium">Instagram</span>
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setKontaktweg('email')}
+                    className={`flex flex-col items-center justify-center gap-2 p-4 rounded-lg border-2 transition-all ${kontaktweg === 'email' ? 'border-[var(--red-main)] bg-white shadow-md' : 'border-gray-200 bg-white hover:border-gray-300'}`}
+                  >
+                    <svg className="w-8 h-8 text-gray-700" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" /></svg>
+                    <span className="text-xs text-gray-700 font-medium">E-Mail</span>
+                  </button>
+                </div>
+              </div>
+
               {/* Lieferadresse */}
               <div className="bg-[#e8e8e8] rounded-xl p-5 border border-gray-200 space-y-4">
                 <h2 className="text-lg font-bold uppercase tracking-wide" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>Lieferadresse</h2>
@@ -281,37 +307,6 @@ export default function CheckoutPage() {
                 </div>
               </div>
 
-              {/* Zahlungsart */}
-              <div className="bg-[#e8e8e8] rounded-xl p-5 border border-gray-200 space-y-4">
-                <h2 className="text-lg font-bold uppercase tracking-wide" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>Bevorzugte Zahlungsart</h2>
-                <p className="text-xs text-gray-500">Wähle deine bevorzugte Zahlungsart – wir melden uns bei dir zur Abwicklung.</p>
-                <div className="grid grid-cols-3 gap-3">
-                  <button
-                    type="button"
-                    onClick={() => setZahlungsart('twint')}
-                    className={`flex flex-col items-center justify-center gap-2 p-4 rounded-lg border-2 transition-all ${zahlungsart === 'twint' ? 'border-[var(--red-main)] bg-white shadow-md' : 'border-gray-200 bg-white hover:border-gray-300'}`}
-                  >
-                    <img src="/twint-logo.png" alt="TWINT" className="h-8 w-auto" />
-                    <span className="text-xs text-gray-700 font-medium">TWINT</span>
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() => setZahlungsart('visa')}
-                    className={`flex flex-col items-center justify-center gap-2 p-4 rounded-lg border-2 transition-all ${zahlungsart === 'visa' ? 'border-[var(--red-main)] bg-white shadow-md' : 'border-gray-200 bg-white hover:border-gray-300'}`}
-                  >
-                    <img src="/visa-logo.svg" alt="Visa" className="h-8 w-auto" />
-                    <span className="text-xs text-gray-700 font-medium">Visa</span>
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() => setZahlungsart('mastercard')}
-                    className={`flex flex-col items-center justify-center gap-2 p-4 rounded-lg border-2 transition-all ${zahlungsart === 'mastercard' ? 'border-[var(--red-main)] bg-white shadow-md' : 'border-gray-200 bg-white hover:border-gray-300'}`}
-                  >
-                    <img src="/mastercard-logo.svg" alt="Mastercard" className="h-8 w-auto" />
-                    <span className="text-xs text-gray-700 font-medium">Mastercard</span>
-                  </button>
-                </div>
-              </div>
 
               {/* Nachricht */}
               <div className="bg-[#e8e8e8] rounded-xl p-5 border border-gray-200 space-y-4">
@@ -329,7 +324,7 @@ export default function CheckoutPage() {
               </div>
 
               {/* Trust Badges */}
-              <div className="grid grid-cols-3 gap-3">
+              <div className="grid grid-cols-2 gap-3">
                 <div className="bg-[#e8e8e8] rounded-xl p-4 border border-gray-200 text-center">
                   <svg className="w-6 h-6 mx-auto text-[var(--gold)] mb-2" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 00-10.026 0 1.106 1.106 0 00-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12" /></svg>
                   <p className="text-xs font-bold text-gray-700">Kostenloser Versand</p>
@@ -339,11 +334,6 @@ export default function CheckoutPage() {
                   <svg className="w-6 h-6 mx-auto text-[var(--gold)] mb-2" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" /></svg>
                   <p className="text-xs font-bold text-gray-700">Qualitätsgeprüft</p>
                   <p className="text-[10px] text-gray-500 mt-0.5">Jedes Trikot kontrolliert</p>
-                </div>
-                <div className="bg-[#e8e8e8] rounded-xl p-4 border border-gray-200 text-center">
-                  <svg className="w-6 h-6 mx-auto text-[var(--gold)] mb-2" fill="none" stroke="currentColor" strokeWidth={1.5} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 10-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 002.25-2.25v-6.75a2.25 2.25 0 00-2.25-2.25H6.75a2.25 2.25 0 00-2.25 2.25v6.75a2.25 2.25 0 002.25 2.25z" /></svg>
-                  <p className="text-xs font-bold text-gray-700">Sichere Zahlung</p>
-                  <p className="text-[10px] text-gray-500 mt-0.5">SSL-verschlüsselt</p>
                 </div>
               </div>
             </div>
@@ -472,10 +462,10 @@ export default function CheckoutPage() {
 
                 <button
                   type="submit"
-                  disabled={submitting || !vorname.trim() || !nachname.trim() || !instagram.trim() || !email.trim() || !strasse.trim() || !plz.trim() || !ort.trim()}
+                  disabled={submitting || !vorname.trim() || !nachname.trim() || !instagram.trim() || !email.trim() || !strasse.trim() || !plz.trim() || !ort.trim() || !kontaktweg}
                   className="w-full bg-[var(--red-main)] hover:bg-[#a81d27] disabled:opacity-50 disabled:cursor-not-allowed text-white font-bold py-3.5 rounded-lg text-sm transition-colors"
                 >
-                  {submitting ? 'Bestellung wird gesendet...' : `Jetzt bestellen — CHF ${finalPrice.toFixed(2)}`}
+                  {submitting ? 'Bestellung wird gesendet...' : `Bestellung aufgeben — CHF ${finalPrice.toFixed(2)}`}
                 </button>
 
                 <p className="text-[10px] text-gray-500 text-center leading-relaxed">
