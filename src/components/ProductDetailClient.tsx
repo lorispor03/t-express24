@@ -173,6 +173,28 @@ export default function ProductDetailClient({ product, teamId, teamName, leagueN
   const patchMissing = hasPatches && !selectedPatchId;
   const extrasIncomplete = aufdruckMissing || patchMissing;
 
+  const [shakeFields, setShakeFields] = useState<Set<string>>(new Set());
+  const sizeRef = useRef<HTMLDivElement>(null);
+  const aufdruckRef = useRef<HTMLDivElement>(null);
+  const patchRef = useRef<HTMLDivElement>(null);
+
+  const handleTryAdd = () => {
+    const missing = new Set<string>();
+    if (!size) missing.add('size');
+    if (aufdruckMissing) missing.add('aufdruck');
+    if (patchMissing) missing.add('patch');
+
+    if (missing.size > 0) {
+      setShakeFields(missing);
+      // Scroll to first missing field
+      const firstRef = missing.has('size') ? sizeRef : missing.has('aufdruck') ? aufdruckRef : patchRef;
+      firstRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      setTimeout(() => setShakeFields(new Set()), 600);
+      return;
+    }
+    handleAdd();
+  };
+
   const handleAdd = () => {
     if (!size || extrasIncomplete) return;
     const patches = (hasPatches && selectedPatch) ? [selectedPatch] : [];
@@ -305,9 +327,9 @@ export default function ProductDetailClient({ product, teamId, teamName, leagueN
           </div>
 
           {/* Size Selection */}
-          <div className="mb-3 md:mb-5">
-            <label className="block text-sm font-medium mb-2 md:mb-3">
-              Grösse wählen
+          <div ref={sizeRef} className={`mb-3 md:mb-5 ${shakeFields.has('size') ? 'animate-shake' : ''}`}>
+            <label className="block text-sm font-medium text-gray-900 mb-2 md:mb-3">
+              Grösse
             </label>
             <div className="flex flex-wrap gap-2">
               {sizes.map(s => (
@@ -317,7 +339,9 @@ export default function ProductDetailClient({ product, teamId, teamName, leagueN
                   className={`px-4 py-2 rounded-lg text-sm font-medium border transition-all ${
                     size === s
                       ? 'bg-[var(--red-main)] border-[var(--red-main)] text-white'
-                      : 'bg-gray-100 border-gray-200 text-gray-600 hover:border-gray-300'
+                      : shakeFields.has('size')
+                        ? 'bg-red-50 border-red-300 text-gray-600'
+                        : 'bg-gray-100 border-gray-200 text-gray-600 hover:border-gray-300'
                   }`}
                 >
                   {s}
@@ -329,7 +353,7 @@ export default function ProductDetailClient({ product, teamId, teamName, leagueN
           {/* Extras */}
           {isJersey && (
             <div className="mb-3 md:mb-6">
-              <label className="block text-sm font-medium mb-2 md:mb-3">Extras (optional)</label>
+              <label className="block text-sm font-medium text-gray-900 mb-2 md:mb-3">Optionen</label>
               <div className={`grid gap-2 items-stretch ${availablePatchSets.length > 0 ? 'grid-cols-4' : 'grid-cols-2'}`}>
                 <button
                   onClick={() => handleExtraChange('none')}
@@ -385,36 +409,46 @@ export default function ProductDetailClient({ product, teamId, teamName, leagueN
                 )}
               </div>
 
-              {/* Aufdruck-Felder */}
-              {hasAufdruck && (
-                <div className="mt-3">
-                  <label className="block text-sm font-medium mb-2">Name und Nummer für den Aufdruck</label>
-                  <div className="flex gap-2">
-                    <input
-                      type="text"
-                      value={flockingName}
-                      onChange={e => setFlockingName(e.target.value.replace(/[0-9]/g, '').slice(0, 13))}
-                      placeholder="z.B. Ronaldo"
-                      className="flex-1 bg-[#f0f0f0] border border-gray-200 rounded-lg px-4 py-2.5 text-base md:text-sm text-gray-900 focus:outline-none focus:border-[var(--red-main)] transition-colors"
-                    />
-                    <input
-                      type="text"
-                      inputMode="numeric"
-                      pattern="[0-9]*"
-                      maxLength={3}
-                      value={flockingNumber}
-                      onChange={e => { const v = e.target.value.replace(/\D/g, '').slice(0, 3); setFlockingNumber(v); }}
-                      placeholder="Nr."
-                      className="w-16 bg-[#f0f0f0] border border-gray-200 rounded-lg px-3 py-2.5 text-base md:text-sm text-gray-900 focus:outline-none focus:border-[var(--red-main)] transition-colors text-center"
-                    />
-                  </div>
+              {/* Aufdruck-Felder — immer sichtbar, grau wenn nicht aktiv */}
+              <div ref={aufdruckRef} className={`mt-3 relative transition-opacity ${hasAufdruck ? 'opacity-100' : 'opacity-40'} ${shakeFields.has('aufdruck') ? 'animate-shake' : ''}`}
+                onClick={() => { if (!hasAufdruck) handleExtraChange(hasPatches ? 'komplett' : 'aufdruck'); }}
+              >
+                {!hasAufdruck && (
+                  <div className="absolute inset-0 z-10 cursor-pointer" />
+                )}
+                <label className="block text-sm font-medium text-gray-900 mb-2">Aufdruck</label>
+                <div className="flex gap-2">
+                  <input
+                    type="text"
+                    value={flockingName}
+                    onChange={e => setFlockingName(e.target.value.replace(/[0-9]/g, '').slice(0, 13))}
+                    placeholder="z.B. Ronaldo"
+                    tabIndex={hasAufdruck ? 0 : -1}
+                    className={`flex-1 rounded-lg px-4 py-2.5 text-base md:text-sm text-gray-900 focus:outline-none focus:border-[var(--red-main)] transition-colors border ${shakeFields.has('aufdruck') ? 'bg-red-50 border-red-300' : 'bg-[#f0f0f0] border-gray-200'}`}
+                  />
+                  <input
+                    type="text"
+                    inputMode="numeric"
+                    pattern="[0-9]*"
+                    maxLength={3}
+                    value={flockingNumber}
+                    onChange={e => { const v = e.target.value.replace(/\D/g, '').slice(0, 3); setFlockingNumber(v); }}
+                    placeholder="Nr."
+                    tabIndex={hasAufdruck ? 0 : -1}
+                    className={`w-16 rounded-lg px-3 py-2.5 text-base md:text-sm text-gray-900 focus:outline-none focus:border-[var(--red-main)] transition-colors text-center border ${shakeFields.has('aufdruck') ? 'bg-red-50 border-red-300' : 'bg-[#f0f0f0] border-gray-200'}`}
+                  />
                 </div>
-              )}
+              </div>
 
-              {/* Patch-Auswahl */}
-              {hasPatches && availablePatchSets.length > 0 && (
-                <div className="mt-3">
-                  <label className="block text-sm font-medium mb-2">Patch-Set wählen</label>
+              {/* Patch-Auswahl — immer sichtbar, grau wenn nicht aktiv */}
+              {availablePatchSets.length > 0 && (
+                <div ref={patchRef} className={`mt-3 relative transition-opacity ${hasPatches ? 'opacity-100' : 'opacity-40'} ${shakeFields.has('patch') ? 'animate-shake' : ''}`}
+                  onClick={() => { if (!hasPatches) handleExtraChange(hasAufdruck ? 'komplett' : 'patches'); }}
+                >
+                  {!hasPatches && (
+                    <div className="absolute inset-0 z-10 cursor-pointer" />
+                  )}
+                  <label className="block text-sm font-medium text-gray-900 mb-2">Patches</label>
                   <div className="grid grid-cols-4 md:grid-cols-5 gap-2">
                     {availablePatchSets.map(patchSet => {
                       const isSelected = selectedPatchId === patchSet.id;
@@ -422,10 +456,13 @@ export default function ProductDetailClient({ product, teamId, teamName, leagueN
                         <button
                           key={patchSet.id}
                           onClick={() => handleSelectPatch(patchSet.id)}
+                          tabIndex={hasPatches ? 0 : -1}
                           className={`group relative flex flex-col items-center p-2 rounded-lg border transition-all ${
                             isSelected
                               ? 'bg-[var(--red-main)]/10 border-[var(--red-main)] ring-1 ring-[var(--red-main)]'
-                              : 'bg-gray-100 border-gray-200 hover:border-gray-300'
+                              : shakeFields.has('patch')
+                                ? 'bg-red-50 border-red-300'
+                                : 'bg-gray-100 border-gray-200 hover:border-gray-300'
                           }`}
                         >
                           <div className="w-full aspect-square rounded overflow-hidden mb-1 bg-white">
@@ -435,7 +472,6 @@ export default function ProductDetailClient({ product, teamId, teamName, leagueN
                               className="w-full h-full object-contain p-1"
                             />
                           </div>
-                          {/* Tooltip on hover/long-press */}
                           <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 bg-black/90 text-white text-[10px] px-2 py-1 rounded whitespace-nowrap opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity z-20 max-w-[160px] truncate">
                             {patchSet.name}
                           </div>
@@ -457,12 +493,11 @@ export default function ProductDetailClient({ product, teamId, teamName, leagueN
 
           {/* Add to Cart */}
           <button
-            onClick={handleAdd}
-            disabled={!size || extrasIncomplete}
+            onClick={handleTryAdd}
             className={`w-full flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl text-sm font-bold transition-all ${
               added
                 ? 'bg-green-600 text-white'
-                : 'bg-[var(--red-main)] hover:bg-[#a81d27] text-white disabled:opacity-40 disabled:cursor-not-allowed'
+                : 'bg-[var(--red-main)] hover:bg-[#a81d27] text-white'
             }`}
           >
             {added ? (
@@ -481,12 +516,6 @@ export default function ProductDetailClient({ product, teamId, teamName, leagueN
               </>
             )}
           </button>
-
-          {(!size || extrasIncomplete) && (
-            <p className="text-xs text-gray-500 mt-2 text-center">
-              {!size ? 'Bitte wähle zuerst eine Grösse' : aufdruckMissing && patchMissing ? 'Bitte Aufdruck und Patch-Set ausfüllen' : aufdruckMissing ? 'Bitte Name und Nummer eingeben' : 'Bitte Patch-Set wählen'}
-            </p>
-          )}
 
           {/* Trust badges */}
           <div className="mt-8 grid grid-cols-2 gap-3">
