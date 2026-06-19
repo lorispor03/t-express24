@@ -13734,37 +13734,52 @@
     {
       "name": "WM 2026 Gold Badge",
       "price": 0.8,
-      "image": "/patches/peterbot/wm2026_gold_badge_new.png"
+      "image": "/patches/peterbot/auto_b0590890e392.png"
+    },
+    {
+      "name": "WM Qualifikation + Respect",
+      "price": 2.4,
+      "image": "/patches/peterbot/auto_a7d8958ac74c.webp"
     },
     {
       "name": "Gruppenphase",
       "price": 0.8,
-      "image": "/patches/peterbot/wm2026_stage2.png"
+      "image": "/patches/peterbot/auto_163e5db1971d.png"
     },
     {
       "name": "1/8-Final",
       "price": 0.8,
-      "image": "/patches/peterbot/wm2026_r32.png"
+      "image": "/patches/peterbot/auto_947458609c10.png"
     },
     {
       "name": "1/16-Final",
       "price": 0.8,
-      "image": "/patches/peterbot/wm2026_r16.png"
+      "image": "/patches/peterbot/auto_4826f890ba0b.png"
     },
     {
       "name": "1/4-Final",
       "price": 0.8,
-      "image": "/patches/peterbot/wm2026_qf.png"
+      "image": "/patches/peterbot/auto_c7678677f2db.png"
     },
     {
       "name": "1/2-Final",
       "price": 0.8,
-      "image": "/patches/peterbot/wm2026_sf.png"
+      "image": "/patches/peterbot/auto_b4e3cfe2f3f2.png"
     },
     {
       "name": "Final",
       "price": 0.8,
-      "image": "/patches/peterbot/wm2026_final.png"
+      "image": "/patches/peterbot/auto_5792d05204e0.png"
+    },
+    {
+      "name": "WM Qualifikation Set",
+      "price": 2.4,
+      "image": "/patches/peterbot/auto_f22719f1c8da.webp"
+    },
+    {
+      "name": "WM 2026 Flock Badge",
+      "price": 1.6,
+      "image": "/patches/peterbot/auto_13b9144d5b6a.webp"
     }
   ],
   "retro-germany-2008-home-white-s-xxl": [
@@ -21497,9 +21512,39 @@
   ],
   "2026-world-cup-mexico-away-jersey": [
     {
-      "name": "WM 2026",
-      "price": 1.6,
-      "image": "/patches/peterbot/wm2026_base.jpg"
+      "name": "WM 2026 Gold Badge",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_gold_badge.jpg"
+    },
+    {
+      "name": "Gruppenphase",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_peace_blue.jpg"
+    },
+    {
+      "name": "1/8-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_blue.jpg"
+    },
+    {
+      "name": "1/16-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_green.jpg"
+    },
+    {
+      "name": "1/4-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_dark.jpg"
+    },
+    {
+      "name": "1/2-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_purple.jpg"
+    },
+    {
+      "name": "Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_dark.jpg"
     }
   ],
   "kids-2026-world-cup-mexico-away-kit-16-28": [
@@ -21578,16 +21623,76 @@
   ],
   "mexico-2026-away-jersey": [
     {
-      "name": "WM 2026",
-      "price": 1.6,
-      "image": "/patches/peterbot/wm2026_base.jpg"
+      "name": "WM 2026 Gold Badge",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_gold_badge.jpg"
+    },
+    {
+      "name": "Gruppenphase",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_peace_blue.jpg"
+    },
+    {
+      "name": "1/8-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_blue.jpg"
+    },
+    {
+      "name": "1/16-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_green.jpg"
+    },
+    {
+      "name": "1/4-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_dark.jpg"
+    },
+    {
+      "name": "1/2-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_purple.jpg"
+    },
+    {
+      "name": "Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_dark.jpg"
     }
   ],
   "mexico-26-away-goalkeeper-jersey": [
     {
-      "name": "WM 2026",
-      "price": 1.6,
-      "image": "/patches/peterbot/wm2026_base.jpg"
+      "name": "WM 2026 Gold Badge",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_gold_badge.jpg"
+    },
+    {
+      "name": "Gruppenphase",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_peace_blue.jpg"
+    },
+    {
+      "name": "1/8-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_blue.jpg"
+    },
+    {
+      "name": "1/16-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_green.jpg"
+    },
+    {
+      "name": "1/4-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_dark.jpg"
+    },
+    {
+      "name": "1/2-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_purple.jpg"
+    },
+    {
+      "name": "Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_dark.jpg"
     }
   ],
   "2026-world-cup-canada-home-jersey-s-4xl-fan-version": [
@@ -21777,9 +21882,39 @@
   ],
   "2026-world-cup-canada-away-jersey_4e38e314": [
     {
-      "name": "WM 2026",
-      "price": 1.6,
-      "image": "/patches/peterbot/wm2026_base.jpg"
+      "name": "WM 2026 Gold Badge",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_gold_badge.jpg"
+    },
+    {
+      "name": "Gruppenphase",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_peace_blue.jpg"
+    },
+    {
+      "name": "1/8-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_blue.jpg"
+    },
+    {
+      "name": "1/16-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_green.jpg"
+    },
+    {
+      "name": "1/4-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_dark.jpg"
+    },
+    {
+      "name": "1/2-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_purple.jpg"
+    },
+    {
+      "name": "Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_dark.jpg"
     }
   ],
   "canada-25-26-goalkeeper-s-xxl": [
@@ -21858,9 +21993,39 @@
   ],
   "2026-world-cup-canada-home-jersey": [
     {
-      "name": "WM 2026",
-      "price": 1.6,
-      "image": "/patches/peterbot/wm2026_base.jpg"
+      "name": "WM 2026 Gold Badge",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_gold_badge.jpg"
+    },
+    {
+      "name": "Gruppenphase",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_peace_blue.jpg"
+    },
+    {
+      "name": "1/8-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_blue.jpg"
+    },
+    {
+      "name": "1/16-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_green.jpg"
+    },
+    {
+      "name": "1/4-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_dark.jpg"
+    },
+    {
+      "name": "1/2-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_purple.jpg"
+    },
+    {
+      "name": "Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_dark.jpg"
     }
   ],
   "canada-25-26-gk-s-xxl": [
@@ -22205,9 +22370,39 @@
   ],
   "2026-world-cup-brazil-home-jersey": [
     {
-      "name": "WM 2026",
-      "price": 1.6,
-      "image": "/patches/peterbot/wm2026_base.jpg"
+      "name": "WM 2026 Gold Badge",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_gold_badge.jpg"
+    },
+    {
+      "name": "Gruppenphase",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_peace_blue.jpg"
+    },
+    {
+      "name": "1/8-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_blue.jpg"
+    },
+    {
+      "name": "1/16-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_green.jpg"
+    },
+    {
+      "name": "1/4-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_dark.jpg"
+    },
+    {
+      "name": "1/2-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_purple.jpg"
+    },
+    {
+      "name": "Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_dark.jpg"
     }
   ],
   "female-2026-world-cup-brazil-away-jersey-s-xxl": [
@@ -22249,16 +22444,76 @@
   ],
   "brazil-2026-home-jersey": [
     {
-      "name": "WM 2026",
-      "price": 1.6,
-      "image": "/patches/peterbot/wm2026_base.jpg"
+      "name": "WM 2026 Gold Badge",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_gold_badge.jpg"
+    },
+    {
+      "name": "Gruppenphase",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_peace_blue.jpg"
+    },
+    {
+      "name": "1/8-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_blue.jpg"
+    },
+    {
+      "name": "1/16-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_green.jpg"
+    },
+    {
+      "name": "1/4-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_dark.jpg"
+    },
+    {
+      "name": "1/2-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_purple.jpg"
+    },
+    {
+      "name": "Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_dark.jpg"
     }
   ],
   "brazil-24-25-special-jersey": [
     {
-      "name": "WM 2026",
-      "price": 1.6,
-      "image": "/patches/peterbot/wm2026_base.jpg"
+      "name": "WM 2026 Gold Badge",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_gold_badge.jpg"
+    },
+    {
+      "name": "Gruppenphase",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_peace_blue.jpg"
+    },
+    {
+      "name": "1/8-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_blue.jpg"
+    },
+    {
+      "name": "1/16-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_green.jpg"
+    },
+    {
+      "name": "1/4-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_dark.jpg"
+    },
+    {
+      "name": "1/2-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_purple.jpg"
+    },
+    {
+      "name": "Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_dark.jpg"
     }
   ],
   "2026-world-cup-brazil-gk-jersey": [
@@ -22300,9 +22555,39 @@
   ],
   "brazil-25-26-goalkeeper": [
     {
-      "name": "WM 2026",
-      "price": 1.6,
-      "image": "/patches/peterbot/wm2026_base.jpg"
+      "name": "WM 2026 Gold Badge",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_gold_badge.jpg"
+    },
+    {
+      "name": "Gruppenphase",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_peace_blue.jpg"
+    },
+    {
+      "name": "1/8-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_blue.jpg"
+    },
+    {
+      "name": "1/16-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_green.jpg"
+    },
+    {
+      "name": "1/4-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_dark.jpg"
+    },
+    {
+      "name": "1/2-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_purple.jpg"
+    },
+    {
+      "name": "Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_dark.jpg"
     }
   ],
   "2026-world-cup-brazil-away-jersey-long-sleeves": [
@@ -22344,16 +22629,76 @@
   ],
   "2026-world-cup-brazil-gk-jersey-2": [
     {
-      "name": "WM 2026",
-      "price": 1.6,
-      "image": "/patches/peterbot/wm2026_base.jpg"
+      "name": "WM 2026 Gold Badge",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_gold_badge.jpg"
+    },
+    {
+      "name": "Gruppenphase",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_peace_blue.jpg"
+    },
+    {
+      "name": "1/8-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_blue.jpg"
+    },
+    {
+      "name": "1/16-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_green.jpg"
+    },
+    {
+      "name": "1/4-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_dark.jpg"
+    },
+    {
+      "name": "1/2-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_purple.jpg"
+    },
+    {
+      "name": "Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_dark.jpg"
     }
   ],
   "2025-26-brazil-special-jersey": [
     {
-      "name": "WM 2026",
-      "price": 1.6,
-      "image": "/patches/peterbot/wm2026_base.jpg"
+      "name": "WM 2026 Gold Badge",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_gold_badge.jpg"
+    },
+    {
+      "name": "Gruppenphase",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_peace_blue.jpg"
+    },
+    {
+      "name": "1/8-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_blue.jpg"
+    },
+    {
+      "name": "1/16-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_green.jpg"
+    },
+    {
+      "name": "1/4-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_dark.jpg"
+    },
+    {
+      "name": "1/2-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_purple.jpg"
+    },
+    {
+      "name": "Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_dark.jpg"
     }
   ],
   "player-version-2026-world-cup-brazil-home-jersey-long-sleeves": [
@@ -22432,9 +22777,39 @@
   ],
   "brazil-26-27-special-jersey": [
     {
-      "name": "WM 2026",
-      "price": 1.6,
-      "image": "/patches/peterbot/wm2026_base.jpg"
+      "name": "WM 2026 Gold Badge",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_gold_badge.jpg"
+    },
+    {
+      "name": "Gruppenphase",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_peace_blue.jpg"
+    },
+    {
+      "name": "1/8-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_blue.jpg"
+    },
+    {
+      "name": "1/16-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_green.jpg"
+    },
+    {
+      "name": "1/4-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_dark.jpg"
+    },
+    {
+      "name": "1/2-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_purple.jpg"
+    },
+    {
+      "name": "Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_dark.jpg"
     }
   ],
   "player-version-2026-brazil-special-jersey": [
@@ -22883,9 +23258,39 @@
   ],
   "usmnt-2026-match-away-usa": [
     {
-      "name": "WM 2026",
-      "price": 1.6,
-      "image": "/patches/peterbot/wm2026_base.jpg"
+      "name": "WM 2026 Gold Badge",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_gold_badge.jpg"
+    },
+    {
+      "name": "Gruppenphase",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_peace_blue.jpg"
+    },
+    {
+      "name": "1/8-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_blue.jpg"
+    },
+    {
+      "name": "1/16-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_green.jpg"
+    },
+    {
+      "name": "1/4-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_dark.jpg"
+    },
+    {
+      "name": "1/2-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_purple.jpg"
+    },
+    {
+      "name": "Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_dark.jpg"
     }
   ],
   "kids-usa-2026-world-cup-home-jersey": [
@@ -22927,9 +23332,39 @@
   ],
   "usa-2026-world-cup-home-jersey": [
     {
-      "name": "WM 2026",
-      "price": 1.6,
-      "image": "/patches/peterbot/wm2026_base.jpg"
+      "name": "WM 2026 Gold Badge",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_gold_badge.jpg"
+    },
+    {
+      "name": "Gruppenphase",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_peace_blue.jpg"
+    },
+    {
+      "name": "1/8-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_blue.jpg"
+    },
+    {
+      "name": "1/16-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_green.jpg"
+    },
+    {
+      "name": "1/4-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_dark.jpg"
+    },
+    {
+      "name": "1/2-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_purple.jpg"
+    },
+    {
+      "name": "Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_dark.jpg"
     }
   ],
   "kids-usa-2026-world-cup-away-jersey": [
@@ -23195,14 +23630,39 @@
   ],
   "player-version-2026-27-germany-special-jersey": [
     {
-      "name": "WM 2026",
-      "price": 1.6,
-      "image": "/patches/peterbot/wm2026_base.jpg"
+      "name": "WM 2026 Gold Badge",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_gold_badge.jpg"
     },
     {
-      "name": "WM 2026 Germany",
-      "price": 4.8,
-      "image": "/patches/peterbot/wm2026_germany.png"
+      "name": "Gruppenphase",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_peace_blue.jpg"
+    },
+    {
+      "name": "1/8-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_blue.jpg"
+    },
+    {
+      "name": "1/16-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_green.jpg"
+    },
+    {
+      "name": "1/4-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_dark.jpg"
+    },
+    {
+      "name": "1/2-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_purple.jpg"
+    },
+    {
+      "name": "Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_dark.jpg"
     }
   ],
   "player-version-2026-world-cup-germany-away-jersey-long-sleeves": [
@@ -23392,16 +23852,76 @@
   ],
   "netherlands-2026-goalkeeper-jersey-2": [
     {
-      "name": "WM 2026",
-      "price": 1.6,
-      "image": "/patches/peterbot/wm2026_base.jpg"
+      "name": "WM 2026 Gold Badge",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_gold_badge.jpg"
+    },
+    {
+      "name": "Gruppenphase",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_peace_blue.jpg"
+    },
+    {
+      "name": "1/8-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_blue.jpg"
+    },
+    {
+      "name": "1/16-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_green.jpg"
+    },
+    {
+      "name": "1/4-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_dark.jpg"
+    },
+    {
+      "name": "1/2-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_purple.jpg"
+    },
+    {
+      "name": "Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_dark.jpg"
     }
   ],
   "netherlands-2026-goalkeeper-jersey": [
     {
-      "name": "WM 2026",
-      "price": 1.6,
-      "image": "/patches/peterbot/wm2026_base.jpg"
+      "name": "WM 2026 Gold Badge",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_gold_badge.jpg"
+    },
+    {
+      "name": "Gruppenphase",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_peace_blue.jpg"
+    },
+    {
+      "name": "1/8-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_blue.jpg"
+    },
+    {
+      "name": "1/16-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_green.jpg"
+    },
+    {
+      "name": "1/4-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_dark.jpg"
+    },
+    {
+      "name": "1/2-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_purple.jpg"
+    },
+    {
+      "name": "Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_dark.jpg"
     }
   ],
   "2026-world-cup-japan-gk-jersey-s-xxl-fan-version": [
@@ -23746,9 +24266,39 @@
   ],
   "2026-world-cup-japan-away-jersey_ba4b9dc8": [
     {
-      "name": "WM 2026",
-      "price": 1.6,
-      "image": "/patches/peterbot/wm2026_base.jpg"
+      "name": "WM 2026 Gold Badge",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_gold_badge.jpg"
+    },
+    {
+      "name": "Gruppenphase",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_peace_blue.jpg"
+    },
+    {
+      "name": "1/8-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_blue.jpg"
+    },
+    {
+      "name": "1/16-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_green.jpg"
+    },
+    {
+      "name": "1/4-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_dark.jpg"
+    },
+    {
+      "name": "1/2-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_purple.jpg"
+    },
+    {
+      "name": "Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_dark.jpg"
     }
   ],
   "player-version-2026-world-cup-japan-away-jersey-long-sleeves": [
@@ -23864,9 +24414,39 @@
   ],
   "female-japan-2026-home-jersey": [
     {
-      "name": "WM 2026",
-      "price": 1.6,
-      "image": "/patches/peterbot/wm2026_base.jpg"
+      "name": "WM 2026 Gold Badge",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_gold_badge.jpg"
+    },
+    {
+      "name": "Gruppenphase",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_peace_blue.jpg"
+    },
+    {
+      "name": "1/8-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_blue.jpg"
+    },
+    {
+      "name": "1/16-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_green.jpg"
+    },
+    {
+      "name": "1/4-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_dark.jpg"
+    },
+    {
+      "name": "1/2-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_purple.jpg"
+    },
+    {
+      "name": "Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_dark.jpg"
     }
   ],
   "2026-world-cup-sweden-home-jersey-s-4xl-fan-version": [
@@ -23982,9 +24562,39 @@
   ],
   "2026-world-cup-sweden-away-jersey_5e410fc6": [
     {
-      "name": "WM 2026",
-      "price": 1.6,
-      "image": "/patches/peterbot/wm2026_base.jpg"
+      "name": "WM 2026 Gold Badge",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_gold_badge.jpg"
+    },
+    {
+      "name": "Gruppenphase",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_peace_blue.jpg"
+    },
+    {
+      "name": "1/8-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_blue.jpg"
+    },
+    {
+      "name": "1/16-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_green.jpg"
+    },
+    {
+      "name": "1/4-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_dark.jpg"
+    },
+    {
+      "name": "1/2-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_purple.jpg"
+    },
+    {
+      "name": "Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_dark.jpg"
     }
   ],
   "2026-world-cup-tunisia-home-jersey-s-xxl-fan-version": [
@@ -24102,14 +24712,39 @@
   ],
   "2026-world-cup-spain-away-jersey_7ffedbe2": [
     {
-      "name": "WM 2026",
-      "price": 1.6,
-      "image": "/patches/peterbot/wm2026_base.jpg"
+      "name": "WM 2026 Gold Badge",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_gold_badge.jpg"
     },
     {
-      "name": "WM 2026 Spain",
-      "price": 4.8,
-      "image": "/patches/peterbot/wm2026_spain.png"
+      "name": "Gruppenphase",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_peace_blue.jpg"
+    },
+    {
+      "name": "1/8-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_blue.jpg"
+    },
+    {
+      "name": "1/16-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_green.jpg"
+    },
+    {
+      "name": "1/4-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_dark.jpg"
+    },
+    {
+      "name": "1/2-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_purple.jpg"
+    },
+    {
+      "name": "Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_dark.jpg"
     }
   ],
   "2026-world-cup-spain-away-jersey-long-sleeves": [
@@ -24188,26 +24823,76 @@
   ],
   "2026-world-cup-spain-away-jersey-2": [
     {
-      "name": "WM 2026",
-      "price": 1.6,
-      "image": "/patches/peterbot/wm2026_base.jpg"
+      "name": "WM 2026 Gold Badge",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_gold_badge.jpg"
     },
     {
-      "name": "WM 2026 Spain",
-      "price": 4.8,
-      "image": "/patches/peterbot/wm2026_spain.png"
+      "name": "Gruppenphase",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_peace_blue.jpg"
+    },
+    {
+      "name": "1/8-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_blue.jpg"
+    },
+    {
+      "name": "1/16-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_green.jpg"
+    },
+    {
+      "name": "1/4-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_dark.jpg"
+    },
+    {
+      "name": "1/2-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_purple.jpg"
+    },
+    {
+      "name": "Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_dark.jpg"
     }
   ],
   "026-world-cup-spain-away-jersey-long-sleeves": [
     {
-      "name": "WM 2026",
-      "price": 1.6,
-      "image": "/patches/peterbot/wm2026_base.jpg"
+      "name": "WM 2026 Gold Badge",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_gold_badge.jpg"
     },
     {
-      "name": "WM 2026 Spain",
-      "price": 4.8,
-      "image": "/patches/peterbot/wm2026_spain.png"
+      "name": "Gruppenphase",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_peace_blue.jpg"
+    },
+    {
+      "name": "1/8-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_blue.jpg"
+    },
+    {
+      "name": "1/16-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_green.jpg"
+    },
+    {
+      "name": "1/4-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_dark.jpg"
+    },
+    {
+      "name": "1/2-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_purple.jpg"
+    },
+    {
+      "name": "Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_dark.jpg"
     }
   ],
   "player-version-2026-world-cup-spain-away-jersey-s-4xl": [
@@ -24619,9 +25304,39 @@
   ],
   "2026-world-cup-france-away-jersey-fan-version_c7d2ece3": [
     {
-      "name": "WM 2026",
-      "price": 1.6,
-      "image": "/patches/peterbot/wm2026_base.jpg"
+      "name": "WM 2026 Gold Badge",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_gold_badge.jpg"
+    },
+    {
+      "name": "Gruppenphase",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_peace_blue.jpg"
+    },
+    {
+      "name": "1/8-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_blue.jpg"
+    },
+    {
+      "name": "1/16-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_green.jpg"
+    },
+    {
+      "name": "1/4-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_dark.jpg"
+    },
+    {
+      "name": "1/2-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_purple.jpg"
+    },
+    {
+      "name": "Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_dark.jpg"
     }
   ],
   "2026-world-cup-france-away-jersey-long-sleeves": [
@@ -24737,9 +25452,39 @@
   ],
   "2026-world-cup-france-home-jersey-fan-version-sl": [
     {
-      "name": "WM 2026",
-      "price": 1.6,
-      "image": "/patches/peterbot/wm2026_base.jpg"
+      "name": "WM 2026 Gold Badge",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_gold_badge.jpg"
+    },
+    {
+      "name": "Gruppenphase",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_peace_blue.jpg"
+    },
+    {
+      "name": "1/8-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_blue.jpg"
+    },
+    {
+      "name": "1/16-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_green.jpg"
+    },
+    {
+      "name": "1/4-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_dark.jpg"
+    },
+    {
+      "name": "1/2-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_purple.jpg"
+    },
+    {
+      "name": "Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_dark.jpg"
     }
   ],
   "france-25-26-goalkeeper-s-xxl": [
@@ -25115,14 +25860,39 @@
   ],
   "2026-world-cup-argentina-away-jersey_9b506091": [
     {
-      "name": "WM 2026",
-      "price": 1.6,
-      "image": "/patches/peterbot/wm2026_base.jpg"
+      "name": "WM 2026 Gold Badge",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_gold_badge.jpg"
     },
     {
-      "name": "WM 2026 Argentina",
-      "price": 4.8,
-      "image": "/patches/peterbot/wm2026_argentina.png"
+      "name": "Gruppenphase",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_peace_blue.jpg"
+    },
+    {
+      "name": "1/8-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_blue.jpg"
+    },
+    {
+      "name": "1/16-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_green.jpg"
+    },
+    {
+      "name": "1/4-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_dark.jpg"
+    },
+    {
+      "name": "1/2-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_purple.jpg"
+    },
+    {
+      "name": "Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_dark.jpg"
     }
   ],
   "player-version-2026-world-cup-argentina-home-jersey-embroidered-crane": [
@@ -25176,50 +25946,150 @@
   ],
   "player-version-2026-argentina-special-jersey-4": [
     {
-      "name": "WM 2026",
-      "price": 1.6,
-      "image": "/patches/peterbot/wm2026_base.jpg"
+      "name": "WM 2026 Gold Badge",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_gold_badge.jpg"
     },
     {
-      "name": "WM 2026 Argentina",
-      "price": 4.8,
-      "image": "/patches/peterbot/wm2026_argentina.png"
+      "name": "Gruppenphase",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_peace_blue.jpg"
+    },
+    {
+      "name": "1/8-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_blue.jpg"
+    },
+    {
+      "name": "1/16-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_green.jpg"
+    },
+    {
+      "name": "1/4-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_dark.jpg"
+    },
+    {
+      "name": "1/2-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_purple.jpg"
+    },
+    {
+      "name": "Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_dark.jpg"
     }
   ],
   "player-version-2026-argentina-special-jersey-2": [
     {
-      "name": "WM 2026",
-      "price": 1.6,
-      "image": "/patches/peterbot/wm2026_base.jpg"
+      "name": "WM 2026 Gold Badge",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_gold_badge.jpg"
     },
     {
-      "name": "WM 2026 Argentina",
-      "price": 4.8,
-      "image": "/patches/peterbot/wm2026_argentina.png"
+      "name": "Gruppenphase",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_peace_blue.jpg"
+    },
+    {
+      "name": "1/8-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_blue.jpg"
+    },
+    {
+      "name": "1/16-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_green.jpg"
+    },
+    {
+      "name": "1/4-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_dark.jpg"
+    },
+    {
+      "name": "1/2-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_purple.jpg"
+    },
+    {
+      "name": "Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_dark.jpg"
     }
   ],
   "player-version-2026-argentina-special-jersey": [
     {
-      "name": "WM 2026",
-      "price": 1.6,
-      "image": "/patches/peterbot/wm2026_base.jpg"
+      "name": "WM 2026 Gold Badge",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_gold_badge.jpg"
     },
     {
-      "name": "WM 2026 Argentina",
-      "price": 4.8,
-      "image": "/patches/peterbot/wm2026_argentina.png"
+      "name": "Gruppenphase",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_peace_blue.jpg"
+    },
+    {
+      "name": "1/8-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_blue.jpg"
+    },
+    {
+      "name": "1/16-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_green.jpg"
+    },
+    {
+      "name": "1/4-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_dark.jpg"
+    },
+    {
+      "name": "1/2-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_purple.jpg"
+    },
+    {
+      "name": "Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_dark.jpg"
     }
   ],
   "2026-world-cup-argentina-away-jersey-long-sleeves_a4306ca4": [
     {
-      "name": "WM 2026",
-      "price": 1.6,
-      "image": "/patches/peterbot/wm2026_base.jpg"
+      "name": "WM 2026 Gold Badge",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_gold_badge.jpg"
     },
     {
-      "name": "WM 2026 Argentina",
-      "price": 4.8,
-      "image": "/patches/peterbot/wm2026_argentina.png"
+      "name": "Gruppenphase",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_peace_blue.jpg"
+    },
+    {
+      "name": "1/8-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_blue.jpg"
+    },
+    {
+      "name": "1/16-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_green.jpg"
+    },
+    {
+      "name": "1/4-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_dark.jpg"
+    },
+    {
+      "name": "1/2-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_purple.jpg"
+    },
+    {
+      "name": "Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_dark.jpg"
     }
   ],
   "player-version-algeria-2026-black-jersey-s-xxl": [
@@ -25372,14 +26242,39 @@
   ],
   "2026-world-cup-austria-away-jersey": [
     {
-      "name": "WM 2026",
-      "price": 1.6,
-      "image": "/patches/peterbot/wm2026_base.jpg"
+      "name": "WM 2026 Gold Badge",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_gold_badge.jpg"
     },
     {
-      "name": "WM 2026 Austria",
-      "price": 4.8,
-      "image": "/patches/peterbot/wm2026_austria.png"
+      "name": "Gruppenphase",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_peace_blue.jpg"
+    },
+    {
+      "name": "1/8-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_blue.jpg"
+    },
+    {
+      "name": "1/16-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_green.jpg"
+    },
+    {
+      "name": "1/4-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_dark.jpg"
+    },
+    {
+      "name": "1/2-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_purple.jpg"
+    },
+    {
+      "name": "Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_dark.jpg"
     }
   ],
   "kids-2026-world-cup-austria-home-jersey": [
@@ -25719,14 +26614,39 @@
   ],
   "female-portugal-2026-home-jersey": [
     {
-      "name": "WM 2026",
-      "price": 1.6,
-      "image": "/patches/peterbot/wm2026_base.jpg"
+      "name": "WM 2026 Gold Badge",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_gold_badge.jpg"
     },
     {
-      "name": "WM 2026 Portugal",
-      "price": 4.8,
-      "image": "/patches/peterbot/wm2026_portugal.png"
+      "name": "Gruppenphase",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_peace_blue.jpg"
+    },
+    {
+      "name": "1/8-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_blue.jpg"
+    },
+    {
+      "name": "1/16-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_green.jpg"
+    },
+    {
+      "name": "1/4-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_dark.jpg"
+    },
+    {
+      "name": "1/2-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_purple.jpg"
+    },
+    {
+      "name": "Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_dark.jpg"
     }
   ],
   "player-version-2026-congo-white-jersey-with-patches-s-xxl": [
@@ -25843,14 +26763,39 @@
   "player-version-2026-colombia-training-jersey-s-xxl": [],
   "2026-world-cup-colombia-away-jersey": [
     {
-      "name": "WM 2026",
-      "price": 1.6,
-      "image": "/patches/peterbot/wm2026_base.jpg"
+      "name": "WM 2026 Gold Badge",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_gold_badge.jpg"
     },
     {
-      "name": "WM 2026 Colombia",
-      "price": 4.8,
-      "image": "/patches/peterbot/wm2026_colombia.png"
+      "name": "Gruppenphase",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_peace_blue.jpg"
+    },
+    {
+      "name": "1/8-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_blue.jpg"
+    },
+    {
+      "name": "1/16-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_green.jpg"
+    },
+    {
+      "name": "1/4-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_dark.jpg"
+    },
+    {
+      "name": "1/2-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_purple.jpg"
+    },
+    {
+      "name": "Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_dark.jpg"
     }
   ],
   "player-version-2026-world-cup-colombia-away-jersey-long-sleeves": [
@@ -26165,9 +27110,39 @@
   ],
   "england-2026-away": [
     {
-      "name": "WM 2026",
-      "price": 1.6,
-      "image": "/patches/peterbot/wm2026_base.jpg"
+      "name": "WM 2026 Gold Badge",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_gold_badge.jpg"
+    },
+    {
+      "name": "Gruppenphase",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_peace_blue.jpg"
+    },
+    {
+      "name": "1/8-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_blue.jpg"
+    },
+    {
+      "name": "1/16-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_green.jpg"
+    },
+    {
+      "name": "1/4-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_dark.jpg"
+    },
+    {
+      "name": "1/2-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_purple.jpg"
+    },
+    {
+      "name": "Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_dark.jpg"
     }
   ],
   "england-palace-jersey": [
@@ -26320,23 +27295,113 @@
   ],
   "england-2026-away-jersey": [
     {
-      "name": "WM 2026",
-      "price": 1.6,
-      "image": "/patches/peterbot/wm2026_base.jpg"
+      "name": "WM 2026 Gold Badge",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_gold_badge.jpg"
+    },
+    {
+      "name": "Gruppenphase",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_peace_blue.jpg"
+    },
+    {
+      "name": "1/8-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_blue.jpg"
+    },
+    {
+      "name": "1/16-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_green.jpg"
+    },
+    {
+      "name": "1/4-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_dark.jpg"
+    },
+    {
+      "name": "1/2-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_purple.jpg"
+    },
+    {
+      "name": "Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_dark.jpg"
     }
   ],
   "england-26-27-goalkeeper-jersey": [
     {
-      "name": "WM 2026",
-      "price": 1.6,
-      "image": "/patches/peterbot/wm2026_base.jpg"
+      "name": "WM 2026 Gold Badge",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_gold_badge.jpg"
+    },
+    {
+      "name": "Gruppenphase",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_peace_blue.jpg"
+    },
+    {
+      "name": "1/8-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_blue.jpg"
+    },
+    {
+      "name": "1/16-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_green.jpg"
+    },
+    {
+      "name": "1/4-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_dark.jpg"
+    },
+    {
+      "name": "1/2-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_purple.jpg"
+    },
+    {
+      "name": "Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_dark.jpg"
     }
   ],
   "england-2026-home-jersey_58c2450f": [
     {
-      "name": "WM 2026",
-      "price": 1.6,
-      "image": "/patches/peterbot/wm2026_base.jpg"
+      "name": "WM 2026 Gold Badge",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_gold_badge.jpg"
+    },
+    {
+      "name": "Gruppenphase",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_peace_blue.jpg"
+    },
+    {
+      "name": "1/8-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_blue.jpg"
+    },
+    {
+      "name": "1/16-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_green.jpg"
+    },
+    {
+      "name": "1/4-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_dark.jpg"
+    },
+    {
+      "name": "1/2-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_purple.jpg"
+    },
+    {
+      "name": "Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_dark.jpg"
     }
   ],
   "england-25-26-goalkeeper-s-xxl": [
@@ -36555,6 +37620,2305 @@
       "name": "Championship",
       "price": 0.8,
       "image": "/patches/peterbot/9a5b041b_71478_e4f76a34f607fb9d58e174055834a60a.webp"
+    }
+  ],
+  "20-21-roma-away-kit-size-s-xxl": [],
+  "2019-brazil-away-jersey-s-xxl": [],
+  "22-23-inter-milan-away-s-xxl": [],
+  "ac-windbreaker": [],
+  "adult-kids-2526-barcelona-half-zipper-training-suit_6d6735cf": [],
+  "mexico-2026-27-special-jersey": [
+    {
+      "name": "WM 2026 Gold Badge",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_gold_badge.jpg"
+    },
+    {
+      "name": "Gruppenphase",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_peace_blue.jpg"
+    },
+    {
+      "name": "1/8-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_blue.jpg"
+    },
+    {
+      "name": "1/16-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_green.jpg"
+    },
+    {
+      "name": "1/4-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_dark.jpg"
+    },
+    {
+      "name": "1/2-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_purple.jpg"
+    },
+    {
+      "name": "Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_dark.jpg"
+    }
+  ],
+  "bosnia-herzegovina-2026-world-cup-home-jersey-s-4xl-fan-version": [
+    {
+      "name": "WM 2026 Gold Badge",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_gold_badge.jpg"
+    },
+    {
+      "name": "Gruppenphase",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_peace_blue.jpg"
+    },
+    {
+      "name": "1/8-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_blue.jpg"
+    },
+    {
+      "name": "1/16-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_green.jpg"
+    },
+    {
+      "name": "1/4-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_dark.jpg"
+    },
+    {
+      "name": "1/2-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_purple.jpg"
+    },
+    {
+      "name": "Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_dark.jpg"
+    }
+  ],
+  "bosnia-herzegovina-2026-world-cup-away-jersey-s-4xl-fan-version": [
+    {
+      "name": "WM 2026 Gold Badge",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_gold_badge.jpg"
+    },
+    {
+      "name": "Gruppenphase",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_peace_blue.jpg"
+    },
+    {
+      "name": "1/8-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_blue.jpg"
+    },
+    {
+      "name": "1/16-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_green.jpg"
+    },
+    {
+      "name": "1/4-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_dark.jpg"
+    },
+    {
+      "name": "1/2-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_purple.jpg"
+    },
+    {
+      "name": "Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_dark.jpg"
+    }
+  ],
+  "2026-world-cup-switzerland-away-jersey-s-xxl-fan-version": [
+    {
+      "name": "WM 2026 Gold Badge",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_gold_badge.jpg"
+    },
+    {
+      "name": "Gruppenphase",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_peace_blue.jpg"
+    },
+    {
+      "name": "1/8-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_blue.jpg"
+    },
+    {
+      "name": "1/16-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_green.jpg"
+    },
+    {
+      "name": "1/4-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_dark.jpg"
+    },
+    {
+      "name": "1/2-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_purple.jpg"
+    },
+    {
+      "name": "Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_dark.jpg"
+    }
+  ],
+  "2026-fifa-world-cup-swiss-home": [
+    {
+      "name": "WM 2026 Gold Badge",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_gold_badge.jpg"
+    },
+    {
+      "name": "Gruppenphase",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_peace_blue.jpg"
+    },
+    {
+      "name": "1/8-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_blue.jpg"
+    },
+    {
+      "name": "1/16-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_green.jpg"
+    },
+    {
+      "name": "1/4-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_dark.jpg"
+    },
+    {
+      "name": "1/2-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_purple.jpg"
+    },
+    {
+      "name": "Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_dark.jpg"
+    }
+  ],
+  "brazil-2026-27-gk-jersey-green": [
+    {
+      "name": "WM 2026 Gold Badge",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_gold_badge.jpg"
+    },
+    {
+      "name": "Gruppenphase",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_peace_blue.jpg"
+    },
+    {
+      "name": "1/8-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_blue.jpg"
+    },
+    {
+      "name": "1/16-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_green.jpg"
+    },
+    {
+      "name": "1/4-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_dark.jpg"
+    },
+    {
+      "name": "1/2-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_purple.jpg"
+    },
+    {
+      "name": "Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_dark.jpg"
+    }
+  ],
+  "usa-2026-world-cup-home-jersey-s-4xl_5b75e737": [
+    {
+      "name": "WM 2026 Gold Badge",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_gold_badge.jpg"
+    },
+    {
+      "name": "Gruppenphase",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_peace_blue.jpg"
+    },
+    {
+      "name": "1/8-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_blue.jpg"
+    },
+    {
+      "name": "1/16-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_green.jpg"
+    },
+    {
+      "name": "1/4-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_dark.jpg"
+    },
+    {
+      "name": "1/2-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_purple.jpg"
+    },
+    {
+      "name": "Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_dark.jpg"
+    }
+  ],
+  "player-version-usa-2026-home-jersey-men-s": [
+    {
+      "name": "WM 2026 Gold Badge",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_gold_badge.jpg"
+    },
+    {
+      "name": "Gruppenphase",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_peace_blue.jpg"
+    },
+    {
+      "name": "1/8-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_blue.jpg"
+    },
+    {
+      "name": "1/16-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_green.jpg"
+    },
+    {
+      "name": "1/4-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_dark.jpg"
+    },
+    {
+      "name": "1/2-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_purple.jpg"
+    },
+    {
+      "name": "Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_dark.jpg"
+    }
+  ],
+  "female-usa-2026-world-cup-away-jersey": [
+    {
+      "name": "WM 2026 Gold Badge",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_gold_badge.jpg"
+    },
+    {
+      "name": "Gruppenphase",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_peace_blue.jpg"
+    },
+    {
+      "name": "1/8-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_blue.jpg"
+    },
+    {
+      "name": "1/16-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_green.jpg"
+    },
+    {
+      "name": "1/4-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_dark.jpg"
+    },
+    {
+      "name": "1/2-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_purple.jpg"
+    },
+    {
+      "name": "Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_dark.jpg"
+    }
+  ],
+  "mens-usa-2026-world-cup-away": [
+    {
+      "name": "WM 2026 Gold Badge",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_gold_badge.jpg"
+    },
+    {
+      "name": "Gruppenphase",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_peace_blue.jpg"
+    },
+    {
+      "name": "1/8-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_blue.jpg"
+    },
+    {
+      "name": "1/16-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_green.jpg"
+    },
+    {
+      "name": "1/4-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_dark.jpg"
+    },
+    {
+      "name": "1/2-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_purple.jpg"
+    },
+    {
+      "name": "Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_dark.jpg"
+    }
+  ],
+  "mens-usa-2026-world-cup-home": [
+    {
+      "name": "WM 2026 Gold Badge",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_gold_badge.jpg"
+    },
+    {
+      "name": "Gruppenphase",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_peace_blue.jpg"
+    },
+    {
+      "name": "1/8-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_blue.jpg"
+    },
+    {
+      "name": "1/16-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_green.jpg"
+    },
+    {
+      "name": "1/4-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_dark.jpg"
+    },
+    {
+      "name": "1/2-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_purple.jpg"
+    },
+    {
+      "name": "Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_dark.jpg"
+    }
+  ],
+  "usa-2026-27-away": [
+    {
+      "name": "WM 2026 Gold Badge",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_gold_badge.jpg"
+    },
+    {
+      "name": "Gruppenphase",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_peace_blue.jpg"
+    },
+    {
+      "name": "1/8-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_blue.jpg"
+    },
+    {
+      "name": "1/16-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_green.jpg"
+    },
+    {
+      "name": "1/4-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_dark.jpg"
+    },
+    {
+      "name": "1/2-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_purple.jpg"
+    },
+    {
+      "name": "Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_dark.jpg"
+    }
+  ],
+  "2026-fifa-world-cup-germany-home": [
+    {
+      "name": "WM 2026 Gold Badge",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_gold_badge.jpg"
+    },
+    {
+      "name": "Gruppenphase",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_peace_blue.jpg"
+    },
+    {
+      "name": "1/8-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_blue.jpg"
+    },
+    {
+      "name": "1/16-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_green.jpg"
+    },
+    {
+      "name": "1/4-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_dark.jpg"
+    },
+    {
+      "name": "1/2-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_purple.jpg"
+    },
+    {
+      "name": "Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_dark.jpg"
+    }
+  ],
+  "2026-germany-third-jersey-pl": [
+    {
+      "name": "WM 2026 Gold Badge",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_gold_badge.jpg"
+    },
+    {
+      "name": "Gruppenphase",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_peace_blue.jpg"
+    },
+    {
+      "name": "1/8-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_blue.jpg"
+    },
+    {
+      "name": "1/16-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_green.jpg"
+    },
+    {
+      "name": "1/4-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_dark.jpg"
+    },
+    {
+      "name": "1/2-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_purple.jpg"
+    },
+    {
+      "name": "Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_dark.jpg"
+    }
+  ],
+  "pl-netherlands-2026-world-cup-home": [
+    {
+      "name": "WM 2026 Gold Badge",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_gold_badge.jpg"
+    },
+    {
+      "name": "Gruppenphase",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_peace_blue.jpg"
+    },
+    {
+      "name": "1/8-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_blue.jpg"
+    },
+    {
+      "name": "1/16-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_green.jpg"
+    },
+    {
+      "name": "1/4-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_dark.jpg"
+    },
+    {
+      "name": "1/2-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_purple.jpg"
+    },
+    {
+      "name": "Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_dark.jpg"
+    }
+  ],
+  "netherlands-2026-world-cup-home-jersey": [
+    {
+      "name": "WM 2026 Gold Badge",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_gold_badge.jpg"
+    },
+    {
+      "name": "Gruppenphase",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_peace_blue.jpg"
+    },
+    {
+      "name": "1/8-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_blue.jpg"
+    },
+    {
+      "name": "1/16-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_green.jpg"
+    },
+    {
+      "name": "1/4-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_dark.jpg"
+    },
+    {
+      "name": "1/2-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_purple.jpg"
+    },
+    {
+      "name": "Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_dark.jpg"
+    }
+  ],
+  "netherlands-2026-world-cup-home-jersey-s-4xl-fan-version_a04f67c5": [
+    {
+      "name": "WM 2026 Gold Badge",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_gold_badge.jpg"
+    },
+    {
+      "name": "Gruppenphase",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_peace_blue.jpg"
+    },
+    {
+      "name": "1/8-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_blue.jpg"
+    },
+    {
+      "name": "1/16-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_green.jpg"
+    },
+    {
+      "name": "1/4-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_dark.jpg"
+    },
+    {
+      "name": "1/2-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_purple.jpg"
+    },
+    {
+      "name": "Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_dark.jpg"
+    }
+  ],
+  "female-netherlands-2026-home-jersey": [
+    {
+      "name": "WM 2026 Gold Badge",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_gold_badge.jpg"
+    },
+    {
+      "name": "Gruppenphase",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_peace_blue.jpg"
+    },
+    {
+      "name": "1/8-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_blue.jpg"
+    },
+    {
+      "name": "1/16-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_green.jpg"
+    },
+    {
+      "name": "1/4-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_dark.jpg"
+    },
+    {
+      "name": "1/2-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_purple.jpg"
+    },
+    {
+      "name": "Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_dark.jpg"
+    }
+  ],
+  "female-netherlands-2026-away-jersey": [
+    {
+      "name": "WM 2026 Gold Badge",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_gold_badge.jpg"
+    },
+    {
+      "name": "Gruppenphase",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_peace_blue.jpg"
+    },
+    {
+      "name": "1/8-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_blue.jpg"
+    },
+    {
+      "name": "1/16-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_green.jpg"
+    },
+    {
+      "name": "1/4-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_dark.jpg"
+    },
+    {
+      "name": "1/2-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_purple.jpg"
+    },
+    {
+      "name": "Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_dark.jpg"
+    }
+  ],
+  "pv-2026-world-cup-japan-away-jersey": [
+    {
+      "name": "WM 2026 Gold Badge",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_gold_badge.jpg"
+    },
+    {
+      "name": "Gruppenphase",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_peace_blue.jpg"
+    },
+    {
+      "name": "1/8-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_blue.jpg"
+    },
+    {
+      "name": "1/16-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_green.jpg"
+    },
+    {
+      "name": "1/4-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_dark.jpg"
+    },
+    {
+      "name": "1/2-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_purple.jpg"
+    },
+    {
+      "name": "Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_dark.jpg"
+    }
+  ],
+  "2026-world-cup-belgium-away": [
+    {
+      "name": "WM 2026 Gold Badge",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_gold_badge.jpg"
+    },
+    {
+      "name": "Gruppenphase",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_peace_blue.jpg"
+    },
+    {
+      "name": "1/8-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_blue.jpg"
+    },
+    {
+      "name": "1/16-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_green.jpg"
+    },
+    {
+      "name": "1/4-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_dark.jpg"
+    },
+    {
+      "name": "1/2-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_purple.jpg"
+    },
+    {
+      "name": "Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_dark.jpg"
+    }
+  ],
+  "player-version-belgium-2026-away-jersey-long-sleeves": [
+    {
+      "name": "WM 2026 Gold Badge",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_gold_badge.jpg"
+    },
+    {
+      "name": "Gruppenphase",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_peace_blue.jpg"
+    },
+    {
+      "name": "1/8-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_blue.jpg"
+    },
+    {
+      "name": "1/16-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_green.jpg"
+    },
+    {
+      "name": "1/4-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_dark.jpg"
+    },
+    {
+      "name": "1/2-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_purple.jpg"
+    },
+    {
+      "name": "Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_dark.jpg"
+    }
+  ],
+  "player-version-belgium-2026-home-jersey-long-sleeves": [
+    {
+      "name": "WM 2026 Gold Badge",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_gold_badge.jpg"
+    },
+    {
+      "name": "Gruppenphase",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_peace_blue.jpg"
+    },
+    {
+      "name": "1/8-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_blue.jpg"
+    },
+    {
+      "name": "1/16-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_green.jpg"
+    },
+    {
+      "name": "1/4-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_dark.jpg"
+    },
+    {
+      "name": "1/2-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_purple.jpg"
+    },
+    {
+      "name": "Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_dark.jpg"
+    }
+  ],
+  "new-zealand-2026-world-cup-home-jersey": [
+    {
+      "name": "WM 2026 Gold Badge",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_gold_badge.jpg"
+    },
+    {
+      "name": "Gruppenphase",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_peace_blue.jpg"
+    },
+    {
+      "name": "1/8-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_blue.jpg"
+    },
+    {
+      "name": "1/16-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_green.jpg"
+    },
+    {
+      "name": "1/4-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_dark.jpg"
+    },
+    {
+      "name": "1/2-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_purple.jpg"
+    },
+    {
+      "name": "Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_dark.jpg"
+    }
+  ],
+  "2026-world-cup-spain-gk-jersey": [
+    {
+      "name": "WM 2026 Gold Badge",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_gold_badge.jpg"
+    },
+    {
+      "name": "Gruppenphase",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_peace_blue.jpg"
+    },
+    {
+      "name": "1/8-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_blue.jpg"
+    },
+    {
+      "name": "1/16-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_green.jpg"
+    },
+    {
+      "name": "1/4-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_dark.jpg"
+    },
+    {
+      "name": "1/2-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_purple.jpg"
+    },
+    {
+      "name": "Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_dark.jpg"
+    }
+  ],
+  "2026-world-cup-spain-gk-jersey-sl": [
+    {
+      "name": "WM 2026 Gold Badge",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_gold_badge.jpg"
+    },
+    {
+      "name": "Gruppenphase",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_peace_blue.jpg"
+    },
+    {
+      "name": "1/8-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_blue.jpg"
+    },
+    {
+      "name": "1/16-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_green.jpg"
+    },
+    {
+      "name": "1/4-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_dark.jpg"
+    },
+    {
+      "name": "1/2-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_purple.jpg"
+    },
+    {
+      "name": "Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_dark.jpg"
+    }
+  ],
+  "2026-fifa-world-cup-spain-home": [
+    {
+      "name": "WM 2026 Gold Badge",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_gold_badge.jpg"
+    },
+    {
+      "name": "Gruppenphase",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_peace_blue.jpg"
+    },
+    {
+      "name": "1/8-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_blue.jpg"
+    },
+    {
+      "name": "1/16-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_green.jpg"
+    },
+    {
+      "name": "1/4-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_dark.jpg"
+    },
+    {
+      "name": "1/2-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_purple.jpg"
+    },
+    {
+      "name": "Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_dark.jpg"
+    }
+  ],
+  "female-france-2026-home-jersey": [
+    {
+      "name": "WM 2026 Gold Badge",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_gold_badge.jpg"
+    },
+    {
+      "name": "Gruppenphase",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_peace_blue.jpg"
+    },
+    {
+      "name": "1/8-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_blue.jpg"
+    },
+    {
+      "name": "1/16-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_green.jpg"
+    },
+    {
+      "name": "1/4-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_dark.jpg"
+    },
+    {
+      "name": "1/2-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_purple.jpg"
+    },
+    {
+      "name": "Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_dark.jpg"
+    }
+  ],
+  "female-france-2026-away-jersey": [
+    {
+      "name": "WM 2026 Gold Badge",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_gold_badge.jpg"
+    },
+    {
+      "name": "Gruppenphase",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_peace_blue.jpg"
+    },
+    {
+      "name": "1/8-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_blue.jpg"
+    },
+    {
+      "name": "1/16-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_green.jpg"
+    },
+    {
+      "name": "1/4-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_dark.jpg"
+    },
+    {
+      "name": "1/2-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_purple.jpg"
+    },
+    {
+      "name": "Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_dark.jpg"
+    }
+  ],
+  "kids-argentina-26-27-home-jersey": [
+    {
+      "name": "WM 2026 Gold Badge",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_gold_badge.jpg"
+    },
+    {
+      "name": "Gruppenphase",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_peace_blue.jpg"
+    },
+    {
+      "name": "1/8-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_blue.jpg"
+    },
+    {
+      "name": "1/16-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_green.jpg"
+    },
+    {
+      "name": "1/4-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_dark.jpg"
+    },
+    {
+      "name": "1/2-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_purple.jpg"
+    },
+    {
+      "name": "Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_dark.jpg"
+    }
+  ],
+  "kids-2026-world-cup-argentina-away": [
+    {
+      "name": "WM 2026 Gold Badge",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_gold_badge.jpg"
+    },
+    {
+      "name": "Gruppenphase",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_peace_blue.jpg"
+    },
+    {
+      "name": "1/8-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_blue.jpg"
+    },
+    {
+      "name": "1/16-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_green.jpg"
+    },
+    {
+      "name": "1/4-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_dark.jpg"
+    },
+    {
+      "name": "1/2-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_purple.jpg"
+    },
+    {
+      "name": "Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_dark.jpg"
+    }
+  ],
+  "2026-world-cup-argentina-home-jersey-long-sleeves-s-4xl-fan-version": [
+    {
+      "name": "WM 2026 Gold Badge",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_gold_badge.jpg"
+    },
+    {
+      "name": "Gruppenphase",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_peace_blue.jpg"
+    },
+    {
+      "name": "1/8-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_blue.jpg"
+    },
+    {
+      "name": "1/16-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_green.jpg"
+    },
+    {
+      "name": "1/4-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_dark.jpg"
+    },
+    {
+      "name": "1/2-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_purple.jpg"
+    },
+    {
+      "name": "Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_dark.jpg"
+    }
+  ],
+  "2026-fifa-world-cup-algeria-home_5ef0bfa9": [
+    {
+      "name": "WM 2026 Gold Badge",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_gold_badge.jpg"
+    },
+    {
+      "name": "Gruppenphase",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_peace_blue.jpg"
+    },
+    {
+      "name": "1/8-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_blue.jpg"
+    },
+    {
+      "name": "1/16-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_green.jpg"
+    },
+    {
+      "name": "1/4-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_dark.jpg"
+    },
+    {
+      "name": "1/2-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_purple.jpg"
+    },
+    {
+      "name": "Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_dark.jpg"
+    }
+  ],
+  "2026-fifa-world-cup-algeria-home": [
+    {
+      "name": "WM 2026 Gold Badge",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_gold_badge.jpg"
+    },
+    {
+      "name": "Gruppenphase",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_peace_blue.jpg"
+    },
+    {
+      "name": "1/8-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_blue.jpg"
+    },
+    {
+      "name": "1/16-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_green.jpg"
+    },
+    {
+      "name": "1/4-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_dark.jpg"
+    },
+    {
+      "name": "1/2-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_purple.jpg"
+    },
+    {
+      "name": "Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_dark.jpg"
+    }
+  ],
+  "2026-fifa-world-cup-austria-home": [
+    {
+      "name": "WM 2026 Gold Badge",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_gold_badge.jpg"
+    },
+    {
+      "name": "Gruppenphase",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_peace_blue.jpg"
+    },
+    {
+      "name": "1/8-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_blue.jpg"
+    },
+    {
+      "name": "1/16-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_green.jpg"
+    },
+    {
+      "name": "1/4-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_dark.jpg"
+    },
+    {
+      "name": "1/2-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_purple.jpg"
+    },
+    {
+      "name": "Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_dark.jpg"
+    }
+  ],
+  "2026-fifa-world-cup-portugal-black-panther": [
+    {
+      "name": "WM 2026 Gold Badge",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_gold_badge.jpg"
+    },
+    {
+      "name": "Gruppenphase",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_peace_blue.jpg"
+    },
+    {
+      "name": "1/8-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_blue.jpg"
+    },
+    {
+      "name": "1/16-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_green.jpg"
+    },
+    {
+      "name": "1/4-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_dark.jpg"
+    },
+    {
+      "name": "1/2-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_purple.jpg"
+    },
+    {
+      "name": "Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_dark.jpg"
+    }
+  ],
+  "2026-fifa-world-cup-portugal-home": [
+    {
+      "name": "WM 2026 Gold Badge",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_gold_badge.jpg"
+    },
+    {
+      "name": "Gruppenphase",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_peace_blue.jpg"
+    },
+    {
+      "name": "1/8-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_blue.jpg"
+    },
+    {
+      "name": "1/16-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_green.jpg"
+    },
+    {
+      "name": "1/4-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_dark.jpg"
+    },
+    {
+      "name": "1/2-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_purple.jpg"
+    },
+    {
+      "name": "Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_dark.jpg"
+    }
+  ],
+  "2026-fifa-world-cup-colombia-home": [
+    {
+      "name": "WM 2026 Gold Badge",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_gold_badge.jpg"
+    },
+    {
+      "name": "Gruppenphase",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_peace_blue.jpg"
+    },
+    {
+      "name": "1/8-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_blue.jpg"
+    },
+    {
+      "name": "1/16-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_green.jpg"
+    },
+    {
+      "name": "1/4-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_dark.jpg"
+    },
+    {
+      "name": "1/2-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_purple.jpg"
+    },
+    {
+      "name": "Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_dark.jpg"
+    }
+  ],
+  "kids-england-26-27-home-jersey": [
+    {
+      "name": "WM 2026 Gold Badge",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_gold_badge.jpg"
+    },
+    {
+      "name": "Gruppenphase",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_peace_blue.jpg"
+    },
+    {
+      "name": "1/8-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_blue.jpg"
+    },
+    {
+      "name": "1/16-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_green.jpg"
+    },
+    {
+      "name": "1/4-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_dark.jpg"
+    },
+    {
+      "name": "1/2-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_purple.jpg"
+    },
+    {
+      "name": "Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_dark.jpg"
+    }
+  ],
+  "england-2026-home-jersey": [
+    {
+      "name": "WM 2026 Gold Badge",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_gold_badge.jpg"
+    },
+    {
+      "name": "Gruppenphase",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_peace_blue.jpg"
+    },
+    {
+      "name": "1/8-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_blue.jpg"
+    },
+    {
+      "name": "1/16-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_green.jpg"
+    },
+    {
+      "name": "1/4-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_dark.jpg"
+    },
+    {
+      "name": "1/2-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_purple.jpg"
+    },
+    {
+      "name": "Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_dark.jpg"
+    }
+  ],
+  "england-2026-away_7b83001d": [
+    {
+      "name": "WM 2026 Gold Badge",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_gold_badge.jpg"
+    },
+    {
+      "name": "Gruppenphase",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_peace_blue.jpg"
+    },
+    {
+      "name": "1/8-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_blue.jpg"
+    },
+    {
+      "name": "1/16-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_green.jpg"
+    },
+    {
+      "name": "1/4-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_dark.jpg"
+    },
+    {
+      "name": "1/2-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_purple.jpg"
+    },
+    {
+      "name": "Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_dark.jpg"
+    }
+  ],
+  "england-2026-away-jersey-long-sleeves_4e81562e": [
+    {
+      "name": "WM 2026 Gold Badge",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_gold_badge.jpg"
+    },
+    {
+      "name": "Gruppenphase",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_peace_blue.jpg"
+    },
+    {
+      "name": "1/8-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_blue.jpg"
+    },
+    {
+      "name": "1/16-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_green.jpg"
+    },
+    {
+      "name": "1/4-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_dark.jpg"
+    },
+    {
+      "name": "1/2-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_purple.jpg"
+    },
+    {
+      "name": "Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_dark.jpg"
+    }
+  ],
+  "player-version-kids-england-26-27-away-jersey": [
+    {
+      "name": "WM 2026 Gold Badge",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_gold_badge.jpg"
+    },
+    {
+      "name": "Gruppenphase",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_peace_blue.jpg"
+    },
+    {
+      "name": "1/8-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_blue.jpg"
+    },
+    {
+      "name": "1/16-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_green.jpg"
+    },
+    {
+      "name": "1/4-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_dark.jpg"
+    },
+    {
+      "name": "1/2-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_purple.jpg"
+    },
+    {
+      "name": "Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_dark.jpg"
+    }
+  ],
+  "player-version-2026-world-cup-croatia-home-jersey-s-4xl": [
+    {
+      "name": "WM 2026 Gold Badge",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_gold_badge.jpg"
+    },
+    {
+      "name": "Gruppenphase",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_peace_blue.jpg"
+    },
+    {
+      "name": "1/8-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_blue.jpg"
+    },
+    {
+      "name": "1/16-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_green.jpg"
+    },
+    {
+      "name": "1/4-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_dark.jpg"
+    },
+    {
+      "name": "1/2-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_purple.jpg"
+    },
+    {
+      "name": "Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_dark.jpg"
+    }
+  ],
+  "2025-26-iraq-away-jersey": [
+    {
+      "name": "WM 2026 Gold Badge",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_gold_badge.jpg"
+    },
+    {
+      "name": "Gruppenphase",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_peace_blue.jpg"
+    },
+    {
+      "name": "1/8-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_blue.jpg"
+    },
+    {
+      "name": "1/16-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_green.jpg"
+    },
+    {
+      "name": "1/4-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_dark.jpg"
+    },
+    {
+      "name": "1/2-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_purple.jpg"
+    },
+    {
+      "name": "Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_dark.jpg"
+    }
+  ],
+  "2025-26-iraq-home-jersey": [
+    {
+      "name": "WM 2026 Gold Badge",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_gold_badge.jpg"
+    },
+    {
+      "name": "Gruppenphase",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_peace_blue.jpg"
+    },
+    {
+      "name": "1/8-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_blue.jpg"
+    },
+    {
+      "name": "1/16-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_green.jpg"
+    },
+    {
+      "name": "1/4-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_dark.jpg"
+    },
+    {
+      "name": "1/2-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_purple.jpg"
+    },
+    {
+      "name": "Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_dark.jpg"
+    }
+  ],
+  "kids-2026-27-world-cup-iraq-away-jersey": [
+    {
+      "name": "WM 2026 Gold Badge",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_gold_badge.jpg"
+    },
+    {
+      "name": "Gruppenphase",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_peace_blue.jpg"
+    },
+    {
+      "name": "1/8-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_blue.jpg"
+    },
+    {
+      "name": "1/16-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_green.jpg"
+    },
+    {
+      "name": "1/4-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_dark.jpg"
+    },
+    {
+      "name": "1/2-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_purple.jpg"
+    },
+    {
+      "name": "Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_dark.jpg"
+    }
+  ],
+  "2026-27-world-cup-iran-home-jersey": [
+    {
+      "name": "WM 2026 Gold Badge",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_gold_badge.jpg"
+    },
+    {
+      "name": "Gruppenphase",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_peace_blue.jpg"
+    },
+    {
+      "name": "1/8-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_blue.jpg"
+    },
+    {
+      "name": "1/16-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_green.jpg"
+    },
+    {
+      "name": "1/4-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_dark.jpg"
+    },
+    {
+      "name": "1/2-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_purple.jpg"
+    },
+    {
+      "name": "Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_dark.jpg"
+    }
+  ],
+  "player-version-2026-27-world-cup-iran-away-jersey": [
+    {
+      "name": "WM 2026 Gold Badge",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_gold_badge.jpg"
+    },
+    {
+      "name": "Gruppenphase",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_peace_blue.jpg"
+    },
+    {
+      "name": "1/8-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_blue.jpg"
+    },
+    {
+      "name": "1/16-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_green.jpg"
+    },
+    {
+      "name": "1/4-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_dark.jpg"
+    },
+    {
+      "name": "1/2-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_purple.jpg"
+    },
+    {
+      "name": "Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_dark.jpg"
+    }
+  ],
+  "player-version-jordan-2026-27-world-cup-home-jersey": [
+    {
+      "name": "WM 2026 Gold Badge",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_gold_badge.jpg"
+    },
+    {
+      "name": "Gruppenphase",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_peace_blue.jpg"
+    },
+    {
+      "name": "1/8-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_blue.jpg"
+    },
+    {
+      "name": "1/16-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_green.jpg"
+    },
+    {
+      "name": "1/4-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_dark.jpg"
+    },
+    {
+      "name": "1/2-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_purple.jpg"
+    },
+    {
+      "name": "Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_dark.jpg"
+    }
+  ],
+  "player-version-jordan-2026-27-world-cup-away-jersey": [
+    {
+      "name": "WM 2026 Gold Badge",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_gold_badge.jpg"
+    },
+    {
+      "name": "Gruppenphase",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_peace_blue.jpg"
+    },
+    {
+      "name": "1/8-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_blue.jpg"
+    },
+    {
+      "name": "1/16-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_green.jpg"
+    },
+    {
+      "name": "1/4-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_dark.jpg"
+    },
+    {
+      "name": "1/2-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_purple.jpg"
+    },
+    {
+      "name": "Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_dark.jpg"
+    }
+  ],
+  "2026-costa-rica-away-jersey": [
+    {
+      "name": "WM 2026 Gold Badge",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_gold_badge.jpg"
+    },
+    {
+      "name": "Gruppenphase",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_peace_blue.jpg"
+    },
+    {
+      "name": "1/8-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_blue.jpg"
+    },
+    {
+      "name": "1/16-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_green.jpg"
+    },
+    {
+      "name": "1/4-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_dark.jpg"
+    },
+    {
+      "name": "1/2-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_purple.jpg"
+    },
+    {
+      "name": "Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_dark.jpg"
+    }
+  ],
+  "2026-costa-rica-home-jersey": [
+    {
+      "name": "WM 2026 Gold Badge",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_gold_badge.jpg"
+    },
+    {
+      "name": "Gruppenphase",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_peace_blue.jpg"
+    },
+    {
+      "name": "1/8-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_blue.jpg"
+    },
+    {
+      "name": "1/16-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_green.jpg"
+    },
+    {
+      "name": "1/4-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_dark.jpg"
+    },
+    {
+      "name": "1/2-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_purple.jpg"
+    },
+    {
+      "name": "Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_dark.jpg"
+    }
+  ],
+  "2026-world-cup-hungary-away-jersey": [
+    {
+      "name": "WM 2026 Gold Badge",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_gold_badge.jpg"
+    },
+    {
+      "name": "Gruppenphase",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_peace_blue.jpg"
+    },
+    {
+      "name": "1/8-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_blue.jpg"
+    },
+    {
+      "name": "1/16-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_green.jpg"
+    },
+    {
+      "name": "1/4-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_dark.jpg"
+    },
+    {
+      "name": "1/2-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_purple.jpg"
+    },
+    {
+      "name": "Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_dark.jpg"
+    }
+  ],
+  "player-version-jamaica-2026-away-jersey": [
+    {
+      "name": "WM 2026 Gold Badge",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_gold_badge.jpg"
+    },
+    {
+      "name": "Gruppenphase",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_peace_blue.jpg"
+    },
+    {
+      "name": "1/8-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_blue.jpg"
+    },
+    {
+      "name": "1/16-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_green.jpg"
+    },
+    {
+      "name": "1/4-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_dark.jpg"
+    },
+    {
+      "name": "1/2-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_purple.jpg"
+    },
+    {
+      "name": "Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_dark.jpg"
+    }
+  ],
+  "player-version-jamaica-2026-home-jersey": [
+    {
+      "name": "WM 2026 Gold Badge",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_gold_badge.jpg"
+    },
+    {
+      "name": "Gruppenphase",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_peace_blue.jpg"
+    },
+    {
+      "name": "1/8-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_blue.jpg"
+    },
+    {
+      "name": "1/16-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_green.jpg"
+    },
+    {
+      "name": "1/4-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_dark.jpg"
+    },
+    {
+      "name": "1/2-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_purple.jpg"
+    },
+    {
+      "name": "Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_dark.jpg"
+    }
+  ],
+  "jamaica-2026-gk-jersey": [
+    {
+      "name": "WM 2026 Gold Badge",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_gold_badge.jpg"
+    },
+    {
+      "name": "Gruppenphase",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_peace_blue.jpg"
+    },
+    {
+      "name": "1/8-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_blue.jpg"
+    },
+    {
+      "name": "1/16-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_green.jpg"
+    },
+    {
+      "name": "1/4-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_dark.jpg"
+    },
+    {
+      "name": "1/2-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_purple.jpg"
+    },
+    {
+      "name": "Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_dark.jpg"
+    }
+  ],
+  "2026-world-cup-peru-away-jersey": [
+    {
+      "name": "WM 2026 Gold Badge",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_gold_badge.jpg"
+    },
+    {
+      "name": "Gruppenphase",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_peace_blue.jpg"
+    },
+    {
+      "name": "1/8-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_blue.jpg"
+    },
+    {
+      "name": "1/16-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_green.jpg"
+    },
+    {
+      "name": "1/4-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_dark.jpg"
+    },
+    {
+      "name": "1/2-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_purple.jpg"
+    },
+    {
+      "name": "Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_dark.jpg"
+    }
+  ],
+  "2026-world-cup-peru-home-jersey": [
+    {
+      "name": "WM 2026 Gold Badge",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_gold_badge.jpg"
+    },
+    {
+      "name": "Gruppenphase",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_peace_blue.jpg"
+    },
+    {
+      "name": "1/8-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_blue.jpg"
+    },
+    {
+      "name": "1/16-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_green.jpg"
+    },
+    {
+      "name": "1/4-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_dark.jpg"
+    },
+    {
+      "name": "1/2-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_purple.jpg"
+    },
+    {
+      "name": "Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_dark.jpg"
+    }
+  ],
+  "2026-world-cup-peru-away-jersey-kids": [
+    {
+      "name": "WM 2026 Gold Badge",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_gold_badge.jpg"
+    },
+    {
+      "name": "Gruppenphase",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_peace_blue.jpg"
+    },
+    {
+      "name": "1/8-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_blue.jpg"
+    },
+    {
+      "name": "1/16-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_green.jpg"
+    },
+    {
+      "name": "1/4-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_dark.jpg"
+    },
+    {
+      "name": "1/2-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_purple.jpg"
+    },
+    {
+      "name": "Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_dark.jpg"
+    }
+  ],
+  "pv-kids-italy-26-27-home-jersey": [
+    {
+      "name": "WM 2026 Gold Badge",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_gold_badge.jpg"
+    },
+    {
+      "name": "Gruppenphase",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_peace_blue.jpg"
+    },
+    {
+      "name": "1/8-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_blue.jpg"
+    },
+    {
+      "name": "1/16-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_green.jpg"
+    },
+    {
+      "name": "1/4-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_dark.jpg"
+    },
+    {
+      "name": "1/2-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_purple.jpg"
+    },
+    {
+      "name": "Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_dark.jpg"
+    }
+  ],
+  "player-version-2026-world-cup-italy-away-jersey-long-sleeves-s-xxl": [
+    {
+      "name": "WM 2026 Gold Badge",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_gold_badge.jpg"
+    },
+    {
+      "name": "Gruppenphase",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_peace_blue.jpg"
+    },
+    {
+      "name": "1/8-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_blue.jpg"
+    },
+    {
+      "name": "1/16-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_green.jpg"
+    },
+    {
+      "name": "1/4-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_dark.jpg"
+    },
+    {
+      "name": "1/2-Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_education_purple.jpg"
+    },
+    {
+      "name": "Final",
+      "price": 0.8,
+      "image": "/patches/peterbot/wm2026_futw_dark.jpg"
     }
   ]
 }
