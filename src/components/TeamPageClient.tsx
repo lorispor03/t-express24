@@ -44,6 +44,9 @@ export default function TeamPageClient({ teamName, teamId, leagueName, leagueSlu
   const availableCategories = useMemo(() => {
     const cats = new Set<string>();
     products.forEach(p => p.c.forEach(c => cats.add(c)));
+    // Remove league/tournament categories that apply to all products on this page
+    const allHave = Array.from(cats).filter(c => products.every(p => p.c.includes(c)));
+    allHave.forEach(c => cats.delete(c));
     // Sort by CATEGORIES order
     const order = Object.keys(CATEGORIES);
     return Array.from(cats).sort((a, b) => order.indexOf(a) - order.indexOf(b));
