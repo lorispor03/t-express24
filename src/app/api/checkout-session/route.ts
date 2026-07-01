@@ -53,9 +53,11 @@ export async function POST(req: NextRequest) {
       bundle,
       bundleDiscount,
       totalCents,
+      gesamtpreis,
       status: 'neu',
     };
     await redis.set(`order:${bestell_nr}`, JSON.stringify(orderData));
+    await redis.lpush('orders', JSON.stringify(orderData));
 
     // E-Mails senden (Kunde + Admin)
     const emailOrder = {
@@ -73,10 +75,11 @@ export async function POST(req: NextRequest) {
       gesamtpreis,
     };
 
-    await Promise.all([
+    // E-Mails im Hintergrund senden (nicht blockierend)
+    Promise.all([
       sendOrderConfirmationToCustomer(emailOrder),
       sendOrderNotificationToAdmin(emailOrder),
-    ]);
+    ]).catch(err => console.error('Email send error:', err));
 
     return NextResponse.json({ url: `/checkout/success?nr=${encodeURIComponent(bestell_nr)}&kontakt=${kontaktweg || 'instagram'}` });
   } catch (err: any) {
