@@ -39,8 +39,6 @@ export async function POST(req: NextRequest) {
     const bestell_nr = `TE-${Date.now().toString(36).toUpperCase()}-${crypto.randomBytes(2).toString('hex').toUpperCase()}`;
     const datum = new Date().toISOString();
 
-    // Bestellung in Redis speichern
-    const redis = getRedis();
     const orderData = {
       bestell_nr,
       datum,
@@ -56,10 +54,8 @@ export async function POST(req: NextRequest) {
       gesamtpreis,
       status: 'neu',
     };
-    await redis.set(`order:${bestell_nr}`, JSON.stringify(orderData));
-    await redis.lpush('orders', JSON.stringify(orderData));
 
-    // E-Mails senden (Kunde + Admin)
+    // E-Mail-Daten
     const emailOrder = {
       bestell_nr,
       datum,
@@ -75,11 +71,24 @@ export async function POST(req: NextRequest) {
       gesamtpreis,
     };
 
-    // E-Mails im Hintergrund senden (nicht blockierend)
-    Promise.all([
-      sendOrderConfirmationToCustomer(emailOrder),
-      sendOrderNotificationToAdmin(emailOrder),
-    ]).catch(err => console.error('Email send error:', err));
+    // Redis + E-Mails im Hintergrund (nicht blockierend)
+    (async () => {
+      try {
+        const redis = getRedis();
+        await redis.set(`order:${bestell_nr}`, JSON.stringify(orderData));
+        await redis.lpush('orders', JSON.stringify(orderData));
+      } catch (err) {
+        console.error('Redis save error:', err);
+      }
+      try {
+        await Promise.all([
+          sendOrderConfirmationToCustomer(emailOrder),
+          sendOrderNotificationToAdmin(emailOrder),
+        ]);
+      } catch (err) {
+        console.error('Email send error:', err);
+      }
+    })();
 
     return NextResponse.json({ url: `/checkout/success?nr=${encodeURIComponent(bestell_nr)}&kontakt=${kontaktweg || 'instagram'}` });
   } catch (err: any) {
