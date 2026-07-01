@@ -8,21 +8,21 @@
           "id": "wm-2026__mexico",
           "name": "Mexiko",
           "slug": "mexico",
-          "count": 17,
+          "count": 18,
           "subLeague": "Gruppe A"
         },
         {
           "id": "wm-2026__southafrica",
           "name": "Südafrika",
           "slug": "southafrica",
-          "count": 0,
+          "count": 8,
           "subLeague": "Gruppe A"
         },
         {
           "id": "wm-2026__korea",
           "name": "Südkorea",
           "slug": "korea",
-          "count": 0,
+          "count": 6,
           "subLeague": "Gruppe A"
         },
         {
@@ -43,7 +43,7 @@
           "id": "wm-2026__canada",
           "name": "Kanada",
           "slug": "canada",
-          "count": 8,
+          "count": 9,
           "subLeague": "Gruppe B"
         },
         {
@@ -64,7 +64,7 @@
           "id": "wm-2026__brazil",
           "name": "Brasilien",
           "slug": "brazil",
-          "count": 12,
+          "count": 15,
           "subLeague": "Gruppe C"
         },
         {
@@ -92,7 +92,7 @@
           "id": "wm-2026__australia",
           "name": "Australien",
           "slug": "australia",
-          "count": 0,
+          "count": 4,
           "subLeague": "Gruppe D"
         },
         {
@@ -106,14 +106,14 @@
           "id": "wm-2026__turkey",
           "name": "Türkei",
           "slug": "turkey",
-          "count": 0,
+          "count": 6,
           "subLeague": "Gruppe D"
         },
         {
           "id": "wm-2026__usa",
           "name": "USA",
           "slug": "usa",
-          "count": 10,
+          "count": 11,
           "subLeague": "Gruppe D"
         },
         {
@@ -126,14 +126,14 @@
           "id": "wm-2026__germany",
           "name": "Deutschland",
           "slug": "germany",
-          "count": 23,
+          "count": 24,
           "subLeague": "Gruppe E"
         },
         {
           "id": "wm-2026__ecuador",
           "name": "Ecuador",
           "slug": "ecuador",
-          "count": 0,
+          "count": 4,
           "subLeague": "Gruppe E"
         },
         {
@@ -146,21 +146,21 @@
           "id": "wm-2026__japan",
           "name": "Japan",
           "slug": "japan",
-          "count": 12,
+          "count": 13,
           "subLeague": "Gruppe F"
         },
         {
           "id": "wm-2026__netherlands",
           "name": "Niederlande",
           "slug": "netherlands",
-          "count": 8,
+          "count": 12,
           "subLeague": "Gruppe F"
         },
         {
           "id": "wm-2026__sweden",
           "name": "Schweden",
           "slug": "sweden",
-          "count": 3,
+          "count": 5,
           "subLeague": "Gruppe F"
         },
         {
@@ -174,7 +174,7 @@
           "id": "wm-2026__belgium",
           "name": "Belgien",
           "slug": "belgium",
-          "count": 10,
+          "count": 11,
           "subLeague": "Gruppe G"
         },
         {
@@ -195,7 +195,7 @@
           "id": "wm-2026__egypt",
           "name": "Ägypten",
           "slug": "egypt",
-          "count": 0,
+          "count": 4,
           "subLeague": "Gruppe G"
         },
         {
@@ -216,7 +216,7 @@
           "id": "wm-2026__spain",
           "name": "Spanien",
           "slug": "spain",
-          "count": 16,
+          "count": 17,
           "subLeague": "Gruppe H"
         },
         {
@@ -229,7 +229,7 @@
           "id": "wm-2026__france",
           "name": "Frankreich",
           "slug": "france",
-          "count": 12,
+          "count": 16,
           "subLeague": "Gruppe I"
         },
         {
@@ -242,14 +242,14 @@
           "id": "wm-2026__norway",
           "name": "Norwegen",
           "slug": "norway",
-          "count": 0,
+          "count": 8,
           "subLeague": "Gruppe I"
         },
         {
           "id": "wm-2026__senegal",
           "name": "Senegal",
           "slug": "senegal",
-          "count": 5,
+          "count": 6,
           "subLeague": "Gruppe I"
         },
         {
@@ -284,7 +284,7 @@
           "id": "wm-2026__colombia",
           "name": "Kolumbien",
           "slug": "colombia",
-          "count": 12,
+          "count": 15,
           "subLeague": "Gruppe K"
         },
         {
@@ -312,28 +312,28 @@
           "id": "wm-2026__england",
           "name": "England",
           "slug": "england",
-          "count": 13,
+          "count": 15,
           "subLeague": "Gruppe L"
         },
         {
           "id": "wm-2026__ghana",
           "name": "Ghana",
           "slug": "ghana",
-          "count": 0,
+          "count": 4,
           "subLeague": "Gruppe L"
         },
         {
           "id": "wm-2026__croatia",
           "name": "Kroatien",
           "slug": "croatia",
-          "count": 5,
+          "count": 6,
           "subLeague": "Gruppe L"
         },
         {
           "id": "wm-2026__panama",
           "name": "Panama",
           "slug": "panama",
-          "count": 0,
+          "count": 3,
           "subLeague": "Gruppe L"
         }
       ],
@@ -72989,9 +72989,27 @@
           "c": [
             "wm-2026"
           ]
+        },
+        {
+          "t": "Mexiko Sondertrikot WM 2026",
+          "h": "mexico-2026-coca-cola",
+          "i": "https://img.wpassets-gamma.com/images/a7e229aa99e4cb3db941b22260a480ba.jpg",
+          "hi": "https://img.wpassets-gamma.com/images/a7e229aa99e4cb3db941b22260a480ba.jpg",
+          "p": "49.90",
+          "c": [
+            "special"
+          ],
+          "imgs": [
+            "https://img.wpassets-gamma.com/images/a7e229aa99e4cb3db941b22260a480ba.jpg",
+            "https://img.wpassets-gamma.com/images/bc21c0800894869dab66f7869bca1c9c.jpg",
+            "https://img.wpassets-gamma.com/images/0dd6d2c7a5890dde2a99248a91088d84.jpg",
+            "https://img.wpassets-gamma.com/images/beda8073f0edacb18a5ee3802a7789fc.jpg"
+          ],
+          "pat": "wm2026",
+          "patI": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250601/wm2026-patch.png"
         }
       ],
-      "productCount": 17,
+      "productCount": 18,
       "subLeague": "Gruppe A"
     },
     "wm-2026__canada": {
@@ -73112,9 +73130,34 @@
           "imgs": [
             "https://img.wpassets-gamma.com/images/7f5f4fa8fc0255afd7a0ebdb614a7e5d.jpg"
           ]
+        },
+        {
+          "t": "Kanada Heimtrikot WM 2026 Player Version",
+          "h": "player-version-2026-world-cup-canada-home-jersey-s-4xl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251115/f97a80c1ca9b7f71a9bb27946efd32f2.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251115/f97a80c1ca9b7f71a9bb27946efd32f2.jpg",
+          "p": "54.90",
+          "c": [
+            "home",
+            "player"
+          ],
+          "imgs": [
+            "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251115/f97a80c1ca9b7f71a9bb27946efd32f2.jpg",
+            "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251115/3ee319c0733ed2c4b266faaecb80a117.jpg",
+            "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251115/710b34c23c815237bed108df01d21cd9.jpg",
+            "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251115/121a69782251657eb519d5dcaf437356.jpg",
+            "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251115/f5e30a451acde55499efe627a7f52aec.jpg",
+            "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251115/da823bd99e3181597c7a8f26f228d12c.jpg",
+            "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251115/ca131f66003fabde2fa84373183a8df7.jpg",
+            "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251115/94579d2f9d44af6763840104879151c4.jpg",
+            "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251115/39f41121b2a4b12893d4096e755507d6.jpg",
+            "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251115/add322e27d38179693d5f6a6b20405d8.jpg"
+          ],
+          "pat": "wm2026",
+          "patI": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250601/wm2026-patch.png"
         }
       ],
-      "productCount": 8,
+      "productCount": 9,
       "subLeague": "Gruppe B"
     },
     "wm-2026__bosnia-and-herzegovina": {
@@ -73411,9 +73454,95 @@
             "wm-2026",
             "goalkeeper"
           ]
+        },
+        {
+          "t": "Brasilien Sondertrikot WM 2026 Player Version",
+          "h": "player-version-2026-brazil-jordan-jersey",
+          "i": "https://img.wpassets-gamma.com/images/87b9cbc3dc8c17cc3788d8aed0512bbb.jpg",
+          "hi": "https://img.wpassets-gamma.com/images/87b9cbc3dc8c17cc3788d8aed0512bbb.jpg",
+          "p": "54.90",
+          "c": [
+            "special",
+            "player"
+          ],
+          "imgs": [
+            "https://img.wpassets-gamma.com/images/87b9cbc3dc8c17cc3788d8aed0512bbb.jpg",
+            "https://img.wpassets-gamma.com/images/0d7fca95768a248aca656191c700a76f.jpg",
+            "https://img.wpassets-gamma.com/images/214db6975eb45ebff74cd6b34864e52c.jpg",
+            "https://img.wpassets-gamma.com/images/b90095761e58ead7cf063a61305c4920.jpg",
+            "https://img.wpassets-gamma.com/images/ebdc8d439cd1579286fb4ba0b4c3cd19.jpg",
+            "https://img.wpassets-gamma.com/images/561f146b1a5aa5720d3d7bbed542ca91.jpg",
+            "https://img.wpassets-gamma.com/images/f9ba19928c6b74c814164fecff3ac539.jpg",
+            "https://img.wpassets-gamma.com/images/b87df2d1aecd0860700c6dc5ce14047f.jpg",
+            "https://img.wpassets-gamma.com/images/755bde78f10688cc3622d4297657e1cf.jpg",
+            "https://img.wpassets-gamma.com/images/e6e8f5b95d3f23b9ce216d7f91832ddf.jpg",
+            "https://img.wpassets-gamma.com/images/a718231d9f6f6b2f9aa507122f7ab00e.jpg",
+            "https://img.wpassets-gamma.com/images/20b0240711ecf64adba3e5608fc4aa0d.jpg",
+            "https://img.wpassets-gamma.com/images/6929c2ce1b0cba461b4cc38c3117e3fb.jpg",
+            "https://img.wpassets-gamma.com/images/6fbd1c294a2658c8ee5d0370a98f69c2.jpg",
+            "https://img.wpassets-gamma.com/images/aa0e949c808d2e931930ce31625034e8.jpg",
+            "https://img.wpassets-gamma.com/images/5b706e016eeea5a43369e1fc55f034ab.jpg",
+            "https://img.wpassets-gamma.com/images/766b61dba18b40fee224b48a23403f39.jpg",
+            "https://img.wpassets-gamma.com/images/a550efec95adecfdd1b0c2a8d59b70ed.jpg",
+            "https://img.wpassets-gamma.com/images/dab00da18049408c73b304e9399341fc.jpg",
+            "https://img.wpassets-gamma.com/images/46bd4040598f04685ca5a389989866a1.jpg",
+            "https://img.wpassets-gamma.com/images/56af226d3319c30fe1c2eb81edd688f1.jpg"
+          ],
+          "pat": "wm2026",
+          "patI": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250601/wm2026-patch.png"
+        },
+        {
+          "t": "Brasilien Heimtrikot WM 2026 Kinder",
+          "h": "kids-brazil-2026-home-kit",
+          "i": "https://img.wpassets-gamma.com/images/e025ab2532ee653de3701d392de9a24b.png",
+          "hi": "https://img.wpassets-gamma.com/images/e025ab2532ee653de3701d392de9a24b.png",
+          "p": "49.90",
+          "c": [
+            "home",
+            "kids"
+          ],
+          "imgs": [
+            "https://img.wpassets-gamma.com/images/e025ab2532ee653de3701d392de9a24b.png",
+            "https://img.wpassets-gamma.com/images/ce54e71399dff9dee9cc4aca469605b1.png",
+            "https://img.wpassets-gamma.com/images/a0b7bf35fcb18da5db5ec2f81be47d71.jpg",
+            "https://img.wpassets-gamma.com/images/3f65ffc1d48aae4cf325d748201dc23c.jpg",
+            "https://img.wpassets-gamma.com/images/14fd7edc5844465500bb1f2c153eac2d.jpg",
+            "https://img.wpassets-gamma.com/images/58ebf482ee51048949cc28c4c0c680cd.jpg",
+            "https://img.wpassets-gamma.com/images/defb4a6a08493fb082ad8aa1cb5e095e.jpg",
+            "https://img.wpassets-gamma.com/images/f0e440b5813819c1cd2dfef9403f8fc5.jpg",
+            "https://img.wpassets-gamma.com/images/25d41a541cb44b6a1425240058de0151.jpg",
+            "https://img.wpassets-gamma.com/images/e65840af543a350d3af2a62caa4f0819.jpg",
+            "https://img.wpassets-gamma.com/images/d998e0792fc586e5e7900f8aeff542b8.jpg"
+          ],
+          "pat": "wm2026",
+          "patI": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250601/wm2026-patch.png"
+        },
+        {
+          "t": "Brasilien Auswärtstrikot WM 2026 Kinder",
+          "h": "kids-brazil-2026-away-kit",
+          "i": "https://img.wpassets-gamma.com/images/536cfc462e0577a507b9b908a5c4b706.png",
+          "hi": "https://img.wpassets-gamma.com/images/536cfc462e0577a507b9b908a5c4b706.png",
+          "p": "49.90",
+          "c": [
+            "away",
+            "kids"
+          ],
+          "imgs": [
+            "https://img.wpassets-gamma.com/images/536cfc462e0577a507b9b908a5c4b706.png",
+            "https://img.wpassets-gamma.com/images/3762ef4e22d433c7f4d72ed3ca384fef.png",
+            "https://img.wpassets-gamma.com/images/de611c92ebfd3da5f7f6a5f12ade8a18.jpg",
+            "https://img.wpassets-gamma.com/images/391ab2b672bb13d69a47e18fcab0cdda.jpg",
+            "https://img.wpassets-gamma.com/images/663d8338f1850b27caf6a2bf885bee36.jpg",
+            "https://img.wpassets-gamma.com/images/74c95e55cb2f85dd09649be548773b9b.jpg",
+            "https://img.wpassets-gamma.com/images/b0b76074d0079bee11f6ba0a1bf7f744.jpg",
+            "https://img.wpassets-gamma.com/images/be9c73ddbf8b22f6602c5f16af7d0177.jpg",
+            "https://img.wpassets-gamma.com/images/5e4cb28c53ca1714a64b69a4485d5d38.jpg"
+          ],
+          "pat": "wm2026",
+          "patI": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250601/wm2026-patch.png"
         }
       ],
-      "productCount": 12,
+      "productCount": 15,
       "subLeague": "Gruppe C"
     },
     "wm-2026__haiti": {
@@ -73806,9 +73935,34 @@
             "wm-2026",
             "damen"
           ]
+        },
+        {
+          "t": "USA Heimtrikot WM 2026 Player Version",
+          "h": "player-version-usa-2026-home-jersey-men-s",
+          "i": "https://img.wpassets-gamma.com/images/04e2cdd2f1646c017500b96549b5400d.jpg",
+          "hi": "https://img.wpassets-gamma.com/images/04e2cdd2f1646c017500b96549b5400d.jpg",
+          "p": "54.90",
+          "c": [
+            "home",
+            "player"
+          ],
+          "imgs": [
+            "https://img.wpassets-gamma.com/images/04e2cdd2f1646c017500b96549b5400d.jpg",
+            "https://img.wpassets-gamma.com/images/061e47e53ffba5d96add2976c373a9e7.jpg",
+            "https://img.wpassets-gamma.com/images/07c601356f8445d255449179311ef5df.jpg",
+            "https://img.wpassets-gamma.com/images/47d97aa479b53651f83405e750ef85fb.jpg",
+            "https://img.wpassets-gamma.com/images/dc8986a72e1e8446e49022711bee7e7c.jpg",
+            "https://img.wpassets-gamma.com/images/bb506f7cfdda94fe4463234d3c83e105.jpg",
+            "https://img.wpassets-gamma.com/images/f7ca47af487b89ba5b77a1a8f354300e.jpg",
+            "https://img.wpassets-gamma.com/images/c4e61d465a56f63f40793bc4660358b9.jpg",
+            "https://img.wpassets-gamma.com/images/1a4525910a2160cfa2bb19f4ecabec0b.jpg",
+            "https://img.wpassets-gamma.com/images/d155b8e9ad1fc82fbf9a68ba1d1457ba.jpg"
+          ],
+          "pat": "wm2026",
+          "patI": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250601/wm2026-patch.png"
         }
       ],
-      "productCount": 10,
+      "productCount": 11,
       "subLeague": "Gruppe D"
     },
     "wm-2026__germany": {
@@ -74166,9 +74320,25 @@
           "c": [
             "wm-2026"
           ]
+        },
+        {
+          "t": "Deutschland Sondertrikot WM 2026",
+          "h": "germany-2026-icons-jersey",
+          "i": "https://img.wpassets-gamma.com/images/81c3959914e614f1e0c717a5b57b5df2.webp",
+          "hi": "https://img.wpassets-gamma.com/images/81c3959914e614f1e0c717a5b57b5df2.webp",
+          "p": "49.90",
+          "c": [
+            "special"
+          ],
+          "imgs": [
+            "https://img.wpassets-gamma.com/images/81c3959914e614f1e0c717a5b57b5df2.webp",
+            "https://img.wpassets-gamma.com/images/efe4a1bcf0bcfe66ec6914cfc399855c.webp"
+          ],
+          "pat": "wm2026",
+          "patI": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250601/wm2026-patch.png"
         }
       ],
-      "productCount": 23,
+      "productCount": 24,
       "subLeague": "Gruppe E"
     },
     "wm-2026__netherlands": {
@@ -74296,9 +74466,76 @@
             "wm-2026",
             "damen"
           ]
+        },
+        {
+          "t": "Niederlande Sondertrikot WM 2026",
+          "h": "netherlands-2026-special-jersey-fantastic-man-s-4xl",
+          "i": "https://img.wpassets-gamma.com/images/07a0237217b292c6b5a3710815c9d257.jpg",
+          "hi": "https://img.wpassets-gamma.com/images/07a0237217b292c6b5a3710815c9d257.jpg",
+          "p": "49.90",
+          "c": [
+            "special"
+          ],
+          "imgs": [
+            "https://img.wpassets-gamma.com/images/07a0237217b292c6b5a3710815c9d257.jpg",
+            "https://img.wpassets-gamma.com/images/76aea8cb9934519cc075de80b328a136.webp",
+            "https://img.wpassets-gamma.com/images/04ffaff2fd479853024c3b9eff35ada1.webp",
+            "https://img.wpassets-gamma.com/images/0789d4ef58fa135863f8938e21bd7a63.webp"
+          ],
+          "pat": "wm2026",
+          "patI": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250601/wm2026-patch.png"
+        },
+        {
+          "t": "Niederlande Torwarttrikot WM 2026",
+          "h": "netherlands-2026-goalkeeper-jersey",
+          "i": "https://img.wpassets-gamma.com/images/10eb9c612b17d202808363b16a67603d.webp",
+          "hi": "https://img.wpassets-gamma.com/images/10eb9c612b17d202808363b16a67603d.webp",
+          "p": "49.90",
+          "c": [
+            "goalkeeper"
+          ],
+          "imgs": [
+            "https://img.wpassets-gamma.com/images/10eb9c612b17d202808363b16a67603d.webp",
+            "https://img.wpassets-gamma.com/images/77f1cfbd6db23bd01656bc11b4bb90e1.webp"
+          ],
+          "pat": "wm2026",
+          "patI": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250601/wm2026-patch.png"
+        },
+        {
+          "t": "Niederlande Torwarttrikot WM 2026",
+          "h": "netherlands-2026-goalkeeper-jersey-2",
+          "i": "https://img.wpassets-gamma.com/images/dc179c1e625c7e06611e6ca9f72c6e5b.webp",
+          "hi": "https://img.wpassets-gamma.com/images/dc179c1e625c7e06611e6ca9f72c6e5b.webp",
+          "p": "49.90",
+          "c": [
+            "goalkeeper"
+          ],
+          "imgs": [
+            "https://img.wpassets-gamma.com/images/dc179c1e625c7e06611e6ca9f72c6e5b.webp",
+            "https://img.wpassets-gamma.com/images/50a156d35a1bbce2d2b403ce776627b9.webp"
+          ],
+          "pat": "wm2026",
+          "patI": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250601/wm2026-patch.png"
+        },
+        {
+          "t": "Niederlande Auswärtstrikot WM 2026 Damen",
+          "h": "female-netherlands-2026-away-jersey",
+          "i": "https://img.wpassets-gamma.com/images/3f0cabc6e42b47c8f008d94fd71200b3.png",
+          "hi": "https://img.wpassets-gamma.com/images/3f0cabc6e42b47c8f008d94fd71200b3.png",
+          "p": "49.90",
+          "c": [
+            "away",
+            "women"
+          ],
+          "imgs": [
+            "https://img.wpassets-gamma.com/images/3f0cabc6e42b47c8f008d94fd71200b3.png",
+            "https://img.wpassets-gamma.com/images/f65d8de18637325d5a866d361d00288b.png"
+          ],
+          "pat": "wm2026",
+          "patI": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250601/wm2026-patch.png"
         }
       ],
-      "productCount": 8,
+      "productCount": 12,
       "subLeague": "Gruppe F"
     },
     "wm-2026__japan": {
@@ -74510,9 +74747,26 @@
           "imgs": [
             "https://img.wpassets-gamma.com/images/8996ecd3435671be0c13f6499822360f.png"
           ]
+        },
+        {
+          "t": "Japan Heimtrikot WM 2026 Damen",
+          "h": "female-japan-2026-home-jersey",
+          "i": "https://img.wpassets-gamma.com/images/7c3616f078c752807dd7f0a813584a91.png",
+          "hi": "https://img.wpassets-gamma.com/images/7c3616f078c752807dd7f0a813584a91.png",
+          "p": "49.90",
+          "c": [
+            "home",
+            "women"
+          ],
+          "imgs": [
+            "https://img.wpassets-gamma.com/images/7c3616f078c752807dd7f0a813584a91.png",
+            "https://img.wpassets-gamma.com/images/3a19f54bdb3eca8ebe0cfc48c9ad378f.png"
+          ],
+          "pat": "wm2026",
+          "patI": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250601/wm2026-patch.png"
         }
       ],
-      "productCount": 12,
+      "productCount": 13,
       "subLeague": "Gruppe F"
     },
     "wm-2026__sweden": {
@@ -74559,9 +74813,43 @@
           "imgs": [
             "https://img.wpassets-gamma.com/images/7bde7a79998f8ee7b64a3a48992087b8b48a7f60c0fd38873c759e425235b7e6.png"
           ]
+        },
+        {
+          "t": "Schweden Heimtrikot WM 2026 Kinder",
+          "h": "kids-sweden-2026-home-jersey",
+          "i": "https://img.wpassets-gamma.com/images/bcac9969521678a7209d3848cdceefcd.jpg",
+          "hi": "https://img.wpassets-gamma.com/images/bcac9969521678a7209d3848cdceefcd.jpg",
+          "p": "49.90",
+          "c": [
+            "home",
+            "kids"
+          ],
+          "imgs": [
+            "https://img.wpassets-gamma.com/images/bcac9969521678a7209d3848cdceefcd.jpg",
+            "https://img.wpassets-gamma.com/images/de540d1b28921042637197d00f721c7f.jpg"
+          ],
+          "pat": "wm2026",
+          "patI": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250601/wm2026-patch.png"
+        },
+        {
+          "t": "Schweden Auswärtstrikot WM 2026 Kinder",
+          "h": "kids-sweden-2026-away-jersey",
+          "i": "https://img.wpassets-gamma.com/images/180ff1754b7712a8ebe8452e9f3122b0.png",
+          "hi": "https://img.wpassets-gamma.com/images/180ff1754b7712a8ebe8452e9f3122b0.png",
+          "p": "49.90",
+          "c": [
+            "away",
+            "kids"
+          ],
+          "imgs": [
+            "https://img.wpassets-gamma.com/images/180ff1754b7712a8ebe8452e9f3122b0.png",
+            "https://img.wpassets-gamma.com/images/068f8ed4dc13255186efe50d94a3723d.png"
+          ],
+          "pat": "wm2026",
+          "patI": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250601/wm2026-patch.png"
         }
       ],
-      "productCount": 3,
+      "productCount": 5,
       "subLeague": "Gruppe F"
     },
     "wm-2026__tunisia": {
@@ -74768,9 +75056,26 @@
             "wm-2026",
             "player-version"
           ]
+        },
+        {
+          "t": "Belgien Sondertrikot WM 2026",
+          "h": "belgium-2026-icons-jersey",
+          "i": "https://img.wpassets-gamma.com/images/47dd5e12b2b53f7147256dffa4e907df.png",
+          "hi": "https://img.wpassets-gamma.com/images/47dd5e12b2b53f7147256dffa4e907df.png",
+          "p": "49.90",
+          "c": [
+            "special"
+          ],
+          "imgs": [
+            "https://img.wpassets-gamma.com/images/47dd5e12b2b53f7147256dffa4e907df.png",
+            "https://img.wpassets-gamma.com/images/b599e633d064ade7d0e05f0c7e9f109d.png",
+            "https://img.wpassets-gamma.com/images/502ecf1ca149bb364d1ca0bb82efb908.png"
+          ],
+          "pat": "wm2026",
+          "patI": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250601/wm2026-patch.png"
         }
       ],
-      "productCount": 10,
+      "productCount": 11,
       "subLeague": "Gruppe G"
     },
     "wm-2026__newzealand": {
@@ -75100,9 +75405,35 @@
             "wm-2026",
             "goalkeeper"
           ]
+        },
+        {
+          "t": "Spanien Auswärtstrikot WM 2026 Player Version",
+          "h": "player-version-spain-2026-away-jersey",
+          "i": "https://img.wpassets-gamma.com/images/db37ebfe16d6199bf152d313493fdc5a.jpg",
+          "hi": "https://img.wpassets-gamma.com/images/db37ebfe16d6199bf152d313493fdc5a.jpg",
+          "p": "54.90",
+          "c": [
+            "away",
+            "player"
+          ],
+          "imgs": [
+            "https://img.wpassets-gamma.com/images/db37ebfe16d6199bf152d313493fdc5a.jpg",
+            "https://img.wpassets-gamma.com/images/bdb175ab4a108f4751188857eac98a15.jpg",
+            "https://img.wpassets-gamma.com/images/44cb2c225381ac1903d3eebbdb0c4564.jpg",
+            "https://img.wpassets-gamma.com/images/746be6579fe004232d84c1e4c3c0fd4c.jpg",
+            "https://img.wpassets-gamma.com/images/52fc802b8ccf1eb085f991c41a3822af.jpg",
+            "https://img.wpassets-gamma.com/images/eca17196a550f2c828bd0a8fe7a2f2d4.jpg",
+            "https://img.wpassets-gamma.com/images/87c0805db51fee11bc1168b8bc273de2.jpg",
+            "https://img.wpassets-gamma.com/images/62e02334b590f0e7e091008424b6b747.jpg",
+            "https://img.wpassets-gamma.com/images/d803687bf71ee5a9c5a29c64dd9f5beb.jpg",
+            "https://img.wpassets-gamma.com/images/66bfe0d492822d63935bdab9569b8661.jpg",
+            "https://img.wpassets-gamma.com/images/b7d929f4413b923f412855f959d2475e.jpg"
+          ],
+          "pat": "wm2026",
+          "patI": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250601/wm2026-patch.png"
         }
       ],
-      "productCount": 16,
+      "productCount": 17,
       "subLeague": "Gruppe H"
     },
     "wm-2026__saudiarabia": {
@@ -75339,9 +75670,74 @@
             "wm-2026",
             "damen"
           ]
+        },
+        {
+          "t": "Frankreich Torwarttrikot WM 2026",
+          "h": "france-2026-27-goalkeeper-jersey-16-xxl",
+          "i": "https://img.wpassets-gamma.com/images/c91fbeab1b5120d10f1eba0369023a79.jpg",
+          "hi": "https://img.wpassets-gamma.com/images/c91fbeab1b5120d10f1eba0369023a79.jpg",
+          "p": "49.90",
+          "c": [
+            "goalkeeper"
+          ],
+          "imgs": [
+            "https://img.wpassets-gamma.com/images/c91fbeab1b5120d10f1eba0369023a79.jpg",
+            "https://img.wpassets-gamma.com/images/f4a432aadf3690ef547e5a4a2f49dfe7.webp"
+          ],
+          "pat": "wm2026",
+          "patI": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250601/wm2026-patch.png"
+        },
+        {
+          "t": "Frankreich Torwarttrikot WM 2026",
+          "h": "france-2026-27-goalkeeper-jersey-2",
+          "i": "https://img.wpassets-gamma.com/images/a6aab38a74d4d3e240cb4788e1a346a1.webp",
+          "hi": "https://img.wpassets-gamma.com/images/a6aab38a74d4d3e240cb4788e1a346a1.webp",
+          "p": "49.90",
+          "c": [
+            "goalkeeper"
+          ],
+          "imgs": [
+            "https://img.wpassets-gamma.com/images/a6aab38a74d4d3e240cb4788e1a346a1.webp",
+            "https://img.wpassets-gamma.com/images/619bc721bfe5c700acb3a88667a27a72.webp"
+          ],
+          "pat": "wm2026",
+          "patI": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250601/wm2026-patch.png"
+        },
+        {
+          "t": "Frankreich Torwarttrikot WM 2026",
+          "h": "france-2026-27-goalkeeper-jersey-23",
+          "i": "https://img.wpassets-gamma.com/images/f0e69d7bfa9ca4c93c5b20cda91010dd.webp",
+          "hi": "https://img.wpassets-gamma.com/images/f0e69d7bfa9ca4c93c5b20cda91010dd.webp",
+          "p": "49.90",
+          "c": [
+            "goalkeeper"
+          ],
+          "imgs": [
+            "https://img.wpassets-gamma.com/images/f0e69d7bfa9ca4c93c5b20cda91010dd.webp",
+            "https://img.wpassets-gamma.com/images/09758e97644d69f54057c85b19b5776b.webp"
+          ],
+          "pat": "wm2026",
+          "patI": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250601/wm2026-patch.png"
+        },
+        {
+          "t": "Frankreich Heimtrikot WM 2026 Damen",
+          "h": "female-france-2026-home-jersey",
+          "i": "https://img.wpassets-gamma.com/images/b4f2b68077b4c5a96b76bf036ed710fc.png",
+          "hi": "https://img.wpassets-gamma.com/images/b4f2b68077b4c5a96b76bf036ed710fc.png",
+          "p": "49.90",
+          "c": [
+            "home",
+            "women"
+          ],
+          "imgs": [
+            "https://img.wpassets-gamma.com/images/b4f2b68077b4c5a96b76bf036ed710fc.png",
+            "https://img.wpassets-gamma.com/images/57cbd2e3266f64a0cb0b80e9205f321a.png"
+          ],
+          "pat": "wm2026",
+          "patI": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250601/wm2026-patch.png"
         }
       ],
-      "productCount": 12,
+      "productCount": 16,
       "subLeague": "Gruppe I"
     },
     "wm-2026__senegal": {
@@ -75425,9 +75821,26 @@
           "imgs": [
             "https://img.wpassets-gamma.com/images/e615b60ed0433ee93b7c06b2d95d0b21.jpg"
           ]
+        },
+        {
+          "t": "Senegal Sondertrikot WM 2026",
+          "h": "senegal-2026-icons-jersey",
+          "i": "https://img.wpassets-gamma.com/images/a1e57e6abd37d925c641fa6fcbb0bf3f.png",
+          "hi": "https://img.wpassets-gamma.com/images/a1e57e6abd37d925c641fa6fcbb0bf3f.png",
+          "p": "49.90",
+          "c": [
+            "special"
+          ],
+          "imgs": [
+            "https://img.wpassets-gamma.com/images/a1e57e6abd37d925c641fa6fcbb0bf3f.png",
+            "https://img.wpassets-gamma.com/images/5121398d5dcb078afcce6aef7c9dc131.png",
+            "https://img.wpassets-gamma.com/images/ae198ea8c8ca23e377e9a21c586ac008.png"
+          ],
+          "pat": "wm2026",
+          "patI": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250601/wm2026-patch.png"
         }
       ],
-      "productCount": 5,
+      "productCount": 6,
       "subLeague": "Gruppe I"
     },
     "wm-2026__argentina": {
@@ -76474,9 +76887,58 @@
           "imgs": [
             "https://img.wpassets-gamma.com/images/aae594232d53ec487307c7a3666ea2f5.jpg"
           ]
+        },
+        {
+          "t": "Kolumbien Sondertrikot WM 2026",
+          "h": "colombia-2026-icons-jersey",
+          "i": "https://img.wpassets-gamma.com/images/f7c004443f6f61679b49cc2783e204da.png",
+          "hi": "https://img.wpassets-gamma.com/images/f7c004443f6f61679b49cc2783e204da.png",
+          "p": "49.90",
+          "c": [
+            "special"
+          ],
+          "imgs": [
+            "https://img.wpassets-gamma.com/images/f7c004443f6f61679b49cc2783e204da.png",
+            "https://img.wpassets-gamma.com/images/bf0c72ca83fce6f14c52113ef0c14eb5.png",
+            "https://img.wpassets-gamma.com/images/01ec2d30a8425aa527e194759f73ed46.png"
+          ],
+          "pat": "wm2026",
+          "patI": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250601/wm2026-patch.png"
+        },
+        {
+          "t": "Kolumbien Sondertrikot WM 2026",
+          "h": "colombia-2026-icons-jersey-blue",
+          "i": "https://img.wpassets-gamma.com/images/66a74e826ac7b18fd6ba26d708d2a74c.png",
+          "hi": "https://img.wpassets-gamma.com/images/66a74e826ac7b18fd6ba26d708d2a74c.png",
+          "p": "49.90",
+          "c": [
+            "special"
+          ],
+          "imgs": [
+            "https://img.wpassets-gamma.com/images/66a74e826ac7b18fd6ba26d708d2a74c.png",
+            "https://img.wpassets-gamma.com/images/4a7f8f267109ef99d55daa3e8c5812e7.png"
+          ],
+          "pat": "wm2026",
+          "patI": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250601/wm2026-patch.png"
+        },
+        {
+          "t": "Kolumbien Sondertrikot WM 2026",
+          "h": "colombia-2026-icons-jersey-yellow",
+          "i": "https://img.wpassets-gamma.com/images/d837b0ac95f18c5463d83dc49a9921bd.png",
+          "hi": "https://img.wpassets-gamma.com/images/d837b0ac95f18c5463d83dc49a9921bd.png",
+          "p": "49.90",
+          "c": [
+            "special"
+          ],
+          "imgs": [
+            "https://img.wpassets-gamma.com/images/d837b0ac95f18c5463d83dc49a9921bd.png",
+            "https://img.wpassets-gamma.com/images/f7d28a01db075612bdb2a3eac88778ff.png"
+          ],
+          "pat": "wm2026",
+          "patI": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250601/wm2026-patch.png"
         }
       ],
-      "productCount": 12,
+      "productCount": 15,
       "subLeague": "Gruppe K"
     },
     "wm-2026__england": {
@@ -76683,9 +77145,44 @@
             "wm-2026",
             "kids"
           ]
+        },
+        {
+          "t": "England Torwarttrikot WM 2026",
+          "h": "england-2026-gk-jersey",
+          "i": "https://img.wpassets-gamma.com/images/d2e461339d06acabc18d739db24370ca.webp",
+          "hi": "https://img.wpassets-gamma.com/images/d2e461339d06acabc18d739db24370ca.webp",
+          "p": "49.90",
+          "c": [
+            "goalkeeper"
+          ],
+          "imgs": [
+            "https://img.wpassets-gamma.com/images/d2e461339d06acabc18d739db24370ca.webp",
+            "https://img.wpassets-gamma.com/images/c498a5e4f8b57c36444d30066d62cc9d.webp",
+            "https://img.wpassets-gamma.com/images/79006e1c06e0cf752764b95b06fd6990.webp"
+          ],
+          "pat": "wm2026",
+          "patI": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250601/wm2026-patch.png"
+        },
+        {
+          "t": "England Heimtrikot WM 2026 Kinder",
+          "h": "kids-england-2026-home-kit-16-28",
+          "i": "https://img.wpassets-gamma.com/images/06d891e4eb42e3a0b8055d1e51c1b40978d5f1b7110d5bce4e0ebb3697a877e5.webp",
+          "hi": "https://img.wpassets-gamma.com/images/06d891e4eb42e3a0b8055d1e51c1b40978d5f1b7110d5bce4e0ebb3697a877e5.webp",
+          "p": "49.90",
+          "c": [
+            "home",
+            "kids"
+          ],
+          "imgs": [
+            "https://img.wpassets-gamma.com/images/06d891e4eb42e3a0b8055d1e51c1b40978d5f1b7110d5bce4e0ebb3697a877e5.webp",
+            "https://img.wpassets-gamma.com/images/e016d8a1012c3ff6b4fe395c22f78690.jpg",
+            "https://img.wpassets-gamma.com/images/b82f15bc58b091955e21999c1a345ffd.jpg"
+          ],
+          "pat": "wm2026",
+          "patI": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250601/wm2026-patch.png"
         }
       ],
-      "productCount": 13,
+      "productCount": 15,
       "subLeague": "Gruppe L"
     },
     "wm-2026__croatia": {
@@ -76766,9 +77263,30 @@
           "imgs": [
             "https://img.wpassets-gamma.com/images/e6717341ea7716939b93f5ba22818f868debbd5bdfc5f4af43f216b05d0ab6f6.webp"
           ]
+        },
+        {
+          "t": "Kroatien Heimtrikot WM 2026 Player Version",
+          "h": "player-version-2026-world-cup-croatia-home-jersey-s-4xl",
+          "i": "https://img.wpassets-gamma.com/images/9589c4ad8fb31a56046fa91167f35be5.png",
+          "hi": "https://img.wpassets-gamma.com/images/9589c4ad8fb31a56046fa91167f35be5.png",
+          "p": "54.90",
+          "c": [
+            "home",
+            "player"
+          ],
+          "imgs": [
+            "https://img.wpassets-gamma.com/images/9589c4ad8fb31a56046fa91167f35be5.png",
+            "https://img.wpassets-gamma.com/images/c81523661a661a38d35f6aa87632c3a1.png",
+            "https://img.wpassets-gamma.com/images/b82976a4bfd43fa7a8ae116b4614a74a.webp",
+            "https://img.wpassets-gamma.com/images/219336cf56555818467436f2b646aa82.webp",
+            "https://img.wpassets-gamma.com/images/bddfd2a49b9ea48a64a8d5a3fc745eac.webp",
+            "https://img.wpassets-gamma.com/images/75b8af47e3c7fb9641c6bb7f9c4009e5.webp"
+          ],
+          "pat": "wm2026",
+          "patI": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250601/wm2026-patch.png"
         }
       ],
-      "productCount": 5,
+      "productCount": 6,
       "subLeague": "Gruppe L"
     },
     "wm-2026__uruguay": {
@@ -77267,9 +77785,154 @@
             "wm-2026",
             "player-version"
           ]
+        },
+        {
+          "t": "Italien Auswärtstrikot WM 2026",
+          "h": "2026-world-cup-italy-away-jersey-s-4xl-fan-version",
+          "i": "https://img.wpassets-gamma.com/images/77119ccc230f4f098b1af28b345dfb85.jpg",
+          "hi": "https://img.wpassets-gamma.com/images/77119ccc230f4f098b1af28b345dfb85.jpg",
+          "p": "49.90",
+          "c": [
+            "away"
+          ],
+          "imgs": [
+            "https://img.wpassets-gamma.com/images/77119ccc230f4f098b1af28b345dfb85.jpg",
+            "https://img.wpassets-gamma.com/images/f7c2c26aa01744866212d8bc93a54f09.jpg",
+            "https://img.wpassets-gamma.com/images/5fda51993777487ae4f1261121ee0954.jpg",
+            "https://img.wpassets-gamma.com/images/a03ee20e0d2bd173659652bda78e6274.jpg",
+            "https://img.wpassets-gamma.com/images/eae6e2c9afdcf725a15cc50488b3efa6.jpg",
+            "https://img.wpassets-gamma.com/images/245dc08090ede5a0bd2935157de992f2.jpg"
+          ],
+          "pat": "wm2026",
+          "patI": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250601/wm2026-patch.png"
+        },
+        {
+          "t": "Italien Heimtrikot WM 2026 Langarm",
+          "h": "2026-world-cup-italy-home-jersey-long-sleeves-s-4xl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260104/2c892a846876c3786ea2af757dd9e0dd.png",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260104/2c892a846876c3786ea2af757dd9e0dd.png",
+          "p": "54.90",
+          "c": [
+            "home",
+            "long-sleeve"
+          ],
+          "imgs": [
+            "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260104/2c892a846876c3786ea2af757dd9e0dd.png",
+            "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260104/713f4e89f3d445da0ba9d89be0c91fb1.png"
+          ],
+          "pat": "wm2026",
+          "patI": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250601/wm2026-patch.png"
+        },
+        {
+          "t": "Italien Auswärtstrikot WM 2026 Player Version",
+          "h": "player-version-2026-world-cup-italy-away-jersey-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251115/0ecb56c01f6a86252049b7fbc3ea87c5.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251115/0ecb56c01f6a86252049b7fbc3ea87c5.jpg",
+          "p": "54.90",
+          "c": [
+            "away",
+            "player"
+          ],
+          "imgs": [
+            "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251115/0ecb56c01f6a86252049b7fbc3ea87c5.jpg",
+            "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251115/118e93545fb27decbc0f8c856158a316.jpg",
+            "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251115/0ff897372d0e23e1aacfda7268bb1413.jpg",
+            "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251115/612816410ca9f61f0e28cef5657b2752.jpg",
+            "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251115/a16d918fbf2fb2a40396c322fe29ab18.jpg",
+            "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251115/1ed8aa95b0b97974e5854e2b646b65f2.jpg",
+            "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251115/50c246fce3e9940ca544328d71fea9be.jpg",
+            "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251115/21c558d856a0f3b8ebdbabd90568118d.jpg",
+            "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251115/1dc804e450aa5b69f6dc7e895cbc6582.jpg"
+          ],
+          "pat": "wm2026",
+          "patI": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250601/wm2026-patch.png"
+        },
+        {
+          "t": "Italien Heimtrikot WM 2026 Player Version",
+          "h": "player-version-2026-world-cup-italy-home-jersey-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251027/4c232f80f5af95ea071831740a9db264.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251027/4c232f80f5af95ea071831740a9db264.jpg",
+          "p": "54.90",
+          "c": [
+            "home",
+            "player"
+          ],
+          "imgs": [
+            "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251027/4c232f80f5af95ea071831740a9db264.jpg",
+            "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251027/caf055502e45358ed08762a952f43b2f.jpg",
+            "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251027/28e5e20e51604e92075f2a2686b2e418.jpg",
+            "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251027/72c306b73c96467be6c8af864ad73083.jpg",
+            "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251027/200d67f9d3b33ff8c57e696a00c576f7.jpg",
+            "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251027/78b0e52198ef22be27e686c700f4fcc0.jpg",
+            "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251027/4ce14bf92cc028718d913123a72bb205.jpg",
+            "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251027/55da199ea1216c07f61ff8d3a8b225f5.jpg",
+            "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251027/ab5297e41bc1f945d73988c0fcb44ece.jpg"
+          ],
+          "pat": "wm2026",
+          "patI": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250601/wm2026-patch.png"
+        },
+        {
+          "t": "Italien Heimtrikot WM 2026 Player Version Langarm",
+          "h": "player-version-2026-world-cup-italy-home-jersey-long-sleeves-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251125/2b1664840c35c8ea142913d7200f1e13.jpg",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251125/2b1664840c35c8ea142913d7200f1e13.jpg",
+          "p": "59.90",
+          "c": [
+            "home",
+            "player",
+            "long-sleeve"
+          ],
+          "imgs": [
+            "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251125/2b1664840c35c8ea142913d7200f1e13.jpg",
+            "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251125/ffa2a2dd345f513c2796db247a651217.jpg",
+            "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251125/5a2247b2a5c9c52487ce33a2926dd147.jpg",
+            "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251125/e4eadafa92e0e4011de4adc5c3101c73.jpg",
+            "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251125/124699d42334ec96c64695a0e7c72c1d.jpg",
+            "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251125/e4e79846fd3a04b14af4c982388e77ea.jpg",
+            "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251125/d3cbd314d504ff916891c3584c7d6548.jpg",
+            "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251125/79d3120ea2981789004d9903b55fcf24.jpg",
+            "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251125/7152c66b8a02d029d85cba04392f0120.jpg",
+            "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251125/bac270bbcecfac14f2dcd0b0fee2f08b.jpg"
+          ],
+          "pat": "wm2026",
+          "patI": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250601/wm2026-patch.png"
+        },
+        {
+          "t": "Italien Heimtrikot WM 2026 Kinder",
+          "h": "kids-2026-world-cup-italy-home-kit-16-28",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251112/c6e78b8c503a90ccbec1370c8a15640b.png",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251112/c6e78b8c503a90ccbec1370c8a15640b.png",
+          "p": "49.90",
+          "c": [
+            "home",
+            "kids"
+          ],
+          "imgs": [
+            "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251112/c6e78b8c503a90ccbec1370c8a15640b.png",
+            "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251112/a0db75cfc386eb63abeb67646737cc60.png"
+          ],
+          "pat": "wm2026",
+          "patI": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250601/wm2026-patch.png"
+        },
+        {
+          "t": "Italien Heimtrikot WM 2026 Damen",
+          "h": "female-2026-world-cup-italy-home-jersey-s-xxl",
+          "i": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251205/8d5c0b09121176245d98f557ec8f537e.png",
+          "hi": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251205/8d5c0b09121176245d98f557ec8f537e.png",
+          "p": "49.90",
+          "c": [
+            "home",
+            "women"
+          ],
+          "imgs": [
+            "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251205/8d5c0b09121176245d98f557ec8f537e.png",
+            "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251205/9db9b3107e729e328d5358a8e915ac03.png"
+          ],
+          "pat": "wm2026",
+          "patI": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250601/wm2026-patch.png"
         }
       ],
-      "productCount": 2
+      "productCount": 9
     },
     "wm-2026__curacao": {
       "name": "Curaçao",
@@ -77294,8 +77957,179 @@
       "slug": "southafrica",
       "league": "wm-2026",
       "leagueName": "WM 2026",
-      "products": [],
-      "productCount": 0,
+      "products": [
+        {
+          "t": "Südafrika Heimtrikot WM 2026",
+          "h": "south-africa-2026-home-jersey",
+          "i": "https://img.wpassets-gamma.com/images/9525d9d617d86cceab2aa35365a4d2f2.jpg",
+          "hi": "https://img.wpassets-gamma.com/images/9525d9d617d86cceab2aa35365a4d2f2.jpg",
+          "p": "49.90",
+          "c": [
+            "home"
+          ],
+          "imgs": [
+            "https://img.wpassets-gamma.com/images/9525d9d617d86cceab2aa35365a4d2f2.jpg",
+            "https://img.wpassets-gamma.com/images/e6886aeb940907a903460e9eed3e2cea.jpg",
+            "https://img.wpassets-gamma.com/images/41119f5cfa5eec7b9e1de49644242740.jpg",
+            "https://img.wpassets-gamma.com/images/c82c449b3be9780aa7c0384862c5a0b4.jpg",
+            "https://img.wpassets-gamma.com/images/e12dde2ff742d3deff908bf7d4552e26.jpg",
+            "https://img.wpassets-gamma.com/images/a400a013efc77288f0b70609b91368ad.jpg",
+            "https://img.wpassets-gamma.com/images/eae35afbbe2a6a19b27d96b246b9e81c.jpg",
+            "https://img.wpassets-gamma.com/images/7bfad37b447db58029d7a2890e36c647.jpg"
+          ],
+          "pat": "wm2026",
+          "patI": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250601/wm2026-patch.png"
+        },
+        {
+          "t": "Südafrika Auswärtstrikot WM 2026",
+          "h": "south-africa-2026-away-jersey",
+          "i": "https://img.wpassets-gamma.com/images/10145a7319c0f6f15c1a5c4f98719bba.jpg",
+          "hi": "https://img.wpassets-gamma.com/images/10145a7319c0f6f15c1a5c4f98719bba.jpg",
+          "p": "49.90",
+          "c": [
+            "away"
+          ],
+          "imgs": [
+            "https://img.wpassets-gamma.com/images/10145a7319c0f6f15c1a5c4f98719bba.jpg",
+            "https://img.wpassets-gamma.com/images/09a0bca7e7acffee0e3cb997e03d3e39.jpg",
+            "https://img.wpassets-gamma.com/images/f84054eea9d3741906811ce4ee817341.jpg",
+            "https://img.wpassets-gamma.com/images/65524f362dd9692ca436022ad0bc4b4c.jpg",
+            "https://img.wpassets-gamma.com/images/f455cb7d95dc269ab8345d3bbbfe4386.jpg",
+            "https://img.wpassets-gamma.com/images/7fdcb5772fffe870aaa03ed77f2d2b0f.jpg",
+            "https://img.wpassets-gamma.com/images/1266f86de314d5f544a7c8293fd2fd42.jpg",
+            "https://img.wpassets-gamma.com/images/aeeb02e7806d4e4146dddb6fb56bdafe.jpg"
+          ],
+          "pat": "wm2026",
+          "patI": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250601/wm2026-patch.png"
+        },
+        {
+          "t": "Südafrika Heimtrikot WM 2026 Player Version",
+          "h": "pl-south-africa-2026-home-jersey",
+          "i": "https://img.wpassets-gamma.com/images/3e473ceefa1fc1faa770ca0d008a19f1.jpg",
+          "hi": "https://img.wpassets-gamma.com/images/3e473ceefa1fc1faa770ca0d008a19f1.jpg",
+          "p": "54.90",
+          "c": [
+            "home",
+            "player"
+          ],
+          "imgs": [
+            "https://img.wpassets-gamma.com/images/3e473ceefa1fc1faa770ca0d008a19f1.jpg",
+            "https://img.wpassets-gamma.com/images/9ece2747876cb42b3409784440ad9eec.jpg",
+            "https://img.wpassets-gamma.com/images/d389ab4d752aaadbd055774dfb7300ee.jpg",
+            "https://img.wpassets-gamma.com/images/8d2a4b58b5a1f028735e38b0f757e78f.jpg",
+            "https://img.wpassets-gamma.com/images/ec98356f320b114c47f215dc60d870d6.jpg",
+            "https://img.wpassets-gamma.com/images/11e7b8b40d67487f7844282765befb6c.jpg",
+            "https://img.wpassets-gamma.com/images/c3fec8bd13aa756ad1fb12a06b80327a.jpg",
+            "https://img.wpassets-gamma.com/images/a92ad3a9264184edbf1bd819852c8c78.jpg",
+            "https://img.wpassets-gamma.com/images/3c071a894642c10938b829ae2c7f0848.jpg",
+            "https://img.wpassets-gamma.com/images/b9356c8fdefa7ba1bc71682b2807c3df.jpg",
+            "https://img.wpassets-gamma.com/images/0f2aefd7bdbda744afa85b04a6e82c64.jpg"
+          ],
+          "pat": "wm2026",
+          "patI": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250601/wm2026-patch.png"
+        },
+        {
+          "t": "Südafrika Auswärtstrikot WM 2026 Player Version",
+          "h": "pl-south-africa-2026-away-jersey",
+          "i": "https://img.wpassets-gamma.com/images/1046233edc06761242441fbc60bb196a.jpg",
+          "hi": "https://img.wpassets-gamma.com/images/1046233edc06761242441fbc60bb196a.jpg",
+          "p": "54.90",
+          "c": [
+            "away",
+            "player"
+          ],
+          "imgs": [
+            "https://img.wpassets-gamma.com/images/1046233edc06761242441fbc60bb196a.jpg",
+            "https://img.wpassets-gamma.com/images/cf94c57f943c7cd0c7374fe02acb7308.jpg",
+            "https://img.wpassets-gamma.com/images/a5813122ef0d2efc5453c8dedc5d2a30.jpg",
+            "https://img.wpassets-gamma.com/images/14722e204c6a0574849c6d4ba5fb77da.jpg",
+            "https://img.wpassets-gamma.com/images/99b3d535bdf111a808509f8fbbcaa9c3.jpg",
+            "https://img.wpassets-gamma.com/images/53a41933c25ad400328113dd87b94b21.jpg",
+            "https://img.wpassets-gamma.com/images/5fbafb8ec14bb09280917b9d81927638.jpg",
+            "https://img.wpassets-gamma.com/images/5da96951ae0683ec7231749cef69e29a.jpg",
+            "https://img.wpassets-gamma.com/images/38d314f517c2c0461907e3ee6d491fa1.jpg",
+            "https://img.wpassets-gamma.com/images/95a5e7a0a375c1129c88659d7c952c6b.jpg",
+            "https://img.wpassets-gamma.com/images/dc9410ad894ddff4103a8618ead5d602.jpg"
+          ],
+          "pat": "wm2026",
+          "patI": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250601/wm2026-patch.png"
+        },
+        {
+          "t": "Südafrika Heimtrikot WM 2026 Kinder",
+          "h": "kids-south-africa-2026-home-jersey",
+          "i": "https://img.wpassets-gamma.com/images/ca5fbafe594c0e3666742b4fab14f5de.jpg",
+          "hi": "https://img.wpassets-gamma.com/images/ca5fbafe594c0e3666742b4fab14f5de.jpg",
+          "p": "49.90",
+          "c": [
+            "home",
+            "kids"
+          ],
+          "imgs": [
+            "https://img.wpassets-gamma.com/images/ca5fbafe594c0e3666742b4fab14f5de.jpg",
+            "https://img.wpassets-gamma.com/images/68862356dadbeafed3d912870f965bcc.jpg",
+            "https://img.wpassets-gamma.com/images/95095a90dc8e1ef61ac891c4fe8b7338.jpg",
+            "https://img.wpassets-gamma.com/images/38c236787c64dfbfc5bd003276ddc080.jpg",
+            "https://img.wpassets-gamma.com/images/4215557d064f53e3acde3666993284a7.jpg",
+            "https://img.wpassets-gamma.com/images/e10ffaa8c74475055d3b80d0aad16f31.jpg"
+          ],
+          "pat": "wm2026",
+          "patI": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250601/wm2026-patch.png"
+        },
+        {
+          "t": "Südafrika Auswärtstrikot WM 2026 Kinder",
+          "h": "kids-south-africa-2026-away-jersey",
+          "i": "https://img.wpassets-gamma.com/images/a0292fdc70e2b682f44a226316c2c19d.jpg",
+          "hi": "https://img.wpassets-gamma.com/images/a0292fdc70e2b682f44a226316c2c19d.jpg",
+          "p": "49.90",
+          "c": [
+            "away",
+            "kids"
+          ],
+          "imgs": [
+            "https://img.wpassets-gamma.com/images/a0292fdc70e2b682f44a226316c2c19d.jpg",
+            "https://img.wpassets-gamma.com/images/8b7139b76064b09cfbffe3bada57a60c.jpg",
+            "https://img.wpassets-gamma.com/images/340adf1d32c307025159ec7d7e17b9b5.jpg",
+            "https://img.wpassets-gamma.com/images/b4953f28c03960cfbab9bad4b052ae7d.jpg",
+            "https://img.wpassets-gamma.com/images/559929f6f4584756df9b37027571b2c8.jpg",
+            "https://img.wpassets-gamma.com/images/a01e7877bdeab285237fcb050c4db093.jpg"
+          ],
+          "pat": "wm2026",
+          "patI": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250601/wm2026-patch.png"
+        },
+        {
+          "t": "Südafrika Sondertrikot WM 2026",
+          "h": "south-africa-2026-speical-gold-jersey",
+          "i": "https://img.wpassets-gamma.com/images/eaa9fa2df78dd8419c5c11955095d4bb.webp",
+          "hi": "https://img.wpassets-gamma.com/images/eaa9fa2df78dd8419c5c11955095d4bb.webp",
+          "p": "49.90",
+          "c": [
+            "special"
+          ],
+          "imgs": [
+            "https://img.wpassets-gamma.com/images/eaa9fa2df78dd8419c5c11955095d4bb.webp",
+            "https://img.wpassets-gamma.com/images/71ec978e1e5fff41fc2b35e5a554ac14.webp"
+          ],
+          "pat": "wm2026",
+          "patI": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250601/wm2026-patch.png"
+        },
+        {
+          "t": "Südafrika Sondertrikot WM 2026",
+          "h": "south-africa-2026-speical-white-jersey",
+          "i": "https://img.wpassets-gamma.com/images/ed2d9ab002c172c0ad4b3f311b56134e.png",
+          "hi": "https://img.wpassets-gamma.com/images/ed2d9ab002c172c0ad4b3f311b56134e.png",
+          "p": "49.90",
+          "c": [
+            "special"
+          ],
+          "imgs": [
+            "https://img.wpassets-gamma.com/images/ed2d9ab002c172c0ad4b3f311b56134e.png",
+            "https://img.wpassets-gamma.com/images/1daf2e8df25fbb61e873ef90bc4e7e42.png"
+          ],
+          "pat": "wm2026",
+          "patI": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250601/wm2026-patch.png"
+        }
+      ],
+      "productCount": 8,
       "subLeague": "Gruppe A"
     },
     "wm-2026__korea": {
@@ -77303,8 +78137,132 @@
       "slug": "korea",
       "league": "wm-2026",
       "leagueName": "WM 2026",
-      "products": [],
-      "productCount": 0,
+      "products": [
+        {
+          "t": "Südkorea Heimtrikot WM 2026",
+          "h": "korea-2026-home-jersey",
+          "i": "https://img.wpassets-gamma.com/images/6e22695cd0d36ddd65ea89fc6d855d81.jpg",
+          "hi": "https://img.wpassets-gamma.com/images/6e22695cd0d36ddd65ea89fc6d855d81.jpg",
+          "p": "49.90",
+          "c": [
+            "home"
+          ],
+          "imgs": [
+            "https://img.wpassets-gamma.com/images/6e22695cd0d36ddd65ea89fc6d855d81.jpg",
+            "https://img.wpassets-gamma.com/images/173a0824f247bc2aa439147dd9fca3a5.jpg"
+          ],
+          "pat": "wm2026",
+          "patI": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250601/wm2026-patch.png"
+        },
+        {
+          "t": "Südkorea Auswärtstrikot WM 2026",
+          "h": "korea-2026-away-jersey",
+          "i": "https://img.wpassets-gamma.com/images/d953493213b1f3620152ac3262fa7896.jpg",
+          "hi": "https://img.wpassets-gamma.com/images/d953493213b1f3620152ac3262fa7896.jpg",
+          "p": "49.90",
+          "c": [
+            "away"
+          ],
+          "imgs": [
+            "https://img.wpassets-gamma.com/images/d953493213b1f3620152ac3262fa7896.jpg",
+            "https://img.wpassets-gamma.com/images/02972aee68f42aae7549ee484d4b2bb2.jpg"
+          ],
+          "pat": "wm2026",
+          "patI": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250601/wm2026-patch.png"
+        },
+        {
+          "t": "Südkorea Heimtrikot WM 2026 Player Version",
+          "h": "player-version-korea-2026-home-jersey",
+          "i": "https://img.wpassets-gamma.com/images/c6e24a3a4b94cb5f98d20791c8c20bf3.jpg",
+          "hi": "https://img.wpassets-gamma.com/images/c6e24a3a4b94cb5f98d20791c8c20bf3.jpg",
+          "p": "54.90",
+          "c": [
+            "home",
+            "player"
+          ],
+          "imgs": [
+            "https://img.wpassets-gamma.com/images/c6e24a3a4b94cb5f98d20791c8c20bf3.jpg",
+            "https://img.wpassets-gamma.com/images/f6fddf7041273093d1f1b29cb80e73f4.jpg",
+            "https://img.wpassets-gamma.com/images/30ee30e5f76f976d174418d76e47c614.jpg",
+            "https://img.wpassets-gamma.com/images/9bcb54f23008856f79b6a24fbf1d2022.jpg",
+            "https://img.wpassets-gamma.com/images/8878d64694c58ca938349f183e343ff8.jpg",
+            "https://img.wpassets-gamma.com/images/75bfdcebb0c932aae7f44ef715bbc133.jpg",
+            "https://img.wpassets-gamma.com/images/ef8706f65344b09a72b7749e5b5df378.jpg",
+            "https://img.wpassets-gamma.com/images/e45d2dc78f65bec896bc1f0e2992f099.jpg",
+            "https://img.wpassets-gamma.com/images/b410aa9b67c8698c4a7b3b6f08ea147b.jpg",
+            "https://img.wpassets-gamma.com/images/a1c37831a7e17dcc08e8278c90854b49.jpg"
+          ],
+          "pat": "wm2026",
+          "patI": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250601/wm2026-patch.png"
+        },
+        {
+          "t": "Südkorea Auswärtstrikot WM 2026 Player Version",
+          "h": "player-version-korea-2026-away-jersey",
+          "i": "https://img.wpassets-gamma.com/images/dc444cefecb0e160db94d705b29c98da99f0deb61cbf5faf91d3055548e770a6.jpg",
+          "hi": "https://img.wpassets-gamma.com/images/dc444cefecb0e160db94d705b29c98da99f0deb61cbf5faf91d3055548e770a6.jpg",
+          "p": "54.90",
+          "c": [
+            "away",
+            "player"
+          ],
+          "imgs": [
+            "https://img.wpassets-gamma.com/images/dc444cefecb0e160db94d705b29c98da99f0deb61cbf5faf91d3055548e770a6.jpg",
+            "https://img.wpassets-gamma.com/images/7f6e71fba699523d8b858ee5884434b8ad4fd2750030a4e38746bd9209d8f81a.jpg",
+            "https://img.wpassets-gamma.com/images/361f48f102077410ddefeaf0643fecf850b46afbf4adc636a51450b98c0a3377.jpg",
+            "https://img.wpassets-gamma.com/images/61ef4739763469058017dba9d3d47fb9e849c93fb22735d01f45fc838b38c3bc.jpg",
+            "https://img.wpassets-gamma.com/images/8749290e6ae931c03472acd1f101c19791a0d90fbe214eb44c74ae36ee389fba.jpg",
+            "https://img.wpassets-gamma.com/images/e37810d0963e101cbd0a49b4e5773a51bde9ddd0bfe4917e3fb6b70c4e2b5666.jpg",
+            "https://img.wpassets-gamma.com/images/8a5d5e9c1f89f87192fc563a6d8374419d2c8fd652336c822c66e4c0c6a74709.jpg",
+            "https://img.wpassets-gamma.com/images/9abf3ff5ac0ffd14d2d42c8f6047e90ae27b06eb906b787ad394135adab23a08.jpg",
+            "https://img.wpassets-gamma.com/images/bb5f3d6abd4c4f9bd14041c97a08cf2e671214cc29d971cd10ea50c71d7c0480.jpg"
+          ],
+          "pat": "wm2026",
+          "patI": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250601/wm2026-patch.png"
+        },
+        {
+          "t": "Südkorea Heimtrikot WM 2026 Kinder",
+          "h": "kids-korea-2026-home-jersey",
+          "i": "https://img.wpassets-gamma.com/images/5def513cbda654d76a7d5543c3a50a9f.jpg",
+          "hi": "https://img.wpassets-gamma.com/images/5def513cbda654d76a7d5543c3a50a9f.jpg",
+          "p": "49.90",
+          "c": [
+            "home",
+            "kids"
+          ],
+          "imgs": [
+            "https://img.wpassets-gamma.com/images/5def513cbda654d76a7d5543c3a50a9f.jpg",
+            "https://img.wpassets-gamma.com/images/21a115b39475d7933eb2fb868cb88481.jpg",
+            "https://img.wpassets-gamma.com/images/16a8e6adc4562193d65e12625b22d498.jpg",
+            "https://img.wpassets-gamma.com/images/c0967dbcb5208b84c4a5ad859506ec8b.jpg",
+            "https://img.wpassets-gamma.com/images/51c4ec47d395969861e7a19023a986fa.jpg",
+            "https://img.wpassets-gamma.com/images/e61313a4217f3c743e54da3b0f18ff78.jpg"
+          ],
+          "pat": "wm2026",
+          "patI": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250601/wm2026-patch.png"
+        },
+        {
+          "t": "Südkorea Auswärtstrikot WM 2026 Kinder",
+          "h": "kids-korea-2026-away-jersey",
+          "i": "https://img.wpassets-gamma.com/images/4cbc8ca77fac072b643974958a6a55ca.jpg",
+          "hi": "https://img.wpassets-gamma.com/images/4cbc8ca77fac072b643974958a6a55ca.jpg",
+          "p": "49.90",
+          "c": [
+            "away",
+            "kids"
+          ],
+          "imgs": [
+            "https://img.wpassets-gamma.com/images/4cbc8ca77fac072b643974958a6a55ca.jpg",
+            "https://img.wpassets-gamma.com/images/4461d67560189b6a040b5e18aba53c0e.jpg",
+            "https://img.wpassets-gamma.com/images/0e22fc1acea0fcea402c86e522ecc278.jpg",
+            "https://img.wpassets-gamma.com/images/08c60e02497c0fa040ba4ca2d49b4ff3.jpg",
+            "https://img.wpassets-gamma.com/images/5aca5637e643a412cf84f2501a497458.jpg",
+            "https://img.wpassets-gamma.com/images/41d31c62e55352abf8d9be185684963a.jpg"
+          ],
+          "pat": "wm2026",
+          "patI": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250601/wm2026-patch.png"
+        }
+      ],
+      "productCount": 6,
       "subLeague": "Gruppe A"
     },
     "wm-2026__czech-republic": {
@@ -77348,8 +78306,80 @@
       "slug": "australia",
       "league": "wm-2026",
       "leagueName": "WM 2026",
-      "products": [],
-      "productCount": 0,
+      "products": [
+        {
+          "t": "Australien Heimtrikot WM 2026",
+          "h": "australia-2026-home-jersey",
+          "i": "https://img.wpassets-gamma.com/images/99276a8ec3556b0335f5c2ba19ec2c4d.jpg",
+          "hi": "https://img.wpassets-gamma.com/images/99276a8ec3556b0335f5c2ba19ec2c4d.jpg",
+          "p": "49.90",
+          "c": [
+            "home"
+          ],
+          "imgs": [
+            "https://img.wpassets-gamma.com/images/99276a8ec3556b0335f5c2ba19ec2c4d.jpg",
+            "https://img.wpassets-gamma.com/images/2e1986283dee4e5eac2ab08d2db7e9cc.avif",
+            "https://img.wpassets-gamma.com/images/66765cbf00a514ee9b2619846010dee3.jpg",
+            "https://img.wpassets-gamma.com/images/3118f59609c50dced23bc2658eac49ff.jpg",
+            "https://img.wpassets-gamma.com/images/6d0eb29eaf603b3d0b0c73cda122449b.jpg",
+            "https://img.wpassets-gamma.com/images/c442a7a1a868e9d67d926050d3a339bf.jpg",
+            "https://img.wpassets-gamma.com/images/de188f2de59fb98b5ab4b337f81b0537.jpg"
+          ],
+          "pat": "wm2026",
+          "patI": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250601/wm2026-patch.png"
+        },
+        {
+          "t": "Australien Auswärtstrikot WM 2026",
+          "h": "australia-2026-away-jersey",
+          "i": "https://img.wpassets-gamma.com/images/f96299099c7b6c7c9896e3a54415c9de.jpeg",
+          "hi": "https://img.wpassets-gamma.com/images/f96299099c7b6c7c9896e3a54415c9de.jpeg",
+          "p": "49.90",
+          "c": [
+            "away"
+          ],
+          "imgs": [
+            "https://img.wpassets-gamma.com/images/f96299099c7b6c7c9896e3a54415c9de.jpeg",
+            "https://img.wpassets-gamma.com/images/9a7ba4b3ad7e59f07c64af8e0af04ef8.jpeg"
+          ],
+          "pat": "wm2026",
+          "patI": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250601/wm2026-patch.png"
+        },
+        {
+          "t": "Australien Heimtrikot WM 2026 Kinder",
+          "h": "kids-australia-2026-home-jersey",
+          "i": "https://img.wpassets-gamma.com/images/1765af884cb1eef1d7956265118945c6.png",
+          "hi": "https://img.wpassets-gamma.com/images/1765af884cb1eef1d7956265118945c6.png",
+          "p": "49.90",
+          "c": [
+            "home",
+            "kids"
+          ],
+          "imgs": [
+            "https://img.wpassets-gamma.com/images/1765af884cb1eef1d7956265118945c6.png",
+            "https://img.wpassets-gamma.com/images/2acd98a6d4671f74121fce950ed49245.png"
+          ],
+          "pat": "wm2026",
+          "patI": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250601/wm2026-patch.png"
+        },
+        {
+          "t": "Australien Auswärtstrikot WM 2026 Kinder",
+          "h": "kids-australia-2026-away-jersey",
+          "i": "https://img.wpassets-gamma.com/images/ee3cda0a39de60e659915fe86f991ff0.png",
+          "hi": "https://img.wpassets-gamma.com/images/ee3cda0a39de60e659915fe86f991ff0.png",
+          "p": "49.90",
+          "c": [
+            "away",
+            "kids"
+          ],
+          "imgs": [
+            "https://img.wpassets-gamma.com/images/ee3cda0a39de60e659915fe86f991ff0.png",
+            "https://img.wpassets-gamma.com/images/a7efdb1d8dc151ddf1a311ec9e44e194.png"
+          ],
+          "pat": "wm2026",
+          "patI": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250601/wm2026-patch.png"
+        }
+      ],
+      "productCount": 4,
       "subLeague": "Gruppe D"
     },
     "wm-2026__turkey": {
@@ -77357,8 +78387,118 @@
       "slug": "turkey",
       "league": "wm-2026",
       "leagueName": "WM 2026",
-      "products": [],
-      "productCount": 0,
+      "products": [
+        {
+          "t": "Türkei Heimtrikot WM 2026",
+          "h": "turkey-2026-home-jersey",
+          "i": "https://img.wpassets-gamma.com/images/34254116861174077e4ee947e6acf22a.png",
+          "hi": "https://img.wpassets-gamma.com/images/34254116861174077e4ee947e6acf22a.png",
+          "p": "49.90",
+          "c": [
+            "home"
+          ],
+          "imgs": [
+            "https://img.wpassets-gamma.com/images/34254116861174077e4ee947e6acf22a.png",
+            "https://img.wpassets-gamma.com/images/bf170f2e78047144abbd2249ebf74960.png"
+          ],
+          "pat": "wm2026",
+          "patI": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250601/wm2026-patch.png"
+        },
+        {
+          "t": "Türkei Auswärtstrikot WM 2026",
+          "h": "turkey-2026-away-jersey",
+          "i": "https://img.wpassets-gamma.com/images/f55e0337913c249743fdbd527a232032.png",
+          "hi": "https://img.wpassets-gamma.com/images/f55e0337913c249743fdbd527a232032.png",
+          "p": "49.90",
+          "c": [
+            "away"
+          ],
+          "imgs": [
+            "https://img.wpassets-gamma.com/images/f55e0337913c249743fdbd527a232032.png",
+            "https://img.wpassets-gamma.com/images/b489fc9e1f57e5cbee1af2723af8e6bb.png"
+          ],
+          "pat": "wm2026",
+          "patI": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250601/wm2026-patch.png"
+        },
+        {
+          "t": "Türkei Heimtrikot WM 2026 Player Version",
+          "h": "player-version-turkey-2026-home-jersey",
+          "i": "https://img.wpassets-gamma.com/images/4fb31cb6a9e13754821cfe636f20e5d4.webp",
+          "hi": "https://img.wpassets-gamma.com/images/4fb31cb6a9e13754821cfe636f20e5d4.webp",
+          "p": "54.90",
+          "c": [
+            "home",
+            "player"
+          ],
+          "imgs": [
+            "https://img.wpassets-gamma.com/images/4fb31cb6a9e13754821cfe636f20e5d4.webp",
+            "https://img.wpassets-gamma.com/images/cfea769e862db73fa8d8c1d149b2bca3.webp",
+            "https://img.wpassets-gamma.com/images/7ce0ae2b5a77d603c6b62c446691932e.webp",
+            "https://img.wpassets-gamma.com/images/378cccc77ee698a0b08f19e3b65b804a.webp",
+            "https://img.wpassets-gamma.com/images/78a78c7133eb6402c0e19436c44c4119.webp",
+            "https://img.wpassets-gamma.com/images/4c9db05e138b5d2a29e5b91c46368bc8.webp",
+            "https://img.wpassets-gamma.com/images/0891102f447f672035d00d558b81a022.webp"
+          ],
+          "pat": "wm2026",
+          "patI": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250601/wm2026-patch.png"
+        },
+        {
+          "t": "Türkei Auswärtstrikot WM 2026 Player Version",
+          "h": "player-version-turkey-2026-away-jersey",
+          "i": "https://img.wpassets-gamma.com/images/9c0eb72572749e8110db11ac21db9de4.webp",
+          "hi": "https://img.wpassets-gamma.com/images/9c0eb72572749e8110db11ac21db9de4.webp",
+          "p": "54.90",
+          "c": [
+            "away",
+            "player"
+          ],
+          "imgs": [
+            "https://img.wpassets-gamma.com/images/9c0eb72572749e8110db11ac21db9de4.webp",
+            "https://img.wpassets-gamma.com/images/5ceebf8d394dd0ffb394c57741e9807b.webp",
+            "https://img.wpassets-gamma.com/images/6f916784e7ece2c2edbefeb9ff7b0cc6.webp",
+            "https://img.wpassets-gamma.com/images/4b7c6dd0d43905e82fda7204bdcc50d8.webp",
+            "https://img.wpassets-gamma.com/images/4e5670e2f7638dca2d0a11cf3aabe367.webp",
+            "https://img.wpassets-gamma.com/images/0d45c488a22c1b9b014c07d485084097.webp"
+          ],
+          "pat": "wm2026",
+          "patI": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250601/wm2026-patch.png"
+        },
+        {
+          "t": "Türkei Heimtrikot WM 2026 Kinder",
+          "h": "kids-turkey-2026-home-jersey",
+          "i": "https://img.wpassets-gamma.com/images/7ebed3b2ff10493230f8f7229155d5b4.png",
+          "hi": "https://img.wpassets-gamma.com/images/7ebed3b2ff10493230f8f7229155d5b4.png",
+          "p": "49.90",
+          "c": [
+            "home",
+            "kids"
+          ],
+          "imgs": [
+            "https://img.wpassets-gamma.com/images/7ebed3b2ff10493230f8f7229155d5b4.png",
+            "https://img.wpassets-gamma.com/images/1fe091a83aac1a78f5b9e6e48c54f192.png"
+          ],
+          "pat": "wm2026",
+          "patI": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250601/wm2026-patch.png"
+        },
+        {
+          "t": "Türkei Auswärtstrikot WM 2026 Kinder",
+          "h": "kids-turkey-2026-away-jersey",
+          "i": "https://img.wpassets-gamma.com/images/dbbd96b991d74245e8c9935822c4b956.png",
+          "hi": "https://img.wpassets-gamma.com/images/dbbd96b991d74245e8c9935822c4b956.png",
+          "p": "49.90",
+          "c": [
+            "away",
+            "kids"
+          ],
+          "imgs": [
+            "https://img.wpassets-gamma.com/images/dbbd96b991d74245e8c9935822c4b956.png",
+            "https://img.wpassets-gamma.com/images/6384fd886026ec9c126afb1829692ff6.png"
+          ],
+          "pat": "wm2026",
+          "patI": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250601/wm2026-patch.png"
+        }
+      ],
+      "productCount": 6,
       "subLeague": "Gruppe D"
     },
     "wm-2026__ecuador": {
@@ -77366,8 +78506,81 @@
       "slug": "ecuador",
       "league": "wm-2026",
       "leagueName": "WM 2026",
-      "products": [],
-      "productCount": 0,
+      "products": [
+        {
+          "t": "Ecuador Heimtrikot WM 2026",
+          "h": "2026-ecuador-home-jersey",
+          "i": "https://img.wpassets-gamma.com/images/ab28705aa22f265c9cdddd5c9635b8b3.jpg",
+          "hi": "https://img.wpassets-gamma.com/images/ab28705aa22f265c9cdddd5c9635b8b3.jpg",
+          "p": "49.90",
+          "c": [
+            "home"
+          ],
+          "imgs": [
+            "https://img.wpassets-gamma.com/images/ab28705aa22f265c9cdddd5c9635b8b3.jpg",
+            "https://img.wpassets-gamma.com/images/8381f24ac5b3ac5247b821138a73ae72.jpg"
+          ],
+          "pat": "wm2026",
+          "patI": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250601/wm2026-patch.png"
+        },
+        {
+          "t": "Ecuador Trikot WM 2026",
+          "h": "2026-ecuador-jersey",
+          "i": "https://img.wpassets-gamma.com/images/e990c7c13fb6f0852063105598e0675f.png",
+          "hi": "https://img.wpassets-gamma.com/images/e990c7c13fb6f0852063105598e0675f.png",
+          "p": "49.90",
+          "c": [
+            "special"
+          ],
+          "imgs": [
+            "https://img.wpassets-gamma.com/images/e990c7c13fb6f0852063105598e0675f.png",
+            "https://img.wpassets-gamma.com/images/761a639e598f5b4ac616211e3ee863ad.png",
+            "https://img.wpassets-gamma.com/images/decd74e8f2afc0b6336ae3338572bb5d.png"
+          ],
+          "pat": "wm2026",
+          "patI": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250601/wm2026-patch.png"
+        },
+        {
+          "t": "Ecuador Drittes Trikot WM 2026",
+          "h": "2026-ecuador-third-jersey",
+          "i": "https://img.wpassets-gamma.com/images/d5b653c7605d30fb134faf2f9fe4afe2.png",
+          "hi": "https://img.wpassets-gamma.com/images/d5b653c7605d30fb134faf2f9fe4afe2.png",
+          "p": "49.90",
+          "c": [
+            "third"
+          ],
+          "imgs": [
+            "https://img.wpassets-gamma.com/images/d5b653c7605d30fb134faf2f9fe4afe2.png",
+            "https://img.wpassets-gamma.com/images/cb143910f0425f776dad14ea95d3d349.png",
+            "https://img.wpassets-gamma.com/images/b9a882c77031f3180cbe19fa11a8b090.png"
+          ],
+          "pat": "wm2026",
+          "patI": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250601/wm2026-patch.png"
+        },
+        {
+          "t": "Ecuador Heimtrikot WM 2026 Player Version",
+          "h": "player-version-2026-ecuador-home-jersey",
+          "i": "https://img.wpassets-gamma.com/images/88afdce2279790c5107b19d03f682a51.jpg",
+          "hi": "https://img.wpassets-gamma.com/images/88afdce2279790c5107b19d03f682a51.jpg",
+          "p": "54.90",
+          "c": [
+            "home",
+            "player"
+          ],
+          "imgs": [
+            "https://img.wpassets-gamma.com/images/88afdce2279790c5107b19d03f682a51.jpg",
+            "https://img.wpassets-gamma.com/images/6b37a6ade363482ecaedbe12f76c1b51.jpg",
+            "https://img.wpassets-gamma.com/images/c7d54778e2c196c720fbe2841415161a.jpg",
+            "https://img.wpassets-gamma.com/images/8b4b5b6a6058a2d508b385cf80d74923.jpg",
+            "https://img.wpassets-gamma.com/images/d45278e96f0626125c3d56cb2bc9f682.jpg",
+            "https://img.wpassets-gamma.com/images/32a4077d7986e53c34a5f6a8aedac8bd.jpg",
+            "https://img.wpassets-gamma.com/images/c75fdd1b020a8925793d4f9e41f49a8a.jpg"
+          ],
+          "pat": "wm2026",
+          "patI": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250601/wm2026-patch.png"
+        }
+      ],
+      "productCount": 4,
       "subLeague": "Gruppe E"
     },
     "wm-2026__egypt": {
@@ -77375,8 +78588,101 @@
       "slug": "egypt",
       "league": "wm-2026",
       "leagueName": "WM 2026",
-      "products": [],
-      "productCount": 0,
+      "products": [
+        {
+          "t": "Ägypten Heimtrikot WM 2026",
+          "h": "egypt-2026-27-home-jersey",
+          "i": "https://img.wpassets-gamma.com/images/8c0c6e6bca476f767a02b0fba219c71e1d13b25f16f46f059921d7d2e5bdb0b4.jpg",
+          "hi": "https://img.wpassets-gamma.com/images/8c0c6e6bca476f767a02b0fba219c71e1d13b25f16f46f059921d7d2e5bdb0b4.jpg",
+          "p": "49.90",
+          "c": [
+            "home"
+          ],
+          "imgs": [
+            "https://img.wpassets-gamma.com/images/8c0c6e6bca476f767a02b0fba219c71e1d13b25f16f46f059921d7d2e5bdb0b4.jpg",
+            "https://img.wpassets-gamma.com/images/8e31c97e1d947db613a6e43f071d5eaa408b053a285c5c0bcf1628cebfca6065.jpg",
+            "https://img.wpassets-gamma.com/images/fb6ee6244a336442f7788a0f953853235bc48de12a0b6ba25c826be5b0d5eecf.jpg",
+            "https://img.wpassets-gamma.com/images/ec9f1f1738ea494c397cff777cc81c33cfedf7b8c3c5cddaaa9521f23ccf731a.jpg",
+            "https://img.wpassets-gamma.com/images/0fe0cb4035e9e20973fd0718936c824d1f9218c646495328e719599251404450.jpg",
+            "https://img.wpassets-gamma.com/images/1c5f59ec6e7eaf6e02e383b8dbc569fe0a58f8c99f1161de9a25b0551e5a12de.jpg"
+          ],
+          "pat": "wm2026",
+          "patI": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250601/wm2026-patch.png"
+        },
+        {
+          "t": "Ägypten Auswärtstrikot WM 2026",
+          "h": "egypt-2026-27-away-jersey",
+          "i": "https://img.wpassets-gamma.com/images/8f353c91242b16a0dc8cbf9cbf5a43ebe374006bde24e482a997e530a9138ad2.jpg",
+          "hi": "https://img.wpassets-gamma.com/images/8f353c91242b16a0dc8cbf9cbf5a43ebe374006bde24e482a997e530a9138ad2.jpg",
+          "p": "49.90",
+          "c": [
+            "away"
+          ],
+          "imgs": [
+            "https://img.wpassets-gamma.com/images/8f353c91242b16a0dc8cbf9cbf5a43ebe374006bde24e482a997e530a9138ad2.jpg",
+            "https://img.wpassets-gamma.com/images/d583fde049ef9cec24e7350bf5b6c174b8cd738d8bb95cccda513438ee6773e0.jpg",
+            "https://img.wpassets-gamma.com/images/d3348adee91e045e318131a437ee0b928147306b33b6d76d5fa0c959572c8e5c.jpg",
+            "https://img.wpassets-gamma.com/images/4d12c72959d2785136d95e6dc3684afe0cff76e9e001bba6228212ee51a7769a.jpg",
+            "https://img.wpassets-gamma.com/images/fd33bb30832996ccb55ee40cacbd85b5cfdc4606e89d8920cb6a9be755278a96.jpg",
+            "https://img.wpassets-gamma.com/images/c2cd219e35ee78e3dec7a9add4df56ed482a95ac0184e791e35d3093f7272131.jpg"
+          ],
+          "pat": "wm2026",
+          "patI": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250601/wm2026-patch.png"
+        },
+        {
+          "t": "Ägypten Heimtrikot WM 2026 Player Version",
+          "h": "player-version-egypt-2026-27-home-jersey",
+          "i": "https://img.wpassets-gamma.com/images/8bc8369596132c77b6e6e4cde7c5b66f97bd32a99852aab42a63d82cf504495a.jpg",
+          "hi": "https://img.wpassets-gamma.com/images/8bc8369596132c77b6e6e4cde7c5b66f97bd32a99852aab42a63d82cf504495a.jpg",
+          "p": "54.90",
+          "c": [
+            "home",
+            "player"
+          ],
+          "imgs": [
+            "https://img.wpassets-gamma.com/images/8bc8369596132c77b6e6e4cde7c5b66f97bd32a99852aab42a63d82cf504495a.jpg",
+            "https://img.wpassets-gamma.com/images/e4fe6c4f9920693b866251bec28d6de49cd29f7ce297ac8093e02b25bd1bf49b.jpg",
+            "https://img.wpassets-gamma.com/images/cae23cd7f2df99b48cf1d14cdba848cff8f71e846f47b4a6c90de0a0602931dc.jpg",
+            "https://img.wpassets-gamma.com/images/484e2af64da25b25d683d8ecbdc19ffcdb0682fd80ce8b9a5863f84f45d9255b.jpg",
+            "https://img.wpassets-gamma.com/images/20118ab8c3b4df5aaa2df99fc8c83acf2c1dee23868491f665fc3616a6040e9d.jpg",
+            "https://img.wpassets-gamma.com/images/d7fd372ec4e3d1f7343b3328608b6561840bbc27d1f70167be4c3716b4f14b22.jpg",
+            "https://img.wpassets-gamma.com/images/f9d09cd29fea53f3ff9a6733c79105a7a56b1b8141cf38ee92012fa4951291bf.jpg",
+            "https://img.wpassets-gamma.com/images/ac3ca052da9059a6a2ce542508feb9d2d96d9ab59acde4ed06a2e50f3fcf122d.jpg",
+            "https://img.wpassets-gamma.com/images/4bc7b9fb441f28d68d55587399261a5830fbef15ca9b7a896cdc8bdc34faba03.jpg",
+            "https://img.wpassets-gamma.com/images/43117003cdc9f210255118d88a34e71e983fde452d1ea9f1a5e908f18239c45d.jpg",
+            "https://img.wpassets-gamma.com/images/413fdc9126f7e7cbbb58b81396e052e43df76af6ae364629b129700cf6e991ee.jpg"
+          ],
+          "pat": "wm2026",
+          "patI": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250601/wm2026-patch.png"
+        },
+        {
+          "t": "Ägypten Auswärtstrikot WM 2026 Player Version",
+          "h": "player-version-egypt-2026-27-away-jersey",
+          "i": "https://img.wpassets-gamma.com/images/94d8395b56ec900f9b97d863d3dc91df0bf725ec8a780a1765d55b15c1932c08.jpg",
+          "hi": "https://img.wpassets-gamma.com/images/94d8395b56ec900f9b97d863d3dc91df0bf725ec8a780a1765d55b15c1932c08.jpg",
+          "p": "54.90",
+          "c": [
+            "away",
+            "player"
+          ],
+          "imgs": [
+            "https://img.wpassets-gamma.com/images/94d8395b56ec900f9b97d863d3dc91df0bf725ec8a780a1765d55b15c1932c08.jpg",
+            "https://img.wpassets-gamma.com/images/e0633f8c50a439272674b7542b6763deb454df3714faf29c6fc3aaad3c27ba5e.jpg",
+            "https://img.wpassets-gamma.com/images/73801ca89bb3e71cb471eddc2875370eae2d75da6c6d1e545a01967613d3f9d6.jpg",
+            "https://img.wpassets-gamma.com/images/65ea7f9ef5db23d5493c56b582e49148a4d702043b04b96ff79d80d7c540b0af.jpg",
+            "https://img.wpassets-gamma.com/images/4a13e6d884181da9f4933a3cd7bd64c6a174be092007b171461a9ebcdb875250.jpg",
+            "https://img.wpassets-gamma.com/images/18281ec85d4d53d82ecb4300056de5a08389b2bc7725f417660737f4ef834eaa.jpg",
+            "https://img.wpassets-gamma.com/images/465689951db12f0e84bc1bc4b77d6a2f3798ff3f614c0fa3050ff846f091b0c3.jpg",
+            "https://img.wpassets-gamma.com/images/a361c9b44ee8b10fab11ffd2a7f11bbef050b4d987afdcac1afd8ad7beb60c8e.jpg",
+            "https://img.wpassets-gamma.com/images/fc3f417a5d514ad4426d906393c7c8d92c966221be94fc87e7d7312840d510cc.jpg",
+            "https://img.wpassets-gamma.com/images/bd9bef28148252cd8e8d03b4f4771aaf2c94a7465eee07bb3a34a8bd7350f013.jpg",
+            "https://img.wpassets-gamma.com/images/8a5d5c2713ad72a3c086376ccf3459afd68e96c80d271312939d286496b35c8b.jpg"
+          ],
+          "pat": "wm2026",
+          "patI": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250601/wm2026-patch.png"
+        }
+      ],
+      "productCount": 4,
       "subLeague": "Gruppe G"
     },
     "wm-2026__norway": {
@@ -77384,8 +78690,178 @@
       "slug": "norway",
       "league": "wm-2026",
       "leagueName": "WM 2026",
-      "products": [],
-      "productCount": 0,
+      "products": [
+        {
+          "t": "Norwegen Heimtrikot WM 2026",
+          "h": "norway-2026-home-jersey",
+          "i": "https://img.wpassets-gamma.com/images/c5034d97424b68f651724bce2ed87a30.jpg",
+          "hi": "https://img.wpassets-gamma.com/images/c5034d97424b68f651724bce2ed87a30.jpg",
+          "p": "49.90",
+          "c": [
+            "home"
+          ],
+          "imgs": [
+            "https://img.wpassets-gamma.com/images/c5034d97424b68f651724bce2ed87a30.jpg",
+            "https://img.wpassets-gamma.com/images/3af84f8c9a3a988a7ed5568ae93944d9.jpg",
+            "https://img.wpassets-gamma.com/images/6f0623fd3571d420c341633a73955b8b.jpg",
+            "https://img.wpassets-gamma.com/images/858edbc5b57929746a6558e5d4b397bb.jpg",
+            "https://img.wpassets-gamma.com/images/3fe82fb2d5a814817dcfd6c74098cacf.jpg",
+            "https://img.wpassets-gamma.com/images/4ffed762d4ac279fa6a83e5805d6ac53.jpg",
+            "https://img.wpassets-gamma.com/images/a4f359b8311e26fa7d89be63bd6aeae9.jpg",
+            "https://img.wpassets-gamma.com/images/6223008806383a0451715b03a4cd5fd8.jpg"
+          ],
+          "pat": "wm2026",
+          "patI": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250601/wm2026-patch.png"
+        },
+        {
+          "t": "Norwegen Auswärtstrikot WM 2026",
+          "h": "norway-2026-away-jersey",
+          "i": "https://img.wpassets-gamma.com/images/09bfc04d06fec5078791665c6936d338.jpg",
+          "hi": "https://img.wpassets-gamma.com/images/09bfc04d06fec5078791665c6936d338.jpg",
+          "p": "49.90",
+          "c": [
+            "away"
+          ],
+          "imgs": [
+            "https://img.wpassets-gamma.com/images/09bfc04d06fec5078791665c6936d338.jpg",
+            "https://img.wpassets-gamma.com/images/5ca0d1f6baaddb17e2e3f50ed3ea03d7.jpg",
+            "https://img.wpassets-gamma.com/images/0f3e294834949044b0fd2934f3fbf00f.jpg",
+            "https://img.wpassets-gamma.com/images/d20f9f5684f495f6a4220c295b54413a.jpg"
+          ],
+          "pat": "wm2026",
+          "patI": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250601/wm2026-patch.png"
+        },
+        {
+          "t": "Norwegen Drittes Trikot WM 2026",
+          "h": "norway-2026-third-jersey",
+          "i": "https://img.wpassets-gamma.com/images/40b0036d0fa0fbba9928127bd61fd190.png",
+          "hi": "https://img.wpassets-gamma.com/images/40b0036d0fa0fbba9928127bd61fd190.png",
+          "p": "49.90",
+          "c": [
+            "third"
+          ],
+          "imgs": [
+            "https://img.wpassets-gamma.com/images/40b0036d0fa0fbba9928127bd61fd190.png",
+            "https://img.wpassets-gamma.com/images/850eb0b0f8a8309c8765035aced9c714.jpeg",
+            "https://img.wpassets-gamma.com/images/fb43b9cbbe1b2ce1cb1f883f3f4cf0c9.jpeg",
+            "https://img.wpassets-gamma.com/images/899a672826f781299b8d901a61a9c4dd.jpeg",
+            "https://img.wpassets-gamma.com/images/558801cd368e16a42211ff6ad7b61c17.jpeg",
+            "https://img.wpassets-gamma.com/images/4e8b007141f4ecaa39eb54291e69df2c.jpeg"
+          ],
+          "pat": "wm2026",
+          "patI": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250601/wm2026-patch.png"
+        },
+        {
+          "t": "Norwegen Heimtrikot WM 2026 Player Version",
+          "h": "player-version-norway-2026-home-jersey",
+          "i": "https://img.wpassets-gamma.com/images/b861a9ba61de075767c460ac5c0fc001.jpg",
+          "hi": "https://img.wpassets-gamma.com/images/b861a9ba61de075767c460ac5c0fc001.jpg",
+          "p": "54.90",
+          "c": [
+            "home",
+            "player"
+          ],
+          "imgs": [
+            "https://img.wpassets-gamma.com/images/b861a9ba61de075767c460ac5c0fc001.jpg",
+            "https://img.wpassets-gamma.com/images/753252fa37220738cd9b8a5d4778540f.jpg",
+            "https://img.wpassets-gamma.com/images/21e0cd08d0303a0580b12da1cc7f87d6.jpg",
+            "https://img.wpassets-gamma.com/images/2e0273b53bf59cb782278ae2c8923b48.jpg",
+            "https://img.wpassets-gamma.com/images/94322bbbf43fe56c449d8eb572e8f10a.jpg",
+            "https://img.wpassets-gamma.com/images/0c8d202fbd7a35b9b4d05cdb90316c17.jpg",
+            "https://img.wpassets-gamma.com/images/832d203dd303f611668fd614ee7d1fa4.jpg",
+            "https://img.wpassets-gamma.com/images/ea686478a90003f44899a7b66f060a40.jpg",
+            "https://img.wpassets-gamma.com/images/985e301143746ad1f47dde3923e2d40e.jpg",
+            "https://img.wpassets-gamma.com/images/4ace9fc5fdb9db07adf93fd2d7f408d7.jpg"
+          ],
+          "pat": "wm2026",
+          "patI": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250601/wm2026-patch.png"
+        },
+        {
+          "t": "Norwegen Auswärtstrikot WM 2026 Player Version",
+          "h": "player-version-norway-2026-away-jersey",
+          "i": "https://img.wpassets-gamma.com/images/09280a3d783e4317b7ee42199a549fc0.jpg",
+          "hi": "https://img.wpassets-gamma.com/images/09280a3d783e4317b7ee42199a549fc0.jpg",
+          "p": "54.90",
+          "c": [
+            "away",
+            "player"
+          ],
+          "imgs": [
+            "https://img.wpassets-gamma.com/images/09280a3d783e4317b7ee42199a549fc0.jpg",
+            "https://img.wpassets-gamma.com/images/0419fb93fbb15d7f040092fefc2b2918.jpg",
+            "https://img.wpassets-gamma.com/images/257a7c0556faa6e1971f3e8c5a1412a6.jpg",
+            "https://img.wpassets-gamma.com/images/375b9d81bff043c67500702202c0603c.jpg",
+            "https://img.wpassets-gamma.com/images/cd39513e6fe4c844c5765c882683642e.jpg",
+            "https://img.wpassets-gamma.com/images/83e8a647d40b782a018c3a8725d8b3e5.jpg",
+            "https://img.wpassets-gamma.com/images/42c86293b009b93c0c52e8c2cf645d23.jpg",
+            "https://img.wpassets-gamma.com/images/c922c1fc3b0c1e5bd3c00549eee40d99.jpg",
+            "https://img.wpassets-gamma.com/images/124a6e45716bfcc4f0b688bcc3e0a6d9.jpg",
+            "https://img.wpassets-gamma.com/images/3d13ff2f99488dc4f93d92db1c210766.jpg"
+          ],
+          "pat": "wm2026",
+          "patI": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250601/wm2026-patch.png"
+        },
+        {
+          "t": "Norwegen Drittes Trikot WM 2026 Player Version",
+          "h": "player-version-norway-2026-third-jersey",
+          "i": "https://img.wpassets-gamma.com/images/d46008f0ed63792f0f59a386c4480f29.jpg",
+          "hi": "https://img.wpassets-gamma.com/images/d46008f0ed63792f0f59a386c4480f29.jpg",
+          "p": "54.90",
+          "c": [
+            "third",
+            "player"
+          ],
+          "imgs": [
+            "https://img.wpassets-gamma.com/images/d46008f0ed63792f0f59a386c4480f29.jpg",
+            "https://img.wpassets-gamma.com/images/90637117aa48fb9382c3d8453887575f.jpg",
+            "https://img.wpassets-gamma.com/images/04471a1cc8ee06e75291fea44d0514a9.jpg",
+            "https://img.wpassets-gamma.com/images/62fb33e09827c77b703e60bb433c78d3.jpg",
+            "https://img.wpassets-gamma.com/images/5f3e5254ad5811c656c9d0faff080260.jpg",
+            "https://img.wpassets-gamma.com/images/99a2e45a4f7a56bedde8b6c651e6bc39.jpg",
+            "https://img.wpassets-gamma.com/images/69466472d22ba6110e3999c995fc9fbc.jpg",
+            "https://img.wpassets-gamma.com/images/2709ba68d90f8f59ade7d2406527f58a.jpg",
+            "https://img.wpassets-gamma.com/images/8f9b43ec7a4dee6ebc806d77469080f1.jpg",
+            "https://img.wpassets-gamma.com/images/42d6d46c0ecd3020dcff4b4960f0be39.jpg"
+          ],
+          "pat": "wm2026",
+          "patI": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250601/wm2026-patch.png"
+        },
+        {
+          "t": "Norwegen Heimtrikot WM 2026 Kinder",
+          "h": "kids-norway-2026-home-jersey",
+          "i": "https://img.wpassets-gamma.com/images/e2434e744a5c7a23445f3b5f39246758.jpeg",
+          "hi": "https://img.wpassets-gamma.com/images/e2434e744a5c7a23445f3b5f39246758.jpeg",
+          "p": "49.90",
+          "c": [
+            "home",
+            "kids"
+          ],
+          "imgs": [
+            "https://img.wpassets-gamma.com/images/e2434e744a5c7a23445f3b5f39246758.jpeg",
+            "https://img.wpassets-gamma.com/images/8080b0e9bf0165c0eb15c408f9cf5d9c.jpeg"
+          ],
+          "pat": "wm2026",
+          "patI": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250601/wm2026-patch.png"
+        },
+        {
+          "t": "Norwegen Auswärtstrikot WM 2026 Kinder",
+          "h": "kids-norway-2026-away-jersey",
+          "i": "https://img.wpassets-gamma.com/images/7a1afd262bf901ed368e300a42208db9.jpeg",
+          "hi": "https://img.wpassets-gamma.com/images/7a1afd262bf901ed368e300a42208db9.jpeg",
+          "p": "49.90",
+          "c": [
+            "away",
+            "kids"
+          ],
+          "imgs": [
+            "https://img.wpassets-gamma.com/images/7a1afd262bf901ed368e300a42208db9.jpeg",
+            "https://img.wpassets-gamma.com/images/a8728b9a42f53a2474be3f11cc0c67ee.jpeg"
+          ],
+          "pat": "wm2026",
+          "patI": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250601/wm2026-patch.png"
+        }
+      ],
+      "productCount": 8,
       "subLeague": "Gruppe I"
     },
     "wm-2026__uzbekistan": {
@@ -77402,8 +78878,87 @@
       "slug": "ghana",
       "league": "wm-2026",
       "leagueName": "WM 2026",
-      "products": [],
-      "productCount": 0,
+      "products": [
+        {
+          "t": "Ghana Heimtrikot WM 2026",
+          "h": "ghana-2026-home-jersey-men-s-4xl",
+          "i": "https://img.wpassets-gamma.com/images/631b4abc9794d744ae391c4bbc99adf2.jpg",
+          "hi": "https://img.wpassets-gamma.com/images/631b4abc9794d744ae391c4bbc99adf2.jpg",
+          "p": "49.90",
+          "c": [
+            "home"
+          ],
+          "imgs": [
+            "https://img.wpassets-gamma.com/images/631b4abc9794d744ae391c4bbc99adf2.jpg",
+            "https://img.wpassets-gamma.com/images/41ff197af956e74d6c94cb4e1a6efc7d.jpg",
+            "https://img.wpassets-gamma.com/images/6a4d70ee85eeaab5436778ea599125b1.jpg",
+            "https://img.wpassets-gamma.com/images/05f1f58daf9ab4da3153d79eee02d5e9.jpg",
+            "https://img.wpassets-gamma.com/images/654f4e61a1cc758d721c0d612b390c3d.jpg"
+          ],
+          "pat": "wm2026",
+          "patI": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250601/wm2026-patch.png"
+        },
+        {
+          "t": "Ghana Auswärtstrikot WM 2026",
+          "h": "ghana-2026-away-jersey-men",
+          "i": "https://img.wpassets-gamma.com/images/d37172f1239cc0d92960d741e8ad2464.png",
+          "hi": "https://img.wpassets-gamma.com/images/d37172f1239cc0d92960d741e8ad2464.png",
+          "p": "49.90",
+          "c": [
+            "away"
+          ],
+          "imgs": [
+            "https://img.wpassets-gamma.com/images/d37172f1239cc0d92960d741e8ad2464.png",
+            "https://img.wpassets-gamma.com/images/03dcf0b9c93f11daa4cebd822c7d1384.jpeg",
+            "https://img.wpassets-gamma.com/images/3969c7e113a94f363c843f50561d8803.jpeg",
+            "https://img.wpassets-gamma.com/images/f1c18d2042492dbcbbe0d3fcfc595725.jpeg",
+            "https://img.wpassets-gamma.com/images/29e36d2a4dca1b2f5992a8b2c2596dc5.jpeg",
+            "https://img.wpassets-gamma.com/images/ac8694da129522fbc62562d58f3e579e.jpeg",
+            "https://img.wpassets-gamma.com/images/90cec33b664f6f44d8b7cd2c4488a8de.jpeg",
+            "https://img.wpassets-gamma.com/images/19225c600eec2e7e0f136512e5d3619a.jpeg"
+          ],
+          "pat": "wm2026",
+          "patI": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250601/wm2026-patch.png"
+        },
+        {
+          "t": "Ghana Auswärtstrikot WM 2026",
+          "h": "ghana-2026-away-jersey",
+          "i": "https://img.wpassets-gamma.com/images/dab2e40a03da6d6c77f43259ed8cc47b.jpg",
+          "hi": "https://img.wpassets-gamma.com/images/dab2e40a03da6d6c77f43259ed8cc47b.jpg",
+          "p": "49.90",
+          "c": [
+            "away"
+          ],
+          "imgs": [
+            "https://img.wpassets-gamma.com/images/dab2e40a03da6d6c77f43259ed8cc47b.jpg",
+            "https://img.wpassets-gamma.com/images/df4d4ecf002f3b76b52bd1f91dcabe64.jpg",
+            "https://img.wpassets-gamma.com/images/a49ccfe7bba23738977b1663cfa5d647.jpg",
+            "https://img.wpassets-gamma.com/images/ff67dc55dc4edec028c97e7fee2a73a7.jpg"
+          ],
+          "pat": "wm2026",
+          "patI": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250601/wm2026-patch.png"
+        },
+        {
+          "t": "Ghana Heimtrikot WM 2026 Player Version",
+          "h": "player-version-ghana-2026-home-jersey",
+          "i": "https://img.wpassets-gamma.com/images/d2688118cc6aa0d79f9787c60544fce8.jpg",
+          "hi": "https://img.wpassets-gamma.com/images/d2688118cc6aa0d79f9787c60544fce8.jpg",
+          "p": "54.90",
+          "c": [
+            "home",
+            "player"
+          ],
+          "imgs": [
+            "https://img.wpassets-gamma.com/images/d2688118cc6aa0d79f9787c60544fce8.jpg",
+            "https://img.wpassets-gamma.com/images/5a8abb066f9ae2486cde0c762d56422a.jpg",
+            "https://img.wpassets-gamma.com/images/9d56900b8404b0d02fdd28acd15d5b12.jpg",
+            "https://img.wpassets-gamma.com/images/73e9d8be50dba8fed6612d4b1250491c.jpg"
+          ],
+          "pat": "wm2026",
+          "patI": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250601/wm2026-patch.png"
+        }
+      ],
+      "productCount": 4,
       "subLeague": "Gruppe L"
     },
     "wm-2026__panama": {
@@ -77411,8 +78966,72 @@
       "slug": "panama",
       "league": "wm-2026",
       "leagueName": "WM 2026",
-      "products": [],
-      "productCount": 0,
+      "products": [
+        {
+          "t": "Panama Heimtrikot WM 2026",
+          "h": "mens-panama-2026-home-jersey",
+          "i": "https://img.wpassets-gamma.com/images/735a3e53b1d2f2f1d7d97e972bc3f767.jpg",
+          "hi": "https://img.wpassets-gamma.com/images/735a3e53b1d2f2f1d7d97e972bc3f767.jpg",
+          "p": "49.90",
+          "c": [
+            "home"
+          ],
+          "imgs": [
+            "https://img.wpassets-gamma.com/images/735a3e53b1d2f2f1d7d97e972bc3f767.jpg",
+            "https://img.wpassets-gamma.com/images/4d8c2b297321b9640ad13a01ff43c357.jpg",
+            "https://img.wpassets-gamma.com/images/0cd1a6311ea091b7fa4a7fa8e1c93fab.jpg",
+            "https://img.wpassets-gamma.com/images/7a7f4025550581aee31ecadec6bf8ebb.jpg",
+            "https://img.wpassets-gamma.com/images/0d64a021a7256316e8415b8b12ec56c3.jpg",
+            "https://img.wpassets-gamma.com/images/dba8b08bc11ed632e5a28f33de860e31.jpg",
+            "https://img.wpassets-gamma.com/images/77d355b9bebf348fe49c5618360e75f6.jpg",
+            "https://img.wpassets-gamma.com/images/f4344e1aec0323e115dce8b4eec7de30.jpg"
+          ],
+          "pat": "wm2026",
+          "patI": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250601/wm2026-patch.png"
+        },
+        {
+          "t": "Panama Auswärtstrikot WM 2026",
+          "h": "mens-panama-2026-away-jersey",
+          "i": "https://img.wpassets-gamma.com/images/d1bc87594304abb053f5b9f5bcd110bcfdf87cd1aa03b05a9edbc91603304527.jpg",
+          "hi": "https://img.wpassets-gamma.com/images/d1bc87594304abb053f5b9f5bcd110bcfdf87cd1aa03b05a9edbc91603304527.jpg",
+          "p": "49.90",
+          "c": [
+            "away"
+          ],
+          "imgs": [
+            "https://img.wpassets-gamma.com/images/d1bc87594304abb053f5b9f5bcd110bcfdf87cd1aa03b05a9edbc91603304527.jpg",
+            "https://img.wpassets-gamma.com/images/288bac1ca3851e223f9de73c15b57ffb48b6fe1778d69a0afcd7efd3d13e2213.jpg",
+            "https://img.wpassets-gamma.com/images/bdb4735d53b1b412557fe908eb563b12bb5d6f88e0c229f41cd9d11394df969c.jpg",
+            "https://img.wpassets-gamma.com/images/214ce4368904447f2a6621904a05bc1367a1c08d8b453c3da671460c8ba83d64.jpg",
+            "https://img.wpassets-gamma.com/images/02a80f97ff1364f7c214749eb9df9e5932e0f7c69139f687c0fe207a9318fba8.jpg",
+            "https://img.wpassets-gamma.com/images/98bd0424be8b42c095e62182128e93e6f6e8c7a980adfed11469be93eb83a464.jpg"
+          ],
+          "pat": "wm2026",
+          "patI": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250601/wm2026-patch.png"
+        },
+        {
+          "t": "Panama Drittes Trikot WM 2026",
+          "h": "mens-panama-2026-third-jersey",
+          "i": "https://img.wpassets-gamma.com/images/8650fee719f1743d651b6d7d2bd4cf2f961eed12e9630658dad0edec413d0da8.jpg",
+          "hi": "https://img.wpassets-gamma.com/images/8650fee719f1743d651b6d7d2bd4cf2f961eed12e9630658dad0edec413d0da8.jpg",
+          "p": "49.90",
+          "c": [
+            "third"
+          ],
+          "imgs": [
+            "https://img.wpassets-gamma.com/images/8650fee719f1743d651b6d7d2bd4cf2f961eed12e9630658dad0edec413d0da8.jpg",
+            "https://img.wpassets-gamma.com/images/e94d87176ff2d86ffa990686c3a1c158dcec2c76cf537deeda82ba24c6a9459b.jpg",
+            "https://img.wpassets-gamma.com/images/f2a3823252c5eb7e9915078f97e8c1d3c97dfc2121268ade2adb672817296c75.jpg",
+            "https://img.wpassets-gamma.com/images/9c05508f3f1fcc9985ce9f53c817615d65ada10949f59053311094ec6a943871.jpg",
+            "https://img.wpassets-gamma.com/images/76a6bab606c635953c577ba2f4f964aaf5adaf0e058a6c3795365677492f8fac.jpg",
+            "https://img.wpassets-gamma.com/images/39ceef39ce74d05fe55a614e7f59234023de651dbdb4e5d26cc4a9f74a9a3ee6.jpg",
+            "https://img.wpassets-gamma.com/images/54c6fd9c7c085f4f6cbb11c95eb752d578a1953755a4a4ea4005c38cbaa994ef.jpg"
+          ],
+          "pat": "wm2026",
+          "patI": "https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250601/wm2026-patch.png"
+        }
+      ],
+      "productCount": 3,
       "subLeague": "Gruppe L"
     }
   }
