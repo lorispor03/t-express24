@@ -5,6 +5,254 @@
       "country": "USA / Kanada / Mexiko",
       "teams": [
         {
+          "id": "wm-2026__mexico",
+          "name": "Mexiko",
+          "slug": "mexico",
+          "count": 17,
+          "subLeague": "Gruppe A"
+        },
+        {
+          "id": "wm-2026__southafrica",
+          "name": "Südafrika",
+          "slug": "southafrica",
+          "count": 0,
+          "subLeague": "Gruppe A"
+        },
+        {
+          "id": "wm-2026__korea",
+          "name": "Südkorea",
+          "slug": "korea",
+          "count": 0,
+          "subLeague": "Gruppe A"
+        },
+        {
+          "id": "wm-2026__czech-republic",
+          "name": "Tschechien",
+          "slug": "czech-republic",
+          "count": 0,
+          "subLeague": "Gruppe A"
+        },
+        {
+          "id": "wm-2026__bosnia-and-herzegovina",
+          "name": "Bosnien und Herzegowina",
+          "slug": "bosnia-and-herzegovina",
+          "count": 2,
+          "subLeague": "Gruppe B"
+        },
+        {
+          "id": "wm-2026__canada",
+          "name": "Kanada",
+          "slug": "canada",
+          "count": 8,
+          "subLeague": "Gruppe B"
+        },
+        {
+          "id": "wm-2026__qatar",
+          "name": "Katar",
+          "slug": "qatar",
+          "count": 0,
+          "subLeague": "Gruppe B"
+        },
+        {
+          "id": "wm-2026__switzerland",
+          "name": "Schweiz",
+          "slug": "switzerland",
+          "count": 4,
+          "subLeague": "Gruppe B"
+        },
+        {
+          "id": "wm-2026__brazil",
+          "name": "Brasilien",
+          "slug": "brazil",
+          "count": 12,
+          "subLeague": "Gruppe C"
+        },
+        {
+          "id": "wm-2026__haiti",
+          "name": "Haiti",
+          "slug": "haiti",
+          "count": 7,
+          "subLeague": "Gruppe C"
+        },
+        {
+          "id": "wm-2026__morocco",
+          "name": "Marokko",
+          "slug": "morocco",
+          "count": 0,
+          "subLeague": "Gruppe C"
+        },
+        {
+          "id": "wm-2026__scotland",
+          "name": "Schottland",
+          "slug": "scotland",
+          "count": 6,
+          "subLeague": "Gruppe C"
+        },
+        {
+          "id": "wm-2026__australia",
+          "name": "Australien",
+          "slug": "australia",
+          "count": 0,
+          "subLeague": "Gruppe D"
+        },
+        {
+          "id": "wm-2026__paraguay",
+          "name": "Paraguay",
+          "slug": "paraguay",
+          "count": 0,
+          "subLeague": "Gruppe D"
+        },
+        {
+          "id": "wm-2026__turkey",
+          "name": "Türkei",
+          "slug": "turkey",
+          "count": 0,
+          "subLeague": "Gruppe D"
+        },
+        {
+          "id": "wm-2026__usa",
+          "name": "USA",
+          "slug": "usa",
+          "count": 10,
+          "subLeague": "Gruppe D"
+        },
+        {
+          "id": "wm-2026__curacao",
+          "name": "Curaçao",
+          "count": 0,
+          "subLeague": "Gruppe E"
+        },
+        {
+          "id": "wm-2026__germany",
+          "name": "Deutschland",
+          "slug": "germany",
+          "count": 23,
+          "subLeague": "Gruppe E"
+        },
+        {
+          "id": "wm-2026__ecuador",
+          "name": "Ecuador",
+          "slug": "ecuador",
+          "count": 0,
+          "subLeague": "Gruppe E"
+        },
+        {
+          "id": "wm-2026__ivorycoast",
+          "name": "Elfenbeinküste",
+          "count": 0,
+          "subLeague": "Gruppe E"
+        },
+        {
+          "id": "wm-2026__japan",
+          "name": "Japan",
+          "slug": "japan",
+          "count": 12,
+          "subLeague": "Gruppe F"
+        },
+        {
+          "id": "wm-2026__netherlands",
+          "name": "Niederlande",
+          "slug": "netherlands",
+          "count": 8,
+          "subLeague": "Gruppe F"
+        },
+        {
+          "id": "wm-2026__sweden",
+          "name": "Schweden",
+          "slug": "sweden",
+          "count": 3,
+          "subLeague": "Gruppe F"
+        },
+        {
+          "id": "wm-2026__tunisia",
+          "name": "Tunesien",
+          "slug": "tunisia",
+          "count": 2,
+          "subLeague": "Gruppe F"
+        },
+        {
+          "id": "wm-2026__belgium",
+          "name": "Belgien",
+          "slug": "belgium",
+          "count": 10,
+          "subLeague": "Gruppe G"
+        },
+        {
+          "id": "wm-2026__iran",
+          "name": "Iran",
+          "slug": "iran",
+          "count": 3,
+          "subLeague": "Gruppe G"
+        },
+        {
+          "id": "wm-2026__newzealand",
+          "name": "Neuseeland",
+          "slug": "newzealand",
+          "count": 3,
+          "subLeague": "Gruppe G"
+        },
+        {
+          "id": "wm-2026__egypt",
+          "name": "Ägypten",
+          "slug": "egypt",
+          "count": 0,
+          "subLeague": "Gruppe G"
+        },
+        {
+          "id": "wm-2026__capeverde",
+          "name": "Kap Verde",
+          "slug": "capeverde",
+          "count": 4,
+          "subLeague": "Gruppe H"
+        },
+        {
+          "id": "wm-2026__saudiarabia",
+          "name": "Saudi-Arabien",
+          "slug": "saudiarabia",
+          "count": 4,
+          "subLeague": "Gruppe H"
+        },
+        {
+          "id": "wm-2026__spain",
+          "name": "Spanien",
+          "slug": "spain",
+          "count": 16,
+          "subLeague": "Gruppe H"
+        },
+        {
+          "id": "wm-2026__uruguay",
+          "name": "Uruguay",
+          "count": 6,
+          "subLeague": "Gruppe H"
+        },
+        {
+          "id": "wm-2026__france",
+          "name": "Frankreich",
+          "slug": "france",
+          "count": 12,
+          "subLeague": "Gruppe I"
+        },
+        {
+          "id": "wm-2026__iraq",
+          "name": "Irak",
+          "count": 4,
+          "subLeague": "Gruppe I"
+        },
+        {
+          "id": "wm-2026__norway",
+          "name": "Norwegen",
+          "slug": "norway",
+          "count": 0,
+          "subLeague": "Gruppe I"
+        },
+        {
+          "id": "wm-2026__senegal",
+          "name": "Senegal",
+          "slug": "senegal",
+          "count": 5,
+          "subLeague": "Gruppe I"
+        },
+        {
           "id": "wm-2026__algeria",
           "name": "Algerien",
           "slug": "algeria",
@@ -19,80 +267,18 @@
           "subLeague": "Gruppe J"
         },
         {
-          "id": "wm-2026__belgium",
-          "name": "Belgien",
-          "slug": "belgium",
-          "count": 10,
-          "subLeague": "Gruppe G"
+          "id": "wm-2026__jordan",
+          "name": "Jordanien",
+          "slug": "jordan",
+          "count": 5,
+          "subLeague": "Gruppe J"
         },
         {
-          "id": "wm-2026__bosnia-and-herzegovina",
-          "name": "Bosnien und Herzegowina",
-          "slug": "bosnia-and-herzegovina",
-          "count": 2,
-          "subLeague": "Gruppe B"
-        },
-        {
-          "id": "wm-2026__brazil",
-          "name": "Brasilien",
-          "slug": "brazil",
-          "count": 12,
-          "subLeague": "Gruppe C"
-        },
-        {
-          "id": "wm-2026__germany",
-          "name": "Deutschland",
-          "slug": "germany",
-          "count": 23,
-          "subLeague": "Gruppe E"
-        },
-        {
-          "id": "wm-2026__england",
-          "name": "England",
-          "slug": "england",
-          "count": 13,
-          "subLeague": "Gruppe L"
-        },
-        {
-          "id": "wm-2026__france",
-          "name": "Frankreich",
-          "slug": "france",
-          "count": 12,
-          "subLeague": "Gruppe I"
-        },
-        {
-          "id": "wm-2026__haiti",
-          "name": "Haiti",
-          "slug": "haiti",
-          "count": 7,
-          "subLeague": "Gruppe C"
-        },
-        {
-          "id": "wm-2026__iraq",
-          "name": "Irak",
+          "id": "wm-2026__austria",
+          "name": "Österreich",
+          "slug": "austria",
           "count": 4,
-          "subLeague": "Gruppe I"
-        },
-        {
-          "id": "wm-2026__japan",
-          "name": "Japan",
-          "slug": "japan",
-          "count": 12,
-          "subLeague": "Gruppe F"
-        },
-        {
-          "id": "wm-2026__canada",
-          "name": "Kanada",
-          "slug": "canada",
-          "count": 8,
-          "subLeague": "Gruppe B"
-        },
-        {
-          "id": "wm-2026__capeverde",
-          "name": "Kap Verde",
-          "slug": "capeverde",
-          "count": 4,
-          "subLeague": "Gruppe H"
+          "subLeague": "Gruppe J"
         },
         {
           "id": "wm-2026__colombia",
@@ -109,41 +295,6 @@
           "subLeague": "Gruppe K"
         },
         {
-          "id": "wm-2026__croatia",
-          "name": "Kroatien",
-          "slug": "croatia",
-          "count": 5,
-          "subLeague": "Gruppe L"
-        },
-        {
-          "id": "wm-2026__mexico",
-          "name": "Mexiko",
-          "slug": "mexico",
-          "count": 17,
-          "subLeague": "Gruppe A"
-        },
-        {
-          "id": "wm-2026__newzealand",
-          "name": "Neuseeland",
-          "slug": "newzealand",
-          "count": 3,
-          "subLeague": "Gruppe G"
-        },
-        {
-          "id": "wm-2026__netherlands",
-          "name": "Niederlande",
-          "slug": "netherlands",
-          "count": 8,
-          "subLeague": "Gruppe F"
-        },
-        {
-          "id": "wm-2026__austria",
-          "name": "Österreich",
-          "slug": "austria",
-          "count": 4,
-          "subLeague": "Gruppe J"
-        },
-        {
           "id": "wm-2026__portugal",
           "name": "Portugal",
           "slug": "portugal",
@@ -151,80 +302,39 @@
           "subLeague": "Gruppe K"
         },
         {
-          "id": "wm-2026__saudiarabia",
-          "name": "Saudi-Arabien",
-          "slug": "saudiarabia",
-          "count": 4,
-          "subLeague": "Gruppe H"
+          "id": "wm-2026__uzbekistan",
+          "name": "Usbekistan",
+          "slug": "uzbekistan",
+          "count": 0,
+          "subLeague": "Gruppe K"
         },
         {
-          "id": "wm-2026__scotland",
-          "name": "Schottland",
-          "slug": "scotland",
-          "count": 6,
-          "subLeague": "Gruppe C"
+          "id": "wm-2026__england",
+          "name": "England",
+          "slug": "england",
+          "count": 13,
+          "subLeague": "Gruppe L"
         },
         {
-          "id": "wm-2026__sweden",
-          "name": "Schweden",
-          "slug": "sweden",
-          "count": 3,
-          "subLeague": "Gruppe F"
+          "id": "wm-2026__ghana",
+          "name": "Ghana",
+          "slug": "ghana",
+          "count": 0,
+          "subLeague": "Gruppe L"
         },
         {
-          "id": "wm-2026__switzerland",
-          "name": "Schweiz",
-          "slug": "switzerland",
-          "count": 4,
-          "subLeague": "Gruppe B"
-        },
-        {
-          "id": "wm-2026__senegal",
-          "name": "Senegal",
-          "slug": "senegal",
+          "id": "wm-2026__croatia",
+          "name": "Kroatien",
+          "slug": "croatia",
           "count": 5,
-          "subLeague": "Gruppe I"
+          "subLeague": "Gruppe L"
         },
         {
-          "id": "wm-2026__spain",
-          "name": "Spanien",
-          "slug": "spain",
-          "count": 16,
-          "subLeague": "Gruppe H"
-        },
-        {
-          "id": "wm-2026__tunisia",
-          "name": "Tunesien",
-          "slug": "tunisia",
-          "count": 2,
-          "subLeague": "Gruppe F"
-        },
-        {
-          "id": "wm-2026__uruguay",
-          "name": "Uruguay",
-          "count": 6,
-          "subLeague": "Gruppe H"
-        },
-        {
-          "id": "wm-2026__usa",
-          "name": "USA",
-          "slug": "usa",
-          "count": 10,
-          "subLeague": "Gruppe D"
-        },
-        {
-          "id": "wm-2026__iran",
-          "name": "Iran",
-          "slug": "iran",
-          "count": 3,
-          "subLeague": "Gruppe G"
-        },
-        {
-          "id": "wm-2026__jordan",
-          "name": "Jordanien",
-          "slug": "jordan",
-          "count": 5,
-          "subLeague": "Gruppe J"
+          "id": "wm-2026__panama",
+          "name": "Panama",
+          "slug": "panama",
+          "count": 0,
+          "subLeague": "Gruppe L"
         }
       ],
       "teamCount": 48,
@@ -77160,6 +77270,150 @@
         }
       ],
       "productCount": 2
+    },
+    "wm-2026__curacao": {
+      "name": "Curaçao",
+      "slug": "",
+      "league": "wm-2026",
+      "leagueName": "WM 2026",
+      "products": [],
+      "productCount": 0,
+      "subLeague": "Gruppe E"
+    },
+    "wm-2026__ivorycoast": {
+      "name": "Elfenbeinküste",
+      "slug": "",
+      "league": "wm-2026",
+      "leagueName": "WM 2026",
+      "products": [],
+      "productCount": 0,
+      "subLeague": "Gruppe E"
+    },
+    "wm-2026__southafrica": {
+      "name": "Südafrika",
+      "slug": "southafrica",
+      "league": "wm-2026",
+      "leagueName": "WM 2026",
+      "products": [],
+      "productCount": 0,
+      "subLeague": "Gruppe A"
+    },
+    "wm-2026__korea": {
+      "name": "Südkorea",
+      "slug": "korea",
+      "league": "wm-2026",
+      "leagueName": "WM 2026",
+      "products": [],
+      "productCount": 0,
+      "subLeague": "Gruppe A"
+    },
+    "wm-2026__czech-republic": {
+      "name": "Tschechien",
+      "slug": "czech-republic",
+      "league": "wm-2026",
+      "leagueName": "WM 2026",
+      "products": [],
+      "productCount": 0,
+      "subLeague": "Gruppe A"
+    },
+    "wm-2026__qatar": {
+      "name": "Katar",
+      "slug": "qatar",
+      "league": "wm-2026",
+      "leagueName": "WM 2026",
+      "products": [],
+      "productCount": 0,
+      "subLeague": "Gruppe B"
+    },
+    "wm-2026__morocco": {
+      "name": "Marokko",
+      "slug": "morocco",
+      "league": "wm-2026",
+      "leagueName": "WM 2026",
+      "products": [],
+      "productCount": 0,
+      "subLeague": "Gruppe C"
+    },
+    "wm-2026__paraguay": {
+      "name": "Paraguay",
+      "slug": "paraguay",
+      "league": "wm-2026",
+      "leagueName": "WM 2026",
+      "products": [],
+      "productCount": 0,
+      "subLeague": "Gruppe D"
+    },
+    "wm-2026__australia": {
+      "name": "Australien",
+      "slug": "australia",
+      "league": "wm-2026",
+      "leagueName": "WM 2026",
+      "products": [],
+      "productCount": 0,
+      "subLeague": "Gruppe D"
+    },
+    "wm-2026__turkey": {
+      "name": "Türkei",
+      "slug": "turkey",
+      "league": "wm-2026",
+      "leagueName": "WM 2026",
+      "products": [],
+      "productCount": 0,
+      "subLeague": "Gruppe D"
+    },
+    "wm-2026__ecuador": {
+      "name": "Ecuador",
+      "slug": "ecuador",
+      "league": "wm-2026",
+      "leagueName": "WM 2026",
+      "products": [],
+      "productCount": 0,
+      "subLeague": "Gruppe E"
+    },
+    "wm-2026__egypt": {
+      "name": "Ägypten",
+      "slug": "egypt",
+      "league": "wm-2026",
+      "leagueName": "WM 2026",
+      "products": [],
+      "productCount": 0,
+      "subLeague": "Gruppe G"
+    },
+    "wm-2026__norway": {
+      "name": "Norwegen",
+      "slug": "norway",
+      "league": "wm-2026",
+      "leagueName": "WM 2026",
+      "products": [],
+      "productCount": 0,
+      "subLeague": "Gruppe I"
+    },
+    "wm-2026__uzbekistan": {
+      "name": "Usbekistan",
+      "slug": "uzbekistan",
+      "league": "wm-2026",
+      "leagueName": "WM 2026",
+      "products": [],
+      "productCount": 0,
+      "subLeague": "Gruppe K"
+    },
+    "wm-2026__ghana": {
+      "name": "Ghana",
+      "slug": "ghana",
+      "league": "wm-2026",
+      "leagueName": "WM 2026",
+      "products": [],
+      "productCount": 0,
+      "subLeague": "Gruppe L"
+    },
+    "wm-2026__panama": {
+      "name": "Panama",
+      "slug": "panama",
+      "league": "wm-2026",
+      "leagueName": "WM 2026",
+      "products": [],
+      "productCount": 0,
+      "subLeague": "Gruppe L"
     }
   }
 }
