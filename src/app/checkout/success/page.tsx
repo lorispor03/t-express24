@@ -1,6 +1,6 @@
 'use client';
 
-import { Suspense, useEffect, useState } from 'react';
+import { Suspense, useEffect } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -9,15 +9,7 @@ import { useCart } from '@/context/CartContext';
 function SuccessContent() {
   const { clearCart } = useCart();
   const searchParams = useSearchParams();
-  const bestellNr = searchParams.get('nr') || '';
   const kontaktweg = searchParams.get('kontakt') || 'instagram';
-  const [copied, setCopied] = useState(false);
-
-  const copyNr = () => {
-    navigator.clipboard.writeText(bestellNr);
-    setCopied(true);
-    setTimeout(() => setCopied(false), 2000);
-  };
 
   useEffect(() => {
     clearCart();
@@ -33,21 +25,7 @@ function SuccessContent() {
           </svg>
         </div>
         <h1 className="text-3xl font-bold mb-3 text-gray-900" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>Bestellung eingegangen!</h1>
-        <p className="text-gray-500 mb-2">Vielen Dank für deine Bestellung bei T-EXPRESS24.</p>
-
-        {bestellNr && (
-          <div className="bg-gray-100 rounded-xl px-6 py-4 inline-block my-4 border border-gray-200">
-            <p className="text-xs text-gray-500 uppercase tracking-wider mb-1">Deine Bestellnummer</p>
-            <button onClick={copyNr} className="flex items-center gap-2 mx-auto">
-              <span className="text-2xl font-black text-gray-900" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>{bestellNr}</span>
-              {copied ? (
-                <svg className="w-5 h-5 text-green-500" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
-              ) : (
-                <svg className="w-5 h-5 text-gray-400 hover:text-gray-600 transition-colors" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2" /><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1" /></svg>
-              )}
-            </button>
-          </div>
-        )}
+        <p className="text-gray-500 mb-6">Vielen Dank für deine Bestellung bei T-EXPRESS24. Du erhältst in Kürze eine Bestätigung per E-Mail.</p>
 
         {kontaktweg === 'instagram' ? (
           <>
