@@ -1,13 +1,15 @@
 'use client';
 
 import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { useCart } from '@/context/CartContext';
 
 export default function CheckoutPage() {
-  const { items, totalItems, totalPrice, bundleDiscount, finalPrice, activeBundle, bundleProgress, loaded } = useCart();
+  const router = useRouter();
+  const { items, totalItems, totalPrice, bundleDiscount, finalPrice, activeBundle, bundleProgress, loaded, clearCart } = useCart();
 
   const [vorname, setVorname] = useState('');
   const [nachname, setNachname] = useState('');
@@ -104,8 +106,9 @@ export default function CheckoutPage() {
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || 'Fehler beim Erstellen der Zahlung');
 
-      // Redirect to success page
-      window.location.href = data.url;
+      // Warenkorb leeren und zur Erfolgsseite (replace verhindert "Zurück")
+      clearCart();
+      router.replace(data.url);
     } catch (err: any) {
       setError(err.message || 'Zahlung konnte nicht gestartet werden. Bitte versuche es erneut.');
       setSubmitting(false);
