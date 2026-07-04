@@ -18,8 +18,10 @@ export default function CheckoutPage() {
   const [telefon, setTelefon] = useState('');
   const [strasse, setStrasse] = useState('');
   const [plz, setPlz] = useState('');
+  const [plzValid, setPlzValid] = useState(false);
+  const [plzSuggestions, setPlzSuggestions] = useState<{ plz: string; name: string }[]>([]);
+  const [showPlzDropdown, setShowPlzDropdown] = useState(false);
   const [ort, setOrt] = useState('');
-  const [ortSuggestions, setOrtSuggestions] = useState<string[]>([]);
   const [land, setLand] = useState('Schweiz');
   const [nachricht, setNachricht] = useState('');
   const [kontaktweg, setKontaktweg] = useState<'instagram' | 'email' | ''>('');
@@ -59,17 +61,25 @@ export default function CheckoutPage() {
   }
 
   const validateEmail = (v: string) => /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v);
-  const validatePlz = (v: string) => /^\d{4}$/.test(v.trim());
 
-  const lookupPlz = async (code: string) => {
-    if (code.length !== 4) { setOrtSuggestions([]); return; }
+  const searchPlz = async (query: string) => {
+    if (query.length < 2) { setPlzSuggestions([]); setShowPlzDropdown(false); return; }
     try {
-      const res = await fetch(`https://openplzapi.org/ch/Localities?postalCode=${code}`);
+      const isNum = /^\d+$/.test(query);
+      const url = isNum
+        ? `https://openplzapi.org/ch/Localities?postalCode=${query}&page=1&pageSize=10`
+        : `https://openplzapi.org/ch/Localities?name=${encodeURIComponent(query)}&page=1&pageSize=10`;
+      const res = await fetch(url);
       if (!res.ok) return;
       const data = await res.json();
-      const names = Array.from(new Set(data.map((d: any) => d.name as string))) as string[];
-      setOrtSuggestions(names);
-      if (names.length === 1) setOrt(names[0]);
+      const seen = new Set<string>();
+      const results: { plz: string; name: string }[] = [];
+      for (const d of data) {
+        const key = `${d.postalCode}-${d.name}`;
+        if (!seen.has(key)) { seen.add(key); results.push({ plz: d.postalCode, name: d.name }); }
+      }
+      setPlzSuggestions(results);
+      setShowPlzDropdown(results.length > 0);
     } catch { /* ignore */ }
   };
 
@@ -81,8 +91,8 @@ export default function CheckoutPage() {
       setError('Bitte gib eine gültige E-Mail-Adresse ein.');
       return;
     }
-    if (!validatePlz(plz)) {
-      setError('Bitte gib eine gültige Schweizer PLZ ein (4 Ziffern).');
+    if (!plzValid || !ort) {
+      setError('Bitte wähle eine gültige PLZ/Ortschaft aus der Liste.');
       return;
     }
 
@@ -305,46 +315,43 @@ export default function CheckoutPage() {
                   />
                 </div>
 
-                <div className="grid grid-cols-[100px_1fr_1fr] gap-3">
-                  <div>
-                    <label className="block text-sm font-medium mb-1.5 text-gray-600">PLZ *</label>
+                <div className="grid grid-cols-[1fr_1fr] gap-3">
+                  <div className="relative col-span-2 sm:col-span-1">
+                    <label className="block text-sm font-medium mb-1.5 text-gray-600">PLZ / Ort *</label>
                     <input
                       type="text"
-                      value={plz}
-                      onChange={e => { const v = e.target.value.replace(/\D/g, '').slice(0, 4); setPlz(v); if (v.length === 4) lookupPlz(v); else { setOrtSuggestions([]); setOrt(''); } }}
+                      value={plzValid ? `${plz} ${ort}` : plz}
+                      onChange={e => {
+                        const v = e.target.value;
+                        setPlzValid(false); setOrt(''); setPlz(v);
+                        searchPlz(v.trim());
+                      }}
+                      onFocus={() => { if (plzSuggestions.length > 0) setShowPlzDropdown(true); }}
+                      onBlur={() => setTimeout(() => setShowPlzDropdown(false), 200)}
                       required
-                      placeholder="8000"
-                      inputMode="numeric"
-                      maxLength={4}
-                      className={`w-full bg-white border rounded-lg px-4 py-2.5 text-sm text-gray-900 focus:outline-none transition-colors ${plz && !validatePlz(plz) ? 'border-red-400 focus:border-red-500' : 'border-gray-300 focus:border-[var(--red-main)]'}`}
+                      placeholder="PLZ oder Ortschaft eingeben"
+                      className={`w-full bg-white border rounded-lg px-4 py-2.5 text-sm text-gray-900 focus:outline-none transition-colors ${plzValid ? 'border-green-400 bg-green-50/50' : plz.length >= 4 && !plzValid ? 'border-red-400' : 'border-gray-300 focus:border-[var(--red-main)]'}`}
                     />
-                    {plz && !validatePlz(plz) && (
-                      <p className="text-red-500 text-xs mt-1">PLZ muss 4 Ziffern haben</p>
+                    {plzValid && (
+                      <svg className="absolute right-3 top-[38px] w-4 h-4 text-green-500" fill="none" stroke="currentColor" strokeWidth={2.5} viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" /></svg>
                     )}
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium mb-1.5 text-gray-600">Ort *</label>
-                    {ortSuggestions.length > 1 ? (
-                      <select
-                        value={ort}
-                        onChange={e => setOrt(e.target.value)}
-                        required
-                        className="w-full bg-white border border-gray-300 rounded-lg px-4 py-2.5 text-sm text-gray-900 focus:outline-none focus:border-[var(--red-main)] transition-colors appearance-none"
-                        style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23999' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E")`, backgroundRepeat: 'no-repeat', backgroundPosition: 'right 12px center' }}
-                      >
-                        <option value="">Ort wählen</option>
-                        {ortSuggestions.map(o => <option key={o} value={o}>{o}</option>)}
-                      </select>
-                    ) : (
-                      <input
-                        type="text"
-                        value={ort}
-                        onChange={e => setOrt(e.target.value)}
-                        required
-                        placeholder="Zürich"
-                        readOnly={ortSuggestions.length === 1}
-                        className={`w-full bg-white border border-gray-300 rounded-lg px-4 py-2.5 text-sm text-gray-900 focus:outline-none focus:border-[var(--red-main)] transition-colors ${ortSuggestions.length === 1 ? 'bg-gray-50' : ''}`}
-                      />
+                    {showPlzDropdown && plzSuggestions.length > 0 && (
+                      <div className="absolute z-50 left-0 right-0 top-full mt-1 bg-white border border-gray-300 rounded-lg shadow-lg max-h-48 overflow-y-auto">
+                        {plzSuggestions.map((s, i) => (
+                          <button
+                            key={`${s.plz}-${s.name}-${i}`}
+                            type="button"
+                            onMouseDown={() => { setPlz(s.plz); setOrt(s.name); setPlzValid(true); setShowPlzDropdown(false); setPlzSuggestions([]); }}
+                            className="w-full text-left px-4 py-2.5 text-sm hover:bg-gray-100 transition-colors flex items-center gap-2"
+                          >
+                            <span className="font-medium text-gray-900">{s.plz}</span>
+                            <span className="text-gray-500">{s.name}</span>
+                          </button>
+                        ))}
+                      </div>
+                    )}
+                    {plz.length >= 4 && !plzValid && !showPlzDropdown && (
+                      <p className="text-red-500 text-xs mt-1">Bitte wähle eine gültige PLZ/Ortschaft aus der Liste</p>
                     )}
                   </div>
                   <div>
@@ -516,7 +523,7 @@ export default function CheckoutPage() {
 
                 <button
                   type="submit"
-                  disabled={submitting || !vorname.trim() || !nachname.trim() || !instagram.trim() || !email.trim() || !validateEmail(email.trim()) || !strasse.trim() || !plz.trim() || !validatePlz(plz) || !ort.trim() || !kontaktweg}
+                  disabled={submitting || !vorname.trim() || !nachname.trim() || !instagram.trim() || !email.trim() || !validateEmail(email.trim()) || !strasse.trim() || !plzValid || !ort.trim() || !kontaktweg}
                   className="w-full bg-[var(--red-main)] hover:bg-[#a81d27] disabled:opacity-50 disabled:cursor-not-allowed text-white font-bold py-3.5 rounded-lg text-sm transition-colors"
                 >
                   {submitting ? 'Bestellung wird gesendet...' : `Bestellung aufgeben — CHF ${finalPrice.toFixed(2)}`}
