@@ -86,7 +86,7 @@ export default function CheckoutPage() {
             nachname: nachname.trim(),
             instagram: instagram.trim(),
             email: email.trim(),
-            telefon: telefon.trim(),
+            telefon: telefon.trim() ? `+41 ${telefon.trim()}` : '',
           },
           lieferadresse: {
             strasse: strasse.trim(),
@@ -237,13 +237,17 @@ export default function CheckoutPage() {
                   </div>
                   <div>
                     <label className="block text-sm font-medium mb-1.5 text-gray-600">Telefon (optional)</label>
-                    <input
-                      type="tel"
-                      value={telefon}
-                      onChange={e => setTelefon(e.target.value)}
-                      placeholder="+41 00 000 00 00"
-                      className="w-full bg-white border border-gray-300 rounded-lg px-4 py-2.5 text-sm text-gray-900 focus:outline-none focus:border-[var(--red-main)] transition-colors"
-                    />
+                    <div className="relative">
+                      <span className="absolute left-4 top-1/2 -translate-y-1/2 text-sm text-gray-400">+41</span>
+                      <input
+                        type="tel"
+                        value={telefon}
+                        onChange={e => setTelefon(e.target.value.replace(/[^\d\s]/g, ''))}
+                        placeholder="79 123 45 67"
+                        inputMode="tel"
+                        className="w-full bg-white border border-gray-300 rounded-lg pl-12 pr-4 py-2.5 text-sm text-gray-900 focus:outline-none focus:border-[var(--red-main)] transition-colors"
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
