@@ -19,6 +19,7 @@ export default function CheckoutPage() {
   const [strasse, setStrasse] = useState('');
   const [plz, setPlz] = useState('');
   const [ort, setOrt] = useState('');
+  const [ortSuggestions, setOrtSuggestions] = useState<string[]>([]);
   const [land, setLand] = useState('Schweiz');
   const [nachricht, setNachricht] = useState('');
   const [kontaktweg, setKontaktweg] = useState<'instagram' | 'email' | ''>('');
@@ -59,6 +60,18 @@ export default function CheckoutPage() {
 
   const validateEmail = (v: string) => /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v);
   const validatePlz = (v: string) => /^\d{4}$/.test(v.trim());
+
+  const lookupPlz = async (code: string) => {
+    if (code.length !== 4) { setOrtSuggestions([]); return; }
+    try {
+      const res = await fetch(`https://openplzapi.org/ch/Localities?postalCode=${code}`);
+      if (!res.ok) return;
+      const data = await res.json();
+      const names: string[] = [...new Set(data.map((d: any) => d.name as string))];
+      setOrtSuggestions(names);
+      if (names.length === 1) setOrt(names[0]);
+    } catch { /* ignore */ }
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -298,7 +311,7 @@ export default function CheckoutPage() {
                     <input
                       type="text"
                       value={plz}
-                      onChange={e => setPlz(e.target.value.replace(/\D/g, '').slice(0, 4))}
+                      onChange={e => { const v = e.target.value.replace(/\D/g, '').slice(0, 4); setPlz(v); if (v.length === 4) lookupPlz(v); else { setOrtSuggestions([]); setOrt(''); } }}
                       required
                       placeholder="8000"
                       inputMode="numeric"
@@ -311,14 +324,28 @@ export default function CheckoutPage() {
                   </div>
                   <div>
                     <label className="block text-sm font-medium mb-1.5 text-gray-600">Ort *</label>
-                    <input
-                      type="text"
-                      value={ort}
-                      onChange={e => setOrt(e.target.value)}
-                      required
-                      placeholder="Zürich"
-                      className="w-full bg-white border border-gray-300 rounded-lg px-4 py-2.5 text-sm text-gray-900 focus:outline-none focus:border-[var(--red-main)] transition-colors"
-                    />
+                    {ortSuggestions.length > 1 ? (
+                      <select
+                        value={ort}
+                        onChange={e => setOrt(e.target.value)}
+                        required
+                        className="w-full bg-white border border-gray-300 rounded-lg px-4 py-2.5 text-sm text-gray-900 focus:outline-none focus:border-[var(--red-main)] transition-colors appearance-none"
+                        style={{ backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%23999' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E")`, backgroundRepeat: 'no-repeat', backgroundPosition: 'right 12px center' }}
+                      >
+                        <option value="">Ort wählen</option>
+                        {ortSuggestions.map(o => <option key={o} value={o}>{o}</option>)}
+                      </select>
+                    ) : (
+                      <input
+                        type="text"
+                        value={ort}
+                        onChange={e => setOrt(e.target.value)}
+                        required
+                        placeholder="Zürich"
+                        readOnly={ortSuggestions.length === 1}
+                        className={`w-full bg-white border border-gray-300 rounded-lg px-4 py-2.5 text-sm text-gray-900 focus:outline-none focus:border-[var(--red-main)] transition-colors ${ortSuggestions.length === 1 ? 'bg-gray-50' : ''}`}
+                      />
+                    )}
                   </div>
                   <div>
                     <label className="block text-sm font-medium mb-1.5 text-gray-600">Land *</label>
