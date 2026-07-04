@@ -67,7 +67,7 @@ export default function CheckoutPage() {
       const res = await fetch(`https://openplzapi.org/ch/Localities?postalCode=${code}`);
       if (!res.ok) return;
       const data = await res.json();
-      const names: string[] = [...new Set(data.map((d: any) => d.name as string))];
+      const names = Array.from(new Set(data.map((d: any) => d.name as string))) as string[];
       setOrtSuggestions(names);
       if (names.length === 1) setOrt(names[0]);
     } catch { /* ignore */ }
