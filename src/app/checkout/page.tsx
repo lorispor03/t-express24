@@ -66,20 +66,31 @@ export default function CheckoutPage() {
     if (query.length < 2) { setPlzSuggestions([]); setShowPlzDropdown(false); return; }
     try {
       const isNum = /^\d+$/.test(query);
-      const url = isNum
-        ? `https://openplzapi.org/ch/Localities?postalCode=${query}&page=1&pageSize=10`
-        : `https://openplzapi.org/ch/Localities?name=${encodeURIComponent(query)}&page=1&pageSize=10`;
+      let url: string;
+      if (isNum && query.length === 4) {
+        url = `https://openplzapi.org/ch/Localities?postalCode=${query}&page=1&pageSize=10`;
+      } else if (isNum) {
+        url = `https://openplzapi.org/ch/Localities?postalCode=${query}00&page=1&pageSize=50`;
+      } else {
+        url = `https://openplzapi.org/ch/Localities?name=${encodeURIComponent(query)}&page=1&pageSize=10`;
+      }
       const res = await fetch(url);
       if (!res.ok) return;
-      const data = await res.json();
+      let data = await res.json();
+      if (isNum && query.length < 4) {
+        data = data.filter((d: any) => d.postalCode.startsWith(query));
+      }
       const seen = new Set<string>();
       const results: { plz: string; name: string }[] = [];
       for (const d of data) {
         const key = `${d.postalCode}-${d.name}`;
-        if (!seen.has(key)) { seen.add(key); results.push({ plz: d.postalCode, name: d.name }); }
+        if (!seen.has(key) && results.length < 10) { seen.add(key); results.push({ plz: d.postalCode, name: d.name }); }
       }
       setPlzSuggestions(results);
       setShowPlzDropdown(results.length > 0);
+      if (isNum && query.length === 4 && results.length === 1) {
+        setPlz(results[0].plz); setOrt(results[0].name); setPlzValid(true); setShowPlzDropdown(false);
+      }
     } catch { /* ignore */ }
   };
 
