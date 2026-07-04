@@ -57,9 +57,21 @@ export default function CheckoutPage() {
     );
   }
 
+  const validateEmail = (v: string) => /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v);
+  const validatePlz = (v: string) => /^\d{4}$/.test(v.trim());
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!vorname.trim() || !nachname.trim() || !instagram.trim() || !email.trim() || !strasse.trim() || !plz.trim() || !ort.trim() || !kontaktweg) return;
+
+    if (!validateEmail(email.trim())) {
+      setError('Bitte gib eine gültige E-Mail-Adresse ein.');
+      return;
+    }
+    if (!validatePlz(plz)) {
+      setError('Bitte gib eine gültige Schweizer PLZ ein (4 Ziffern).');
+      return;
+    }
 
     setSubmitting(true);
     setError('');
@@ -217,8 +229,11 @@ export default function CheckoutPage() {
                       onChange={e => setEmail(e.target.value)}
                       required
                       placeholder="deine@email.ch"
-                      className="w-full bg-white border border-gray-300 rounded-lg px-4 py-2.5 text-sm text-gray-900 focus:outline-none focus:border-[var(--red-main)] transition-colors"
+                      className={`w-full bg-white border rounded-lg px-4 py-2.5 text-sm text-gray-900 focus:outline-none transition-colors ${email && !validateEmail(email.trim()) ? 'border-red-400 focus:border-red-500' : 'border-gray-300 focus:border-[var(--red-main)]'}`}
                     />
+                    {email && !validateEmail(email.trim()) && (
+                      <p className="text-red-500 text-xs mt-1">Ungültige E-Mail-Adresse</p>
+                    )}
                   </div>
                   <div>
                     <label className="block text-sm font-medium mb-1.5 text-gray-600">Telefon (optional)</label>
@@ -279,11 +294,16 @@ export default function CheckoutPage() {
                     <input
                       type="text"
                       value={plz}
-                      onChange={e => setPlz(e.target.value)}
+                      onChange={e => setPlz(e.target.value.replace(/\D/g, '').slice(0, 4))}
                       required
                       placeholder="8000"
-                      className="w-full bg-white border border-gray-300 rounded-lg px-4 py-2.5 text-sm text-gray-900 focus:outline-none focus:border-[var(--red-main)] transition-colors"
+                      inputMode="numeric"
+                      maxLength={4}
+                      className={`w-full bg-white border rounded-lg px-4 py-2.5 text-sm text-gray-900 focus:outline-none transition-colors ${plz && !validatePlz(plz) ? 'border-red-400 focus:border-red-500' : 'border-gray-300 focus:border-[var(--red-main)]'}`}
                     />
+                    {plz && !validatePlz(plz) && (
+                      <p className="text-red-500 text-xs mt-1">PLZ muss 4 Ziffern haben</p>
+                    )}
                   </div>
                   <div>
                     <label className="block text-sm font-medium mb-1.5 text-gray-600">Ort *</label>
@@ -465,7 +485,7 @@ export default function CheckoutPage() {
 
                 <button
                   type="submit"
-                  disabled={submitting || !vorname.trim() || !nachname.trim() || !instagram.trim() || !email.trim() || !strasse.trim() || !plz.trim() || !ort.trim() || !kontaktweg}
+                  disabled={submitting || !vorname.trim() || !nachname.trim() || !instagram.trim() || !email.trim() || !validateEmail(email.trim()) || !strasse.trim() || !plz.trim() || !validatePlz(plz) || !ort.trim() || !kontaktweg}
                   className="w-full bg-[var(--red-main)] hover:bg-[#a81d27] disabled:opacity-50 disabled:cursor-not-allowed text-white font-bold py-3.5 rounded-lg text-sm transition-colors"
                 >
                   {submitting ? 'Bestellung wird gesendet...' : `Bestellung aufgeben — CHF ${finalPrice.toFixed(2)}`}
