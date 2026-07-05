@@ -289,7 +289,7 @@ export default function CheckoutPage() {
               {/* Kontaktweg */}
               <div className="bg-[#e8e8e8] rounded-xl p-5 border border-gray-200 space-y-4">
                 <h2 className="text-lg font-bold uppercase tracking-wide" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>Wie möchtest du kontaktiert werden?</h2>
-                <p className="text-xs text-gray-500">Wir melden uns bei dir zur Zahlungsabwicklung.</p>
+                <p className="text-xs text-gray-500">Wir melden uns bei dir zur Zahlungsabwicklung. <span className="text-[var(--gold)] font-medium">Instagram wird bevorzugt.</span></p>
                 <div className="grid grid-cols-2 gap-3">
                   <button
                     type="button"
