@@ -212,7 +212,7 @@ export default function CheckoutPage() {
               <h2 className="lg:hidden text-4xl md:text-5xl uppercase tracking-wide text-gray-900" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>Deine Angaben</h2>
               {/* Persönliche Daten */}
               <div className="bg-[#e8e8e8] rounded-xl p-5 border border-gray-200 space-y-4">
-                <h2 className="text-lg font-bold uppercase tracking-wide" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>Persönliche Daten</h2>
+                <h2 className="text-2xl font-bold uppercase tracking-wide" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>Persönliche Daten</h2>
 
                 <div className="grid grid-cols-2 gap-3">
                   <div>
@@ -288,7 +288,7 @@ export default function CheckoutPage() {
 
               {/* Kontaktweg */}
               <div className="bg-[#e8e8e8] rounded-xl p-5 border border-gray-200 space-y-4">
-                <h2 className="text-lg font-bold uppercase tracking-wide" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>Wie möchtest du kontaktiert werden?</h2>
+                <h2 className="text-2xl font-bold uppercase tracking-wide" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>Wie möchtest du kontaktiert werden?</h2>
                 <p className="text-xs text-gray-500">Wir melden uns bei dir zur Zahlungsabwicklung. <span className="text-[var(--gold)] font-medium">Instagram wird bevorzugt.</span></p>
                 <div className="grid grid-cols-2 gap-3">
                   <button
@@ -312,7 +312,7 @@ export default function CheckoutPage() {
 
               {/* Lieferadresse */}
               <div className="bg-[#e8e8e8] rounded-xl p-5 border border-gray-200 space-y-4">
-                <h2 className="text-lg font-bold uppercase tracking-wide" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>Lieferadresse</h2>
+                <h2 className="text-2xl font-bold uppercase tracking-wide" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>Lieferadresse</h2>
 
                 <div>
                   <label className="block text-sm font-medium mb-1.5 text-gray-600">Strasse & Nr. *</label>
@@ -382,7 +382,7 @@ export default function CheckoutPage() {
 
               {/* Nachricht */}
               <div className="bg-[#e8e8e8] rounded-xl p-5 border border-gray-200 space-y-4">
-                <h2 className="text-lg font-bold uppercase tracking-wide" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>Anmerkungen</h2>
+                <h2 className="text-2xl font-bold uppercase tracking-wide" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>Anmerkungen</h2>
                 <div>
                   <label className="block text-sm font-medium mb-1.5 text-gray-600">Nachricht (optional)</label>
                   <textarea
@@ -481,7 +481,7 @@ export default function CheckoutPage() {
 
                 {/* Price Summary */}
                 <div className="bg-[#d0d0d0] rounded-xl p-5 border border-gray-300 space-y-3">
-                  <h2 className="text-lg font-bold uppercase tracking-wide" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>Zusammenfassung</h2>
+                  <h2 className="text-2xl font-bold uppercase tracking-wide" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>Zusammenfassung</h2>
 
                   {activeBundle && !bundleProgress.reached && (
                     <div className="bg-[var(--gold)]/10 rounded-lg px-3 py-2 text-xs">
