@@ -12,6 +12,7 @@ const ADMIN_EMAIL = process.env.ADMIN_EMAIL || '';
 type OrderItem = {
   produkt_name: string;
   produkt_preis: number;
+  produkt_bild?: string;
   team?: string;
   groesse?: string;
   beflockung_name?: string;
@@ -211,18 +212,30 @@ export async function sendOrderNotificationToAdmin(order: OrderData) {
     return;
   }
 
-  const itemsSummary = order.items
+  const itemsHtml = order.items
     .map((item) => {
-      const parts = [
-        `${item.menge}× ${item.produkt_name}`,
-        item.team && `(${item.team})`,
-        item.groesse && `Grösse ${item.groesse}`,
-        (item.beflockung_name || item.beflockung_nummer) && `→ ${item.beflockung_name || ''} ${item.beflockung_nummer || ''}`.trim(),
-        item.patches && item.patches.length > 0 && `Patches: ${item.patches.map((p) => p.name).join(', ')}`,
-      ]
-        .filter(Boolean)
-        .join(' · ');
-      return `<li style="margin-bottom:8px;">${parts}</li>`;
+      const details: string[] = [];
+      if (item.team) details.push(`<strong>Team:</strong> ${item.team}`);
+      if (item.groesse) details.push(`<strong>Grösse:</strong> ${item.groesse}`);
+      if (item.beflockung_name || item.beflockung_nummer) {
+        details.push(`<strong>Aufdruck:</strong> ${[item.beflockung_name, item.beflockung_nummer].filter(Boolean).join(' ')}`);
+      }
+      if (item.patches && item.patches.length > 0) {
+        details.push(`<strong>Patches:</strong> ${item.patches.map((p) => p.name).join(', ')}`);
+      }
+      if (item.extras && item.extras !== 'none') {
+        details.push(`<strong>Extras:</strong> ${item.extras}${item.extras_preis ? ` (+${formatCHF(item.extras_preis)})` : ''}`);
+      }
+      const lineTotal = (item.produkt_preis + (item.extras_preis || 0)) * item.menge;
+      return `
+        <div style="display:flex; gap:12px; padding:12px; background:#f8f8f8; border-radius:8px; margin-bottom:8px;">
+          ${item.produkt_bild ? `<img src="${item.produkt_bild}" alt="" style="width:80px; height:80px; object-fit:cover; border-radius:8px; flex-shrink:0;" />` : ''}
+          <div style="flex:1;">
+            <div style="font-weight:700; color:#111; font-size:14px; margin-bottom:4px;">${item.menge}× ${item.produkt_name}</div>
+            ${details.map((d) => `<div style="color:#666; font-size:13px; margin-top:2px;">${d}</div>`).join('')}
+            <div style="color:#c4222e; font-weight:700; font-size:14px; margin-top:6px;">${formatCHF(lineTotal)}</div>
+          </div>
+        </div>`;
     })
     .join('');
 
@@ -263,9 +276,9 @@ export async function sendOrderNotificationToAdmin(order: OrderData) {
                   </div>
 
                   <h2 style="color:#111; font-size:16px; margin:0 0 12px 0;">Artikel</h2>
-                  <ul style="margin:0 0 16px 0; padding-left:20px; color:#444; font-size:14px;">
-                    ${itemsSummary}
-                  </ul>
+                  <div style="margin-bottom:16px;">
+                    ${itemsHtml}
+                  </div>
 
                   <div style="background:#fff8e7; border-left:4px solid #d4af37; padding:12px; margin-bottom:16px; font-size:14px;">
                     <strong style="color:#111;">Gesamtbetrag:</strong> <span style="color:#c4222e; font-weight:900; font-size:16px;">${formatCHF(order.gesamtpreis)}</span><br>
