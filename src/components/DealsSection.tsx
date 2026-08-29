@@ -4,24 +4,23 @@ import Link from 'next/link';
 import { useRef, useEffect, useState } from 'react';
 
 const DEALS = [
-  // Legendäre Trikots — durchmischt, keine Mannschaft doppelt hintereinander
-  { title: 'Manchester United Retro Heimtrikot 98/99', team: 'Manchester United', handle: 'retro-camisa-manchester-united-1998-99-home-red', price: 49.90, image: 'https://img.wpassets-gamma.com/uploads/71478/cart/resources/20241225/6B70A3B2-5CDC-B368-67E8-C3352719EAC6.jpg' },
-  { title: 'Brasilien Retro Heimtrikot WM 2002', team: 'Brasilien', handle: 'retro-camisa-brazil-2002-world-cup-home-masculina-yellow', price: 49.90, image: 'https://img.wpassets-gamma.com/uploads/71478/cart/resources/20241225/7C9EFFFC-7838-3187-57E8-E9B2947CC105.jpg' },
-  { title: 'FC Barcelona Retro Heimtrikot 08/09', team: 'FC Barcelona', handle: 'retro-08-09-barcelona-ucl-final-home-size-s-xxl', price: 49.90, image: 'https://img.wpassets-gamma.com/uploads/71478/cart/resources/20240104/42615987-C07A-648C-B8E8-010DD3F03D62.jpeg' },
-  { title: 'Italien Retro Heimtrikot 2006', team: 'Italien', handle: 'retro-camisa-italy-2006-home-blue', price: 49.90, image: 'https://img.wpassets-gamma.com/uploads/71478/cart/resources/20241225/A5F1472C-9EDC-7DBD-64BF-513DD30619DA.jpg' },
-  { title: 'AC Milan Retro Heimtrikot 06/07 Langarm', team: 'AC Milan', handle: 'retro-camisa-ac-milan-2006-07-home-long-sleeve', price: 59.90, image: 'https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250103/615648b458576cd9cd576cb6cd46a235.jpg' },
-  { title: 'Argentinien Retro Heimtrikot 1986', team: 'Argentinien', handle: 'argentina-1986-home-jersey-s-xxl', price: 49.90, image: 'https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250511/dfcb25c0544f11ed9bab7674b1da10fc.png' },
-  { title: 'Real Madrid Retro Heimtrikot 13/14', team: 'Real Madrid', handle: 'retro-camisa-real-madrid-13-14-home-white', price: 49.90, image: 'https://img.wpassets-gamma.com/uploads/71478/cart/resources/20241225/8270347B-3E84-6D42-53F2-7B97FDD2776D.jpg' },
-  { title: 'Frankreich Retro Heimtrikot 1998', team: 'Frankreich', handle: '1998-france-home-jersey-size-s-xxl', price: 49.90, image: 'https://img.wpassets-gamma.com/uploads/71478/cart/resources/20241226/aefde889a987d6a133f4f1c4bc880820.png' },
-  { title: 'Inter Mailand Retro Heimtrikot 09/10', team: 'Inter Mailand', handle: 'retro-inter-milan-09-10-home-s-xxl', price: 49.90, image: 'https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250808/01c78857e0a4549fd0a1ac9685565836.png' },
-  { title: 'Deutschland Retro Heimtrikot 2014', team: 'Deutschland', handle: 'retro-germany-2014-home-s-xxl', price: 49.90, image: 'https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250510/837ccf9c3e353b935860966ae4089d10.jpg' },
-  { title: 'Bayern München Retro Heimtrikot 12/13', team: 'Bayern München', handle: 'retro-bayern-munich-12-13-home-s-xxl', price: 49.90, image: 'https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250519/81f69d61b0a5d8d5659fc96631fd47e1.png' },
-  { title: 'Spanien Retro Heimtrikot 2010', team: 'Spanien', handle: 'retro-camisa-spain-2010-home-red', price: 49.90, image: 'https://img.wpassets-gamma.com/uploads/71478/cart/resources/20241225/7373C3A4-308E-3EC1-208F-21481E50AA14.jpg' },
-  { title: 'Liverpool Retro Heimtrikot 04/05', team: 'Liverpool', handle: 'retro-04-05-liverpool-home-final-kit-size-s-xxl', price: 49.90, image: 'https://img.wpassets-gamma.com/uploads/71478/cart/resources/20241225/F8784069-41B7-395A-D305-8D81E7C5548F.jpg' },
-  { title: 'Manchester United Retro Heimtrikot 07/08', team: 'Manchester United', handle: 'retro-camisa-manchester-united-07-08-home-red', price: 49.90, image: 'https://img.wpassets-gamma.com/uploads/71478/cart/resources/20241225/0B191980-B650-7ECE-C21C-BE85DB9D0339.jpg' },
-  { title: 'Chelsea Retro Heimtrikot 11/12 Langarm', team: 'Chelsea', handle: 'retro-chelsea-2011-12-home-champions-league-long-sleeves', price: 49.90, image: 'https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250515/c24ca94be624294bd6cdde1889f20e52.jpg' },
-  { title: 'Arsenal Retro Heimtrikot 02/04', team: 'Arsenal', handle: 'retro-2002-04-arsenal-home-s-xxl', price: 49.90, image: 'https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250504/2F722E61-3592-AAF7-1F9B-CFD408F8F7CE.jpg' },
-  { title: 'Juventus Turin Retro Heimtrikot 95/97', team: 'Juventus Turin', handle: 'retro-juventus-1995-97-home-s-xxl', price: 49.90, image: 'https://img.wpassets-gamma.com/uploads/71478/cart/resources/20250518/13db2286c2c06a1fbea82e589f1e4a5b.jpg' },
+  // WM 2026 Player Version Trikots — bekannteste Nationalmannschaften
+  { title: 'Deutschland Auswärtstrikot WM 2026 Player Version', team: 'Deutschland', handle: 'player-version-2026-world-cup-germany-away-jersey-s-4xl', price: 54.90, image: 'https://img.wpassets-gamma.com/images/bd487d45facdd832ffa3b518bdc14b44.jpg' },
+  { title: 'Argentinien Heimtrikot WM 2026 Player Version', team: 'Argentinien', handle: 'player-version-2026-world-cup-argentina-home-jersey-s-4xl', price: 54.90, image: 'https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251108/390a8bcdd58eddcaef2742498eaca55f.jpg' },
+  { title: 'Brasilien Heimtrikot WM 2026 Player Version', team: 'Brasilien', handle: 'player-version-2026-world-cup-brazil-home-jersey-s-4xl', price: 54.90, image: 'https://img.wpassets-gamma.com/images/95465043725f45f23ac2d55ffb41d8d5.jpg' },
+  { title: 'Frankreich Heimtrikot WM 2026 Player Version', team: 'Frankreich', handle: 'player-version-2026-world-cup-france-home-jersey-s-xxl', price: 54.90, image: 'https://img.wpassets-gamma.com/images/5318230d42c45baf9a902cf734c0beb5.webp' },
+  { title: 'England Heimtrikot WM 2026 Player Version', team: 'England', handle: 'player-version-england-2026-home-jersey-s-4xl', price: 54.90, image: 'https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251025/920593c5b41732c537e03bc2b0ffcad0.jpg' },
+  { title: 'Spanien Heimtrikot WM 2026 Player Version', team: 'Spanien', handle: 'player-version-2026-world-cup-spain-home-jersey-s-4xl', price: 54.90, image: 'https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251125/585d03b206c4aee8af8fd386575d206f.jpg' },
+  { title: 'Portugal Heimtrikot WM 2026 Player Version', team: 'Portugal', handle: 'player-version-portugal-2026-home-red-jersey-s-4xl', price: 54.90, image: 'https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251025/3875350df9b02ea5e624290ed5a06d8c.jpg' },
+  { title: 'Niederlande Heimtrikot WM 2026 Player Version', team: 'Niederlande', handle: 'pl-netherlands-2026-world-cup-home-jersey', price: 54.90, image: 'https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260203/72cc222141598d3e86a48430f28451cb.webp' },
+  { title: 'Kroatien Heimtrikot WM 2026 Player Version', team: 'Kroatien', handle: 'player-version-2026-world-cup-croatia-home-jersey-s-xxl', price: 54.90, image: 'https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251203/9b367870329d48948d9fb6cdda99f381.jpg' },
+  { title: 'Japan Heimtrikot WM 2026 Player Version', team: 'Japan', handle: 'player-version-germany-2026-white-s-3xl_8dd3ea12', price: 54.90, image: 'https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251025/ac3c95dd301e672536815831d896b59c.jpg' },
+  { title: 'Belgien Heimtrikot WM 2026 Player Version', team: 'Belgien', handle: 'player-version-belgium-2026-home-jersey-red-s-xxl', price: 54.90, image: 'https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251025/beb798bfb3114a62a7261e1c18a5f271.jpg' },
+  { title: 'USA Heimtrikot WM 2026 Player Version', team: 'USA', handle: 'player-version-usa-2026-world-cup-home-jersey', price: 54.90, image: 'https://img.wpassets-gamma.com/images/85366cd66a8bd36d9e1c3e814a18f208.jpg' },
+  { title: 'Schweiz Heimtrikot WM 2026 Player Version', team: 'Schweiz', handle: 'player-version-2026-world-cup-switzerland-home-jersey-s-xxl', price: 54.90, image: 'https://img.wpassets-gamma.com/uploads/71478/cart/resources/20260105/7593c2958e54862d48eb8c0bc597a179.jpg' },
+  { title: 'Kolumbien Heimtrikot WM 2026 Player Version', team: 'Kolumbien', handle: 'player-version-2026-world-cup-colombia-home-jersey-s-4xl', price: 54.90, image: 'https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251025/a07db019f96640ab9010c20dbc4daaf2.jpg' },
+  { title: 'Mexiko Heimtrikot WM 2026 Player Version', team: 'Mexiko', handle: 'player-version-2026-world-cup-mexico-home-jersey-s-4xl', price: 54.90, image: 'https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251103/5a57421118b3141112e2a579c0ad20b2.jpg' },
+  { title: 'Portugal Trikot WM 2026 Player Version Schwarz', team: 'Portugal', handle: 'player-version-portugal-puma-2026-black-jersey-s-4xl', price: 54.90, image: 'https://img.wpassets-gamma.com/uploads/71478/cart/resources/20251207/c38e551aa7d0bb16184fb965497a5d44.jpg' },
 ];
 
 function DealCard({ deal }: { deal: typeof DEALS[number] }) {
@@ -112,10 +111,10 @@ export default function DealsSection() {
           <h2 className="text-4xl md:text-5xl uppercase tracking-wide text-gray-900" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
             Top Seller
           </h2>
-          <p className="text-gray-500 text-sm mt-1">Die beliebtesten Trikots unserer Kunden</p>
+          <p className="text-gray-500 text-sm mt-1">Die WM 2026 Trikots der grössten Nationen</p>
         </div>
-        <span className="text-xs font-bold bg-[var(--red-main)]/20 text-[var(--red-main)] px-3 py-1.5 rounded-full uppercase tracking-wider">
-          Hot
+        <span className="text-xs font-bold bg-[var(--gold)]/20 text-[var(--gold)] px-3 py-1.5 rounded-full uppercase tracking-wider">
+          WM 2026
         </span>
       </div>
 

@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from 'next/server';
 import crypto from 'crypto';
 import { Redis } from '@upstash/redis';
+import { sendOrderConfirmationToCustomer, sendOrderNotificationToAdmin } from '@/lib/email';
 
 function getRedis() {
   return new Redis({
@@ -9,26 +10,16 @@ function getRedis() {
   });
 }
 
-const PAYREXX_INSTANCE = process.env.PAYREXX_INSTANCE!;
-const PAYREXX_API_SECRET = process.env.PAYREXX_API_SECRET!;
-
-function buildSignature(params: URLSearchParams): string {
-  return crypto
-    .createHmac('sha256', PAYREXX_API_SECRET)
-    .update(params.toString())
-    .digest('base64');
-}
-
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
-    const { items, kunde, lieferadresse, nachricht, zahlungsart, bundle, bundleDiscount } = body;
+    const { items, kunde, lieferadresse, nachricht, zahlungsart, kontaktweg, bundle, bundleDiscount } = body;
 
-    if (!items?.length || !kunde?.vorname || !kunde?.nachname || !kunde?.email || !zahlungsart) {
+    if (!items?.length || !kunde?.vorname || !kunde?.nachname || !kunde?.email) {
       return NextResponse.json({ error: 'Fehlende Daten' }, { status: 400 });
     }
 
-    // Gesamtbetrag berechnen (in Rappen)
+    // Gesamtbetrag berechnen
     let totalCents = 0;
     for (const item of items) {
       const basePrice = parseFloat(item.produkt_preis);
@@ -42,77 +33,66 @@ export async function POST(req: NextRequest) {
       totalCents -= Math.round(bundleDiscount * 100);
     }
 
-    // Eindeutige Referenz-ID generieren
-    const refId = `pending-${Date.now()}-${crypto.randomBytes(4).toString('hex')}`;
+    const gesamtpreis = totalCents / 100;
 
-    // Bestelldaten temporär in Redis speichern (2h TTL)
-    const redis = getRedis();
-    await redis.set(refId, JSON.stringify({
+    // Bestellnummer generieren
+    const bestell_nr = `TE-${Date.now().toString(36).toUpperCase()}-${crypto.randomBytes(2).toString('hex').toUpperCase()}`;
+    const datum = new Date().toISOString();
+
+    const orderData = {
+      bestell_nr,
+      datum,
       items,
       kunde,
       lieferadresse,
       nachricht,
       zahlungsart,
+      kontaktweg,
       bundle,
       bundleDiscount,
       totalCents,
-    }), { ex: 7200 });
+      gesamtpreis,
+      status: 'neu',
+    };
 
-    // Payrexx Gateway erstellen
-    const origin = req.headers.get('origin') || 'https://t-express24.shop';
+    // E-Mail-Daten
+    const emailOrder = {
+      bestell_nr,
+      datum,
+      kunde_name: `${kunde.vorname} ${kunde.nachname}`,
+      kunde_instagram: kunde.instagram,
+      kunde_telefon: kunde.telefon,
+      kunde_kontakt: kunde.email,
+      lieferadresse,
+      nachricht,
+      zahlungsart: zahlungsart || 'Wird noch vereinbart',
+      kontaktweg: kontaktweg || 'instagram',
+      items,
+      gesamtpreis,
+    };
 
-    const params = new URLSearchParams();
-    params.append('amount', String(totalCents));
-    params.append('currency', 'CHF');
-    params.append('referenceId', refId);
-    params.append('successRedirectUrl', `${origin}/checkout/success`);
-    params.append('failedRedirectUrl', `${origin}/checkout`);
-    params.append('cancelRedirectUrl', `${origin}/checkout`);
-    params.append('skipResultPage', '0');
-
-    // Zahlungsmethode
-    if (zahlungsart === 'twint') {
-      params.append('pm[]', 'twint');
-    } else {
-      params.append('pm[]', 'visa');
-      params.append('pm[]', 'mastercard');
+    // Redis speichern (optional, darf nicht crashen)
+    try {
+      const redis = getRedis();
+      await redis.set(`order:${bestell_nr}`, JSON.stringify(orderData));
+      await redis.lpush('orders', JSON.stringify(orderData));
+    } catch (err) {
+      console.error('Redis save error:', err);
     }
 
-    // Kundendaten
-    params.append('fields[forename][value]', kunde.vorname);
-    params.append('fields[surname][value]', kunde.nachname);
-    params.append('fields[email][value]', kunde.email);
-    if (kunde.telefon) {
-      params.append('fields[phone][value]', kunde.telefon);
+    // E-Mails senden (optional, darf nicht crashen)
+    try {
+      await Promise.all([
+        sendOrderConfirmationToCustomer(emailOrder),
+        sendOrderNotificationToAdmin(emailOrder),
+      ]);
+    } catch (err) {
+      console.error('Email send error:', err);
     }
 
-    // Beschreibung
-    const itemNames = items.map((i: any) => `${i.menge || 1}× ${i.produkt_name}`).join(', ');
-    params.append('purpose', itemNames.slice(0, 200));
-
-    // HMAC-Signatur
-    const signature = buildSignature(params);
-
-    // Payrexx API aufrufen
-    const response = await fetch(
-      `https://api.payrexx.com/v1.14/Gateway/?instance=${PAYREXX_INSTANCE}`,
-      {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        body: params.toString() + '&ApiSignature=' + encodeURIComponent(signature),
-      },
-    );
-
-    const result = await response.json();
-
-    if (result.status !== 'success' || !result.data?.[0]?.link) {
-      console.error('Payrexx Gateway error:', result);
-      throw new Error('Zahlungsseite konnte nicht erstellt werden');
-    }
-
-    return NextResponse.json({ url: result.data[0].link });
+    return NextResponse.json({ url: `/checkout/success?nr=${encodeURIComponent(bestell_nr)}&kontakt=${kontaktweg || 'instagram'}` });
   } catch (err: any) {
     console.error('Checkout error:', err);
-    return NextResponse.json({ error: err.message || 'Zahlungsfehler' }, { status: 500 });
+    return NextResponse.json({ error: err.message || 'Bestellfehler' }, { status: 500 });
   }
 }

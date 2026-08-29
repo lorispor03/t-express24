@@ -134,6 +134,12 @@ a, button, input, select, textarea, [role="button"] {
 }
 .bundle-spark-glow { animation: spark-glow 0.8s ease-in-out infinite; }
 
+@keyframes price-glow {
+  0%, 100% { text-shadow: none; }
+  50% { text-shadow: 0 0 8px rgba(196,34,46,0.6), 0 0 16px rgba(196,34,46,0.3); }
+}
+.bundle-price-glow { animation: price-glow 2s ease-in-out infinite; }
+
 @keyframes bundle-zoom {
   0%, 100% { transform: scale(1); }
   50% { transform: scale(1.04); }
@@ -322,10 +328,11 @@ a, button, input, select, textarea, [role="button"] {
 .vmarquee-track {
   display: flex;
   width: max-content;
-  animation: vmarquee 120s linear infinite;
+  animation: vmarquee 90s linear infinite;
+  will-change: transform;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  transform: translateZ(0);
+  transform: translate3d(0, 0, 0);
 }
 .vmarquee-track-reverse {
   animation-direction: reverse;
@@ -360,3 +367,14 @@ a, button, input, select, textarea, [role="button"] {
 .hero-rgb {
   animation: neon-flicker 1.8s ease-out both, hero-rgb-shift 1.8s ease-out both;
 }
+
+/* Shake animation for missing fields */
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  15% { transform: translateX(-6px); }
+  30% { transform: translateX(5px); }
+  45% { transform: translateX(-4px); }
+  60% { transform: translateX(3px); }
+  75% { transform: translateX(-2px); }
+}
+.animate-shake { animation: shake 0.5s ease-in-out; }
