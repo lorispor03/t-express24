@@ -26,11 +26,7 @@ export default function LeaguesPage() {
             <Link
               key={slug}
               href={`/league/${slug}`}
-              className={`league-card group rounded-xl p-6 border ${
-                slug === 'wm-2026'
-                  ? 'bg-black border-[var(--gold)]/40 hover:border-[var(--gold)] wm-card-glow'
-                  : 'bg-[#e8e8e8] border-gray-300 hover:border-[var(--red-main)]/30'
-              }`}
+              className="league-card group rounded-xl p-6 border bg-[#e8e8e8] border-gray-300 hover:border-[var(--red-main)]/30"
             >
               <div className="flex items-start justify-between mb-4">
                 {LEAGUE_LOGOS[slug] ? (
@@ -42,31 +38,27 @@ export default function LeaguesPage() {
                 ) : (
                   <span className="text-3xl">&#9917;</span>
                 )}
-                <span className={`text-xs rounded-full px-3 py-1 ${
-                  slug === 'wm-2026' ? 'bg-[var(--gold)]/20 text-[var(--gold)]' : 'bg-gray-100 text-gray-500'
-                }`}>
-                  {slug === 'wm-2026' ? 'Special Event' : `${league.productCount} Artikel`}
+                <span className="text-xs rounded-full px-3 py-1 bg-gray-100 text-gray-500">
+                  {league.productCount} Artikel
                 </span>
               </div>
-              <h3 className={`text-xl md:text-2xl uppercase tracking-wide transition-colors ${
-                slug === 'wm-2026' ? 'text-[var(--gold)] group-hover:text-white' : 'text-gray-900 group-hover:text-[var(--gold)]'
-              }`} style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
+              <h3 className="text-xl md:text-2xl uppercase tracking-wide transition-colors text-gray-900 group-hover:text-[var(--gold)]" style={{ fontFamily: "'Bebas Neue', sans-serif" }}>
                 {league.name}
               </h3>
-              <p className={`text-sm mt-1 ${slug === 'wm-2026' ? 'text-[var(--gold)]/70' : 'text-gray-700'}`}>
+              <p className="text-sm mt-1 text-gray-700">
                 {league.teamCount} {league.teamCount === 1 ? 'Team' : 'Teams'} {league.country && `· ${league.country}`}
               </p>
               <div className="mt-4 flex flex-wrap gap-1.5">
                 {league.teams.slice(0, 5).map(team => (
                   <span key={team.id} className={`text-[10px] rounded px-2 py-0.5 ${
-                    slug === 'wm-2026' ? 'bg-[var(--gold)]/15 text-[var(--gold)]/80' : 'bg-gray-100 text-gray-500'
+                    'bg-gray-100 text-gray-500'
                   }`}>
                     {team.name}
                   </span>
                 ))}
                 {league.teams.length > 5 && (
                   <span className={`text-[10px] rounded px-2 py-0.5 ${
-                    slug === 'wm-2026' ? 'bg-[var(--gold)]/15 text-[var(--gold)]/80' : 'bg-gray-100 text-gray-500'
+                    'bg-gray-100 text-gray-500'
                   }`}>
                     +{league.teams.length - 5} mehr
                   </span>
