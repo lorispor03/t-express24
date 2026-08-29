@@ -20,6 +20,7 @@ export const SUB_LEAGUE_SLUGS: Record<string, string> = {
   'Nordamerika': 'nordamerika',
   'Afrika': 'afrika',
   'Asien': 'asien',
+  'Andere': 'andere',
   'EFL Championship': 'efl-championship',
   'Segunda División': 'segunda-division',
   '2. Bundesliga': '2-bundesliga',
